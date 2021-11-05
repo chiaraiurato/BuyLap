@@ -1,0 +1,5 @@
+1) The system shall provide a questionnaire that obtains information on: age, profession, budget, daily use of the PC, brand and OS preferred.
+
+2) The system shall save up to 10 PCs.
+
+3) The system shall provide the possibility to promote business’ man products.

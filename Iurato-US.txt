@@ -1,0 +1,5 @@
+1) As a worker, I want a durable PC with a lightweight design for office use, so that I can do my tasks in smart working. 
+
+2) As a businessman, I want to add a laptop, so that I can sell it.
+
+3) As a logged user, I want to write reviews, so that I can recommend the purchase made.

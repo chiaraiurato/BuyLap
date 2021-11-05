@@ -1,0 +1,5 @@
+1) The system shall provide a list of the best laptops from 1 to 10 based on RAM, CPU, GPU, storage space and battery life. 
+
+2) The system shall reset the password by clicking on "I forgot my password" and receiving a link to the verified email address.
+
+3) The system shall provide users to log in with their Google accounts.
