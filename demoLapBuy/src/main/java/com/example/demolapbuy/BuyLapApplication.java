@@ -12,7 +12,7 @@ public class BuyLapApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(BuyLapApplication.class.getResource("buylap-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 375, 762);
+        Scene scene = new Scene(fxmlLoader.load(), 375, 780);
         stage.setTitle("BuyLap");
 
         stage.setScene(scene);

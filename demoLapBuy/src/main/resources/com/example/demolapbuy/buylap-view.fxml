@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demolapbuy.LoginController">
    <children>
       <AnchorPane prefHeight="473.0" prefWidth="375.0" style="-fx-background-color: #1F2341;">
          <children>
@@ -20,12 +20,12 @@
       </AnchorPane>
       <AnchorPane prefHeight="385.0" prefWidth="375.0" style="-fx-background-color: #1F2341;">
          <children>
-            <Button layoutX="43.0" layoutY="50.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="294.0" style="-fx-background-color: #41CD7D; -fx-background-radius: 28;" text="Sign Up" textFill="#282c4c">
+            <Button layoutX="43.0" layoutY="50.0" mnemonicParsing="false" onAction="#onSignUpClick" prefHeight="55.0" prefWidth="294.0" style="-fx-background-color: #41CD7D; -fx-background-radius: 28;" text="Sign Up" textFill="#282c4c">
                <font>
-                  <Font name="ZCOOL QingKe HuangYou Regular" size="24.0" />
+                  <Font name="ZCOOL QingKe HuangYou Regular" size="25.0" />
                </font>
             </Button>
-            <Button layoutX="41.0" layoutY="152.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="296.0" style="-fx-background-color: #282C4C; -fx-background-radius: 28;" text="Sign In" textFill="WHITE">
+            <Button layoutX="41.0" layoutY="152.0" mnemonicParsing="false" onAction="#onSingInClick" prefHeight="55.0" prefWidth="296.0" style="-fx-background-color: #282C4C; -fx-background-radius: 28;" text="Sign In" textFill="WHITE">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="24.0" />
                </font>
