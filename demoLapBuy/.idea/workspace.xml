@@ -19,9 +19,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/SceneBuilder-8.5.0.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/demolapbuy" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chiara\Desktop\BuyLap-main\BuyLap.git\trunk\demoLapBuy\src\main\resources\com\example\demolapbuy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Chiara\Desktop\test-main\test.git\demoLapBuy\src\main\resources" />
       <recent name="C:\Users\Chiara\Desktop\test-main\test.git\demoLapBuy" />
@@ -60,6 +63,8 @@
       <workItem from="1635631459132" duration="1093000" />
       <workItem from="1635715460148" duration="4000" />
       <workItem from="1635871003637" duration="161000" />
+      <workItem from="1636137832098" duration="7185000" />
+      <workItem from="1636149969521" duration="25000" />
     </task>
     <servers />
   </component>
