@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demolapbuy.LoginController">
+   <children>
+      <AnchorPane prefHeight="473.0" prefWidth="375.0" style="-fx-background-color: #1F2341;">
+         <children>
+            <ImageView fitHeight="299.0" fitWidth="232.0" layoutX="72.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/logo.png" />
+               </image></ImageView>
+            <Text fill="WHITE" layoutX="122.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUYLAP">
+               <font>
+                  <Font name="ZCOOL QingKe HuangYou Regular" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="385.0" prefWidth="375.0" style="-fx-background-color: #1F2341;">
+         <children>
+            <Button layoutX="43.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchSignUp" prefHeight="55.0" prefWidth="294.0" style="-fx-background-color: #41CD7D; -fx-background-radius: 28;" stylesheets="@GUI.css" text="Sign Up" textFill="#282c4c">
+               <font>
+                  <Font name="ZCOOL QingKe HuangYou Regular" size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="41.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchSignIn" prefHeight="55.0" prefWidth="296.0" style="-fx-background-color: #282C4C; -fx-background-radius: 28; -fx-box-shadow: 0 0 4;" stylesheets="@GUI.css" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="ZCOOL QingKe HuangYou Regular" size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="133.0" layoutY="256.0" text="Skip For Now" textFill="WHITE">
+               <font>
+                  <Font name="ZCOOL QingKe HuangYou Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
