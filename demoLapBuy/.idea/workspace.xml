@@ -19,7 +19,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/demolapbuy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../test-main/test.git/trunk/demoLapBuy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -65,6 +65,7 @@
       <workItem from="1635871003637" duration="161000" />
       <workItem from="1636137832098" duration="7185000" />
       <workItem from="1636149969521" duration="25000" />
+      <workItem from="1636295000250" duration="27000" />
     </task>
     <servers />
   </component>
