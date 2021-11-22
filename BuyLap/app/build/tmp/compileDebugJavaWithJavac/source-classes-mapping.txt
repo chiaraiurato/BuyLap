@@ -1,7 +1,0 @@
-com/example/buylap/activity_login.java
- com.example.buylap.activity_login
-com/example/buylap/BuildConfig.java
- com.example.buylap.BuildConfig
-com/example/buylap/MainActivity.java
- com.example.buylap.MainActivity
- com.example.buylap.MainActivity$1
