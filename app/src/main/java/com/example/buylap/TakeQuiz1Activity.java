@@ -26,14 +26,13 @@ public class TakeQuiz1Activity extends AppCompatActivity {
     CardView cardQuestion;
     CardView cardOp1;
     CardView cardOp2;
-    Button next_btn;
+    Button nextBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_quiz1);
         hooks();
         allQuestion=listQuest;
-        //Collections.shuffle(allQuestion);
         quizList=listQuest.get(index);
         setAllData();
     }
@@ -52,11 +51,11 @@ public class TakeQuiz1Activity extends AppCompatActivity {
 
         cardOp1=findViewById(R.id.cardView2);
         cardOp2=findViewById(R.id.cardView3);
-        next_btn=findViewById(R.id.next_btn);
+        nextBtn=findViewById(R.id.next_btn);
     }
     public void choice(CardView cardview){
         cardview.setCardBackgroundColor(getResources().getColor(R.color.green));
-        next_btn.setOnClickListener(new View.OnClickListener() {
+        nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 index++;

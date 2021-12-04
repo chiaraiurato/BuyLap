@@ -60,7 +60,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         TextView titleTxt;
         ImageView imageCat;
         OnCatListener onCatListener;
-        private final Context context;
+        Context context;
         public ViewHolder(View itemView, OnCatListener onCatListener) {
             super(itemView);
             context= itemView.getContext();

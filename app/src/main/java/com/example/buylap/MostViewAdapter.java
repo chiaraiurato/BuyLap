@@ -41,19 +41,7 @@ public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHo
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.removeItem);
-        /*
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                Fragment listFragment = new ListFragment();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.RecyclerCat, listFragment).addToBackStack(null).commit();
-            }
 
-
-        });
-
-         */
     }
 
 
@@ -63,7 +51,8 @@ public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTxt,subTitleTxt;
+        TextView titleTxt;
+        TextView subTitleTxt;
         ImageView removeItem;
 
         public ViewHolder(View itemView) {

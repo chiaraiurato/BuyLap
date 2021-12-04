@@ -9,11 +9,12 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 public class GamingActivity extends AppCompatActivity {
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        RecyclerView.Adapter adapter;
+        RecyclerView recyclerList;
         setContentView(R.layout.activity_gaming);
         recyclerList=(RecyclerView)findViewById(R.id.RecyclerList);
 

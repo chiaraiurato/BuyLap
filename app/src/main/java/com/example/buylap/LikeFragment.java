@@ -13,13 +13,12 @@ import android.view.ViewGroup;
 public class LikeFragment extends Fragment {
 
 
-    private RecyclerView recyclerLike;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        RecyclerView recyclerLike;
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_like, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_like, container, false);
     }
 }
