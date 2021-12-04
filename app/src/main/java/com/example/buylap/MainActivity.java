@@ -9,13 +9,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
-    private Button movesignup;
-    private Button movesignin;
-    private TextView moveskip;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Button movesignup;
+        Button movesignin;
+        TextView moveskip;
         setContentView(R.layout.activity_main);
 
         movesignup=findViewById(R.id.searchbtn);

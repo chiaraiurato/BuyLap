@@ -20,8 +20,12 @@ public class TakeQuiz1Activity extends AppCompatActivity {
     List<QuizList> allQuestion;
     QuizList quizList;
     int index=0;
-    TextView question, op1, op2;
-    CardView cardQuestion, cardOp1, cardOp2;
+    TextView question;
+    TextView op1;
+    TextView op2;
+    CardView cardQuestion;
+    CardView cardOp1;
+    CardView cardOp2;
     Button next_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

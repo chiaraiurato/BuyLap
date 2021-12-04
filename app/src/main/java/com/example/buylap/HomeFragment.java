@@ -17,17 +17,18 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements CategoryAdapter.OnCatListener {
 
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.Adapter adapter2;
-    private RecyclerView recyclerView;
-    private RecyclerView recyclerViewCat;
-    private Button take_quiz;
-    private ArrayList<Category> mCategory= new ArrayList<>();
-    public static ArrayList<QuizList> listQuest;
 
+    public static ArrayList<QuizList> listQuest;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        RecyclerView.Adapter adapter;
+        RecyclerView.Adapter adapter2;
+        RecyclerView recyclerView;
+        RecyclerView recyclerViewCat;
+        Button takeQuiz;
+        ArrayList<Category> mCategory= new ArrayList<>();
+
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_home, container, false);
         listQuest=new ArrayList<>();
@@ -35,8 +36,8 @@ public class HomeFragment extends Fragment implements CategoryAdapter.OnCatListe
         listQuest.add(new QuizList("What is your budget", "under 1000$", "over 1000$"));
         listQuest.add(new QuizList("Click your category", "Gaming", "Office use"));
         listQuest.add(new QuizList("Choose a color", "Black", "White"));
-        take_quiz=view.findViewById(R.id.takequizbtn);
-        take_quiz.setOnClickListener(new View.OnClickListener() {
+        takeQuiz=view.findViewById(R.id.takequizbtn);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), TakeQuiz1Activity.class);
