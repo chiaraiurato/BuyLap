@@ -1,0 +1,1 @@
+K 2xmlXDhr*app/src/main/res/layout/activity_study.xml
