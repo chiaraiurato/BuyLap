@@ -1,14 +1,16 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class StudyActivity extends AppCompatActivity {
+import com.example.buylap.R;
+
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study);
+        setContentView(R.layout.activity_home);
     }
 }

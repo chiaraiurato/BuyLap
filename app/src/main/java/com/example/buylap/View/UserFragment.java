@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.buylap.R;
+
 public class UserFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -23,8 +26,8 @@ public class UserFragment extends Fragment {
     }
 
     // TODO: Rename and change types and number of parameters
-    public static ShopFragment newInstance(String param1, String param2) {
-        ShopFragment fragment = new ShopFragment();
+    public static UserFragment newInstance(String param1, String param2) {
+        UserFragment fragment = new UserFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

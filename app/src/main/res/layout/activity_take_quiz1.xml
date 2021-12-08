@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".TakeQuiz1Activity">
+    tools:context=".View.TakeQuiz1Activity">
 
 
     <TextView

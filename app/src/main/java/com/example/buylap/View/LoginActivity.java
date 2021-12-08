@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.buylap.HomepageActivity;
+import com.example.buylap.R;
 
 public class LoginActivity extends AppCompatActivity {
     @Override

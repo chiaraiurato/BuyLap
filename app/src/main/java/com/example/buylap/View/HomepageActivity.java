@@ -3,16 +3,15 @@ package com.example.buylap;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.buylap.View.LikeFragment;
+import com.example.buylap.View.SearchFragment;
+import com.example.buylap.View.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class HomepageActivity extends AppCompatActivity {
 
@@ -39,9 +38,6 @@ public class HomepageActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_like:
                         fragment= new LikeFragment();
-                        break;
-                    case R.id.nav_shop:
-                        fragment= new ShopFragment();
                         break;
                     case R.id.nav_user:
                         fragment= new UserFragment();

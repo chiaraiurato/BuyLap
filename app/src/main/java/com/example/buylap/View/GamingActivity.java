@@ -1,10 +1,14 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.buylap.MostViewAdapter;
+import com.example.buylap.MostViewed;
+import com.example.buylap.R;
 
 import java.util.ArrayList;
 

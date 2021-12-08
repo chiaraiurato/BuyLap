@@ -10,31 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".TakeQuiz1Activity"
+            android:name=".View.TakeQuiz1Activity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".View.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".OfficeActivity"
+            android:name=".View.OfficeActivity"
             android:exported="false" />
         <activity
-            android:name=".StudyActivity"
+            android:name=".View.StudyActivity"
             android:exported="false" />
         <activity
-            android:name=".GamingActivity"
+            android:name=".View.GamingActivity"
             android:exported="false" />
         <activity
             android:name=".HomepageActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".View.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".View.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

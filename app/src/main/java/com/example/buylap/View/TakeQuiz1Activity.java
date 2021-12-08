@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import static com.example.buylap.HomeFragment.listQuest;
 
@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.buylap.QuizList;
+import com.example.buylap.R;
 
 import java.util.Collection;
 import java.util.Collections;

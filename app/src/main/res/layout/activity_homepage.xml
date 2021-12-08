@@ -9,7 +9,7 @@
     android:background="#202442"
     app:circularflow_defaultRadius="28dp"
     app:circularflow_radiusInDP="28dp"
-    tools:context=".LoginActivity">
+    tools:context=".View.LoginActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
