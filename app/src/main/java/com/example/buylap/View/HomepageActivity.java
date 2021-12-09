@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.buylap.R;
+import com.example.buylap.View.CashbackFragment;
 import com.example.buylap.View.LikeFragment;
-import com.example.buylap.View.SearchFragment;
+import com.example.buylap.View.CashbackFragment;
 import com.example.buylap.View.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -33,8 +35,8 @@ public class HomepageActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         fragment= new HomeFragment();
                         break;
-                    case R.id.nav_search:
-                        fragment = new SearchFragment();
+                    case R.id.nav_cashback:
+                        fragment = new CashbackFragment();
                         break;
                     case R.id.nav_like:
                         fragment= new LikeFragment();

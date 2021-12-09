@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".View.TakeQuiz1Activity">
+    tools:context=".View.TakeQuizActivity">
 
 
     <TextView
@@ -52,16 +52,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="338dp"
         android:layout_height="140dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="152dp"
         app:cardBackgroundColor="@color/bluebuttom"
         app:cardCornerRadius="28dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -76,14 +77,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/cardView1"
         android:layout_width="254dp"
-        android:onClick="Op1Click"
         android:layout_height="84dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="Op1Click"
         app:cardBackgroundColor="@color/bluebuttom"
         app:cardCornerRadius="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent">
@@ -103,11 +104,38 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="254dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="Op2Click"
+        app:cardBackgroundColor="@color/bluebuttom"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/text_b"
+            android:layout_width="221dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_round_school_24"
+            android:fontFamily="@font/zcool_regular"
+            android:gravity="center"
+            android:text="Nothing"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="254dp"
-        android:onClick="Op2Click"
         android:layout_height="84dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="Op3Click"
         app:cardBackgroundColor="@color/bluebuttom"
         app:cardCornerRadius="28dp"
         app:layout_constraintBottom_toTopOf="@+id/next_btn"
@@ -117,7 +145,7 @@
 
 
         <TextView
-            android:id="@+id/text_b"
+            android:id="@+id/text_c"
             android:layout_width="221dp"
             android:layout_height="73dp"
             android:layout_gravity="center"

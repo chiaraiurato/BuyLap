@@ -26,11 +26,10 @@ public class GamingActivity extends AppCompatActivity {
         recyclerList.setLayoutManager(linearLayoutManager3);
 
         ArrayList<MostViewed> mostviewed = new ArrayList<>();
-        mostviewed.add(new MostViewed("DELL", "XPS15", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("ASUS", "TUF", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("HP", "PAVILION", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("Acer", "NITRO", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("LENOVO", "sowk", "ic_baseline_laptop_24"));
+        mostviewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "ic_baseline_cpu"));
+        mostviewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "ic_baseline_gpu"));
+        mostviewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ic_baseline_ram"));
+        mostviewed.add(new MostViewed("Cooler Master", "MasterBox Q300L", "ic_baseline_laptop_24"));
         adapter= new MostViewAdapter(mostviewed);
         recyclerList.setAdapter(adapter);
 

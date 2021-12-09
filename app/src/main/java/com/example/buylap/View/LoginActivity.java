@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.buylap.HomepageActivity;
 import com.example.buylap.R;
 
 public class LoginActivity extends AppCompatActivity {

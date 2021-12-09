@@ -1,6 +1,6 @@
 package com.example.buylap.View;
 
-import static com.example.buylap.HomeFragment.listQuest;
+import static com.example.buylap.View.HomeFragment.listQuest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -8,17 +8,13 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.buylap.QuizList;
 import com.example.buylap.R;
-
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
-public class TakeQuiz1Activity extends AppCompatActivity {
+public class TakeQuizActivity extends AppCompatActivity {
 
     List<QuizList> allQuestion;
     QuizList quizList;
@@ -26,14 +22,15 @@ public class TakeQuiz1Activity extends AppCompatActivity {
     TextView question;
     TextView op1;
     TextView op2;
-    CardView cardQuestion;
+    TextView op3;
     CardView cardOp1;
     CardView cardOp2;
+    CardView cardOp3;
     Button nextBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_take_quiz1);
+        setContentView(R.layout.activity_take_quiz);
         hooks();
         allQuestion=listQuest;
         quizList=listQuest.get(index);
@@ -44,6 +41,7 @@ public class TakeQuiz1Activity extends AppCompatActivity {
         question.setText(quizList.getQuestion());
         op1.setText(quizList.getOp1());
         op2.setText(quizList.getOp2());
+        op3.setText(quizList.getOp3());
     }
 
     private void hooks() {
@@ -51,9 +49,12 @@ public class TakeQuiz1Activity extends AppCompatActivity {
         question=findViewById(R.id.txtqst);
         op1=findViewById(R.id.text_a);
         op2=findViewById(R.id.text_b);
+        op3=findViewById(R.id.text_c);
 
-        cardOp1=findViewById(R.id.cardView2);
-        cardOp2=findViewById(R.id.cardView3);
+        cardOp1=findViewById(R.id.cardView1);
+        cardOp2=findViewById(R.id.cardView2);
+        cardOp3=findViewById(R.id.cardView3);
+
         nextBtn=findViewById(R.id.next_btn);
     }
     public void choice(CardView cardview){
@@ -72,17 +73,20 @@ public class TakeQuiz1Activity extends AppCompatActivity {
     public void enableButton(){
         cardOp1.setClickable(true);
         cardOp2.setClickable(true);
+        cardOp3.setClickable(true);
     }
     public void disableButton(){
         cardOp1.setClickable(false);
         cardOp2.setClickable(false);
+        cardOp3.setClickable(false);
     }
     public void resetColor(){
         cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
         cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
     }
     public void Op1Click(View view){
-
+        resetColor();
      cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
      if(index < listQuest.size()-1)
      {
@@ -99,4 +103,13 @@ public class TakeQuiz1Activity extends AppCompatActivity {
             choice(cardOp2);
         }
     }
+    public void Op3Click(View view) {
+        resetColor();
+        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
+        if(index < listQuest.size()-1)
+        {
+            choice(cardOp3);
+        }
+    }
+
 }

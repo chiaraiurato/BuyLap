@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.buylap.View.GamingActivity;
-import com.example.buylap.View.HomeActivity;
-import com.example.buylap.View.OfficeActivity;
-import com.example.buylap.View.StudyActivity;
-import com.example.buylap.View.TakeQuiz1Activity;
+import com.example.buylap.Category;
+import com.example.buylap.CategoryAdapter;
+import com.example.buylap.MostViewAdapter;
+import com.example.buylap.MostViewed;
+import com.example.buylap.QuizList;
+import com.example.buylap.R;
 
 import java.util.ArrayList;
 
@@ -38,26 +39,26 @@ public class HomeFragment extends Fragment implements CategoryAdapter.OnCatListe
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_home, container, false);
         listQuest=new ArrayList<>();
-        listQuest.add(new QuizList("What is your profession", "Student", "Worker"));
-        listQuest.add(new QuizList("What is your budget", "under 1000$", "over 1000$"));
-        listQuest.add(new QuizList("Click your category", "Gaming", "Office use"));
-        listQuest.add(new QuizList("Choose a color", "Black", "White"));
+        listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
+        listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
+        listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
+
         takeQuiz=view.findViewById(R.id.takequizbtn);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), TakeQuiz1Activity.class);
+                Intent intent = new Intent(getContext(), TakeQuizActivity.class);
                 startActivity(intent);
             }
         });
 
-        recyclerViewCat=(RecyclerView)view.findViewById(R.id.RecyclerCat);
+       //recyclerViewCat=(RecyclerView)view.findViewById(R.id.RecyclerCat);
         recyclerView=(RecyclerView)view.findViewById(R.id.RecyclerMostView);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),  LinearLayoutManager.VERTICAL, false);
-        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        //LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerViewCat.setLayoutManager(linearLayoutManager2);
+       /* recyclerViewCat.setLayoutManager(linearLayoutManager2);
         ArrayList<Category> cat = new ArrayList<>();
         cat.add(new Category("Gaming", "ic_baseline_gamepad_24"));
         cat.add(new Category("Office", "ic_round_architecture_24"));
@@ -66,11 +67,13 @@ public class HomeFragment extends Fragment implements CategoryAdapter.OnCatListe
 
         adapter2 = new CategoryAdapter(cat, this);
         recyclerViewCat.setAdapter(adapter2);
+
+        */
         ArrayList <MostViewed> mostviewed = new ArrayList<>();
-        mostviewed.add(new MostViewed("DELL", "XPS15", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("ASUS", "TUF", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("HP", "PAVILION", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("Acer", "NITRO", "ic_baseline_laptop_24"));
+        mostviewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
+        mostviewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
+        mostviewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
+        mostviewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard"));
         adapter= new MostViewAdapter(mostviewed);
         recyclerView.setAdapter(adapter);
 

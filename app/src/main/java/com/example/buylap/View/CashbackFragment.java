@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.example.buylap.R;
 
 
-public class SearchFragment extends Fragment {
+public class CashbackFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,7 +22,7 @@ public class SearchFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SearchFragment() {
+    public CashbackFragment() {
         // Required empty public constructor
     }
 
@@ -35,8 +35,8 @@ public class SearchFragment extends Fragment {
      * @return A new instance of fragment SearchFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SearchFragment newInstance(String param1, String param2) {
-        SearchFragment fragment = new SearchFragment();
+    public static CashbackFragment newInstance(String param1, String param2) {
+        CashbackFragment fragment = new CashbackFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

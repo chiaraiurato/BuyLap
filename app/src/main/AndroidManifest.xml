@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".View.TakeQuiz1Activity"
+            android:name=".View.TakeQuizActivity"
             android:exported="false" />
         <activity
             android:name=".View.HomeActivity"
@@ -25,7 +25,7 @@
             android:name=".View.GamingActivity"
             android:exported="false" />
         <activity
-            android:name=".HomepageActivity"
+            android:name=".View.HomepageActivity"
             android:exported="false" />
         <activity
             android:name=".View.RegistrationActivity"

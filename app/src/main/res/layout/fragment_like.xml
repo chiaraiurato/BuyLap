@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".HomeFragment">
+    tools:context=".View.HomeFragment">
 
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_marginBottom="228dp"
         android:layout_weight="1"
         android:fontFamily="@font/zcool_regular"
-        android:text="Explore more and shortlist some items"
+        android:text="Explore more and shortlist some build"
         android:textAlignment="center"
         android:textColor="#535986"
 
