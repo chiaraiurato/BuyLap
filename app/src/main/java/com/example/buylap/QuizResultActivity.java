@@ -19,19 +19,22 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz_result);
+
         RecyclerView.Adapter adapter;
         RecyclerView recyclerViewBuild;
 
-        recyclerViewBuild=(RecyclerView)findViewById(R.id.RecyclerBuild);
-        setContentView(R.layout.activity_quiz_result);
+        recyclerViewBuild=findViewById(R.id.RecyclerBuild);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
         recyclerViewBuild.setLayoutManager(linearLayoutManager);
         ArrayList<Category> build = new ArrayList<>();
-        build.add(new Category("Gaming", "ic_baseline_gamepad_24"));
-        build.add(new Category("Office", "ic_round_architecture_24"));
-        build.add(new Category("Home", "ic_baseline_home_work_24"));
-        build.add(new Category("Study", "ic_round_school_24"));
+        build.add(new Category("Motherboard", "motherboard", "jwindwj"));
+        build.add(new Category("SSD", "ssd", "swqisq"));
+        build.add(new Category("CPU", "cpu", "wijskdwp"));
+        build.add(new Category("Ram", "ram", "jwqosqkl"));
+        build.add(new Category("Video Card", "videocard", "jswoq"));
+        build.add(new Category("Power Supply", "powersupply", "jwqos"));
 
         adapter = new CategoryAdapter(build, this);
         recyclerViewBuild.setAdapter(adapter);

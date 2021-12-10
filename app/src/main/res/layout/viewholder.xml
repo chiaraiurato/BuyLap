@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/dell_inspiron" />
+        app:srcCompat="@drawable/ic_baseline_laptop_24" />
 
     <TextView
 
@@ -34,7 +34,7 @@
 
         android:gravity="start"
         android:lines="2"
-        android:text="Title Laptop"
+        android:text="Title Component"
         android:textAlignment="viewStart"
         android:textColor="#FFFF"
         android:textSize="16sp"
@@ -47,7 +47,7 @@
         android:id="@+id/subTitleTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Version Laptop"
+        android:text="Version Component"
         android:textColor="#535986"
         app:layout_constraintEnd_toEndOf="@+id/titleTxt"
         app:layout_constraintStart_toStartOf="@+id/titleTxt"

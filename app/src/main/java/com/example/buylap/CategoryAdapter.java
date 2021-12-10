@@ -58,13 +58,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView titleTxt;
+        TextView subTitleTxt;
         ImageView imageCat;
         OnCatListener onCatListener;
         Context context;
         public ViewHolder(View itemView, OnCatListener onCatListener) {
             super(itemView);
             context= itemView.getContext();
-            titleTxt = itemView.findViewById(R.id.titleTxt);
+            titleTxt = itemView.findViewById(R.id.titleTxt2);
+            subTitleTxt = itemView.findViewById(R.id.titleTxt);
             imageCat = itemView.findViewById(R.id.img_view);
             this.onCatListener=onCatListener;
             itemView.setOnClickListener(this);

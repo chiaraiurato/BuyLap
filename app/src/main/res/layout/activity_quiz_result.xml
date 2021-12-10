@@ -25,8 +25,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="405dp"
-        android:layout_height="619dp"
+        android:layout_width="411dp"
+        android:layout_height="615dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/zcool_regular"
                 android:text="BUILD"
-                android:textColor="#535986"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
