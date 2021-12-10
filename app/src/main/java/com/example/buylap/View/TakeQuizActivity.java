@@ -5,12 +5,14 @@ import static com.example.buylap.View.HomeFragment.listQuest;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.buylap.QuizList;
+import com.example.buylap.QuizResultActivity;
 import com.example.buylap.R;
 import java.util.List;
 
@@ -91,7 +93,8 @@ public class TakeQuizActivity extends AppCompatActivity {
      if(index < listQuest.size()-1)
      {
          choice(cardOp1);
-     }
+     }else
+         finished();
 
     }
 
@@ -101,7 +104,8 @@ public class TakeQuizActivity extends AppCompatActivity {
         if(index < listQuest.size()-1)
         {
             choice(cardOp2);
-        }
+        }else
+            finished();
     }
     public void Op3Click(View view) {
         resetColor();
@@ -109,7 +113,13 @@ public class TakeQuizActivity extends AppCompatActivity {
         if(index < listQuest.size()-1)
         {
             choice(cardOp3);
-        }
+        }else
+            finished();
+    }
+
+    private void finished() {
+        Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
+        startActivity(intent);
     }
 
 }

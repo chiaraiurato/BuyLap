@@ -62,8 +62,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="410dp"
-        android:layout_height="484dp"
+        android:layout_width="404dp"
+        android:layout_height="512dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,9 +74,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:orientation="horizontal">
 
 
@@ -91,25 +91,13 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/zcool_regular"
-                android:text="See All"
-                android:textAlignment="viewEnd"
-                android:textColor="#41CD7D"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecyclerMostView"
-            android:layout_width="344dp"
-            android:layout_height="385dp"
-            android:layout_marginStart="32dp"
+            android:layout_width="355dp"
+            android:layout_height="406dp"
+            android:layout_marginStart="24dp"
             android:layout_marginEnd="10dp" />
     </LinearLayout>
 

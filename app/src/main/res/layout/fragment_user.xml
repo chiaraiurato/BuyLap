@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/searchbtn"
+        android:id="@+id/signoutBtn"
         android:layout_width="330dp"
         android:layout_height="57dp"
         android:layout_marginBottom="96dp"
