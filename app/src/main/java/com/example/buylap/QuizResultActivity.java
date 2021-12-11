@@ -13,10 +13,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.buylap.View.CashbackFragment;
+import com.example.buylap.View.HomepageActivity;
+import com.example.buylap.View.MainActivity;
+import com.example.buylap.View.RegistrationActivity;
 
 import java.util.ArrayList;
 
 public class QuizResultActivity extends AppCompatActivity implements CategoryAdapter.OnCatListener{
+    public static boolean update=false;
+
+    public static boolean isUpdate() {
+        return update;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +52,9 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         updateAccBalance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new CashbackFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.resultquiz, fragment).commit();
+                Intent intentprova = new Intent(QuizResultActivity.this, HomepageActivity.class);
+                update=true;
+                startActivity(intentprova);
             }
         });
     }

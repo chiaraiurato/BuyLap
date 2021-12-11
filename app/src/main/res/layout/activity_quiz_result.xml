@@ -15,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/zcool_regular"
         android:gravity="center"
-        android:text="Result of quiz"
+        android:text="@string/result_of_quiz"
         android:textColor="#FFFFFF"
 
         android:textSize="34sp"
@@ -48,11 +48,11 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="@font/zcool_regular"
-                android:text="BUILD"
+                android:text="@string/build"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -64,7 +64,8 @@
             android:layout_width="342dp"
             android:layout_height="467dp"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="10dp" />
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 
     <Button
@@ -72,7 +73,7 @@
         android:layout_width="330dp"
         android:layout_height="57dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Update balance account"
+        android:text="@string/update_balance_account"
         android:textAllCaps="false"
         android:textColor="#1F2341"
         android:textSize="24sp"

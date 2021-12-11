@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.buylap.QuizResultActivity;
 import com.example.buylap.R;
-import com.example.buylap.View.CashbackFragment;
-import com.example.buylap.View.LikeFragment;
-import com.example.buylap.View.CashbackFragment;
-import com.example.buylap.View.UserFragment;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomepageActivity extends AppCompatActivity {
@@ -46,9 +44,20 @@ public class HomepageActivity extends AppCompatActivity {
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
+
+
+                // An icon only badge will be displayed unless a number is set:
+                if(QuizResultActivity.isUpdate()) {
+
+                    BadgeDrawable badge = navigationView.getOrCreateBadge(R.id.nav_cashback);
+
+                    badge.isVisible();
+                    badge.setNumber(1);
+                }
                 return true;
             }
         });
+
 
 
     }

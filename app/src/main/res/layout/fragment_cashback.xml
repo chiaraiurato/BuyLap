@@ -26,40 +26,40 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/zcool_regular"
-            android:text="Card"
+            android:text="@string/card"
             android:textColor="@color/white"
-            android:textSize="28dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="60dp"
             android:fontFamily="@font/zcool_regular"
-            android:text="****  ****  ****  0000"
+            android:text="@string/_0000"
             android:textColor="@color/bluetext"
-            android:textSize="28dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="120dp"
             android:fontFamily="@font/zcool_regular"
-            android:text="00/00"
+            android:text="@string/_00_00"
             android:textColor="@color/bluetext"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="29dp"
-            android:layout_marginLeft="280dp"
+            android:layout_marginStart="280dp"
             android:layout_marginTop="150dp"
             android:src="@drawable/mastercard" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_baseline_add_card_24" />
     </RelativeLayout>
@@ -90,7 +90,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Account Balance"
+        android:text="@string/account_balance"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,8 +102,8 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$ 10,00"
-        android:textSize="38dp"
+        android:text="@string/_10_00"
+        android:textSize="38sp"
         android:fontFamily="@font/zcool_regular"
         android:textColor="@color/bluebackground"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -116,7 +116,7 @@
         android:layout_width="330dp"
         android:layout_height="57dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Cashout"
+        android:text="@string/cashout"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="24sp"

@@ -16,9 +16,6 @@
             android:name=".View.TakeQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".View.HomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".View.HomepageActivity"
             android:exported="false" />
         <activity

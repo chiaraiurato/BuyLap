@@ -30,6 +30,7 @@ public class Category {
     public String getSubtitles() {
         return subtitles;
     }
+
     public void setSubtitles(String subtitles) {
         this.subtitles = subtitles;
     }
