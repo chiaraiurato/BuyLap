@@ -58,9 +58,9 @@
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="29dp"
             android:layout_marginLeft="280dp"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/mastercard" />
 
         <ImageView

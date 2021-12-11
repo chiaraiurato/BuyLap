@@ -19,15 +19,6 @@
             android:name=".View.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".View.OfficeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".View.StudyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".View.GamingActivity"
-            android:exported="false" />
-        <activity
             android:name=".View.HomepageActivity"
             android:exported="false" />
         <activity

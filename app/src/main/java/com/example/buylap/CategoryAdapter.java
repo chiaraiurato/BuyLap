@@ -24,6 +24,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     ArrayList<Category> category;
 
     private OnCatListener mOnCatListener;
+
     public CategoryAdapter(ArrayList<Category> category, OnCatListener onCatListener) {
 
         this.category = category;
@@ -66,7 +67,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             super(itemView);
             context= itemView.getContext();
             titleTxt = itemView.findViewById(R.id.titleTxt2);
-            subTitleTxt = itemView.findViewById(R.id.titleTxt);
+            subTitleTxt = itemView.findViewById(R.id.titleTxt3);
             imageCat = itemView.findViewById(R.id.img_view);
             this.onCatListener=onCatListener;
             itemView.setOnClickListener(this);
