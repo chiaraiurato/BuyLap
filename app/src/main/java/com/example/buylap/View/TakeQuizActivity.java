@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.buylap.QuizList;
-import com.example.buylap.QuizResultActivity;
+import com.example.buylap.Model.QuizList;
 import com.example.buylap.R;
 import java.util.List;
 

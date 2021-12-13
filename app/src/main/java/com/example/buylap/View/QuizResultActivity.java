@@ -1,7 +1,6 @@
-package com.example.buylap;
+package com.example.buylap.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,16 +9,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
-import com.example.buylap.View.CashbackFragment;
-import com.example.buylap.View.HomepageActivity;
-import com.example.buylap.View.MainActivity;
-import com.example.buylap.View.RegistrationActivity;
+import com.example.buylap.Category;
+import com.example.buylap.CategoryAdapter;
+import com.example.buylap.R;
 
 import java.util.ArrayList;
 
-public class QuizResultActivity extends AppCompatActivity implements CategoryAdapter.OnCatListener{
+public class QuizResultActivity extends AppCompatActivity implements CategoryAdapter.OnCatListener {
     public static boolean update=false;
 
     public static boolean isUpdate() {

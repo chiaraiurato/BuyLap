@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".QuizResultActivity"
+            android:name=".View.QuizResultActivity"
             android:exported="false" />
         <activity
             android:name=".View.TakeQuizActivity"

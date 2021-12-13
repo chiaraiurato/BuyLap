@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.Model;
 
 public class QuizList {
     String question;

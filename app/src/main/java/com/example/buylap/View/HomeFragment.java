@@ -12,11 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.buylap.Category;
-import com.example.buylap.CategoryAdapter;
 import com.example.buylap.MostViewAdapter;
 import com.example.buylap.MostViewed;
-import com.example.buylap.QuizList;
+import com.example.buylap.Model.QuizList;
 import com.example.buylap.R;
 
 import java.util.ArrayList;
