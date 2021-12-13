@@ -12,7 +12,7 @@
         android:layout_width="338dp"
         android:layout_height="191dp"
         android:layout_gravity="clip_horizontal|fill_horizontal"
-        android:background="@drawable/rectangle_search"
+        android:background="@drawable/creditcard_bg"
         app:circularflow_defaultRadius="28dp"
         app:circularflow_radiusInDP="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +26,7 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/zcool_regular"
             android:text="@string/card"
@@ -42,7 +42,8 @@
             android:fontFamily="@font/zcool_regular"
             android:text="@string/_0000"
             android:textColor="@color/bluetext"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView17"
@@ -53,7 +54,8 @@
             android:fontFamily="@font/zcool_regular"
             android:text="@string/_00_00"
             android:textColor="@color/bluetext"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -61,6 +63,7 @@
             android:layout_height="29dp"
             android:layout_marginStart="280dp"
             android:layout_marginTop="150dp"
+            android:contentDescription="@string/mastercard"
             android:src="@drawable/mastercard" />
 
         <ImageView
@@ -69,6 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="300dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/addpayment"
             android:src="@drawable/ic_baseline_add_card_24" />
     </RelativeLayout>
 
@@ -77,6 +81,7 @@
         android:layout_width="195dp"
         android:layout_height="216dp"
 
+        android:contentDescription="@string/account_balance"
         android:src="@drawable/ic_baseline_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +107,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_10_00"
+        android:text="0,00 $"
         android:textSize="38sp"
         android:fontFamily="@font/zcool_regular"
         android:textColor="@color/bluebackground"

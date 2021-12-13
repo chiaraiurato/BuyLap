@@ -58,6 +58,13 @@ public class HomepageActivity extends AppCompatActivity {
             }
         });
 
+        boolean gotoCashback = this.getIntent().getBooleanExtra("gotoCashback", false);
+        if(gotoCashback)
+        {
+            Fragment fragment = new CashbackFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
+        }
+
 
 
     }
