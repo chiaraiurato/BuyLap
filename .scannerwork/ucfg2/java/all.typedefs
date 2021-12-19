@@ -23,7 +23,7 @@ hashCode()java.lang.Object#hashCode()I1
 onCatClick(I).com.example.buylap.HomeFragment#onCatClick(I)V5
 <init>())com.example.buylap.HomeFragment#<init>()V(
 View.OnClickListenerjava.lang.Object>
-&Lcom/example/buylap/HomeFragment$1495;View.OnClickListener«
+&Lcom/example/buylap/HomeFragment$1534;View.OnClickListener«
 "com.example.buylap.CategoryAdapterjava.lang.Object¬
 BonBindViewHolder(Lcom/example/buylap/CategoryAdapter$ViewHolder;I)fcom.example.buylap.CategoryAdapter#onBindViewHolder(Lcom/example/buylap/CategoryAdapter$ViewHolder;I)VD
 getItemCount()2com.example.buylap.CategoryAdapter#getItemCount()I(
@@ -169,9 +169,9 @@ getTitle()8com.example.buylap.Category#getTitle()Ljava/lang/String;B
 setUrl(Ljava/lang/String;)7com.example.buylap.Category#setUrl(Ljava/lang/String;)Vk
 com.example.buylap.MainActivityAppCompatActivity5
 <init>())com.example.buylap.MainActivity#<init>()V=
-%Lcom/example/buylap/MainActivity$712;View.OnClickListener>
-&Lcom/example/buylap/MainActivity$1000;View.OnClickListener>
-&Lcom/example/buylap/MainActivity$1280;View.OnClickListenerÌ
+%Lcom/example/buylap/MainActivity$739;View.OnClickListener>
+&Lcom/example/buylap/MainActivity$1035;View.OnClickListener>
+&Lcom/example/buylap/MainActivity$1322;View.OnClickListenerÌ
 com.example.buylap.MostViewedjava.lang.ObjectH
 
 getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
@@ -186,7 +186,7 @@ getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
 useAppContext();com.example.buylap.ExampleInstrumentedTest#useAppContext()V{
 'com.example.buylap.RegistrationActivityAppCompatActivity=
 <init>()1com.example.buylap.RegistrationActivity#<init>()VE
--Lcom/example/buylap/RegistrationActivity$520;View.OnClickListenerÉ
+-Lcom/example/buylap/RegistrationActivity$536;View.OnClickListenerÉ
 $com.example.buylap.TakeQuiz1ActivityAppCompatActivity8
 hooks()-com.example.buylap.TakeQuiz1Activity#hooks()VF
 enableButton()4com.example.buylap.TakeQuiz1Activity#enableButton()V:
@@ -194,13 +194,13 @@ $com.example.buylap.TakeQuiz1ActivityAppCompatActivity8
 resetColor()2com.example.buylap.TakeQuiz1Activity#resetColor()VH
 disableButton()5com.example.buylap.TakeQuiz1Activity#disableButton()VB
 setAllData()2com.example.buylap.TakeQuiz1Activity#setAllData()VC
-+Lcom/example/buylap/TakeQuiz1Activity$1606;View.OnClickListenerm
++Lcom/example/buylap/TakeQuiz1Activity$1663;View.OnClickListenerm
  com.example.buylap.StudyActivityAppCompatActivity6
 <init>()*com.example.buylap.StudyActivity#<init>()Vs
 #com.example.buylap.HomepageActivityAppCompatActivity9
 <init>()-com.example.buylap.HomepageActivity#<init>()VI
 5BottomNavigationView.OnNavigationItemSelectedListenerjava.lang.Objectc
-*Lcom/example/buylap/HomepageActivity$1094;5BottomNavigationView.OnNavigationItemSelectedListenerb
+*Lcom/example/buylap/HomepageActivity$1122;5BottomNavigationView.OnNavigationItemSelectedListenerb
 com.example.buylap.LikeFragmentFragment5
 <init>())com.example.buylap.LikeFragment#<init>()Vo
 !com.example.buylap.OfficeActivityAppCompatActivity7
@@ -215,8 +215,8 @@ $com.example.buylap.TakeQuiz1ActivityAppCompatActivity8
 getQuestion();com.example.buylap.QuizList#getQuestion()Ljava/lang/String;m
  com.example.buylap.LoginActivityAppCompatActivity6
 <init>()*com.example.buylap.LoginActivity#<init>()V>
-&Lcom/example/buylap/LoginActivity$753;View.OnClickListener?
-'Lcom/example/buylap/LoginActivity$1042;View.OnClickListenero
+&Lcom/example/buylap/LoginActivity$773;View.OnClickListener?
+'Lcom/example/buylap/LoginActivity$1069;View.OnClickListenero
 !com.example.buylap.GamingActivityAppCompatActivity7
 <init>()+com.example.buylap.GamingActivity#<init>()Vù
 com.example.buylap.UserFragmentFragment5
