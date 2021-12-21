@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.buylap.R;
+import com.example.buylap.testActivity;
 
 public class UserFragment extends Fragment {
 
@@ -56,7 +57,7 @@ public class UserFragment extends Fragment {
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), testActivity.class);
                 startActivity(intent);
             }
         });
