@@ -37,7 +37,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
         recyclerViewBuild.setLayoutManager(linearLayoutManager);
         ArrayList<Category> build = new ArrayList<>();
-        build.add(new Category("Motherboard", "motherboard", "jwindwj"));
+        build.add(new Category("Motherboard", "motherboard96", "jwindwj"));
         build.add(new Category("SSD", "ssd", "swqisq"));
         build.add(new Category("CPU", "cpu", "wijskdwp"));
         build.add(new Category("Ram", "ram", "jwqosqkl"));

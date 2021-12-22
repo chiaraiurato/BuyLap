@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
         mostviewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
         mostviewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
         mostviewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
-        mostviewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard"));
+        mostviewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
         adapter = new MostViewAdapter(mostviewed);
         recyclerView.setAdapter(adapter);
 
