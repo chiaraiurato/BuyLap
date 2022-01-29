@@ -38,7 +38,7 @@ public class testActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
             try {
                     Class.forName("com.mysql.jdbc.Driver");
-                Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.1.250:3306/android", "andro", "andro");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.1.198:3306/android", "andro", "andro");
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM cpu");
                 while(resultSet.next()){

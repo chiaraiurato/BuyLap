@@ -64,10 +64,14 @@ public class TakeQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 index++;
-                quizList=listQuest.get(index);
-                resetColor();
-                setAllData();
 
+                if ( index >= listQuest.size()) {
+                    finished();
+                }else {
+                    quizList = listQuest.get(index);
+                    resetColor();
+                    setAllData();
+                }
             }
         });
     }
@@ -86,34 +90,21 @@ public class TakeQuizActivity extends AppCompatActivity {
         cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
         cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
     }
-    public void Op1Click(View view){
+    public void Op1Click(View view) {
         resetColor();
-     cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
-     if(index < listQuest.size()-1)
-     {
-         choice(cardOp1);
-     }else
-         finished();
-
+        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
+        choice(cardOp1);
     }
 
     public void Op2Click(View view) {
         resetColor();
         cardOp2.setCardBackgroundColor(getResources().getColor(R.color.green));
-        if(index < listQuest.size()-1)
-        {
-            choice(cardOp2);
-        }else
-            finished();
+        choice(cardOp2);
     }
     public void Op3Click(View view) {
         resetColor();
         cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
-        if(index < listQuest.size()-1)
-        {
-            choice(cardOp3);
-        }else
-            finished();
+        choice(cardOp3);
     }
 
     private void finished() {
