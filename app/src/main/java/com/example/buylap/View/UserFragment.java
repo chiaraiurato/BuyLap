@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.buylap.R;
-import com.example.buylap.testActivity;
 
 public class UserFragment extends Fragment {
 

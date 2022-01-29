@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".testActivity"
-            android:exported="false" />
-        <activity
             android:name=".View.QuizResultActivity"
             android:exported="false" />
         <activity

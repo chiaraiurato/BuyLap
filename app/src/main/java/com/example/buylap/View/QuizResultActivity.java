@@ -12,6 +12,9 @@ import android.widget.Button;
 
 import com.example.buylap.Category;
 import com.example.buylap.CategoryAdapter;
+import com.example.buylap.Controller.BuildController;
+import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.Model.ModelCpu;
 import com.example.buylap.R;
 
 import java.util.ArrayList;
@@ -39,7 +42,14 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         ArrayList<Category> build = new ArrayList<>();
         build.add(new Category("Motherboard", "motherboard96", "jwindwj"));
         build.add(new Category("SSD", "ssd", "swqisq"));
-        build.add(new Category("CPU", "cpu", "wijskdwp"));
+        BuildController buildController = new BuildController();
+        try {
+            buildController.createBuild();
+        } catch (DAOException e) {
+            e.printStackTrace();
+        }
+
+        build.add(new Category("cpu", "cpu", "wijskdwp"));
         build.add(new Category("Ram", "ram", "jwqosqkl"));
         build.add(new Category("Video Card", "videocard", "jswoq"));
         build.add(new Category("Power Supply", "powersupply", "jwqos"));
