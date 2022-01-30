@@ -1,16 +1,11 @@
 package com.example.buylap.Bean;
 
-public class BEANcpu {
+public class BeanCpu {
 
     private String Name;
     private String Subtitles;
     private String Url;
 
-    public BEANcpu(String name, String subtitles, String url) {
-        this.Name = name;
-        this.Subtitles = subtitles;
-        this.Url = url;
-    }
 
     public String getName() {
         return Name;

@@ -20,7 +20,9 @@ public class JdbcConnection {
        public synchronized Connection getConnection() {
            try {
                 Class.forName("com.mysql.jdbc.Driver");
-                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.1.198:3306/android", "andro", "andro");
+                if(this.connection == null ) {
+                    this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.44:3306/android", "andro", "andro");
+                }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException throwables) {

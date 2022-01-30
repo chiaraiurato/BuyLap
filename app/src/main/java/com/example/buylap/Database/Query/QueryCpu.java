@@ -7,8 +7,8 @@ import java.sql.Statement;
 public class QueryCpu {
 
 
-    public static ResultSet retrieveCpu(Statement stmt, String keyword) throws SQLException {
-        String query = String.format("SELECT * FROM cpu where category='%d';", keyword);
+    public static ResultSet retrieveCpu(Statement stmt, String name,  String keyword) throws SQLException {
+        String query = "SELECT * FROM " + name + " WHERE category = '" + keyword + "';";
         return stmt.executeQuery(query);
     }
 

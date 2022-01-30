@@ -1,5 +1,7 @@
 package com.example.buylap.Database.DAO;
 
+import android.os.StrictMode;
+
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Database.JdbcConnection;
 import com.example.buylap.Database.Query.QueryCpu;
@@ -15,28 +17,31 @@ public class DAOcpu {
     private DAOcpu() {
     }
 
-    public static ModelCpu selectCpu(String keyword) throws SQLException, DAOException{
-        ModelCpu cpu = null;
+    public static ModelCpu selectCpu(String name, String keyword) throws SQLException, DAOException{
+        ModelCpu cpu;
 
         Statement statement = null;
         Connection connection = null;
 
         try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+
             connection = JdbcConnection.getInstance().getConnection();
 
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
-                    ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = QueryCpu.retrieveCpu(statement, keyword);
+            statement = connection.createStatement();
+            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
             if (!rs.first()) {
                 throw new DAOException("Table not found");
             }
-            rs.first();
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
             cpu = new ModelCpu(recordName, recordSubtitles, recordUrl );
             rs.close();
-            statement.close();
+
 
         } finally {
             if (statement != null) {

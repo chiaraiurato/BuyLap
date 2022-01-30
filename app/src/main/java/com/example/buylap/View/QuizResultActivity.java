@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.buylap.Bean.BeanAnswer;
+import com.example.buylap.Bean.BeanCpu;
 import com.example.buylap.Category;
 import com.example.buylap.CategoryAdapter;
-import com.example.buylap.Controller.BuildController;
+import com.example.buylap.Controller.Applicativo.BuildController;
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.ModelCpu;
+import com.example.buylap.Model.Answer;
 import com.example.buylap.R;
 
 import java.util.ArrayList;
@@ -26,30 +28,41 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         return update;
     }
 
+    private RecyclerView.Adapter adapter;
+    private RecyclerView recyclerViewBuild;
+    private Button updateAccBalance;
+    private ArrayList<Category> build;
+    private LinearLayoutManager linearLayoutManager;
+    private BuildController buildController;
+    private BeanAnswer beanAnswer;
+    BeanCpu beanCPU;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_result);
 
-        RecyclerView.Adapter adapter;
-        RecyclerView recyclerViewBuild;
-        Button updateAccBalance;
+        this.build =  new ArrayList<>();
+        this.buildController = new BuildController();
+        this.beanAnswer = new BeanAnswer();
+
         recyclerViewBuild=findViewById(R.id.RecyclerBuild);
         updateAccBalance=findViewById(R.id.updateBtn);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
+        linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
         recyclerViewBuild.setLayoutManager(linearLayoutManager);
-        ArrayList<Category> build = new ArrayList<>();
-        build.add(new Category("Motherboard", "motherboard96", "jwindwj"));
-        build.add(new Category("SSD", "ssd", "swqisq"));
-        BuildController buildController = new BuildController();
+
+
         try {
-            buildController.createBuild();
+            beanCPU = buildController.createBuild("cpu", beanAnswer.getOp3());
         } catch (DAOException e) {
             e.printStackTrace();
         }
 
-        build.add(new Category("cpu", "cpu", "wijskdwp"));
+        build.add(new Category("Motherboard", "motherboard96", "jwindwj"));
+        build.add(new Category("SSD", "ssd", "swqisq"));
+
+        build.add(new Category(beanCPU.getName(), "cpu", beanCPU.getSubtitles()));
         build.add(new Category("Ram", "ram", "jwqosqkl"));
         build.add(new Category("Video Card", "videocard", "jswoq"));
         build.add(new Category("Power Supply", "powersupply", "jwqos"));
@@ -80,6 +93,12 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
                 break;
             case 2:
                 intent =  new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.it/itm/265432918889?hash=item3dcd08eb69:g:YicAAOSwAsphqPRU"));
+                break;
+            case 3:
+                intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanCPU.getUrl()));
+                break;
+            case 4:
+                intent =  new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.it/itm/294543728322?hash=item44942c9ec2:g:-hkAAOSw669f~-tk"));
                 break;
 
             default:
