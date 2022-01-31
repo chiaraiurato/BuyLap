@@ -18,17 +18,19 @@ public class JdbcConnection {
         return instance;
     }
        public synchronized Connection getConnection() {
-           try {
+        if(this.connection == null) {
+            try {
                 Class.forName("com.mysql.jdbc.Driver");
-                if(this.connection == null ) {
-                    this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.44:3306/android", "andro", "andro");
-                }
+
+                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.3:3306/android", "andro", "andro");
+
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            return connection;
+        }
+            return this.connection;
         }
 }
 

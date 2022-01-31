@@ -20,6 +20,9 @@ import java.util.List;
 
 public class TakeQuizController {
 
+
+
+/*
     private List<QuizList> allQuestion;
     private QuizList quizList;
     private int index = 0;
@@ -30,7 +33,8 @@ public class TakeQuizController {
         allQuestion=listQuest;
         quizList=listQuest.get(index);
 
-/*
+
+
         question.setText(quizList.getQuestion());
         op1.setText(quizList.getOp1());
         op2.setText(quizList.getOp2());
@@ -110,5 +114,5 @@ public class TakeQuizController {
 
 
  */
-    }
+
 }

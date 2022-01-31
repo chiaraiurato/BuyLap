@@ -19,16 +19,13 @@ public class DAOcpu {
 
     public static ModelCpu selectCpu(String name, String keyword) throws SQLException, DAOException{
         ModelCpu cpu;
-
-        Statement statement = null;
         Connection connection = null;
+        Statement statement = null;
 
         try {
 
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
-
-
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();

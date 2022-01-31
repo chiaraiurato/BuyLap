@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.se.omapi.Session;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,8 @@ import com.example.buylap.Bean.BeanCpu;
 import com.example.buylap.Category;
 import com.example.buylap.CategoryAdapter;
 import com.example.buylap.Controller.Applicativo.BuildController;
+import com.example.buylap.Controller.Applicativo.QuizResultController;
+import com.example.buylap.Controller.Grafico.TakeQuizGraphicController;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Model.Answer;
 import com.example.buylap.R;
@@ -34,6 +37,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
     private ArrayList<Category> build;
     private LinearLayoutManager linearLayoutManager;
     private BuildController buildController;
+    private QuizResultController quizResultController;
     private BeanAnswer beanAnswer;
     BeanCpu beanCPU;
 
@@ -44,17 +48,19 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
 
         this.build =  new ArrayList<>();
         this.buildController = new BuildController();
-        this.beanAnswer = new BeanAnswer();
+        this.quizResultController = new QuizResultController();
 
+        this.beanAnswer = new BeanAnswer();
+        this.beanCPU = new BeanCpu();
         recyclerViewBuild=findViewById(R.id.RecyclerBuild);
         updateAccBalance=findViewById(R.id.updateBtn);
 
         linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
         recyclerViewBuild.setLayoutManager(linearLayoutManager);
 
-
+       // beanAnswer = quizResultController.sendAnswer();
         try {
-            beanCPU = buildController.createBuild("cpu", beanAnswer.getOp3());
+            beanCPU = buildController.createBuild("cpu", "Office use");
         } catch (DAOException e) {
             e.printStackTrace();
         }
