@@ -3,13 +3,12 @@ package com.example.buylap.Controller.Grafico;
 
 import static com.example.buylap.View.HomeFragment.listQuest;
 
-import android.se.omapi.Session;
+import android.util.Log;
 
 import com.example.buylap.Bean.BeanAnswer;
 import com.example.buylap.Controller.Applicativo.QuizResultController;
 import com.example.buylap.Controller.Applicativo.TakeQuizController;
 
-import com.example.buylap.Model.Answer;
 import com.example.buylap.Model.QuizList;
 import com.example.buylap.View.QuizResultActivity;
 import com.example.buylap.View.TakeQuizActivity;
@@ -24,14 +23,16 @@ public class TakeQuizGraphicController {
     private QuizResultController quizResultController; // <-- APP
     private List<QuizList> allQuestion;
     private QuizList quizList;
-    public Answer answers;
+
+    private BeanAnswer beanAnswer;
     private int index;
 
     public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
 
         this.takeQuizActivity = takeQuizActivity;
         this.index = 0;
-        answers = new Answer("", "", "");
+
+        beanAnswer = new BeanAnswer();
         allQuestion = listQuest;
         quizList = listQuest.get(index);
     }
@@ -43,38 +44,42 @@ public class TakeQuizGraphicController {
         takeQuizActivity.setOp2(quizList.getOp2());
         takeQuizActivity.setOp3(quizList.getOp3());
     }
-    public void goNext(){
+    public void goNext(String answer){
+        switch (index) {
+            case 0:
+                beanAnswer.setOp1(answer);
+                break;
+            case 1:
+                beanAnswer.setOp2(answer);
+                break;
+            case 2:
+                beanAnswer.setOp3(answer);
+                break;
+        }
         index++;
         if (index >= listQuest.size() ) {
 
-
-            takeQuizActivity.finished();
+            takeQuizActivity.finished(beanAnswer);
 
         } else {
-            quizList = listQuest.get(index);
-            takeQuizActivity.resetColor();
-            setQuiz();
+                quizList = listQuest.get(index);
+
+                takeQuizActivity.resetColor();
+                setQuiz();
+            }
         }
-    }
-    public void getAnswer1(){
-        answers.setOp1(quizList.getOp1());
 
+    public String getAnswer1(){
+       return quizList.getOp1();
     }
-    public void getAnswer2(){
-        answers.setOp1(quizList.getOp2());
+    public String getAnswer2(){
+        return quizList.getOp2();
+    }
 
+    public String getAnswer3(){
+        return quizList.getOp3();
     }
-    public void getAnswer3(){
-        answers.setOp1(quizList.getOp2());
 
-    }
-    public BeanAnswer sendAnswer (){
 
-        BeanAnswer beanAnswer = new BeanAnswer();
-        beanAnswer.setOp1(this.answers.getOp1());
-        beanAnswer.setOp2(this.answers.getOp2());
-        beanAnswer.setOp3(this.answers.getOp3());
-        return beanAnswer;
-    }
 }
 

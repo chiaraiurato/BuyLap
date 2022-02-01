@@ -2,23 +2,20 @@ package com.example.buylap.Database.DAO;
 
 import android.os.StrictMode;
 
-import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Database.JdbcConnection;
 import com.example.buylap.Database.Query.QueryCpu;
-import com.example.buylap.Model.ModelCpu;
+import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.Model.ModelSsd;
+import com.example.buylap.Model.ModelVideoCard;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DAOcpu {
-
-    private DAOcpu() {
-    }
-
-    public static ModelCpu selectCpu(String name, String keyword) throws SQLException, DAOException{
-        ModelCpu cpu;
+public class DAOssd {
+    public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {
+        ModelSsd modelSsd;
         Connection connection = null;
         Statement statement = null;
 
@@ -36,7 +33,7 @@ public class DAOcpu {
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
-            cpu = new ModelCpu(recordName, recordSubtitles, recordUrl );
+            modelSsd = new ModelSsd(recordName, recordSubtitles, recordUrl );
             rs.close();
 
 
@@ -46,6 +43,6 @@ public class DAOcpu {
             }
         }
 
-    return cpu;
+        return modelSsd;
     }
 }

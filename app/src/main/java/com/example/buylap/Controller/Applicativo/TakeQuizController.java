@@ -1,23 +1,5 @@
 package com.example.buylap.Controller.Applicativo;
 
-import static com.example.buylap.View.HomeFragment.listQuest;
-
-import android.content.Intent;
-import android.view.View;
-import android.widget.TextView;
-
-import androidx.cardview.widget.CardView;
-
-import com.example.buylap.Bean.BeanAnswer;
-import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.Answer;
-import com.example.buylap.Model.QuizList;
-import com.example.buylap.R;
-import com.example.buylap.View.QuizResultActivity;
-import com.example.buylap.View.TakeQuizActivity;
-
-import java.util.List;
-
 public class TakeQuizController {
 
 
@@ -103,13 +85,7 @@ public class TakeQuizController {
             Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
             startActivity(intent);
         }
-        public BeanAnswer sendAnswer (Answer answer){
-            BeanAnswer beanAnswer = new BeanAnswer();
-            beanAnswer.setOp1(answer.getOp1());
-            beanAnswer.setOp2(answer.getOp2());
-            beanAnswer.setOp3(answer.getOp3());
-            return beanAnswer;
-        }
+
 
 
 
