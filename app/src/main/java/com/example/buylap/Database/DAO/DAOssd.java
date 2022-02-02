@@ -1,18 +1,5 @@
 package com.example.buylap.Database.DAO;
 
-import android.os.StrictMode;
-
-import com.example.buylap.Database.JdbcConnection;
-
-import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.ModelSsd;
-import com.example.buylap.Model.ModelVideoCard;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 public class DAOssd {
     /*
     public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {

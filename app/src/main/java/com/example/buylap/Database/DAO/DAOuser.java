@@ -3,19 +3,19 @@ package com.example.buylap.Database.DAO;
 import android.os.StrictMode;
 
 import com.example.buylap.Database.JdbcConnection;
+import com.example.buylap.Database.Query.QueryRegistration;
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.ModelMotherBoard;
-import com.example.buylap.Model.ModelPower;
+import com.example.buylap.Model.Users.ModelUser;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DAOpower {
-    /*
-    public static ModelPower selectPower(String name, String keyword) throws SQLException, DAOException {
-        ModelPower modelPower;
+public class DAOuser {
+
+    public static ModelUser insertUser(String name, String keyword) throws SQLException, DAOException {
+        ModelUser modelUser;
         Connection connection = null;
         Statement statement = null;
 
@@ -26,14 +26,14 @@ public class DAOpower {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
+            ResultSet rs = QueryRegistration.insertUser(statement, name, keyword);
             if (!rs.first()) {
                 throw new DAOException("Table not found with keyword " + keyword);
             }
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
-            modelPower = new ModelPower(recordName, recordSubtitles, recordUrl );
+            modelUser = new ModelUser(recordName, recordSubtitles, recordUrl );
             rs.close();
 
 
@@ -43,8 +43,6 @@ public class DAOpower {
             }
         }
 
-        return modelPower;
+        return modelUser;
     }
-
-     */
 }

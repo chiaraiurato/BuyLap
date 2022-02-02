@@ -23,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent5 = new Intent(LoginActivity.this, RegistrationActivity.class);
-                startActivity(intent5);
+                Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(intent);
             }
         });
         signinbtn.setOnClickListener(new View.OnClickListener() {

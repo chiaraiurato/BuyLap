@@ -22,7 +22,7 @@ public class JdbcConnection {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
 
-                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.34:3306/android", "andro", "andro");
+                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.1.197:3306/android", "andro", "andro");
 
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
