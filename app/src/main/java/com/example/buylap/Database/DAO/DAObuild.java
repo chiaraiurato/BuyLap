@@ -3,20 +3,22 @@ package com.example.buylap.Database.DAO;
 import android.os.StrictMode;
 
 import com.example.buylap.Database.JdbcConnection;
+import com.example.buylap.Database.Query.QueryBuild;
 
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.ModelSsd;
-import com.example.buylap.Model.ModelVideoCard;
+import com.example.buylap.Model.ModelBuild;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class DAOssd {
-    /*
-    public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {
-        ModelSsd modelSsd;
+public class DAObuild {
+
+    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+        ModelBuild modelBuild;
         Connection connection = null;
         Statement statement = null;
 
@@ -27,14 +29,14 @@ public class DAOssd {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
+            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
             if (!rs.first()) {
                 throw new DAOException("Table not found with keyword " + keyword);
             }
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
-            modelSsd = new ModelSsd(recordName, recordSubtitles, recordUrl );
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl );
             rs.close();
 
 
@@ -44,8 +46,6 @@ public class DAOssd {
             }
         }
 
-        return modelSsd;
+        return modelBuild;
     }
-
-     */
 }

@@ -18,9 +18,6 @@ import java.util.List;
 public class TakeQuizGraphicController {
 
     private TakeQuizActivity takeQuizActivity;      //<--- VIEW
-    private QuizResultActivity quizResultActivity;
-    private TakeQuizController takeQuizController;  //<-- APPLICATIVE
-    private QuizResultController quizResultController; // <-- APP
     private List<QuizList> allQuestion;
     private QuizList quizList;
 

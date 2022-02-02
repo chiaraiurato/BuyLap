@@ -4,7 +4,6 @@ import android.os.StrictMode;
 
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryCpu;
 import com.example.buylap.Model.ModelCpu;
 
 import java.sql.Connection;
@@ -13,7 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DAOcpu {
-
+/*
     private DAOcpu() {
     }
 
@@ -48,4 +47,6 @@ public class DAOcpu {
 
     return cpu;
     }
+
+ */
 }

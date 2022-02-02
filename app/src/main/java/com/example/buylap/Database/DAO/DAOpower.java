@@ -3,7 +3,6 @@ package com.example.buylap.Database.DAO;
 import android.os.StrictMode;
 
 import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryCpu;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Model.ModelMotherBoard;
 import com.example.buylap.Model.ModelPower;
@@ -14,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DAOpower {
+    /*
     public static ModelPower selectPower(String name, String keyword) throws SQLException, DAOException {
         ModelPower modelPower;
         Connection connection = null;
@@ -45,4 +45,6 @@ public class DAOpower {
 
         return modelPower;
     }
+
+     */
 }

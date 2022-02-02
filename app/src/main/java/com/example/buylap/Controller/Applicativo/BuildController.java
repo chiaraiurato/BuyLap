@@ -1,11 +1,13 @@
 package com.example.buylap.Controller.Applicativo;
 
+import com.example.buylap.Bean.BeanBuild;
 import com.example.buylap.Bean.BeanCpu;
 import com.example.buylap.Bean.BeanMotherboard;
 import com.example.buylap.Bean.BeanPower;
 import com.example.buylap.Bean.BeanRam;
 import com.example.buylap.Bean.BeanSsd;
 import com.example.buylap.Bean.BeanVideoCard;
+import com.example.buylap.Database.DAO.DAObuild;
 import com.example.buylap.Database.DAO.DAOcpu;
 import com.example.buylap.Database.DAO.DAOmotherboard;
 import com.example.buylap.Database.DAO.DAOpower;
@@ -13,6 +15,7 @@ import com.example.buylap.Database.DAO.DAOram;
 import com.example.buylap.Database.DAO.DAOssd;
 import com.example.buylap.Database.DAO.DAOvideo;
 import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.Model.ModelBuild;
 import com.example.buylap.Model.ModelCpu;
 import com.example.buylap.Model.ModelMotherBoard;
 import com.example.buylap.Model.ModelPower;
@@ -21,22 +24,39 @@ import com.example.buylap.Model.ModelSsd;
 import com.example.buylap.Model.ModelVideoCard;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BuildController {
     //risolvere con le BEAN
-    public BeanCpu createBuildCpu( String keyword) throws DAOException {
-        BeanCpu beanCpu = new BeanCpu();
-        ModelCpu modelCpu;
-        try {
-            modelCpu = DAOcpu.selectCpu("cpu", keyword);
-            beanCpu.setName(modelCpu.getName());
-            beanCpu.setSubtitles(modelCpu.getSubtitles());
-            beanCpu.setUrl(modelCpu.getUrl());
-        } catch (SQLException e) {
-            throw new DAOException("error with select cpu from controller with keyword" + keyword);
+    public List<BeanBuild> createBuild(String keyword) throws DAOException {
+        String[] table = new String[6];
+        table[0] = "motherboard";
+        table[1] = "ssd";
+        table[2] = "cpu";
+        table[3] = "ram";
+        table[4] = "videocard";
+        table[5] = "powersupply";
+        int index;
+        List<BeanBuild> beanBuild = new ArrayList<>();
+        List<ModelBuild> modelBuild = new ArrayList<ModelBuild>();
+        for(index = 0; index < 6; index++){
+
+            try {
+                modelBuild.add( DAObuild.selectBuild(table[index], keyword));
+                BeanBuild beanBuildinstance = new BeanBuild();
+                beanBuildinstance.setName(modelBuild.get(index).getName());
+                beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
+                beanBuildinstance.setUrl(modelBuild.get(index).getUrl());
+                beanBuild.add(beanBuildinstance);
+            } catch (SQLException e) {
+                throw new DAOException("error with select"+ table+ " from controller with keyword" + keyword);
+            }
         }
-        return beanCpu;
+        return beanBuild;
+
     }
+    /*
     public BeanMotherboard createBuildMotherBoard( String keyword) throws DAOException {
         BeanMotherboard beanMotherboard = new BeanMotherboard();
         ModelMotherBoard modelMotherBoard;
@@ -102,5 +122,7 @@ public class BuildController {
         }
         return beanSsd;
     }
+
+     */
 
 }

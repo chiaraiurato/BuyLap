@@ -3,7 +3,7 @@ package com.example.buylap.Database.DAO;
 import android.os.StrictMode;
 
 import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryCpu;
+
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Model.ModelCpu;
 import com.example.buylap.Model.ModelMotherBoard;
@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DAOmotherboard {
+    /*
     public static ModelMotherBoard selectMotherboard(String name, String keyword) throws SQLException, DAOException {
         ModelMotherBoard motherBoard;
         Connection connection = null;
@@ -45,4 +46,6 @@ public class DAOmotherboard {
 
         return motherBoard;
     }
-}
+
+     */
+    }

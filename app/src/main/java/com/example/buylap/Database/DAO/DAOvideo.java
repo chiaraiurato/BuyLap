@@ -3,7 +3,6 @@ package com.example.buylap.Database.DAO;
 import android.os.StrictMode;
 
 import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryCpu;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Model.ModelRam;
 import com.example.buylap.Model.ModelVideoCard;
@@ -14,7 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DAOvideo {
-
+/*
     public static ModelVideoCard selectVideo(String name, String keyword) throws SQLException, DAOException {
         ModelVideoCard modelVideoCard;
         Connection connection = null;
@@ -46,4 +45,6 @@ public class DAOvideo {
 
         return modelVideoCard;
     }
+
+ */
 }
