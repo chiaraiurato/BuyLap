@@ -102,7 +102,7 @@
             android:layout_gravity="start"
             android:layout_marginBottom="32dp"
             android:buttonTint="#41CD7D"
-            android:checked="true"
+            android:checked="false"
             android:minHeight="48dp" />
 
         <RadioButton

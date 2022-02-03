@@ -1,1 +1,1 @@
- 2javaXBhr9app/src/main/java/com/example/buylap/MostViewAdapter.java
+ 2javaX5hrUapp/src/main/java/com/example/buylap/Controller/Applicativo/QuizResultController.java

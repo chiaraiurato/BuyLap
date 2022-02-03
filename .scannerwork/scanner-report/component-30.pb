@@ -1,1 +1,1 @@
- 2javaX<hr6app/src/main/java/com/example/buylap/ShopFragment.java
+ 2javaXShrVapp/src/main/java/com/example/buylap/Controller/Grafico/TakeQuizGraphicController.java

@@ -1,37 +1,18 @@
 
-rcom.example.buylap.ShopFragment#newInstance(Ljava/lang/String;Ljava/lang/String;)Lcom/example/buylap/ShopFragment;\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java$ $(*"1*Ø
-1\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java%  %(2©¶
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java%$ %(0%
-%0com.example.buylap.ShopFragment"com.example.buylap.ShopFragmentª
-∏
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java%  %(2
-%1")com.example.buylap.ShopFragment#<init>()V*'
-%
-%0com.example.buylap.ShopFragmentΩ
-∫
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java% %(3+
-fragmentcom.example.buylap.ShopFragment"__id*'
-%
-%0com.example.buylap.ShopFragmentá
-Ñ
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java' '(!
-%2java.lang.String"__id*
-""á
-Ñ
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java( ((!
-%3java.lang.String"__id*
-"""ç
-\
-RC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/ShopFragment.java* *(-
-+
-fragmentcom.example.buylap.ShopFragment:
-param1java.lang.String:
-param2java.lang.StringB#"!
-com.example.buylap.ShopFragment
+?com.example.buylap.Model.CreditCard#getName()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java
+ 
+("1*•
+1c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (π
+∂
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
+%0java.lang.String"__id*1*/%
+#com.example.buylap.Model.CreditCard"
+Name"
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
+
+%0java.lang.StringB'%
+#com.example.buylap.Model.CreditCard

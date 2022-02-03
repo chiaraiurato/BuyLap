@@ -1,34 +1,31 @@
-package com.example.buylap;
+package com.example.buylap.Bean;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+public class BeanAnswer {
+    String op1;
+    String op2;
+    String op3;
 
-import android.os.Bundle;
+    public String getOp1() {
+        return op1;
+    }
 
-import java.util.ArrayList;
+    public void setOp1(String op1) {
+        this.op1 = op1;
+    }
 
-public class GamingActivity extends AppCompatActivity {
+    public String getOp2() {
+        return op2;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        RecyclerView.Adapter adapter;
-        RecyclerView recyclerList;
-        setContentView(R.layout.activity_gaming);
-        recyclerList=(RecyclerView)findViewById(R.id.RecyclerList);
+    public void setOp2(String op2) {
+        this.op2 = op2;
+    }
 
-        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
-        recyclerList.setLayoutManager(linearLayoutManager3);
+    public String getOp3() {
+        return op3;
+    }
 
-        ArrayList<MostViewed> mostviewed = new ArrayList<>();
-        mostviewed.add(new MostViewed("DELL", "XPS15", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("ASUS", "TUF", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("HP", "PAVILION", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("Acer", "NITRO", "ic_baseline_laptop_24"));
-        mostviewed.add(new MostViewed("LENOVO", "sowk", "ic_baseline_laptop_24"));
-        adapter= new MostViewAdapter(mostviewed);
-        recyclerList.setAdapter(adapter);
-
+    public void setOp3(String op3) {
+        this.op3 = op3;
     }
 }

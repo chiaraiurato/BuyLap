@@ -1,1 +1,1 @@
-+ 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml
++ 2javaXBhr9app/src/main/java/com/example/buylap/MostViewAdapter.java

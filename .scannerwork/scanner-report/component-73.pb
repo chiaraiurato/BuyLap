@@ -1,1 +1,1 @@
-I 2xmlXQhr)app/src/main/res/layout/activity_main.xml
+I 2xmlXhr8app/src/main/res/drawable/ic_baseline_search_24_blue.xml

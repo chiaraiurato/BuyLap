@@ -1,1 +1,1 @@
-P 2xmlXHhr)app/src/main/res/layout/fragment_shop.xml
+P 2xmlXhr+app/src/main/res/drawable/item_selector.xml

@@ -1,1 +1,1 @@
- 2javaXhr6app/src/main/java/com/example/buylap/HomeActivity.java
+ 2javaX#hr8app/src/main/java/com/example/buylap/Bean/BeanBuild.java

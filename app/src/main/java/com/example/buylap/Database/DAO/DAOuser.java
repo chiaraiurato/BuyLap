@@ -2,6 +2,7 @@ package com.example.buylap.Database.DAO;
 
 import android.os.StrictMode;
 
+import com.example.buylap.Bean.BeanUser;
 import com.example.buylap.Database.JdbcConnection;
 import com.example.buylap.Database.Query.QueryRegistration;
 import com.example.buylap.Exceptions.DAOException;
@@ -10,12 +11,13 @@ import com.example.buylap.Model.Users.ModelUser;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 
 public class DAOuser {
 
-    public static ModelUser insertUser(String username, String mail, String password) throws SQLException, DAOException {
-        ModelUser modelUser;
+    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException {
+
         Connection connection = null;
         Statement statement = null;
 
@@ -26,23 +28,10 @@ public class DAOuser {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryRegistration.insertUser(statement, username, mail, password);
-            if (!rs.first()) {
-                throw new DAOException("Table not found with keyword ");
-            }
-            String recordName = rs.getString(2);
-            String recordEmail = rs.getString(3);
-            String recordPassword = rs.getString(4);
-            modelUser = new ModelUser(recordName, recordEmail, recordPassword );
-            rs.close();
+            QueryRegistration.insertUser(statement, beanUser);
 
-
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+        } catch(SQLIntegrityConstraintViolationException e){
+            throw new DAOException("Username repetition");
         }
-
-        return modelUser;
     }
 }

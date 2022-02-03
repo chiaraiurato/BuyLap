@@ -1,1 +1,1 @@
- 2javaX>hr8app/src/main/java/com/example/buylap/SearchFragment.java
+ 2javaXhrZapp/src/main/java/com/example/buylap/Controller/Grafico/RegistrationGraphicController.java

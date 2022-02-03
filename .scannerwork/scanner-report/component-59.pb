@@ -1,1 +1,1 @@
-; 2xmlXhr-app/src/main/res/drawable/round_bottombar.xml
+; 2xmlXhr5app/src/main/res/drawable/ic_baseline_add_card_24.xml

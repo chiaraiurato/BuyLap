@@ -1,1 +1,1 @@
- 2javaX)hr2app/src/main/java/com/example/buylap/QuizList.java
+ 2javaXhrSapp/src/main/java/com/example/buylap/Controller/Grafico/LoginGraphicController.java

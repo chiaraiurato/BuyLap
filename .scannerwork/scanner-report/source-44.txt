@@ -1,5 +1,37 @@
-<vector android:autoMirrored="true" android:height="24dp"
-    android:tint="#FFFFFF" android:viewportHeight="24"
-    android:viewportWidth="24" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@android:color/white" android:pathData="M10,6L8.59,7.41 13.17,12l-4.58,4.59L10,18l6,-6z"/>
-</vector>
+package com.example.buylap;
+
+public class MostViewed {
+    private String title;
+    private String subtitle;
+    private String url;
+
+    public MostViewed(String title, String subtitle, String url) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.url = url;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+}

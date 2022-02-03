@@ -1,37 +1,16 @@
 
-vcom.example.buylap.SearchFragment#newInstance(Ljava/lang/String;Ljava/lang/String;)Lcom/example/buylap/SearchFragment;^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java$! $(,"1*Ë
-1^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java%" %(6¯¬
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java%& %(4'
-%0!com.example.buylap.SearchFragment"!com.example.buylap.SearchFragmentÁ
-¾
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java%" %(6
-%1"+com.example.buylap.SearchFragment#<init>()V*)
-'
-%0!com.example.buylap.SearchFragmentÃ
-À
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java% %(7-
-fragment!com.example.buylap.SearchFragment"__id*)
-'
-%0!com.example.buylap.SearchFragment‰
-†
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java' '(!
-%2java.lang.String"__id*
-""‰
-†
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java( ((!
-%3java.lang.String"__id*
-"""‘
-^
-TC:/Users/LuX/Desktop/BuyLap/app/src/main/java/com/example/buylap/SearchFragment.java* *(/
--
-fragment!com.example.buylap.SearchFragment:
-param1java.lang.String:
-param2java.lang.StringB%"#
-!com.example.buylap.SearchFragment
+Acom.example.buylap.Model.CreditCard#getNumber()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java ("1*§
+1c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (»
+¸
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
+%0java.lang.String"__id*3*1%
+#com.example.buylap.Model.CreditCard"
+Number"
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
+
+%0java.lang.StringB'%
+#com.example.buylap.Model.CreditCard

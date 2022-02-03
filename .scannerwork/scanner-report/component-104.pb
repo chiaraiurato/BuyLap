@@ -1,1 +1,1 @@
-h 2xmlXhr"app/src/main/res/values/themes.xml
+h 2xmlXùhr.app/src/main/res/layout/activity_take_quiz.xml

@@ -1,1 +1,1 @@
-G 2xmlXÆhr*app/src/main/res/layout/activity_login.xml
+G 2xmlXhr@app/src/main/res/drawable/ic_baseline_playlist_add_circle_24.xml

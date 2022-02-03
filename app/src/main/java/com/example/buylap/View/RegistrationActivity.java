@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.buylap.Controller.Grafico.RegistrationGraphicController;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.R;
+import com.example.buylap.UserHolder;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -22,13 +24,12 @@ public class RegistrationActivity extends AppCompatActivity {
     private RadioButton userRadio;
     private RadioButton sellerRadio;
     private TextView signIn;
-    private EditText username;
-    private EditText email;
-    private EditText password;
+    private TextView username;
+    private TextView email;
+    private TextView password;
     private Button signUp;
-    private Boolean User = true;
-    public RegistrationActivity() {
-    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class RegistrationActivity extends AppCompatActivity {
         this.registrationGraphicController = new RegistrationGraphicController(this);
         userRadio = findViewById(R.id.radio_user);
         sellerRadio = findViewById(R.id.radio_seller);
+
         username = findViewById(R.id.Username);
         email = findViewById(R.id.Mail);
         password = findViewById(R.id.Password);
@@ -56,15 +58,22 @@ public class RegistrationActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty(email.getText().toString()) || TextUtils.isEmpty(password.getText().toString())) {
                     Toast.makeText(RegistrationActivity.this, "All field required", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (User) {
-                        try {
-                            registrationGraphicController.registerNewAccountUser(username.getText().toString(), email.getText().toString(), password.getText().toString());
-                        } catch (DAOException e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        registrationGraphicController.registerNewAccountSeller(username.getText().toString(), email.getText().toString(), password.getText().toString());
 
+                    if (userRadio == null || sellerRadio == null) {
+                        Toast.makeText(RegistrationActivity.this, "Select type account", Toast.LENGTH_SHORT).show();
+                    } else {
+                        if(userRadio.isChecked()) {
+                            try {
+                                registrationGraphicController.registerNewAccountUser();
+
+                                Intent intent = new Intent(RegistrationActivity.this, HomepageActivity.class);
+                                startActivity(intent);
+                            } catch (DAOException e) {
+                                e.printStackTrace();
+                            }
+                        }else{
+                            registrationGraphicController.registerNewAccountSeller(username.getText().toString(), email.getText().toString(), password.getText().toString());
+                        }
                     }
                 }
             }
@@ -73,20 +82,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
     }
-    public void onRadioButtonClicked(View view) throws DAOException {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radio_user:
-                if (checked)
-                    User = true;
-                    break;
-            case R.id.radio_seller:
-                if (checked)
-                    User = false;
-                    break;
-        }
+    public String sendUsername(){
+        return username.getText().toString();
+    }
+    public String sendEmail(){
+        return email.getText().toString();
+    }
+    public String sendPassword(){
+        return password.getText().toString();
     }
 
 }

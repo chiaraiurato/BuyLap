@@ -1,0 +1,1 @@
+l 2xmlXHhr)app/src/main/res/layout/fragment_shop.xml

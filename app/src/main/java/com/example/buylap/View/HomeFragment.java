@@ -7,11 +7,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.buylap.Bean.BeanUser;
+import com.example.buylap.Controller.Grafico.HomeGraphicController;
 import com.example.buylap.MostViewAdapter;
 import com.example.buylap.MostViewed;
 import com.example.buylap.Model.QuizList;
@@ -22,21 +26,27 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
-
+    private HomeGraphicController homeGraphicController;
     public static ArrayList<QuizList> listQuest;
-
+    private TextView nameUser;
+    private View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         RecyclerView.Adapter adapter;
         RecyclerView recyclerView;
         Button takeQuiz;
+        homeGraphicController = new HomeGraphicController(this);
 
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        homeGraphicController.initializeSession();
+
+        view = inflater.inflate(R.layout.fragment_home, container, false);
         listQuest = new ArrayList<>();
         listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
         listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
         listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
+        nameUser = view.findViewById(R.id.nameUser);
+
 
         takeQuiz = view.findViewById(R.id.takequizbtn);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +72,9 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-
+    public void setUser(BeanUser beanUser){
+        nameUser = view.findViewById(R.id.nameUser);
+        nameUser.setText(beanUser.getUsername());
+    }
 }
 

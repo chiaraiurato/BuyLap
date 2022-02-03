@@ -1,99 +1,38 @@
-package com.example.buylap;
+package com.example.buylap.Database.DAO;
 
-import static com.example.buylap.HomeFragment.listQuest;
+public class DAOssd {
+    /*
+    public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {
+        ModelSsd modelSsd;
+        Connection connection = null;
+        Statement statement = null;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+        try {
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-public class TakeQuiz1Activity extends AppCompatActivity {
-
-    List<QuizList> allQuestion;
-    QuizList quizList;
-    int index=0;
-    TextView question;
-    TextView op1;
-    TextView op2;
-    CardView cardQuestion;
-    CardView cardOp1;
-    CardView cardOp2;
-    Button nextBtn;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_take_quiz1);
-        hooks();
-        allQuestion=listQuest;
-        quizList=listQuest.get(index);
-        setAllData();
-    }
-
-    private void setAllData() {
-        question.setText(quizList.getQuestion());
-        op1.setText(quizList.getOp1());
-        op2.setText(quizList.getOp2());
-    }
-
-    private void hooks() {
-
-        question=findViewById(R.id.txtqst);
-        op1=findViewById(R.id.text_a);
-        op2=findViewById(R.id.text_b);
-
-        cardOp1=findViewById(R.id.cardView2);
-        cardOp2=findViewById(R.id.cardView3);
-        nextBtn=findViewById(R.id.next_btn);
-    }
-    public void choice(CardView cardview){
-        cardview.setCardBackgroundColor(getResources().getColor(R.color.green));
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                index++;
-                quizList=listQuest.get(index);
-                resetColor();
-                setAllData();
-
+            statement = connection.createStatement();
+            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
             }
-        });
-    }
-    public void enableButton(){
-        cardOp1.setClickable(true);
-        cardOp2.setClickable(true);
-    }
-    public void disableButton(){
-        cardOp1.setClickable(false);
-        cardOp2.setClickable(false);
-    }
-    public void resetColor(){
-        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
-        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
-    }
-    public void Op1Click(View view){
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            modelSsd = new ModelSsd(recordName, recordSubtitles, recordUrl );
+            rs.close();
 
-     cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
-     if(index < listQuest.size()-1)
-     {
-         choice(cardOp1);
-     }
 
-    }
-
-    public void Op2Click(View view) {
-        resetColor();
-        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.green));
-        if(index < listQuest.size()-1)
-        {
-            choice(cardOp2);
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
         }
+
+        return modelSsd;
     }
+
+     */
 }

@@ -1,1 +1,1 @@
- 2javaXhr2app/src/main/java/com/example/buylap/Category.java
+ 2xmlX(hr app/src/main/AndroidManifest.xml

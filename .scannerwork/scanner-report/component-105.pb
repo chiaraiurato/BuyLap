@@ -1,1 +1,1 @@
-i 2xmlXhr(app/src/main/res/values-night/themes.xml
+i 2xmlX‰hr-app/src/main/res/layout/fragment_cashback.xml

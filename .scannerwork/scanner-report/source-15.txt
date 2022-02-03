@@ -1,26 +1,40 @@
-package com.example.buylap;
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.buylap">
 
-public class Category {
-    private String title;
-    private String url;
-    public Category(String title, String url){
-        this.title =title;
-        this.url= url;
-    }
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    public String getTitle() {
-        return title;
-    }
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Buylap">
+        <activity
+            android:name=".View.QuizResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.TakeQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.HomepageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-}
+</manifest>

@@ -1,1 +1,1 @@
-3 2xmlXhr4app/src/main/res/drawable/ic_baseline_vpn_key_24.xml
+3 2javaXKhrAapp/src/main/java/com/example/buylap/View/QuizResultActivity.java

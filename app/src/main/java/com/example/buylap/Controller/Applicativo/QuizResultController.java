@@ -32,7 +32,7 @@ public class QuizResultController {
 
         int index;
         List<BeanBuild> beanBuild = new ArrayList<>();
-        List<ModelBuild> modelBuild = new ArrayList<ModelBuild>();
+        List<ModelBuild> modelBuild = new ArrayList<>();
         for(index = 0; index < 6; index++){
 
             try {

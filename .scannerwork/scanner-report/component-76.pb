@@ -1,1 +1,1 @@
-L 2xmlX„hr/app/src/main/res/layout/activity_take_quiz1.xml
+L 2xmlXhr4app/src/main/res/drawable/ic_baseline_vpn_key_24.xml

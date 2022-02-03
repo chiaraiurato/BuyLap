@@ -1,1 +1,1 @@
- 2javaX&hr4app/src/main/java/com/example/buylap/MostViewed.java
+ 2javaX&hrWapp/src/main/java/com/example/buylap/Controller/Applicativo/RegistrationController.java

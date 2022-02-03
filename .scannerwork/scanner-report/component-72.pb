@@ -1,1 +1,1 @@
-H 2xmlX©hr+app/src/main/res/layout/activity_login2.xml
+H 2xmlXhr3app/src/main/res/drawable/ic_baseline_search_24.xml

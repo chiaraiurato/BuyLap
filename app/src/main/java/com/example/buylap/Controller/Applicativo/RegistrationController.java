@@ -14,24 +14,16 @@ import java.util.List;
 
 public class RegistrationController {
 
-    public BeanUser createUser(String username, String mail, String password) throws DAOException {
-        BeanUser beanUser = null;
-        ModelUser modelUsers = null;
-
+    public Boolean createUser(BeanUser beanUser) throws DAOException {
 
             try {
-                modelUsers = DAOuser.insertUser(username, mail, password);
-                beanUser = new BeanUser();
-
-                beanUser.setUsername(modelUsers.getUsername());
-                beanUser.setEmail(modelUsers.getEmail());
-                beanUser.setPassword(modelUsers.getPassword());
+                DAOuser.insertUser(beanUser);
+                return true;
 
             } catch (SQLException e) {
-                throw new DAOException("error with insert user from controller with keyword");
+                throw new DAOException("error on signup");
             }
 
-        return beanUser;
-
     }
+
 }

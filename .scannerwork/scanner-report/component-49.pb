@@ -1,1 +1,1 @@
-1 2xmlXhr5app/src/main/res/drawable/ic_baseline_settings_24.xml
+1 2javaX,hr<app/src/main/java/com/example/buylap/View/LoginActivity.java

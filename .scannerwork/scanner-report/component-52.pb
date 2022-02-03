@@ -1,1 +1,1 @@
-4 2xmlXhr6app/src/main/res/drawable/ic_round_architecture_24.xml
+4 2javaX\hrCapp/src/main/java/com/example/buylap/View/RegistrationActivity.java

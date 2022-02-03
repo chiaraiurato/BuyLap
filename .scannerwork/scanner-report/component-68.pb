@@ -1,1 +1,1 @@
-D 2xmlXGhr+app/src/main/res/layout/activity_gaming.xml
+D 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml

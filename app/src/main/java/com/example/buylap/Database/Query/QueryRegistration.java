@@ -1,13 +1,16 @@
 package com.example.buylap.Database.Query;
 
+import com.example.buylap.Bean.BeanUser;
+
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class QueryRegistration {
-    public static ResultSet insertUser(Statement stmt, String username, String mail, String password) throws SQLException {
+    public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
 
-        String query = "INSERT INTO `users` (`idusers`, `username`, `mail`, `password`, `token`) VALUES ('1', '"+ username+"', '"+mail+"', '"+password+"', '0');";
-        return stmt.executeQuery(query);
+        String query = "INSERT INTO `users` (`username`, `mail`, `password`, `token`) VALUES ('"+ beanUser.getUsername()+"', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
+         stmt.executeUpdate(query);
     }
 }
