@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class QueryRegistration {
-    public static ResultSet insertUser(Statement stmt, String name, String keyword) throws SQLException {
+    public static ResultSet insertUser(Statement stmt, String username, String mail, String password) throws SQLException {
 
-        String query = "SELECT * FROM " + name + " WHERE category = '" + keyword + "';";
+        String query = "INSERT INTO `users` (`idusers`, `username`, `mail`, `password`, `token`) VALUES ('1', '"+ username+"', '"+mail+"', '"+password+"', '0');";
         return stmt.executeQuery(query);
     }
 }

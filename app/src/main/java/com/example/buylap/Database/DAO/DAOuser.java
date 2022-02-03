@@ -14,7 +14,7 @@ import java.sql.Statement;
 
 public class DAOuser {
 
-    public static ModelUser insertUser(String name, String keyword) throws SQLException, DAOException {
+    public static ModelUser insertUser(String username, String mail, String password) throws SQLException, DAOException {
         ModelUser modelUser;
         Connection connection = null;
         Statement statement = null;
@@ -26,14 +26,14 @@ public class DAOuser {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryRegistration.insertUser(statement, name, keyword);
+            ResultSet rs = QueryRegistration.insertUser(statement, username, mail, password);
             if (!rs.first()) {
-                throw new DAOException("Table not found with keyword " + keyword);
+                throw new DAOException("Table not found with keyword ");
             }
             String recordName = rs.getString(2);
-            String recordSubtitles = rs.getString(3);
-            String recordUrl = rs.getString(4);
-            modelUser = new ModelUser(recordName, recordSubtitles, recordUrl );
+            String recordEmail = rs.getString(3);
+            String recordPassword = rs.getString(4);
+            modelUser = new ModelUser(recordName, recordEmail, recordPassword );
             rs.close();
 
 

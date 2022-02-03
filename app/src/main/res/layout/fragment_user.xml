@@ -108,7 +108,7 @@
         android:textColor="#535986"
 
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/searchbtn"
+        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"

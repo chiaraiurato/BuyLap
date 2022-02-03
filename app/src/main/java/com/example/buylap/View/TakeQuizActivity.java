@@ -26,14 +26,14 @@ public class TakeQuizActivity extends AppCompatActivity {
     private CardView cardOp3;
     private Button nextBtn;
 
-    private TakeQuizGraphicController takeQuizController;
+    private TakeQuizGraphicController takeQuizGraphicController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_quiz);
 
-        this.takeQuizController = new TakeQuizGraphicController(this);
+        this.takeQuizGraphicController = new TakeQuizGraphicController(this);
 
         question = findViewById(R.id.txtqst);
         op1 = findViewById(R.id.text_a);
@@ -47,7 +47,7 @@ public class TakeQuizActivity extends AppCompatActivity {
         nextBtn = findViewById(R.id.next_btn);
 
 
-        takeQuizController.setQuiz();
+        takeQuizGraphicController.setQuiz();
 
     }
 
@@ -88,25 +88,25 @@ public class TakeQuizActivity extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takeQuizController.goNext(answer);
+                takeQuizGraphicController.goNext(answer);
             }
         });
     }
     public void Op1Click (View view){
         resetColor();
         cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
-        choice(cardOp1, takeQuizController.getAnswer1());
+        choice(cardOp1, takeQuizGraphicController.getAnswer1());
     }
     public void Op2Click (View view){
         resetColor();
         cardOp2.setCardBackgroundColor(getResources().getColor(R.color.green));
 
-        choice(cardOp2, takeQuizController.getAnswer2());
+        choice(cardOp2, takeQuizGraphicController.getAnswer2());
     }
     public void Op3Click (View view){
         resetColor();
         cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
-        choice(cardOp3, takeQuizController.getAnswer3());
+        choice(cardOp3, takeQuizGraphicController.getAnswer3());
     }
 
 

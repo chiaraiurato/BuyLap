@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity{
         TextView moveskip;
         setContentView(R.layout.activity_main);
 
-        movesignup=findViewById(R.id.searchbtn);
+        movesignup=findViewById(R.id.signup_btn);
         movesignin=findViewById(R.id.Move_signin);
         moveskip=findViewById(R.id.skip);
 

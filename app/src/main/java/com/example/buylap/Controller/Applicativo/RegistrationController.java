@@ -1,6 +1,7 @@
 package com.example.buylap.Controller.Applicativo;
 
 import com.example.buylap.Bean.BeanBuild;
+import com.example.buylap.Bean.BeanUser;
 import com.example.buylap.Database.DAO.DAObuild;
 import com.example.buylap.Database.DAO.DAOuser;
 import com.example.buylap.Exceptions.DAOException;
@@ -13,23 +14,24 @@ import java.util.List;
 
 public class RegistrationController {
 
-    public List<BeanBuild> createUser(String keyword) throws DAOException {
-        List<BeanBuild> beanBuild = new ArrayList<>();
-        List<ModelUser> modelUsers = new ArrayList<>();
+    public BeanUser createUser(String username, String mail, String password) throws DAOException {
+        BeanUser beanUser = null;
+        ModelUser modelUsers = null;
 
 
             try {
-                modelUsers.add( DAOuser.insertUser("", keyword));
-                BeanBuild beanBuildinstance = new BeanBuild();
-                beanBuildinstance.setName(modelUsers.get(index).getName());
-                beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
-                beanBuildinstance.setUrl(modelBuild.get(index).getUrl());
-                beanBuild.add(beanBuildinstance);
+                modelUsers = DAOuser.insertUser(username, mail, password);
+                beanUser = new BeanUser();
+
+                beanUser.setUsername(modelUsers.getUsername());
+                beanUser.setEmail(modelUsers.getEmail());
+                beanUser.setPassword(modelUsers.getPassword());
+
             } catch (SQLException e) {
-                throw new DAOException("error with select"+ table+ " from controller with keyword" + keyword);
+                throw new DAOException("error with insert user from controller with keyword");
             }
 
-        return beanBuild;
+        return beanUser;
 
     }
 }
