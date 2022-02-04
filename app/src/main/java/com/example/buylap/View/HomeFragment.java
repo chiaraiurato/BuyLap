@@ -2,12 +2,9 @@ package com.example.buylap.View;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +17,6 @@ import com.example.buylap.MostViewAdapter;
 import com.example.buylap.MostViewed;
 import com.example.buylap.Model.QuizList;
 import com.example.buylap.R;
-
 import java.util.ArrayList;
 
 
@@ -28,7 +24,7 @@ public class HomeFragment extends Fragment {
 
     private HomeGraphicController homeGraphicController;
     public static ArrayList<QuizList> listQuest;
-    private TextView nameUser;
+    private TextView accountName;
     private View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,17 +34,14 @@ public class HomeFragment extends Fragment {
         Button takeQuiz;
         homeGraphicController = new HomeGraphicController(this);
 
-        homeGraphicController.initializeSession();
-
         view = inflater.inflate(R.layout.fragment_home, container, false);
+        homeGraphicController.initializeSessionForUser(view);
         listQuest = new ArrayList<>();
         listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
         listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
         listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
-        nameUser = view.findViewById(R.id.nameUser);
 
-
-        takeQuiz = view.findViewById(R.id.takequizbtn);
+        takeQuiz = view.findViewById(R.id.takequiz);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,9 +65,11 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-    public void setUser(BeanUser beanUser){
-        nameUser = view.findViewById(R.id.nameUser);
-        nameUser.setText(beanUser.getUsername());
+    public void setUser(BeanUser beanUser, View view) {
+        accountName = view.findViewById(R.id.nameAccount);
+        if (beanUser.getUsername() != null) {
+            String username = beanUser.getUsername() + ",";
+            accountName.setText(username);
+        }
     }
 }
-

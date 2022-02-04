@@ -7,16 +7,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.buylap.Controller.Grafico.RegistrationGraphicController;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.R;
-import com.example.buylap.UserHolder;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -59,20 +55,25 @@ public class RegistrationActivity extends AppCompatActivity {
                     Toast.makeText(RegistrationActivity.this, "All field required", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    if (userRadio == null || sellerRadio == null) {
+                    if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
                         Toast.makeText(RegistrationActivity.this, "Select type account", Toast.LENGTH_SHORT).show();
                     } else {
                         if(userRadio.isChecked()) {
                             try {
                                 registrationGraphicController.registerNewAccountUser();
-
-                                Intent intent = new Intent(RegistrationActivity.this, HomepageActivity.class);
+                                Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
                                 startActivity(intent);
                             } catch (DAOException e) {
                                 e.printStackTrace();
                             }
                         }else{
-                            registrationGraphicController.registerNewAccountSeller(username.getText().toString(), email.getText().toString(), password.getText().toString());
+                            try {
+                                registrationGraphicController.registerNewAccountSeller();
+                                Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
+                                startActivity(intent);
+                            } catch (DAOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 }

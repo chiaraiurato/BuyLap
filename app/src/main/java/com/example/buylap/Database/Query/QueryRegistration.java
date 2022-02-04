@@ -1,5 +1,6 @@
 package com.example.buylap.Database.Query;
 
+import com.example.buylap.Bean.BeanSeller;
 import com.example.buylap.Bean.BeanUser;
 
 import java.sql.Connection;
@@ -12,5 +13,10 @@ public class QueryRegistration {
 
         String query = "INSERT INTO `users` (`username`, `mail`, `password`, `token`) VALUES ('"+ beanUser.getUsername()+"', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
          stmt.executeUpdate(query);
+    }
+    public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+
+        String query = "INSERT INTO `sellers` (`businessname`, `mail`, `password`) VALUES ('"+ beanSeller.getUsername()+"', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
+        stmt.executeUpdate(query);
     }
 }

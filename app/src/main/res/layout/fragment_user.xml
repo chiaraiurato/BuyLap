@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/Hi"
         android:layout_width="319dp"
         android:layout_height="52dp"
         android:layout_marginTop="44dp"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/Hi" />
 
     <TextView
         android:id="@+id/text_b"

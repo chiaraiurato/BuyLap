@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity{
         moveskip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(MainActivity.this, HomepageActivity.class);
+                Intent intent3 = new Intent(MainActivity.this, NavigationActivity.class);
                 startActivity(intent3);
             }
         });

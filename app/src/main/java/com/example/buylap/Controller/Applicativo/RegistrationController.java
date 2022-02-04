@@ -1,8 +1,10 @@
 package com.example.buylap.Controller.Applicativo;
 
 import com.example.buylap.Bean.BeanBuild;
+import com.example.buylap.Bean.BeanSeller;
 import com.example.buylap.Bean.BeanUser;
 import com.example.buylap.Database.DAO.DAObuild;
+import com.example.buylap.Database.DAO.DAOseller;
 import com.example.buylap.Database.DAO.DAOuser;
 import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.Model.ModelBuild;
@@ -21,9 +23,21 @@ public class RegistrationController {
                 return true;
 
             } catch (SQLException e) {
-                throw new DAOException("error on signup");
+                throw new DAOException("error on signup for user");
             }
 
     }
+    public Boolean createSeller(BeanSeller beanSeller) throws DAOException {
+
+        try {
+            DAOseller.insertSeller(beanSeller);
+            return true;
+
+        } catch (SQLException e) {
+            throw new DAOException("error on signup for seller");
+        }
+
+    }
+
 
 }

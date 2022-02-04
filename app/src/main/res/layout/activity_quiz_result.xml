@@ -9,7 +9,7 @@
     tools:context=".View.QuizResultActivity">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/Hi"
         android:layout_width="254dp"
         android:layout_height="39dp"
         android:layout_marginTop="28dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
         android:layout_width="408dp"
         android:layout_height="521dp"
         android:orientation="vertical"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/Hi"
         app:layout_constraintVertical_bias="0.09">
 
 
@@ -47,7 +47,7 @@
 
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/Analitycs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -82,6 +82,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

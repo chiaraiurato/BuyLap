@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     Toast.makeText(LoginActivity.this, "Sign in success", Toast.LENGTH_SHORT).show();
-                    Intent intent4 = new Intent(LoginActivity.this, HomepageActivity.class);
+                    Intent intent4 = new Intent(LoginActivity.this, NavigationActivity.class);
                     startActivity(intent4);
                 }else{
                     Toast.makeText(LoginActivity.this, "Sign in error", Toast.LENGTH_SHORT).show();

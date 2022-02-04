@@ -18,7 +18,7 @@
             android:name=".View.TakeQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".View.HomepageActivity"
+            android:name=".View.NavigationActivity"
             android:exported="false" />
         <activity
             android:name=".View.RegistrationActivity"
