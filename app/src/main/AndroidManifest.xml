@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".View.QuizResultActivity"
+            android:name=".view.QuizResultActivity"
             android:exported="false" />
         <activity
-            android:name=".View.TakeQuizActivity"
+            android:name=".view.TakeQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".View.NavigationActivity"
+            android:name=".view.NavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".View.RegistrationActivity"
+            android:name=".view.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".View.LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".View.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

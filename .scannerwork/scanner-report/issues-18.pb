@@ -1,2 +1,2 @@
-t
-javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 
+„
+javaS1319iThe type of "analytics" should be an interface such as "List" rather than the implementation "ArrayList". 2 %

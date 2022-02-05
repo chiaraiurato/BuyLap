@@ -1,1 +1,1 @@
-# 2javaXhrCapp/src/main/java/com/example/buylap/Database/Query/QueryBuild.java
+# 2javaXPhrXapp/src/main/java/com/example/buylap/Controller/Grafico/QuizResultGraphicController.java

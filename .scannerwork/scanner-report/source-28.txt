@@ -1,79 +1,52 @@
-package com.example.buylap.Controller.Grafico;
-
-import android.content.Intent;
-import android.net.Uri;
+package com.example.buylap.Controller.Applicativo;
 
 import com.example.buylap.Bean.BeanAnswer;
 import com.example.buylap.Bean.BeanBuild;
-import com.example.buylap.Category;
-import com.example.buylap.Controller.Applicativo.QuizResultController;
+import com.example.buylap.Database.DAO.DAObuild;
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.View.QuizResultActivity;
+import com.example.buylap.Model.ModelBuild;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizResultGraphicController {
-    private ArrayList<Category> build;
+public class QuizResultController {
 
-    private QuizResultController quizResultController;
-    private QuizResultActivity quizResultActivity;  //<--VIEW non usata perché non devo prendere info dalla view
+    public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
+        BeanAnswer beanAnswer = new BeanAnswer();
+        beanAnswer.setOp1(answer1);
+        beanAnswer.setOp2(answer2);
+        beanAnswer.setOp3(answer3);
+        return beanAnswer;
 
-    private BeanAnswer beanAnswer;
-    private List<BeanBuild> beanBuild;
+    }
+    public List<BeanBuild> createBuild(String keyword) throws DAOException {
+        String[] table = new String[6];
 
-     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
-         this.quizResultActivity = quizResultActivity;
-         this.build =  new ArrayList<>();
-         this.quizResultController = new QuizResultController();
-         this.beanAnswer = new BeanAnswer();
-         this.beanBuild = new ArrayList<>();
-     }
+        table[0] = "motherboard";
+        table[1] = "ssd";
+        table[2] = "cpu";
+        table[3] = "ram";
+        table[4] = "videocard";
+        table[5] = "powersupply";
 
-     public ArrayList<Category> setBuild(String a, String b, String c){
-         beanAnswer=quizResultController.getBeanAnswer(a, b, c);
-         try {
-             beanBuild = quizResultController.createBuild(beanAnswer.getOp3());
-         } catch (DAOException e) {
-             e.printStackTrace();
-         }
-         build.add(new Category(beanBuild.get(0).getName(), "motherboard96", beanBuild.get(0).getSubtitles()));
-         build.add(new Category(beanBuild.get(1).getName(), "ssd", beanBuild.get(1).getSubtitles()));
-         build.add(new Category(beanBuild.get(2).getName(), "cpu", beanBuild.get(2).getSubtitles()));
-         build.add(new Category(beanBuild.get(3).getName(), "ram", beanBuild.get(3).getSubtitles()));
-         build.add(new Category(beanBuild.get(4).getName(), "videocard", beanBuild.get(4).getSubtitles()));
-         build.add(new Category(beanBuild.get(5).getName(), "powersupply", beanBuild.get(5).getSubtitles()));
+        int index;
+        List<BeanBuild> beanBuild = new ArrayList<>();
+        List<ModelBuild> modelBuild = new ArrayList<>();
+        for(index = 0; index < 6; index++){
 
-         return build;
-     }
-     public Intent linkToEbay(int position){
-         final Intent intent;
-             switch (position){
-                 case 0:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(0).getUrl()));
-                     break;
+            try {
+                modelBuild.add( DAObuild.selectBuild(table[index], keyword));
+                BeanBuild beanBuildinstance = new BeanBuild();
+                beanBuildinstance.setName(modelBuild.get(index).getName());
+                beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
+                beanBuildinstance.setUrl(modelBuild.get(index).getUrl());
+                beanBuild.add(beanBuildinstance);
+            } catch (SQLException e) {
+                throw new DAOException("error with select"+ table+ " from controller with keyword" + keyword);
+            }
+        }
+        return beanBuild;
 
-                 case 1:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(1).getUrl()));
-                     break;
-                 case 2:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(2).getUrl()));
-                     break;
-                 case 3:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(3).getUrl()));
-                     break;
-                 case 4:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(4).getUrl()));
-                     break;
-
-                 default:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(5).getUrl()));
-                     break;
-             }
-         return intent;
-     }
-
-
-
-
+    }
 }

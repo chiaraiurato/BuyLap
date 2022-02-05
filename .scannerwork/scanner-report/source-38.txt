@@ -1,49 +1,51 @@
-package com.example.buylap.Model;
+package com.example.buylap.Database.DAO;
 
-public class CreditCard {
-    String Name;
-    String Surname;
-    String Number;
-    String Data;
-    String CVV;
+import android.os.StrictMode;
 
-    public String getName() {
-        return Name;
-    }
+import com.example.buylap.Database.JdbcConnection;
+import com.example.buylap.Database.Query.QueryBuild;
 
-    public void setName(String name) {
-        Name = name;
-    }
+import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.Model.ModelBuild;
 
-    public String getSurname() {
-        return Surname;
-    }
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void setSurname(String surname) {
-        Surname = surname;
-    }
+public class DAObuild {
 
-    public String getNumber() {
-        return Number;
-    }
+    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+        ModelBuild modelBuild;
+        Connection connection = null;
+        Statement statement = null;
 
-    public void setNumber(String number) {
-        Number = number;
-    }
+        try {
 
-    public String getData() {
-        return Data;
-    }
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
 
-    public void setData(String data) {
-        Data = data;
-    }
+            statement = connection.createStatement();
+            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
+            }
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl );
+            rs.close();
 
-    public String getCVV() {
-        return CVV;
-    }
 
-    public void setCVV(String CVV) {
-        this.CVV = CVV;
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+
+        return modelBuild;
     }
 }

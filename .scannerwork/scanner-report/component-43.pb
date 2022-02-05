@@ -1,1 +1,1 @@
-+ 2javaXBhr9app/src/main/java/com/example/buylap/MostViewAdapter.java
++ 2javaXhrCapp/src/main/java/com/example/buylap/Database/Query/QueryBuild.java

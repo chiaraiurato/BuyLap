@@ -1,1 +1,1 @@
-p 2xmlXhr#app/src/main/res/menu/item_menu.xml
+p 2xmlXQhr)app/src/main/res/layout/activity_main.xml

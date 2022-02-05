@@ -1,4 +1,4 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.Controller.Applicativo;
 
-public class LoginGraphicController {
+public class NavigationController {
 }

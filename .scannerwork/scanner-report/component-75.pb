@@ -1,1 +1,1 @@
-K 2xmlXhr:app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml
+K 2xmlXhr4app/src/main/res/drawable/ic_baseline_gamepad_24.xml

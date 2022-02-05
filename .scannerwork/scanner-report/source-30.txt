@@ -1,82 +1,94 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.Controller.Applicativo;
+
+public class TakeQuizController {
 
 
-import static com.example.buylap.View.HomeFragment.listQuest;
 
-import android.util.Log;
-
-import com.example.buylap.Bean.BeanAnswer;
-import com.example.buylap.Controller.Applicativo.QuizResultController;
-import com.example.buylap.Controller.Applicativo.TakeQuizController;
-
-import com.example.buylap.Model.QuizList;
-import com.example.buylap.View.QuizResultActivity;
-import com.example.buylap.View.TakeQuizActivity;
-
-import java.util.List;
-
-public class TakeQuizGraphicController {
-
-    private TakeQuizActivity takeQuizActivity;      //<--- VIEW
+/*
     private List<QuizList> allQuestion;
     private QuizList quizList;
+    private int index = 0;
 
-    private BeanAnswer beanAnswer;
-    private int index;
 
-    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
+    public void takequiz() {
 
-        this.takeQuizActivity = takeQuizActivity;
-        this.index = 0;
+        allQuestion=listQuest;
+        quizList=listQuest.get(index);
 
-        beanAnswer = new BeanAnswer();
-        allQuestion = listQuest;
-        quizList = listQuest.get(index);
-    }
 
-    public void setQuiz() {
 
-        takeQuizActivity.setQuestion(quizList.getQuestion());
-        takeQuizActivity.setOp1(quizList.getOp1());
-        takeQuizActivity.setOp2(quizList.getOp2());
-        takeQuizActivity.setOp3(quizList.getOp3());
-    }
-    public void goNext(String answer){
-        switch (index) {
-            case 0:
-                beanAnswer.setOp1(answer);
-                break;
-            case 1:
-                beanAnswer.setOp2(answer);
-                break;
-            case 2:
-                beanAnswer.setOp3(answer);
-                break;
+        question.setText(quizList.getQuestion());
+        op1.setText(quizList.getOp1());
+        op2.setText(quizList.getOp2());
+        op3.setText(quizList.getOp3());
+
+
+        public void choice (CardView cardview){
+            cardview.setCardBackgroundColor(getResources().getColor(R.color.green));
+            nextBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    index++;
+
+                    if (index >= listQuest.size()) {
+                        try {
+
+                            finished();
+                        } catch (DAOException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        quizList = listQuest.get(index);
+                        resetColor();
+                        setAllData();
+                    }
+                }
+            });
         }
-        index++;
-        if (index >= listQuest.size() ) {
-
-            takeQuizActivity.finished(beanAnswer);
-
-        } else {
-                quizList = listQuest.get(index);
-
-                takeQuizActivity.resetColor();
-                setQuiz();
-            }
+        public void enableButton () {
+            cardOp1.setClickable(true);
+            cardOp2.setClickable(true);
+            cardOp3.setClickable(true);
+        }
+        public void disableButton () {
+            cardOp1.setClickable(false);
+            cardOp2.setClickable(false);
+            cardOp3.setClickable(false);
+        }
+        public void resetColor () {
+            cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+            cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+            cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+        }
+        public void Op1Click (View view){
+            resetColor();
+            cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
+            choice(cardOp1);
+            answers.setOp1(quizList.getOp1());
         }
 
-    public String getAnswer1(){
-       return quizList.getOp1();
-    }
-    public String getAnswer2(){
-        return quizList.getOp2();
-    }
+        public void Op2Click (View view){
+            resetColor();
+            cardOp2.setCardBackgroundColor(getResources().getColor(R.color.green));
+            choice(cardOp2);
+            answers.setOp2(quizList.getOp2());
+        }
+        public void Op3Click (View view){
+            resetColor();
+            cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
+            choice(cardOp3);
+            answers.setOp3(quizList.getOp3());
+        }
 
-    public String getAnswer3(){
-        return quizList.getOp3();
-    }
+        private void finished () throws DAOException {
 
+            Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
+            startActivity(intent);
+        }
+
+
+
+
+ */
 
 }
-

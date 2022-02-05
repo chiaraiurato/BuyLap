@@ -1,1 +1,1 @@
-F 2xmlXhr3app/src/main/res/drawable/ic_baseline_person_24.xml
+F 2xmlXhr5app/src/main/res/drawable/ic_baseline_add_card_24.xml

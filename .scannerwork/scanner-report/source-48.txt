@@ -1,26 +1,49 @@
-package com.example.buylap.View;
+package com.example.buylap.Model;
 
-import android.os.Bundle;
+public class QuizList {
+    String question;
+    String op1;
+    String op2;
+    String op3;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.buylap.R;
-
-
-public class LikeFragment extends Fragment {
-
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        RecyclerView recyclerLike;
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_like, container, false);
+    public QuizList(String question, String op1, String op2, String op3) {
+        this.question = question;
+        this.op1 = op1;
+        this.op2 = op2;
+        this.op3 = op3;
     }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getOp1() {
+        return op1;
+    }
+
+    public void setOp1(String op1) {
+        this.op1 = op1;
+    }
+
+    public String getOp2() {
+        return op2;
+    }
+
+    public void setOp2(String op2) {
+        this.op2 = op2;
+    }
+
+    public String getOp3() {
+        return op3;
+    }
+
+    public void setOp3(String op3) {
+        this.op3 = op3;
+    }
+
+
 }

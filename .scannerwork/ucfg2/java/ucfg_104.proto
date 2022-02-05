@@ -1,0 +1,37 @@
+
+|com.example.buylap.View.UserFragment#newInstance(Ljava/lang/String;Ljava/lang/String;)Lcom/example/buylap/View/UserFragment;d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java (*"1*ä	
+1d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java    (2ª∏
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java $  (0*
+%0$com.example.buylap.View.UserFragment"$com.example.buylap.View.UserFragmentÕ
+ 
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java    (2
+%1".com.example.buylap.View.UserFragment#<init>()V*,
+*
+%0$com.example.buylap.View.UserFragmentœ
+Ã
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java   (30
+fragment$com.example.buylap.View.UserFragment"__id*,
+*
+%0$com.example.buylap.View.UserFragmentè
+å
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java" "(!
+%2java.lang.String"__id*
+""è
+å
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java# #(!
+%3java.lang.String"__id*
+"""ö
+d
+ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/UserFragment.java% %(2
+0
+fragment$com.example.buylap.View.UserFragment:
+param1java.lang.String:
+param2java.lang.StringB("&
+$com.example.buylap.View.UserFragment

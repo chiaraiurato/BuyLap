@@ -1,16 +1,16 @@
 
-?com.example.buylap.Model.CreditCard#getData()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java" "("1*¥
+Acom.example.buylap.Model.CreditCard#getNumber()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java ("1*§
 1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java# #(¹
-¶
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (»
+¸
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java# #(
-%0java.lang.String"__id*1*/%
-#com.example.buylap.Model.CreditCard"
-Data"
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
+%0java.lang.String"__id*3*1%
+#com.example.buylap.Model.CreditCard"
+Number"
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java# #(
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java (
 
 %0java.lang.StringB'%
 #com.example.buylap.Model.CreditCard

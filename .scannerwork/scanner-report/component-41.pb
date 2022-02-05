@@ -1,1 +1,1 @@
-) 2javaXhrAapp/src/main/java/com/example/buylap/Model/Users/ModelSeller.java
+) 2javaX?hr>app/src/main/java/com/example/buylap/Database/DAO/DAOuser.java

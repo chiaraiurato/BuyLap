@@ -1,1 +1,1 @@
- 2javaXhrSapp/src/main/java/com/example/buylap/Controller/Grafico/LoginGraphicController.java
+ 2javaXhrUapp/src/main/java/com/example/buylap/Controller/Applicativo/NavigationController.java

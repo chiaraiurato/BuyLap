@@ -1,1 +1,1 @@
-6 2javaXBhr;app/src/main/java/com/example/buylap/View/UserFragment.java
+6 2javaXhr4app/src/main/java/com/example/buylap/UserHolder.java

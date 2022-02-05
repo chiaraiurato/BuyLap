@@ -1,1 +1,1 @@
- 2javaX5hrUapp/src/main/java/com/example/buylap/Controller/Applicativo/QuizResultController.java
+ 2javaXShr9app/src/main/java/com/example/buylap/CategoryAdapter.java

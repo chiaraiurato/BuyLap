@@ -1,48 +1,48 @@
-package com.example.buylap.Database.DAO;
+package com.example.buylap.Controller.Grafico;
 
-import android.os.StrictMode;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryRegistration;
+import com.example.buylap.Bean.BeanUser;
+import com.example.buylap.Controller.Applicativo.LoginController;
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.Users.ModelUser;
+import com.example.buylap.UserHolder;
+import com.example.buylap.View.LoginActivity;
+import com.example.buylap.View.NavigationActivity;
+import com.example.buylap.View.RegistrationActivity;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class DAOuser {
+public class LoginGraphicController {
+    private LoginActivity loginActivity;
+    private LoginController loginController;
 
-    public static ModelUser insertUser(String username, String mail, String password) throws SQLException, DAOException {
-        ModelUser modelUser;
-        Connection connection = null;
-        Statement statement = null;
+    public LoginGraphicController(LoginActivity loginActivity) {
+        this.loginActivity = loginActivity;
+        this.loginController = new LoginController();
+    }
 
-        try {
+    public void goToRegistration() {
+        Intent intent = new Intent(loginActivity, RegistrationActivity.class);
+        loginActivity.startActivity(intent);
+    }
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+    public void signIn() throws SQLException, DAOException {
+        if(loginActivity.sendUsername().isEmpty() &&loginActivity.sendPassword().isEmpty())
+        {
+            Toast.makeText(loginActivity, "All fields requires", Toast.LENGTH_SHORT).show();
+        }else {
+            BeanUser beanUser = new BeanUser();
+            beanUser.setUsername(loginActivity.sendUsername());
+            beanUser.setPassword(loginActivity.sendPassword());
 
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistration.insertUser(statement, username, mail, password);
-            if (!rs.first()) {
-                throw new DAOException("Table not found with keyword ");
-            }
-            String recordName = rs.getString(2);
-            String recordEmail = rs.getString(3);
-            String recordPassword = rs.getString(4);
-            modelUser = new ModelUser(recordName, recordEmail, recordPassword );
-            rs.close();
+            beanUser = loginController.searchUser(beanUser);
 
-
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+            UserHolder holder = UserHolder.getInstance();
+            holder.setUser(beanUser);
+            Intent intent = new Intent(loginActivity, NavigationActivity.class);
+            loginActivity.startActivity(intent);
         }
-
-        return modelUser;
     }
 }

@@ -1,1 +1,1 @@
-e 2xmlXQhr)app/src/main/res/layout/activity_main.xml
+e 2xmlX#hr8app/src/main/res/drawable-v24/ic_launcher_foreground.xml

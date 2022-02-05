@@ -1,1 +1,1 @@
-Z 2xmlX#hr8app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+Z 2xmlXhr0app/src/main/res/drawable/ic_round_school_24.xml

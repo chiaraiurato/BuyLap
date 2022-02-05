@@ -1,74 +1,65 @@
-package com.example.buylap.View;
+package com.example.buylap;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import com.bumptech.glide.Glide;
 
-import com.example.buylap.Bean.BeanBuild;
-import com.example.buylap.Category;
-import com.example.buylap.CategoryAdapter;
-import com.example.buylap.Controller.Grafico.QuizResultGraphicController;
-import com.example.buylap.R;
+import java.util.ArrayList;
 
-public class QuizResultActivity extends AppCompatActivity implements CategoryAdapter.OnCatListener {
-    public static boolean update=false;
 
-    public static boolean isUpdate() {
-        return update;
+public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
+
+    ArrayList<MostViewed> mostViewDomains;
+
+    public MostViewAdapter(ArrayList<MostViewed> mostViewDomains) {
+        this.mostViewDomains = mostViewDomains;
     }
 
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerViewBuild;
-    private Button updateAccBalance;
-    private LinearLayoutManager linearLayoutManager;
-    private String beanAnswer1;
-    private String beanAnswer2;
-    private String beanAnswer3;
-
-    private QuizResultGraphicController quizResultGraphicController;
-
+    @NonNull
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_result);
-
-
-
-        this.quizResultGraphicController = new QuizResultGraphicController(this);
-        recyclerViewBuild=findViewById(R.id.RecyclerBuild);
-        updateAccBalance=findViewById(R.id.updateBtn);
-
-        linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
-        recyclerViewBuild.setLayoutManager(linearLayoutManager);
-
-        beanAnswer1 = this.getIntent().getExtras().getString("beanAnswer1");
-        beanAnswer2 = this.getIntent().getExtras().getString("beanAnswer2");
-        beanAnswer3 = this.getIntent().getExtras().getString("beanAnswer3");
-
-        adapter = new CategoryAdapter(quizResultGraphicController.setBuild(beanAnswer1, beanAnswer2, beanAnswer3), this);
-        recyclerViewBuild.setAdapter(adapter);
-
-        updateAccBalance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(QuizResultActivity.this, HomepageActivity.class);
-                update=true;
-                intent.putExtra("gotoCashback", true);
-                startActivity(intent);
-            }
-        });
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder, parent, false);
+        return new ViewHolder(inflate);
     }
 
     @Override
-    public void onCatClick(int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.titleTxt.setText(String.valueOf(mostViewDomains.get(position).getTitle()));
+        holder.subTitleTxt.setText(String.valueOf(mostViewDomains.get(position).getSubtitle()));
 
-        this.startActivity(quizResultGraphicController.linkToEbay(position));
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(mostViewDomains.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
+
+        Glide.with(holder.itemView.getContext())
+                .load(drawableResourceId)
+                .into(holder.removeItem);
+
     }
 
+
+    @Override
+    public int getItemCount() {
+        return mostViewDomains.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView titleTxt;
+        TextView subTitleTxt;
+        ImageView removeItem;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            titleTxt = itemView.findViewById(R.id.titleTxt);
+            subTitleTxt = itemView.findViewById(R.id.subTitleTxt);
+            removeItem = itemView.findViewById(R.id.img_view);
+        }
+    }
 }

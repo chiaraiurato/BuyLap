@@ -1,1 +1,1 @@
-; 2xmlXhr5app/src/main/res/drawable/ic_baseline_add_card_24.xml
+; 2javaX7hr;app/src/main/java/com/example/buylap/View/MainActivity.java

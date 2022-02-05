@@ -1,7 +1,4 @@
-U
-javaS1118:Add a private constructor to hide the implicit public one. 2 §
-javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2! &:K
-I$	
-
- ¡:SQL Query is dynamically formatted and assigned to 'query't
-javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 )
+E
+javaS5411*Use the primitive boolean expression here. 2!! E
+javaS5411*Use the primitive boolean expression here. 2.. t
+javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 -

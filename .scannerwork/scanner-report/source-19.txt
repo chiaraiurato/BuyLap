@@ -1,33 +1,31 @@
 package com.example.buylap.Bean;
 
-public class BeanUser {
-    private String username;
-    private String email;
-    private String password;
+public class BeanAnswer {
+    String op1;
+    String op2;
+    String op3;
 
-    public String getEmail() {
-        return email;
+    public String getOp1() {
+        return op1;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setOp1(String op1) {
+        this.op1 = op1;
     }
 
-
-    public String getPassword() {
-        return password;
+    public String getOp2() {
+        return op2;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setOp2(String op2) {
+        this.op2 = op2;
     }
 
-
-    public String getUsername() {
-        return username;
+    public String getOp3() {
+        return op3;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setOp3(String op3) {
+        this.op3 = op3;
     }
 }

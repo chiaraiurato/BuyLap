@@ -1,30 +1,43 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.Controller.Applicativo;
 
+import com.example.buylap.Bean.BeanBuild;
+import com.example.buylap.Bean.BeanSeller;
 import com.example.buylap.Bean.BeanUser;
-import com.example.buylap.Controller.Applicativo.RegistrationController;
+import com.example.buylap.Database.DAO.DAObuild;
+import com.example.buylap.Database.DAO.DAOseller;
+import com.example.buylap.Database.DAO.DAOuser;
 import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.View.RegistrationActivity;
+import com.example.buylap.Model.ModelBuild;
+import com.example.buylap.Model.Users.ModelUser;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegistrationGraphicController {
+public class RegistrationController {
 
-    RegistrationActivity registrationActivity;
-    RegistrationController registrationController;
-    List<BeanUser> beanUsers;
-    //BeanUser beanUser;
-    public RegistrationGraphicController(RegistrationActivity registrationActivity){
-        this.registrationActivity = registrationActivity;
-        this.beanUsers = new ArrayList<>();
-       // this.beanUser = new BeanUser();
-    }
-    public void registerNewAccountUser(String username, String mail, String password) throws DAOException {
+    public Boolean createUser(BeanUser beanUser) throws DAOException {
 
-        registrationController.createUser(username, mail, password);
-        //beanUsers.add(beanUser);
-    }
-    public void registerNewAccountSeller(String username, String mail, String password){
+            try {
+                DAOuser.insertUser(beanUser);
+                return true;
+
+            } catch (SQLException e) {
+                throw new DAOException("error on signup for user");
+            }
 
     }
+    public Boolean createSeller(BeanSeller beanSeller) throws DAOException {
+
+        try {
+            DAOseller.insertSeller(beanSeller);
+            return true;
+
+        } catch (SQLException e) {
+            throw new DAOException("error on signup for seller");
+        }
+
+    }
+
+
 }

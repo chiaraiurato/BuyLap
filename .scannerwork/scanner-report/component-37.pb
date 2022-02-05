@@ -1,1 +1,1 @@
-% 2javaX	hrAapp/src/main/java/com/example/buylap/Exceptions/DAOException.java
+% 2javaXShrVapp/src/main/java/com/example/buylap/Controller/Grafico/TakeQuizGraphicController.java

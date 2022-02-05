@@ -1,36 +1,61 @@
-package com.example.buylap.Database;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+package com.example.buylap.Controller.Grafico;
 
+import android.view.MenuItem;
 
-public class JdbcConnection {
+import androidx.fragment.app.Fragment;
 
-    private static JdbcConnection instance = null;
-    private Connection connection = null;
-    protected JdbcConnection(){
-        //Singleton
+import com.example.buylap.R;
+import com.example.buylap.SellerHolder;
+import com.example.buylap.UserHolder;
+import com.example.buylap.View.CashbackFragment;
+import com.example.buylap.View.HomeFragment;
+import com.example.buylap.View.LikeFragment;
+import com.example.buylap.View.NavigationActivity;
+import com.example.buylap.View.SellerFragment;
+import com.example.buylap.View.UserFragment;
+
+public class NavigationGraphicController {
+
+    private NavigationActivity navigationActivity;
+
+    public NavigationGraphicController(NavigationActivity navigationActivity) {
+        this.navigationActivity = navigationActivity;
+
     }
-    public static synchronized JdbcConnection getInstance() {
-        if (instance == null) {
-            instance = new JdbcConnection();
+    public Fragment choiceAccount(){
+        Fragment fragment;
+        UserHolder userHolder = UserHolder.getInstance();
+        if(userHolder.getUser() != null){
+
+            fragment = new HomeFragment();
+        }else{
+            fragment = new SellerFragment();
         }
-        return instance;
+        return fragment;
     }
-       public synchronized Connection getConnection() {
-        if(this.connection == null) {
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
+    public Fragment switchPage(MenuItem item){
 
-                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.1.197:3306/android", "andro", "andro");
+        Fragment fragment = null;
+        switch (item.getItemId()){
+            case R.id.nav_home:
+                UserHolder userHolder = UserHolder.getInstance();
+                if(userHolder.getUser() != null) {
+                    fragment = new HomeFragment();
+                }else{
+                    fragment = new SellerFragment();
+                }
+                break;
+            case R.id.nav_cashback:
+                fragment = new CashbackFragment();
+                break;
+            case R.id.nav_like:
+                fragment= new LikeFragment();
+                break;
+            case R.id.nav_user:
+                fragment= new UserFragment();
+                break;
+        }
+        return fragment;
 
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
-            return this.connection;
-        }
+    }
 }
-

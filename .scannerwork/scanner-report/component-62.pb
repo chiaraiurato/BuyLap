@@ -1,1 +1,1 @@
-> 2xmlXhr3app/src/main/res/drawable/ic_baseline_circle_24.xml
+> 2javaX`hrCapp/src/main/java/com/example/buylap/View/RegistrationActivity.java

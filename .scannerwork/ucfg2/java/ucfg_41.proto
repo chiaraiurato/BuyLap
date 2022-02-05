@@ -1,88 +1,16 @@
 
-ûcom.example.buylap.Database.Query.QueryRegistration#insertUser(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;s
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java (&"1*é
-1s
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(pó
-î
-s
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(z
-%0java.lang.String"__concat*[Y
-WINSERT INTO `users` (`idusers`, `username`, `mail`, `password`, `token`) VALUES ('1', '*
-
-usernamejava.lang.Stringø
-º
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(Å
-%1java.lang.String"__concat*
+>com.example.buylap.Model.CreditCard#getCVV()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java* *("1*§
+1c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java+ +(∏
+µ
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java+ +(
+%0java.lang.String"__id*0*.%
+#com.example.buylap.Model.CreditCard"
+CVV"
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/CreditCard.java+ +(
 
-%0java.lang.String*
-', '—
-Œ
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(Ü
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-
-mailjava.lang.Stringø
-º
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(ç
-%3java.lang.String"__concat*
-
-%2java.lang.String*
-', '’
-“
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(ñ
-%4java.lang.String"__concat*
-
-%3java.lang.String*
-
-passwordjava.lang.String√
-¿
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(°
-%5java.lang.String"__concat*
-
-%4java.lang.String*
-
-', '0');¥
-±
-t
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
- 
-(¢
-queryjava.lang.String"__id*
-
-%5java.lang.String∏µ
-s
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java ('
-%6java.sql.ResultSet"Gjava.sql.Statement#executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;*
-
-stmtjava.sql.Statement*
-
-queryjava.lang.String2 executeQuery(Ljava/lang/String;)"ë
-s
-iC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java ((
-
-%6java.sql.ResultSet:
-stmtjava.sql.Statement:
-usernamejava.lang.String:
-mailjava.lang.String:
-passwordjava.lang.StringB7"5
-3com.example.buylap.Database.Query.QueryRegistration
+%0java.lang.StringB'%
+#com.example.buylap.Model.CreditCard

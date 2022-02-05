@@ -1,1 +1,1 @@
-1 2javaX,hr<app/src/main/java/com/example/buylap/View/LoginActivity.java
+1 2javaXhrAapp/src/main/java/com/example/buylap/Model/Users/ModelSeller.java

@@ -9,7 +9,7 @@
     android:background="#202442"
     app:circularflow_defaultRadius="28dp"
     app:circularflow_radiusInDP="28dp"
-    tools:context=".View.LoginActivity">
+    tools:context=".view.LoginActivity">
 
     <TextView
         android:id="@+id/textView2"

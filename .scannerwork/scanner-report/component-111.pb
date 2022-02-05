@@ -1,1 +1,1 @@
-o 2xmlX?hr'app/src/main/res/layout/viewholder2.xml
+o 2xmlX©hr*app/src/main/res/layout/activity_login.xml

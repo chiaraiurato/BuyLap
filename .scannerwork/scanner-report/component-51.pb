@@ -1,1 +1,1 @@
-3 2javaXKhrAapp/src/main/java/com/example/buylap/View/QuizResultActivity.java
+3 2javaXBhr9app/src/main/java/com/example/buylap/MostViewAdapter.java

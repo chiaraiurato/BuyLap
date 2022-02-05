@@ -1,38 +1,20 @@
-package com.example.buylap.Database.DAO;
+package com.example.buylap.Controller.Grafico;
 
-public class DAOssd {
-    /*
-    public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {
-        ModelSsd modelSsd;
-        Connection connection = null;
-        Statement statement = null;
+import android.view.View;
 
-        try {
+import com.example.buylap.Bean.BeanSeller;
+import com.example.buylap.SellerHolder;
+import com.example.buylap.View.SellerFragment;
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+public class HomeSellerGraphicController {
+    SellerFragment sellerFragment;
 
-            statement = connection.createStatement();
-            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
-            if (!rs.first()) {
-                throw new DAOException("Table not found with keyword " + keyword);
-            }
-            String recordName = rs.getString(2);
-            String recordSubtitles = rs.getString(3);
-            String recordUrl = rs.getString(4);
-            modelSsd = new ModelSsd(recordName, recordSubtitles, recordUrl );
-            rs.close();
-
-
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
-        }
-
-        return modelSsd;
+    public HomeSellerGraphicController(SellerFragment sellerFragment) {
+        this.sellerFragment = sellerFragment;
     }
-
-     */
+    public void initializeSessionForSeller(View view){
+        SellerHolder holder = SellerHolder.getInstance();
+        BeanSeller beanSeller = holder.getSeller();
+        sellerFragment.setSeller(beanSeller, view);
+    }
 }

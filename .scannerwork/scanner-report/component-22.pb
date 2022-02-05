@@ -1,2 +1,1 @@
- 2javaX
-hr:app/src/main/java/com/example/buylap/ConnectionHelper.java
+ 2javaX"hr7app/src/main/java/com/example/buylap/Bean/BeanUser.java

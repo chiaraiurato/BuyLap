@@ -1,1 +1,1 @@
-5 2javaXqhr?app/src/main/java/com/example/buylap/View/TakeQuizActivity.java
+5 2javaXhr6app/src/main/java/com/example/buylap/SellerHolder.java

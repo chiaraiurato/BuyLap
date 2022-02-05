@@ -1,5 +1,4 @@
-U
-javaS1118:Add a private constructor to hide the implicit public one. 2 ¦
-javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2! &:J
-H# W:SQL Query is dynamically formatted and assigned to 'query't
-javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 )
+Q
+javaS10686Remove this unused "quizResultActivity" private field. 2 1‹
+javaS1319pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList". 2!! t
+javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 -

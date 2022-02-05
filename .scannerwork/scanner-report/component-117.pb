@@ -1,0 +1,1 @@
+u 2xmlXvhr)app/src/main/res/layout/fragment_home.xml

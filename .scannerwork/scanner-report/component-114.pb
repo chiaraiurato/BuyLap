@@ -1,1 +1,1 @@
-r 2xmlXhr8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+r 2xmlXÈhr+app/src/main/res/layout/activity_signup.xml

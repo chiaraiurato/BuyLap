@@ -1,1 +1,1 @@
-$ 2javaXhrJapp/src/main/java/com/example/buylap/Database/Query/QueryRegistration.java
+$ 2javaX5hrZapp/src/main/java/com/example/buylap/Controller/Grafico/RegistrationGraphicController.java

@@ -1,1 +1,1 @@
- 2javaXhrZapp/src/main/java/com/example/buylap/Controller/Grafico/RegistrationGraphicController.java
+ 2javaX,hrWapp/src/main/java/com/example/buylap/Controller/Applicativo/RegistrationController.java

@@ -1,49 +1,38 @@
-package com.example.buylap.Model;
+package com.example.buylap.Database.DAO;
 
-public class QuizList {
-    String question;
-    String op1;
-    String op2;
-    String op3;
+public class DAOssd {
+    /*
+    public static ModelSsd selectSsd(String name, String keyword) throws SQLException, DAOException {
+        ModelSsd modelSsd;
+        Connection connection = null;
+        Statement statement = null;
 
-    public QuizList(String question, String op1, String op2, String op3) {
-        this.question = question;
-        this.op1 = op1;
-        this.op2 = op2;
-        this.op3 = op3;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryCpu.retrieveCpu(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
+            }
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            modelSsd = new ModelSsd(recordName, recordSubtitles, recordUrl );
+            rs.close();
+
+
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+
+        return modelSsd;
     }
 
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public String getOp1() {
-        return op1;
-    }
-
-    public void setOp1(String op1) {
-        this.op1 = op1;
-    }
-
-    public String getOp2() {
-        return op2;
-    }
-
-    public void setOp2(String op2) {
-        this.op2 = op2;
-    }
-
-    public String getOp3() {
-        return op3;
-    }
-
-    public void setOp3(String op3) {
-        this.op3 = op3;
-    }
-
-
+     */
 }

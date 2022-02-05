@@ -1,1 +1,1 @@
-" 2javaX%hrAapp/src/main/java/com/example/buylap/Database/JdbcConnection.java
+" 2javaX>hrXapp/src/main/java/com/example/buylap/Controller/Grafico/NavigationGraphicController.java

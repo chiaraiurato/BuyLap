@@ -1,1 +1,1 @@
-q 2xmlXhr2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+q 2xmlXWhr0app/src/main/res/layout/activity_quiz_result.xml
