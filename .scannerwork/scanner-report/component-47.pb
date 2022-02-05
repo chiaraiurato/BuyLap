@@ -1,1 +1,1 @@
-/ 2javaX&hr:app/src/main/java/com/example/buylap/Model/ModelBuild.java
+/ 2javaX&hr:app/src/main/java/com/example/buylap/model/ModelBuild.java

@@ -1,1 +1,1 @@
-* 2javaX%hrAapp/src/main/java/com/example/buylap/Database/JdbcConnection.java
+* 2javaX%hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java

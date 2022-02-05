@@ -1,31 +1,31 @@
 package com.example.buylap.bean;
 
 public class BeanAnswer {
-    String op1;
-    String op2;
-    String op3;
+    private String answer1;
+    private String answer2;
+    private String answer3;
 
-    public String getOp1() {
-        return op1;
+    public String getAnswer1() {
+        return answer1;
     }
 
-    public void setOp1(String op1) {
-        this.op1 = op1;
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
     }
 
-    public String getOp2() {
-        return op2;
+    public String getAnswer2() {
+        return answer2;
     }
 
-    public void setOp2(String op2) {
-        this.op2 = op2;
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
     }
 
-    public String getOp3() {
-        return op3;
+    public String getAnswer3() {
+        return answer3;
     }
 
-    public void setOp3(String op3) {
-        this.op3 = op3;
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
     }
 }

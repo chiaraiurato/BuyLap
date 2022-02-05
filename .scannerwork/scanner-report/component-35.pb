@@ -1,1 +1,1 @@
-# 2javaXPhrXapp/src/main/java/com/example/buylap/Controller/Grafico/QuizResultGraphicController.java
+# 2javaXPhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

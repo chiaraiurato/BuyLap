@@ -1,4 +1,4 @@
-package com.example.buylap.Exceptions;
+package com.example.buylap.exceptions;
 
 public class DAOException extends Exception{
 

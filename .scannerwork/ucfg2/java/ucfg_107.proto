@@ -1,17 +1,17 @@
 
-Acom.example.buylap.Model.QuizList#getQuestion()Ljava/lang/String;a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/QuizList.java ("1*¡
-1a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/QuizList.java (¹
-¶
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/QuizList.java (
-%0java.lang.String"__id*3*1#
-!com.example.buylap.Model.QuizList"
+Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java ("1*¥
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (»
+¸
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (
+%0java.lang.String"__id*4*2$
+"com.example.buylap.bean.BeanSeller"
 
-question"}
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/QuizList.java (
+password"~
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (
 
-%0java.lang.StringB%#
-!com.example.buylap.Model.QuizList
+%0java.lang.StringB&$
+"com.example.buylap.bean.BeanSeller

@@ -1,1 +1,1 @@
-! 2javaX1hrSapp/src/main/java/com/example/buylap/Controller/Grafico/LoginGraphicController.java
+! 2javaX0hrSapp/src/main/java/com/example/buylap/controller/graphic/LoginGraphicController.java

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/resultquiz"
     android:background="#202442"
-    tools:context=".View.QuizResultActivity">
+    tools:context=".view.QuizResultActivity">
 
     <TextView
         android:id="@+id/Hi"

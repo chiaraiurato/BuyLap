@@ -1,18 +1,17 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.controller.graphic;
 
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.buylap.R;
-import com.example.buylap.SellerHolder;
 import com.example.buylap.UserHolder;
-import com.example.buylap.View.CashbackFragment;
-import com.example.buylap.View.HomeFragment;
-import com.example.buylap.View.LikeFragment;
-import com.example.buylap.View.NavigationActivity;
-import com.example.buylap.View.SellerFragment;
-import com.example.buylap.View.UserFragment;
+import com.example.buylap.view.CashbackFragment;
+import com.example.buylap.view.HomeFragment;
+import com.example.buylap.view.LikeFragment;
+import com.example.buylap.view.NavigationActivity;
+import com.example.buylap.view.SellerFragment;
+import com.example.buylap.view.UserFragment;
 
 public class NavigationGraphicController {
 

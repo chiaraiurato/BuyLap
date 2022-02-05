@@ -1,1 +1,1 @@
-0 2javaX2hr8app/src/main/java/com/example/buylap/Model/QuizList.java
+0 2javaX2hr8app/src/main/java/com/example/buylap/model/QuizList.java

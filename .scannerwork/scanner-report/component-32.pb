@@ -1,1 +1,1 @@
-  2javaXhrXapp/src/main/java/com/example/buylap/Controller/Grafico/HomeSellerGraphicController.java
+  2javaXhrXapp/src/main/java/com/example/buylap/controller/graphic/HomeSellerGraphicController.java

@@ -1,4 +1,4 @@
-package com.example.buylap.Model;
+package com.example.buylap.model;
 
 public class ModelBuild {
     private String Name;

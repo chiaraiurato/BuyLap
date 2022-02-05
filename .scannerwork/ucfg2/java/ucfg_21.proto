@@ -1,17 +1,16 @@
 
-Hcom.example.buylap.Model.Users.ModelUser#getPassword()Ljava/lang/String;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java ("1*¾
-1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (Ç
-Ä
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (
-%0java.lang.String"__id*:*8*
-(com.example.buylap.Model.Users.ModelUser"
-
-password"„
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (
+<com.example.buylap.Category#getSubtitles()Ljava/lang/String;[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*Š
+1[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (®
+«
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+%0java.lang.String"__id*.*,
+com.example.buylap.Category"
+	subtitles"w
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
 
-%0java.lang.StringB,*
-(com.example.buylap.Model.Users.ModelUser
+%0java.lang.StringB
+com.example.buylap.Category

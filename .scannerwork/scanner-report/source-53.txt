@@ -1,6 +1,6 @@
 package com.example.buylap;
 
-import com.example.buylap.Bean.BeanSeller;
+import com.example.buylap.bean.BeanSeller;
 
 public class SellerHolder {
     private BeanSeller beanSeller;

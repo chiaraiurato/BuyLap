@@ -1,1 +1,1 @@
- 2javaX hr9app/src/main/java/com/example/buylap/Bean/BeanAnswer.java
+ 2javaX hr9app/src/main/java/com/example/buylap/bean/BeanAnswer.java

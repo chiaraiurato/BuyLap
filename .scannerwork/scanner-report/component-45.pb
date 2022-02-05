@@ -1,1 +1,1 @@
-- 2javaX	hrAapp/src/main/java/com/example/buylap/Exceptions/DAOException.java
+- 2javaX	hrAapp/src/main/java/com/example/buylap/exceptions/DAOException.java

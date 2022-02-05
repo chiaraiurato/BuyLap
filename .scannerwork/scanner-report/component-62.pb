@@ -1,1 +1,1 @@
-> 2javaX`hrCapp/src/main/java/com/example/buylap/View/RegistrationActivity.java
+> 2javaXThrCapp/src/main/java/com/example/buylap/view/RegistrationActivity.java

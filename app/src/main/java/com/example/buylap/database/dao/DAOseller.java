@@ -13,6 +13,10 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 
 public class DAOseller {
+
+    private DAOseller() {
+        //private constructor
+    }
     public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException {
 
         Connection connection = null;

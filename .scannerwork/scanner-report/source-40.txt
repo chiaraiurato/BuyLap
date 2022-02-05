@@ -1,4 +1,4 @@
-package com.example.buylap.Database.DAO;
+package com.example.buylap.database.dao;
 
 public class DAOssd {
     /*

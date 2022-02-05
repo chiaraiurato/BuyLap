@@ -67,5 +67,4 @@
 SS 6Code:
 UU XCode:
 VV "Code:
-WW 	Codet
-javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 1
+WW 	Code

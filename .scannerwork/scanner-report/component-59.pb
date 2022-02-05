@@ -1,1 +1,1 @@
-; 2javaX7hr;app/src/main/java/com/example/buylap/View/MainActivity.java
+; 2javaX7hr;app/src/main/java/com/example/buylap/view/MainActivity.java

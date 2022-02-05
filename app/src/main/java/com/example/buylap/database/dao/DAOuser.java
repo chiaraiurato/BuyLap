@@ -6,7 +6,7 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.Query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.Users.ModelUser;
+import com.example.buylap.model.users.ModelUser;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,6 +15,9 @@ import java.sql.Statement;
 
 public class DAOuser {
 
+    private DAOuser() {
+        //private constructor
+    }
     public static void insertUser(BeanUser beanUser) throws SQLException, DAOException {
 
         Connection connection = null;

@@ -1,1 +1,1 @@
-' 2javaX#hr@app/src/main/java/com/example/buylap/Database/DAO/DAOseller.java
+' 2javaX#hr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java

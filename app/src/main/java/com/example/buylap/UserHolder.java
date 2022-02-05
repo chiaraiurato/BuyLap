@@ -6,7 +6,7 @@ public final class UserHolder {
 
     private BeanUser user;
 
-    private final static UserHolder INSTANCE = new UserHolder();
+    private static final UserHolder INSTANCE = new UserHolder();
 
     private UserHolder() {}
 

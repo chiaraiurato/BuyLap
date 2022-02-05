@@ -1,1 +1,1 @@
- 2javaXhrOapp/src/main/java/com/example/buylap/Controller/Applicativo/HomeController.java
+ 2javaXhrOapp/src/main/java/com/example/buylap/controller/applicative/HomeController.java

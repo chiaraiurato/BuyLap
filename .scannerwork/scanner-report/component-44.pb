@@ -1,1 +1,1 @@
-, 2javaXhrOapp/src/main/java/com/example/buylap/Database/Query/QueryRegistrationLogin.java
+, 2javaXhrOapp/src/main/java/com/example/buylap/database/Query/QueryRegistrationLogin.java

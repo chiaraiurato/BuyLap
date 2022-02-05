@@ -1,9 +1,8 @@
-package com.example.buylap.Database.Query;
+package com.example.buylap.database.Query;
 
-import com.example.buylap.Bean.BeanSeller;
-import com.example.buylap.Bean.BeanUser;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;

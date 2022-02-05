@@ -1,17 +1,14 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.controller.graphic;
 
 import android.util.Log;
 
-import com.example.buylap.Bean.BeanSeller;
-import com.example.buylap.Bean.BeanUser;
-import com.example.buylap.Controller.Applicativo.RegistrationController;
-import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.controller.applicative.RegistrationController;
+import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.SellerHolder;
 import com.example.buylap.UserHolder;
-import com.example.buylap.View.RegistrationActivity;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.buylap.view.RegistrationActivity;
 
 public class RegistrationGraphicController {
 

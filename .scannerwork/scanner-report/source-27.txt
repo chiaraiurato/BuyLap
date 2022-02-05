@@ -1,4 +1,4 @@
-package com.example.buylap.Controller.Applicativo;
+package com.example.buylap.controller.applicative;
 
 public class NavigationController {
 }

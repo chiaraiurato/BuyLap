@@ -1,4 +1,4 @@
-package com.example.buylap.Bean;
+package com.example.buylap.bean;
 
 public class BeanSeller {
     private String businessName;

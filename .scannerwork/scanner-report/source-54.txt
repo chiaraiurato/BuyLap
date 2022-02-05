@@ -1,6 +1,6 @@
 package com.example.buylap;
 
-import com.example.buylap.Bean.BeanUser;
+import com.example.buylap.bean.BeanUser;
 
 public final class UserHolder {
 

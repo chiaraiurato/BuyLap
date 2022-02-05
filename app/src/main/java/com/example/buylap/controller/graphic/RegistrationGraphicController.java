@@ -27,7 +27,7 @@ public class RegistrationGraphicController {
         beanUser.setEmail(registrationActivity.sendEmail());
         beanUser.setPassword(registrationActivity.sendPassword());
         Boolean result = registrationController.createUser(beanUser);
-        if(result){
+        if(Boolean.TRUE.equals(result)){
             Log.d("DATABASE", "SignUp success");
         }
         UserHolder holder = UserHolder.getInstance();
@@ -40,7 +40,7 @@ public class RegistrationGraphicController {
         beanSeller.setEmail(registrationActivity.sendEmail());
         beanSeller.setPassword(registrationActivity.sendPassword());
         Boolean result = registrationController.createSeller(beanSeller);
-        if(result){
+        if(Boolean.TRUE.equals(result)){
             Log.d("DATABASE", "SignUp success");
         }
         SellerHolder sellerHolder = SellerHolder.getInstance();

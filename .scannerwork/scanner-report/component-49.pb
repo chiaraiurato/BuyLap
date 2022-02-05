@@ -1,1 +1,1 @@
-1 2javaXhrAapp/src/main/java/com/example/buylap/Model/Users/ModelSeller.java
+1 2javaXhrAapp/src/main/java/com/example/buylap/model/Users/ModelSeller.java

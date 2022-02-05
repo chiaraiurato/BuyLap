@@ -1,10 +1,10 @@
-package com.example.buylap.Controller.Grafico;
+package com.example.buylap.controller.graphic;
 
 import android.view.View;
 
-import com.example.buylap.Bean.BeanSeller;
+import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.SellerHolder;
-import com.example.buylap.View.SellerFragment;
+import com.example.buylap.view.SellerFragment;
 
 public class HomeSellerGraphicController {
     SellerFragment sellerFragment;

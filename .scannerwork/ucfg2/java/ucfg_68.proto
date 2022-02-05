@@ -1,37 +1,48 @@
 
-Ñcom.example.buylap.View.CashbackFragment#newInstance(Ljava/lang/String;Ljava/lang/String;)Lcom/example/buylap/View/CashbackFragment;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java&# &(."1*¬	
-1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java'$ '(:«ƒ
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java'( '(8.
-%0(com.example.buylap.View.CashbackFragment"(com.example.buylap.View.CashbackFragmentŸ
-÷
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java'$ '(:
-%1"2com.example.buylap.View.CashbackFragment#<init>()V*0
-.
-%0(com.example.buylap.View.CashbackFragment€
-ÿ
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java' '(;4
-fragment(com.example.buylap.View.CashbackFragment"__id*0
-.
-%0(com.example.buylap.View.CashbackFragmentì
-ê
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java) )(!
-%2java.lang.String"__id*
-""ì
-ê
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java* *(!
-%3java.lang.String"__id*
-"""¢
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/View/CashbackFragment.java, ,(6
-4
-fragment(com.example.buylap.View.CashbackFragment:
-param1java.lang.String:
-param2java.lang.StringB,"*
-(com.example.buylap.View.CashbackFragment
+dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. (9"3*é
+2j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+Õ 
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java ()0
+%1*com.example.buylap.database.JdbcConnection"*com.example.buylap.database.JdbcConnectionﬂ
+‹
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+
+%2"4com.example.buylap.database.JdbcConnection#<init>()V*2
+0
+%1*com.example.buylap.database.JdbcConnectionÂ
+‚
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+:,
+*com.example.buylap.database.JdbcConnection"
+
+instance"__id*2
+0
+%1*com.example.buylap.database.JdbcConnection*
+1*ﬂ
+3j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
+‚
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
+%0*com.example.buylap.database.JdbcConnection"__id*<*:,
+*com.example.buylap.database.JdbcConnection"
+
+instance*
+2
+1*˙
+1j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
+‚
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
+%3*com.example.buylap.database.JdbcConnection"__id*<*:,
+*com.example.buylap.database.JdbcConnection"
+
+instance"†
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (2
+0
+%3*com.example.buylap.database.JdbcConnectionB.",
+*com.example.buylap.database.JdbcConnection

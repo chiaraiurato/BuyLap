@@ -15,6 +15,9 @@ import java.sql.Statement;
 
 public class DAObuild {
 
+    private DAObuild() {
+        //Private constructor
+    }
     public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
         ModelBuild modelBuild;
         Connection connection = null;

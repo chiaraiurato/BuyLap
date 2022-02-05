@@ -1,37 +1,37 @@
 package com.example.buylap.model;
 
 public class ModelBuild {
-    private String Name;
-    private String Subtitles;
-    private String Url;
+    private String name;
+    private String subtitles;
+    private String url;
 
     public ModelBuild(String name, String subtitles, String url) {
-        this.Name = name;
-        this.Subtitles = subtitles;
-        this.Url = url;
+        this.name = name;
+        this.subtitles = subtitles;
+        this.url = url;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public String getSubtitles() {
-        return Subtitles;
+        return subtitles;
     }
 
     public void setSubtitles(String subtitles) {
-        this.Subtitles = subtitles;
+        this.subtitles = subtitles;
     }
 
     public String getUrl() {
-        return Url;
+        return url;
     }
 
     public void setUrl(String url) {
-        this.Url = url;
+        this.url = url;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.buylap.Model.Users;
+package com.example.buylap.model.Users;
 
 public class ModelSeller extends ModelUser{
     public static final String TEST_USERNAME = "tester-seller";

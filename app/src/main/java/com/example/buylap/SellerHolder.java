@@ -5,7 +5,7 @@ import com.example.buylap.bean.BeanSeller;
 public class SellerHolder {
     private BeanSeller beanSeller;
 
-    private final static SellerHolder INSTANCE = new SellerHolder();
+    private static final SellerHolder INSTANCE = new SellerHolder();
 
     private SellerHolder() {}
 

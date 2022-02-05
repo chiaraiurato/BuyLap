@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class SellerFragment extends Fragment {
 
-    public TextView accountName;
+    private TextView accountName;
     public SellerFragment() {
         //Singleton
     }

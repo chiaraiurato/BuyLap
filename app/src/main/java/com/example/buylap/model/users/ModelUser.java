@@ -1,4 +1,4 @@
-package com.example.buylap.model.Users;
+package com.example.buylap.model.users;
 
 public class ModelUser{
 

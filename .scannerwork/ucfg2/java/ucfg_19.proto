@@ -1,16 +1,16 @@
 
-Ecom.example.buylap.Model.Users.ModelUser#getEmail()Ljava/lang/String;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java ("1*»
-1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (Ä
-Á
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (
-%0java.lang.String"__id*7*5*
-(com.example.buylap.Model.Users.ModelUser"
-email"„
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Model/Users/ModelUser.java (
+6com.example.buylap.Category#getUrl()Ljava/lang/String;[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*„
+1[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (¨
+¥
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+%0java.lang.String"__id*(*&
+com.example.buylap.Category"
+url"w
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
 
-%0java.lang.StringB,*
-(com.example.buylap.Model.Users.ModelUser
+%0java.lang.StringB
+com.example.buylap.Category

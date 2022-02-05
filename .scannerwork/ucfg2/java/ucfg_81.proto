@@ -1,17 +1,18 @@
 
-Bcom.example.buylap.Bean.BeanSeller#getPassword()Ljava/lang/String;b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Bean/BeanSeller.java ("1*¥
-1b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Bean/BeanSeller.java (»
-¸
-b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Bean/BeanSeller.java (
-%0java.lang.String"__id*4*2$
-"com.example.buylap.Bean.BeanSeller"
-
-password"~
-b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Bean/BeanSeller.java (
+7com.example.buylap.Analytics#getUrl()Ljava/lang/String;\
+RC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Analytics.java
+ 
+("1*ˆ
+1\
+RC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Analytics.java (ª
+§
+\
+RC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Analytics.java (
+%0java.lang.String"__id*)*'
+com.example.buylap.Analytics"
+url"x
+\
+RC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Analytics.java (
 
-%0java.lang.StringB&$
-"com.example.buylap.Bean.BeanSeller
+%0java.lang.StringB 
+com.example.buylap.Analytics

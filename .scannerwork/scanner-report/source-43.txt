@@ -1,4 +1,4 @@
-package com.example.buylap.Database.Query;
+package com.example.buylap.database.Query;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

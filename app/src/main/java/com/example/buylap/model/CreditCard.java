@@ -1,49 +1,49 @@
 package com.example.buylap.model;
 
 public class CreditCard {
-    String Name;
-    String Surname;
-    String Number;
-    String Data;
-    String CVV;
+    private String name;
+    private String surname;
+    private String number;
+    private String data;
+    private String cvv;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        surname = surname;
     }
 
     public String getNumber() {
-        return Number;
+        return number;
     }
 
     public void setNumber(String number) {
-        Number = number;
+        number = number;
     }
 
     public String getData() {
-        return Data;
+        return data;
     }
 
     public void setData(String data) {
-        Data = data;
+        data = data;
     }
 
     public String getCVV() {
-        return CVV;
+        return cvv;
     }
 
     public void setCVV(String CVV) {
-        this.CVV = CVV;
+        this.cvv = CVV;
     }
 }

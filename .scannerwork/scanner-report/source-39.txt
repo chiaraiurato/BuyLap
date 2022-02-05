@@ -1,11 +1,11 @@
-package com.example.buylap.Database.DAO;
+package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
 
-import com.example.buylap.Bean.BeanSeller;
-import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryRegistrationLogin;
-import com.example.buylap.Exceptions.DAOException;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.Query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
 
 import java.sql.Connection;
 import java.sql.SQLException;

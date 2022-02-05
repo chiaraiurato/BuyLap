@@ -23,7 +23,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_result);
 
-        this.quizResultGraphicController = new QuizResultGraphicController(this);
+        this.quizResultGraphicController = new QuizResultGraphicController();
 
         RecyclerView recyclerViewBuild=findViewById(R.id.RecyclerBuild);
         Button updateAccBalance=findViewById(R.id.updateBtn);

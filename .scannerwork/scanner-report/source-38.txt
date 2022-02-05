@@ -1,19 +1,17 @@
-package com.example.buylap.Database.DAO;
+package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
 
-import com.example.buylap.Database.JdbcConnection;
-import com.example.buylap.Database.Query.QueryBuild;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.Query.QueryBuild;
 
-import com.example.buylap.Exceptions.DAOException;
-import com.example.buylap.Model.ModelBuild;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelBuild;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DAObuild {
 
