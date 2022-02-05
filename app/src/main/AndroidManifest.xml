@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
+            android:name=".BudgetActivity"
+            android:exported="false"
+            android:label="@string/title_activity_budget"
+            android:theme="@style/Theme.Buylap.NoActionBar" />
+        <activity
             android:name=".view.QuizResultActivity"
             android:exported="false" />
         <activity

@@ -1,1 +1,1 @@
-P 2xmlXhr:app/src/main/res/drawable/ic_baseline_navigate_next_24.xml
+P 2xmlXhr3app/src/main/res/drawable/ic_baseline_person_24.xml

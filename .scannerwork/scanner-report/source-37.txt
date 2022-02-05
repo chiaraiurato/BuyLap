@@ -39,13 +39,15 @@ public class TakeQuizGraphicController {
     public void goNext(String answer){
         switch (index) {
             case 0:
-                beanAnswer.setOp1(answer);
+                beanAnswer.setAnswer1(answer);
                 break;
             case 1:
-                beanAnswer.setOp2(answer);
+                beanAnswer.setAnswer2(answer);
                 break;
             case 2:
-                beanAnswer.setOp3(answer);
+                beanAnswer.setAnswer3(answer);
+                break;
+            default:
                 break;
         }
         index++;

@@ -1,1 +1,1 @@
-I 2xmlXhr3app/src/main/res/drawable/ic_baseline_circle_24.xml
+I 2xmlXhr5app/src/main/res/drawable/ic_baseline_favorite_24.xml

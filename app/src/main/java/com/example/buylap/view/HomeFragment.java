@@ -1,6 +1,5 @@
 package com.example.buylap.view;
 
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.MostViewAdapter;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     public static ArrayList<QuizList> listQuest;
-    public TextView accountName;
+    private TextView accountName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
         Button takeQuiz;
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        homeGraphicController.initializeSessionForUser(view);
+        homeGraphicController.initializeSession(view);
         listQuest = new ArrayList<>();
         listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
         listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
@@ -42,8 +42,7 @@ public class HomeFragment extends Fragment {
         takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), TakeQuizActivity.class);
-                startActivity(intent);
+               homeGraphicController.goToTakeQuiz();
             }
         });
         recyclerView = view.findViewById(R.id.RecyclerMostView);
@@ -68,5 +67,11 @@ public class HomeFragment extends Fragment {
             String username = beanUser.getUsername() + ",";
             accountName.setText(username);
         }
+    }
+
+    public void setGuest( View view) {
+        accountName = view.findViewById(R.id.nameAccount);
+            String username = "guest";
+            accountName.setText(username);
     }
 }

@@ -1,16 +1,16 @@
 package com.example.buylap.bean;
 
 public class BeanBuild {
-    String name;
-    String subtitles;
-    String url;
+    private String title;
+    private String subtitles;
+    private String urlEbay;
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getSubtitles() {
@@ -21,14 +21,11 @@ public class BeanBuild {
         this.subtitles = subtitles;
     }
 
-    public String getUrl() {
-        return url;
+    public String getUrlEbay() {
+        return urlEbay;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrlEbay(String urlEbay ){
+        this.urlEbay = urlEbay;
     }
-
-
-
 }

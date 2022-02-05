@@ -4,6 +4,7 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.buylap.HostUser;
 import com.example.buylap.R;
 import com.example.buylap.UserHolder;
 import com.example.buylap.view.CashbackFragment;
@@ -24,7 +25,11 @@ public class NavigationGraphicController {
     public Fragment choiceAccount(){
         Fragment fragment;
         UserHolder userHolder = UserHolder.getInstance();
+        HostUser hostUser = HostUser.getINSTANCE();
         if(userHolder.getUser() != null){
+
+            fragment = new HomeFragment();
+        }else if(hostUser.getHost() != null ){
 
             fragment = new HomeFragment();
         }else{

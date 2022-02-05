@@ -17,13 +17,11 @@ public class QuizResultGraphicController {
     private ArrayList<Category> build;
 
     private QuizResultController quizResultController;
-    private QuizResultActivity quizResultActivity;  //<--VIEW non usata perché non devo prendere info dalla view
 
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
 
-     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
-         this.quizResultActivity = quizResultActivity;
+     public QuizResultGraphicController(){
          this.build =  new ArrayList<>();
          this.quizResultController = new QuizResultController();
          this.beanAnswer = new BeanAnswer();
@@ -33,7 +31,7 @@ public class QuizResultGraphicController {
      public ArrayList<Category> setBuild(String a, String b, String c){
          beanAnswer=quizResultController.getBeanAnswer(a, b, c);
          try {
-             beanBuild = quizResultController.createBuild(beanAnswer.getOp3());
+             beanBuild = quizResultController.createBuild(beanAnswer.getAnswer3());
          } catch (DAOException e) {
              e.printStackTrace();
          }

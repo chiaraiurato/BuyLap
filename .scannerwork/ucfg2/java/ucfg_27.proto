@@ -1,15 +1,16 @@
 
-Jcom.example.buylap.UserHolder#getInstance()Lcom/example/buylap/UserHolder;]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (("1*ƒ
-1]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (•
-’
-]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (#
-%0com.example.buylap.UserHolder"__id*
-"""†
-]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (%
-#
-%0com.example.buylap.UserHolderB!"
-com.example.buylap.UserHolder
+<com.example.buylap.Category#getSubtitles()Ljava/lang/String;[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*Š
+1[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (®
+«
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+%0java.lang.String"__id*.*,
+com.example.buylap.Category"
+	subtitles"w
+[
+QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+
+%0java.lang.StringB
+com.example.buylap.Category

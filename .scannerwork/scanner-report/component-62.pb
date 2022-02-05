@@ -1,1 +1,1 @@
-> 2javaXThrCapp/src/main/java/com/example/buylap/view/RegistrationActivity.java
+> 2javaX9hr=app/src/main/java/com/example/buylap/view/SellerFragment.java

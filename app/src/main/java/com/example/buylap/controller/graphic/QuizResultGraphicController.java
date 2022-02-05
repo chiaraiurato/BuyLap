@@ -35,12 +35,12 @@ public class QuizResultGraphicController {
          } catch (DAOException e) {
              e.printStackTrace();
          }
-         build.add(new Category(beanBuild.get(0).getName(), "motherboard96", beanBuild.get(0).getSubtitles()));
-         build.add(new Category(beanBuild.get(1).getName(), "ssd", beanBuild.get(1).getSubtitles()));
-         build.add(new Category(beanBuild.get(2).getName(), "cpu", beanBuild.get(2).getSubtitles()));
-         build.add(new Category(beanBuild.get(3).getName(), "ram", beanBuild.get(3).getSubtitles()));
-         build.add(new Category(beanBuild.get(4).getName(), "videocard", beanBuild.get(4).getSubtitles()));
-         build.add(new Category(beanBuild.get(5).getName(), "powersupply", beanBuild.get(5).getSubtitles()));
+         build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles()));
+         build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles()));
+         build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles()));
+         build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles()));
+         build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles()));
+         build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles()));
 
          return build;
      }
@@ -48,24 +48,24 @@ public class QuizResultGraphicController {
          final Intent intent;
              switch (position){
                  case 0:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(0).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(0).getUrlEbay()));
                      break;
 
                  case 1:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(1).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(1).getUrlEbay()));
                      break;
                  case 2:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(2).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(2).getUrlEbay()));
                      break;
                  case 3:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(3).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(3).getUrlEbay()));
                      break;
                  case 4:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(4).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(4).getUrlEbay()));
                      break;
 
                  default:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(5).getUrl()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(5).getUrlEbay()));
                      break;
              }
          return intent;

@@ -1,1 +1,1 @@
-O 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml
+O 2xmlXhr:app/src/main/res/drawable/ic_baseline_navigate_next_24.xml

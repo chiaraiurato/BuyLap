@@ -1,7 +1,9 @@
 package com.example.buylap.controller.graphic;
 
+import android.content.Intent;
 import android.view.View;
 
+import com.example.buylap.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.HomeController;
 import com.example.buylap.UserHolder;
@@ -15,9 +17,18 @@ public class HomeGraphicController {
         this.homeController = new HomeController();
     }
 
-    public void initializeSessionForUser(View view){
+    public void initializeSession(View view){
         UserHolder holder = UserHolder.getInstance();
         BeanUser beanUser = holder.getUser();
-        homeFragment.setUser(beanUser, view);
+        if(beanUser != null) {
+            homeFragment.setUser(beanUser, view);
+        }else{
+            homeFragment.setGuest(view);
+        }
+    }
+
+    public void goToTakeQuiz() {
+        Intent intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
+        homeFragment.startActivity(intent);
     }
 }

@@ -24,6 +24,7 @@ public class TakeQuizActivity extends AppCompatActivity {
     private CardView cardOp2;
     private CardView cardOp3;
     private Button nextBtn;
+    private TextView numberQuestion;
 
     private TakeQuizGraphicController takeQuizGraphicController;
 
@@ -36,7 +37,7 @@ public class TakeQuizActivity extends AppCompatActivity {
 
         question = findViewById(R.id.txtqst);
         op1 = findViewById(R.id.text_a);
-        op2 = findViewById(R.id.text_b);
+        op2 = findViewById(R.id.editEmail);
         op3 = findViewById(R.id.text_c);
 
         cardOp1 = findViewById(R.id.cardView1);
@@ -68,17 +69,17 @@ public class TakeQuizActivity extends AppCompatActivity {
 
 
     public void resetColor() {
-        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
-        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
-        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebutton));
+        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebutton));
+        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebutton));
     }
 
     public void finished(BeanAnswer beanAnswer) {
 
         Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
-        intent.putExtra("beanAnswer1", beanAnswer.getOp1());
-        intent.putExtra("beanAnswer2", beanAnswer.getOp2());
-        intent.putExtra("beanAnswer3", beanAnswer.getOp3());
+        intent.putExtra("beanAnswer1", beanAnswer.getAnswer1());
+        intent.putExtra("beanAnswer2", beanAnswer.getAnswer2());
+        intent.putExtra("beanAnswer3", beanAnswer.getAnswer3());
         startActivity(intent);
     }
     public void choice(CardView cardview, String answer){
@@ -107,6 +108,10 @@ public class TakeQuizActivity extends AppCompatActivity {
         cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
         choice(cardOp3, takeQuizGraphicController.getAnswer3());
     }
+    public void setNumberQuestion(int index){
+        numberQuestion = findViewById(R.id.numberOfQuestion);
 
+        numberQuestion.setText(String.valueOf(index+2));
+    }
 
 }

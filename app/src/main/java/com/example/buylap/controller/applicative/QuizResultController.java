@@ -14,9 +14,9 @@ public class QuizResultController {
 
     public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
         BeanAnswer beanAnswer = new BeanAnswer();
-        beanAnswer.setOp1(answer1);
-        beanAnswer.setOp2(answer2);
-        beanAnswer.setOp3(answer3);
+        beanAnswer.setAnswer1(answer1);
+        beanAnswer.setAnswer2(answer2);
+        beanAnswer.setAnswer3(answer3);
         return beanAnswer;
 
     }
@@ -38,9 +38,9 @@ public class QuizResultController {
             try {
                 modelBuild.add( DAObuild.selectBuild(table[index], keyword));
                 BeanBuild beanBuildinstance = new BeanBuild();
-                beanBuildinstance.setName(modelBuild.get(index).getName());
+                beanBuildinstance.setTitle(modelBuild.get(index).getName());
                 beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
-                beanBuildinstance.setUrl(modelBuild.get(index).getUrl());
+                beanBuildinstance.setUrlEbay(modelBuild.get(index).getUrl());
                 beanBuild.add(beanBuildinstance);
             } catch (SQLException e) {
                 throw new DAOException("error with select"+ table+ " from controller with keyword" + keyword);

@@ -1,57 +1,112 @@
 package com.example.buylap.view;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.buylap.Analytics;
-import com.example.buylap.AnalyticsAdapter;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.controller.graphic.HomeSellerGraphicController;
+import com.example.buylap.bean.BeanAnswer;
+import com.example.buylap.controller.graphic.TakeQuizGraphicController;
 import com.example.buylap.R;
 
-import java.util.ArrayList;
+public class TakeQuizActivity extends AppCompatActivity {
 
-public class SellerFragment extends Fragment {
 
-    public TextView accountName;
-    public SellerFragment() {
-        //Singleton
-    }
+    private TextView question;
+    private TextView op1;
+    private TextView op2;
+    private TextView op3;
+    private CardView cardOp1;
+    private CardView cardOp2;
+    private CardView cardOp3;
+    private Button nextBtn;
+
+    private TakeQuizGraphicController takeQuizGraphicController;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_take_quiz);
 
-        HomeSellerGraphicController homeSellerGraphicController = new HomeSellerGraphicController(this);
-        View view= inflater.inflate(R.layout.fragment_seller, container, false);
-        accountName = view.findViewById(R.id.businessAccount);
-        homeSellerGraphicController.initializeSessionForSeller(view);
-        ArrayList<Analytics> analytics = new ArrayList<>();
-        analytics.add(new Analytics("cpu"));
-        analytics.add(new Analytics("ssd"));
-        analytics.add(new Analytics("ram"));
+        this.takeQuizGraphicController = new TakeQuizGraphicController(this);
 
-        RecyclerView.Adapter adapter = new AnalyticsAdapter(analytics);
-        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        question = findViewById(R.id.txtqst);
+        op1 = findViewById(R.id.text_a);
+        op2 = findViewById(R.id.text_b);
+        op3 = findViewById(R.id.text_c);
 
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(adapter);
-        return view;
+        cardOp1 = findViewById(R.id.cardView1);
+        cardOp2 = findViewById(R.id.cardView2);
+        cardOp3 = findViewById(R.id.cardView3);
+
+        nextBtn = findViewById(R.id.next_btn);
+
+
+        takeQuizGraphicController.setQuiz();
+
     }
-    public void setSeller(BeanSeller beanSeller, View view){
-        accountName = view.findViewById(R.id.businessAccount);
-        if(beanSeller.getUsername() != null) {
-            String username = beanSeller.getUsername() + ",";
-            accountName.setText(username);
-        }
+
+    public void setQuestion(String question) {
+        this.question.setText(question);
     }
+
+    public void setOp1(String op1) {
+        this.op1.setText(op1);
+    }
+
+    public void setOp2(String op2) {
+        this.op2.setText(op2);
+    }
+
+    public void setOp3(String op3) {
+        this.op3.setText(op3);
+    }
+
+
+    public void resetColor() {
+        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.bluebuttom));
+    }
+
+    public void finished(BeanAnswer beanAnswer) {
+
+        Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
+        intent.putExtra("beanAnswer1", beanAnswer.getOp1());
+        intent.putExtra("beanAnswer2", beanAnswer.getOp2());
+        intent.putExtra("beanAnswer3", beanAnswer.getOp3());
+        startActivity(intent);
+    }
+    public void choice(CardView cardview, String answer){
+        cardview.setCardBackgroundColor(getResources().getColor(R.color.green));
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takeQuizGraphicController.goNext(answer);
+            }
+        });
+    }
+    public void Op1Click (View view){
+        resetColor();
+        cardOp1.setCardBackgroundColor(getResources().getColor(R.color.green));
+        choice(cardOp1, takeQuizGraphicController.getAnswer1());
+    }
+    public void Op2Click (View view){
+        resetColor();
+        cardOp2.setCardBackgroundColor(getResources().getColor(R.color.green));
+
+        choice(cardOp2, takeQuizGraphicController.getAnswer2());
+    }
+    public void Op3Click (View view){
+        resetColor();
+        cardOp3.setCardBackgroundColor(getResources().getColor(R.color.green));
+        choice(cardOp3, takeQuizGraphicController.getAnswer3());
+    }
+
+
 }

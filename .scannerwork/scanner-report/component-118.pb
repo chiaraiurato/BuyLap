@@ -1,1 +1,1 @@
-v 2xmlXHhr)app/src/main/res/layout/fragment_like.xml
+v 2xmlXˆhr+app/src/main/res/layout/fragment_seller.xml

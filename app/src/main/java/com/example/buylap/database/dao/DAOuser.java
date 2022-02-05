@@ -4,7 +4,7 @@ import android.os.StrictMode;
 
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.Query.QueryRegistrationLogin;
+import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelUser;
 import java.sql.Connection;

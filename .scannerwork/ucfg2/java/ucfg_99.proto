@@ -1,16 +1,15 @@
 
-Acom.example.buylap.model.CreditCard#getNumber()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java ("1*ß
-1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java (ª
-∏
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java (
-%0java.lang.String"__id*3*1%
-#com.example.buylap.model.CreditCard"
-Number"
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java (
-
-%0java.lang.StringB'%
-#com.example.buylap.model.CreditCard
+Ncom.example.buylap.SellerHolder#getInstance()Lcom/example/buylap/SellerHolder;_
+UC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/SellerHolder.java (*"1*ç
+1_
+UC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/SellerHolder.java (ô
+ñ
+_
+UC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/SellerHolder.java (%
+%0com.example.buylap.SellerHolder"__id*
+"""ä
+_
+UC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/SellerHolder.java ('
+%
+%0com.example.buylap.SellerHolderB#"!
+com.example.buylap.SellerHolder

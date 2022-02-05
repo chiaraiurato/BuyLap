@@ -1,1 +1,1 @@
-è 2xmlXhr#app/src/main/res/values/strings.xml
+è 2xmlXhr!app/src/main/res/values/style.xml

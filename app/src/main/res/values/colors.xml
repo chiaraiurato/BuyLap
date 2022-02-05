@@ -10,7 +10,7 @@
     <color name="green">#41CD7D</color>
     <color name="bluetext">#535986</color>
     <color name="bluebackground">#202442</color>
-    <color name="bluebuttom">#282C4C</color>
+    <color name="bluebutton">#282C4C</color>
     <!--switch colors-->
     <color name="disable_forground_grey">#42221f1f</color>
     <color name="disable_thumb_grey">#1c000000</color>

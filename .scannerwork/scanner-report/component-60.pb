@@ -1,1 +1,1 @@
-< 2javaX2hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java
+< 2javaX8hrAapp/src/main/java/com/example/buylap/view/QuizResultActivity.java

@@ -1,1 +1,1 @@
-s 2xmlXùhr.app/src/main/res/layout/activity_take_quiz.xml
+s 2xmlXâhr-app/src/main/res/layout/fragment_cashback.xml

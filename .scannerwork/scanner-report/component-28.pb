@@ -1,1 +1,1 @@
- 2javaX5hrUapp/src/main/java/com/example/buylap/controller/applicative/QuizResultController.java
+ 2javaX5hrUapp/src/main/java/com/example/buylap/controller/applicative/QuizResultController.java

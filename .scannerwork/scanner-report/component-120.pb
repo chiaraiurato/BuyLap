@@ -1,1 +1,1 @@
-x 2xmlXHhr)app/src/main/res/layout/fragment_shop.xml
+x 2xmlX™hr)app/src/main/res/layout/fragment_user.xml

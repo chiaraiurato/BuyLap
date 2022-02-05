@@ -1,1 +1,1 @@
-W 2xmlXhr4app/src/main/res/drawable/ic_baseline_vpn_key_24.xml
+W 2xmlXhr6app/src/main/res/drawable/ic_round_architecture_24.xml

@@ -3,7 +3,7 @@ package com.example.buylap.database.dao;
 import android.os.StrictMode;
 
 import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.Query.QueryBuild;
+import com.example.buylap.database.query.QueryBuild;
 
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;

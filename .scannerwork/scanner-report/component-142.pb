@@ -1,1 +1,1 @@
-Ž 2xmlXhr2app/src/main/res/values/ic_launcher_background.xml
+Ž 2xmlXhr#app/src/main/res/values/strings.xml

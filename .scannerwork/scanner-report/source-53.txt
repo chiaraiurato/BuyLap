@@ -1,23 +1,24 @@
 package com.example.buylap;
 
-import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
 
-public class SellerHolder {
-    private BeanSeller beanSeller;
+public final class UserHolder {
 
-    private final static SellerHolder INSTANCE = new SellerHolder();
+    private BeanUser user;
 
-    private SellerHolder() {}
+    private static final UserHolder INSTANCE = new UserHolder();
 
-    public static SellerHolder getInstance() {
+    private UserHolder() {}
+
+    public static UserHolder getInstance() {
         return INSTANCE;
     }
 
-    public void setSeller(BeanSeller beanSeller) {
-        this.beanSeller = beanSeller;
+    public void setUser(BeanUser u) {
+        this.user = u;
     }
 
-    public BeanSeller getSeller() {
-        return this.beanSeller;
+    public BeanUser getUser() {
+        return this.user;
     }
 }

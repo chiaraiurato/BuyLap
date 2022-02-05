@@ -1,16 +1,9 @@
 
-<com.example.buylap.Category#getSubtitles()Ljava/lang/String;[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*Š
-1[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (®
-«
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
-%0java.lang.String"__id*.*,
-com.example.buylap.Category"
-	subtitles"w
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
-
-%0java.lang.StringB
-com.example.buylap.Category
+2com.example.buylap.CategoryAdapter#getItemCount()Ib
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java6 6("1*Õ
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java7 7("l
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java7 7(
+""B&$
+"com.example.buylap.CategoryAdapter

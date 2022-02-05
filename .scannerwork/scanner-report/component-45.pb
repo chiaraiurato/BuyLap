@@ -1,1 +1,1 @@
-- 2javaX	hrAapp/src/main/java/com/example/buylap/exceptions/DAOException.java
+- 2javaX2hr:app/src/main/java/com/example/buylap/model/CreditCard.java

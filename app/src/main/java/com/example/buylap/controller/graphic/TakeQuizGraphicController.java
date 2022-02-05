@@ -30,7 +30,7 @@ public class TakeQuizGraphicController {
     }
 
     public void setQuiz() {
-
+        takeQuizActivity.setNumberQuestion(index);
         takeQuizActivity.setQuestion(quizList.getQuestion());
         takeQuizActivity.setOp1(quizList.getOp1());
         takeQuizActivity.setOp2(quizList.getOp2());
@@ -51,11 +51,13 @@ public class TakeQuizGraphicController {
                 break;
         }
         index++;
+
         if (index >= listQuest.size() ) {
 
             takeQuizActivity.finished(beanAnswer);
 
         } else {
+                takeQuizActivity.setNumberQuestion(index);
                 quizList = listQuest.get(index);
 
                 takeQuizActivity.resetColor();

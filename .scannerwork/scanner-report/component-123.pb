@@ -1,1 +1,1 @@
-{ 2xmlX?hr'app/src/main/res/layout/viewholder2.xml
+{ 2xmlXhr-app/src/main/res/layout/viewholder_seller.xml

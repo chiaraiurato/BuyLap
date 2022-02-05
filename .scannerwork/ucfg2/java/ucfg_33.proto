@@ -1,16 +1,15 @@
 
-8com.example.buylap.MostViewed#getUrl()Ljava/lang/String;]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java ("1*Œ
+Jcom.example.buylap.UserHolder#getInstance()Lcom/example/buylap/UserHolder;]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (("1*ƒ
 1]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (¬
-©
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (•
+’
 ]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
-%0java.lang.String"__id***(
-com.example.buylap.MostViewed"
-url"y
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (#
+%0com.example.buylap.UserHolder"__id*
+"""†
 ]
-SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
-
-%0java.lang.StringB!
-com.example.buylap.MostViewed
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/UserHolder.java (%
+#
+%0com.example.buylap.UserHolderB!"
+com.example.buylap.UserHolder

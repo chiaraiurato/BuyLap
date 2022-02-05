@@ -12,7 +12,7 @@ public class CreditCard {
     }
 
     public void setName(String name) {
-        name = name;
+        this.name = name;
     }
 
     public String getSurname() {
@@ -20,7 +20,7 @@ public class CreditCard {
     }
 
     public void setSurname(String surname) {
-        surname = surname;
+        this.surname = surname;
     }
 
     public String getNumber() {
@@ -28,7 +28,7 @@ public class CreditCard {
     }
 
     public void setNumber(String number) {
-        number = number;
+        this.number = number;
     }
 
     public String getData() {
@@ -36,14 +36,16 @@ public class CreditCard {
     }
 
     public void setData(String data) {
-        data = data;
+        this.data = data;
     }
 
-    public String getCVV() {
+    public String getCvv() {
         return cvv;
     }
 
-    public void setCVV(String CVV) {
-        this.cvv = CVV;
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
     }
+
+
 }

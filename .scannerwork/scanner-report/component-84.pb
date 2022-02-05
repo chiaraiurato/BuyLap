@@ -1,1 +1,1 @@
-T 2xmlXhr8app/src/main/res/drawable/ic_baseline_search_24_blue.xml
+T 2xmlXhr5app/src/main/res/drawable/ic_baseline_settings_24.xml

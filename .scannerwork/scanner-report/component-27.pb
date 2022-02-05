@@ -1,1 +1,1 @@
- 2javaXhrUapp/src/main/java/com/example/buylap/controller/applicative/NavigationController.java
+ 2javaXhrUapp/src/main/java/com/example/buylap/controller/applicative/NavigationController.java

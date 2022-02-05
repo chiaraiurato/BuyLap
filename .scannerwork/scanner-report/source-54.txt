@@ -1,24 +1,27 @@
-package com.example.buylap;
+package com.example.buylap.view;
 
-import com.example.buylap.bean.BeanUser;
+import android.os.Bundle;
 
-public final class UserHolder {
+import androidx.fragment.app.Fragment;
 
-    private BeanUser user;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-    private final static UserHolder INSTANCE = new UserHolder();
+import com.example.buylap.R;
 
-    private UserHolder() {}
 
-    public static UserHolder getInstance() {
-        return INSTANCE;
+public class CashbackFragment extends Fragment {
+
+
+    public CashbackFragment() {
+        // Required empty public constructor
     }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_cashback, container, false);
 
-    public void setUser(BeanUser u) {
-        this.user = u;
-    }
-
-    public BeanUser getUser() {
-        return this.user;
     }
 }

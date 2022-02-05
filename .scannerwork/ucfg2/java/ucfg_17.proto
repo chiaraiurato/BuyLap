@@ -1,16 +1,16 @@
 
-8com.example.buylap.Category#getTitle()Ljava/lang/String;[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*†
-1[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (ª
-§
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
-%0java.lang.String"__id***(
-com.example.buylap.Category"
-title"w
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+>com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java ("1*¤
+1c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (¸
+µ
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
+%0java.lang.String"__id*0*.%
+#com.example.buylap.model.ModelBuild"
+url"
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
 
-%0java.lang.StringB
-com.example.buylap.Category
+%0java.lang.StringB'%
+#com.example.buylap.model.ModelBuild

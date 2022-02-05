@@ -5,68 +5,132 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".view.HomeFragment">
-
+    tools:context=".view.SellerFragment">
 
     <TextView
         android:id="@+id/Hi"
-        android:layout_width="236dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="28dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Wish List "
+        android:text="Hi"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/Analitycs"
-        android:layout_width="277dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
+        android:id="@+id/welcome"
+        android:layout_width="175dp"
+        android:layout_height="38dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Your wishlist is empty!"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        android:text="Welcome back"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="312dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="228dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Explore more and shortlist some build"
-        android:textAlignment="center"
-        android:textColor="#535986"
-
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Hi"
+        app:layout_constraintTop_toBottomOf="@+id/Hi" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="162dp"
-        android:layout_height="163dp"
-        app:layout_constraintBottom_toTopOf="@+id/Analitycs"
+        android:id="@+id/imageView"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_settings_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/takeQuiz"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Take Quiz"
+        android:textAllCaps="false"
+        android:textColor="#1F2341"
+        android:textSize="24sp"
+        app:backgroundTint="#41CD7D"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hi"
-        app:layout_constraintVertical_bias="0.832"
-        app:srcCompat="@drawable/ic_baseline_playlist_add_circle_24" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintVertical_bias="0.306" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="408dp"
+        android:layout_height="366dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/Analitycs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/zcool_regular"
+                android:text="Analitycs"
+                android:textColor="#535986"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerFunct"
+            android:layout_width="355dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/businessAccount"
+        android:layout_width="95dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/zcool_regular"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcome"
+        app:layout_constraintStart_toEndOf="@+id/Hi"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/insertComp"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Insert a component"
+        android:textAllCaps="false"
+        android:textColor="#1F2341"
+        android:textSize="24sp"
+        app:backgroundTint="#41CD7D"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takeQuiz"
+        app:layout_constraintVertical_bias="0.448" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,17 +1,17 @@
 
-Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/QuizList.java ("1*¡
-1a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/QuizList.java (¹
-¶
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/QuizList.java (
-%0java.lang.String"__id*3*1#
-!com.example.buylap.model.QuizList"
+Hcom.example.buylap.model.users.ModelUser#getUsername()Ljava/lang/String;h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java! !("1*¾
+1h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java" "(Ç
+Ä
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java" "(
+%0java.lang.String"__id*:*8*
+(com.example.buylap.model.users.ModelUser"
 
-question"}
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/QuizList.java (
+username"„
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java" "(
 
-%0java.lang.StringB%#
-!com.example.buylap.model.QuizList
+%0java.lang.StringB,*
+(com.example.buylap.model.users.ModelUser

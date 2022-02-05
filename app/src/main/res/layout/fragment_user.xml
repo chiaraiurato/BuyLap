@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/Hi"
+        android:id="@+id/Myaccount"
         android:layout_width="319dp"
         android:layout_height="52dp"
         android:layout_marginTop="44dp"
@@ -38,10 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hi" />
+        app:layout_constraintTop_toBottomOf="@+id/Myaccount" />
 
     <TextView
-        android:id="@+id/text_b"
+        android:id="@+id/editEmail"
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:layout_marginTop="80dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/editPw"
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:layout_marginTop="156dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/editUsern"
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:layout_marginTop="8dp"
@@ -108,15 +108,14 @@
         android:textColor="#535986"
 
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/notification"
         app:layout_constraintVertical_bias="0.423" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/notification"
         android:layout_width="129dp"
         android:layout_height="38dp"
         android:layout_marginBottom="240dp"
@@ -130,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/editPw" />
 
     <Button
         android:id="@+id/signoutBtn"

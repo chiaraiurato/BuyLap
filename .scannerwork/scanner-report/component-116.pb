@@ -1,1 +1,1 @@
-t 2xmlX‰hr-app/src/main/res/layout/fragment_cashback.xml
+t 2xmlXvhr)app/src/main/res/layout/fragment_home.xml

@@ -1,1 +1,1 @@
-, 2javaXhrOapp/src/main/java/com/example/buylap/database/Query/QueryRegistrationLogin.java
+, 2javaX	hrAapp/src/main/java/com/example/buylap/exceptions/DAOException.java

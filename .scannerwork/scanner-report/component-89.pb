@@ -1,1 +1,1 @@
-Y 2xmlXhr.app/src/main/res/drawable/ic_round_home_24.xml
+Y 2xmlXhr0app/src/main/res/drawable/ic_round_school_24.xml
