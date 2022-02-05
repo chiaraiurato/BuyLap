@@ -9,35 +9,51 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.buylap.Controller.Grafico.LoginGraphicController;
+import com.example.buylap.Exceptions.DAOException;
 import com.example.buylap.R;
 
+import java.sql.SQLException;
+
 public class LoginActivity extends AppCompatActivity {
+    private LoginGraphicController loginGraphicController;
+    private TextView username;
+    private TextView password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        TextView username = findViewById(R.id.Username);
-        TextView password = findViewById(R.id.Password);
+
+        this.loginGraphicController = new LoginGraphicController(this);
+        username = findViewById(R.id.Username);
+        password = findViewById(R.id.Password);
         Button signinbtn = (Button) findViewById(R.id.signup_btn);
+
         TextView create = findViewById(R.id.create_new_one);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
-                startActivity(intent);
+                loginGraphicController.goToRegistration();
             }
         });
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
-                    Toast.makeText(LoginActivity.this, "Sign in success", Toast.LENGTH_SHORT).show();
-                    Intent intent4 = new Intent(LoginActivity.this, NavigationActivity.class);
-                    startActivity(intent4);
-                }else{
-                    Toast.makeText(LoginActivity.this, "Sign in error", Toast.LENGTH_SHORT).show();
+
+                try {
+                    loginGraphicController.signIn();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (DAOException e) {
+                    e.printStackTrace();
                 }
             }
         });
+    }
+    public String sendUsername(){
+        return username.getText().toString();
+    }
+    public String sendPassword(){
+        return  password.getText().toString();
     }
 }

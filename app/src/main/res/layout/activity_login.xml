@@ -81,7 +81,7 @@
         android:drawablePadding="20dp"
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
-        android:hint="username or mail"
+        android:hint="username"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:textColor="#535986"
