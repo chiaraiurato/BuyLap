@@ -1,9 +1,10 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 
-import com.example.buylap.BudgetActivity;
+import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.HomeController;
 import com.example.buylap.UserHolder;
@@ -23,6 +24,7 @@ public class HomeGraphicController {
         if(beanUser != null) {
             homeFragment.setUser(beanUser, view);
         }else{
+            Log.d("DEBUG", "hereGuestagain");
             homeFragment.setGuest(view);
         }
     }

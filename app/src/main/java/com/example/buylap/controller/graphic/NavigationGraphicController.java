@@ -1,5 +1,6 @@
 package com.example.buylap.controller.graphic;
 
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
@@ -29,7 +30,7 @@ public class NavigationGraphicController {
         if(userHolder.getUser() != null){
 
             fragment = new HomeFragment();
-        }else if(hostUser.getHost() != null ){
+        }else if(hostUser.getHost() == "guest" ){
 
             fragment = new HomeFragment();
         }else{
@@ -43,7 +44,8 @@ public class NavigationGraphicController {
         switch (item.getItemId()){
             case R.id.nav_home:
                 UserHolder userHolder = UserHolder.getInstance();
-                if(userHolder.getUser() != null) {
+                HostUser hostUser = HostUser.getINSTANCE();
+                if(userHolder.getUser() != null || hostUser.getHost() == "guest") {
                     fragment = new HomeFragment();
                 }else{
                     fragment = new SellerFragment();

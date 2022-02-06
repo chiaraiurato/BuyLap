@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".BudgetActivity">
+    tools:context=".view.BudgetActivity">
 
     <TextView
         android:id="@+id/Hi"
@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/zcool_regular"
         android:gravity="center"
-        android:text="1/3 Question"
+        android:text="1/4 Question"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -82,7 +82,8 @@
         android:layout_height="55dp"
         android:max="2000"
         android:progressTint="@color/green"
-        android:theme="@style/MySeekBar"
+        android:thumb="@drawable/seek_thumb"
+        android:progressDrawable="@drawable/seek_bar"
         app:layout_constraintBottom_toTopOf="@+id/next_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +108,8 @@
         android:layout_width="221dp"
         android:layout_height="73dp"
         android:layout_gravity="center"
+        android:hint="0 $"
+        android:textColorHint="@color/white"
         android:fontFamily="@font/zcool_regular"
         android:gravity="center"
         android:textColor="@color/white"

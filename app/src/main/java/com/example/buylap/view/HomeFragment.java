@@ -71,7 +71,7 @@ public class HomeFragment extends Fragment {
 
     public void setGuest( View view) {
         accountName = view.findViewById(R.id.nameAccount);
-            String username = "guest";
-            accountName.setText(username);
+        String username = "guest";
+        accountName.setText(username);
     }
 }

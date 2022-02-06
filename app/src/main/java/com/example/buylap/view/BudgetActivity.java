@@ -1,21 +1,15 @@
-package com.example.buylap;
+package com.example.buylap.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.buylap.view.TakeQuizActivity;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.buylap.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 
 public class BudgetActivity extends AppCompatActivity {

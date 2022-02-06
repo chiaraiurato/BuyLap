@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.buylap.CategoryAdapter;
 import com.example.buylap.controller.graphic.QuizResultGraphicController;
@@ -43,6 +44,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
             public void onClick(View v) {
                 Intent intent= new Intent(QuizResultActivity.this, NavigationActivity.class);
                 intent.putExtra("gotoCashback", true);
+                quizResultGraphicController.initializeSession(v);
                 startActivity(intent);
             }
         });
@@ -52,4 +54,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         this.startActivity(quizResultGraphicController.linkToEbay(position));
     }
 
+    public void setMessageGuest(View view) {
+        Toast.makeText(view.getContext(), "You can't receive cashback", Toast.LENGTH_SHORT).show();
+    }
 }
