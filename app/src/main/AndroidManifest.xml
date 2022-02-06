@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
+            android:name=".DefaultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityCLI"
+            android:exported="false" />
+        <activity
             android:name=".view.BudgetActivity"
             android:exported="false"
             android:label="@string/title_activity_budget"
@@ -32,7 +41,7 @@
             android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".GUIActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,5 +1,6 @@
 package com.example.buylap.view;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
