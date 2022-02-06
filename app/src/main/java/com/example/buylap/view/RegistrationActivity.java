@@ -28,7 +28,7 @@ public class RegistrationActivity extends AppCompatActivity {
         RadioButton userRadio = findViewById(R.id.radio_user);
         RadioButton sellerRadio = findViewById(R.id.radio_seller);
 
-        username = findViewById(R.id.Username);
+        username = findViewById(R.id.select);
         email = findViewById(R.id.Mail);
         password = findViewById(R.id.Password);
         Button signUp = findViewById(R.id.signup_btn);

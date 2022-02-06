@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".DefaultActivity"
+            android:name=".SignUpUserCLIActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SignupCLIActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

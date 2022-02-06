@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         this.loginGraphicController = new LoginGraphicController(this);
-        username = findViewById(R.id.Username);
+        username = findViewById(R.id.select);
         password = findViewById(R.id.Password);
         Button signinbtn = (Button) findViewById(R.id.signup_btn);
 

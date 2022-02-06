@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".MainActivityCLI">
-
+    android:layout_height="match_parent"
+    tools:context=".SignUpSellerCLIActivity">
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/zcool_regular"
-        android:text="BUYLAP CLI"
+        android:text="SIGN UP SELLER"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/select"
+        android:id="@+id/field"
         android:layout_width="329dp"
         android:layout_height="53dp"
         android:background="@drawable/edit_background"
@@ -52,7 +51,7 @@
         android:drawablePadding="20dp"
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
-        android:hint="select a number"
+        android:hint="select a number and input"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -72,62 +71,63 @@
         android:layout_width="29dp"
         android:layout_height="28dp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/select"
-        app:layout_constraintEnd_toEndOf="@+id/select"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="@+id/field"
         app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="@+id/select"
+        app:layout_constraintStart_toStartOf="@+id/field"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.848"
         app:srcCompat="@drawable/ic_baseline_navigate_next_24" />
 
     <TextView
-        android:id="@+id/signup"
-        android:layout_width="231dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="60dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="1. Sign Up"
-        android:textColor="#535986"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select" />
-
-    <TextView
         android:id="@+id/signin"
         android:layout_width="231dp"
         android:layout_height="34dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="2. Sign In"
+        android:text="1. Set company name"
         android:textColor="#535986"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/signin2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup" />
+        app:layout_constraintTop_toBottomOf="@+id/field" />
 
     <TextView
         android:id="@+id/signin2"
         android:layout_width="231dp"
         android:layout_height="34dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="3. Skip for now"
+        android:text="2. Set password"
         android:textColor="#535986"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/signin" />
+
+    <TextView
+        android:id="@+id/signin3"
+        android:layout_width="231dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="3. Sign up"
+        android:textColor="#535986"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin2" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/select"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
         app:layout_constraintEnd_toStartOf="@+id/enter"
         app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="@+id/select"
+        app:layout_constraintStart_toStartOf="@+id/field"
         app:layout_constraintTop_toTopOf="@+id/imageView11"
         app:layout_constraintVertical_bias="0.843"
         app:srcCompat="@drawable/line" />
