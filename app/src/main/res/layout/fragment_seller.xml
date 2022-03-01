@@ -64,7 +64,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="408dp"
-        android:layout_height="366dp"
+        android:layout_height="428dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
                 android:fontFamily="@font/zcool_regular"
                 android:text="Analitycs"
                 android:textColor="#535986"
-                android:textSize="18sp"
+                android:textSize="23sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -99,7 +99,10 @@
             android:layout_width="355dp"
             android:layout_height="300dp"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="10dp" />
+            android:layout_marginEnd="10dp"
+            android:clipToPadding="false"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp" />
 
     </LinearLayout>
 

@@ -26,8 +26,8 @@ public class NavigationActivity extends AppCompatActivity {
 
         navigationView=findViewById(R.id.bottom_navigation);
 
-        Fragment fragmentchoice =navigationGraphicController.choiceAccount();
-        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentchoice).commit();
+        Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
+        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
 
 
         navigationView.setSelectedItemId(R.id.nav_home);

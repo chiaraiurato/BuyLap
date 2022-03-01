@@ -23,14 +23,14 @@ public class NavigationGraphicController {
         this.navigationActivity = navigationActivity;
 
     }
-    public Fragment choiceAccount(){
+    public Fragment selectTypeHomepage(){
         Fragment fragment;
         UserHolder userHolder = UserHolder.getInstance();
         HostUser hostUser = HostUser.getINSTANCE();
         if(userHolder.getUser() != null){
 
             fragment = new HomeFragment();
-        }else if(hostUser.getHost() == "guest" ){
+        }else if(hostUser.getHost() =="guest"){ //con equals mi da exception
 
             fragment = new HomeFragment();
         }else{

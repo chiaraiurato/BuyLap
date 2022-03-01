@@ -3,6 +3,7 @@ package com.example.buylap.view;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,15 +36,18 @@ public class SellerFragment extends Fragment {
         accountName = view.findViewById(R.id.businessAccount);
         homeSellerGraphicController.initializeSessionForSeller(view);
         ArrayList<Analytics> analytics = new ArrayList<>();
-        analytics.add(new Analytics("cpu"));
-        analytics.add(new Analytics("ssd"));
-        analytics.add(new Analytics("ram"));
-
+        analytics.add(new Analytics("statistics"));
+        analytics.add(new Analytics("piechart"));
+        analytics.add(new Analytics("booklet"));
+        analytics.add(new Analytics("paidsearch"));
         RecyclerView.Adapter adapter = new AnalyticsAdapter(analytics);
-        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
-        recyclerView.setLayoutManager(linearLayoutManager);
+        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+
+       // LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+        recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
         return view;
     }
