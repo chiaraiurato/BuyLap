@@ -1,9 +1,7 @@
 package com.example.buylap.controller.graphic;
 
-import android.content.Intent;
 import android.util.Log;
-import com.example.buylap.SignUpSellerCLIActivity;
-import com.example.buylap.SignUpUserCLIActivity;
+
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;
@@ -16,8 +14,7 @@ public class RegistrationGraphicController {
 
     RegistrationActivity registrationActivity;
     RegistrationController registrationController;
-    SignUpUserCLIActivity signUpUserCLIActivity;
-    SignUpSellerCLIActivity signUpSellerCLIActivity;
+
 
 
     public RegistrationGraphicController(RegistrationActivity registrationActivity){
@@ -25,16 +22,7 @@ public class RegistrationGraphicController {
         this.registrationController = new RegistrationController();
 
     }
-    public RegistrationGraphicController(SignUpUserCLIActivity signUpUserCLIActivity){
 
-        this.signUpUserCLIActivity = signUpUserCLIActivity;
-
-    }
-    public RegistrationGraphicController(SignUpSellerCLIActivity signUpSellerCLIActivity){
-
-        this.signUpSellerCLIActivity = signUpSellerCLIActivity;
-
-    }
     public void registerNewAccountUser() throws DAOException {
         BeanUser beanUser = new BeanUser();
         beanUser.setUsername(registrationActivity.sendUsername());
@@ -61,8 +49,4 @@ public class RegistrationGraphicController {
         sellerHolder.setSeller(beanSeller);
     }
 
-
-    public void setSellerCLI(String text) {
-
-    }
 }

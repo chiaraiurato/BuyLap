@@ -17,20 +17,17 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button movesignup;
-        Button movesignin;
-        TextView moveskip;
+        Button moveSignUp;
+        Button moveSignIn;
+        TextView moveSkip;
         setContentView(R.layout.activity_main);
 
         MainGraphicController mainGraphicController = new MainGraphicController(this);
-        movesignup=findViewById(R.id.signup_btn);
-        movesignin=findViewById(R.id.Move_signin);
-        moveskip=findViewById(R.id.skip);
+        moveSignUp=findViewById(R.id.signup_btn);
+        moveSignIn=findViewById(R.id.signin_btn);
+        moveSkip=findViewById(R.id.skip);
 
-        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
-
-
-        movesignup.setOnClickListener(new View.OnClickListener() {
+        moveSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
@@ -38,14 +35,14 @@ public class MainActivity extends AppCompatActivity{
 
             }
         });
-        movesignin.setOnClickListener(new View.OnClickListener() {
+        moveSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent2);
             }
         });
-        moveskip.setOnClickListener(new View.OnClickListener() {
+        moveSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                mainGraphicController.setHost();

@@ -37,7 +37,7 @@
         android:layout_height="57dp"
         android:layout_marginTop="92dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="#1F2341"
         android:textSize="24sp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/Move_signin"
+        android:id="@+id/signin_btn"
         android:layout_width="330dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
@@ -76,6 +76,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Move_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/signin_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
