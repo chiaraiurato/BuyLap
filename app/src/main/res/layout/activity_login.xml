@@ -37,21 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/social_icon"
-        app:layout_constraintVertical_bias="0.742" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="136dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Forgot password ?"
-        android:textColor="#535986"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <TextView
         android:id="@+id/create_new_one"
@@ -70,11 +56,73 @@
         app:layout_constraintTop_toBottomOf="@+id/social_icon"
         app:layout_constraintVertical_bias="0.979" />
 
+    <TextView
+        android:id="@+id/businessAcc"
+        android:layout_width="192dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center"
+        android:text="Business Account"
+        android:textColor="#535986"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.978" />
+
+    <TextView
+        android:id="@+id/personal_Acc"
+        android:layout_width="155dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center"
+        android:text="Personal Account"
+        android:textColor="#535986"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="250dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_user_login"
+            android:layout_width="207dp"
+            android:layout_height="88dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="32dp"
+            android:buttonTint="#41CD7D"
+            android:checked="false"
+            android:minHeight="48dp" />
+
+        <RadioButton
+            android:id="@+id/radio_seller_login"
+            android:layout_width="77dp"
+            android:layout_height="90dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="32dp"
+            android:buttonTint="#41CD7D" />
+
+    </RadioGroup>
+
     <EditText
         android:id="@+id/select"
         android:layout_width="329dp"
         android:layout_height="53dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="172dp"
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
         android:drawableLeft="@drawable/ic_baseline_person_24"
@@ -88,29 +136,60 @@
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#41CD7D"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Remember me"
+        android:textColor="#535986"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="136dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Forgot password ?"
+        android:textColor="#535986"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias="0.196" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="329dp"
         android:layout_height="53dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:drawablePadding="20dp"
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
         android:hint="password"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
-        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-        android:drawablePadding="20dp"
         android:textColor="#535986"
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select" />
 
@@ -118,7 +197,7 @@
         android:id="@+id/signup_btn"
         android:layout_width="330dp"
         android:layout_height="57dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/zcool_regular"
         android:text="Sign In"
         android:textAllCaps="false"
@@ -127,7 +206,7 @@
         app:backgroundTint="#41CD7D"
         app:cornerRadius="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
@@ -135,7 +214,7 @@
         android:id="@+id/social_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="156dp"
+        android:layout_marginBottom="96dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -151,19 +230,5 @@
             android:layout_height="48dp"
             android:src="@drawable/fb" />
     </LinearLayout>
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#41CD7D"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Remember me"
-        android:textColor="#535986"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/signup_btn"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

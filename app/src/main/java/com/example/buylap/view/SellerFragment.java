@@ -37,15 +37,13 @@ public class SellerFragment extends Fragment {
         homeSellerGraphicController.initializeSessionForSeller(view);
         ArrayList<Analytics> analytics = new ArrayList<>();
         analytics.add(new Analytics("statistics"));
-        analytics.add(new Analytics("piechart"));
+        analytics.add(new Analytics("chart"));
         analytics.add(new Analytics("booklet"));
         analytics.add(new Analytics("paidsearch"));
         RecyclerView.Adapter adapter = new AnalyticsAdapter(analytics);
 
         RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-
-       // LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);

@@ -44,28 +44,25 @@ public class RegistrationActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty(email.getText().toString()) || TextUtils.isEmpty(password.getText().toString())) {
-                    Toast.makeText(RegistrationActivity.this, "All field required", Toast.LENGTH_SHORT).show();
-                } else if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
-                        Toast.makeText(RegistrationActivity.this, "Select type account", Toast.LENGTH_SHORT).show();
-                    } else if(userRadio.isChecked()) {
-                            try {
-                                registrationGraphicController.registerNewAccountUser();
-                                Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                                startActivity(intent);
-                            } catch (DAOException e) {
-                                e.printStackTrace();
-                            }
-                        }else{
-                            try {
-                                registrationGraphicController.registerNewAccountSeller();
-                                Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                                startActivity(intent);
-                            } catch (DAOException e) {
-                                e.printStackTrace();
-                            }
-                        }
+                String type = registrationGraphicController.selectTypeAccount(username.getText().toString(), email.getText().toString(), password.getText().toString(), userRadio, sellerRadio);
+                if (type.equals("SELLER")) {
+                    try {
+                        registrationGraphicController.registerNewAccountSeller();
+                        Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
+                        startActivity(intent);
+                    } catch (DAOException e) {
+                        e.printStackTrace();
                     }
+                }else{
+                    try {
+                        registrationGraphicController.registerNewAccountUser();
+                        Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
+                        startActivity(intent);
+                    } catch (DAOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
         });
 
 
