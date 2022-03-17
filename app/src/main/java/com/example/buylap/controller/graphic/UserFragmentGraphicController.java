@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.buylap.HostUser;
+import com.example.buylap.GuestSingleton;
+import com.example.buylap.SellerSingleton;
 import com.example.buylap.UserHolder;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.view.MainActivity;
@@ -31,8 +32,11 @@ public class UserFragmentGraphicController {
     public void onSignOut(){
         UserHolder userHolder = UserHolder.getInstance();
         userHolder.setUser(null);
-        HostUser hostUser = HostUser.getINSTANCE();
-        hostUser.setGuest("");
+        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+        guestSingleton.setBeanGuest(null);
+        SellerSingleton sellerSingleton = SellerSingleton.getInstance();
+        sellerSingleton.setSeller(null);
+
         Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
         userFragment.startActivity(intent);
     }

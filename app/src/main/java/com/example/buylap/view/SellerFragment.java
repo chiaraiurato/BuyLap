@@ -4,18 +4,18 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.buylap.Analytics;
 import com.example.buylap.AnalyticsAdapter;
 import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.controller.graphic.HomeSellerGraphicController;
+import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.R;
 
 import java.util.ArrayList;
@@ -23,6 +23,7 @@ import java.util.ArrayList;
 public class SellerFragment extends Fragment {
 
     private TextView accountName;
+    private Button takeQuiz;
     public SellerFragment() {
         //Singleton
     }
@@ -31,10 +32,17 @@ public class SellerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        HomeSellerGraphicController homeSellerGraphicController = new HomeSellerGraphicController(this);
+        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
         View view= inflater.inflate(R.layout.fragment_seller, container, false);
         accountName = view.findViewById(R.id.businessAccount);
-        homeSellerGraphicController.initializeSessionForSeller(view);
+        takeQuiz = view.findViewById(R.id.takeQuiz);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeGraphicController.goToTakeQuiz();
+            }
+        });
+        homeGraphicController.initializeSessionForSeller(view);
         ArrayList<Analytics> analytics = new ArrayList<>();
         analytics.add(new Analytics("statistics"));
         analytics.add(new Analytics("chart"));

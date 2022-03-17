@@ -93,6 +93,7 @@
         android:id="@+id/welcome"
         android:layout_width="313dp"
         android:layout_height="55dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
         android:text="@string/account_balance"

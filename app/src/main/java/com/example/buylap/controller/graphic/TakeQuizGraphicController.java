@@ -1,13 +1,12 @@
 package com.example.buylap.controller.graphic;
 
-
-import static com.example.buylap.view.HomeFragment.listQuest;
-
+import com.example.buylap.Question;
 import com.example.buylap.bean.BeanAnswer;
 
 import com.example.buylap.model.QuizList;
 import com.example.buylap.view.TakeQuizActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TakeQuizGraphicController {
@@ -15,8 +14,9 @@ public class TakeQuizGraphicController {
     private TakeQuizActivity takeQuizActivity;      //<--- VIEW
     private List<QuizList> allQuestion;
     private QuizList quizList;
-
+    ArrayList<QuizList> listQuest;
     private BeanAnswer beanAnswer;
+    Question question;
     private int index;
 
     public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
@@ -25,6 +25,8 @@ public class TakeQuizGraphicController {
         this.index = 0;
 
         beanAnswer = new BeanAnswer();
+        question = new Question();
+        listQuest=question.sendQuestion();
         allQuestion = listQuest;
         quizList = listQuest.get(index);
     }

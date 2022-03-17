@@ -1,11 +1,10 @@
 package com.example.buylap.controller.graphic;
 
-import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.buylap.HostUser;
+import com.example.buylap.GuestSingleton;
 import com.example.buylap.R;
 import com.example.buylap.UserHolder;
 import com.example.buylap.view.CashbackFragment;
@@ -26,11 +25,12 @@ public class NavigationGraphicController {
     public Fragment selectTypeHomepage(){
         Fragment fragment;
         UserHolder userHolder = UserHolder.getInstance();
-        HostUser hostUser = HostUser.getINSTANCE();
+        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+
         if(userHolder.getUser() != null){
 
             fragment = new HomeFragment();
-        }else if(hostUser.getHost() =="guest"){ //con equals mi da exception
+        }else if(guestSingleton.getBeanGuest() != null){
 
             fragment = new HomeFragment();
         }else{
@@ -44,8 +44,8 @@ public class NavigationGraphicController {
         switch (item.getItemId()){
             case R.id.nav_home:
                 UserHolder userHolder = UserHolder.getInstance();
-                HostUser hostUser = HostUser.getINSTANCE();
-                if(userHolder.getUser() != null || hostUser.getHost() == "guest") {
+                GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+                if(userHolder.getUser() != null || guestSingleton.getBeanGuest() != null) {
                     fragment = new HomeFragment();
                 }else{
                     fragment = new SellerFragment();

@@ -43,23 +43,26 @@ public class LoginActivity extends AppCompatActivity {
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String type = loginGraphicController.selectTypeAccount(username.getText().toString(), password.getText().toString(), userRadio, sellerRadio);
-                if (type.equals("USER")) {
-                    try {
-                        loginGraphicController.signInUser();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential", Toast.LENGTH_SHORT).show();
-                    }
-                }else{
-                    try {
-                        loginGraphicController.signInSeller();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential", Toast.LENGTH_SHORT).show();
-                    }
+                String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
+                switch (type){
+                    case "USER":
+                        try {
+                            loginGraphicController.signInUser();
+                        } catch (SQLException throwables) {
+                            throwables.printStackTrace();
+                        } catch (DAOException e) {
+                            Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case "SELLER":
+                        try {
+                            loginGraphicController.signInSeller();
+                        } catch (SQLException throwables) {
+                            throwables.printStackTrace();
+                        } catch (DAOException e) {
+                            Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential @business", Toast.LENGTH_SHORT).show();
+                        }
+                        break;
 
                 }
             }

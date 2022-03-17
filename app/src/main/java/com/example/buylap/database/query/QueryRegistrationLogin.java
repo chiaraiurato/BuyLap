@@ -26,7 +26,7 @@ public class QueryRegistrationLogin {
     }
 
     public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
-        String query = "SELECT * FROM sellers WHERE username = '"+ beanSeller.getUsername()+"' AND password = '"+beanSeller.getPassword()+"';";
+        String query = "SELECT * FROM sellers WHERE businessname = '"+ beanSeller.getUsername()+"' AND password = '"+beanSeller.getPassword()+"';";
         return stmt.executeQuery(query);
     }
 }

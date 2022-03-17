@@ -2,14 +2,14 @@ package com.example.buylap;
 
 import com.example.buylap.bean.BeanSeller;
 
-public class SellerHolder {
+public final class SellerSingleton {
     private BeanSeller beanSeller;
 
-    private static final SellerHolder INSTANCE = new SellerHolder();
+    private static final SellerSingleton INSTANCE = new SellerSingleton();
 
-    private SellerHolder() {}
+    private SellerSingleton() {}
 
-    public static SellerHolder getInstance() {
+    public static SellerSingleton getInstance() {
         return INSTANCE;
     }
 

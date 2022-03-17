@@ -1,9 +1,9 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
-import android.widget.Toast;
 
-import com.example.buylap.HostUser;
+import com.example.buylap.GuestSingleton;
+import com.example.buylap.bean.BeanGuest;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
 
@@ -18,8 +18,10 @@ public class MainGraphicController {
    
     public void setHost(){
         Intent intent = new Intent(mainActivity, NavigationActivity.class);
-        HostUser hostUser = HostUser.getINSTANCE();
-        hostUser.setGuest("guest");
+        BeanGuest beanGuest = new BeanGuest();
+        beanGuest.setTmp("guest");
+        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+        guestSingleton.setBeanGuest(beanGuest);
         mainActivity.startActivity(intent);
     }
 

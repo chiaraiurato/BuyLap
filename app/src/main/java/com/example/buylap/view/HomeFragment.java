@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.buylap.Question;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.MostViewAdapter;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
-    public static ArrayList<QuizList> listQuest;
+
     private TextView accountName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,10 +34,6 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         homeGraphicController.initializeSession(view);
-        listQuest = new ArrayList<>();
-        listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
-        listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
-        listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
 
         takeQuiz = view.findViewById(R.id.takequiz);
         takeQuiz.setOnClickListener(new View.OnClickListener() {

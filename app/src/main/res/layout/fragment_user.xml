@@ -10,14 +10,15 @@
 
     <TextView
         android:id="@+id/Myaccount"
-        android:layout_width="319dp"
-        android:layout_height="52dp"
+        android:layout_width="222dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
         android:text="My account"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
 
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"

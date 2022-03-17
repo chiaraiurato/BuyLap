@@ -45,22 +45,26 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String type = registrationGraphicController.selectTypeAccount(username.getText().toString(), email.getText().toString(), password.getText().toString(), userRadio, sellerRadio);
-                if (type.equals("SELLER")) {
-                    try {
-                        registrationGraphicController.registerNewAccountSeller();
-                        Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                        startActivity(intent);
-                    } catch (DAOException e) {
-                        e.printStackTrace();
-                    }
-                }else{
-                    try {
-                        registrationGraphicController.registerNewAccountUser();
-                        Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                        startActivity(intent);
-                    } catch (DAOException e) {
-                        e.printStackTrace();
-                    }
+                switch (type){
+                    case "USER":
+                        try {
+                            registrationGraphicController.registerNewAccountUser();
+                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
+                            startActivity(intent);
+                        } catch (DAOException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case "SELLER":
+                        try {
+                            registrationGraphicController.registerNewAccountSeller();
+                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
+                            startActivity(intent);
+                        } catch (DAOException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    default:
                 }
             }
         });
