@@ -125,6 +125,7 @@ dependencies {
     implementation files('lib\\selenium-devtools-v85-4.1.2.jar')
     implementation files('lib\\selenium-json-4.1.2-sources.jar')
     implementation files('lib\\failureaccess-1.0.1.jar')
+    implementation 'junit:junit:4.12'
 
 
     testImplementation 'junit:junit:4.+'
