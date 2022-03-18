@@ -13,13 +13,13 @@ public class TestSelenium {
     }
 
     public static WebElement openDriver() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "app/src/androidTest/java/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/androidTest/java/driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.cpubenchmark.net/cpu_list.php");
         driver.findElement(By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[2]")).click();
         driver.findElement(By.xpath("//*[@id=\"autocomplete-list\"]")).sendKeys("I7-11700K");
         driver.findElement(By.xpath("//*[@id=\"main_content\"]/div[3]/div[1]/div/form/input[2]")).click();
-        WebElement txtbox = driver.findElement(By.xpath("//*[@id=\"cpu3896\"]/td[2]"));
+        WebElement txtbox = driver.findElement(By.xpath("//*[@id=\"cpu3896\"]/td[1]/a"));
       /*  Thread.sleep(15000);
         driver.findElement(By.xpath("//*[@id=\"autocomplete-list\"]")).sendKeys("AMD RYZEN 7 6800H");
         driver.findElement(By.xpath("//*[@id=\"main_content\"]/div[3]/div[1]/div/form/input[2]")).click();
