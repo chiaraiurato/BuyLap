@@ -10,12 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AnalyticsAdapter extends RecyclerView.Adapter<AnalyticsAdapter.ViewHolder> {
 
-    ArrayList<Analytics> analytics;
+    List<Analytics> analytics;
 
-    public AnalyticsAdapter(ArrayList<Analytics> analytics) {
+    public AnalyticsAdapter(List<Analytics> analytics) {
         this.analytics = analytics;
     }
 

@@ -1,1 +1,0 @@
-< 2javaX8hrAapp/src/main/java/com/example/buylap/view/QuizResultActivity.java

@@ -22,7 +22,7 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        this.navigationGraphicController = new NavigationGraphicController(this);
+        this.navigationGraphicController = new NavigationGraphicController();
 
         navigationView=findViewById(R.id.bottom_navigation);
 

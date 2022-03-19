@@ -1,9 +1,71 @@
 
-Mcom.example.buylap.view.RegistrationActivity#sendPassword()Ljava/lang/String;l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaP P("1*é
+ˆcom.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java
+ 
+()"1*ã
 1l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaQ Q("v
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ("­
+ª
 l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaQ Q(-
-""B0.
-,com.example.buylap.view.RegistrationActivity
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (
+%0java.lang.String"__concat*
+	SELECT * *	
+FROM É
+Æ
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (&
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+
+namejava.lang.String´
+±
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (,
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+ Å
+Â
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (,
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+WHERE category = 'Ì
+É
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (6
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+
+keywordjava.lang.Stringµ
+²
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (=
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+';¬
+©
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (>
+queryjava.lang.String"__id*
+
+%5java.lang.String±®
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ('
+%6java.sql.ResultSet"Gjava.sql.Statement#executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;*
+
+stmtjava.sql.Statement*
+
+queryjava.lang.String2 executeQuery(Ljava/lang/String;)"Š
+l
+bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ((
+
+%6java.sql.ResultSet:
+stmtjava.sql.Statement:
+namejava.lang.String:
+keywordjava.lang.StringB0".
+,com.example.buylap.database.query.QueryBuild

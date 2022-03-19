@@ -44,25 +44,22 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
-                switch (type){
-                    case "USER":
-                        try {
-                            loginGraphicController.signInUser();
-                        } catch (SQLException throwables) {
-                            throwables.printStackTrace();
-                        } catch (DAOException e) {
-                            Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
-                        }
-                        break;
-                    case "SELLER":
-                        try {
-                            loginGraphicController.signInSeller();
-                        } catch (SQLException throwables) {
-                            throwables.printStackTrace();
-                        } catch (DAOException e) {
-                            Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential @business", Toast.LENGTH_SHORT).show();
-                        }
-                        break;
+                if(type == "USER") {
+                    try {
+                        loginGraphicController.signInUser();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    } catch (DAOException e) {
+                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    try {
+                        loginGraphicController.signInSeller();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    } catch (DAOException e) {
+                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential @business", Toast.LENGTH_SHORT).show();
+                    }
 
                 }
             }

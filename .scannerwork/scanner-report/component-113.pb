@@ -1,1 +1,1 @@
-q 2xmlXÈhr+app/src/main/res/layout/activity_signup.xml
+q 2javaXhrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java

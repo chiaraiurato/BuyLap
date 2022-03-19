@@ -1,1 +1,0 @@
-@ 2javaX'hr;app/src/main/java/com/example/buylap/view/UserFragment.java

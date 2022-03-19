@@ -1,17 +1,16 @@
 package com.example.buylap.controller.graphic;
 
-import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.buylap.SellerSingleton;
+import com.example.buylap.singleton.SellerSingleton;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.UserHolder;
 import com.example.buylap.view.RegistrationActivity;
 
 public class RegistrationGraphicController {
@@ -35,7 +34,7 @@ public class RegistrationGraphicController {
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "SignUp success for User");
         }
-        UserHolder holder = UserHolder.getInstance();
+        UserSingleton holder = UserSingleton.getInstance();
         holder.setUser(beanUser);
 
     }

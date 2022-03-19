@@ -24,7 +24,6 @@ public class TakeQuizActivity extends AppCompatActivity {
     private CardView cardOp2;
     private CardView cardOp3;
     private Button nextBtn;
-    private TextView numberQuestion;
 
     private TakeQuizGraphicController takeQuizGraphicController;
 
@@ -109,7 +108,7 @@ public class TakeQuizActivity extends AppCompatActivity {
         choice(cardOp3, takeQuizGraphicController.getAnswer3());
     }
     public void setNumberQuestion(int index){
-        numberQuestion = findViewById(R.id.numberOfQuestion);
+        TextView numberQuestion = findViewById(R.id.numberOfQuestion);
 
         numberQuestion.setText(String.valueOf(index+2));
     }

@@ -1,0 +1,1 @@
+Ú 2xmlX?hr'app/src/main/res/layout/viewholder2.xml

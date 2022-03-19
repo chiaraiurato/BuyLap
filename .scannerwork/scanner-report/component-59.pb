@@ -1,1 +1,0 @@
-; 2javaX2hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java

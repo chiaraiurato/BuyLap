@@ -1,1 +1,1 @@
-x 2xmlX™hr)app/src/main/res/layout/fragment_user.xml
+x 2javaXThrVapp/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.java

@@ -1,1 +1,1 @@
-t 2xmlXvhr)app/src/main/res/layout/fragment_home.xml
+t 2javaXhrRapp/src/main/java/com/example/buylap/controller/graphic/MainGraphicController.java

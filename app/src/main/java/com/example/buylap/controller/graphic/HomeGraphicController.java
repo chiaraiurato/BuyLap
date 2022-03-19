@@ -4,16 +4,22 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
-import com.example.buylap.SellerSingleton;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.buylap.MostViewAdapter;
+import com.example.buylap.MostViewed;
+import com.example.buylap.singleton.SellerSingleton;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.utils.Data;
 import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.HomeController;
-import com.example.buylap.UserHolder;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.SellerFragment;
 
-import net.jodah.failsafe.internal.util.DelegatingExecutorService;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeGraphicController {
     HomeFragment homeFragment;
@@ -28,13 +34,18 @@ public class HomeGraphicController {
         this.homeController = new HomeController();
     }
 
+    public List<MostViewed> setAdapterMostView(){
+        Data data = new Data();
+        return data.sendMostView();
+
+    }
     public void initializeSession(View view){
-        UserHolder holder = UserHolder.getInstance();
-        BeanUser beanUser = holder.getUser();
+        UserSingleton userSingleton = UserSingleton.getInstance();
+        BeanUser beanUser = userSingleton.getUser();
         if(beanUser != null) {
             homeFragment.setUser(beanUser, view);
         }else{
-            Log.d("DEBUG", "hereGuestagain");
+            Log.d("DEBUG", "GUEST SESSION");
             homeFragment.setGuest(view);
         }
     }

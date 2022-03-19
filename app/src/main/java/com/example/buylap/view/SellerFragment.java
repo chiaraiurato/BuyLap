@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class SellerFragment extends Fragment {
 
     private TextView accountName;
-    private Button takeQuiz;
+
     public SellerFragment() {
         //Singleton
     }
@@ -35,7 +35,7 @@ public class SellerFragment extends Fragment {
         HomeGraphicController homeGraphicController = new HomeGraphicController(this);
         View view= inflater.inflate(R.layout.fragment_seller, container, false);
         accountName = view.findViewById(R.id.businessAccount);
-        takeQuiz = view.findViewById(R.id.takeQuiz);
+        Button takeQuiz = view.findViewById(R.id.takeQuiz);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

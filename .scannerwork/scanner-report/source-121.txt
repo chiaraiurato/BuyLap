@@ -1,55 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="end"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@drawable/edit_background"
-    android:backgroundTint="#282C4C"
-    android:elevation="3dp">
+package com.example.buylap.controller.graphic;
 
-    <ImageView
-        android:id="@+id/img_view"
+import android.content.Intent;
+import android.view.View;
+import android.widget.Toast;
 
-        android:layout_width="76dp"
-        android:layout_height="76dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_laptop_24" />
+import com.example.buylap.singleton.GuestSingleton;
+import com.example.buylap.singleton.SellerSingleton;
+import com.example.buylap.singleton.UserSingleton;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.view.MainActivity;
+import com.example.buylap.view.UserFragment;
 
-    <TextView
+public class UserFragmentGraphicController {
+    private UserFragment userFragment;
 
-        android:id="@+id/titleTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+    public UserFragmentGraphicController(UserFragment userFragment){
+        this.userFragment = userFragment;
+    }
+    public void initializeSession(View view){
+        UserSingleton holder = UserSingleton.getInstance();
+        BeanUser beanUser = holder.getUser();
+        if(beanUser != null) {
+            userFragment.setFragmentUser(beanUser, view);
+        }else{
+            userFragment.setFragmentGuest(view);
+        }
+    }
+    public void notifyGuest(View view){
+        Toast.makeText(view.getContext(), "You must be logged", Toast.LENGTH_SHORT).show();
+    }
+    public void onSignOut(){
+        UserSingleton userHolder = UserSingleton.getInstance();
+        userHolder.setUser(null);
+        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+        guestSingleton.setBeanGuest(null);
+        SellerSingleton sellerSingleton = SellerSingleton.getInstance();
+        sellerSingleton.setSeller(null);
 
-        android:gravity="start"
-        android:lines="2"
-        android:text="Title Component"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFF"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_view"
-        app:layout_constraintTop_toTopOf="@+id/img_view" />
+        Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
+        userFragment.startActivity(intent);
+    }
 
-    <TextView
-        android:id="@+id/subTitleTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Version Component"
-        android:textColor="#535986"
-        app:layout_constraintEnd_toEndOf="@+id/titleTxt"
-        app:layout_constraintStart_toStartOf="@+id/titleTxt"
-        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+}

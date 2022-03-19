@@ -1,17 +1,15 @@
 
-Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java ("1*¥
-1b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (»
-¸
-b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (
-%0java.lang.String"__id*4*2$
-"com.example.buylap.bean.BeanSeller"
-
-password"~
-b
-XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSeller.java (
-
-%0java.lang.StringB&$
-"com.example.buylap.bean.BeanSeller
+fcom.example.buylap.singleton.GuestSingleton#getINSTANCE()Lcom/example/buylap/singleton/GuestSingleton;k
+aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/singleton/GuestSingleton.java! (,"1*É
+1k
+aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/singleton/GuestSingleton.java (±
+®
+k
+aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/singleton/GuestSingleton.java (1
+%0+com.example.buylap.singleton.GuestSingleton"__id*
+"""¢
+k
+aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/singleton/GuestSingleton.java (3
+1
+%0+com.example.buylap.singleton.GuestSingletonB/"-
++com.example.buylap.singleton.GuestSingleton

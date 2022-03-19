@@ -1,1 +1,1 @@
-n 2xmlX©hr*app/src/main/res/layout/activity_login.xml
+n 2javaX+hrPapp/src/main/java/com/example/buylap/controller/applicative/LoginController.java

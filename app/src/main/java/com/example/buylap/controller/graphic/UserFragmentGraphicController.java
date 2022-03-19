@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.buylap.GuestSingleton;
-import com.example.buylap.SellerSingleton;
-import com.example.buylap.UserHolder;
+import com.example.buylap.singleton.GuestSingleton;
+import com.example.buylap.singleton.SellerSingleton;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.UserFragment;
@@ -18,7 +18,7 @@ public class UserFragmentGraphicController {
         this.userFragment = userFragment;
     }
     public void initializeSession(View view){
-        UserHolder holder = UserHolder.getInstance();
+        UserSingleton holder = UserSingleton.getInstance();
         BeanUser beanUser = holder.getUser();
         if(beanUser != null) {
             userFragment.setFragmentUser(beanUser, view);
@@ -30,7 +30,7 @@ public class UserFragmentGraphicController {
         Toast.makeText(view.getContext(), "You must be logged", Toast.LENGTH_SHORT).show();
     }
     public void onSignOut(){
-        UserHolder userHolder = UserHolder.getInstance();
+        UserSingleton userHolder = UserSingleton.getInstance();
         userHolder.setUser(null);
         GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
         guestSingleton.setBeanGuest(null);

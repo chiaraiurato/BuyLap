@@ -1,0 +1,1 @@
+² 2xmlXhr+app/src/main/res/drawable/item_selector.xml

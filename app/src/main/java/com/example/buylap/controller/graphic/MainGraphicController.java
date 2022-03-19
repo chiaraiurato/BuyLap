@@ -2,7 +2,7 @@ package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
 
-import com.example.buylap.GuestSingleton;
+import com.example.buylap.singleton.GuestSingleton;
 import com.example.buylap.bean.BeanGuest;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;

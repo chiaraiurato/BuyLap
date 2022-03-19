@@ -1,1 +1,1 @@
-d 2xmlX#hr8app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+d 2javaXhr3app/src/main/java/com/example/buylap/Analytics.java

@@ -1,16 +1,17 @@
 
-<com.example.buylap.Category#getSubtitles()Ljava/lang/String;[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*Š
-1[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (®
-«
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
-%0java.lang.String"__id*.*,
-com.example.buylap.Category"
-	subtitles"w
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
+=com.example.buylap.MostViewed#getSubtitle()Ljava/lang/String;]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java ("1*‘
+1]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (±
+®
+]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
+%0java.lang.String"__id*/*-
+com.example.buylap.MostViewed"
+
+subtitle"y
+]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
 
-%0java.lang.StringB
-com.example.buylap.Category
+%0java.lang.StringB!
+com.example.buylap.MostViewed

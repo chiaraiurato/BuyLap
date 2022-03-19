@@ -16,30 +16,17 @@ getClass(),java.lang.Object#getClass()Ljava/lang/Class;5
 notifyAll()java.lang.Object#notifyAll()V"
 wait()java.lang.Object#wait()V*
 
-hashCode()java.lang.Object#hashCode()Iõ
-"com.example.buylap.bean.BeanAnswerjava.lang.ObjectQ
-getAnswer2()Acom.example.buylap.bean.BeanAnswer#getAnswer2()Ljava/lang/String;d
-setAnswer2(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer2(Ljava/lang/String;)VQ
-getAnswer1()Acom.example.buylap.bean.BeanAnswer#getAnswer1()Ljava/lang/String;8
-<init>(),com.example.buylap.bean.BeanAnswer#<init>()Vd
-setAnswer3(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)Vd
-setAnswer1(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer1(Ljava/lang/String;)VQ
-getAnswer3()Acom.example.buylap.bean.BeanAnswer#getAnswer3()Ljava/lang/String;
-	ModelUserjava.lang.Objectø
+hashCode()java.lang.Object#hashCode()I
+	ModelUserjava.lang.ObjectÊ
 *com.example.buylap.model.users.ModelSeller	ModelUser¨
-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)jcom.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vt
-"setCompanyName(Ljava/lang/String;)Ncom.example.buylap.model.users.ModelSeller#setCompanyName(Ljava/lang/String;)Va
-getCompanyName()Mcom.example.buylap.model.users.ModelSeller#getCompanyName()Ljava/lang/String;
-Fragmentjava.lang.Objectl
-$com.example.buylap.view.UserFragmentFragment:
-<init>().com.example.buylap.view.UserFragment#<init>()V(
-View.OnClickListenerjava.lang.ObjectB
-*Lcom/example/buylap/view/UserFragment$755;View.OnClickListenerö
+><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)jcom.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÓ
+com.example.buylap.TestExamplejava.lang.ObjectD
+anotherExample()0com.example.buylap.TestExample#anotherExample()V4
+<init>()(com.example.buylap.TestExample#<init>()V>
+TestExample()-com.example.buylap.TestExample#TestExample()Vö
 (com.example.buylap.database.dao.DAObuildjava.lang.Objectõ
 1selectBuild(Ljava/lang/String;Ljava/lang/String;)fcom.example.buylap.database.dao.DAObuild#selectBuild(Ljava/lang/String;Ljava/lang/String;)LModelBuild;>
-<init>()2com.example.buylap.database.dao.DAObuild#<init>()Vz
-'com.example.buylap.database.dao.DAOuserjava.lang.Object=
-<init>()1com.example.buylap.database.dao.DAOuser#<init>()V¸
+<init>()2com.example.buylap.database.dao.DAObuild#<init>()V¸
 #com.example.buylap.model.ModelBuildjava.lang.Object_
 setName(Ljava/lang/String;)@com.example.buylap.model.ModelBuild#setName(Ljava/lang/String;)VL
 	getName()?com.example.buylap.model.ModelBuild#getName()Ljava/lang/String;•
@@ -47,9 +34,7 @@ $com.example.buylap.view.UserFragmentFragment:
 getSubtitles()Dcom.example.buylap.model.ModelBuild#getSubtitles()Ljava/lang/String;i
  setSubtitles(Ljava/lang/String;)Ecom.example.buylap.model.ModelBuild#setSubtitles(Ljava/lang/String;)VJ
 getUrl()>com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;]
-setUrl(Ljava/lang/String;)?com.example.buylap.model.ModelBuild#setUrl(Ljava/lang/String;)V®
->com.example.buylap.controller.applicative.NavigationControllerjava.lang.ObjectT
-<init>()Hcom.example.buylap.controller.applicative.NavigationController#<init>()V˜
+setUrl(Ljava/lang/String;)?com.example.buylap.model.ModelBuild#setUrl(Ljava/lang/String;)V˜
 Acom.example.buylap.controller.graphic.QuizResultGraphicControllerjava.lang.Object‹
 @setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ócom.example.buylap.controller.graphic.QuizResultGraphicController#setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;W
 <init>()Kcom.example.buylap.controller.graphic.QuizResultGraphicController#<init>()Vh
@@ -317,7 +302,8 @@ valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
 checkIndex(II) java.lang.String#checkIndex(II)VX
 !<init>(Ljava/lang/StringBuilder;)3java.lang.String#<init>(Ljava/lang/StringBuilder;)V%
 value()java.lang.String#value()[B`
-%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Z+
+%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Z(
+View.OnClickListenerjava.lang.Object+
 RecyclerView.ViewHolderjava.lang.Object^
 -com.example.buylap.CategoryAdapter$ViewHolderView.OnClickListenerRecyclerView.ViewHolderD
 0com.example.buylap.CategoryAdapter$OnCatListenerjava.lang.Object¿
@@ -336,16 +322,12 @@ getTitle()8com.example.buylap.Category#getTitle()Ljava/lang/String;ù
 <init>()6com.example.buylap.view.RegistrationActivity#<init>()V_
 sendUsername()Mcom.example.buylap.view.RegistrationActivity#sendUsername()Ljava/lang/String;Y
 sendEmail()Jcom.example.buylap.view.RegistrationActivity#sendEmail()Ljava/lang/String;K
-3Lcom/example/buylap/view/RegistrationActivity$1380;View.OnClickListenerK
-3Lcom/example/buylap/view/RegistrationActivity$1664;View.OnClickListenerô
+3Lcom/example/buylap/view/RegistrationActivity$1378;View.OnClickListenerK
+3Lcom/example/buylap/view/RegistrationActivity$1662;View.OnClickListenerô
 >com.example.buylap.controller.applicative.QuizResultControllerjava.lang.ObjectT
 <init>()Hcom.example.buylap.controller.applicative.QuizResultController#<init>()V⁄
 EgetBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)êcom.example.buylap.controller.applicative.QuizResultController#getBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)LBeanAnswer;ë
-createBuild(Ljava/lang/String;)ncom.example.buylap.controller.applicative.QuizResultController#createBuild(Ljava/lang/String;)Ljava/util/List;É
-com.example.buylap.UserHolderjava.lang.Object>
-	getUser()1com.example.buylap.UserHolder#getUser()LBeanUser;3
-<init>()'com.example.buylap.UserHolder#<init>()V[
-getInstance()Jcom.example.buylap.UserHolder#getInstance()Lcom/example/buylap/UserHolder;Ã
+createBuild(Ljava/lang/String;)ncom.example.buylap.controller.applicative.QuizResultController#createBuild(Ljava/lang/String;)Ljava/util/List;Ã
 com.example.buylap.MostViewedjava.lang.ObjectH
 
 getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
@@ -354,19 +336,10 @@ getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
 setSubtitle(Ljava/lang/String;)>com.example.buylap.MostViewed#setSubtitle(Ljava/lang/String;)VD
 getUrl()8com.example.buylap.MostViewed#getUrl()Ljava/lang/String;[
 setTitle(Ljava/lang/String;);com.example.buylap.MostViewed#setTitle(Ljava/lang/String;)VW
-setUrl(Ljava/lang/String;)9com.example.buylap.MostViewed#setUrl(Ljava/lang/String;)V∏
-(com.example.buylap.model.users.ModelUserjava.lang.Objectl
-setPassword(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setPassword(Ljava/lang/String;)Vf
-setEmail(Ljava/lang/String;)Fcom.example.buylap.model.users.ModelUser#setEmail(Ljava/lang/String;)VY
-getPassword()Hcom.example.buylap.model.users.ModelUser#getPassword()Ljava/lang/String;™
-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)hcom.example.buylap.model.users.ModelUser#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VY
-getUsername()Hcom.example.buylap.model.users.ModelUser#getUsername()Ljava/lang/String;S
-
-getEmail()Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;l
-setUsername(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setUsername(Ljava/lang/String;)V€
-,com.example.buylap.database.Query.QueryBuildjava.lang.ObjectB
-<init>()6com.example.buylap.database.Query.QueryBuild#<init>()V‘
-GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.example.buylap.database.Query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;$
+setUrl(Ljava/lang/String;)9com.example.buylap.MostViewed#setUrl(Ljava/lang/String;)V€
+,com.example.buylap.database.query.QueryBuildjava.lang.ObjectB
+<init>()6com.example.buylap.database.query.QueryBuild#<init>()V‘
+GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;$
 java.sql.Wrapperjava.lang.Object+
 java.lang.AutoCloseablejava.lang.Object⁄	
 java.sql.Statementjava.sql.Wrapperjava.lang.Objectjava.lang.AutoCloseablef
@@ -381,27 +354,20 @@ GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.e
 executeLargeBatch()(java.sql.Statement#executeLargeBatch()[Jm
 "enquoteLiteral(Ljava/lang/String;)Gjava.sql.Statement#enquoteLiteral(Ljava/lang/String;)Ljava/lang/String;<
 setLargeMaxRows(J)&java.sql.Statement#setLargeMaxRows(J)Vu
-&enquoteIdentifier(Ljava/lang/String;Z)Kjava.sql.Statement#enquoteIdentifier(Ljava/lang/String;Z)Ljava/lang/String;å
-<com.example.buylap.controller.graphic.LoginGraphicControllerjava.lang.Objectf
-goToRegistration()Pcom.example.buylap.controller.graphic.LoginGraphicController#goToRegistration()VR
-signIn()Fcom.example.buylap.controller.graphic.LoginGraphicController#signIn()Vﬂ
+&enquoteIdentifier(Ljava/lang/String;Z)Kjava.sql.Statement#enquoteIdentifier(Ljava/lang/String;Z)Ljava/lang/String;∑
 (com.example.buylap.view.TakeQuizActivityAppCompatActivityb
 setOp3(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp3(Ljava/lang/String;)Vb
-setOp1(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp1(Ljava/lang/String;)V>
+setOp1(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp1(Ljava/lang/String;)VV
+setNumberQuestion(I)>com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V>
 <init>()2com.example.buylap.view.TakeQuizActivity#<init>()Vb
 setOp2(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp2(Ljava/lang/String;)VF
 resetColor()6com.example.buylap.view.TakeQuizActivity#resetColor()Vl
 setQuestion(Ljava/lang/String;)Icom.example.buylap.view.TakeQuizActivity#setQuestion(Ljava/lang/String;)VG
-/Lcom/example/buylap/view/TakeQuizActivity$2585;View.OnClickListener–
+/Lcom/example/buylap/view/TakeQuizActivity$2637;View.OnClickListenerê
 *com.example.buylap.ExampleInstrumentedTestjava.lang.Object@
-<init>()4com.example.buylap.ExampleInstrumentedTest#<init>()VN
-useAppContext();com.example.buylap.ExampleInstrumentedTest#useAppContext()V§
-<com.example.buylap.controller.applicative.TakeQuizControllerjava.lang.ObjectR
-<init>()Fcom.example.buylap.controller.applicative.TakeQuizController#<init>()Vt
-(com.example.buylap.view.CashbackFragmentFragment>
-<init>()2com.example.buylap.view.CashbackFragment#<init>()Vû
-9com.example.buylap.controller.applicative.LoginControllerjava.lang.ObjectO
-<init>()Ccom.example.buylap.controller.applicative.LoginController#<init>()VØ
+<init>()4com.example.buylap.ExampleInstrumentedTest#<init>()V>
+prova()3com.example.buylap.ExampleInstrumentedTest#prova()VN
+useAppContext();com.example.buylap.ExampleInstrumentedTest#useAppContext()VØ
 !com.example.buylap.model.QuizListjava.lang.Object[
 setOp3(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp3(Ljava/lang/String;)V[
 setOp1(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)VH
@@ -411,15 +377,7 @@ GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.e
 setOp2(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp2(Ljava/lang/String;)V«
 P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)scom.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ve
 setQuestion(Ljava/lang/String;)Bcom.example.buylap.model.QuizList#setQuestion(Ljava/lang/String;)VR
-getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;ˇ
-!com.example.buylap.bean.BeanBuildjava.lang.Object]
-setName(Ljava/lang/String;)>com.example.buylap.bean.BeanBuild#setName(Ljava/lang/String;)VJ
-	getName()=com.example.buylap.bean.BeanBuild#getName()Ljava/lang/String;7
-<init>()+com.example.buylap.bean.BeanBuild#<init>()VT
-getSubtitles()Bcom.example.buylap.bean.BeanBuild#getSubtitles()Ljava/lang/String;g
- setSubtitles(Ljava/lang/String;)Ccom.example.buylap.bean.BeanBuild#setSubtitles(Ljava/lang/String;)VH
-getUrl()<com.example.buylap.bean.BeanBuild#getUrl()Ljava/lang/String;[
-setUrl(Ljava/lang/String;)=com.example.buylap.bean.BeanBuild#setUrl(Ljava/lang/String;)V√
+getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;√
 java.lang.Throwablejava.lang.Objectjava.io.Serializable;
 printStackTrace()&java.lang.Throwable#printStackTrace()VZ
 getOurStackTrace()Djava.lang.Throwable#getOurStackTrace()[Ljava/lang/StackTraceElement;¡
@@ -454,8 +412,124 @@ getCause()3java.lang.Throwable#getCause()Ljava/lang/Throwable;e
 1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Fjava.lang.Exception#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VS
 <init>(Ljava/lang/Throwable;)2java.lang.Exception#<init>(Ljava/lang/Throwable;)Vß
 *com.example.buylap.exceptions.DAOExceptionjava.lang.Exceptiond
-<init>(Ljava/lang/String;)Fcom.example.buylap.exceptions.DAOException#<init>(Ljava/lang/String;)VU
-Acom.example.buylap.controller.graphic.HomeSellerGraphicControllerjava.lang.Objectã
+<init>(Ljava/lang/String;)Fcom.example.buylap.exceptions.DAOException#<init>(Ljava/lang/String;)Vƒ
+*com.example.buylap.singleton.UserSingletonjava.lang.ObjectK
+	getUser()>com.example.buylap.singleton.UserSingleton#getUser()LBeanUser;@
+<init>()4com.example.buylap.singleton.UserSingleton#<init>()Vu
+getInstance()dcom.example.buylap.singleton.UserSingleton#getInstance()Lcom/example/buylap/singleton/UserSingleton;—
+Ccom.example.buylap.controller.graphic.RegistrationGraphicControllerjava.lang.Objecty
+registerNewAccountUser()]com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountUser()V}
+registerNewAccountSeller()_com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountSeller()Vî	
+java.lang.Booleanjava.lang.Comparablejava.lang.Objectjava.io.Serializable_
+valueOf(Ljava/lang/String;)@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;W
+ parseBoolean(Ljava/lang/String;)3java.lang.Boolean#parseBoolean(Ljava/lang/String;)ZK
+equals(Ljava/lang/Object;)-java.lang.Boolean#equals(Ljava/lang/Object;)Z3
+booleanValue()!java.lang.Boolean#booleanValue()Z<
+
+toString().java.lang.Boolean#toString()Ljava/lang/String;>
+toString(Z)/java.lang.Boolean#toString(Z)Ljava/lang/String;=
+
+valueOf(Z)/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;1
+logicalOr(ZZ) java.lang.Boolean#logicalOr(ZZ)Z+
+
+hashCode()java.lang.Boolean#hashCode()I3
+logicalXor(ZZ)!java.lang.Boolean#logicalXor(ZZ)Z-
+compare(ZZ)java.lang.Boolean#compare(ZZ)I-
+hashCode(Z)java.lang.Boolean#hashCode(Z)I3
+logicalAnd(ZZ)!java.lang.Boolean#logicalAnd(ZZ)ZS
+compareTo(Ljava/lang/Boolean;)1java.lang.Boolean#compareTo(Ljava/lang/Boolean;)IK
+<init>(Ljava/lang/String;)-java.lang.Boolean#<init>(Ljava/lang/String;)V)
+	<init>(Z)java.lang.Boolean#<init>(Z)VS
+getBoolean(Ljava/lang/String;)1java.lang.Boolean#getBoolean(Ljava/lang/String;)Zœ
+Acom.example.buylap.controller.graphic.NavigationGraphicControllerjava.lang.Objectx
+selectTypeHomepage()`com.example.buylap.controller.graphic.NavigationGraphicController#selectTypeHomepage()LFragment;ú
+8com.example.buylap.controller.applicative.HomeControllerjava.lang.ObjectN
+<init>()Bcom.example.buylap.controller.applicative.HomeController#<init>()V§
+;com.example.buylap.controller.graphic.MainGraphicControllerjava.lang.ObjectS
+	setHost()Fcom.example.buylap.controller.graphic.MainGraphicController#setHost()Vú
+8com.example.buylap.database.query.QueryRegistrationLoginjava.lang.ObjectN
+<init>()Bcom.example.buylap.database.query.QueryRegistrationLogin#<init>()V•
+com.example.buylap.Analyticsjava.lang.ObjectV
+<init>(Ljava/lang/String;)8com.example.buylap.Analytics#<init>(Ljava/lang/String;)VC
+getUrl()7com.example.buylap.Analytics#getUrl()Ljava/lang/String;V
+setUrl(Ljava/lang/String;)8com.example.buylap.Analytics#setUrl(Ljava/lang/String;)V
+Fragmentjava.lang.Objectp
+&com.example.buylap.view.SellerFragmentFragment<
+<init>()0com.example.buylap.view.SellerFragment#<init>()VE
+-Lcom/example/buylap/view/SellerFragment$1253;View.OnClickListener≠
+;com.example.buylap.controller.graphic.HomeGraphicControllerjava.lang.Object]
+goToTakeQuiz()Kcom.example.buylap.controller.graphic.HomeGraphicController#goToTakeQuiz()V}
+setAdapterMostView()ecom.example.buylap.controller.graphic.HomeGraphicController#setAdapterMostView()Ljava/util/ArrayList;~
+)com.example.buylap.database.dao.DAOsellerjava.lang.Object?
+<init>()3com.example.buylap.database.dao.DAOseller#<init>()V´
+%com.example.buylap.view.LoginActivityAppCompatActivityX
+sendPassword()Fcom.example.buylap.view.LoginActivity#sendPassword()Ljava/lang/String;;
+<init>()/com.example.buylap.view.LoginActivity#<init>()VX
+sendUsername()Fcom.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;D
+,Lcom/example/buylap/view/LoginActivity$1308;View.OnClickListenerD
+,Lcom/example/buylap/view/LoginActivity$1523;View.OnClickListener∏
+Ccom.example.buylap.controller.graphic.UserFragmentGraphicControllerjava.lang.Object_
+onSignOut()Pcom.example.buylap.controller.graphic.UserFragmentGraphicController#onSignOut()V´
+"com.example.buylap.MostViewAdapterjava.lang.Object¨
+BonBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)fcom.example.buylap.MostViewAdapter#onBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)VD
+getItemCount()2com.example.buylap.MostViewAdapter#getItemCount()IH
+-com.example.buylap.MostViewAdapter$ViewHolderRecyclerView.ViewHolderõ
+"com.example.buylap.bean.BeanAnswerjava.lang.ObjectQ
+getAnswer2()Acom.example.buylap.bean.BeanAnswer#getAnswer2()Ljava/lang/String;d
+setAnswer2(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer2(Ljava/lang/String;)VQ
+getAnswer1()Acom.example.buylap.bean.BeanAnswer#getAnswer1()Ljava/lang/String;8
+<init>(),com.example.buylap.bean.BeanAnswer#<init>()Vd
+setAnswer3(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)Vd
+setAnswer1(Ljava/lang/String;)Bcom.example.buylap.bean.BeanAnswer#setAnswer1(Ljava/lang/String;)VQ
+getAnswer3()Acom.example.buylap.bean.BeanAnswer#getAnswer3()Ljava/lang/String;‘
+,com.example.buylap.singleton.SellerSingletonjava.lang.ObjectB
+<init>()6com.example.buylap.singleton.SellerSingleton#<init>()VS
+getSeller()Dcom.example.buylap.singleton.SellerSingleton#getSeller()LBeanSeller;y
+getInstance()hcom.example.buylap.singleton.SellerSingleton#getInstance()Lcom/example/buylap/singleton/SellerSingleton;l
+$com.example.buylap.view.UserFragmentFragment:
+<init>().com.example.buylap.view.UserFragment#<init>()VC
++Lcom/example/buylap/view/UserFragment$1268;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$1619;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$1892;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$2168;View.OnClickListenerz
+'com.example.buylap.database.dao.DAOuserjava.lang.Object=
+<init>()1com.example.buylap.database.dao.DAOuser#<init>()Vê
+com.example.buylap.utils.Datajava.lang.ObjectS
+sendMostView()Acom.example.buylap.utils.Data#sendMostView()Ljava/util/ArrayList;3
+<init>()'com.example.buylap.utils.Data#<init>()VS
+sendQuestion()Acom.example.buylap.utils.Data#sendQuestion()Ljava/util/ArrayList;∏
+(com.example.buylap.model.users.ModelUserjava.lang.Objectl
+setPassword(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setPassword(Ljava/lang/String;)Vf
+setEmail(Ljava/lang/String;)Fcom.example.buylap.model.users.ModelUser#setEmail(Ljava/lang/String;)VY
+getPassword()Hcom.example.buylap.model.users.ModelUser#getPassword()Ljava/lang/String;™
+><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)hcom.example.buylap.model.users.ModelUser#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VY
+getUsername()Hcom.example.buylap.model.users.ModelUser#getUsername()Ljava/lang/String;S
+
+getEmail()Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;l
+setUsername(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setUsername(Ljava/lang/String;)VÙ
+<com.example.buylap.controller.graphic.LoginGraphicControllerjava.lang.Objectf
+goToRegistration()Pcom.example.buylap.controller.graphic.LoginGraphicController#goToRegistration()V^
+signInSeller()Lcom.example.buylap.controller.graphic.LoginGraphicController#signInSeller()VZ
+signInUser()Jcom.example.buylap.controller.graphic.LoginGraphicController#signInUser()V§
+<com.example.buylap.controller.applicative.TakeQuizControllerjava.lang.ObjectR
+<init>()Fcom.example.buylap.controller.applicative.TakeQuizController#<init>()Vt
+(com.example.buylap.view.CashbackFragmentFragment>
+<init>()2com.example.buylap.view.CashbackFragment#<init>()Vû
+9com.example.buylap.controller.applicative.LoginControllerjava.lang.ObjectO
+<init>()Ccom.example.buylap.controller.applicative.LoginController#<init>()Vì
+!com.example.buylap.bean.BeanBuildjava.lang.ObjectL
+
+getTitle()>com.example.buylap.bean.BeanBuild#getTitle()Ljava/lang/String;c
+setUrlEbay(Ljava/lang/String;)Acom.example.buylap.bean.BeanBuild#setUrlEbay(Ljava/lang/String;)VP
+getUrlEbay()@com.example.buylap.bean.BeanBuild#getUrlEbay()Ljava/lang/String;7
+<init>()+com.example.buylap.bean.BeanBuild#<init>()VT
+getSubtitles()Bcom.example.buylap.bean.BeanBuild#getSubtitles()Ljava/lang/String;g
+ setSubtitles(Ljava/lang/String;)Ccom.example.buylap.bean.BeanBuild#setSubtitles(Ljava/lang/String;)V_
+setTitle(Ljava/lang/String;)?com.example.buylap.bean.BeanBuild#setTitle(Ljava/lang/String;)V’
+test.TestSeleniumjava.lang.Object:
+openDriver()*test.TestSelenium#openDriver()LWebElement;'
+<init>()test.TestSelenium#<init>()VI
+main([Ljava/lang/String;),test.TestSelenium#main([Ljava/lang/String;)Vã
  com.example.buylap.bean.BeanUserjava.lang.Objectd
 setPassword(Ljava/lang/String;)Acom.example.buylap.bean.BeanUser#setPassword(Ljava/lang/String;)V^
 setEmail(Ljava/lang/String;)>com.example.buylap.bean.BeanUser#setEmail(Ljava/lang/String;)VQ
@@ -669,93 +743,57 @@ iterator()4java.sql.SQLException#iterator()Ljava/util/Iterator;u
 /<init>(Ljava/lang/String;Ljava/lang/Throwable;)Fjava.sql.SQLException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vs
 ,<init>(Ljava/lang/String;Ljava/lang/String;)Cjava.sql.SQLException#<init>(Ljava/lang/String;Ljava/lang/String;)VU
 getNextException()?java.sql.SQLException#getNextException()Ljava/sql/SQLException;U
-<init>(Ljava/lang/Throwable;)4java.sql.SQLException#<init>(Ljava/lang/Throwable;)V—
-Ccom.example.buylap.controller.graphic.RegistrationGraphicControllerjava.lang.Objecty
-registerNewAccountUser()]com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountUser()V}
-registerNewAccountSeller()_com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountSeller()Vî	
-java.lang.Booleanjava.lang.Comparablejava.lang.Objectjava.io.Serializable_
-valueOf(Ljava/lang/String;)@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;W
- parseBoolean(Ljava/lang/String;)3java.lang.Boolean#parseBoolean(Ljava/lang/String;)ZK
-equals(Ljava/lang/Object;)-java.lang.Boolean#equals(Ljava/lang/Object;)Z3
-booleanValue()!java.lang.Boolean#booleanValue()Z<
-
-toString().java.lang.Boolean#toString()Ljava/lang/String;>
-toString(Z)/java.lang.Boolean#toString(Z)Ljava/lang/String;=
-
-valueOf(Z)/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;1
-logicalOr(ZZ) java.lang.Boolean#logicalOr(ZZ)Z+
-
-hashCode()java.lang.Boolean#hashCode()I3
-logicalXor(ZZ)!java.lang.Boolean#logicalXor(ZZ)Z-
-compare(ZZ)java.lang.Boolean#compare(ZZ)I-
-hashCode(Z)java.lang.Boolean#hashCode(Z)I3
-logicalAnd(ZZ)!java.lang.Boolean#logicalAnd(ZZ)ZS
-compareTo(Ljava/lang/Boolean;)1java.lang.Boolean#compareTo(Ljava/lang/Boolean;)IK
-<init>(Ljava/lang/String;)-java.lang.Boolean#<init>(Ljava/lang/String;)V)
-	<init>(Z)java.lang.Boolean#<init>(Z)VS
-getBoolean(Ljava/lang/String;)1java.lang.Boolean#getBoolean(Ljava/lang/String;)Zu
+<init>(Ljava/lang/Throwable;)4java.sql.SQLException#<init>(Ljava/lang/Throwable;)Vï
+!com.example.buylap.bean.BeanGuestjava.lang.ObjectH
+getTmp()<com.example.buylap.bean.BeanGuest#getTmp()Ljava/lang/String;7
+<init>()+com.example.buylap.bean.BeanGuest#<init>()V[
+setTmp(Ljava/lang/String;)=com.example.buylap.bean.BeanGuest#setTmp(Ljava/lang/String;)Vu
 $com.example.buylap.view.MainActivityAppCompatActivity:
 <init>().com.example.buylap.view.MainActivity#<init>()VB
-*Lcom/example/buylap/view/MainActivity$747;View.OnClickListenerC
-+Lcom/example/buylap/view/MainActivity$1035;View.OnClickListenerC
-+Lcom/example/buylap/view/MainActivity$1315;View.OnClickListener¨
+*Lcom/example/buylap/view/MainActivity$941;View.OnClickListenerC
++Lcom/example/buylap/view/MainActivity$1229;View.OnClickListenerC
++Lcom/example/buylap/view/MainActivity$1509;View.OnClickListener¨
 @com.example.buylap.controller.applicative.RegistrationControllerjava.lang.ObjectV
-<init>()Jcom.example.buylap.controller.applicative.RegistrationController#<init>()Vú
-8com.example.buylap.database.Query.QueryRegistrationLoginjava.lang.ObjectN
-<init>()Bcom.example.buylap.database.Query.QueryRegistrationLogin#<init>()V1
+<init>()Jcom.example.buylap.controller.applicative.RegistrationController#<init>()V1
 CategoryAdapter.OnCatListenerjava.lang.ObjectÏ
 *com.example.buylap.view.QuizResultActivityCategoryAdapter.OnCatListenerAppCompatActivityJ
 onCatClick(I)9com.example.buylap.view.QuizResultActivity#onCatClick(I)V@
 <init>()4com.example.buylap.view.QuizResultActivity#<init>()VI
-1Lcom/example/buylap/view/QuizResultActivity$1688;View.OnClickListener≈
-Acom.example.buylap.controller.graphic.NavigationGraphicControllerjava.lang.Objectn
-choiceAccount()[com.example.buylap.controller.graphic.NavigationGraphicController#choiceAccount()LFragment;ú
-8com.example.buylap.controller.applicative.HomeControllerjava.lang.ObjectN
-<init>()Bcom.example.buylap.controller.applicative.HomeController#<init>()Vl
+1Lcom/example/buylap/view/QuizResultActivity$1717;View.OnClickListenerl
 $com.example.buylap.view.HomeFragmentFragment:
 <init>().com.example.buylap.view.HomeFragment#<init>()VC
-+Lcom/example/buylap/view/HomeFragment$1704;View.OnClickListener•
-com.example.buylap.Analyticsjava.lang.ObjectV
-<init>(Ljava/lang/String;)8com.example.buylap.Analytics#<init>(Ljava/lang/String;)VC
-getUrl()7com.example.buylap.Analytics#getUrl()Ljava/lang/String;V
-setUrl(Ljava/lang/String;)8com.example.buylap.Analytics#setUrl(Ljava/lang/String;)V˜
++Lcom/example/buylap/view/HomeFragment$1217;View.OnClickListenery
+&com.example.buylap.view.BudgetActivityAppCompatActivity<
+<init>()0com.example.buylap.view.BudgetActivity#<init>()V3
+SeekBar.OnSeekBarChangeListenerjava.lang.ObjectO
+,Lcom/example/buylap/view/BudgetActivity$737;SeekBar.OnSeekBarChangeListenerE
+-Lcom/example/buylap/view/BudgetActivity$1218;View.OnClickListener˜
 ?com.example.buylap.controller.graphic.TakeQuizGraphicControllerjava.lang.Objectn
 getAnswer2()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer2()Ljava/lang/String;n
 getAnswer1()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;y
 goNext(Ljava/lang/String;)[com.example.buylap.controller.graphic.TakeQuizGraphicController#goNext(Ljava/lang/String;)VW
 	setQuiz()Jcom.example.buylap.controller.graphic.TakeQuizGraphicController#setQuiz()Vn
-getAnswer3()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer3()Ljava/lang/String;p
-&com.example.buylap.view.SellerFragmentFragment<
-<init>()0com.example.buylap.view.SellerFragment#<init>()VO
-;com.example.buylap.controller.graphic.HomeGraphicControllerjava.lang.ObjectÅ
+getAnswer3()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer3()Ljava/lang/String;Å
 *com.example.buylap.view.NavigationActivityAppCompatActivity@
 <init>()4com.example.buylap.view.NavigationActivity#<init>()V<
 (NavigationBarView.OnItemSelectedListenerjava.lang.Object]
-1Lcom/example/buylap/view/NavigationActivity$1343;(NavigationBarView.OnItemSelectedListener∞
+1Lcom/example/buylap/view/NavigationActivity$1348;(NavigationBarView.OnItemSelectedListener∞
 #com.example.buylap.AnalyticsAdapterjava.lang.ObjectØ
 ConBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)hcom.example.buylap.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)VE
 getItemCount()3com.example.buylap.AnalyticsAdapter#getItemCount()II
-.com.example.buylap.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolder~
-)com.example.buylap.database.dao.DAOsellerjava.lang.Object?
-<init>()3com.example.buylap.database.dao.DAOseller#<init>()Vì
-com.example.buylap.SellerHolderjava.lang.Object5
-<init>())com.example.buylap.SellerHolder#<init>()VF
-getSeller()7com.example.buylap.SellerHolder#getSeller()LBeanSeller;_
-getInstance()Ncom.example.buylap.SellerHolder#getInstance()Lcom/example/buylap/SellerHolder;´
-%com.example.buylap.view.LoginActivityAppCompatActivityX
-sendPassword()Fcom.example.buylap.view.LoginActivity#sendPassword()Ljava/lang/String;;
-<init>()/com.example.buylap.view.LoginActivity#<init>()VX
-sendUsername()Fcom.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;D
-,Lcom/example/buylap/view/LoginActivity$1056;View.OnClickListenerD
-,Lcom/example/buylap/view/LoginActivity$1271;View.OnClickListenerÌ
+.com.example.buylap.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolder‘
++com.example.buylap.singleton.GuestSingletonjava.lang.Objectw
+getINSTANCE()fcom.example.buylap.singleton.GuestSingleton#getINSTANCE()Lcom/example/buylap/singleton/GuestSingleton;W
+getBeanGuest()Ecom.example.buylap.singleton.GuestSingleton#getBeanGuest()LBeanGuest;A
+<init>()5com.example.buylap.singleton.GuestSingleton#<init>()VÌ
 #com.example.buylap.model.CreditCardjava.lang.Object_
-setName(Ljava/lang/String;)@com.example.buylap.model.CreditCard#setName(Ljava/lang/String;)V]
-setCVV(Ljava/lang/String;)?com.example.buylap.model.CreditCard#setCVV(Ljava/lang/String;)Vc
+setName(Ljava/lang/String;)@com.example.buylap.model.CreditCard#setName(Ljava/lang/String;)Vc
 setNumber(Ljava/lang/String;)Bcom.example.buylap.model.CreditCard#setNumber(Ljava/lang/String;)VL
 	getName()?com.example.buylap.model.CreditCard#getName()Ljava/lang/String;9
 <init>()-com.example.buylap.model.CreditCard#<init>()Ve
-setSurname(Ljava/lang/String;)Ccom.example.buylap.model.CreditCard#setSurname(Ljava/lang/String;)VJ
-getCVV()>com.example.buylap.model.CreditCard#getCVV()Ljava/lang/String;P
+setSurname(Ljava/lang/String;)Ccom.example.buylap.model.CreditCard#setSurname(Ljava/lang/String;)V]
+setCvv(Ljava/lang/String;)?com.example.buylap.model.CreditCard#setCvv(Ljava/lang/String;)VJ
+getCvv()>com.example.buylap.model.CreditCard#getCvv()Ljava/lang/String;P
 getNumber()Acom.example.buylap.model.CreditCard#getNumber()Ljava/lang/String;L
 	getData()?com.example.buylap.model.CreditCard#getData()Ljava/lang/String;_
 setData(Ljava/lang/String;)@com.example.buylap.model.CreditCard#setData(Ljava/lang/String;)VR
@@ -771,8 +809,4 @@ getEmail()?com.example.buylap.bean.BeanSeller#getEmail()Ljava/lang/String;f
 setUsername(Ljava/lang/String;)Ccom.example.buylap.bean.BeanSeller#setUsername(Ljava/lang/String;)Vº
 "com.example.buylap.ExampleUnitTestjava.lang.Object8
 <init>(),com.example.buylap.ExampleUnitTest#<init>()VJ
-additionCorrect()5com.example.buylap.ExampleUnitTest#additionCorrect()V´
-"com.example.buylap.MostViewAdapterjava.lang.Object¨
-BonBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)fcom.example.buylap.MostViewAdapter#onBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)VD
-getItemCount()2com.example.buylap.MostViewAdapter#getItemCount()IH
--com.example.buylap.MostViewAdapter$ViewHolderRecyclerView.ViewHolder
+additionCorrect()5com.example.buylap.ExampleUnitTest#additionCorrect()V

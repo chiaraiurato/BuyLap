@@ -1,63 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:layout_gravity="end"
-    android:layout_margin="8dp"
-    android:background="@drawable/edit_background"
-    android:backgroundTint="#282C4C"
-    android:elevation="3dp">
+package com.example.buylap.database.dao;
 
-    <ImageView
-        android:id="@+id/img_view"
+import android.os.StrictMode;
 
-        android:layout_width="39dp"
-        android:layout_height="37dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377"
-        app:srcCompat="@drawable/ic_baseline_laptop_24" />
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryBuild;
 
-    <TextView
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelBuild;
 
-        android:id="@+id/titleTxt2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center|start"
-        android:lines="2"
-        android:text="title"
-        android:textColor="#535986"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/img_view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+public class DAObuild {
 
-    <TextView
+    private DAObuild() {
+        //Private constructor
+    }
+    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+        ModelBuild modelBuild;
+        Connection connection = null;
+        Statement statement = null;
 
-        android:id="@+id/titleTxt3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center|start"
-        android:lines="2"
-        android:text="subtitle"
-        android:textColor="#535986"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/img_view"
-        app:layout_constraintTop_toBottomOf="@+id/titleTxt2" />
+        try {
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
+            }
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl );
+            rs.close();
+
+
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+
+        return modelBuild;
+    }
+}

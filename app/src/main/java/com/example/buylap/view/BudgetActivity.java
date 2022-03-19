@@ -31,12 +31,12 @@ public class BudgetActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
+                throw new UnsupportedOperationException();
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
+                throw new UnsupportedOperationException();
             }
         });
         next.setOnClickListener(new View.OnClickListener() {

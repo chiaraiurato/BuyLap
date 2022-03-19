@@ -1,1 +1,1 @@
-u 2xmlXHhr)app/src/main/res/layout/fragment_like.xml
+u 2javaXDhrXapp/src/main/java/com/example/buylap/controller/graphic/NavigationGraphicController.java

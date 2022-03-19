@@ -1,1 +1,1 @@
-w 2xmlXHhr)app/src/main/res/layout/fragment_shop.xml
+w 2javaXChrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java

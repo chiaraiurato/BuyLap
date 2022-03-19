@@ -1,5 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@color/ic_launcher_background"/>
-    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
-</adaptive-icon>
+package com.example.buylap.database;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class JdbcConnection {
+
+    private static JdbcConnection instance = null;
+    private Connection connection = null;
+    protected JdbcConnection(){
+        //Singleton
+    }
+    public static synchronized JdbcConnection getInstance() {
+        if (instance == null) {
+            instance = new JdbcConnection();
+        }
+        return instance;
+    }
+       public synchronized Connection getConnection() {
+        if(this.connection == null) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+
+                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.1.197/android", "andro", "andro");
+
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+            return this.connection;
+        }
+}
+

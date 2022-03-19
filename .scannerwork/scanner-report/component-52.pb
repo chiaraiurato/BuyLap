@@ -1,1 +1,0 @@
-4 2javaXhr6app/src/main/java/com/example/buylap/SellerHolder.java

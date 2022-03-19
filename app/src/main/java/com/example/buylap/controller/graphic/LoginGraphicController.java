@@ -1,16 +1,15 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
-import android.text.TextUtils;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.buylap.SellerSingleton;
+import com.example.buylap.singleton.SellerSingleton;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.LoginController;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.UserHolder;
 import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
@@ -39,8 +38,8 @@ public class LoginGraphicController {
 
             beanUser = loginController.searchUser(beanUser);
 
-            UserHolder holder = UserHolder.getInstance();
-            holder.setUser(beanUser);
+            UserSingleton userSingleton = UserSingleton.getInstance();
+            userSingleton.setUser(beanUser);
             Intent intent = new Intent(loginActivity, NavigationActivity.class);
             loginActivity.startActivity(intent);
     }

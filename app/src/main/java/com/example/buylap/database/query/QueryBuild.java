@@ -6,9 +6,14 @@ import java.sql.Statement;
 
 public class QueryBuild {
 
+    private QueryBuild() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static ResultSet retrieveBuild(Statement stmt, String name,  String keyword) throws SQLException {
-        String query = "SELECT * FROM " + name + " WHERE category = '" + keyword + "';";
+        String query = "SELECT * " +
+                        "FROM " + name + " " +
+                        "WHERE category = '" + keyword + "';";
         return stmt.executeQuery(query);
     }
 

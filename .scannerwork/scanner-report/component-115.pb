@@ -1,1 +1,1 @@
-s 2xmlX‰hr-app/src/main/res/layout/fragment_cashback.xml
+s 2javaXHhrSapp/src/main/java/com/example/buylap/controller/graphic/LoginGraphicController.java

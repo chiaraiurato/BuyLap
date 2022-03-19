@@ -1,9 +1,48 @@
 
-Fcom.example.buylap.view.LoginActivity#sendPassword()Ljava/lang/String;e
-[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.java6 6("1*Û
-1e
-[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.java7 7("o
-e
-[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.java7 7(.
-""B)'
-%com.example.buylap.view.LoginActivity
+dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. (9"3*Ž
+2j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+ÍÊ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java ()0
+%1*com.example.buylap.database.JdbcConnection"*com.example.buylap.database.JdbcConnectionß
+Ü
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+
+%2"4com.example.buylap.database.JdbcConnection#<init>()V*2
+0
+%1*com.example.buylap.database.JdbcConnectionå
+â
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+:,
+*com.example.buylap.database.JdbcConnection"
+
+instance"__id*2
+0
+%1*com.example.buylap.database.JdbcConnection*
+1*ß
+3j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (å
+â
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
+%0*com.example.buylap.database.JdbcConnection"__id*<*:,
+*com.example.buylap.database.JdbcConnection"
+
+instance*
+2
+1*ú
+1j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (å
+â
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
+%3*com.example.buylap.database.JdbcConnection"__id*<*:,
+*com.example.buylap.database.JdbcConnection"
+
+instance" 
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (2
+0
+%3*com.example.buylap.database.JdbcConnectionB.",
+*com.example.buylap.database.JdbcConnection

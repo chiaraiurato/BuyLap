@@ -1,1 +1,1 @@
-‘ 2xmlXhr(app/src/main/res/values-night/themes.xml
+‘ 2javaX7hr;app/src/main/java/com/example/buylap/view/MainActivity.java

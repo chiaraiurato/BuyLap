@@ -1,16 +1,9 @@
 
-?com.example.buylap.model.CreditCard#getData()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java" "("1*•
-1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java# #(π
-∂
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java# #(
-%0java.lang.String"__id*1*/%
-#com.example.buylap.model.CreditCard"
-data"
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java# #(
-
-%0java.lang.StringB'%
-#com.example.buylap.model.CreditCard
+^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaF F("1*ê
+1
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaG G("â
+
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaG G( 
+""BCA
+?com.example.buylap.controller.graphic.TakeQuizGraphicController

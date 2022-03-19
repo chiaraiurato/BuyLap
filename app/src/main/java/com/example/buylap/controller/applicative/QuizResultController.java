@@ -21,14 +21,14 @@ public class QuizResultController {
 
     }
     public List<BeanBuild> createBuild(String keyword) throws DAOException {
-        String[] table = new String[6];
+        String[] component = new String[6];
 
-        table[0] = "motherboard";
-        table[1] = "ssd";
-        table[2] = "cpu";
-        table[3] = "ram";
-        table[4] = "videocard";
-        table[5] = "powersupply";
+        component[0] = "motherboard";
+        component[1] = "ssd";
+        component[2] = "cpu";
+        component[3] = "ram";
+        component[4] = "videocard";
+        component[5] = "powersupply";
 
         int index;
         List<BeanBuild> beanBuild = new ArrayList<>();
@@ -36,14 +36,14 @@ public class QuizResultController {
         for(index = 0; index < 6; index++){
 
             try {
-                modelBuild.add( DAObuild.selectBuild(table[index], keyword));
+                modelBuild.add( DAObuild.selectBuild(component[index], keyword));
                 BeanBuild beanBuildinstance = new BeanBuild();
                 beanBuildinstance.setTitle(modelBuild.get(index).getName());
                 beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
                 beanBuildinstance.setUrlEbay(modelBuild.get(index).getUrl());
                 beanBuild.add(beanBuildinstance);
             } catch (SQLException e) {
-                throw new DAOException("error with select"+ table+ " from controller with keyword" + keyword);
+                throw new DAOException("error with select"+ component+ " from controller with keyword" + keyword);
             }
         }
         return beanBuild;

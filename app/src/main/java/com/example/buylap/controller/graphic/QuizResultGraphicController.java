@@ -3,8 +3,7 @@ package com.example.buylap.controller.graphic;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
-
-import com.example.buylap.UserHolder;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.Category;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuizResultGraphicController {
-    private ArrayList<Category> build;
+    private List<Category> build;
 
     private QuizResultController quizResultController;
     private QuizResultActivity quizResultActivity;
@@ -32,7 +31,7 @@ public class QuizResultGraphicController {
          this.beanBuild = new ArrayList<>();
      }
 
-     public ArrayList<Category> setBuild(String a, String b, String c){
+     public List<Category> setBuild(String a, String b, String c){
          beanAnswer=quizResultController.getBeanAnswer(a, b, c);
          try {
              beanBuild = quizResultController.createBuild(beanAnswer.getAnswer3());
@@ -77,7 +76,7 @@ public class QuizResultGraphicController {
 
 
     public void initializeSession(View view) {
-        UserHolder holder = UserHolder.getInstance();
+        UserSingleton holder = UserSingleton.getInstance();
         BeanUser beanUser = holder.getUser();
         if(beanUser == null){
             quizResultActivity.setMessageGuest(view);

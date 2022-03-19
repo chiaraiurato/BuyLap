@@ -1,1 +1,0 @@
-O 2xmlXhr:app/src/main/res/drawable/ic_baseline_navigate_next_24.xml

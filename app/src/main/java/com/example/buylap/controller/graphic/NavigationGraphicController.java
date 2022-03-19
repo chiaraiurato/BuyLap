@@ -4,9 +4,9 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.buylap.GuestSingleton;
+import com.example.buylap.singleton.GuestSingleton;
 import com.example.buylap.R;
-import com.example.buylap.UserHolder;
+import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.LikeFragment;
@@ -16,18 +16,12 @@ import com.example.buylap.view.UserFragment;
 
 public class NavigationGraphicController {
 
-    private NavigationActivity navigationActivity;
-
-    public NavigationGraphicController(NavigationActivity navigationActivity) {
-        this.navigationActivity = navigationActivity;
-
-    }
     public Fragment selectTypeHomepage(){
         Fragment fragment;
-        UserHolder userHolder = UserHolder.getInstance();
+        UserSingleton user = UserSingleton.getInstance();
         GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
 
-        if(userHolder.getUser() != null){
+        if(user.getUser() != null){
 
             fragment = new HomeFragment();
         }else if(guestSingleton.getBeanGuest() != null){
@@ -43,7 +37,7 @@ public class NavigationGraphicController {
         Fragment fragment = null;
         switch (item.getItemId()){
             case R.id.nav_home:
-                UserHolder userHolder = UserHolder.getInstance();
+                UserSingleton userHolder = UserSingleton.getInstance();
                 GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
                 if(userHolder.getUser() != null || guestSingleton.getBeanGuest() != null) {
                     fragment = new HomeFragment();

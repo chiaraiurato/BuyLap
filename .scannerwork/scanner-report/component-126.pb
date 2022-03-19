@@ -1,1 +1,1 @@
-~ 2xmlXhr8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+~ 2javaXhrCapp/src/main/java/com/example/buylap/database/query/QueryBuild.java

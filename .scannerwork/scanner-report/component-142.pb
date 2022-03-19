@@ -1,1 +1,1 @@
-Ž 2xmlXhr#app/src/main/res/values/strings.xml
+Ž 2javaXGhr;app/src/main/java/com/example/buylap/view/HomeFragment.java

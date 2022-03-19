@@ -9,13 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.example.buylap.Question;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.MostViewAdapter;
-import com.example.buylap.MostViewed;
-import com.example.buylap.model.QuizList;
 import com.example.buylap.R;
 import java.util.ArrayList;
 
@@ -28,8 +24,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         HomeGraphicController homeGraphicController =new HomeGraphicController(this);
+
         RecyclerView.Adapter adapter;
         RecyclerView recyclerView;
+
+
         Button takeQuiz;
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -47,12 +46,9 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         recyclerView.setLayoutManager(linearLayoutManager);
-        ArrayList<MostViewed> mostviewed = new ArrayList<>();
-        mostviewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
-        mostviewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
-        mostviewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
-        mostviewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
-        adapter = new MostViewAdapter(mostviewed);
+
+
+        adapter = new MostViewAdapter(homeGraphicController.setAdapterMostView());
         recyclerView.setAdapter(adapter);
 
 

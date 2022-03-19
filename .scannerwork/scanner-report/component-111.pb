@@ -1,1 +1,1 @@
-o 2xmlXQhr)app/src/main/res/layout/activity_main.xml
+o 2javaX5hrUapp/src/main/java/com/example/buylap/controller/applicative/QuizResultController.java

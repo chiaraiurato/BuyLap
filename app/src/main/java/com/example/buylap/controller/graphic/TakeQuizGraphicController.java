@@ -1,6 +1,6 @@
 package com.example.buylap.controller.graphic;
 
-import com.example.buylap.Question;
+import com.example.buylap.utils.Data;
 import com.example.buylap.bean.BeanAnswer;
 
 import com.example.buylap.model.QuizList;
@@ -12,11 +12,11 @@ import java.util.List;
 public class TakeQuizGraphicController {
 
     private TakeQuizActivity takeQuizActivity;      //<--- VIEW
-    private List<QuizList> allQuestion;
+
     private QuizList quizList;
-    ArrayList<QuizList> listQuest;
+    List<QuizList> listQuest;
     private BeanAnswer beanAnswer;
-    Question question;
+    Data data;
     private int index;
 
     public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
@@ -25,9 +25,8 @@ public class TakeQuizGraphicController {
         this.index = 0;
 
         beanAnswer = new BeanAnswer();
-        question = new Question();
-        listQuest=question.sendQuestion();
-        allQuestion = listQuest;
+        data = new Data();
+        listQuest=data.sendQuestion();
         quizList = listQuest.get(index);
     }
 

@@ -1,1 +1,0 @@
-= 2javaXThrCapp/src/main/java/com/example/buylap/view/RegistrationActivity.java

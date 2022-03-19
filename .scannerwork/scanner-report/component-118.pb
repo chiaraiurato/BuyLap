@@ -1,1 +1,1 @@
-v 2xmlXˆhr+app/src/main/res/layout/fragment_seller.xml
+v 2javaXVhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

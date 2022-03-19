@@ -14,13 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
 
-    ArrayList<MostViewed> mostViewDomains;
+    List<MostViewed> mostViewDomains;
 
-    public MostViewAdapter(ArrayList<MostViewed> mostViewDomains) {
+    public MostViewAdapter(List<MostViewed> mostViewDomains) {
         this.mostViewDomains = mostViewDomains;
     }
 

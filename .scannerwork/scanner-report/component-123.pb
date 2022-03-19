@@ -1,1 +1,1 @@
-{ 2xmlXhr-app/src/main/res/layout/viewholder_seller.xml
+{ 2javaXEhr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java

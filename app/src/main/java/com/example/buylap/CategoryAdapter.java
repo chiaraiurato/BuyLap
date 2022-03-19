@@ -15,15 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder>{
 
-    ArrayList<Category> category;
+    List<Category> category;
 
     private OnCatListener mOnCatListener;
 
-    public CategoryAdapter(ArrayList<Category> category, OnCatListener onCatListener) {
+    public CategoryAdapter(List<Category> category, OnCatListener onCatListener) {
 
         this.category = category;
         this.mOnCatListener=onCatListener;

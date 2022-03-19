@@ -1,1 +1,1 @@
-p 2xmlXWhr0app/src/main/res/layout/activity_quiz_result.xml
+p 2javaX&hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java

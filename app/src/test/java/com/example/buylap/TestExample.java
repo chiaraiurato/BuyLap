@@ -13,9 +13,9 @@ import test.TestSelenium;
 
 public class TestExample {
     @Test
-    public void TestExample() throws InterruptedException {
-        TestSelenium TestSelenium = new TestSelenium();
-        WebElement txtBox = TestSelenium.openDriver();
+    public void testingExample() throws InterruptedException {
+        TestSelenium testSelenium = new TestSelenium();
+        WebElement txtBox = testSelenium.openDriver();
         String output = txtBox.getText();
         assertEquals(output, "Intel Core i7-11700K @ 3.60GHz");
     }

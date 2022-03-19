@@ -1,17 +1,70 @@
-<resources>
-    <string name="app_name">Buylap</string>
+package com.example.buylap.view;
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="update_balance_account">Update balance account</string>
-    <string name="result_of_quiz">Result of quiz</string>
-    <string name="build">BUILD</string>
-    <string name="card">Card</string>
-    <string name="_0000">**** **** **** 0000</string>
-    <string name="_00_00">00/00</string>
-    <string name="account_balance">Account Balance</string>
-    <string name="_10_00">$ 10,00</string>
-    <string name="cashout">Cashout</string>
-    <string name="mastercard">Mastercard</string>
-    <string name="addpayment">addPayment</string>
-    <string name="_0_00" />
-</resources>
+import android.os.Bundle;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.MostViewAdapter;
+import com.example.buylap.R;
+import java.util.ArrayList;
+
+
+public class HomeFragment extends Fragment {
+
+
+    private TextView accountName;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        HomeGraphicController homeGraphicController =new HomeGraphicController(this);
+
+        RecyclerView.Adapter adapter;
+        RecyclerView recyclerView;
+
+
+        Button takeQuiz;
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        homeGraphicController.initializeSession(view);
+
+        takeQuiz = view.findViewById(R.id.takequiz);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               homeGraphicController.goToTakeQuiz();
+            }
+        });
+        recyclerView = view.findViewById(R.id.RecyclerMostView);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
+        adapter = new MostViewAdapter(homeGraphicController.setAdapterMostView());
+        recyclerView.setAdapter(adapter);
+
+
+        return view;
+    }
+    public void setUser(BeanUser beanUser, View view) {
+        accountName = view.findViewById(R.id.nameAccount);
+        if (beanUser.getUsername() != null) {
+            String username = beanUser.getUsername() + ",";
+            accountName.setText(username);
+        }
+    }
+
+    public void setGuest( View view) {
+        accountName = view.findViewById(R.id.nameAccount);
+        String username = "guest";
+        accountName.setText(username);
+    }
+}

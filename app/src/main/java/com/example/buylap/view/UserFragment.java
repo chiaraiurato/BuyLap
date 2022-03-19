@@ -24,18 +24,15 @@ public class UserFragment extends Fragment {
         // Required empty public constructor
     }
     private UserFragmentGraphicController userFragmentGraphicController;
-    private Button signOut;
-    private View view;
-    private TextView editUsername;
-    private TextView editEmail;
-    private TextView editPassword;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Button signOut;
 
         userFragmentGraphicController= new UserFragmentGraphicController(this);
 
-        view= inflater.inflate(R.layout.fragment_user, container, false);
+        View view= inflater.inflate(R.layout.fragment_user, container, false);
         userFragmentGraphicController.initializeSession(view);
         signOut=view.findViewById(R.id.signoutBtn);
         signOut.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +46,7 @@ public class UserFragment extends Fragment {
     }
 
     public void setFragmentGuest(View view) {
+        TextView editUsername;
         editUsername = view.findViewById(R.id.editUsern);
         editUsername.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +54,7 @@ public class UserFragment extends Fragment {
                 userFragmentGraphicController.notifyGuest(v);
             }
         });
+        TextView editEmail;
         editEmail = view.findViewById(R.id.editEmail);
         editEmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +62,7 @@ public class UserFragment extends Fragment {
                 userFragmentGraphicController.notifyGuest(v);
             }
         });
+        TextView editPassword;
         editPassword = view.findViewById(R.id.editPw);
         editPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,5 +73,6 @@ public class UserFragment extends Fragment {
     }
 
     public void setFragmentUser(BeanUser beanUser,View view) {
+        //cosa voleevo fare?
     }
 }

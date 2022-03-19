@@ -1,1 +1,1 @@
- 2xmlXhr".idea/deploymentTargetDropDown.xml
+ 2xmlXhr.idea/gradle.xml

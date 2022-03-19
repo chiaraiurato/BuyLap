@@ -1,1 +1,1 @@
-r 2xmlXùhr.app/src/main/res/layout/activity_take_quiz.xml
+r 2javaXDhrRapp/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java

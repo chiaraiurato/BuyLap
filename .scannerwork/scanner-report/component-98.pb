@@ -1,0 +1,1 @@
+b 2xmlX.hr app/src/main/AndroidManifest.xml

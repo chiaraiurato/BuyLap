@@ -1,1 +1,0 @@
- 2javaXhrHapp/src/androidTest/java/com/example/buylap/ExampleInstrumentedTest.java

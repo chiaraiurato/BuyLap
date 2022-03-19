@@ -1,1 +1,0 @@
-L 2xmlXhr6app/src/main/res/drawable/ic_baseline_home_work_24.xml

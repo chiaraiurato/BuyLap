@@ -1,26 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_gravity="end"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@drawable/edit_background"
-    android:backgroundTint="#282C4C"
-    android:elevation="3dp">
+package com.example.buylap.database.dao;
 
-    <ImageView
-        android:id="@+id/sample"
+import android.os.StrictMode;
 
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_laptop_24" />
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
+
+public class DAOseller {
+
+    private DAOseller() {
+        //private constructor
+    }
+    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryRegistrationLogin.insertSeller(statement, beanSeller);
+
+        } catch(SQLIntegrityConstraintViolationException e){
+            throw new DAOException("Username repetition");
+        }
+    }
+
+    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+        Connection connection = null;
+        Statement statement = null;
+        ModelSeller modelSeller;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
+            if (!rs.first()) {
+                throw new DAOException("Table not found");
+            }
+            String recordEmail = rs.getString(3);
+            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelSeller;
+    }
+}
+
