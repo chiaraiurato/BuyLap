@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.buylap.MostViewAdapter;
 import com.example.buylap.MostViewed;
 import com.example.buylap.singleton.SellerSingleton;
 import com.example.buylap.singleton.UserSingleton;
@@ -14,24 +11,20 @@ import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.Data;
 import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.HomeController;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.SellerFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeGraphicController {
     HomeFragment homeFragment;
-    HomeController homeController;
+
     SellerFragment sellerFragment;
     public HomeGraphicController(HomeFragment homeFragment) {
         this.homeFragment = homeFragment;
-        this.homeController = new HomeController();
     }
     public HomeGraphicController(SellerFragment sellerFragment){
         this.sellerFragment = sellerFragment;
-        this.homeController = new HomeController();
     }
 
     public List<MostViewed> setAdapterMostView(){

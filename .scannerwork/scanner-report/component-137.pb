@@ -1,1 +1,1 @@
-‰ 2javaXhrCapp/src/main/java/com/example/buylap/singleton/SellerSingleton.java
+‰ 2javaXhrAapp/src/main/java/com/example/buylap/singleton/UserSingleton.java

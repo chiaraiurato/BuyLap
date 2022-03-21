@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.buylap.controller.graphic.RegistrationGraphicController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.R;
 
@@ -51,7 +52,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             registrationGraphicController.registerNewAccountUser();
                             Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
                             startActivity(intent);
-                        } catch (DAOException e) {
+                        } catch (DAOException | BeanException e) {
                             e.printStackTrace();
                         }
                         break;

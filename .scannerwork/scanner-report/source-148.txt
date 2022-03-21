@@ -1,85 +1,67 @@
 package com.example.buylap.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.example.buylap.controller.graphic.RegistrationGraphicController;
-import com.example.buylap.exceptions.DAOException;
+
+import com.example.buylap.Analytics;
+import com.example.buylap.AnalyticsAdapter;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.R;
 
-public class RegistrationActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
-    private RegistrationGraphicController registrationGraphicController;
-    private TextView username;
-    private TextView email;
-    private TextView password;
+public class SellerFragment extends Fragment {
+
+    private TextView accountName;
+
+    public SellerFragment() {
+        //Singleton
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-        this.registrationGraphicController = new RegistrationGraphicController(this);
-        RadioButton userRadio = findViewById(R.id.radio_user);
-        RadioButton sellerRadio = findViewById(R.id.radio_seller);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        username = findViewById(R.id.select);
-        email = findViewById(R.id.Mail);
-        password = findViewById(R.id.Password);
-        Button signUp = findViewById(R.id.signup_btn);
-
-        TextView signIn= findViewById(R.id.create_new_one);
-        signIn.setOnClickListener(new View.OnClickListener() {
+        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
+        View view= inflater.inflate(R.layout.fragment_seller, container, false);
+        accountName = view.findViewById(R.id.businessAccount);
+        Button takeQuiz = view.findViewById(R.id.takeQuiz);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
-                startActivity(intent);
+                homeGraphicController.goToTakeQuiz();
             }
         });
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String type = registrationGraphicController.selectTypeAccount(username.getText().toString(), email.getText().toString(), password.getText().toString(), userRadio, sellerRadio);
-                switch (type){
-                    case "USER":
-                        try {
-                            registrationGraphicController.registerNewAccountUser();
-                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                            startActivity(intent);
-                        } catch (DAOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case "SELLER":
-                        try {
-                            registrationGraphicController.registerNewAccountSeller();
-                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                            startActivity(intent);
-                        } catch (DAOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    default:
-                }
-            }
-        });
+        homeGraphicController.initializeSessionForSeller(view);
+        ArrayList<Analytics> analytics = new ArrayList<>();
+        analytics.add(new Analytics("statistics"));
+        analytics.add(new Analytics("chart"));
+        analytics.add(new Analytics("booklet"));
+        analytics.add(new Analytics("paidsearch"));
+        RecyclerView.Adapter adapter = new AnalyticsAdapter(analytics);
 
+        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
 
-
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
+        return view;
     }
-    public String sendUsername(){
-        return username.getText().toString();
+    public void setSeller(BeanSeller beanSeller, View view){
+        accountName = view.findViewById(R.id.businessAccount);
+        if(beanSeller.getUsername() != null) {
+            String username = beanSeller.getUsername() + ",";
+            accountName.setText(username);
+        }
     }
-    public String sendEmail(){
-        return email.getText().toString();
-    }
-    public String sendPassword(){
-        return password.getText().toString();
-    }
-
 }

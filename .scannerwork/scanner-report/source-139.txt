@@ -1,32 +1,50 @@
-package com.example.buylap.utils;
+package com.example.buylap.view;
 
-import android.os.Build;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
 
-import com.example.buylap.Category;
-import com.example.buylap.MostViewed;
-import com.example.buylap.model.ModelBuild;
-import com.example.buylap.model.QuizList;
+import com.example.buylap.R;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Data {
-    private ArrayList<QuizList> listQuest;
-    private ArrayList<MostViewed> mostViewed;
+import android.view.View;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-    public ArrayList<QuizList> sendQuestion() {
-        listQuest = new ArrayList<>();
-        listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
-        listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
-        listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
-        return listQuest;
-        }
-        public ArrayList<MostViewed> sendMostView(){
-            mostViewed = new ArrayList<>();
-            mostViewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
-            mostViewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
-            mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
-            mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
-            return mostViewed;
-        }
 
+public class BudgetActivity extends AppCompatActivity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_budget);
+        SeekBar mySeekbar = findViewById(R.id.seekBar);
+        TextView budget = findViewById(R.id.budget);
+        TextView next = findViewById(R.id.next_btn);
+        mySeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                budget.setText(String.valueOf(progress) + " $");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                throw new UnsupportedOperationException();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                throw new UnsupportedOperationException();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BudgetActivity.this, TakeQuizActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

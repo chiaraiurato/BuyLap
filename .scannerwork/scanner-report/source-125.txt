@@ -1,36 +1,42 @@
-package com.example.buylap.database;
-import java.sql.Connection;
-import java.sql.DriverManager;
+package com.example.buylap.database.query;
+
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
+public class QueryRegistrationLogin {
 
-public class JdbcConnection {
-
-    private static JdbcConnection instance = null;
-    private Connection connection = null;
-    protected JdbcConnection(){
-        //Singleton
+    private QueryRegistrationLogin() {
+        throw new IllegalStateException("Utility class");
     }
-    public static synchronized JdbcConnection getInstance() {
-        if (instance == null) {
-            instance = new JdbcConnection();
-        }
-        return instance;
+    public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
+
+        String query = "INSERT INTO `users` (`username`, `mail`, `password`, `token`) " +
+                        "VALUES ('"+ beanUser.getUsername()+"', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
+         stmt.executeUpdate(query);
     }
-       public synchronized Connection getConnection() {
-        if(this.connection == null) {
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
+    public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
 
-                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.1.197/android", "andro", "andro");
+        String query = "INSERT INTO `sellers` (`businessname`, `mail`, `password`) " +
+                        "VALUES ('"+ beanSeller.getUsername()+"', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
+        stmt.executeUpdate(query);
+    }
 
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
-            return this.connection;
-        }
+    public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
+        String query = "SELECT * " +
+                        "FROM users " +
+                        "WHERE username = '"+ beanUser.getUsername()+"' AND password = '"+beanUser.getPassword()+"';";
+        return stmt.executeQuery(query);
+
+    }
+
+    public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+        String query = "SELECT * " +
+                        "FROM sellers " +
+                        "WHERE businessname = '"+ beanSeller.getUsername()+"' AND password = '"+beanSeller.getPassword()+"';";
+        return stmt.executeQuery(query);
+    }
 }
-

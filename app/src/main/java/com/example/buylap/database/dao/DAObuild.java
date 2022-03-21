@@ -8,6 +8,7 @@ import com.example.buylap.database.query.QueryBuild;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
 
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class DAObuild {
         //Private constructor
     }
     public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
-        ModelBuild modelBuild;
+        ModelBuild modelBuild = null;
         Connection connection = null;
         Statement statement = null;
 
@@ -41,6 +42,8 @@ public class DAObuild {
             rs.close();
 
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } finally {
             if (statement != null) {
                 statement.close();

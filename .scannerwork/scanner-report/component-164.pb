@@ -1,1 +1,1 @@
-¤ 2xmlXhr6app/src/main/res/drawable/ic_baseline_home_work_24.xml
+¤ 2xmlXhr3app/src/main/res/drawable/ic_baseline_laptop_24.xml

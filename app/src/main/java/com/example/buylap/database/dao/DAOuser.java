@@ -7,6 +7,8 @@ import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelUser;
+
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +20,7 @@ public class DAOuser {
     private DAOuser() {
         //private constructor
     }
-    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException {
+    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
 
         Connection connection = null;
         Statement statement = null;
@@ -34,10 +36,12 @@ public class DAOuser {
 
         } catch(SQLIntegrityConstraintViolationException e){
             throw new DAOException("Username repetition");
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("file not found");
         }
     }
 
-    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException {
+    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         ModelUser modelUser;

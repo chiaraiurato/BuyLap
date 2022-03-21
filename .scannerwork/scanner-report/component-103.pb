@@ -1,1 +1,1 @@
-g 2javaX hr8app/src/main/java/com/example/buylap/bean/BeanBuild.java
+g 2javaX hr8app/src/main/java/com/example/buylap/bean/BeanBuild.java

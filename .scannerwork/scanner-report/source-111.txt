@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizResultController {
+public class TakeQuizController {
 
     public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
         BeanAnswer beanAnswer = new BeanAnswer();

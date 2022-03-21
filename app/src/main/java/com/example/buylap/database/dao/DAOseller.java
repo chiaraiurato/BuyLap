@@ -9,6 +9,7 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
 
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +21,7 @@ public class DAOseller {
     private DAOseller() {
         //private constructor
     }
-    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
 
         Connection connection = null;
         Statement statement = null;
@@ -36,10 +37,12 @@ public class DAOseller {
 
         } catch(SQLIntegrityConstraintViolationException e){
             throw new DAOException("Username repetition");
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("File not found");
         }
     }
 
-    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         ModelSeller modelSeller;

@@ -1,45 +1,68 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.database.dao;
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.Toast;
+import android.os.StrictMode;
 
-import com.example.buylap.singleton.GuestSingleton;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.UserFragment;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 
-public class UserFragmentGraphicController {
-    private UserFragment userFragment;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
 
-    public UserFragmentGraphicController(UserFragment userFragment){
-        this.userFragment = userFragment;
+public class DAOseller {
+
+    private DAOseller() {
+        //private constructor
     }
-    public void initializeSession(View view){
-        UserSingleton holder = UserSingleton.getInstance();
-        BeanUser beanUser = holder.getUser();
-        if(beanUser != null) {
-            userFragment.setFragmentUser(beanUser, view);
-        }else{
-            userFragment.setFragmentGuest(view);
+    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryRegistrationLogin.insertSeller(statement, beanSeller);
+
+        } catch(SQLIntegrityConstraintViolationException e){
+            throw new DAOException("Username repetition");
         }
     }
-    public void notifyGuest(View view){
-        Toast.makeText(view.getContext(), "You must be logged", Toast.LENGTH_SHORT).show();
+
+    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+        Connection connection = null;
+        Statement statement = null;
+        ModelSeller modelSeller;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
+            if (!rs.first()) {
+                throw new DAOException("Table not found");
+            }
+            String recordEmail = rs.getString(3);
+            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelSeller;
     }
-    public void onSignOut(){
-        UserSingleton userHolder = UserSingleton.getInstance();
-        userHolder.setUser(null);
-        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
-        guestSingleton.setBeanGuest(null);
-        SellerSingleton sellerSingleton = SellerSingleton.getInstance();
-        sellerSingleton.setSeller(null);
-
-        Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
-        userFragment.startActivity(intent);
-    }
-
-
 }
+

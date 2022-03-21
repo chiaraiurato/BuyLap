@@ -1,1 +1,1 @@
-Ö 2xmlXIhr)app/src/main/res/layout/fragment_like.xml
+Ö 2xmlX€hr+app/src/main/res/layout/fragment_seller.xml

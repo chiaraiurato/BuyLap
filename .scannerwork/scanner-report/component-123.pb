@@ -1,1 +1,1 @@
-{ 2javaXEhr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java
+{ 2javaX"hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java

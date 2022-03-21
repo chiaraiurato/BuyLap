@@ -1,67 +1,67 @@
 package com.example.buylap.controller.graphic;
 
-import android.view.MenuItem;
+import android.text.TextUtils;
+import android.util.Log;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-
-import com.example.buylap.singleton.GuestSingleton;
-import com.example.buylap.R;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.singleton.SellerSingleton;
 import com.example.buylap.singleton.UserSingleton;
-import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.LikeFragment;
-import com.example.buylap.view.NavigationActivity;
-import com.example.buylap.view.SellerFragment;
-import com.example.buylap.view.UserFragment;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.controller.applicative.RegistrationController;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.view.RegistrationActivity;
 
-public class NavigationGraphicController {
+public class RegistrationGraphicController {
 
-    private NavigationActivity navigationActivity;
+    RegistrationActivity registrationActivity;
+    RegistrationController registrationController;
 
-    public NavigationGraphicController(NavigationActivity navigationActivity) {
-        this.navigationActivity = navigationActivity;
+
+    public RegistrationGraphicController(RegistrationActivity registrationActivity) {
+        this.registrationActivity = registrationActivity;
+        this.registrationController = new RegistrationController();
 
     }
-    public Fragment selectTypeHomepage(){
-        Fragment fragment;
-        UserSingleton user = UserSingleton.getInstance();
-        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
 
-        if(user.getUser() != null){
-
-            fragment = new HomeFragment();
-        }else if(guestSingleton.getBeanGuest() != null){
-
-            fragment = new HomeFragment();
-        }else{
-            fragment = new SellerFragment();
+    public void registerNewAccountUser() throws DAOException, BeanException {
+        BeanUser beanUser = new BeanUser();
+        beanUser.setUsername(registrationActivity.sendUsername());
+        beanUser.setEmail(registrationActivity.sendEmail());
+        beanUser.setPassword(registrationActivity.sendPassword());
+        Boolean result = registrationController.createUser(beanUser);
+        if (Boolean.TRUE.equals(result)) {
+            Log.d("DATABASE", "SignUp success for User");
         }
-        return fragment;
+        UserSingleton holder = UserSingleton.getInstance();
+        holder.setUser(beanUser);
+
     }
-    public Fragment switchPage(MenuItem item){
 
-        Fragment fragment = null;
-        switch (item.getItemId()){
-            case R.id.nav_home:
-                UserSingleton userHolder = UserSingleton.getInstance();
-                GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
-                if(userHolder.getUser() != null || guestSingleton.getBeanGuest() != null) {
-                    fragment = new HomeFragment();
-                }else{
-                    fragment = new SellerFragment();
-                }
-                break;
-            case R.id.nav_cashback:
-                fragment = new CashbackFragment();
-                break;
-            case R.id.nav_like:
-                fragment= new LikeFragment();
-                break;
-            case R.id.nav_user:
-                fragment= new UserFragment();
-                break;
+    public void registerNewAccountSeller() throws DAOException {
+        BeanSeller beanSeller = new BeanSeller();
+        beanSeller.setUsername(registrationActivity.sendUsername());
+        beanSeller.setEmail(registrationActivity.sendEmail());
+        beanSeller.setPassword(registrationActivity.sendPassword());
+        Boolean result = registrationController.createSeller(beanSeller);
+        if (Boolean.TRUE.equals(result)) {
+            Log.d("DATABASE", "SignUp success for Seller");
         }
-        return fragment;
+        SellerSingleton sellerHolder = SellerSingleton.getInstance();
+        sellerHolder.setSeller(beanSeller);
+    }
 
+    public String selectTypeAccount(String username, String email, String password, RadioButton userRadio, RadioButton sellerRadio) {
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            Toast.makeText(registrationActivity, "All field required", Toast.LENGTH_SHORT).show();
+            return "";
+        } else if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
+            Toast.makeText(registrationActivity, "Select type account", Toast.LENGTH_SHORT).show();
+            return "";
+        } else if (userRadio.isChecked())
+            return "USER";
+        return "SELLER";
     }
 }

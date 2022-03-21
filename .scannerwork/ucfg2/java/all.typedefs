@@ -19,11 +19,11 @@ getClass(),java.lang.Object#getClass()Ljava/lang/Class;5
 hashCode()java.lang.Object#hashCode()I
 	ModelUserjava.lang.ObjectÊ
 *com.example.buylap.model.users.ModelSeller	ModelUser¨
-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)jcom.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÓ
+><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)jcom.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÙ
 com.example.buylap.TestExamplejava.lang.ObjectD
 anotherExample()0com.example.buylap.TestExample#anotherExample()V4
-<init>()(com.example.buylap.TestExample#<init>()V>
-TestExample()-com.example.buylap.TestExample#TestExample()Vö
+<init>()(com.example.buylap.TestExample#<init>()VD
+testingExample()0com.example.buylap.TestExample#testingExample()Vö
 (com.example.buylap.database.dao.DAObuildjava.lang.Objectõ
 1selectBuild(Ljava/lang/String;Ljava/lang/String;)fcom.example.buylap.database.dao.DAObuild#selectBuild(Ljava/lang/String;Ljava/lang/String;)LModelBuild;>
 <init>()2com.example.buylap.database.dao.DAObuild#<init>()V¸
@@ -34,9 +34,9 @@ hashCode()java.lang.Object#hashCode()I
 getSubtitles()Dcom.example.buylap.model.ModelBuild#getSubtitles()Ljava/lang/String;i
  setSubtitles(Ljava/lang/String;)Ecom.example.buylap.model.ModelBuild#setSubtitles(Ljava/lang/String;)VJ
 getUrl()>com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;]
-setUrl(Ljava/lang/String;)?com.example.buylap.model.ModelBuild#setUrl(Ljava/lang/String;)V˜
-Acom.example.buylap.controller.graphic.QuizResultGraphicControllerjava.lang.Object‹
-@setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ócom.example.buylap.controller.graphic.QuizResultGraphicController#setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;W
+setUrl(Ljava/lang/String;)?com.example.buylap.model.ModelBuild#setUrl(Ljava/lang/String;)VÚ
+Acom.example.buylap.controller.graphic.QuizResultGraphicControllerjava.lang.Object◊
+@setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ícom.example.buylap.controller.graphic.QuizResultGraphicController#setBuild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;W
 <init>()Kcom.example.buylap.controller.graphic.QuizResultGraphicController#<init>()Vh
 linkToEbay(I)Wcom.example.buylap.controller.graphic.QuizResultGraphicController#linkToEbay(I)LIntent;÷
 java.lang.Iterablejava.lang.Objectd
@@ -322,12 +322,8 @@ getTitle()8com.example.buylap.Category#getTitle()Ljava/lang/String;ù
 <init>()6com.example.buylap.view.RegistrationActivity#<init>()V_
 sendUsername()Mcom.example.buylap.view.RegistrationActivity#sendUsername()Ljava/lang/String;Y
 sendEmail()Jcom.example.buylap.view.RegistrationActivity#sendEmail()Ljava/lang/String;K
-3Lcom/example/buylap/view/RegistrationActivity$1378;View.OnClickListenerK
-3Lcom/example/buylap/view/RegistrationActivity$1662;View.OnClickListenerô
->com.example.buylap.controller.applicative.QuizResultControllerjava.lang.ObjectT
-<init>()Hcom.example.buylap.controller.applicative.QuizResultController#<init>()V⁄
-EgetBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)êcom.example.buylap.controller.applicative.QuizResultController#getBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)LBeanAnswer;ë
-createBuild(Ljava/lang/String;)ncom.example.buylap.controller.applicative.QuizResultController#createBuild(Ljava/lang/String;)Ljava/util/List;Ã
+3Lcom/example/buylap/view/RegistrationActivity$1430;View.OnClickListenerK
+3Lcom/example/buylap/view/RegistrationActivity$1714;View.OnClickListenerÃ
 com.example.buylap.MostViewedjava.lang.ObjectH
 
 getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
@@ -339,45 +335,7 @@ getTitle():com.example.buylap.MostViewed#getTitle()Ljava/lang/String;N
 setUrl(Ljava/lang/String;)9com.example.buylap.MostViewed#setUrl(Ljava/lang/String;)V€
 ,com.example.buylap.database.query.QueryBuildjava.lang.ObjectB
 <init>()6com.example.buylap.database.query.QueryBuild#<init>()V‘
-GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;$
-java.sql.Wrapperjava.lang.Object+
-java.lang.AutoCloseablejava.lang.Object⁄	
-java.sql.Statementjava.sql.Wrapperjava.lang.Objectjava.lang.AutoCloseablef
-'executeLargeUpdate(Ljava/lang/String;I);java.sql.Statement#executeLargeUpdate(Ljava/lang/String;I)Jd
-&executeLargeUpdate(Ljava/lang/String;):java.sql.Statement#executeLargeUpdate(Ljava/lang/String;)Jh
-(executeLargeUpdate(Ljava/lang/String;[I)<java.sql.Statement#executeLargeUpdate(Ljava/lang/String;[I)J:
-getLargeMaxRows()%java.sql.Statement#getLargeMaxRows()Jw
-'enquoteNCharLiteral(Ljava/lang/String;)Ljava.sql.Statement#enquoteNCharLiteral(Ljava/lang/String;)Ljava/lang/String;B
-getLargeUpdateCount())java.sql.Statement#getLargeUpdateCount()Jd
-&isSimpleIdentifier(Ljava/lang/String;):java.sql.Statement#isSimpleIdentifier(Ljava/lang/String;)Zä
-9executeLargeUpdate(Ljava/lang/String;[Ljava/lang/String;)Mjava.sql.Statement#executeLargeUpdate(Ljava/lang/String;[Ljava/lang/String;)J?
-executeLargeBatch()(java.sql.Statement#executeLargeBatch()[Jm
-"enquoteLiteral(Ljava/lang/String;)Gjava.sql.Statement#enquoteLiteral(Ljava/lang/String;)Ljava/lang/String;<
-setLargeMaxRows(J)&java.sql.Statement#setLargeMaxRows(J)Vu
-&enquoteIdentifier(Ljava/lang/String;Z)Kjava.sql.Statement#enquoteIdentifier(Ljava/lang/String;Z)Ljava/lang/String;∑
-(com.example.buylap.view.TakeQuizActivityAppCompatActivityb
-setOp3(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp3(Ljava/lang/String;)Vb
-setOp1(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp1(Ljava/lang/String;)VV
-setNumberQuestion(I)>com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V>
-<init>()2com.example.buylap.view.TakeQuizActivity#<init>()Vb
-setOp2(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp2(Ljava/lang/String;)VF
-resetColor()6com.example.buylap.view.TakeQuizActivity#resetColor()Vl
-setQuestion(Ljava/lang/String;)Icom.example.buylap.view.TakeQuizActivity#setQuestion(Ljava/lang/String;)VG
-/Lcom/example/buylap/view/TakeQuizActivity$2637;View.OnClickListenerê
-*com.example.buylap.ExampleInstrumentedTestjava.lang.Object@
-<init>()4com.example.buylap.ExampleInstrumentedTest#<init>()V>
-prova()3com.example.buylap.ExampleInstrumentedTest#prova()VN
-useAppContext();com.example.buylap.ExampleInstrumentedTest#useAppContext()VØ
-!com.example.buylap.model.QuizListjava.lang.Object[
-setOp3(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp3(Ljava/lang/String;)V[
-setOp1(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)VH
-getOp3()<com.example.buylap.model.QuizList#getOp3()Ljava/lang/String;H
-getOp2()<com.example.buylap.model.QuizList#getOp2()Ljava/lang/String;H
-getOp1()<com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;[
-setOp2(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp2(Ljava/lang/String;)V«
-P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)scom.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ve
-setQuestion(Ljava/lang/String;)Bcom.example.buylap.model.QuizList#setQuestion(Ljava/lang/String;)VR
-getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;√
+GretrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)àcom.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;√
 java.lang.Throwablejava.lang.Objectjava.io.Serializable;
 printStackTrace()&java.lang.Throwable#printStackTrace()VZ
 getOurStackTrace()Djava.lang.Throwable#getOurStackTrace()[Ljava/lang/StackTraceElement;¡
@@ -410,7 +368,56 @@ getCause()3java.lang.Throwable#getCause()Ljava/lang/Throwable;e
 <init>(Ljava/lang/String;)/java.lang.Exception#<init>(Ljava/lang/String;)Vw
 /<init>(Ljava/lang/String;Ljava/lang/Throwable;)Djava.lang.Exception#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V{
 1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Fjava.lang.Exception#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VS
-<init>(Ljava/lang/Throwable;)2java.lang.Exception#<init>(Ljava/lang/Throwable;)Vß
+<init>(Ljava/lang/Throwable;)2java.lang.Exception#<init>(Ljava/lang/Throwable;)Vö
+java.lang.RuntimeExceptionjava.lang.Exception0
+<init>()$java.lang.RuntimeException#<init>()VT
+<init>(Ljava/lang/String;)6java.lang.RuntimeException#<init>(Ljava/lang/String;)V~
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Kjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)VÇ
+1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Mjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VZ
+<init>(Ljava/lang/Throwable;)9java.lang.RuntimeException#<init>(Ljava/lang/Throwable;)V∂
+java.lang.IllegalStateExceptionjava.lang.RuntimeException5
+<init>())java.lang.IllegalStateException#<init>()VY
+<init>(Ljava/lang/String;);java.lang.IllegalStateException#<init>(Ljava/lang/String;)VÉ
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Pjava.lang.IllegalStateException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V_
+<init>(Ljava/lang/Throwable;)>java.lang.IllegalStateException#<init>(Ljava/lang/Throwable;)V$
+java.sql.Wrapperjava.lang.Object+
+java.lang.AutoCloseablejava.lang.Object⁄	
+java.sql.Statementjava.sql.Wrapperjava.lang.Objectjava.lang.AutoCloseablef
+'executeLargeUpdate(Ljava/lang/String;I);java.sql.Statement#executeLargeUpdate(Ljava/lang/String;I)Jd
+&executeLargeUpdate(Ljava/lang/String;):java.sql.Statement#executeLargeUpdate(Ljava/lang/String;)Jh
+(executeLargeUpdate(Ljava/lang/String;[I)<java.sql.Statement#executeLargeUpdate(Ljava/lang/String;[I)J:
+getLargeMaxRows()%java.sql.Statement#getLargeMaxRows()Jw
+'enquoteNCharLiteral(Ljava/lang/String;)Ljava.sql.Statement#enquoteNCharLiteral(Ljava/lang/String;)Ljava/lang/String;B
+getLargeUpdateCount())java.sql.Statement#getLargeUpdateCount()Jd
+&isSimpleIdentifier(Ljava/lang/String;):java.sql.Statement#isSimpleIdentifier(Ljava/lang/String;)Zä
+9executeLargeUpdate(Ljava/lang/String;[Ljava/lang/String;)Mjava.sql.Statement#executeLargeUpdate(Ljava/lang/String;[Ljava/lang/String;)J?
+executeLargeBatch()(java.sql.Statement#executeLargeBatch()[Jm
+"enquoteLiteral(Ljava/lang/String;)Gjava.sql.Statement#enquoteLiteral(Ljava/lang/String;)Ljava/lang/String;<
+setLargeMaxRows(J)&java.sql.Statement#setLargeMaxRows(J)Vu
+&enquoteIdentifier(Ljava/lang/String;Z)Kjava.sql.Statement#enquoteIdentifier(Ljava/lang/String;Z)Ljava/lang/String;∑
+(com.example.buylap.view.TakeQuizActivityAppCompatActivityb
+setOp3(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp3(Ljava/lang/String;)Vb
+setOp1(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp1(Ljava/lang/String;)VV
+setNumberQuestion(I)>com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V>
+<init>()2com.example.buylap.view.TakeQuizActivity#<init>()Vb
+setOp2(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp2(Ljava/lang/String;)VF
+resetColor()6com.example.buylap.view.TakeQuizActivity#resetColor()Vl
+setQuestion(Ljava/lang/String;)Icom.example.buylap.view.TakeQuizActivity#setQuestion(Ljava/lang/String;)VG
+/Lcom/example/buylap/view/TakeQuizActivity$2600;View.OnClickListenerê
+*com.example.buylap.ExampleInstrumentedTestjava.lang.Object@
+<init>()4com.example.buylap.ExampleInstrumentedTest#<init>()V>
+prova()3com.example.buylap.ExampleInstrumentedTest#prova()VN
+useAppContext();com.example.buylap.ExampleInstrumentedTest#useAppContext()VØ
+!com.example.buylap.model.QuizListjava.lang.Object[
+setOp3(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp3(Ljava/lang/String;)V[
+setOp1(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)VH
+getOp3()<com.example.buylap.model.QuizList#getOp3()Ljava/lang/String;H
+getOp2()<com.example.buylap.model.QuizList#getOp2()Ljava/lang/String;H
+getOp1()<com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;[
+setOp2(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp2(Ljava/lang/String;)V«
+P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)scom.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ve
+setQuestion(Ljava/lang/String;)Bcom.example.buylap.model.QuizList#setQuestion(Ljava/lang/String;)VR
+getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;ß
 *com.example.buylap.exceptions.DAOExceptionjava.lang.Exceptiond
 <init>(Ljava/lang/String;)Fcom.example.buylap.exceptions.DAOException#<init>(Ljava/lang/String;)Vƒ
 *com.example.buylap.singleton.UserSingletonjava.lang.ObjectK
@@ -440,11 +447,10 @@ hashCode()java.lang.Boolean#hashCode()I3
 compareTo(Ljava/lang/Boolean;)1java.lang.Boolean#compareTo(Ljava/lang/Boolean;)IK
 <init>(Ljava/lang/String;)-java.lang.Boolean#<init>(Ljava/lang/String;)V)
 	<init>(Z)java.lang.Boolean#<init>(Z)VS
-getBoolean(Ljava/lang/String;)1java.lang.Boolean#getBoolean(Ljava/lang/String;)Zœ
+getBoolean(Ljava/lang/String;)1java.lang.Boolean#getBoolean(Ljava/lang/String;)Z®
 Acom.example.buylap.controller.graphic.NavigationGraphicControllerjava.lang.Objectx
-selectTypeHomepage()`com.example.buylap.controller.graphic.NavigationGraphicController#selectTypeHomepage()LFragment;ú
-8com.example.buylap.controller.applicative.HomeControllerjava.lang.ObjectN
-<init>()Bcom.example.buylap.controller.applicative.HomeController#<init>()V§
+selectTypeHomepage()`com.example.buylap.controller.graphic.NavigationGraphicController#selectTypeHomepage()LFragment;W
+<init>()Kcom.example.buylap.controller.graphic.NavigationGraphicController#<init>()V§
 ;com.example.buylap.controller.graphic.MainGraphicControllerjava.lang.ObjectS
 	setHost()Fcom.example.buylap.controller.graphic.MainGraphicController#setHost()Vú
 8com.example.buylap.database.query.QueryRegistrationLoginjava.lang.ObjectN
@@ -456,18 +462,20 @@ Acom.example.buylap.controller.graphic.NavigationGraphicControllerjava.lang.Ob
 Fragmentjava.lang.Objectp
 &com.example.buylap.view.SellerFragmentFragment<
 <init>()0com.example.buylap.view.SellerFragment#<init>()VE
--Lcom/example/buylap/view/SellerFragment$1253;View.OnClickListener≠
+-Lcom/example/buylap/view/SellerFragment$1232;View.OnClickListener©
++com.example.buylap.exceptions.BeanExceptionjava.lang.Exceptione
+<init>(Ljava/lang/String;)Gcom.example.buylap.exceptions.BeanException#<init>(Ljava/lang/String;)V®
 ;com.example.buylap.controller.graphic.HomeGraphicControllerjava.lang.Object]
-goToTakeQuiz()Kcom.example.buylap.controller.graphic.HomeGraphicController#goToTakeQuiz()V}
-setAdapterMostView()ecom.example.buylap.controller.graphic.HomeGraphicController#setAdapterMostView()Ljava/util/ArrayList;~
+goToTakeQuiz()Kcom.example.buylap.controller.graphic.HomeGraphicController#goToTakeQuiz()Vx
+setAdapterMostView()`com.example.buylap.controller.graphic.HomeGraphicController#setAdapterMostView()Ljava/util/List;~
 )com.example.buylap.database.dao.DAOsellerjava.lang.Object?
 <init>()3com.example.buylap.database.dao.DAOseller#<init>()V´
 %com.example.buylap.view.LoginActivityAppCompatActivityX
 sendPassword()Fcom.example.buylap.view.LoginActivity#sendPassword()Ljava/lang/String;;
 <init>()/com.example.buylap.view.LoginActivity#<init>()VX
 sendUsername()Fcom.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;D
-,Lcom/example/buylap/view/LoginActivity$1308;View.OnClickListenerD
-,Lcom/example/buylap/view/LoginActivity$1523;View.OnClickListener∏
+,Lcom/example/buylap/view/LoginActivity$1360;View.OnClickListenerD
+,Lcom/example/buylap/view/LoginActivity$1575;View.OnClickListener∏
 Ccom.example.buylap.controller.graphic.UserFragmentGraphicControllerjava.lang.Object_
 onSignOut()Pcom.example.buylap.controller.graphic.UserFragmentGraphicController#onSignOut()V´
 "com.example.buylap.MostViewAdapterjava.lang.Object¨
@@ -488,16 +496,16 @@ BonBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)fcom.example
 getInstance()hcom.example.buylap.singleton.SellerSingleton#getInstance()Lcom/example/buylap/singleton/SellerSingleton;l
 $com.example.buylap.view.UserFragmentFragment:
 <init>().com.example.buylap.view.UserFragment#<init>()VC
-+Lcom/example/buylap/view/UserFragment$1268;View.OnClickListenerC
-+Lcom/example/buylap/view/UserFragment$1619;View.OnClickListenerC
-+Lcom/example/buylap/view/UserFragment$1892;View.OnClickListenerC
-+Lcom/example/buylap/view/UserFragment$2168;View.OnClickListenerz
++Lcom/example/buylap/view/UserFragment$1145;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$1527;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$1828;View.OnClickListenerC
++Lcom/example/buylap/view/UserFragment$2135;View.OnClickListenerz
 'com.example.buylap.database.dao.DAOuserjava.lang.Object=
-<init>()1com.example.buylap.database.dao.DAOuser#<init>()Vê
-com.example.buylap.utils.Datajava.lang.ObjectS
-sendMostView()Acom.example.buylap.utils.Data#sendMostView()Ljava/util/ArrayList;3
-<init>()'com.example.buylap.utils.Data#<init>()VS
-sendQuestion()Acom.example.buylap.utils.Data#sendQuestion()Ljava/util/ArrayList;∏
+<init>()1com.example.buylap.database.dao.DAOuser#<init>()VÜ
+com.example.buylap.utils.Datajava.lang.ObjectN
+sendMostView()<com.example.buylap.utils.Data#sendMostView()Ljava/util/List;3
+<init>()'com.example.buylap.utils.Data#<init>()VN
+sendQuestion()<com.example.buylap.utils.Data#sendQuestion()Ljava/util/List;∏
 (com.example.buylap.model.users.ModelUserjava.lang.Objectl
 setPassword(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setPassword(Ljava/lang/String;)Vf
 setEmail(Ljava/lang/String;)Fcom.example.buylap.model.users.ModelUser#setEmail(Ljava/lang/String;)VY
@@ -510,9 +518,11 @@ getEmail()Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String
 <com.example.buylap.controller.graphic.LoginGraphicControllerjava.lang.Objectf
 goToRegistration()Pcom.example.buylap.controller.graphic.LoginGraphicController#goToRegistration()V^
 signInSeller()Lcom.example.buylap.controller.graphic.LoginGraphicController#signInSeller()VZ
-signInUser()Jcom.example.buylap.controller.graphic.LoginGraphicController#signInUser()V§
+signInUser()Jcom.example.buylap.controller.graphic.LoginGraphicController#signInUser()Vë
 <com.example.buylap.controller.applicative.TakeQuizControllerjava.lang.ObjectR
-<init>()Fcom.example.buylap.controller.applicative.TakeQuizController#<init>()Vt
+<init>()Fcom.example.buylap.controller.applicative.TakeQuizController#<init>()Vÿ
+EgetBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)écom.example.buylap.controller.applicative.TakeQuizController#getBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)LBeanAnswer;è
+createBuild(Ljava/lang/String;)lcom.example.buylap.controller.applicative.TakeQuizController#createBuild(Ljava/lang/String;)Ljava/util/List;t
 (com.example.buylap.view.CashbackFragmentFragment>
 <init>()2com.example.buylap.view.CashbackFragment#<init>()Vû
 9com.example.buylap.controller.applicative.LoginControllerjava.lang.ObjectO
@@ -544,155 +554,7 @@ $com.example.buylap.view.LikeFragmentFragment:
 *com.example.buylap.database.JdbcConnectionjava.lang.Object@
 <init>()4com.example.buylap.database.JdbcConnection#<init>()Vb
 getConnection()Ocom.example.buylap.database.JdbcConnection#getConnection()Ljava/sql/Connection;u
-getInstance()dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;ã
-"java.lang.reflect.AnnotatedElementjava.lang.Objectß
-/getDeclaredAnnotationsByType(Ljava/lang/Class;)tjava.lang.reflect.AnnotatedElement#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;t
-&isAnnotationPresent(Ljava/lang/Class;)Jjava.lang.reflect.AnnotatedElement#isAnnotationPresent(Ljava/lang/Class;)Zò
-(getDeclaredAnnotation(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;ó
-'getAnnotationsByType(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;\
-$java.lang.reflect.GenericDeclarationjava.lang.Object"java.lang.reflect.AnnotatedElements
-java.lang.reflect.Typejava.lang.ObjectG
-getTypeName()6java.lang.reflect.Type#getTypeName()Ljava/lang/String;§i
-java.lang.Class$java.lang.reflect.GenericDeclarationjava.lang.reflect.Typejava.lang.Objectjava.io.Serializable"java.lang.reflect.AnnotatedElementG
-getMethods()7java.lang.Class#getMethods()[Ljava/lang/reflect/Method;E
-hasEnclosingMethodInfo())java.lang.Class#hasEnclosingMethodInfo()Z 
-NsearchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)xjava.lang.Class#searchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
-reflectionData()@java.lang.Class#reflectionData()Ljava/lang/Class$ReflectionData;[
-forName(Ljava/lang/String;)<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;I
-getComponentType()3java.lang.Class#getComponentType()Ljava/lang/Class;ñ
-@getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)Rjava.lang.Class#getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)[BQ
-getEnclosingMethod0()8java.lang.Class#getEnclosingMethod0()[Ljava/lang/Object;ã
-3forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Tjava.lang.Class#forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;>
-getClasses().java.lang.Class#getClasses()[Ljava/lang/Class;H
-getNestMembers0()3java.lang.Class#getNestMembers0()[Ljava/lang/Class;Ö
-8addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Ijava.lang.Class#addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Vw
-"getConstructor([Ljava/lang/Class;)Qjava.lang.Class#getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;1
-isAnnotation()java.lang.Class#isAnnotation()ZV
-cast(Ljava/lang/Object;):java.lang.Class#cast(Ljava/lang/Object;)Ljava/lang/Object;h
-getReflectionFactory()Njava.lang.Class#getReflectionFactory()Ljdk/internal/reflect/ReflectionFactory;h
-!cannotCastMsg(Ljava/lang/Object;)Cjava.lang.Class#cannotCastMsg(Ljava/lang/Object;)Ljava/lang/String;J
-getCanonicalName()4java.lang.Class#getCanonicalName()Ljava/lang/String;w
-'getResourceAsStream(Ljava/lang/String;)Ljava.lang.Class#getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;_
-asSubclass(Ljava/lang/Class;)>java.lang.Class#asSubclass(Ljava/lang/Class;)Ljava/lang/Class;á
-*getDeclaredConstructor([Ljava/lang/Class;)Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;é
-4methodToString(Ljava/lang/String;[Ljava/lang/Class;)Vjava.lang.Class#methodToString(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/String;e
-getGenericInfo()Qjava.lang.Class#getGenericInfo()Lsun/reflect/generics/repository/ClassRepository;j
-getDeclaredConstructors0(Z)Kjava.lang.Class#getDeclaredConstructors0(Z)[Ljava/lang/reflect/Constructor;G
-isLocalOrAnonymousClass()*java.lang.Class#isLocalOrAnonymousClass()Zú
-7getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)ajava.lang.Class#getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;/
-isSynthetic()java.lang.Class#isSynthetic()Zò
-2copyConstructors([Ljava/lang/reflect/Constructor;)bjava.lang.Class#copyConstructors([Ljava/lang/reflect/Constructor;)[Ljava/lang/reflect/Constructor;/
-isInterface()java.lang.Class#isInterface()Z9
-isAnonymousClass()#java.lang.Class#isAnonymousClass()ZP
-getSimpleBinaryName()7java.lang.Class#getSimpleBinaryName()Ljava/lang/String;?
-getSigners()/java.lang.Class#getSigners()[Ljava/lang/Object;<
-getModule()-java.lang.Class#getModule()Ljava/lang/Module;g
-getField0(Ljava/lang/String;)Fjava.lang.Class#getField0(Ljava/lang/String;)Ljava/lang/reflect/Field;'
-	isArray()java.lang.Class#isArray()Zi
-*desiredAssertionStatus0(Ljava/lang/Class;);java.lang.Class#desiredAssertionStatus0(Ljava/lang/Class;)ZÉ
-7arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Hjava.lang.Class#arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Zu
-0<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ajava.lang.Class#<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)V
-(copyMethods([Ljava/lang/reflect/Method;)Sjava.lang.Class#copyMethods([Ljava/lang/reflect/Method;)[Ljava/lang/reflect/Method;@
-getTypeName()/java.lang.Class#getTypeName()Ljava/lang/String;f
-getDeclaredAnnotations()Jjava.lang.Class#getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;X
-getDeclaredFields0(Z)?java.lang.Class#getDeclaredFields0(Z)[Ljava/lang/reflect/Field;V
-getConstructors()Ajava.lang.Class#getConstructors()[Ljava/lang/reflect/Constructor;†
->getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)^java.lang.Class#getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)Ljava/util/List;%
-isEnum()java.lang.Class#isEnum()ZX
-getGenericSuperclass()>java.lang.Class#getGenericSuperclass()Ljava/lang/reflect/Type;[
-getDeclaredMethods0(Z)Ajava.lang.Class#getDeclaredMethods0(Z)[Ljava/lang/reflect/Method;E
-desiredAssertionStatus())java.lang.Class#desiredAssertionStatus()Z@
-newInstance()/java.lang.Class#newInstance()Ljava/lang/Object;u
- getAnnotation(Ljava/lang/Class;)Qjava.lang.Class#getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;d
-privateGetDeclaredFields(Z)Ejava.lang.Class#privateGetDeclaredFields(Z)[Ljava/lang/reflect/Field;A
-getNestHost0()/java.lang.Class#getNestHost0()Ljava/lang/Class;å
-/getMethod(Ljava/lang/String;[Ljava/lang/Class;)Yjava.lang.Class#getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;7
-isTopLevelClass()"java.lang.Class#isTopLevelClass()Z`
-getResource(Ljava/lang/String;)=java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;Ñ
-'getAnnotationsByType(Ljava/lang/Class;)Yjava.lang.Class#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;S
-setSigners([Ljava/lang/Object;)0java.lang.Class#setSigners([Ljava/lang/Object;)V?
-getNestHost().java.lang.Class#getNestHost()Ljava/lang/Class;K
-getClassLoader()7java.lang.Class#getClassLoader()Ljava/lang/ClassLoader;é
-0getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Zjava.lang.Class#getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
-annotationData()@java.lang.Class#annotationData()Ljava/lang/Class$AnnotationData;W
-getEnumConstantsShared();java.lang.Class#getEnumConstantsShared()[Ljava/lang/Object;L
-getCanonicalName0()5java.lang.Class#getCanonicalName0()Ljava/lang/String;D
-getRawTypeAnnotations())java.lang.Class#getRawTypeAnnotations()[B£
-GcheckPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Xjava.lang.Class#checkPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Vf
-getAnnotatedInterfaces()Jjava.lang.Class#getAnnotatedInterfaces()[Ljava/lang/reflect/AnnotatedType;Z
-getFactory()Jjava.lang.Class#getFactory()Lsun/reflect/generics/factory/GenericsFactory;a
-getAnnotationType()Jjava.lang.Class#getAnnotationType()Lsun/reflect/annotation/AnnotationType;M
-getDeclaringClass0()5java.lang.Class#getDeclaringClass0()Ljava/lang/Class;u
-$getDeclaredField(Ljava/lang/String;)Mjava.lang.Class#getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;3
-isMemberClass() java.lang.Class#isMemberClass()ZD
-getFields()5java.lang.Class#getFields()[Ljava/lang/reflect/Field;i
-getEnclosingMethodInfo()Mjava.lang.Class#getEnclosingMethodInfo()Ljava/lang/Class$EnclosingMethodInfo;Y
-getConstantPool()Djava.lang.Class#getConstantPool()Ljdk/internal/reflect/ConstantPool;T
-getDeclaredFields()=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;Y
-getGenericInterfaces()?java.lang.Class#getGenericInterfaces()[Ljava/lang/reflect/Type;z
-&copyFields([Ljava/lang/reflect/Field;)Pjava.lang.Class#copyFields([Ljava/lang/reflect/Field;)[Ljava/lang/reflect/Field;8
-	getName()+java.lang.Class#getName()Ljava/lang/String;F
-getNestMembers()2java.lang.Class#getNestMembers()[Ljava/lang/Class;1
-getModifiers()java.lang.Class#getModifiers()I/
-isPrimitive()java.lang.Class#isPrimitive()ZÖ
-(getDeclaredAnnotation(Ljava/lang/Class;)Yjava.lang.Class#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;K
-getDeclaringClass()4java.lang.Class#getDeclaringClass()Ljava/lang/Class;C
-getSuperclass()0java.lang.Class#getSuperclass()Ljava/lang/Class;d
-resolveName(Ljava/lang/String;)Ajava.lang.Class#resolveName(Ljava/lang/String;)Ljava/lang/String;v
-!privateGetDeclaredConstructors(Z)Qjava.lang.Class#privateGetDeclaredConstructors(Z)[Ljava/lang/reflect/Constructor;e
-getEnclosingConstructor()Hjava.lang.Class#getEnclosingConstructor()Ljava/lang/reflect/Constructor;î
-/getDeclaredAnnotationsByType(Ljava/lang/Class;)ajava.lang.Class#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;[
-getTypeParameters()Djava.lang.Class#getTypeParameters()[Ljava/lang/reflect/TypeVariable;o
-%getPrimitiveClass(Ljava/lang/String;)Fjava.lang.Class#getPrimitiveClass(Ljava/lang/String;)Ljava/lang/Class;{
-$getConstructor0([Ljava/lang/Class;I)Sjava.lang.Class#getConstructor0([Ljava/lang/Class;I)Ljava/lang/reflect/Constructor;:
-
-toString(),java.lang.Class#toString()Ljava/lang/String;f
-getDeclaredConstructors()Ijava.lang.Class#getDeclaredConstructors()[Ljava/lang/reflect/Constructor;S
-isNestmateOf(Ljava/lang/Class;)0java.lang.Class#isNestmateOf(Ljava/lang/Class;)Z[
-#isAssignableFrom(Ljava/lang/Class;)4java.lang.Class#isAssignableFrom(Ljava/lang/Class;)ZD
-getSimpleName()1java.lang.Class#getSimpleName()Ljava/lang/String;W
-getDeclaredAnnotationMap()9java.lang.Class#getDeclaredAnnotationMap()Ljava/util/Map;Ø
-EforName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)fjava.lang.Class#forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Class;D
-initClassName()1java.lang.Class#initClassName()Ljava/lang/String;<
-getRawAnnotations()%java.lang.Class#getRawAnnotations()[B{
-3isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Djava.lang.Class#isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Z°
-:searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)cjava.lang.Class#searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;K
-getEnumConstants()5java.lang.Class#getEnumConstants()[Ljava/lang/Object;V
-getEnclosingMethod()>java.lang.Class#getEnclosingMethod()Ljava/lang/reflect/Method;ñ
-1newReflectionData(Ljava/lang/ref/SoftReference;I)ajava.lang.Class#newReflectionData(Ljava/lang/ref/SoftReference;I)Ljava/lang/Class$ReflectionData;◊
-acasAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)rjava.lang.Class#casAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)Z^
-privateGetPublicFields()Bjava.lang.Class#privateGetPublicFields()[Ljava/lang/reflect/Field;e
-getAnnotatedSuperclass()Ijava.lang.Class#getAnnotatedSuperclass()Ljava/lang/reflect/AnnotatedType;ó
-AcheckMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Rjava.lang.Class#checkMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Vg
-privateGetDeclaredMethods(Z)Gjava.lang.Class#privateGetDeclaredMethods(Z)[Ljava/lang/reflect/Method;?
-getPackage()/java.lang.Class#getPackage()Ljava/lang/Package;
--forName(Ljava/lang/Module;Ljava/lang/String;)Njava.lang.Class#forName(Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class;F
-getInterfaces(Z)2java.lang.Class#getInterfaces(Z)[Ljava/lang/Class;`
-getProtectionDomain0()Fjava.lang.Class#getProtectionDomain0()Ljava/security/ProtectionDomain;7
-registerNatives()"java.lang.Class#registerNatives()VF
-getInterfaces0()2java.lang.Class#getInterfaces0()[Ljava/lang/Class;N
-getDeclaredClasses()6java.lang.Class#getDeclaredClasses()[Ljava/lang/Class;a
-privateGetPublicMethods()Djava.lang.Class#privateGetPublicMethods()[Ljava/lang/reflect/Method;F
-getSimpleName0()2java.lang.Class#getSimpleName0()Ljava/lang/String;D
-getInterfaces()1java.lang.Class#getInterfaces()[Ljava/lang/Class;a
-&isAnnotationPresent(Ljava/lang/Class;)7java.lang.Class#isAnnotationPresent(Ljava/lang/Class;)Ze
-getField(Ljava/lang/String;)Ejava.lang.Class#getField(Ljava/lang/String;)Ljava/lang/reflect/Field;Q
-isInstance(Ljava/lang/Object;)/java.lang.Class#isInstance(Ljava/lang/Object;)ZK
-getEnclosingClass()4java.lang.Class#getEnclosingClass()Ljava/lang/Class;W
-getDeclaredMethods()?java.lang.Class#getDeclaredMethods()[Ljava/lang/reflect/Method;^
-getProtectionDomain()Ejava.lang.Class#getProtectionDomain()Ljava/security/ProtectionDomain;Q
-enumConstantDirectory()6java.lang.Class#enumConstantDirectory()Ljava/util/Map;M
-getClassLoader0()8java.lang.Class#getClassLoader0()Ljava/lang/ClassLoader;F
-getPackageName()2java.lang.Class#getPackageName()Ljava/lang/String;P
-getDeclaredClasses0()7java.lang.Class#getDeclaredClasses0()[Ljava/lang/Class;b
-createAnnotationData(I)Gjava.lang.Class#createAnnotationData(I)Ljava/lang/Class$AnnotationData;R
-getGenericSignature0()8java.lang.Class#getGenericSignature0()Ljava/lang/String;g
-!toClass(Ljava/lang/reflect/Type;)Bjava.lang.Class#toClass(Ljava/lang/reflect/Type;)Ljava/lang/Class;V
-getAnnotations()Bjava.lang.Class#getAnnotations()[Ljava/lang/annotation/Annotation;H
-toGenericString()3java.lang.Class#toGenericString()Ljava/lang/String;¨
-:getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)njava.lang.Class#getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/PublicMethods$MethodList;R
-getSimpleBinaryName0()8java.lang.Class#getSimpleBinaryName0()Ljava/lang/String;1
-isLocalClass()java.lang.Class#isLocalClass()Z≈
+getInstance()dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;≈
 java.sql.DriverManagerjava.lang.Objectb
 #setLogWriter(Ljava/io/PrintWriter;);java.sql.DriverManager#setLogWriter(Ljava/io/PrintWriter;)Vb
 #deregisterDriver(Ljava/sql/Driver;);java.sql.DriverManager#deregisterDriver(Ljava/sql/Driver;)VL
@@ -715,19 +577,7 @@ EgetConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)qjava.sql
 getLogWriter():java.sql.DriverManager#getLogWriter()Ljava/io/PrintWriter;F
 	drivers()9java.sql.DriverManager#drivers()Ljava/util/stream/Stream;>
 getLoginTimeout())java.sql.DriverManager#getLoginTimeout()I¿
-HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;“
-&java.lang.ReflectiveOperationExceptionjava.lang.Exception<
-<init>()0java.lang.ReflectiveOperationException#<init>()V`
-<init>(Ljava/lang/String;)Bjava.lang.ReflectiveOperationException#<init>(Ljava/lang/String;)Vä
-/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Wjava.lang.ReflectiveOperationException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vf
-<init>(Ljava/lang/Throwable;)Ejava.lang.ReflectiveOperationException#<init>(Ljava/lang/Throwable;)Vç
- java.lang.ClassNotFoundException&java.lang.ReflectiveOperationException6
-<init>()*java.lang.ClassNotFoundException#<init>()VN
-
-getCause()@java.lang.ClassNotFoundException#getCause()Ljava/lang/Throwable;Z
-<init>(Ljava/lang/String;)<java.lang.ClassNotFoundException#<init>(Ljava/lang/String;)VV
-getException()Djava.lang.ClassNotFoundException#getException()Ljava/lang/Throwable;Ñ
-/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Qjava.lang.ClassNotFoundException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V…
+HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;…
 
 java.sql.SQLExceptionjava.lang.Iterablejava.lang.Exceptionü
 B<init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)Yjava.sql.SQLException#<init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)Vù
@@ -767,7 +617,7 @@ $com.example.buylap.view.HomeFragmentFragment:
 <init>()0com.example.buylap.view.BudgetActivity#<init>()V3
 SeekBar.OnSeekBarChangeListenerjava.lang.ObjectO
 ,Lcom/example/buylap/view/BudgetActivity$737;SeekBar.OnSeekBarChangeListenerE
--Lcom/example/buylap/view/BudgetActivity$1218;View.OnClickListener˜
+-Lcom/example/buylap/view/BudgetActivity$1334;View.OnClickListener˜
 ?com.example.buylap.controller.graphic.TakeQuizGraphicControllerjava.lang.Objectn
 getAnswer2()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer2()Ljava/lang/String;n
 getAnswer1()^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;y
@@ -777,7 +627,7 @@ $com.example.buylap.view.HomeFragmentFragment:
 *com.example.buylap.view.NavigationActivityAppCompatActivity@
 <init>()4com.example.buylap.view.NavigationActivity#<init>()V<
 (NavigationBarView.OnItemSelectedListenerjava.lang.Object]
-1Lcom/example/buylap/view/NavigationActivity$1348;(NavigationBarView.OnItemSelectedListener∞
+1Lcom/example/buylap/view/NavigationActivity$1344;(NavigationBarView.OnItemSelectedListener∞
 #com.example.buylap.AnalyticsAdapterjava.lang.ObjectØ
 ConBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)hcom.example.buylap.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)VE
 getItemCount()3com.example.buylap.AnalyticsAdapter#getItemCount()II

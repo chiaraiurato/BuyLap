@@ -1,1 +1,1 @@
-| 2javaXBhr>app/src/main/java/com/example/buylap/database/dao/DAOuser.java
+| 2javaXhrCapp/src/main/java/com/example/buylap/database/query/QueryBuild.java

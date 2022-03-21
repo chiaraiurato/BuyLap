@@ -1,1 +1,1 @@
-w 2javaXChrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java
+w 2javaX.hrZapp/src/main/java/com/example/buylap/controller/graphic/UserFragmentGraphicController.java

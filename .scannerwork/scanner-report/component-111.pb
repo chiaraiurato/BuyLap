@@ -1,1 +1,1 @@
-o 2javaX5hrUapp/src/main/java/com/example/buylap/controller/applicative/QuizResultController.java
+o 2javaX5hrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java

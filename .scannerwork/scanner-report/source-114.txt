@@ -1,67 +1,28 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
 
-import androidx.recyclerview.widget.RecyclerView;
+import com.example.buylap.singleton.GuestSingleton;
+import com.example.buylap.bean.BeanGuest;
+import com.example.buylap.view.MainActivity;
+import com.example.buylap.view.NavigationActivity;
 
-import com.example.buylap.MostViewAdapter;
-import com.example.buylap.MostViewed;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.utils.Data;
-import com.example.buylap.view.BudgetActivity;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.HomeController;
-import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.SellerFragment;
+public class MainGraphicController {
+    MainActivity mainActivity;
+   
 
-import java.util.ArrayList;
-
-public class HomeGraphicController {
-    HomeFragment homeFragment;
-    HomeController homeController;
-    SellerFragment sellerFragment;
-    public HomeGraphicController(HomeFragment homeFragment) {
-        this.homeFragment = homeFragment;
-        this.homeController = new HomeController();
-    }
-    public HomeGraphicController(SellerFragment sellerFragment){
-        this.sellerFragment = sellerFragment;
-        this.homeController = new HomeController();
+    public MainGraphicController(MainActivity mainActivity){
+        this.mainActivity = mainActivity;
     }
 
-    public ArrayList<MostViewed> setAdapterMostView(){
-        Data data = new Data();
-        return data.sendMostView();
+   
+    public void setHost(){
+        Intent intent = new Intent(mainActivity, NavigationActivity.class);
+        BeanGuest beanGuest = new BeanGuest();
+        beanGuest.setTmp("guest");
+        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
+        guestSingleton.setBeanGuest(beanGuest);
+        mainActivity.startActivity(intent);
+    }
 
-    }
-    public void initializeSession(View view){
-        UserSingleton userSingleton = UserSingleton.getInstance();
-        BeanUser beanUser = userSingleton.getUser();
-        if(beanUser != null) {
-            homeFragment.setUser(beanUser, view);
-        }else{
-            Log.d("DEBUG", "GUEST SESSION");
-            homeFragment.setGuest(view);
-        }
-    }
-    public void initializeSessionForSeller(View view){
-        SellerSingleton holder = SellerSingleton.getInstance();
-        BeanSeller beanSeller = holder.getSeller();
-        sellerFragment.setSeller(beanSeller, view);
-    }
-    public void goToTakeQuiz() {
-        Intent intent;
-        if(homeFragment == null) {
-            intent = new Intent(sellerFragment.getContext(), BudgetActivity.class);
-            sellerFragment.startActivity(intent);
-        }
-        else{
-            intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
-            homeFragment.startActivity(intent);
-        }
-    }
 }

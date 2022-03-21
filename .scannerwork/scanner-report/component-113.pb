@@ -1,1 +1,1 @@
-q 2javaXhrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java
+q 2javaXIhrSapp/src/main/java/com/example/buylap/controller/graphic/LoginGraphicController.java

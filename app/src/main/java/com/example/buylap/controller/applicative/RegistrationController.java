@@ -6,6 +6,7 @@ import com.example.buylap.database.dao.DAOseller;
 import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 public class RegistrationController {
@@ -16,7 +17,7 @@ public class RegistrationController {
                 DAOuser.insertUser(beanUser);
                 return true;
 
-            } catch (SQLException e) {
+            } catch (SQLException | FileNotFoundException e) {
                 throw new DAOException("error on signup for user");
             }
 
@@ -27,7 +28,7 @@ public class RegistrationController {
             DAOseller.insertSeller(beanSeller);
             return true;
 
-        } catch (SQLException e) {
+        } catch (SQLException | FileNotFoundException e) {
             throw new DAOException("error on signup for seller");
         }
 

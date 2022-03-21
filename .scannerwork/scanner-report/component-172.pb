@@ -1,1 +1,1 @@
-¬ 2xmlXhr5app/src/main/res/drawable/ic_baseline_settings_24.xml
+¬ 2xmlXhr:app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml

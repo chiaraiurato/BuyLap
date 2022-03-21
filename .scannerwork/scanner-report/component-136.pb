@@ -1,1 +1,1 @@
-ˆ 2javaXhrBapp/src/main/java/com/example/buylap/singleton/GuestSingleton.java
+ˆ 2javaXhrCapp/src/main/java/com/example/buylap/singleton/SellerSingleton.java

@@ -1,1 +1,1 @@
-p 2javaX&hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java
+p 2javaX>hrRapp/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java

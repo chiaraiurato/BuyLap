@@ -3,12 +3,13 @@ package com.example.buylap.controller.graphic;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
+
+import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.Category;
 import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.QuizResultController;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.view.QuizResultActivity;
 
@@ -18,23 +19,23 @@ import java.util.List;
 public class QuizResultGraphicController {
     private List<Category> build;
 
-    private QuizResultController quizResultController;
+    private TakeQuizController takeQuizController;
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
 
      public QuizResultGraphicController(){
          this.build =  new ArrayList<>();
-         this.quizResultController = new QuizResultController();
+         this.takeQuizController = new TakeQuizController();
          this.quizResultActivity = new QuizResultActivity();
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
      }
 
      public List<Category> setBuild(String a, String b, String c){
-         beanAnswer=quizResultController.getBeanAnswer(a, b, c);
+         beanAnswer= takeQuizController.getBeanAnswer(a, b, c);
          try {
-             beanBuild = quizResultController.createBuild(beanAnswer.getAnswer3());
+             beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3());
          } catch (DAOException e) {
              e.printStackTrace();
          }

@@ -1,22 +1,23 @@
 package com.example.buylap.singleton;
 
-import com.example.buylap.bean.BeanGuest;
+import com.example.buylap.bean.BeanSeller;
 
-public final class GuestSingleton{
-    private BeanGuest beanGuest;
-    private static final GuestSingleton INSTANCE = new GuestSingleton();
+public final class SellerSingleton {
+    private BeanSeller beanSeller;
 
-    private GuestSingleton() {}
+    private static final SellerSingleton INSTANCE = new SellerSingleton();
 
-    public BeanGuest getBeanGuest() {
-        return beanGuest;
-    }
+    private SellerSingleton() {}
 
-    public void setBeanGuest(BeanGuest beanGuest) {
-        this.beanGuest = beanGuest;
-    }
-
-    public static GuestSingleton getINSTANCE() {
+    public static SellerSingleton getInstance() {
         return INSTANCE;
+    }
+
+    public void setSeller(BeanSeller beanSeller) {
+        this.beanSeller = beanSeller;
+    }
+
+    public BeanSeller getSeller() {
+        return this.beanSeller;
     }
 }

@@ -2,6 +2,7 @@ package com.example.buylap.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import com.example.buylap.controller.graphic.MainGraphicController;
 
 public class MainActivity extends AppCompatActivity{
 
-
+    protected static Context appContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
         TextView moveSkip;
         setContentView(R.layout.activity_main);
 
+        this.appContext =getApplicationContext();
         MainGraphicController mainGraphicController = new MainGraphicController(this);
         moveSignUp=findViewById(R.id.signup_btn);
         moveSignIn=findViewById(R.id.signin_btn);
@@ -51,5 +53,6 @@ public class MainActivity extends AppCompatActivity{
 
 
     }
+    public static Context getContext(){ return appContext ;}
 
 }

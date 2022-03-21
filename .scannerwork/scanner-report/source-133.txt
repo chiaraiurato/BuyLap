@@ -1,46 +1,66 @@
-package com.example.buylap.model.users;
+package com.example.buylap;
 
-public class ModelUser{
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-    private String username;
-    private String email;
-    private String password;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
-    public ModelUser(String username, String email, String password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
+
+    List<MostViewed> mostViewDomains;
+
+    public MostViewAdapter(List<MostViewed> mostViewDomains) {
+        this.mostViewDomains = mostViewDomains;
     }
 
-    public String getEmail() {
-        return email;
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder, parent, false);
+        return new ViewHolder(inflate);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.titleTxt.setText(String.valueOf(mostViewDomains.get(position).getTitle()));
+        holder.subTitleTxt.setText(String.valueOf(mostViewDomains.get(position).getSubtitle()));
 
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(mostViewDomains.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
 
-    public String getPassword() {
-        return password;
-    }
+        Glide.with(holder.itemView.getContext())
+                .load(drawableResourceId)
+                .into(holder.removeItem);
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
 
+    @Override
+    public int getItemCount() {
+        return mostViewDomains.size();
+    }
 
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView titleTxt;
+        TextView subTitleTxt;
+        ImageView removeItem;
 
-
-
+        public ViewHolder(View itemView) {
+            super(itemView);
+            titleTxt = itemView.findViewById(R.id.titleTxt);
+            subTitleTxt = itemView.findViewById(R.id.subTitleTxt);
+            removeItem = itemView.findViewById(R.id.img_view);
+        }
+    }
 }

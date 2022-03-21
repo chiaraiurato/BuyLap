@@ -1,1 +1,1 @@
-} 2javaX%hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java
+} 2javaX+hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java

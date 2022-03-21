@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.singleton.SellerSingleton;
 import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
@@ -25,7 +26,7 @@ public class RegistrationGraphicController {
 
     }
 
-    public void registerNewAccountUser() throws DAOException {
+    public void registerNewAccountUser() throws DAOException, BeanException {
         BeanUser beanUser = new BeanUser();
         beanUser.setUsername(registrationActivity.sendUsername());
         beanUser.setEmail(registrationActivity.sendEmail());

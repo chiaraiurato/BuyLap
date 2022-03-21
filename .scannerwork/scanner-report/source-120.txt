@@ -1,83 +1,52 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.database.dao;
 
-import com.example.buylap.utils.Data;
-import com.example.buylap.bean.BeanAnswer;
+import android.os.StrictMode;
 
-import com.example.buylap.model.QuizList;
-import com.example.buylap.view.TakeQuizActivity;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryBuild;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelBuild;
 
-public class TakeQuizGraphicController {
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-    private TakeQuizActivity takeQuizActivity;      //<--- VIEW
-    private List<QuizList> allQuestion;
-    private QuizList quizList;
-    ArrayList<QuizList> listQuest;
-    private BeanAnswer beanAnswer;
-    Data data;
-    private int index;
+public class DAObuild {
 
-    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
-
-        this.takeQuizActivity = takeQuizActivity;
-        this.index = 0;
-
-        beanAnswer = new BeanAnswer();
-        data = new Data();
-        listQuest=data.sendQuestion();
-        allQuestion = listQuest;
-        quizList = listQuest.get(index);
+    private DAObuild() {
+        //Private constructor
     }
+    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+        ModelBuild modelBuild;
+        Connection connection = null;
+        Statement statement = null;
 
-    public void setQuiz() {
-        takeQuizActivity.setNumberQuestion(index);
-        takeQuizActivity.setQuestion(quizList.getQuestion());
-        takeQuizActivity.setOp1(quizList.getOp1());
-        takeQuizActivity.setOp2(quizList.getOp2());
-        takeQuizActivity.setOp3(quizList.getOp3());
-    }
-    public void goNext(String answer){
-        switch (index) {
-            case 0:
-                beanAnswer.setAnswer1(answer);
-                break;
-            case 1:
-                beanAnswer.setAnswer2(answer);
-                break;
-            case 2:
-                beanAnswer.setAnswer3(answer);
-                break;
-            default:
-                break;
-        }
-        index++;
+        try {
 
-        if (index >= listQuest.size() ) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
 
-            takeQuizActivity.finished(beanAnswer);
+            statement = connection.createStatement();
+            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
+            }
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl );
+            rs.close();
 
-        } else {
-                takeQuizActivity.setNumberQuestion(index);
-                quizList = listQuest.get(index);
 
-                takeQuizActivity.resetColor();
-                setQuiz();
+        } finally {
+            if (statement != null) {
+                statement.close();
             }
         }
 
-    public String getAnswer1(){
-       return quizList.getOp1();
+        return modelBuild;
     }
-    public String getAnswer2(){
-        return quizList.getOp2();
-    }
-
-    public String getAnswer3(){
-        return quizList.getOp3();
-    }
-
-
 }
-

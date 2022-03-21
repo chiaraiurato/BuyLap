@@ -1,48 +1,17 @@
 
-dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. (9"3*é
-2j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+Õ 
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java ()0
-%1*com.example.buylap.database.JdbcConnection"*com.example.buylap.database.JdbcConnectionﬂ
-‹
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+
-%2"4com.example.buylap.database.JdbcConnection#<init>()V*2
-0
-%1*com.example.buylap.database.JdbcConnectionÂ
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+:,
-*com.example.buylap.database.JdbcConnection"
+@com.example.buylap.bean.BeanUser#getUsername()Ljava/lang/String;`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java ("1*ù
+1`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (∑
+¥
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (
+%0java.lang.String"__id*2*0"
+ com.example.buylap.bean.BeanUser"
 
-instance"__id*2
-0
-%1*com.example.buylap.database.JdbcConnection*
-1*ﬂ
-3j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
-%0*com.example.buylap.database.JdbcConnection"__id*<*:,
-*com.example.buylap.database.JdbcConnection"
-
-instance*
-2
-1*˙
-1j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
-%3*com.example.buylap.database.JdbcConnection"__id*<*:,
-*com.example.buylap.database.JdbcConnection"
-
-instance"†
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (2
-0
-%3*com.example.buylap.database.JdbcConnectionB.",
-*com.example.buylap.database.JdbcConnection
+username"|
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (
+
+%0java.lang.StringB$"
+ com.example.buylap.bean.BeanUser

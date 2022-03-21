@@ -1,1 +1,1 @@
-Å 2javaX4hr:app/src/main/java/com/example/buylap/model/CreditCard.java
+Å 2javaX&hr:app/src/main/java/com/example/buylap/model/ModelBuild.java

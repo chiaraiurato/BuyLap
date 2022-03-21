@@ -1,2 +1,1 @@
-„ 2javaX
-hrAapp/src/main/java/com/example/buylap/model/users/ModelSeller.java
+„ 2javaX.hr?app/src/main/java/com/example/buylap/model/users/ModelUser.java

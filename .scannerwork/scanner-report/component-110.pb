@@ -1,1 +1,1 @@
-n 2javaX+hrPapp/src/main/java/com/example/buylap/controller/applicative/LoginController.java
+n 2javaX&hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java

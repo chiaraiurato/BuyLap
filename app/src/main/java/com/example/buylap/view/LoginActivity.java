@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.buylap.controller.graphic.LoginGraphicController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.R;
 
@@ -44,10 +45,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
-                if(type == "USER") {
+                if(type.equals("USER")) {
                     try {
                         loginGraphicController.signInUser();
-                    } catch (SQLException throwables) {
+                    } catch (SQLException | BeanException throwables) {
                         throwables.printStackTrace();
                     } catch (DAOException e) {
                         Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();

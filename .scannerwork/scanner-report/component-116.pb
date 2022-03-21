@@ -1,1 +1,1 @@
-t 2javaXhrRapp/src/main/java/com/example/buylap/controller/graphic/MainGraphicController.java
+t 2javaXWhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

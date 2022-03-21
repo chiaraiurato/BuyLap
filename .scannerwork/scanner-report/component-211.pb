@@ -1,1 +1,1 @@
-Ó 2xmlX¬hr.app/src/main/res/layout/activity_take_quiz.xml
+Ó 2xmlXŠhr-app/src/main/res/layout/fragment_cashback.xml

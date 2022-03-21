@@ -1,1 +1,1 @@
-u 2javaXDhrXapp/src/main/java/com/example/buylap/controller/graphic/NavigationGraphicController.java
+u 2javaXDhrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java

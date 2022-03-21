@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.singleton.SellerSingleton;
 import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
@@ -30,7 +31,7 @@ public class LoginGraphicController {
         loginActivity.startActivity(intent);
     }
 
-    public void signInUser() throws SQLException, DAOException {
+    public void signInUser() throws SQLException, DAOException, BeanException {
 
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(loginActivity.sendUsername());

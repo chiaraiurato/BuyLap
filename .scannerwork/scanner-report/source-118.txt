@@ -1,85 +1,82 @@
 package com.example.buylap.controller.graphic;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.view.View;
-import com.example.buylap.singleton.UserSingleton;
+import com.example.buylap.utils.Data;
 import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.Category;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.QuizResultController;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.view.QuizResultActivity;
+
+import com.example.buylap.model.QuizList;
+import com.example.buylap.view.TakeQuizActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizResultGraphicController {
-    private ArrayList<Category> build;
+public class TakeQuizGraphicController {
 
-    private QuizResultController quizResultController;
-    private QuizResultActivity quizResultActivity;
+    private TakeQuizActivity takeQuizActivity;      //<--- VIEW
+
+    private QuizList quizList;
+    List<QuizList> listQuest;
     private BeanAnswer beanAnswer;
-    private List<BeanBuild> beanBuild;
+    Data data;
+    private int index;
 
-     public QuizResultGraphicController(){
-         this.build =  new ArrayList<>();
-         this.quizResultController = new QuizResultController();
-         this.quizResultActivity = new QuizResultActivity();
-         this.beanAnswer = new BeanAnswer();
-         this.beanBuild = new ArrayList<>();
-     }
+    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
 
-     public ArrayList<Category> setBuild(String a, String b, String c){
-         beanAnswer=quizResultController.getBeanAnswer(a, b, c);
-         try {
-             beanBuild = quizResultController.createBuild(beanAnswer.getAnswer3());
-         } catch (DAOException e) {
-             e.printStackTrace();
-         }
-         build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles()));
-         build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles()));
-         build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles()));
-         build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles()));
-         build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles()));
-         build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles()));
+        this.takeQuizActivity = takeQuizActivity;
+        this.index = 0;
 
-         return build;
-     }
-     public Intent linkToEbay(int position){
-         final Intent intent;
-             switch (position){
-                 case 0:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(0).getUrlEbay()));
-                     break;
-
-                 case 1:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(1).getUrlEbay()));
-                     break;
-                 case 2:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(2).getUrlEbay()));
-                     break;
-                 case 3:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(3).getUrlEbay()));
-                     break;
-                 case 4:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(4).getUrlEbay()));
-                     break;
-
-                 default:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(5).getUrlEbay()));
-                     break;
-             }
-         return intent;
-     }
-
-
-    public void initializeSession(View view) {
-        UserSingleton holder = UserSingleton.getInstance();
-        BeanUser beanUser = holder.getUser();
-        if(beanUser == null){
-            quizResultActivity.setMessageGuest(view);
-        }
+        beanAnswer = new BeanAnswer();
+        data = new Data();
+        listQuest=data.sendQuestion();
+        quizList = listQuest.get(index);
     }
+
+    public void setQuiz() {
+        takeQuizActivity.setNumberQuestion(index);
+        takeQuizActivity.setQuestion(quizList.getQuestion());
+        takeQuizActivity.setOp1(quizList.getOp1());
+        takeQuizActivity.setOp2(quizList.getOp2());
+        takeQuizActivity.setOp3(quizList.getOp3());
+    }
+    public void goNext(String answer){
+        switch (index) {
+            case 0:
+                beanAnswer.setAnswer1(answer);
+                break;
+            case 1:
+                beanAnswer.setAnswer2(answer);
+                break;
+            case 2:
+                beanAnswer.setAnswer3(answer);
+                break;
+            default:
+                break;
+        }
+        index++;
+
+        if (index >= listQuest.size() ) {
+
+            takeQuizActivity.finished(beanAnswer);
+
+        } else {
+                takeQuizActivity.setNumberQuestion(index);
+                quizList = listQuest.get(index);
+
+                takeQuizActivity.resetColor();
+                setQuiz();
+            }
+        }
+
+    public String getAnswer1(){
+       return quizList.getOp1();
+    }
+    public String getAnswer2(){
+        return quizList.getOp2();
+    }
+
+    public String getAnswer3(){
+        return quizList.getOp3();
+    }
+
+
 }
+

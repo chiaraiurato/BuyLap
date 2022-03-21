@@ -1,1 +1,1 @@
-Ù 2xmlX7hr&app/src/main/res/layout/viewholder.xml
+Ù 2xmlX?hr'app/src/main/res/layout/viewholder2.xml

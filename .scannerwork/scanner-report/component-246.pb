@@ -1,1 +1,1 @@
-ö 2javaXhr9app/src/test/java/com/example/buylap/ExampleUnitTest.java
+ö 2javaXhr5app/src/test/java/com/example/buylap/TestExample.java

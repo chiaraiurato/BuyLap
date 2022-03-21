@@ -1,6 +1,9 @@
-H
-javaS4925-Remove this "Class.forName()", it is useless. 2 ;
-javaS2068 Remove this hard-coded password. 2m tp
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2 !p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2 *R
-javaS13137Make sure using this hardcoded IP address is safe here. 2> b
+¦
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2 !:J
+H} :SQL Query is dynamically formatted and assigned to 'query'§
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2  :K
+I}	 €:SQL Query is dynamically formatted and assigned to 'query'¦
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2  ! &:J
+H} u:SQL Query is dynamically formatted and assigned to 'query'¦
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2((! &:J
+H}%' }:SQL Query is dynamically formatted and assigned to 'query'

@@ -1,1 +1,1 @@
-s 2javaXHhrSapp/src/main/java/com/example/buylap/controller/graphic/LoginGraphicController.java
+s 2javaX>hrXapp/src/main/java/com/example/buylap/controller/graphic/NavigationGraphicController.java
