@@ -1,11 +1,18 @@
 package com.example.buylap.model;
 
-public class CreditCard {
+public class ModelCreditCard {
     private String name;
-    private String surname;
     private String number;
     private String data;
     private String cvv;
+
+    public ModelCreditCard(String name, String number, String data, String cvv) {
+        this.name = name;
+
+        this.number = number;
+        this.data = data;
+        this.cvv = cvv;
+    }
 
     public String getName() {
         return name;
@@ -15,13 +22,6 @@ public class CreditCard {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public String getNumber() {
         return number;

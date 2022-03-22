@@ -43,12 +43,8 @@ public class SellerFragment extends Fragment {
             }
         });
         homeGraphicController.initializeSessionForSeller(view);
-        ArrayList<Analytics> analytics = new ArrayList<>();
-        analytics.add(new Analytics("statistics"));
-        analytics.add(new Analytics("chart"));
-        analytics.add(new Analytics("booklet"));
-        analytics.add(new Analytics("paidsearch"));
-        RecyclerView.Adapter adapter = new AnalyticsAdapter(analytics);
+
+        RecyclerView.Adapter adapter = new AnalyticsAdapter(homeGraphicController.setAdapterAnalytics());
 
         RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);

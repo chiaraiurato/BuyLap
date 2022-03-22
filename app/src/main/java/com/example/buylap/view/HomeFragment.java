@@ -29,12 +29,10 @@ public class HomeFragment extends Fragment {
         RecyclerView recyclerView;
 
 
-        Button takeQuiz;
-
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         homeGraphicController.initializeSession(view);
 
-        takeQuiz = view.findViewById(R.id.takequiz);
+        Button takeQuiz = view.findViewById(R.id.takequiz);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

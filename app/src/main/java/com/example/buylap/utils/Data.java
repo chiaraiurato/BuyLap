@@ -2,6 +2,7 @@ package com.example.buylap.utils;
 
 import android.os.Build;
 
+import com.example.buylap.Analytics;
 import com.example.buylap.Category;
 import com.example.buylap.MostViewed;
 import com.example.buylap.model.ModelBuild;
@@ -20,14 +21,22 @@ public class Data {
         listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
         return listQuest;
         }
-        public List<MostViewed> sendMostView(){
-            List<MostViewed> mostViewed;
-            mostViewed = new ArrayList<>();
-            mostViewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
-            mostViewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
-            mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
-            mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
-            return mostViewed;
-        }
+    public List<MostViewed> sendMostView(){
+        List<MostViewed> mostViewed;
+        mostViewed = new ArrayList<>();
+        mostViewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
+        mostViewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
+        mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
+        mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
+        return mostViewed;
+    }
+    public List<Analytics> sendAnalytics(){
+        List<Analytics> analytics = new ArrayList<>();
+        analytics.add(new Analytics("statistics"));
+        analytics.add(new Analytics("chart"));
+        analytics.add(new Analytics("booklet"));
+        analytics.add(new Analytics("paidsearch"));
+        return analytics;
+    }
 
 }

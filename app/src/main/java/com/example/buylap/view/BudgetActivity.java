@@ -26,17 +26,18 @@ public class BudgetActivity extends AppCompatActivity {
         mySeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                budget.setText(String.valueOf(progress) + " $");
+                String price = progress + " $" ;
+                budget.setText(price);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                throw new UnsupportedOperationException();
+                //this should be empty
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                throw new UnsupportedOperationException();
+                //this should be empty
             }
         });
         next.setOnClickListener(new View.OnClickListener() {

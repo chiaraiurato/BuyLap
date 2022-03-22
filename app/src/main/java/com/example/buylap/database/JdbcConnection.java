@@ -17,7 +17,6 @@ import java.util.Properties;
 public class JdbcConnection extends MainActivity {
 
     private static JdbcConnection instance = null;
-    private static Context appContext;
     private Connection connection = null;
     protected JdbcConnection() {
         //Singleton
@@ -30,7 +29,7 @@ public class JdbcConnection extends MainActivity {
     }
        public synchronized Connection getConnection() {
         if(this.connection == null) {
-            appContext = getContext();
+            Context appContext = getContext();
             PropertiesReader propertiesReader = new PropertiesReader(appContext);
             Properties prop = propertiesReader.getProperties("db.properties");
             try{

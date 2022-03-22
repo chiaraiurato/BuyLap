@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
+import com.example.buylap.Analytics;
 import com.example.buylap.MostViewed;
 import com.example.buylap.singleton.SellerSingleton;
 import com.example.buylap.singleton.UserSingleton;
@@ -31,6 +32,10 @@ public class HomeGraphicController {
         Data data = new Data();
         return data.sendMostView();
 
+    }
+    public List<Analytics> setAdapterAnalytics(){
+        Data data = new Data();
+        return data.sendAnalytics();
     }
     public void initializeSession(View view){
         UserSingleton userSingleton = UserSingleton.getInstance();
