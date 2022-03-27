@@ -4,25 +4,28 @@ import android.content.Intent;
 
 import com.example.buylap.singleton.GuestSingleton;
 import com.example.buylap.bean.BeanGuest;
+import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
 
 public class MainGraphicController {
     MainActivity mainActivity;
-   
+    SessionManager sessionManager;
 
     public MainGraphicController(MainActivity mainActivity){
         this.mainActivity = mainActivity;
+        this.sessionManager = new SessionManager(mainActivity.getApplicationContext());
+
     }
 
-   
-    public void setHost(){
+    public void setGuestAccount(){
+
+        sessionManager.createLoginSession("guest","guest", "GUEST");
         Intent intent = new Intent(mainActivity, NavigationActivity.class);
-        BeanGuest beanGuest = new BeanGuest();
-        beanGuest.setTmp("guest");
-        GuestSingleton guestSingleton = GuestSingleton.getINSTANCE();
-        guestSingleton.setBeanGuest(beanGuest);
         mainActivity.startActivity(intent);
+
     }
+
+
 
 }

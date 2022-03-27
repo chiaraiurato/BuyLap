@@ -17,11 +17,14 @@ import com.example.buylap.R;
 import java.sql.SQLException;
 
 public class LoginActivity extends AppCompatActivity {
+
     private LoginGraphicController loginGraphicController;
     private TextView username;
     private TextView password;
     private RadioButton userRadio;
     private RadioButton sellerRadio;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         sellerRadio = findViewById(R.id.radio_seller_login);
         username = findViewById(R.id.select);
         password = findViewById(R.id.Password);
-        Button signinbtn = (Button) findViewById(R.id.signup_btn);
+        Button signIn = findViewById(R.id.signIn_btn);
 
         TextView create = findViewById(R.id.create_new_one);
         create.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 loginGraphicController.goToRegistration();
             }
         });
-        signinbtn.setOnClickListener(new View.OnClickListener() {
+        signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
@@ -59,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                     } catch (SQLException throwables) {
                         throwables.printStackTrace();
                     } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential @business", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
                     }
 
                 }

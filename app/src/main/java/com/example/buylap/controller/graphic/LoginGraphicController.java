@@ -11,6 +11,7 @@ import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.LoginController;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
@@ -18,16 +19,23 @@ import com.example.buylap.view.RegistrationActivity;
 import java.sql.SQLException;
 
 public class LoginGraphicController {
-    private LoginActivity loginActivity;
-    private LoginController loginController;
+
+    private final LoginActivity loginActivity;
+    private final LoginController loginController;
+    private final SessionManager sessionManager;
 
     public LoginGraphicController(LoginActivity loginActivity) {
         this.loginActivity = loginActivity;
         this.loginController = new LoginController();
+        this.sessionManager = new SessionManager(loginActivity.getApplicationContext());
     }
 
     public void goToRegistration() {
         Intent intent = new Intent(loginActivity, RegistrationActivity.class);
+        loginActivity.startActivity(intent);
+    }
+    private void gotoNavigationActivity(){
+        Intent intent = new Intent(loginActivity, NavigationActivity.class);
         loginActivity.startActivity(intent);
     }
 
@@ -38,11 +46,10 @@ public class LoginGraphicController {
             beanUser.setPassword(loginActivity.sendPassword());
 
             beanUser = loginController.searchUser(beanUser);
+            sessionManager.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            gotoNavigationActivity();
 
-            UserSingleton userSingleton = UserSingleton.getInstance();
-            userSingleton.setUser(beanUser);
-            Intent intent = new Intent(loginActivity, NavigationActivity.class);
-            loginActivity.startActivity(intent);
+
     }
     public void signInSeller() throws SQLException, DAOException {
 
@@ -51,10 +58,15 @@ public class LoginGraphicController {
             beanSeller.setPassword(loginActivity.sendPassword());
 
             beanSeller = loginController.searchSeller(beanSeller);
+            sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            gotoNavigationActivity();
+            /*
             SellerSingleton holder = SellerSingleton.getInstance();
             holder.setSeller(beanSeller);
             Intent intent = new Intent(loginActivity, NavigationActivity.class);
             loginActivity.startActivity(intent);
+
+             */
     }
     public String verifyFields( RadioButton userRadio, RadioButton sellerRadio) {
         if (loginActivity.sendUsername().isEmpty() || loginActivity.sendPassword().isEmpty()) {

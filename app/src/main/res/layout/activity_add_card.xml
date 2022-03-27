@@ -52,6 +52,7 @@
         android:backgroundTint="#282C4C"
         android:drawablePadding="20dp"
         android:ems="10"
+        android:drawableLeft="@drawable/ic_baseline_numbers_24"
         android:fontFamily="@font/zcool_regular"
         android:hint="Card number"
         android:inputType="numberDecimal"

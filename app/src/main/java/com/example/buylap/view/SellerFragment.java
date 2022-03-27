@@ -55,9 +55,12 @@ public class SellerFragment extends Fragment {
     }
     public void setSeller(BeanSeller beanSeller, View view){
         accountName = view.findViewById(R.id.businessAccount);
+
         if(beanSeller.getUsername() != null) {
             String username = beanSeller.getUsername() + ",";
             accountName.setText(username);
         }
+
+
     }
 }

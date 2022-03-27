@@ -11,11 +11,11 @@ import java.util.List;
 
 public class TakeQuizGraphicController {
 
-    private TakeQuizActivity takeQuizActivity;      //<--- VIEW
+    private final TakeQuizActivity takeQuizActivity;      //<--- VIEW
 
     private QuizList quizList;
     List<QuizList> listQuest;
-    private BeanAnswer beanAnswer;
+    private final BeanAnswer beanAnswer;
     Data data;
     private int index;
 

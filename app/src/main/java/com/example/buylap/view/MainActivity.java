@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity{
         TextView moveSkip;
         setContentView(R.layout.activity_main);
 
-        this.appContext =getApplicationContext();
+        appContext =getApplicationContext();
         MainGraphicController mainGraphicController = new MainGraphicController(this);
         moveSignUp=findViewById(R.id.signup_btn);
         moveSignIn=findViewById(R.id.signin_btn);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity{
         moveSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               mainGraphicController.setHost();
+               mainGraphicController.setGuestAccount();
             }
         });
 

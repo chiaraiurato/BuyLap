@@ -50,8 +50,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     case "USER":
                         try {
                             registrationGraphicController.registerNewAccountUser();
-                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                            startActivity(intent);
+
                         } catch (DAOException | BeanException e) {
                             e.printStackTrace();
                         }
@@ -59,8 +58,6 @@ public class RegistrationActivity extends AppCompatActivity {
                     case "SELLER":
                         try {
                             registrationGraphicController.registerNewAccountSeller();
-                            Intent intent = new Intent(RegistrationActivity.this, NavigationActivity.class);
-                            startActivity(intent);
                         } catch (DAOException e) {
                             e.printStackTrace();
                         }

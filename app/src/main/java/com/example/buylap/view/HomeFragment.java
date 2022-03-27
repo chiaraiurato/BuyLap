@@ -13,6 +13,8 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.MostViewAdapter;
 import com.example.buylap.R;
+import com.example.buylap.exceptions.BeanException;
+
 import java.util.ArrayList;
 
 
@@ -30,7 +32,11 @@ public class HomeFragment extends Fragment {
 
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        homeGraphicController.initializeSession(view);
+        try {
+            homeGraphicController.initializeSession(view);
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
 
         Button takeQuiz = view.findViewById(R.id.takequiz);
         takeQuiz.setOnClickListener(new View.OnClickListener() {
@@ -45,11 +51,8 @@ public class HomeFragment extends Fragment {
 
         recyclerView.setLayoutManager(linearLayoutManager);
 
-
         adapter = new MostViewAdapter(homeGraphicController.setAdapterMostView());
         recyclerView.setAdapter(adapter);
-
-
         return view;
     }
     public void setUser(BeanUser beanUser, View view) {

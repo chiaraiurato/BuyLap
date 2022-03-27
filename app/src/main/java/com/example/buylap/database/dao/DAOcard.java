@@ -3,6 +3,7 @@ package com.example.buylap.database.dao;
 import android.os.StrictMode;
 
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;
 import com.example.buylap.database.query.QueryCreditCard;
@@ -21,7 +22,7 @@ public class DAOcard {
     private DAOcard(){
         //private constructor
     }
-    public static void insertCard(BeanCard beanCard) throws SQLException, DAOException{
+    public static void insertCard(BeanCard beanCard, BeanUser beanUser) throws SQLException, FileNotFoundException {
 
         Connection connection = null;
         Statement statement = null;
@@ -33,14 +34,10 @@ public class DAOcard {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryCreditCard.insertCreditCard(statement, beanCard);
+            QueryCreditCard.insertCreditCard(statement, beanCard, beanUser);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+        } catch (FileNotFoundException e ) {
+            throw new FileNotFoundException("file not found");
         }
     }
 }

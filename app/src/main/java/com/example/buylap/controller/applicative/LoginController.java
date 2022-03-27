@@ -23,7 +23,7 @@ public class LoginController {
             return beanUser;
 
         } catch (SQLException | FileNotFoundException e) {
-            throw new DAOException("error on signin for user");
+            throw new DAOException("error on signIn for user");
         }
     }
 
@@ -36,7 +36,7 @@ public class LoginController {
             return beanSeller;
 
         } catch (SQLException | FileNotFoundException e) {
-            throw new DAOException("error on signin for seller");
+            throw new DAOException("error on signIn for seller");
         }
     }
 }

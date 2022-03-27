@@ -5,11 +5,13 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.dao.DAOseller;
 import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.utils.SessionManager;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 public class RegistrationController {
+
 
     public Boolean createUser(BeanUser beanUser) throws DAOException {
 

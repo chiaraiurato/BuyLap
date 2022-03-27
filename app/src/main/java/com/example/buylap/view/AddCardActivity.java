@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.buylap.R;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
 public class AddCardActivity extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class AddCardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     cashbackGraphicController.saveCreditCard();
-                } catch (DAOException e) {
+                } catch (DAOException | BeanException e) {
                     e.printStackTrace();
                 }
                 openAct();

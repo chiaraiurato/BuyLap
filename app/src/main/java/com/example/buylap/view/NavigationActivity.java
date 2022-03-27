@@ -17,14 +17,18 @@ public class NavigationActivity extends AppCompatActivity {
 
     BottomNavigationView navigationView;
     NavigationGraphicController navigationGraphicController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        this.navigationGraphicController = new NavigationGraphicController();
+
+        this.navigationGraphicController = new NavigationGraphicController(this);
 
         navigationView=findViewById(R.id.bottom_navigation);
+
+        navigationGraphicController.checkLogin();
 
         Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
         getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();

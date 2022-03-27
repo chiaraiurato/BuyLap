@@ -72,7 +72,5 @@ public class UserFragment extends Fragment {
         });
     }
 
-    public void setFragmentUser(BeanUser beanUser,View view) {
-        //cosa voleevo fare?
-    }
+
 }

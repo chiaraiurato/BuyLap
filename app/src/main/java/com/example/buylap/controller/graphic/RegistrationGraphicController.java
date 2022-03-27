@@ -1,5 +1,6 @@
 package com.example.buylap.controller.graphic;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.RadioButton;
@@ -12,18 +13,21 @@ import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.utils.SessionManager;
+import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
 
 public class RegistrationGraphicController {
 
     RegistrationActivity registrationActivity;
     RegistrationController registrationController;
+    SessionManager sessionManager;
 
 
     public RegistrationGraphicController(RegistrationActivity registrationActivity) {
         this.registrationActivity = registrationActivity;
         this.registrationController = new RegistrationController();
-
+        sessionManager = new SessionManager(registrationActivity.getApplicationContext());
     }
 
     public void registerNewAccountUser() throws DAOException, BeanException {
@@ -35,11 +39,14 @@ public class RegistrationGraphicController {
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "SignUp success for User");
         }
-        UserSingleton holder = UserSingleton.getInstance();
-        holder.setUser(beanUser);
+        sessionManager.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+        goToNavigationActivity();
 
     }
-
+    private void goToNavigationActivity(){
+        Intent intent = new Intent(registrationActivity, NavigationActivity.class);
+        registrationActivity.startActivity(intent);
+    }
     public void registerNewAccountSeller() throws DAOException {
         BeanSeller beanSeller = new BeanSeller();
         beanSeller.setUsername(registrationActivity.sendUsername());
@@ -49,8 +56,8 @@ public class RegistrationGraphicController {
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "SignUp success for Seller");
         }
-        SellerSingleton sellerHolder = SellerSingleton.getInstance();
-        sellerHolder.setSeller(beanSeller);
+        sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+        goToNavigationActivity();
     }
 
     public String selectTypeAccount(String username, String email, String password, RadioButton userRadio, RadioButton sellerRadio) {

@@ -11,9 +11,11 @@ import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.Category;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.QuizResultActivity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class QuizResultGraphicController {
@@ -23,13 +25,15 @@ public class QuizResultGraphicController {
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
+    private SessionManager sessionManager;
 
-     public QuizResultGraphicController(){
+     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          this.build =  new ArrayList<>();
          this.takeQuizController = new TakeQuizController();
-         this.quizResultActivity = new QuizResultActivity();
+         this.quizResultActivity = quizResultActivity;
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
+         this.sessionManager = new SessionManager(quizResultActivity.getApplicationContext());
      }
 
      public List<Category> setBuild(String a, String b, String c){
@@ -77,9 +81,9 @@ public class QuizResultGraphicController {
 
 
     public void initializeSession(View view) {
-        UserSingleton holder = UserSingleton.getInstance();
-        BeanUser beanUser = holder.getUser();
-        if(beanUser == null){
+
+        HashMap<String, String> user = sessionManager.getUserDetails();
+        if(user.get("type") == "GUEST"){
             quizResultActivity.setMessageGuest(view);
         }
     }
