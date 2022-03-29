@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
@@ -15,6 +16,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class NavigationActivity extends AppCompatActivity {
 
+    protected static Context appContext;
     BottomNavigationView navigationView;
     NavigationGraphicController navigationGraphicController;
 
@@ -24,6 +26,7 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        appContext =getApplicationContext();
         this.navigationGraphicController = new NavigationGraphicController(this);
 
         navigationView=findViewById(R.id.bottom_navigation);
@@ -51,4 +54,5 @@ public class NavigationActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
         }
     }
+    public static Context getContext(){ return appContext ;}
 }

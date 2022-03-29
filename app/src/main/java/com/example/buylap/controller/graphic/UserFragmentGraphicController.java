@@ -4,14 +4,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.buylap.singleton.GuestSingleton;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.SellerFragment;
 import com.example.buylap.view.UserFragment;
 
 import java.util.HashMap;

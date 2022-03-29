@@ -3,6 +3,7 @@ package com.example.buylap.controller.graphic;
 import android.util.Log;
 
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
@@ -32,12 +33,11 @@ public class CashbackGraphicController {
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
         beanCard.setCvv(addCardActivity.sendCvv());
-        BeanUser beanUser = new BeanUser();
+        BeanSession beanSession = new BeanSession();
         HashMap<String, String> user = sessionManager.getUserDetails();
 
-        beanUser.setUsername(user.get("user"));
-        beanUser.setPassword(user.get("pass"));
-        Boolean result = getCashbackController.createCard(beanCard, beanUser);
+        beanSession.setUsername(user.get("user"));
+        Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }

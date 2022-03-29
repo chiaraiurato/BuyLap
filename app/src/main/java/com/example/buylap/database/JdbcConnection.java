@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.buylap.utils.PropertiesReader;
 import com.example.buylap.view.MainActivity;
+import com.example.buylap.view.NavigationActivity;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 
-public class JdbcConnection extends MainActivity {
+public class JdbcConnection extends NavigationActivity {
 
     private static JdbcConnection instance = null;
     private Connection connection = null;

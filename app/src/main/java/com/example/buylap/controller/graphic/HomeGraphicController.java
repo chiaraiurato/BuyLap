@@ -1,14 +1,11 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 
 import com.example.buylap.Analytics;
 import com.example.buylap.MostViewed;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.Data;
 import com.example.buylap.utils.SessionManager;
@@ -19,6 +16,7 @@ import com.example.buylap.view.SellerFragment;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class HomeGraphicController {
     HomeFragment homeFragment;
@@ -46,7 +44,7 @@ public class HomeGraphicController {
     public void initializeSession(View view) throws BeanException {
 
         HashMap<String, String> user = sessionManager.getUserDetails();
-        if(user.get("type").equals("USER")) {
+        if(Objects.equals(user.get("type"), "USER")) {
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(user.get("user"));
             homeFragment.setUser(beanUser, view);

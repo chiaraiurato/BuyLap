@@ -5,10 +5,7 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 
-import com.beust.ah.A;
-import com.example.buylap.singleton.GuestSingleton;
 import com.example.buylap.R;
-import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.HomeFragment;
@@ -19,6 +16,7 @@ import com.example.buylap.view.SellerFragment;
 import com.example.buylap.view.UserFragment;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class NavigationGraphicController {
 
@@ -44,10 +42,10 @@ public class NavigationGraphicController {
     public Fragment selectTypeHomepage(){
         Fragment fragment;
 
-        if(user.get("type").equals("USER")){
+        if(Objects.equals(user.get("type"), "USER")){
 
             fragment = new HomeFragment();
-        }else if(user.get("type").equals("SELLER")){
+        }else if(Objects.equals(user.get("type"), "SELLER")){
             fragment = new SellerFragment();
         }else{
             fragment = new HomeFragment();

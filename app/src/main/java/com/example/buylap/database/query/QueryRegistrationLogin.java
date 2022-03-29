@@ -14,29 +14,29 @@ public class QueryRegistrationLogin {
     }
     public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
 
-        String query = "INSERT INTO `users` (`username`, `mail`, `password`, `token`) " +
-                        "VALUES ('"+ beanUser.getUsername()+"', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
+        String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`, `token`) " +
+                        "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
          stmt.executeUpdate(query);
     }
     public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
 
-        String query = "INSERT INTO `sellers` (`businessname`, `mail`, `password`) " +
-                        "VALUES ('"+ beanSeller.getUsername()+"', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
+        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`, `token`) " +
+                        "VALUES ('"+ beanSeller.getUsername()+"', 'seller', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"','0');";
         stmt.executeUpdate(query);
     }
 
     public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
         String query = "SELECT * " +
                         "FROM users " +
-                        "WHERE username = '"+ beanUser.getUsername()+"' AND password = '"+beanUser.getPassword()+"';";
+                        "WHERE username = '"+ beanUser.getUsername()+"' AND type = 'users' AND password = '"+beanUser.getPassword()+"';";
         return stmt.executeQuery(query);
 
     }
 
     public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
         String query = "SELECT * " +
-                        "FROM sellers " +
-                        "WHERE businessname = '"+ beanSeller.getUsername()+"' AND password = '"+beanSeller.getPassword()+"';";
+                        "FROM users " +
+                        "WHERE username = '"+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
         return stmt.executeQuery(query);
     }
 }

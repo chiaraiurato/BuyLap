@@ -7,8 +7,6 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;

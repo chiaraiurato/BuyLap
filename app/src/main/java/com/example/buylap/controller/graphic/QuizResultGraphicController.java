@@ -5,11 +5,9 @@ import android.net.Uri;
 import android.view.View;
 
 import com.example.buylap.controller.applicative.TakeQuizController;
-import com.example.buylap.singleton.UserSingleton;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.Category;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.QuizResultActivity;
