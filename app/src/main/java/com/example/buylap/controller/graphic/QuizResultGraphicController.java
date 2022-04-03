@@ -10,6 +10,7 @@ import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.Category;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
+import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.view.QuizResultActivity;
 
 import java.util.ArrayList;
@@ -21,9 +22,11 @@ public class QuizResultGraphicController {
 
     private TakeQuizController takeQuizController;
     private QuizResultActivity quizResultActivity;
+    private BudgetActivity budgetActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
     private SessionManager sessionManager;
+    private double price;
 
      public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          this.build =  new ArrayList<>();
@@ -33,20 +36,24 @@ public class QuizResultGraphicController {
          this.beanBuild = new ArrayList<>();
          this.sessionManager = new SessionManager(quizResultActivity.getApplicationContext());
      }
+     public QuizResultGraphicController(BudgetActivity budgetActivity){
+         this.budgetActivity = budgetActivity;
+     }
 
      public List<Category> setBuild(String a, String b, String c){
          beanAnswer= takeQuizController.getBeanAnswer(a, b, c);
+
          try {
-             beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3());
+             beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), price);
          } catch (DAOException e) {
              e.printStackTrace();
          }
-         build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles()));
-         build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles()));
-         build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles()));
-         build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles()));
-         build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles()));
-         build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles()));
+         build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
+         build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
+         build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
+         build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
+         build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
+         build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
 
          return build;
      }
@@ -81,8 +88,12 @@ public class QuizResultGraphicController {
     public void initializeSession(View view) {
 
         HashMap<String, String> user = sessionManager.getUserDetails();
-        if(user.get("type") == "GUEST"){
+        if(user.get("type").equals("GUEST")){
             quizResultActivity.setMessageGuest(view);
         }
+    }
+
+    public void sendPrice(double price) {
+         this.price = price;
     }
 }

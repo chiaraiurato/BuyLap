@@ -28,7 +28,7 @@ public class QueryRegistrationLogin {
     public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
         String query = "SELECT * " +
                         "FROM users " +
-                        "WHERE username = '"+ beanUser.getUsername()+"' AND type = 'users' AND password = '"+beanUser.getPassword()+"';";
+                        "WHERE username = '"+ beanUser.getUsername()+"' AND type = 'user' AND password = '"+beanUser.getPassword()+"';";
         return stmt.executeQuery(query);
 
     }

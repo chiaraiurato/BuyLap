@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.buylap.R;
+import com.example.buylap.controller.graphic.QuizResultGraphicController;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,13 +16,14 @@ import android.widget.TextView;
 
 public class BudgetActivity extends AppCompatActivity {
 
-
+    private TextView budget;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
+        QuizResultGraphicController quizResultGraphicController = new QuizResultGraphicController(this);
         SeekBar mySeekbar = findViewById(R.id.seekBar);
-        TextView budget = findViewById(R.id.budget);
+        budget = findViewById(R.id.budget);
         TextView next = findViewById(R.id.next_btn);
         mySeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -43,9 +45,13 @@ public class BudgetActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String bg = budget.getText().toString();
+                double priceTotal =Double.parseDouble(bg.substring(0, bg.length() -2 ));
+                quizResultGraphicController.sendPrice(priceTotal);
                 Intent intent = new Intent(BudgetActivity.this, TakeQuizActivity.class);
                 startActivity(intent);
             }
         });
     }
+
 }

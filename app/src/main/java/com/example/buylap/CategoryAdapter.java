@@ -41,8 +41,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.titleTxt.setText(String.valueOf(category.get(position).getTitle()));
-
         holder.subTitleTxt.setText(String.valueOf(category.get(position).getSubtitles()));
+        String priceFormat =category.get(position).getPrice() + " $";
+        holder.price.setText(priceFormat);
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(category.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
@@ -59,6 +60,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView titleTxt;
         TextView subTitleTxt;
+        TextView price;
+
         ImageView imageCat;
         OnCatListener onCatListener;
         Context context;
@@ -68,6 +71,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             titleTxt = itemView.findViewById(R.id.titleTxt2);
             subTitleTxt = itemView.findViewById(R.id.titleTxt3);
             imageCat = itemView.findViewById(R.id.img_view);
+            price = itemView.findViewById(R.id.price);
             this.onCatListener=onCatListener;
             itemView.setOnClickListener(this);
         }

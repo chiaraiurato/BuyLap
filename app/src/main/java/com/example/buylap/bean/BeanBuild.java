@@ -4,6 +4,17 @@ public class BeanBuild {
     private String title;
     private String subtitles;
     private String urlEbay;
+    private Float price;
+
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
+    }
+
+
 
     public String getTitle() {
         return title;

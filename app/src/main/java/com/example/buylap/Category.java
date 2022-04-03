@@ -4,13 +4,21 @@ public class Category {
     private String title;
     private String url;
     private String subtitles;
+    private double price;
 
-    public Category(String title, String url, String subtitles){
+    public Category(String title, String url, String subtitles, double price){
         this.title =title;
         this.url= url;
         this.subtitles = subtitles;
+        this.price = price;
+    }
+    public double getPrice() {
+        return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
     public String getTitle() {
         return title;
     }
