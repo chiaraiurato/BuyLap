@@ -45,7 +45,7 @@ public class RegistrationActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String type = registrationGraphicController.selectTypeAccount(username.getText().toString(), email.getText().toString(), password.getText().toString(), userRadio, sellerRadio);
+                String type = registrationGraphicController.selectTypeAccount(userRadio, sellerRadio);
                 switch (type){
                     case "USER":
                         try {

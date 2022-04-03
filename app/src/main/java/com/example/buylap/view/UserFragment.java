@@ -9,13 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.buylap.R;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.UserFragmentGraphicController;
-
-import org.w3c.dom.Text;
 
 public class UserFragment extends Fragment {
 
@@ -63,7 +59,7 @@ public class UserFragment extends Fragment {
             }
         });
         TextView editPassword;
-        editPassword = view.findViewById(R.id.editPw);
+        editPassword = view.findViewById(R.id.numberCard);
         editPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

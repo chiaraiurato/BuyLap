@@ -12,7 +12,7 @@
         android:layout_width="338dp"
         android:layout_height="191dp"
         android:layout_gravity="clip_horizontal|fill_horizontal"
-        android:background="@drawable/creditcard_bg"
+        android:background="@drawable/gradient"
         app:circularflow_defaultRadius="28dp"
         app:circularflow_radiusInDP="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,37 +23,38 @@
         app:layout_constraintVertical_bias="0.279">
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/numberCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/zcool_regular"
-            android:text="@string/card"
-            android:textColor="@color/white"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/editPw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
             android:fontFamily="@font/zcool_regular"
             android:text="@string/_0000"
-            android:textColor="@color/bluetext"
+            android:textColor="@color/bluebackground"
             android:textSize="28sp"
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/date_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="135dp"
             android:fontFamily="@font/zcool_regular"
-            android:text="@string/_00_00"
-            android:textColor="@color/bluetext"
+            android:text="@string/_0000_00"
+            android:textColor="@color/bluebackground"
+            android:textSize="24sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/card_holder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="135dp"
+            android:fontFamily="@font/zcool_regular"
+            android:text=""
+            android:textColor="@color/bluebackground"
             android:textSize="24sp"
             tools:ignore="TextContrastCheck" />
 
@@ -61,25 +62,50 @@
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="29dp"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="@string/mastercard"
             android:src="@drawable/mastercard" />
 
-        <ImageView
-            android:id="@+id/add_cart_btn"
+        <TextView
+            android:id="@+id/tVcard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/addpayment"
-            android:src="@drawable/ic_baseline_add_card_24" />
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/zcool_regular"
+            android:text="Card number"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tVexpire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="110dp"
+            android:fontFamily="@font/zcool_regular"
+            android:text="Expire date"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/card_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="110dp"
+            android:fontFamily="@font/zcool_regular"
+            android:text="Card holder name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
     </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="195dp"
-        android:layout_height="216dp"
+        android:layout_width="239dp"
+        android:layout_height="207dp"
 
         android:contentDescription="@string/account_balance"
         android:src="@drawable/ic_baseline_circle_24"
@@ -108,14 +134,15 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0,00 $"
-        android:textSize="38sp"
         android:fontFamily="@font/zcool_regular"
-        android:textColor="@color/bluebackground"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.61" />
 
     <Button
         android:id="@+id/Move_signin"
@@ -124,15 +151,49 @@
         android:fontFamily="@font/zcool_regular"
         android:text="@string/cashout"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/bluebutton"
         android:textSize="24sp"
-        app:backgroundTint="#282C4C"
-        app:cornerRadius="28dp"
+        android:background="@drawable/bg_greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Points Earned"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <ImageView
+        android:id="@+id/delete_card_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/body_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <ImageView
+        android:id="@+id/add_cart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/addpayment"
+        android:src="@drawable/ic_baseline_add_card_24"
+        app:layout_constraintBottom_toTopOf="@+id/body_container"
+        app:layout_constraintEnd_toStartOf="@+id/delete_card_btn"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@ public class QueryRegistrationLogin {
 
         String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`, `token`) " +
                         "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
-         stmt.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
 

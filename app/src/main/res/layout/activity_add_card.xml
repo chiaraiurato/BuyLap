@@ -11,6 +11,7 @@
         android:layout_width="313dp"
         android:layout_height="53dp"
         android:layout_marginStart="44dp"
+        android:inputType="date"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
         android:text="Add payment"
@@ -55,7 +56,7 @@
         android:drawableLeft="@drawable/ic_baseline_numbers_24"
         android:fontFamily="@font/zcool_regular"
         android:hint="Card number"
-        android:inputType="numberDecimal"
+        android:inputType="phone"
         android:paddingLeft="20dp"
         android:textColor="#535986"
         android:textColorHint="#535986"
@@ -100,8 +101,7 @@
 
         android:textColor="@color/bluebutton"
         android:textSize="24sp"
-        app:backgroundTint="@color/green"
-        app:cornerRadius="28dp"
+        android:background="@drawable/bg_greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -115,13 +115,18 @@
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
         android:ems="10"
-        android:inputType="date"
         android:paddingLeft="20dp"
         android:textColor="#535986"
-        android:hint="Expire date"
+        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+        android:hint="yyyy-mm"
+        android:inputType="phone"
+        android:drawablePadding="20dp"
         android:fontFamily="@font/zcool_regular"
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/save_card"
         app:layout_constraintStart_toStartOf="@+id/number_card" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

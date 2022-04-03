@@ -58,8 +58,9 @@ public class RegistrationGraphicController {
         goToNavigationActivity();
     }
 
-    public String selectTypeAccount(String username, String email, String password, RadioButton userRadio, RadioButton sellerRadio) {
-        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+    public String selectTypeAccount( RadioButton userRadio, RadioButton sellerRadio) {
+        if (TextUtils.isEmpty(registrationActivity.sendUsername()) || TextUtils.isEmpty(registrationActivity.sendEmail())
+                || TextUtils.isEmpty(registrationActivity.sendPassword())) {
             Toast.makeText(registrationActivity, "All field required", Toast.LENGTH_SHORT).show();
             return "";
         } else if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
@@ -69,4 +70,5 @@ public class RegistrationGraphicController {
             return "USER";
         return "SELLER";
     }
+
 }

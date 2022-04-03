@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/editPw"
+        android:id="@+id/numberCard"
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:layout_marginTop="156dp"
@@ -111,7 +111,7 @@
         android:theme="@style/SCBSwitch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editPw"
+        app:layout_constraintStart_toStartOf="@+id/numberCard"
         app:layout_constraintTop_toBottomOf="@+id/notification" />
 
     <TextView
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPw" />
+        app:layout_constraintTop_toBottomOf="@+id/numberCard" />
 
     <Button
         android:id="@+id/signoutBtn"
@@ -141,8 +141,7 @@
         android:textAllCaps="false"
         android:textColor="#1F2341"
         android:textSize="24sp"
-        app:backgroundTint="#41CD7D"
-        app:cornerRadius="28dp"
+        android:background="@drawable/bg_greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
