@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +19,9 @@ import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
+
 
 public class CashbackFragment extends Fragment {
 
@@ -25,6 +29,8 @@ public class CashbackFragment extends Fragment {
     private TextView numberCard;
     private TextView dateCard;
     private TextView cardHolderName;
+    private TextView pointsEarned;
+    private Button cashout;
     public CashbackFragment() {
         // Required empty public constructor
     }
@@ -38,12 +44,15 @@ public class CashbackFragment extends Fragment {
         numberCard = view.findViewById(R.id.numberCard);
         dateCard = view.findViewById(R.id.date_card);
         cardHolderName = view.findViewById(R.id.card_holder_name);
+        pointsEarned = view.findViewById(R.id.points_earned);
+        cashout = view.findViewById(R.id.cashout_btn);
+
         this.cashbackGraphicController = new CashbackGraphicController(this);
         try {
-            cashbackGraphicController.uploadCreditCardIfExist();
+            cashbackGraphicController.uploadCreditCardAndPoints();
         } catch (DAOException ignored) {
 
-        } catch (BeanException e) {
+        } catch (BeanException | SQLException | FileNotFoundException e) {
             e.printStackTrace();
         }
         addCart.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +60,19 @@ public class CashbackFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), AddCardActivity.class);
                 startActivity(intent);
+            }
+        });
+        cashout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    cashbackGraphicController.cashOutPoints();
+                } catch (BeanException | SQLException | FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (DAOException e) {
+                    //ignored
+                }
             }
         });
         deleteCart.setOnClickListener(new View.OnClickListener() {
@@ -80,5 +102,12 @@ public class CashbackFragment extends Fragment {
         numberCard.setText("**** **** **** 0000");
         dateCard.setText("00-00");
         cardHolderName.setText("");
+    }
+
+    public void setPoints(int points) {
+        pointsEarned.setText(String.valueOf(points));
+    }
+    public void cashOutPoints(){
+        pointsEarned.setText("0");
     }
 }

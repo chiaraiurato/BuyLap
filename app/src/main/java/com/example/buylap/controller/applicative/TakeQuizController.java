@@ -31,7 +31,7 @@ public class TakeQuizController {
         component[5] = "powersupply";
 
         int index;
-        List<BeanBuild> beanBuild = new ArrayList<>();
+        List<BeanBuild> beanBuildList = new ArrayList<>();
         List<ModelBuild> modelBuild = new ArrayList<>();
         double counter = 0.0;
         for(index = 0; index < 6; index++){
@@ -41,7 +41,7 @@ public class TakeQuizController {
 
                 counter =counter + modelBuild.get(index).getPrice();
                 if(index == 5 && counter > price){
-
+                        //do something
                 }
 
             } catch (SQLException e) {
@@ -49,14 +49,14 @@ public class TakeQuizController {
             }
         }
         for (index =0; index <6; index++){
-            BeanBuild beanBuildinstance = new BeanBuild();
-            beanBuildinstance.setTitle(modelBuild.get(index).getName());
-            beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
-            beanBuildinstance.setUrlEbay(modelBuild.get(index).getUrl());
-            beanBuildinstance.setPrice(modelBuild.get(index).getPrice());
-            beanBuild.add(beanBuildinstance);
+            BeanBuild beanBuild = new BeanBuild();
+            beanBuild.setTitle(modelBuild.get(index).getName());
+            beanBuild.setSubtitles(modelBuild.get(index).getSubtitles());
+            beanBuild.setUrlEbay(modelBuild.get(index).getUrl());
+            beanBuild.setPrice(modelBuild.get(index).getPrice());
+            beanBuildList.add(beanBuild);
         }
-        return beanBuild;
+        return beanBuildList;
 
     }
 

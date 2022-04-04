@@ -12,6 +12,8 @@ import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 public class CashbackGraphicController {
@@ -49,12 +51,14 @@ public class CashbackGraphicController {
             Log.d("DATABASE", "Credit card saved");
         }
     }
-    public void uploadCreditCardIfExist() throws DAOException, BeanException {
+    public void uploadCreditCardAndPoints() throws DAOException, BeanException, SQLException, FileNotFoundException {
 
         BeanUser beanUser= new BeanUser();
         beanUser.setUsername(user.get("user"));
         BeanCard beanCard= getCashbackController.uploadCreditCard(beanUser);
+        int points = getCashbackController.uploadPoints(beanUser);
         cashbackFragment.setCreditCard(beanCard);
+        cashbackFragment.setPoints(points);
     }
 
     public void deleteCreditCard() throws BeanException, DAOException {
@@ -63,5 +67,15 @@ public class CashbackGraphicController {
         beanSession.setUsername(user.get("user"));
         getCashbackController.deleteCreditCard(beanSession);
         cashbackFragment.deleteCreditCard();
+    }
+
+
+    public void cashOutPoints() throws BeanException, DAOException, SQLException, FileNotFoundException {
+        BeanSession beanSession = new BeanSession();
+
+        beanSession.setUsername(user.get("user"));
+        getCashbackController.deletePoints(beanSession);
+        cashbackFragment.cashOutPoints();
+
     }
 }

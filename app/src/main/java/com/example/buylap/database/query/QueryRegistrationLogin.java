@@ -1,6 +1,7 @@
 package com.example.buylap.database.query;
 
 import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
 
 import java.sql.ResultSet;
@@ -38,5 +39,18 @@ public class QueryRegistrationLogin {
                         "FROM users " +
                         "WHERE username = '"+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
         return stmt.executeQuery(query);
+    }
+
+    public static ResultSet searchPoints(Statement statement, BeanUser beanUser) throws SQLException{
+        String query = "SELECT * " +
+                "FROM points_earned " +
+                "WHERE username = '"+beanUser.getUsername()+"'";
+        return statement.executeQuery(query);
+    }
+
+    public static void deletePoints(Statement statement, BeanSession beanSession) throws SQLException {
+        String query = "DELETE FROM points_earned " +
+                "WHERE username = '"+beanSession.getUsername()+"';";
+        statement.executeUpdate(query);
     }
 }

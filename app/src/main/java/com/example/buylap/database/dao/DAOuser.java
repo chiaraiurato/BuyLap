@@ -2,6 +2,7 @@ package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
 
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryRegistrationLogin;
@@ -65,5 +66,48 @@ public class DAOuser {
             }
         }
         return modelUser;
+    }
+
+    public static int uploadPoints(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        int recordPoint;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanUser);
+            if (!rs.first()) {
+                throw new DAOException("No points associated to user");
+            }
+            recordPoint = rs.getInt(3);
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return recordPoint;
+    }
+
+    public static void deletePoints(BeanSession beanSession) throws FileNotFoundException, SQLException {
+        Connection connection = null;
+        Statement statement = null;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+             QueryRegistrationLogin.deletePoints(statement, beanSession);
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
     }
 }
