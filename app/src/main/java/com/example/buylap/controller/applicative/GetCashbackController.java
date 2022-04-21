@@ -24,11 +24,11 @@ public class GetCashbackController {
         }
     }
 
-    public BeanCard uploadCreditCard( BeanUser beanUser) throws DAOException {
+    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException {
         ModelCreditCard modelCreditCard;
         BeanCard beanCard = new BeanCard();
         try {
-            modelCreditCard = DAOcard.searchCard(beanUser);
+            modelCreditCard = DAOcard.searchCard(beanSession);
             beanCard.setCardHolderName(modelCreditCard.getName());
             beanCard.setCardNumber(modelCreditCard.getNumber());
             beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
@@ -48,12 +48,12 @@ public class GetCashbackController {
         }
     }
 
-    public int uploadPoints(BeanUser beanUser) throws DAOException, SQLException, FileNotFoundException {
+    public int uploadPoints(BeanSession beanSession) throws DAOException, SQLException, FileNotFoundException {
 
-        return DAOuser.uploadPoints(beanUser);
+        return DAOuser.uploadPoints(beanSession);
     }
 
-    public void deletePoints(BeanSession beanSession) throws DAOException, SQLException, FileNotFoundException{
+    public void deletePoints(BeanSession beanSession) throws SQLException, FileNotFoundException{
         DAOuser.deletePoints(beanSession);
     }
 }

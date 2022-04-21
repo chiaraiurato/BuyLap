@@ -58,13 +58,6 @@ public class LoginGraphicController {
             beanSeller = loginController.searchSeller(beanSeller);
             sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             gotoNavigationActivity();
-            /*
-            SellerSingleton holder = SellerSingleton.getInstance();
-            holder.setSeller(beanSeller);
-            Intent intent = new Intent(loginActivity, NavigationActivity.class);
-            loginActivity.startActivity(intent);
-
-             */
     }
     public String verifyFields( RadioButton userRadio, RadioButton sellerRadio) {
         if (loginActivity.sendUsername().isEmpty() || loginActivity.sendPassword().isEmpty()) {

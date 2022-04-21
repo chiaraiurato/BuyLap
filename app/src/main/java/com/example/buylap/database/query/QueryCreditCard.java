@@ -17,10 +17,10 @@ public class QueryCreditCard {
         stmt.executeUpdate(query);
     }
 
-    public static ResultSet searchCard(Statement statement, BeanUser beanUser) throws SQLException {
+    public static ResultSet searchCard(Statement statement, BeanSession beanSession) throws SQLException {
         String query = "SELECT * " +
                 "FROM creditcard " +
-                "WHERE username = '"+ beanUser.getUsername()+"';";
+                "WHERE username = '"+ beanSession.getUsername()+"';";
         return statement.executeQuery(query);
     }
 

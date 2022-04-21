@@ -38,8 +38,9 @@ public class DAObuild {
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
-            Float recordPrice = rs.getFloat(6);
-            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
+            String recordPrice = rs.getString(6);
+
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , Float.valueOf(recordPrice));
             rs.close();
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public class CashbackFragment extends Fragment {
     private TextView dateCard;
     private TextView cardHolderName;
     private TextView pointsEarned;
-    private Button cashout;
+
     public CashbackFragment() {
         // Required empty public constructor
     }
@@ -45,15 +46,28 @@ public class CashbackFragment extends Fragment {
         dateCard = view.findViewById(R.id.date_card);
         cardHolderName = view.findViewById(R.id.card_holder_name);
         pointsEarned = view.findViewById(R.id.points_earned);
-        cashout = view.findViewById(R.id.cashout_btn);
+        Button cashout = view.findViewById(R.id.cashout_btn);
 
-        this.cashbackGraphicController = new CashbackGraphicController(this);
         try {
-            cashbackGraphicController.uploadCreditCardAndPoints();
-        } catch (DAOException ignored) {
-
+            this.cashbackGraphicController = new CashbackGraphicController(this);
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
+        try {
+            cashbackGraphicController.uploadCreditCard();
+        } catch (DAOException e) {
+                Log.d("failed credit card", "error");
+                deleteCreditCard();
         } catch (BeanException | SQLException | FileNotFoundException e) {
             e.printStackTrace();
+        }
+        try {
+            cashbackGraphicController.uploadPoints();
+        } catch (DAOException e) {
+            Log.d("Upload failed points", "error");
+            cashOutPoints();
+        } catch (SQLException | FileNotFoundException throwables) {
+            throwables.printStackTrace();
         }
         addCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +95,7 @@ public class CashbackFragment extends Fragment {
                 try {
                     cashbackGraphicController.deleteCreditCard();
                 } catch (BeanException | DAOException e) {
-                    //risovere exception bean
+                    //resolve exception bean
                     e.printStackTrace();
                 }
             }

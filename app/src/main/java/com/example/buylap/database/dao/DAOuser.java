@@ -1,6 +1,7 @@
 package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
+import android.util.Log;
 
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
@@ -68,7 +69,7 @@ public class DAOuser {
         return modelUser;
     }
 
-    public static int uploadPoints(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+    public static int uploadPoints(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         int recordPoint;
@@ -79,9 +80,10 @@ public class DAOuser {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanUser);
+            ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanSession);
             if (!rs.first()) {
-                throw new DAOException("No points associated to user");
+                Log.d("DATABASE", "No points associated to user");
+                return 0;
             }
             recordPoint = rs.getInt(3);
             rs.close();

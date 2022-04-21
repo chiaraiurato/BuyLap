@@ -1,5 +1,8 @@
 package com.example.buylap.controller.applicative;
 
+import android.util.Log;
+import android.widget.Toast;
+
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.database.dao.DAObuild;
@@ -41,7 +44,7 @@ public class TakeQuizController {
 
                 counter =counter + modelBuild.get(index).getPrice();
                 if(index == 5 && counter > price){
-                        //do something
+                    Log.d("TAKE QUIZ", "counter > price (counter ->"+ counter);
                 }
 
             } catch (SQLException e) {

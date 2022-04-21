@@ -15,14 +15,14 @@ public class QueryRegistrationLogin {
     }
     public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
 
-        String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`, `token`) " +
-                        "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"', '0');";
+        String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`) " +
+                        "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"');";
         stmt.executeUpdate(query);
     }
     public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
 
-        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`, `token`) " +
-                        "VALUES ('"+ beanSeller.getUsername()+"', 'seller', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"','0');";
+        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`) " +
+                        "VALUES ('"+ beanSeller.getUsername()+"', 'seller', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
         stmt.executeUpdate(query);
     }
 
@@ -41,10 +41,10 @@ public class QueryRegistrationLogin {
         return stmt.executeQuery(query);
     }
 
-    public static ResultSet searchPoints(Statement statement, BeanUser beanUser) throws SQLException{
+    public static ResultSet searchPoints(Statement statement, BeanSession beanSession) throws SQLException{
         String query = "SELECT * " +
                 "FROM points_earned " +
-                "WHERE username = '"+beanUser.getUsername()+"'";
+                "WHERE username = '"+beanSession.getUsername()+"'";
         return statement.executeQuery(query);
     }
 

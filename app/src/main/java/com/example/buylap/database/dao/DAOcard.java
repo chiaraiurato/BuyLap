@@ -45,7 +45,7 @@ public class DAOcard {
         }
     }
 
-    public static ModelCreditCard searchCard(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         ModelCreditCard modelCreditCard;
@@ -56,7 +56,7 @@ public class DAOcard {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryCreditCard.searchCard(statement, beanUser);
+            ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
             if (!rs.first()) {
                 throw new DAOException("Entry error");
             }
