@@ -45,6 +45,7 @@ public class HomeFragment extends Fragment {
                homeGraphicController.goToTakeQuiz();
             }
         });
+
         recyclerView = view.findViewById(R.id.RecyclerMostView);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);

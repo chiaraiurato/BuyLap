@@ -18,5 +18,11 @@
         <item name="android:progressTint">@color/green</item>
         <item name="android:thumbTint">@color/green</item>
     </style>
+    <style name="Buylap.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:itemBackground">#535986</item>
+        <item name="android:fontFamily">@font/zcool_regular</item>
+    </style>
+
 
 </resources>

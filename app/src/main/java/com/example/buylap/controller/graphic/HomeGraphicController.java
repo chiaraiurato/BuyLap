@@ -12,6 +12,7 @@ import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.view.HomeFragment;
+import com.example.buylap.view.InsertComponentActivity;
 import com.example.buylap.view.SellerFragment;
 
 import java.util.HashMap;
@@ -72,5 +73,10 @@ public class HomeGraphicController {
             intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
             homeFragment.startActivity(intent);
         }
+    }
+
+    public void gotoInsertComponent() {
+        Intent intent = new Intent(sellerFragment.getContext(), InsertComponentActivity.class);
+        sellerFragment.startActivity(intent);
     }
 }

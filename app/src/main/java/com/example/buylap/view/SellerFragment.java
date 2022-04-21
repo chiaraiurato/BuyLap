@@ -43,7 +43,13 @@ public class SellerFragment extends Fragment {
             }
         });
         homeGraphicController.initializeSessionForSeller(view);
-
+        Button insertComponent = view.findViewById(R.id.insertComp);
+        insertComponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeGraphicController.gotoInsertComponent();
+            }
+        });
         RecyclerView.Adapter adapter = new AnalyticsAdapter(homeGraphicController.setAdapterAnalytics());
 
         RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
+            android:name=".view.InsertComponentActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.AddCardActivity"
             android:exported="false" />
         <activity

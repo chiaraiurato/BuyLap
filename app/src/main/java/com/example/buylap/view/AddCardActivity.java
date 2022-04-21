@@ -2,14 +2,10 @@ package com.example.buylap.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,8 +13,6 @@ import com.example.buylap.R;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-
-import java.util.Calendar;
 
 public class AddCardActivity extends AppCompatActivity {
 
@@ -32,12 +26,12 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController(this);
-        name = findViewById(R.id.name_card);
-        numberCard = findViewById(R.id.number_card);
+        name = findViewById(R.id.titles);
+        numberCard = findViewById(R.id.subtitles);
         dateFormat = findViewById(R.id.editTextDate);
         cvv = findViewById(R.id.cvv);
 
-        Button saveCard = findViewById(R.id.save_card);
+        Button saveCard = findViewById(R.id.save_item);
 
         saveCard.setOnClickListener(new View.OnClickListener() {
             @Override
