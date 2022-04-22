@@ -13,16 +13,18 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.example.buylap.R;
+import com.example.buylap.controller.graphic.InsertComponentGraphicController;
 
 
-public class InsertComponentActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class InsertComponentActivity extends AppCompatActivity  {
     private TextView choose;
+    private InsertComponentGraphicController insertComponentGraphicController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_component);
         choose = findViewById(R.id.type_item);
-
+        insertComponentGraphicController = new InsertComponentGraphicController(this);
         Button save = findViewById(R.id.save_item);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,38 +33,26 @@ public class InsertComponentActivity extends AppCompatActivity implements PopupM
             }
         });
     }
-  public void showPopup(View view){
-      Context wrapper = new ContextThemeWrapper(this, R.style.Buylap_PopupMenu);
-      PopupMenu popupMenu = new PopupMenu(wrapper, view);
-      popupMenu.setOnMenuItemClickListener(this);
-      popupMenu.inflate(R.menu.menu_item);
-      popupMenu.show();
 
-  }
-
-    @Override
-    public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.nav_cpu:
-                choose.setText(R.string.Cpu);
-                return true;
-            case R.id.nav_ram:
-                choose.setText(R.string.Ram);
-                return true;
-            case R.id.nav_motherboard:
-                choose.setText(R.string.Motherboard);
-                return true;
-            case R.id.nav_videocard:
-                choose.setText(R.string.Video_card);
-                return true;
-            case R.id.nav_powersupply:
-                choose.setText(R.string.Power_supply);
-                return true;
-            case R.id.nav_ssd:
-                choose.setText(R.string.Ssd);
-                return true;
-            default:
-                return false;
-        }
+    public void showPopup(View view){
+        insertComponentGraphicController.show(view);
+    }
+    public void setCpu(){
+        choose.setText(R.string.Cpu);
+    }
+    public void setRam() {
+        choose.setText(R.string.Ram);
+    }
+    public void setMotherboard() {
+        choose.setText(R.string.Motherboard);
+    }
+    public void setVideoCard() {
+        choose.setText(R.string.Video_card);
+    }
+    public void setPowerSupply() {
+        choose.setText(R.string.Power_supply);
+    }
+    public void setSsd() {
+        choose.setText(R.string.Ssd);
     }
 }

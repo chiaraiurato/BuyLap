@@ -1,6 +1,7 @@
 package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
+import android.util.Log;
 
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;
@@ -38,9 +39,8 @@ public class DAObuild {
             String recordName = rs.getString(2);
             String recordSubtitles = rs.getString(3);
             String recordUrl = rs.getString(4);
-            String recordPrice = rs.getString(6);
-
-            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , Float.valueOf(recordPrice));
+            float recordPrice = rs.getFloat(6);
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
             rs.close();
 
 

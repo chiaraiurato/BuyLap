@@ -46,7 +46,7 @@ public class BudgetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String bg = budget.getText().toString();
-                double priceTotal =Double.parseDouble(bg.substring(0, bg.length() -2 ));
+                float priceTotal = Float.parseFloat(bg.substring(0, bg.length() -2 ));
                 quizResultGraphicController.sendPrice(priceTotal);
                 Intent intent = new Intent(BudgetActivity.this, TakeQuizActivity.class);
                 startActivity(intent);

@@ -4,9 +4,9 @@ public class Category {
     private String title;
     private String url;
     private String subtitles;
-    private double price;
+    private float price;
 
-    public Category(String title, String url, String subtitles, double price){
+    public Category(String title, String url, String subtitles, float price){
         this.title =title;
         this.url= url;
         this.subtitles = subtitles;
@@ -16,7 +16,7 @@ public class Category {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
     public String getTitle() {

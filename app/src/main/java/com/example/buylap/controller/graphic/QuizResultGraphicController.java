@@ -2,6 +2,7 @@ package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 
 import com.example.buylap.controller.applicative.TakeQuizController;
@@ -22,9 +23,9 @@ public class QuizResultGraphicController {
 
     private TakeQuizController takeQuizController;
     private QuizResultActivity quizResultActivity;
-    private BudgetActivity budgetActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
+    private BudgetActivity budgetActivity;
     private SessionManager sessionManager;
     private double price;
 
@@ -36,11 +37,12 @@ public class QuizResultGraphicController {
          this.beanBuild = new ArrayList<>();
          this.sessionManager = new SessionManager(quizResultActivity.getApplicationContext());
      }
-     public QuizResultGraphicController(BudgetActivity budgetActivity){
-         this.budgetActivity = budgetActivity;
-     }
 
-     public List<Category> setBuild(String a, String b, String c){
+    public QuizResultGraphicController(BudgetActivity budgetActivity) {
+        this.budgetActivity = budgetActivity;
+    }
+
+    public List<Category> setBuild(String a, String b, String c){
          beanAnswer= takeQuizController.getBeanAnswer(a, b, c);
 
          try {
@@ -49,9 +51,13 @@ public class QuizResultGraphicController {
              e.printStackTrace();
          }
          build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
+         Log.d("MSG", "recordprice in float "+ beanBuild.get(0).getPrice());
          build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
+         Log.d("MSG", "recordprice in float "+ beanBuild.get(1).getPrice());
          build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
+         Log.d("MSG", "recordprice in float "+ beanBuild.get(2).getPrice());
          build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
+         Log.d("MSG", "recordprice in float "+ beanBuild.get(3).getPrice());
          build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
          build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
 
@@ -93,7 +99,7 @@ public class QuizResultGraphicController {
         }
     }
 
-    public void sendPrice(double price) {
+    public void sendPrice(float price) {
          this.price = price;
     }
 }

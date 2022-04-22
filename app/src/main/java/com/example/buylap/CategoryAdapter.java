@@ -42,7 +42,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.titleTxt.setText(String.valueOf(category.get(position).getTitle()));
         holder.subTitleTxt.setText(String.valueOf(category.get(position).getSubtitles()));
-        String priceFormat =category.get(position).getPrice() + " $";
+        String priceFormat =String.format("%.2f",category.get(position).getPrice() )+ " $";
         holder.price.setText(priceFormat);
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(category.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
 

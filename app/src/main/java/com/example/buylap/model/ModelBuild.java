@@ -4,19 +4,19 @@ public class ModelBuild {
     private String name;
     private String subtitles;
     private String url;
-    private Float price;
+    private float price;
 
-    public ModelBuild(String name, String subtitles, String url, Float price) {
+    public ModelBuild(String name, String subtitles, String url, float price) {
         this.name = name;
         this.subtitles = subtitles;
         this.url = url;
         this.price = price;
     }
-    public Float getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
     public String getName() {
