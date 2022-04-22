@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,9 +19,10 @@ import com.example.buylap.exceptions.DAOException;
 public class AddCardActivity extends AppCompatActivity {
 
     private TextView name;
-    private TextView numberCard;
+    private EditText numberCard;
     private EditText dateFormat;
     private TextView cvv;
+    private int prevCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +39,65 @@ public class AddCardActivity extends AppCompatActivity {
         saveCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    cashbackGraphicController.saveCreditCard();
-                } catch (DAOException | BeanException e) {
-                    e.printStackTrace();
+                if (cashbackGraphicController.verifyLengthOfCreditCard()) {
+                    try {
+
+                        cashbackGraphicController.saveCreditCard();
+                    } catch (DAOException | BeanException e) {
+                        e.printStackTrace();
+                    }
+                    openAct();
                 }
-                openAct();
             }
         });
 
+
+        numberCard.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String field = s.toString();
+                int currCount = field.length();
+
+                if (shouldIncrementOrDecrement(currCount, true)){
+                    appendOrStrip(field, true);
+                } else if (shouldIncrementOrDecrement(currCount, false)) {
+                    appendOrStrip(field, false);
+                }
+                prevCount = numberCard.getText().toString().length();
+            }
+        });
+    }
+    private boolean isAtSpaceDelimiter(int currCount) {
+        return currCount == 4 || currCount == 9 || currCount == 14;
+    }
+
+    private boolean shouldIncrementOrDecrement(int currCount, boolean shouldIncrement) {
+        if (shouldIncrement) {
+            return prevCount <= currCount && isAtSpaceDelimiter(currCount);
+        } else {
+            return prevCount > currCount && isAtSpaceDelimiter(currCount);
+        }
+    }
+
+    private void appendOrStrip(String field, boolean shouldAppend) {
+        StringBuilder sb = new StringBuilder(field);
+        if (shouldAppend) {
+            sb.append(" ");
+        } else {
+            sb.setLength(sb.length() - 1);
+        }
+        numberCard.setText(sb.toString());
+        numberCard.setSelection(sb.length());
     }
     private void openAct(){
         Intent intent = new Intent(this, NavigationActivity.class);

@@ -1,6 +1,7 @@
 package com.example.buylap.controller.graphic;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
@@ -64,6 +65,13 @@ public class CashbackGraphicController {
     public void uploadPoints() throws DAOException, SQLException, FileNotFoundException {
         int points = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(points);
+    }
+    public boolean verifyLengthOfCreditCard(){
+        if(addCardActivity.sendNumber().length() > 20) {
+            Toast.makeText(addCardActivity, "Length of credit card incorrect", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    return true;
     }
 
     public void deleteCreditCard() throws BeanException, DAOException {
