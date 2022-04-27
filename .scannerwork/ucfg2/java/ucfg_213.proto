@@ -1,0 +1,139 @@
+
+Ocom.example.buylap.database.JdbcConnection#getConnection()Ljava/sql/Connection;j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java &  (3"9*»
+2j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java' ((S—
+Œ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java' ((S<,
+*com.example.buylap.database.JdbcConnection"
+
+connection"__id*
+
+%11java.sql.Connection*
+1*‡
+4j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'" ((SÈ
+Ê
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'" ((S
+%11java.sql.Connection"qjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/Connection;*"
+java.sql.DriverManager*
+
+%8java.lang.String*
+
+%9java.lang.String*
+
+%10java.lang.String*
+2*ñ
+5j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java(6 ((:üú
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java(6 ((R
+%10java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+propjava.util.Properties*
+
+password2getProperty(Ljava/lang/String;)*
+4*í
+6j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'> '(dæ
+ª
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'> '(d
+%7java.lang.String"__concat*
+jdbc:mysql://*
+
+%6java.lang.Stringπ
+∂
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'> '(o
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+
+/androidûõ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java( ((4
+%9java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+propjava.util.Properties*
+
+username2getProperty(Ljava/lang/String;)*
+5*è
+7j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'" '(/òï
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java'N '(d
+%6java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+propjava.util.Properties*
+ip2getProperty(Ljava/lang/String;)*
+6*◊
+8j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java#E #(Rß
+§
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java#E #(`,
+%1&com.example.buylap.utils.ContextHolder"\com.example.buylap.utils.ContextHolder#getInstance()Lcom/example/buylap/utils/ContextHolder;**"(
+&com.example.buylap.utils.ContextHolderÒÓ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java#E #(m
+%2"<com.example.buylap.utils.ContextHolder#getContext()LContext;*.
+,
+%1&com.example.buylap.utils.ContextHolder2getContext()À»
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java#4 #(D/
+%3)com.example.buylap.utils.PropertiesReader")com.example.buylap.utils.PropertiesReaderÓ
+Î
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java#0 #(n
+%4"<com.example.buylap.utils.PropertiesReader#<init>(LContext;)V*1
+/
+%3)com.example.buylap.utils.PropertiesReader*
+
+%2Á
+‰
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java# #(o=
+propertiesReader)com.example.buylap.utils.PropertiesReader"__id*1
+/
+%3)com.example.buylap.utils.PropertiesReaderÂ‚
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java$ $(M
+%5java.util.Properties"acom.example.buylap.utils.PropertiesReader#getProperties(Ljava/lang/String;)Ljava/util/Properties;*?
+=
+propertiesReader)com.example.buylap.utils.PropertiesReader*
+db.properties2!getProperties(Ljava/lang/String;)±
+Æ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java$ $(N
+propjava.util.Properties"__id*
+
+%5java.util.Properties*
+7* 
+9j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java! !(–
+Õ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java! !(
+%0java.sql.Connection"__id*>*<,
+*com.example.buylap.database.JdbcConnection"
+
+connection*
+8
+1*–
+1j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. .(—
+Œ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. .("
+%13java.sql.Connection"__id*>*<,
+*com.example.buylap.database.JdbcConnection"
+
+connection"ä
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. .(#
+
+%13java.sql.ConnectionB.,
+*com.example.buylap.database.JdbcConnection

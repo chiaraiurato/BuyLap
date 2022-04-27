@@ -17,6 +17,7 @@ import com.example.buylap.view.QuizResultActivity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class QuizResultGraphicController {
     private List<Category> build;
@@ -27,7 +28,7 @@ public class QuizResultGraphicController {
     private List<BeanBuild> beanBuild;
     private BudgetActivity budgetActivity;
     private SessionManager sessionManager;
-    private double price;
+    private float price;
 
      public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          this.build =  new ArrayList<>();
@@ -51,13 +52,9 @@ public class QuizResultGraphicController {
              e.printStackTrace();
          }
          build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
-         Log.d("MSG", "recordprice in float "+ beanBuild.get(0).getPrice());
          build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
-         Log.d("MSG", "recordprice in float "+ beanBuild.get(1).getPrice());
          build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
-         Log.d("MSG", "recordprice in float "+ beanBuild.get(2).getPrice());
          build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
-         Log.d("MSG", "recordprice in float "+ beanBuild.get(3).getPrice());
          build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
          build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
 
@@ -93,13 +90,16 @@ public class QuizResultGraphicController {
 
     public void initializeSession(View view) {
 
-        HashMap<String, String> user = sessionManager.getUserDetails();
+        Map<String, String> user = sessionManager.getUserDetails();
         if(user.get("type").equals("GUEST")){
             quizResultActivity.setMessageGuest(view);
         }
     }
 
-    public void sendPrice(float price) {
-         this.price = price;
+    public void setPrice() {
+        String bg = budgetActivity.sendPrice();
+        float priceTotal = Float.parseFloat(bg.substring(0, bg.length() -2 ));
+        this.price = priceTotal;
+
     }
 }

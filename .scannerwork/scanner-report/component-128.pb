@@ -1,1 +1,1 @@
-€ 2javaX4hr:app/src/main/java/com/example/buylap/model/CreditCard.java
+€ 2javaXjhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

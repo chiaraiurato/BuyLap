@@ -1,1 +1,1 @@
-o 2javaX5hrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java
+o 2javaX"hr9app/src/main/java/com/example/buylap/bean/BeanSeller.java

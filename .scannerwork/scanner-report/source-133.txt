@@ -1,66 +1,91 @@
-package com.example.buylap;
+package com.example.buylap.database.dao;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.os.StrictMode;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
+import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryBuild;
+import com.example.buylap.database.query.QueryCreditCard;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.ModelCreditCard;
+import com.example.buylap.model.users.ModelUser;
 
-import com.bumptech.glide.Glide;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import java.util.ArrayList;
-import java.util.List;
+public class DAOcard {
 
-
-public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
-
-    List<MostViewed> mostViewDomains;
-
-    public MostViewAdapter(List<MostViewed> mostViewDomains) {
-        this.mostViewDomains = mostViewDomains;
+    private DAOcard() {
+        //private constructor
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder, parent, false);
-        return new ViewHolder(inflate);
-    }
+    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, FileNotFoundException {
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.titleTxt.setText(String.valueOf(mostViewDomains.get(position).getTitle()));
-        holder.subTitleTxt.setText(String.valueOf(mostViewDomains.get(position).getSubtitle()));
+        Connection connection = null;
+        Statement statement = null;
 
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(mostViewDomains.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
 
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .into(holder.removeItem);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        connection = JdbcConnection.getInstance().getConnection();
+
+        statement = connection.createStatement();
+        QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
 
     }
 
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        ModelCreditCard modelCreditCard;
+        try {
 
-    @Override
-    public int getItemCount() {
-        return mostViewDomains.size();
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
+            if (!rs.first()) {
+                throw new DAOException("Entry error");
+            }
+            String recordName = rs.getString(2);
+            String recordNumber = rs.getString(3);
+            String recordDate = rs.getString(4);
+            String recordCvv = rs.getString(5);
+            modelCreditCard = new ModelCreditCard(recordName, recordNumber, recordDate, recordCvv);
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelCreditCard;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTxt;
-        TextView subTitleTxt;
-        ImageView removeItem;
+    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        try {
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            titleTxt = itemView.findViewById(R.id.titleTxt);
-            subTitleTxt = itemView.findViewById(R.id.subTitleTxt);
-            removeItem = itemView.findViewById(R.id.img_view);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryCreditCard.deleteCard(statement, beanSession);
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
         }
     }
 }

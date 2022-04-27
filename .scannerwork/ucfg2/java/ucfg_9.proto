@@ -1,16 +1,16 @@
 
->com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java ("1*¤
+?com.example.buylap.model.ModelBuild#getName()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java ("1*¥
 1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (¸
-µ
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (¹
+¶
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
-%0java.lang.String"__id*0*.%
-#com.example.buylap.model.ModelBuild"
-url"
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
+%0java.lang.String"__id*1*/%
+#com.example.buylap.model.ModelBuild"
+name"
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelBuild.java (
 
 %0java.lang.StringB'%
 #com.example.buylap.model.ModelBuild

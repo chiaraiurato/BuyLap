@@ -1,16 +1,16 @@
 
-Bcom.example.buylap.bean.BeanBuild#getSubtitles()Ljava/lang/String;a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java ("1*¢
-1a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (º
-·
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
-%0java.lang.String"__id*4*2#
-!com.example.buylap.bean.BeanBuild"
-	subtitles"}
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
+?com.example.buylap.bean.BeanSession#getType()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSession.java ("1*¥
+1c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSession.java (¹
+¶
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSession.java (
+%0java.lang.String"__id*1*/%
+#com.example.buylap.bean.BeanSession"
+type"
+c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanSession.java (
 
-%0java.lang.StringB%#
-!com.example.buylap.bean.BeanBuild
+%0java.lang.StringB'%
+#com.example.buylap.bean.BeanSession

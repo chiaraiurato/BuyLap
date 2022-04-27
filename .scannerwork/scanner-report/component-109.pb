@@ -1,1 +1,1 @@
-m 2javaX+hrPapp/src/main/java/com/example/buylap/controller/applicative/LoginController.java
+m 2javaX)hr7app/src/main/java/com/example/buylap/bean/BeanCard.java

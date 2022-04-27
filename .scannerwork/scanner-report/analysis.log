@@ -1,47 +1,49 @@
 SonarCloud plugins:
-  - IaC Code Quality and Security 1.6.0.1852 (iac)
+  - IaC Code Quality and Security 1.7.0.2012 (iac)
   - PL/SQL Code Quality and Security 3.7.0.4372 (plsql)
   - Scala Code Quality and Security 1.9.0.3429 (sonarscala)
-  - C# Code Quality and Security 8.36.1.44192 (csharp)
-  - Vulnerability Analysis 9.4.0-M1.15235 (security)
-  - Java Code Quality and Security 7.9.0.28969 (java)
+  - C# Code Quality and Security 8.38.0.46746 (csharp)
+  - Vulnerability Analysis 9.4.1.15913 (security)
+  - Java Code Quality and Security 7.11.0.29148 (java)
   - HTML Code Quality and Security 3.6.0.3106 (web)
   - Flex Code Quality and Security 2.7.0.2865 (flex)
   - XML Code Quality and Security 2.5.0.3376 (xml)
   - Text file Code Quality and Security 1.0.0.120 (text)
-  - VB.NET Code Quality and Security 8.36.1.44192 (vbnet)
+  - VB.NET Code Quality and Security 8.38.0.46746 (vbnet)
   - Swift Code Quality and Security 4.5.0.5305 (swift)
-  - CFamily Code Quality and Security 6.31.0.44497 (cpp)
-  - Python Code Quality and Security 3.10.0.9380 (python)
+  - CFamily Code Quality and Security 6.33.0.46593 (cpp)
+  - Python Code Quality and Security 3.13.0.9611 (python)
   - Go Code Quality and Security 1.9.0.3429 (go)
   - JaCoCo 1.1.1.1157 (jacoco)
   - Kotlin Code Quality and Security 2.9.0.1147 (kotlin)
   - Mercurial 1.1.2 (scmmercurial)
   - T-SQL Code Quality and Security 1.6.0.4844 (tsql)
   - Apex Code Quality and Security 1.9.0.3429 (sonarapex)
-  - JavaScript/TypeScript Code Quality and Security 9.0.0.17505 (javascript)
+  - JavaScript/TypeScript/CSS Code Quality and Security 9.1.1.17782 (javascript)
   - Ruby Code Quality and Security 1.9.0.3429 (ruby)
-  - Vulnerability Rules for C# 9.4.0-M1.15235 (securitycsharpfrontend)
-  - Vulnerability Rules for Java 9.4.0-M1.15235 (securityjavafrontend)
-  - License for SonarLint 8.0.0.27634 (license)
-  - Vulnerability Rules for JS 9.4.0-M1.15235 (securityjsfrontend)
-  - COBOL Code Quality 4.6.2.4876 (cobol)
-  - Vulnerability Rules for Python 9.4.0-M1.15235 (securitypythonfrontend)
-  - PHP Code Quality and Security 3.23.0.8726 (php)
+  - Vulnerability Rules for C# 9.4.1.15913 (securitycsharpfrontend)
+  - Vulnerability Rules for Java 9.4.1.15913 (securityjavafrontend)
+  - License for SonarLint 8.0.0.28615 (license)
+  - Vulnerability Rules for JS 9.4.1.15913 (securityjsfrontend)
+  - COBOL Code Quality 5.0.0.5433 (cobol)
+  - Vulnerability Rules for Python 9.4.1.15913 (securitypythonfrontend)
+  - PHP Code Quality and Security 3.23.1.8766 (php)
   - ABAP Code Quality and Security 3.10.0.3628 (abap)
   - Configuration detection fot Code Quality and Security 1.2.0.267 (config)
-  - Vulnerability Rules for PHP 9.4.0-M1.15235 (securityphpfrontend)
+  - Vulnerability Rules for PHP 9.4.1.15913 (securityphpfrontend)
 Global server settings:
   - email.from=noreply@sonarcloud.io
   - email.fromName=SonarCloud
   - email.prefix=[SonarCloud]
   - node_10_end_of_support_date=1620604800000
   - node_10_grace_period_termination_date=1621814400000
+  - search_users_require_auth_start_date=1651622399000
+  - search_users_require_auth_termination_date=1651708799000
   - sonar.auth.bitbucket.enabled=true
   - sonar.auth.microsoft.enabled=true
   - sonar.core.id=1BD809FA-AWHW8ct9-T_TB3XqouNu
   - sonar.core.serverBaseURL=https://sonarcloud.io
-  - sonar.core.startTime=2022-03-17T10:46:13+0100
+  - sonar.core.startTime=2022-04-27T14:24:35+0200
   - sonar.dbcleaner.weeksBeforeDeletingAllSnapshots=260
   - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByMonth=4
   - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek=1
@@ -49,10 +51,8 @@ Global server settings:
   - sonar.lf.enableGravatar=true
   - sonar.lf.logoWidthPx=105
   - sonar.maintenance_mode.link=https://sonarcloud.statuspage.io/incidents/66vlr4dc3jwy
-  - sonar.maintenance_mode.message=SonarCloud will undergo maintenance on Saturday, March 26th.
-The service will not be available between 6:15 and 9:00 CET
-The service will be partially available between 9:00 and 23:00 CET. During that period, results of analyses performed prior to 6:15 may not be available. Results of analysis performed after 9:00 will be available.
-  - sonar.maintenance_mode.start_date=2022-03-28T06:15:00.000+01:00
+  - sonar.maintenance_mode.message=Results of analyses performed prior to 6:15am CET may not be available yet and will be progressively provided throughout coming hours. Results of analysis performed after 8:00am CET are available.
+  - sonar.maintenance_mode.start_date=2022-03-26T23:00:00.000+01:00
   - sonar.organizations.anyoneCanCreate=true
   - sonar.organizations.createPersonalOrg=true
   - sonar.plsql.file.suffixes=sql,tab,pkb

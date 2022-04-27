@@ -1,1 +1,1 @@
-x 2javaX5hr?app/src/main/java/com/example/buylap/database/dao/DAObuild.java
+x 2javaX(hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java

@@ -1,1 +1,1 @@
- 2xmlXhr.idea/vcs.xml
+ 2xmlXYhr.idea/misc.xml

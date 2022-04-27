@@ -10,6 +10,9 @@ import java.sql.Statement;
 
 public class QueryRegistrationLogin {
 
+    private static final String SELECT_ALL= "SELECT * ";
+    private static final String WHERE_USERNAME = "WHERE username = '";
+
     private QueryRegistrationLogin() {
         throw new IllegalStateException("Utility class");
     }
@@ -27,30 +30,30 @@ public class QueryRegistrationLogin {
     }
 
     public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
-        String query = "SELECT * " +
+        String query = SELECT_ALL +
                         "FROM users " +
-                        "WHERE username = '"+ beanUser.getUsername()+"' AND type = 'user' AND password = '"+beanUser.getPassword()+"';";
+                        WHERE_USERNAME + beanUser.getUsername()+"' AND type = 'user' AND password = '"+beanUser.getPassword()+"';";
         return stmt.executeQuery(query);
 
     }
 
     public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
-        String query = "SELECT * " +
+        String query = SELECT_ALL +
                         "FROM users " +
-                        "WHERE username = '"+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
+                        WHERE_USERNAME+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
         return stmt.executeQuery(query);
     }
 
     public static ResultSet searchPoints(Statement statement, BeanSession beanSession) throws SQLException{
-        String query = "SELECT * " +
+        String query = SELECT_ALL +
                 "FROM points_earned " +
-                "WHERE username = '"+beanSession.getUsername()+"'";
+                WHERE_USERNAME+beanSession.getUsername()+"'";
         return statement.executeQuery(query);
     }
 
     public static void deletePoints(Statement statement, BeanSession beanSession) throws SQLException {
         String query = "DELETE FROM points_earned " +
-                "WHERE username = '"+beanSession.getUsername()+"';";
+                WHERE_USERNAME+beanSession.getUsername()+"';";
         statement.executeUpdate(query);
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:id="@+id/nav_cpu"
+    android:title="Cpu"
+    android:icon="@drawable/ic_round_home_24"/>
+    <item android:id="@+id/nav_ram"
+    android:title="Ram"
+    android:icon="@drawable/ic_baseline_attach_money_24"/>
+    <item android:id="@+id/nav_motherboard"
+        android:title="Mother Board"
+        android:icon="@drawable/ic_baseline_attach_money_24"/>
+
+    <item android:id="@+id/nav_ssd"
+    android:title="Ssd"
+    android:icon="@drawable/ic_baseline_favorite_24"/>
+    <item android:id="@+id/nav_videocard"
+    android:title="Video card"
+    android:icon="@drawable/ic_baseline_person_24"/>
+    <item android:id="@+id/nav_powersupply"
+    android:title="Power supply"
+    android:icon="@drawable/ic_baseline_person_24"/>
+</menu>

@@ -17,6 +17,7 @@ import com.example.buylap.view.SellerFragment;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class HomeGraphicController {
@@ -44,20 +45,19 @@ public class HomeGraphicController {
     }
     public void initializeSession(View view) throws BeanException {
 
-        HashMap<String, String> user = sessionManager.getUserDetails();
+        Map<String, String> user = sessionManager.getUserDetails();
         if(Objects.equals(user.get("type"), "USER")) {
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(user.get("user"));
             homeFragment.setUser(beanUser, view);
 
         }else{
-            //Log.d("DEBUG", "GUEST SESSION" + user.get("type"));
             homeFragment.setGuest(view);
         }
     }
     public void initializeSessionForSeller(View view){
 
-        HashMap<String, String> user = sessionManager.getUserDetails();
+        Map<String, String> user = sessionManager.getUserDetails();
         BeanSeller beanSeller = new BeanSeller();
 
         beanSeller.setUsername(user.get("user"));

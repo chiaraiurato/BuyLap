@@ -1,2 +1,1 @@
-š 2xmlX
-hr-app/src/main/res/drawable/edit_background.xml
+š 2javaXwhr>app/src/main/java/com/example/buylap/view/AddCardActivity.java

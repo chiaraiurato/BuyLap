@@ -1,42 +1,40 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.bean;
 
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.database.dao.DAOseller;
-import com.example.buylap.database.dao.DAOuser;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
+public class BeanCard {
+    private String cardHolderName;
+    private String cardNumber;
+    private String data;
+    private String cvv;
 
-import java.sql.SQLException;
-
-public class LoginController {
-
-
-    public BeanUser searchUser(BeanUser beanUser) throws DAOException {
-        ModelUser modelUser;
-
-        try {
-            modelUser = DAOuser.searchUser(beanUser);
-            beanUser.setEmail(modelUser.getEmail());
-            return beanUser;
-
-        } catch (SQLException e) {
-            throw new DAOException("error on signin for user");
-        }
+    public String getCardHolderName() {
+        return cardHolderName;
     }
 
-    public BeanSeller searchSeller(BeanSeller beanSeller) throws DAOException {
-        ModelSeller modelSeller;
+    public void setCardHolderName(String cardHolderName) {
+        this.cardHolderName = cardHolderName;
+    }
 
-        try {
-            modelSeller = DAOseller.searchSeller(beanSeller);
-            beanSeller.setEmail(modelSeller.getEmail());
-            return beanSeller;
+    public String getCardNumber() {
+        return cardNumber;
+    }
 
-        } catch (SQLException e) {
-            throw new DAOException("error on signin for seller");
-        }
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getCvv() {
+        return cvv;
+    }
+
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
     }
 }
-

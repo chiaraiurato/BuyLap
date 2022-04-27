@@ -1,6 +1,8 @@
 package com.example.buylap.bean;
 
 public class BeanBuild {
+
+    private String type;
     private String title;
     private String subtitles;
     private String urlEbay;
@@ -14,7 +16,13 @@ public class BeanBuild {
         this.price = price;
     }
 
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getTitle() {
         return title;

@@ -1,1 +1,1 @@
-i 2javaX"hr9app/src/main/java/com/example/buylap/bean/BeanSeller.java
+i 2javaXhr3app/src/main/java/com/example/buylap/Analytics.java

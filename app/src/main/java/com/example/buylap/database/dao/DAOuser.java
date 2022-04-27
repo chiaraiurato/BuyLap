@@ -36,10 +36,8 @@ public class DAOuser {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertUser(statement, beanUser);
 
-        } catch(SQLIntegrityConstraintViolationException e){
+        } catch(SQLIntegrityConstraintViolationException e) {
             throw new DAOException("Username repetition");
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("file not found");
         }
     }
 

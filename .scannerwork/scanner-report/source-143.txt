@@ -1,75 +1,45 @@
-package com.example.buylap.view;
+package com.example.buylap.model;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
+public class ModelBuild {
+    private String name;
+    private String subtitles;
+    private String url;
+    private float price;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.buylap.controller.graphic.LoginGraphicController;
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.R;
-
-import java.sql.SQLException;
-
-public class LoginActivity extends AppCompatActivity {
-    private LoginGraphicController loginGraphicController;
-    private TextView username;
-    private TextView password;
-    private RadioButton userRadio;
-    private RadioButton sellerRadio;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        this.loginGraphicController = new LoginGraphicController(this);
-        userRadio = findViewById(R.id.radio_user_login);
-        sellerRadio = findViewById(R.id.radio_seller_login);
-        username = findViewById(R.id.select);
-        password = findViewById(R.id.Password);
-        Button signinbtn = (Button) findViewById(R.id.signup_btn);
-
-        TextView create = findViewById(R.id.create_new_one);
-        create.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loginGraphicController.goToRegistration();
-            }
-        });
-        signinbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
-                if(type.equals("USER")) {
-                    try {
-                        loginGraphicController.signInUser();
-                    } catch (SQLException | BeanException throwables) {
-                        throwables.printStackTrace();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
-                    }
-                }else{
-                    try {
-                        loginGraphicController.signInSeller();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential @business", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-            }
-        });
+    public ModelBuild(String name, String subtitles, String url, float price) {
+        this.name = name;
+        this.subtitles = subtitles;
+        this.url = url;
+        this.price = price;
     }
-    public String sendUsername(){
-        return username.getText().toString();
+    public float getPrice() {
+        return price;
     }
-    public String sendPassword(){
-        return  password.getText().toString();
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSubtitles() {
+        return subtitles;
+    }
+
+    public void setSubtitles(String subtitles) {
+        this.subtitles = subtitles;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

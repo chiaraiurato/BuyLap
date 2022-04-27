@@ -1,52 +1,33 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.bean;
 
-import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.database.dao.DAObuild;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.ModelBuild;
+public class BeanSeller {
+    private String businessName;
+    private String businessEmail;
+    private String password;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
-public class TakeQuizController {
-
-    public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
-        BeanAnswer beanAnswer = new BeanAnswer();
-        beanAnswer.setAnswer1(answer1);
-        beanAnswer.setAnswer2(answer2);
-        beanAnswer.setAnswer3(answer3);
-        return beanAnswer;
-
+    public String getEmail() {
+        return businessEmail;
     }
-    public List<BeanBuild> createBuild(String keyword) throws DAOException {
-        String[] component = new String[6];
 
-        component[0] = "motherboard";
-        component[1] = "ssd";
-        component[2] = "cpu";
-        component[3] = "ram";
-        component[4] = "videocard";
-        component[5] = "powersupply";
+    public void setEmail(String businessEmail) {
+        this.businessEmail = businessEmail;
+    }
 
-        int index;
-        List<BeanBuild> beanBuild = new ArrayList<>();
-        List<ModelBuild> modelBuild = new ArrayList<>();
-        for(index = 0; index < 6; index++){
 
-            try {
-                modelBuild.add( DAObuild.selectBuild(component[index], keyword));
-                BeanBuild beanBuildinstance = new BeanBuild();
-                beanBuildinstance.setTitle(modelBuild.get(index).getName());
-                beanBuildinstance.setSubtitles(modelBuild.get(index).getSubtitles());
-                beanBuildinstance.setUrlEbay(modelBuild.get(index).getUrl());
-                beanBuild.add(beanBuildinstance);
-            } catch (SQLException e) {
-                throw new DAOException("error with select"+ component+ " from controller with keyword" + keyword);
-            }
-        }
-        return beanBuild;
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public String getUsername() {
+        return businessName;
+    }
+
+    public void setUsername(String businessName) {
+        this.businessName = businessName;
     }
 }

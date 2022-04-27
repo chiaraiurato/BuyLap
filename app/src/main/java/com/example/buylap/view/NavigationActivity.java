@@ -11,12 +11,13 @@ import android.view.WindowManager;
 
 import com.example.buylap.controller.graphic.NavigationGraphicController;
 import com.example.buylap.R;
+import com.example.buylap.utils.ContextHolder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class NavigationActivity extends AppCompatActivity {
 
-    protected static Context appContext;
+
     BottomNavigationView navigationView;
     NavigationGraphicController navigationGraphicController;
 
@@ -26,7 +27,9 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        appContext =getApplicationContext();
+        ContextHolder contextHolder = ContextHolder.getInstance();
+        contextHolder.setContext(getApplicationContext());
+
         this.navigationGraphicController = new NavigationGraphicController(this);
 
         navigationView=findViewById(R.id.bottom_navigation);
@@ -54,5 +57,4 @@ public class NavigationActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
         }
     }
-    public static Context getContext(){ return appContext ;}
 }

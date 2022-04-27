@@ -37,7 +37,7 @@ public class LoginGraphicController {
         loginActivity.startActivity(intent);
     }
 
-    public void signInUser() throws SQLException, DAOException, BeanException {
+    public void signInUser() throws DAOException, BeanException {
 
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(loginActivity.sendUsername());
@@ -49,7 +49,7 @@ public class LoginGraphicController {
 
 
     }
-    public void signInSeller() throws SQLException, DAOException {
+    public void signInSeller() throws DAOException {
 
             BeanSeller beanSeller = new BeanSeller();
             beanSeller.setUsername(loginActivity.sendUsername());

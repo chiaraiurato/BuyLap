@@ -1,5 +1,76 @@
-<vector android:height="24dp" android:tint="#FFFFFF"
-    android:viewportHeight="24" android:viewportWidth="24"
-    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@android:color/white" android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z"/>
-</vector>
+package com.example.buylap.view;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.buylap.controller.graphic.LoginGraphicController;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.R;
+
+import java.sql.SQLException;
+
+public class LoginActivity extends AppCompatActivity {
+
+    private LoginGraphicController loginGraphicController;
+    private TextView username;
+    private TextView password;
+    private RadioButton userRadio;
+    private RadioButton sellerRadio;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        this.loginGraphicController = new LoginGraphicController(this);
+        userRadio = findViewById(R.id.radio_user_login);
+        sellerRadio = findViewById(R.id.radio_seller_login);
+        username = findViewById(R.id.select);
+        password = findViewById(R.id.Password);
+        Button signIn = findViewById(R.id.signIn_btn);
+
+        TextView create = findViewById(R.id.create_new_one);
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginGraphicController.goToRegistration();
+            }
+        });
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
+                if(type.equals("USER")) {
+                    try {
+                        loginGraphicController.signInUser();
+                    } catch (BeanException throwables) {
+                        throwables.printStackTrace();
+                    } catch (DAOException e) {
+                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    try {
+                        loginGraphicController.signInSeller();
+                    } catch (DAOException e) {
+                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            }
+        });
+    }
+    public String sendUsername(){
+        return username.getText().toString();
+    }
+    public String sendPassword(){
+        return  password.getText().toString();
+    }
+}

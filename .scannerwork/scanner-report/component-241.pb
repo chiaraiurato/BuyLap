@@ -1,1 +1,1 @@
-ñ 2xmlXhr'app/src/main/res/values-land/dimens.xml
+ñ 2xmlXVhr0app/src/main/res/layout/activity_quiz_result.xml

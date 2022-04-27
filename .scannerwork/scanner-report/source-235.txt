@@ -1,28 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202442"
+    tools:context=".view.AddCardActivity">
+    <TextView
+        android:id="@+id/add_payment"
+        android:layout_width="313dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="44dp"
+        android:inputType="date"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Add payment"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.buylap.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+    <EditText
+        android:id="@+id/titles"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Cardholder name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_payment"
+        tools:ignore="TextContrastCheck" />
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.buylap.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+    <EditText
+        android:id="@+id/subtitles"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_baseline_numbers_24"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Card numebr"
+        android:inputType="phone"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titles"
+        tools:ignore="TextContrastCheck" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
-</navigation>
+    <EditText
+        android:id="@+id/cvv"
+        android:layout_width="115dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="CVV"
+        android:inputType="numberDecimal"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/save_item"
+        app:layout_constraintEnd_toEndOf="@+id/subtitles"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextDate"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/save_item"
+        android:layout_width="330dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Save card"
+        android:textAllCaps="false"
+
+        android:textColor="@color/bluebutton"
+        android:textSize="24sp"
+        android:background="@drawable/bg_greenbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="165dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+        android:hint="yyyy-mm"
+        android:inputType="phone"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/zcool_regular"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/save_item"
+        app:layout_constraintStart_toStartOf="@+id/subtitles" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

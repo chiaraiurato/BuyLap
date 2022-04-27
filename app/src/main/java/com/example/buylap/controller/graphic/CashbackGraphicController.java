@@ -5,7 +5,6 @@ import android.widget.Toast;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -15,8 +14,9 @@ import com.example.buylap.view.CashbackFragment;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Objects;
+
+import java.util.Map;
+
 
 public class CashbackGraphicController {
 
@@ -25,8 +25,8 @@ public class CashbackGraphicController {
     CashbackFragment cashbackFragment;
     GetCashbackController getCashbackController;
     SessionManager sessionManager;
-    HashMap<String, String> user;
-    private static BeanSession beanSession;
+    Map<String, String> user;
+    private BeanSession beanSession;
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
         this.addCardActivity = addCardActivity;
@@ -49,16 +49,16 @@ public class CashbackGraphicController {
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
         beanCard.setCvv(addCardActivity.sendCvv());
-        System.out.println(beanSession.getUsername());
+
         Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }
     }
-    public void uploadCreditCard() throws DAOException, BeanException, SQLException, FileNotFoundException {
+    public void uploadCreditCard() throws DAOException {
 
         BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
-        System.out.println(beanSession.getUsername());
+
         cashbackFragment.setCreditCard(beanCard);
 
     }
@@ -74,14 +74,14 @@ public class CashbackGraphicController {
     return true;
     }
 
-    public void deleteCreditCard() throws BeanException, DAOException {
+    public void deleteCreditCard() throws DAOException {
 
         getCashbackController.deleteCreditCard(beanSession);
         cashbackFragment.deleteCreditCard();
     }
 
 
-    public void cashOutPoints() throws BeanException, DAOException, SQLException, FileNotFoundException {
+    public void cashOutPoints() throws  SQLException, FileNotFoundException {
 
         getCashbackController.deletePoints(beanSession);
         cashbackFragment.cashOutPoints();

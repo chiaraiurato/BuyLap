@@ -1,1 +1,1 @@
-î 2xmlXhr#app/src/main/res/values/strings.xml
+î 2xmlX¢hr5app/src/main/res/layout/activity_insert_component.xml

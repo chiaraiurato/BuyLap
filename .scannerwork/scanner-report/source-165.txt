@@ -1,5 +1,72 @@
-<vector android:height="24dp" android:tint="#535986"
-    android:viewportHeight="24" android:viewportWidth="24"
-    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@android:color/white" android:pathData="M20,4L4,4c-1.1,0 -1.99,0.9 -1.99,2L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2L22,6c0,-1.1 -0.9,-2 -2,-2zM20,8l-8,5 -8,-5L4,6l8,5 8,-5v2z"/>
-</vector>
+package com.example.buylap.view;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.buylap.Analytics;
+import com.example.buylap.AnalyticsAdapter;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.R;
+
+import java.util.ArrayList;
+
+public class SellerFragment extends Fragment {
+
+    private TextView accountName;
+
+    public SellerFragment() {
+        //Singleton
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
+        View view= inflater.inflate(R.layout.fragment_seller, container, false);
+        accountName = view.findViewById(R.id.businessAccount);
+        Button takeQuiz = view.findViewById(R.id.takeQuiz);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeGraphicController.goToTakeQuiz();
+            }
+        });
+        homeGraphicController.initializeSessionForSeller(view);
+        Button insertComponent = view.findViewById(R.id.insertComp);
+        insertComponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeGraphicController.gotoInsertComponent();
+            }
+        });
+        RecyclerView.Adapter adapter = new AnalyticsAdapter(homeGraphicController.setAdapterAnalytics());
+
+        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
+        return view;
+    }
+    public void setSeller(BeanSeller beanSeller, View view){
+        accountName = view.findViewById(R.id.businessAccount);
+
+        if(beanSeller.getUsername() != null) {
+            String username = beanSeller.getUsername() + ",";
+            accountName.setText(username);
+        }
+
+
+    }
+}

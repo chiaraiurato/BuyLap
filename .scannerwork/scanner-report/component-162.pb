@@ -1,1 +1,1 @@
-¢ 2xmlXhr6app/src/main/res/drawable/ic_baseline_gamepad_24_g.xml
+¢ 2javaX<hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java

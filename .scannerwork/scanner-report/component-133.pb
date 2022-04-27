@@ -1,1 +1,1 @@
-… 2javaXChr9app/src/main/java/com/example/buylap/MostViewAdapter.java
+… 2javaX\hr>app/src/main/java/com/example/buylap/database/dao/DAOcard.java

@@ -1,48 +1,93 @@
 
-dcom.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java. (9"3*é
-2j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+Õ 
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java ()0
-%1*com.example.buylap.database.JdbcConnection"*com.example.buylap.database.JdbcConnectionﬂ
-‹
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+
-%2"4com.example.buylap.database.JdbcConnection#<init>()V*2
+ìcom.example.buylap.database.query.QueryRegistrationLogin#searchSeller(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSeller;)Ljava/sql/ResultSet;x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( ((("1*ú
+1x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) )(!£
+†
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) )(!
+%0java.lang.String"__id*
+"" 
+«
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) *(%
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+FROM users £
+†
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java+ +(&
+%2java.lang.String"__id*
+""”
+–
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(&
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.Stringúô
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java+( +(@
+%4java.lang.String"Bcom.example.buylap.bean.BeanSeller#getUsername()Ljava/lang/String;*2
 0
-%1*com.example.buylap.database.JdbcConnectionÂ
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (+:,
-*com.example.buylap.database.JdbcConnection"
 
-instance"__id*2
+beanSeller"com.example.buylap.bean.BeanSeller2getUsername()”
+–
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(@
+%5java.lang.String"__concat*
+
+%3java.lang.String*
+
+%4java.lang.StringÂ
+‚
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(i
+%6java.lang.String"__concat*
+
+%5java.lang.String**(
+&' AND type = 'seller' AND password = 'ùö
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java+j +(Ç
+%7java.lang.String"Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;*2
 0
-%1*com.example.buylap.database.JdbcConnection*
-1*ﬂ
-3j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
-%0*com.example.buylap.database.JdbcConnection"__id*<*:,
-*com.example.buylap.database.JdbcConnection"
 
-instance*
-2
-1*˙
-1j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Â
-‚
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (0
-%3*com.example.buylap.database.JdbcConnection"__id*<*:,
-*com.example.buylap.database.JdbcConnection"
+beanSeller"com.example.buylap.bean.BeanSeller2getPassword()‘
+—
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(Ç
+%8java.lang.String"__concat*
+
+%6java.lang.String*
+
+%7java.lang.String¬
+ø
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(á
+%9java.lang.String"__concat*
+
+%8java.lang.String*
+';π
+∂
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java) +(à
+queryjava.lang.String"__id*
+
+%9java.lang.Stringæª
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java, ,('
+%10java.sql.ResultSet"Gjava.sql.Statement#executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;*
+
+stmtjava.sql.Statement*
+
+queryjava.lang.String2 executeQuery(Ljava/lang/String;)"ó
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java, ,((
+
+%10java.sql.ResultSet:
+stmtjava.sql.Statement:0
 
-instance"†
-j
-`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (2
-0
-%3*com.example.buylap.database.JdbcConnectionB.",
-*com.example.buylap.database.JdbcConnection
+beanSeller"com.example.buylap.bean.BeanSellerB<":
+8com.example.buylap.database.query.QueryRegistrationLogin

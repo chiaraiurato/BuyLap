@@ -1,1 +1,1 @@
-¦ 2xmlXhr:app/src/main/res/drawable/ic_baseline_navigate_next_24.xml
+¦ 2javaXthr?app/src/main/java/com/example/buylap/view/TakeQuizActivity.java

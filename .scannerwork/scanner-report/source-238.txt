@@ -1,27 +1,162 @@
-<resources>
-    <string name="app_name">Buylap</string>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202442"
+    tools:context=".view.InsertComponentActivity"
+    tools:layout_editor_absoluteX="-2dp"
+    tools:layout_editor_absoluteY="-2dp">
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="update_balance_account">Update balance account</string>
-    <string name="result_of_quiz">Result of quiz</string>
-    <string name="build">BUILD</string>
-    <string name="card">Card</string>
-    <string name="_0000">**** **** **** 0000</string>
-    <string name="_00_00">00/00</string>
-    <string name="account_balance">Account Balance</string>
-    <string name="_10_00">$ 10,00</string>
-    <string name="cashout">Cashout</string>
-    <string name="mastercard">Mastercard</string>
-    <string name="addpayment">addPayment</string>
-    <string name="_0_00" />
-    <string name="title_activity_budget">BudgetActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <TextView
+        android:id="@+id/add_payment"
+        android:layout_width="313dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/zcool_regular"
+        android:inputType="date"
+        android:text="Insert a component"
+        android:textColor="#FFFFFF"
+        android:textSize="46sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="sign_up">Sign Up</string>
-</resources>
+    <EditText
+        android:id="@+id/subtitles"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Subtitles"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titles"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/titles"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Titles"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_item"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/price_item"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Price"
+
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitles"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/url_ebay"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawableLeft="@drawable/ic_baseline_insert_link_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="URL ebay"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_item"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/type_item"
+        android:layout_width="329dp"
+        android:inputType="none"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:paddingLeft="20dp"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="@string/choose_category"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_payment"
+
+        />
+
+    <Button
+        android:id="@+id/save_item"
+        android:layout_width="330dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_greenbutton"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Save"
+
+        android:textAllCaps="false"
+        android:textColor="@color/bluebutton"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:onClick="showPopup"
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_item"
+        app:layout_constraintEnd_toEndOf="@+id/type_item"
+        app:layout_constraintTop_toTopOf="@+id/type_item"
+        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

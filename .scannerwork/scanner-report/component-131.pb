@@ -1,2 +1,1 @@
-ƒ 2javaX
-hrAapp/src/main/java/com/example/buylap/model/users/ModelSeller.java
+ƒ 2javaX.hrZapp/src/main/java/com/example/buylap/controller/graphic/UserFragmentGraphicController.java

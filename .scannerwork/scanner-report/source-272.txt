@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Buylap</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_balance_account">Update balance account</string>
+    <string name="result_of_quiz">Result of quiz</string>
+    <string name="build">BUILD</string>
+    <string name="card">Card</string>
+    <string name="_0000">**** **** **** 0000</string>
+    <string name="_00_00">00/00</string>
+    <string name="account_balance">Account Balance</string>
+    <string name="_10_00">$ 10,00</string>
+    <string name="cashout">Cashout</string>
+    <string name="mastercard">Mastercard</string>
+    <string name="addpayment">addPayment</string>
+    <string name="_0_00" />
+    <string name="title_activity_budget">BudgetActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="_0000_00">0000-00</string>
+    <string name="sign_in">Sign In</string>
+    <string name="choose_category">Choose category</string>
+    <string name="Cpu">Cpu</string>
+    <string name="Ram">Ram</string>
+    <string name="Motherboard">Motherboard</string>
+    <string name="Video_card">Video card</string>
+    <string name="Power_supply">Power supply</string>
+    <string name="Ssd">Ssd</string>
+</resources>

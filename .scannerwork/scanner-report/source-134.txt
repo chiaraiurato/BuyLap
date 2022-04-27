@@ -1,37 +1,69 @@
-package com.example.buylap;
+package com.example.buylap.database.dao;
 
-public class MostViewed {
-    private String title;
-    private String subtitle;
-    private String url;
+import android.os.StrictMode;
 
-    public MostViewed(String title, String subtitle, String url) {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.url = url;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
+
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
+
+public class DAOseller {
+
+    private DAOseller() {
+        //private constructor
+    }
+    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
+
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryRegistrationLogin.insertSeller(statement, beanSeller);
+
+        } catch (SQLIntegrityConstraintViolationException e) {
+            throw new DAOException("Username repetition");
+        }
     }
 
-    public String getTitle() {
-        return title;
-    }
+    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        ModelSeller modelSeller;
+        try {
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
 
-    public String getSubtitle() {
-        return subtitle;
-    }
-
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
+            if (!rs.first()) {
+                throw new DAOException("Table not found");
+            }
+            String recordEmail = rs.getString(3);
+            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelSeller;
     }
 }
+

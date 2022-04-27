@@ -1,31 +1,52 @@
-package com.example.buylap.bean;
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.buylap">
 
-public class BeanAnswer {
-    private String answer1;
-    private String answer2;
-    private String answer3;
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    public String getAnswer1() {
-        return answer1;
-    }
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Buylap">
+        <activity
+            android:name=".view.InsertComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.AddCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BudgetActivity"
+            android:exported="false"
+            android:label="@string/title_activity_budget"
+            android:theme="@style/Theme.Buylap.NoActionBar" />
+        <activity
+            android:name=".view.QuizResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.TakeQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.NavigationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    public void setAnswer1(String answer1) {
-        this.answer1 = answer1;
-    }
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    public String getAnswer2() {
-        return answer2;
-    }
-
-    public void setAnswer2(String answer2) {
-        this.answer2 = answer2;
-    }
-
-    public String getAnswer3() {
-        return answer3;
-    }
-
-    public void setAnswer3(String answer3) {
-        this.answer3 = answer3;
-    }
-}
+</manifest>

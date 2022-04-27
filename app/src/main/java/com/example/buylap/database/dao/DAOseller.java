@@ -35,10 +35,8 @@ public class DAOseller {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertSeller(statement, beanSeller);
 
-        } catch(SQLIntegrityConstraintViolationException e){
+        } catch (SQLIntegrityConstraintViolationException e) {
             throw new DAOException("Username repetition");
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("File not found");
         }
     }
 

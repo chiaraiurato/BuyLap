@@ -1,1 +1,1 @@
-n 2javaX&hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java
+n 2javaXhr8app/src/main/java/com/example/buylap/bean/BeanGuest.java

@@ -3,9 +3,12 @@ package com.example.buylap.database.dao;
 import android.os.StrictMode;
 import android.util.Log;
 
+import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;
 
+import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
 
@@ -13,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 
 public class DAObuild {
@@ -42,10 +46,6 @@ public class DAObuild {
             float recordPrice = rs.getFloat(6);
             modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
             rs.close();
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } finally {
             if (statement != null) {
                 statement.close();
@@ -53,5 +53,24 @@ public class DAObuild {
         }
 
         return modelBuild;
+    }
+
+    public static void insertComponent(BeanBuild beanBuild, BeanSession beanSession) throws FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryBuild.insertComponent(statement, beanBuild, beanSession);
+
+        } catch (SQLException e) {
+           e.printStackTrace();
+        }
+
     }
 }

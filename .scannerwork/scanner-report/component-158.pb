@@ -1,1 +1,1 @@
-ž 2xmlXhr9app/src/main/res/drawable/ic_baseline_attach_money_24.xml
+ž 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java

@@ -56,10 +56,8 @@ public class CashbackFragment extends Fragment {
         try {
             cashbackGraphicController.uploadCreditCard();
         } catch (DAOException e) {
-                Log.d("failed credit card", "error");
-                deleteCreditCard();
-        } catch (BeanException | SQLException | FileNotFoundException e) {
-            e.printStackTrace();
+            Log.d("failed credit card", "error");
+            deleteCreditCard();
         }
         try {
             cashbackGraphicController.uploadPoints();
@@ -82,11 +80,8 @@ public class CashbackFragment extends Fragment {
 
                 try {
                     cashbackGraphicController.cashOutPoints();
-                } catch (BeanException | SQLException | FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (DAOException e) {
-                    //ignored
-                }
+                } catch (SQLException | FileNotFoundException e) {
+                    e.printStackTrace();}
             }
         });
         deleteCart.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +89,7 @@ public class CashbackFragment extends Fragment {
             public void onClick(View v) {
                 try {
                     cashbackGraphicController.deleteCreditCard();
-                } catch (BeanException | DAOException e) {
+                } catch (DAOException e) {
                     //resolve exception bean
                     e.printStackTrace();
                 }

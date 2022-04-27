@@ -1,1 +1,1 @@
-ó 2xmlXhr*app/src/main/res/values-w1240dp/dimens.xml
+ó 2xmlXªhr.app/src/main/res/layout/activity_take_quiz.xml

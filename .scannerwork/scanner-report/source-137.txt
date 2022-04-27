@@ -1,24 +1,31 @@
-package com.example.buylap.singleton;
+package com.example.buylap.database.query;
 
-import com.example.buylap.bean.BeanUser;
+import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanSession;
 
-public final class UserSingleton {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-    private BeanUser user;
+public class QueryBuild {
 
-    private static final UserSingleton INSTANCE = new UserSingleton();
 
-    private UserSingleton() {}
-
-    public static UserSingleton getInstance() {
-        return INSTANCE;
+    private QueryBuild() {
+        throw new IllegalStateException("Utility class");
     }
 
-    public void setUser(BeanUser u) {
-        this.user = u;
+    public static ResultSet retrieveBuild(Statement stmt, String name,  String keyword) throws SQLException {
+        String query = "SELECT * " +
+                        "FROM " + name + " " +
+                        "WHERE category = '" + keyword + "';";
+        return stmt.executeQuery(query);
     }
 
-    public BeanUser getUser() {
-        return this.user;
+
+    public static void insertComponent(Statement statement, BeanBuild beanBuild, BeanSession beanSession) throws SQLException {
+        String query = "INSERT INTO `"+beanBuild.getType()+"` (`name`,  `subtitles`, `url`, `price`, `username`) " +
+                "VALUES ('"+ beanBuild.getTitle()+"', '"+beanBuild.getSubtitles()+"', '"+beanBuild.getUrlEbay()+"', '"
+                + beanBuild.getPrice()+"', '"+beanSession.getUsername()+"');";
+        statement.executeUpdate(query);
     }
 }

@@ -16,13 +16,14 @@ import com.example.buylap.view.SellerFragment;
 import com.example.buylap.view.UserFragment;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class NavigationGraphicController {
 
     private NavigationActivity navigationActivity;
     private SessionManager sessionManager;
-    private HashMap<String, String> user;
+    private Map<String, String> user;
 
     public NavigationGraphicController(NavigationActivity navigationActivity) {
         this.navigationActivity = navigationActivity;

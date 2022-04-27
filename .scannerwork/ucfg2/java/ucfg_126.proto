@@ -1,16 +1,9 @@
 
->com.example.buylap.model.CreditCard#getCvv()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java* *("1*¤
-1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java+ +(¸
-µ
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java+ +(
-%0java.lang.String"__id*0*.%
-#com.example.buylap.model.CreditCard"
-cvv"
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/CreditCard.java+ +(
-
-%0java.lang.StringB'%
-#com.example.buylap.model.CreditCard
+Fcom.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;e
+[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.javaF F("1*Û
+1e
+[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.javaG G("o
+e
+[C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/LoginActivity.javaG G(-
+""B)'
+%com.example.buylap.view.LoginActivity

@@ -1,1 +1,1 @@
-p 2javaX>hrRapp/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java
+p 2javaXhr:app/src/main/java/com/example/buylap/bean/BeanSession.java

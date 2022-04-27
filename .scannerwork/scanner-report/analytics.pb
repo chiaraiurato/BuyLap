@@ -1,8 +1,8 @@
 
 #
 physical_memory_byte16893956096
-#
-msbuild_major_minor_version15.9
+&
+msbuild_major_minor_versionUnknown
 
 java_major_version11
 
@@ -13,12 +13,12 @@
 'force_node_under_10_during_grace_periodfalse
 
 scanner_major_version4.4
-
-msbuild_major_version15
-
-msbuild_version15.9.21.664
  
-peak_used_heap_byte	255844864
+msbuild_major_versionUnknown
+
+msbuild_versionUnknown
+ 
+peak_used_heap_byte	276339216
 
 scanner_type
 ScannerCLI
@@ -42,6 +42,15 @@ Windows 10
 
 
 scmgit
+¤
+msbuild_unknown_reason‰Get version command exited / had an exception (exit code : -2147450735 ; stdout: N/A ; stderr: Could not execute because the application was not found or a compatible .NET SDK is not installed.
+Possible reasons for this include:
+  * You intended to execute a .NET program:
+      The application 'build' does not exist.
+  * You intended to execute a .NET SDK command:
+      It was not possible to find any installed .NET SDKs.
+      Install a .NET SDK from:
+        https://aka.ms/dotnet-download ; exception : N/A)
 
 node_js_versionUnknown>
 garbage_collectors(

@@ -1,52 +1,39 @@
-package com.example.buylap.database.dao;
+package com.example.buylap.controller.applicative;
 
-import android.os.StrictMode;
-
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryBuild;
-
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.dao.DAOseller;
+import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.ModelBuild;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class DAObuild {
+public class RegistrationController {
 
-    private DAObuild() {
-        //Private constructor
+
+    public Boolean createUser(BeanUser beanUser) throws DAOException {
+
+            try {
+                DAOuser.insertUser(beanUser);
+                return true;
+
+            } catch (SQLException | FileNotFoundException e) {
+                throw new DAOException("error on signup for user");
+            }
+
     }
-    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
-        ModelBuild modelBuild;
-        Connection connection = null;
-        Statement statement = null;
+    public Boolean createSeller(BeanSeller beanSeller) throws DAOException {
 
         try {
+            DAOseller.insertSeller(beanSeller);
+            return true;
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
-            if (!rs.first()) {
-                throw new DAOException("Table not found with keyword " + keyword);
-            }
-            String recordName = rs.getString(2);
-            String recordSubtitles = rs.getString(3);
-            String recordUrl = rs.getString(4);
-            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl );
-            rs.close();
-
-
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+        } catch (SQLException | FileNotFoundException e) {
+            throw new DAOException("error on signup for seller");
         }
 
-        return modelBuild;
     }
+
+
 }

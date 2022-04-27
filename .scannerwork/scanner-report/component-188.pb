@@ -1,0 +1,1 @@
+¼ 2xmlXhr3app/src/main/res/drawable/ic_baseline_delete_24.xml

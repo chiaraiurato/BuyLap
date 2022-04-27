@@ -1,1 +1,1 @@
-t 2javaXWhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java
+t 2javaXhr;app/src/main/java/com/example/buylap/ConstantNameTable.java

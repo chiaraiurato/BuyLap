@@ -1,33 +1,17 @@
-package com.example.buylap.bean;
+package com.example.buylap;
 
-public class BeanSeller {
-    private String businessName;
-    private String businessEmail;
-    private String password;
+public class Analytics {
+    private String url;
 
-    public String getEmail() {
-        return businessEmail;
+    public Analytics(String url) {
+        this.url = url;
     }
 
-    public void setEmail(String businessEmail) {
-        this.businessEmail = businessEmail;
+    public String getUrl() {
+        return url;
     }
 
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getUsername() {
-        return businessName;
-    }
-
-    public void setUsername(String businessName) {
-        this.businessName = businessName;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

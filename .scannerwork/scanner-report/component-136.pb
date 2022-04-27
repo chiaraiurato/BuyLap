@@ -1,1 +1,1 @@
-ˆ 2javaXhrCapp/src/main/java/com/example/buylap/singleton/SellerSingleton.java
+ˆ 2javaX2hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java

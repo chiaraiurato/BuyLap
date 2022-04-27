@@ -1,1 +1,1 @@
-f 2javaX hr9app/src/main/java/com/example/buylap/bean/BeanAnswer.java
+f 2xmlX4hr app/src/main/AndroidManifest.xml

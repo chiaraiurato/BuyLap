@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(type.equals("USER")) {
                     try {
                         loginGraphicController.signInUser();
-                    } catch (SQLException | BeanException throwables) {
+                    } catch (BeanException throwables) {
                         throwables.printStackTrace();
                     } catch (DAOException e) {
                         Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
@@ -59,8 +59,6 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     try {
                         loginGraphicController.signInSeller();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
                     } catch (DAOException e) {
                         Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
                     }

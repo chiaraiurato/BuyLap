@@ -7,12 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestSelenium {
-    public static void main(String[] args) throws Exception {
 
-        openDriver();
-    }
-
-    public static WebElement openDriver() throws InterruptedException {
+    public WebElement openDriver() {
         System.setProperty("webdriver.chrome.driver", "src/androidTest/java/driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.cpubenchmark.net/cpu_list.php");

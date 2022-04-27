@@ -11,6 +11,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class QueryCreditCard {
+
+    private QueryCreditCard() {
+        throw new IllegalStateException("Utility class");
+    }
     public static void insertCreditCard(Statement stmt, BeanCard beanCard, BeanSession beanSession) throws SQLException {
         String query = "INSERT INTO `creditcard` (`name`, `numbercard`, `date`, `cvv`, `username`) " +
                 "VALUES ('"+ beanCard.getCardHolderName()+"', '"+beanCard.getCardNumber()+"', '"+beanCard.getData()+"-01','"+beanCard.getCvv()+"','"+beanSession.getUsername()+"');";

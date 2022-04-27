@@ -1,1 +1,1 @@
-Å 2javaX&hr:app/src/main/java/com/example/buylap/model/ModelBuild.java
+Å 2javaXKhrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java

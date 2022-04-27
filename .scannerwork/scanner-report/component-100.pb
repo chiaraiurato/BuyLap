@@ -1,1 +1,1 @@
-d 2javaXhr3app/src/main/java/com/example/buylap/Analytics.java
+d 2javaX hrHapp/src/androidTest/java/com/example/buylap/ExampleInstrumentedTest.java

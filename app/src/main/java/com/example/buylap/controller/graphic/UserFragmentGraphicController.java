@@ -9,16 +9,17 @@ import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.UserFragment;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class UserFragmentGraphicController {
     private final UserFragment userFragment;
-    private final SessionManager sessionManager;
-    private final HashMap<String, String> user;
+    private final SessionManager session;
+    private final Map<String, String> user;
 
     public UserFragmentGraphicController(UserFragment userFragment){
         this.userFragment = userFragment;
-        sessionManager = new SessionManager(userFragment.getContext());
-        this.user = sessionManager.getUserDetails();
+        session = new SessionManager(userFragment.getContext());
+        this.user = session.getUserDetails();
     }
     public void initializeSession(View view){
          if(user.get("type").equals("SELLER")) {
@@ -31,8 +32,7 @@ public class UserFragmentGraphicController {
     }
     public void onSignOut(){
 
-        SessionManager sessionManager = new SessionManager(userFragment.getContext());
-        sessionManager.logoutUser();
+        session.logoutUser();
         Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

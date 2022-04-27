@@ -1,1 +1,1 @@
- 2xmlXNhr.idea/misc.xml
+ 2xmlXhr.idea/gradle.xml

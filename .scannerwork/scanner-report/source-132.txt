@@ -1,46 +1,76 @@
-package com.example.buylap.model.users;
+package com.example.buylap.database.dao;
 
-public class ModelUser{
+import android.os.StrictMode;
+import android.util.Log;
 
-    private String username;
-    private String email;
-    private String password;
+import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryBuild;
 
-    public ModelUser(String username, String email, String password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelBuild;
+
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
+
+public class DAObuild {
+
+    private DAObuild() {
+        //Private constructor
+    }
+    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+        ModelBuild modelBuild = null;
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
+            if (!rs.first()) {
+                throw new DAOException("Table not found with keyword " + keyword);
+            }
+            String recordName = rs.getString(2);
+            String recordSubtitles = rs.getString(3);
+            String recordUrl = rs.getString(4);
+            float recordPrice = rs.getFloat(6);
+            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+
+        return modelBuild;
     }
 
-    public String getEmail() {
-        return email;
+    public static void insertComponent(BeanBuild beanBuild, BeanSession beanSession) throws FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryBuild.insertComponent(statement, beanBuild, beanSession);
+
+        } catch (SQLException e) {
+           e.printStackTrace();
+        }
+
     }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
-
-
-
-
 }

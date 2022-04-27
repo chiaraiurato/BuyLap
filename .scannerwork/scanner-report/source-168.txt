@@ -1,5 +1,22 @@
-<vector android:height="240dp" android:tint="#FFFFFF"
-    android:viewportHeight="24" android:viewportWidth="24"
-    android:width="240dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@android:color/white" android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10s10,-4.48 10,-10S17.52,2 12,2zM7,7h7v2H7V7zM10,15H7v-2h3V15zM7,12v-2h7v2H7zM19,15h-2v2h-2v-2h-2v-2h2v-2h2v2h2V15z"/>
-</vector>
+package test;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestSelenium {
+
+    public WebElement openDriver() {
+        System.setProperty("webdriver.chrome.driver", "src/androidTest/java/driver/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.cpubenchmark.net/cpu_list.php");
+        driver.findElement(By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"autocomplete-list\"]")).sendKeys("I7-11700K");
+        driver.findElement(By.xpath("//*[@id=\"main_content\"]/div[3]/div[1]/div/form/input[2]")).click();
+        return driver.findElement(By.xpath("//*[@id=\"cpu3896\"]/td[1]/a"));
+    }
+
+
+}

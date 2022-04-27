@@ -1,1 +1,1 @@
-Œ 2javaXhr?app/src/main/java/com/example/buylap/view/CashbackFragment.java
+Œ 2javaXhrBapp/src/main/java/com/example/buylap/exceptions/BeanException.java

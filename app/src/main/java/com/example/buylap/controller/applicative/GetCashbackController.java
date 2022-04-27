@@ -1,7 +1,6 @@
 package com.example.buylap.controller.applicative;
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.dao.DAOcard;
 import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;

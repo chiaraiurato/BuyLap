@@ -1,40 +1,55 @@
-package com.example.buylap.bean;
+package com.example.buylap;
 
-import com.example.buylap.exceptions.BeanException;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class BeanUser {
-    private String username;
-    private String email;
-    private String password;
+import com.bumptech.glide.Glide;
 
-    public String getEmail() {
-        return email;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AnalyticsAdapter extends RecyclerView.Adapter<AnalyticsAdapter.ViewHolder> {
+
+    List<Analytics> analytics;
+
+    public AnalyticsAdapter(List<Analytics> analytics) {
+        this.analytics = analytics;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_seller, parent, false);
+        return new ViewHolder(inflate);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(analytics.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
+
+        Glide.with(holder.itemView.getContext())
+                .load(drawableResourceId)
+                .into(holder.imageView);
+
     }
 
 
-    public String getPassword() {
-        return password;
+    @Override
+    public int getItemCount() {
+        return analytics.size();
     }
 
-    public void setPassword(String password) throws BeanException {
-        if (password.isEmpty())
-            throw new BeanException("Password is empty");
-        this.password = password;
-    }
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
 
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) throws BeanException {
-        if (username.isEmpty())
-            throw new BeanException("Username is empty");
-        else
-            this.username = username;
+        public ViewHolder(View itemView) {
+            super(itemView);
+           imageView = itemView.findViewById(R.id.sample);
+        }
     }
 }

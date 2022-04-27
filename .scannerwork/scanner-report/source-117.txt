@@ -1,67 +1,58 @@
-package com.example.buylap.controller.graphic;
-
-import android.text.TextUtils;
-import android.util.Log;
-import android.widget.RadioButton;
-import android.widget.Toast;
-
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.singleton.SellerSingleton;
-import com.example.buylap.singleton.UserSingleton;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.RegistrationController;
+package com.example.buylap.controller.applicative;
+import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.database.dao.DAOcard;
+import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.view.RegistrationActivity;
-
-public class RegistrationGraphicController {
-
-    RegistrationActivity registrationActivity;
-    RegistrationController registrationController;
+import com.example.buylap.model.ModelCreditCard;
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 
-    public RegistrationGraphicController(RegistrationActivity registrationActivity) {
-        this.registrationActivity = registrationActivity;
-        this.registrationController = new RegistrationController();
+public class GetCashbackController {
 
-    }
+    public Boolean createCard(BeanCard beanCard, BeanSession beanSession) throws DAOException {
 
-    public void registerNewAccountUser() throws DAOException, BeanException {
-        BeanUser beanUser = new BeanUser();
-        beanUser.setUsername(registrationActivity.sendUsername());
-        beanUser.setEmail(registrationActivity.sendEmail());
-        beanUser.setPassword(registrationActivity.sendPassword());
-        Boolean result = registrationController.createUser(beanUser);
-        if (Boolean.TRUE.equals(result)) {
-            Log.d("DATABASE", "SignUp success for User");
+        try {
+            DAOcard.insertCard(beanCard, beanSession);
+            return true;
+
+        } catch(SQLException | FileNotFoundException e){
+            e.printStackTrace();
+            throw new DAOException("error saving credit card");
         }
-        UserSingleton holder = UserSingleton.getInstance();
-        holder.setUser(beanUser);
-
     }
 
-    public void registerNewAccountSeller() throws DAOException {
-        BeanSeller beanSeller = new BeanSeller();
-        beanSeller.setUsername(registrationActivity.sendUsername());
-        beanSeller.setEmail(registrationActivity.sendEmail());
-        beanSeller.setPassword(registrationActivity.sendPassword());
-        Boolean result = registrationController.createSeller(beanSeller);
-        if (Boolean.TRUE.equals(result)) {
-            Log.d("DATABASE", "SignUp success for Seller");
+    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException {
+        ModelCreditCard modelCreditCard;
+        BeanCard beanCard = new BeanCard();
+        try {
+            modelCreditCard = DAOcard.searchCard(beanSession);
+            beanCard.setCardHolderName(modelCreditCard.getName());
+            beanCard.setCardNumber(modelCreditCard.getNumber());
+            beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
+            beanCard.setCvv(modelCreditCard.getCvv());
+            return beanCard;
+        }catch (SQLException | FileNotFoundException e){
+            throw new DAOException("error upload credit card");
         }
-        SellerSingleton sellerHolder = SellerSingleton.getInstance();
-        sellerHolder.setSeller(beanSeller);
+
     }
 
-    public String selectTypeAccount(String username, String email, String password, RadioButton userRadio, RadioButton sellerRadio) {
-        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-            Toast.makeText(registrationActivity, "All field required", Toast.LENGTH_SHORT).show();
-            return "";
-        } else if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
-            Toast.makeText(registrationActivity, "Select type account", Toast.LENGTH_SHORT).show();
-            return "";
-        } else if (userRadio.isChecked())
-            return "USER";
-        return "SELLER";
+    public void deleteCreditCard(BeanSession beanSession) throws DAOException {
+        try {
+            DAOcard.deleteCreditCard(beanSession);
+        }catch(SQLException | FileNotFoundException e){
+            throw new DAOException("error delete credit card");
+        }
+    }
+
+    public int uploadPoints(BeanSession beanSession) throws DAOException, SQLException, FileNotFoundException {
+
+        return DAOuser.uploadPoints(beanSession);
+    }
+
+    public void deletePoints(BeanSession beanSession) throws SQLException, FileNotFoundException{
+        DAOuser.deletePoints(beanSession);
     }
 }

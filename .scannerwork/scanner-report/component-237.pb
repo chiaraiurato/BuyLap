@@ -1,1 +1,1 @@
-í 2xmlXhr2app/src/main/res/values/ic_launcher_background.xml
+í 2xmlX hr-app/src/main/res/layout/activity_homepage.xml

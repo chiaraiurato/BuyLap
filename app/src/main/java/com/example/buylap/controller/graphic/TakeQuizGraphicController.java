@@ -5,8 +5,6 @@ import com.example.buylap.bean.BeanAnswer;
 
 import com.example.buylap.model.QuizList;
 import com.example.buylap.view.TakeQuizActivity;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class TakeQuizGraphicController {

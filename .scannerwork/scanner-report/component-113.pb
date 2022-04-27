@@ -1,1 +1,1 @@
-q 2javaXIhrSapp/src/main/java/com/example/buylap/controller/graphic/LoginGraphicController.java
+q 2javaX4hr7app/src/main/java/com/example/buylap/bean/BeanUser.java

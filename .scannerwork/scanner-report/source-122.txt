@@ -1,65 +1,92 @@
-package com.example.buylap.database.dao;
+package com.example.buylap.controller.graphic;
 
-import android.os.StrictMode;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.controller.applicative.GetCashbackController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelUser;
-import java.sql.Connection;
-import java.sql.ResultSet;
+import com.example.buylap.utils.SessionManager;
+import com.example.buylap.view.AddCardActivity;
+import com.example.buylap.view.CashbackFragment;
+
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.sql.Statement;
 
-public class DAOuser {
+import java.util.Map;
 
-    private DAOuser() {
-        //private constructor
+
+public class CashbackGraphicController {
+
+
+    AddCardActivity addCardActivity;
+    CashbackFragment cashbackFragment;
+    GetCashbackController getCashbackController;
+    SessionManager sessionManager;
+    Map<String, String> user;
+    private BeanSession beanSession;
+
+    public CashbackGraphicController(AddCardActivity addCardActivity){
+        this.addCardActivity = addCardActivity;
+        this.getCashbackController = new GetCashbackController();
     }
-    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException {
-
-        Connection connection = null;
-        Statement statement = null;
-
-        try {
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            QueryRegistrationLogin.insertUser(statement, beanUser);
-
-        } catch(SQLIntegrityConstraintViolationException e){
-            throw new DAOException("Username repetition");
+    public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
+        this.cashbackFragment= cashbackFragment;
+        this.getCashbackController = new GetCashbackController();
+        this.sessionManager = new SessionManager(cashbackFragment.getContext());
+        this.user = sessionManager.getUserDetails();
+        beanSession = new BeanSession();
+        if(user.get("user") != null) {
+            beanSession.setUsername(user.get("user"));
         }
     }
 
-    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException {
-        Connection connection = null;
-        Statement statement = null;
-        ModelUser modelUser;
-        try {
+    public void saveCreditCard() throws DAOException, BeanException {
+        BeanCard beanCard = new BeanCard();
+        beanCard.setCardHolderName(addCardActivity.sendName());
+        beanCard.setCardNumber(addCardActivity.sendNumber());
+        beanCard.setData(addCardActivity.sendDate());
+        beanCard.setCvv(addCardActivity.sendCvv());
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchUser(statement, beanUser);
-            if (!rs.first()) {
-                throw new DAOException("Table not found");
-            }
-            String recordEmail = rs.getString(3);
-            modelUser = new ModelUser(beanUser.getUsername(), recordEmail, beanUser.getPassword());
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+        Boolean result = getCashbackController.createCard(beanCard, beanSession);
+        if (Boolean.TRUE.equals(result)) {
+            Log.d("DATABASE", "Credit card saved");
         }
-        return modelUser;
     }
+    public void uploadCreditCard() throws DAOException {
+
+        BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
+
+        cashbackFragment.setCreditCard(beanCard);
+
+    }
+    public void uploadPoints() throws DAOException, SQLException, FileNotFoundException {
+        int points = getCashbackController.uploadPoints(beanSession);
+        cashbackFragment.setPoints(points);
+    }
+    public boolean verifyLengthOfCreditCard(){
+        if(addCardActivity.sendNumber().length() > 20) {
+            Toast.makeText(addCardActivity, "Length of credit card incorrect", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    return true;
+    }
+
+    public void deleteCreditCard() throws DAOException {
+
+        getCashbackController.deleteCreditCard(beanSession);
+        cashbackFragment.deleteCreditCard();
+    }
+
+
+    public void cashOutPoints() throws  SQLException, FileNotFoundException {
+
+        getCashbackController.deletePoints(beanSession);
+        cashbackFragment.cashOutPoints();
+
+    }
+
+
 }

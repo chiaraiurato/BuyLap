@@ -1,1 +1,1 @@
-¶ 2xmlX#hr&app/src/main/res/drawable/seek_bar.xml
+¶ 2xmlXhr8app/src/main/res/drawable/ic_baseline_arrow_right_24.xml

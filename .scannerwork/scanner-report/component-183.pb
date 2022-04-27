@@ -1,2 +1,1 @@
-· 2xmlX
-hr(app/src/main/res/drawable/seek_thumb.xml
+· 2xmlXhr9app/src/main/res/drawable/ic_baseline_attach_money_24.xml

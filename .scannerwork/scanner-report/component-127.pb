@@ -1,1 +1,1 @@
- 2javaX	hrAapp/src/main/java/com/example/buylap/exceptions/DAOException.java
+ 2javaXRhrXapp/src/main/java/com/example/buylap/controller/graphic/NavigationGraphicController.java

@@ -1,1 +1,1 @@
-j 2javaX)hr7app/src/main/java/com/example/buylap/bean/BeanUser.java
+j 2javaX8hr:app/src/main/java/com/example/buylap/AnalyticsAdapter.java

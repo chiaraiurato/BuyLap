@@ -1,1 +1,1 @@
-‚ 2javaX1hr8app/src/main/java/com/example/buylap/model/QuizList.java
+‚ 2javaXQhrVapp/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.java

@@ -1,1 +1,1 @@
-‹ 2javaX2hr=app/src/main/java/com/example/buylap/view/BudgetActivity.java
+‹ 2javaX<hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java

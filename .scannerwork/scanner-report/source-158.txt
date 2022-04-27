@@ -1,5 +1,85 @@
-<vector android:height="24dp" android:tint="#FFFFFF"
-    android:viewportHeight="24" android:viewportWidth="24"
-    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@android:color/white" android:pathData="M11.8,10.9c-2.27,-0.59 -3,-1.2 -3,-2.15 0,-1.09 1.01,-1.85 2.7,-1.85 1.78,0 2.44,0.85 2.5,2.1h2.21c-0.07,-1.72 -1.12,-3.3 -3.21,-3.81V3h-3v2.16c-1.94,0.42 -3.5,1.68 -3.5,3.61 0,2.31 1.91,3.46 4.7,4.13 2.5,0.6 3,1.48 3,2.41 0,0.69 -0.49,1.79 -2.7,1.79 -2.06,0 -2.87,-0.92 -2.98,-2.1h-2.2c0.12,2.19 1.76,3.42 3.68,3.83V21h3v-2.15c1.95,-0.37 3.5,-1.5 3.5,-3.55 0,-2.84 -2.43,-3.81 -4.7,-4.4z"/>
-</vector>
+package com.example.buylap.view;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.buylap.R;
+import com.example.buylap.controller.graphic.InsertComponentGraphicController;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.DAOException;
+
+
+public class InsertComponentActivity extends AppCompatActivity  {
+    private TextView choose;
+    private EditText urlEbay;
+    private EditText titles;
+    private EditText subtitles;
+    private EditText price;
+    private InsertComponentGraphicController insertComponentGraphicController;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_insert_component);
+        choose = findViewById(R.id.type_item);
+        urlEbay = findViewById(R.id.url_ebay);
+        titles = findViewById(R.id.titles);
+        subtitles = findViewById(R.id.subtitles);
+        price = findViewById(R.id.price_item);
+        insertComponentGraphicController = new InsertComponentGraphicController(this);
+        Button save = findViewById(R.id.save_item);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    insertComponentGraphicController.saveComponent();
+                } catch (BeanException | DAOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    public void showPopup(View view){
+        insertComponentGraphicController.show(view);
+    }
+    public void setCpu(){
+        choose.setText(R.string.Cpu);
+    }
+    public void setRam() {
+        choose.setText(R.string.Ram);
+    }
+    public void setMotherboard() {
+        choose.setText(R.string.Motherboard);
+    }
+    public void setVideoCard() {
+        choose.setText(R.string.Video_card);
+    }
+    public void setPowerSupply() {
+        choose.setText(R.string.Power_supply);
+    }
+    public void setSsd() {
+        choose.setText(R.string.Ssd);
+    }
+    public String sendType(){
+       return choose.getText().toString();
+    }
+    public String sendTitle(){
+        return titles.getText().toString();
+    }
+    public String sendUrl(){
+        return urlEbay.getText().toString();
+    }
+
+    public String sendSubtitles() {
+        return subtitles.getText().toString();
+    }
+
+    public float sendPrice() {
+        return Float.parseFloat(price.getText().toString());
+    }
+}

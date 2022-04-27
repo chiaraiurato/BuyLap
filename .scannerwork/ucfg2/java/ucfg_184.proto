@@ -1,0 +1,57 @@
+
+¦com.example.buylap.controller.applicative.TakeQuizController#getBeanAnswer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/example/buylap/bean/BeanAnswer;|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (#"1*©
+1|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java  (0ÏÌ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java$ (.(
+%0"com.example.buylap.bean.BeanAnswer""com.example.buylap.bean.BeanAnswerá
+Þ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java  (0
+%1",com.example.buylap.bean.BeanAnswer#<init>()V**
+(
+%0"com.example.buylap.bean.BeanAnswerå
+â
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (10
+
+beanAnswer"com.example.buylap.bean.BeanAnswer"__id**
+(
+%0"com.example.buylap.bean.BeanAnswerÄÁ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (&
+
+%2void"Bcom.example.buylap.bean.BeanAnswer#setAnswer1(Ljava/lang/String;)V*2
+0
+
+beanAnswer"com.example.buylap.bean.BeanAnswer*
+
+answer1java.lang.String2setAnswer1(Ljava/lang/String;)ÄÁ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (&
+
+%3void"Bcom.example.buylap.bean.BeanAnswer#setAnswer2(Ljava/lang/String;)V*2
+0
+
+beanAnswer"com.example.buylap.bean.BeanAnswer*
+
+answer2java.lang.String2setAnswer2(Ljava/lang/String;)ÄÁ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (&
+
+%4void"Bcom.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)V*2
+0
+
+beanAnswer"com.example.buylap.bean.BeanAnswer*
+
+answer3java.lang.String2setAnswer3(Ljava/lang/String;)"²
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (2
+0
+
+beanAnswer"com.example.buylap.bean.BeanAnswer:
+answer1java.lang.String:
+answer2java.lang.String:
+answer3java.lang.StringB@>
+<com.example.buylap.controller.applicative.TakeQuizController

@@ -1,68 +1,68 @@
-package com.example.buylap.database.dao;
+package com.example.buylap.controller.applicative;
 
-import android.os.StrictMode;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.bean.BeanAnswer;
+import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
+import com.example.buylap.model.ModelBuild;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class DAOseller {
+public class TakeQuizController {
 
-    private DAOseller() {
-        //private constructor
+    public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
+        BeanAnswer beanAnswer = new BeanAnswer();
+        beanAnswer.setAnswer1(answer1);
+        beanAnswer.setAnswer2(answer2);
+        beanAnswer.setAnswer3(answer3);
+        return beanAnswer;
+
     }
-    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException {
+    public List<BeanBuild> createBuild(String keyword, double price) throws DAOException {
+        String[] component = new String[6];
 
-        Connection connection = null;
-        Statement statement = null;
+        component[0] = "motherboard";
+        component[1] = "ssd";
+        component[2] = "cpu";
+        component[3] = "ram";
+        component[4] = "videocard";
+        component[5] = "powersupply";
 
-        try {
+        int index;
+        List<BeanBuild> beanBuildList = new ArrayList<>();
+        List<ModelBuild> modelBuild = new ArrayList<>();
+        double counter = 0.0;
+        for(index = 0; index < 6; index++){
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+            try {
+                modelBuild.add( DAObuild.selectBuild(component[index], keyword));
 
-            statement = connection.createStatement();
-            QueryRegistrationLogin.insertSeller(statement, beanSeller);
+                counter =counter + modelBuild.get(index).getPrice();
+                if(index == 5 && counter > price){
+                    Log.d("TAKE QUIZ", "counter > price (counter ->"+ counter);
+                }
 
-        } catch(SQLIntegrityConstraintViolationException e){
-            throw new DAOException("Username repetition");
-        }
-    }
-
-    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException {
-        Connection connection = null;
-        Statement statement = null;
-        ModelSeller modelSeller;
-        try {
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
-            if (!rs.first()) {
-                throw new DAOException("Table not found");
-            }
-            String recordEmail = rs.getString(3);
-            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
+            } catch (SQLException e) {
+                throw new DAOException("error with select"+ component+ " from controller with keyword" + keyword);
             }
         }
-        return modelSeller;
+        for (index =0; index <6; index++){
+            BeanBuild beanBuild = new BeanBuild();
+            beanBuild.setTitle(modelBuild.get(index).getName());
+            beanBuild.setSubtitles(modelBuild.get(index).getSubtitles());
+            beanBuild.setUrlEbay(modelBuild.get(index).getUrl());
+            beanBuild.setPrice(modelBuild.get(index).getPrice());
+            beanBuildList.add(beanBuild);
+        }
+        return beanBuildList;
+
     }
+
+
+
 }
-

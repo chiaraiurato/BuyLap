@@ -1,9 +1,21 @@
 
-Mcom.example.buylap.view.RegistrationActivity#sendUsername()Ljava/lang/String;l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaL L("1*é
-1l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaM M("v
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationActivity.javaM M(-
-""B0.
-,com.example.buylap.view.RegistrationActivity
+2com.example.buylap.CategoryAdapter#getItemCount()Ib
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java8 8("1*¾
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java9 9(¹
+¶
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java9 9(
+%0java.util.List"__id*4*2$
+"com.example.buylap.CategoryAdapter"
+
+categoryª§
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java9 9(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"l
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java9 9(
+""B&$
+"com.example.buylap.CategoryAdapter

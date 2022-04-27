@@ -1,48 +1,80 @@
-package com.example.buylap.model;
-public class QuizList {
-    String question;
-    String op1;
-    String op2;
-    String op3;
+package com.example.buylap.controller.graphic;
 
-    public QuizList(String question, String op1, String op2, String op3) {
-        this.question = question;
-        this.op1 = op1;
-        this.op2 = op2;
-        this.op3 = op3;
+import com.example.buylap.utils.Data;
+import com.example.buylap.bean.BeanAnswer;
+
+import com.example.buylap.model.QuizList;
+import com.example.buylap.view.TakeQuizActivity;
+import java.util.List;
+
+public class TakeQuizGraphicController {
+
+    private final TakeQuizActivity takeQuizActivity;      //<--- VIEW
+
+    private QuizList quizList;
+    List<QuizList> listQuest;
+    private final BeanAnswer beanAnswer;
+    Data data;
+    private int index;
+
+    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
+
+        this.takeQuizActivity = takeQuizActivity;
+        this.index = 0;
+
+        beanAnswer = new BeanAnswer();
+        data = new Data();
+        listQuest=data.sendQuestion();
+        quizList = listQuest.get(index);
     }
 
-    public String getQuestion() {
-        return question;
+    public void setQuiz() {
+        takeQuizActivity.setNumberQuestion(index);
+        takeQuizActivity.setQuestion(quizList.getQuestion());
+        takeQuizActivity.setOp1(quizList.getOp1());
+        takeQuizActivity.setOp2(quizList.getOp2());
+        takeQuizActivity.setOp3(quizList.getOp3());
+    }
+    public void goNext(String answer){
+        switch (index) {
+            case 0:
+                beanAnswer.setAnswer1(answer);
+                break;
+            case 1:
+                beanAnswer.setAnswer2(answer);
+                break;
+            case 2:
+                beanAnswer.setAnswer3(answer);
+                break;
+            default:
+                break;
+        }
+        index++;
+
+        if (index >= listQuest.size() ) {
+
+            takeQuizActivity.finished(beanAnswer);
+
+        } else {
+                takeQuizActivity.setNumberQuestion(index);
+                quizList = listQuest.get(index);
+
+                takeQuizActivity.resetColor();
+                setQuiz();
+            }
+        }
+
+    public String getAnswer1(){
+       return quizList.getOp1();
+    }
+    public String getAnswer2(){
+        return quizList.getOp2();
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public String getOp1() {
-        return op1;
-    }
-
-    public void setOp1(String op1) {
-        this.op1 = op1;
-    }
-
-    public String getOp2() {
-        return op2;
-    }
-
-    public void setOp2(String op2) {
-        this.op2 = op2;
-    }
-
-    public String getOp3() {
-        return op3;
-    }
-
-    public void setOp3(String op3) {
-        this.op3 = op3;
+    public String getAnswer3(){
+        return quizList.getOp3();
     }
 
 
 }
+

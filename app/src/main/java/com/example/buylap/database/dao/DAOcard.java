@@ -31,18 +31,15 @@ public class DAOcard {
         Connection connection = null;
         Statement statement = null;
 
-        try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
 
-            statement = connection.createStatement();
-            QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        connection = JdbcConnection.getInstance().getConnection();
 
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("file not found");
-        }
+        statement = connection.createStatement();
+        QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
+
     }
 
     public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
