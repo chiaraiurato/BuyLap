@@ -15,6 +15,7 @@
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_baseline_laptop_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1546875" />
+        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2555" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_baseline_playlist_add_circle_24.xml" value="0.1546875" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/drawable/ic_round_school_24.xml" value="0.1546875" />
@@ -52,7 +53,7 @@
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_guest.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_home.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_host.xml" value="0.2056159420289855" />
-        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_like.xml" value="0.4" />
+        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_like.xml" value="0.264" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_list.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_search.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_seller.xml" value="0.4" />
@@ -62,6 +63,7 @@
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/viewholder.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/viewholder2.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/viewholderSeller.xml" value="0.6" />
+        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/viewholder_build.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/viewholder_seller.xml" value="0.536" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/menu/item_menu.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/menu/menu_appbar.xml" value="0.18020833333333333" />
