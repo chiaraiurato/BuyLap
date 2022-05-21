@@ -16,8 +16,8 @@ public class QueryCreditCard {
         throw new IllegalStateException("Utility class");
     }
     public static void insertCreditCard(Statement stmt, BeanCard beanCard, BeanSession beanSession) throws SQLException {
-        String query = "INSERT INTO `creditcard` (`name`, `numbercard`, `date`, `cvv`, `username`) " +
-                "VALUES ('"+ beanCard.getCardHolderName()+"', '"+beanCard.getCardNumber()+"', '"+beanCard.getData()+"-01','"+beanCard.getCvv()+"','"+beanSession.getUsername()+"');";
+        String query = "INSERT INTO `creditcard` (`name`, `numbercard`, `date`, `username`) " +
+                "VALUES ('"+ beanCard.getCardHolderName()+"', '"+beanCard.getCardNumber()+"', '"+beanCard.getData()+"-01','"+beanSession.getUsername()+"');";
         stmt.executeUpdate(query);
     }
 

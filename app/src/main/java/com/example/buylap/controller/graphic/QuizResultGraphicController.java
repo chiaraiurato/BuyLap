@@ -1,10 +1,16 @@
 package com.example.buylap.controller.graphic;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
+import com.example.buylap.R;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
@@ -12,10 +18,10 @@ import com.example.buylap.Category;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.BudgetActivity;
+import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.QuizResultActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -28,7 +34,7 @@ public class QuizResultGraphicController {
     private List<BeanBuild> beanBuild;
     private BudgetActivity budgetActivity;
     private SessionManager sessionManager;
-    private float price;
+    private static float price;
 
      public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          this.build =  new ArrayList<>();
@@ -51,16 +57,37 @@ public class QuizResultGraphicController {
          } catch (DAOException e) {
              e.printStackTrace();
          }
-         build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
-         build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
-         build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
-         build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
-         build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
-         build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
-
+        if (beanBuild.isEmpty()){
+            openErrorDialog();
+        }else {
+            build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
+            build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
+            build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
+            build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
+            build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
+            build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
+        }
          return build;
      }
-     public Intent linkToEbay(int position){
+
+    private void openErrorDialog() {
+        Dialog dialog = new Dialog(quizResultActivity);
+        dialog.setContentView(R.layout.error_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button goToHome = dialog.findViewById(R.id.gotoHome);
+        goToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
+                quizResultActivity.startActivity(intent);
+            }
+        });
+        dialog.show();
+
+    }
+
+    public Intent linkToEbay(int position){
          final Intent intent;
              switch (position){
                  case 0:
@@ -98,8 +125,6 @@ public class QuizResultGraphicController {
 
     public void setPrice() {
         String bg = budgetActivity.sendPrice();
-        float priceTotal = Float.parseFloat(bg.substring(0, bg.length() -2 ));
-        this.price = priceTotal;
-
+        price = Float.parseFloat(bg.substring(0, bg.length() -2 ));
     }
 }

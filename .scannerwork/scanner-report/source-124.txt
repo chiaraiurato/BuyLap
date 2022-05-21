@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
-import com.example.buylap.ConstantNameTable;
+import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;

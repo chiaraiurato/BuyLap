@@ -60,8 +60,7 @@ public class DAOcard {
             String recordName = rs.getString(2);
             String recordNumber = rs.getString(3);
             String recordDate = rs.getString(4);
-            String recordCvv = rs.getString(5);
-            modelCreditCard = new ModelCreditCard(recordName, recordNumber, recordDate, recordCvv);
+            modelCreditCard = new ModelCreditCard(recordName, recordNumber, recordDate);
             rs.close();
         } finally {
             if (statement != null) {

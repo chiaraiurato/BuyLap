@@ -10,15 +10,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.buylap.Category;
 import com.example.buylap.CategoryAdapter;
 import com.example.buylap.controller.graphic.QuizResultGraphicController;
 import com.example.buylap.R;
+
+import java.util.List;
 
 public class QuizResultActivity extends AppCompatActivity implements CategoryAdapter.OnCatListener {
 
 
     private QuizResultGraphicController quizResultGraphicController;
-
+    public RecyclerView.Adapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,18 +39,22 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
         String beanAnswer2 = this.getIntent().getExtras().getString("beanAnswer2");
         String beanAnswer3 = this.getIntent().getExtras().getString("beanAnswer3");
 
-        RecyclerView.Adapter adapter = new CategoryAdapter(quizResultGraphicController.setBuild(beanAnswer1, beanAnswer2, beanAnswer3), this);
+        List<Category> build = quizResultGraphicController.setBuild(beanAnswer1, beanAnswer2, beanAnswer3);
+        adapter = new CategoryAdapter(build, this);
         recyclerViewBuild.setAdapter(adapter);
 
-        updateAccBalance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(QuizResultActivity.this, NavigationActivity.class);
-                intent.putExtra("gotoCashback", true);
-                quizResultGraphicController.initializeSession(v);
-                startActivity(intent);
-            }
-        });
+        if (!build.isEmpty()){
+
+            updateAccBalance.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(QuizResultActivity.this, NavigationActivity.class);
+                    intent.putExtra("gotoCashback", true);
+                    quizResultGraphicController.initializeSession(v);
+                    startActivity(intent);
+                }
+            });
+        }
     }
     @Override
     public void onCatClick(int position) {

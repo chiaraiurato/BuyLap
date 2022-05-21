@@ -1,13 +1,14 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
-import com.example.buylap.ConstantNameTable;
+import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
@@ -16,6 +17,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.InsertComponentActivity;
+import com.example.buylap.view.NavigationActivity;
 
 import java.util.Map;
 
@@ -77,7 +79,7 @@ public class InsertComponentGraphicController implements PopupMenu.OnMenuItemCli
         if(user.get("user") != null) {
             beanSession.setUsername(user.get("user"));
         }
-        Log.d("DV", "component type "+ beanBuild.getType());
+
         beanBuild.setTitle(insertComponentActivity.sendTitle());
         beanBuild.setSubtitles(insertComponentActivity.sendSubtitles());
         beanBuild.setPrice(insertComponentActivity.sendPrice());
@@ -86,6 +88,7 @@ public class InsertComponentGraphicController implements PopupMenu.OnMenuItemCli
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Component saved");
         }
-
+        Intent intent = new Intent(insertComponentActivity, NavigationActivity.class);
+        insertComponentActivity.startActivity(intent);
     }
 }

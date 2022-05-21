@@ -1,8 +1,6 @@
 package com.example.buylap.controller.applicative;
 
-import android.util.Log;
-import android.widget.Toast;
-
+import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.database.dao.DAObuild;
@@ -23,32 +21,40 @@ public class TakeQuizController {
         return beanAnswer;
 
     }
-    public List<BeanBuild> createBuild(String keyword, double price) throws DAOException {
+    public List<BeanBuild> createBuild(String keyword, float price) throws DAOException {
         String[] component = new String[6];
+        String nameTable = "";
+        component[0] = ConstantNameTable.MOTHERBOARD;
+        component[1] = ConstantNameTable.SSD;
+        component[2] = ConstantNameTable.CPU;
+        component[3] = ConstantNameTable.RAM;
+        component[4] = ConstantNameTable.VIDEO_CARD;
+        component[5] = ConstantNameTable.POWER_SUPPLY;
 
-        component[0] = "motherboard";
-        component[1] = "ssd";
-        component[2] = "cpu";
-        component[3] = "ram";
-        component[4] = "videocard";
-        component[5] = "powersupply";
+        if(keyword.equals("Gaming")){
+            nameTable = ConstantNameTable.Gaming;
+        }else if(keyword.equals("Office use")){
+            nameTable = ConstantNameTable.Office_use;
+        }else if(keyword.equals("Home use")){
+            nameTable = ConstantNameTable.Home_use;
+        }
 
         int index;
         List<BeanBuild> beanBuildList = new ArrayList<>();
         List<ModelBuild> modelBuild = new ArrayList<>();
-        double counter = 0.0;
+
         for(index = 0; index < 6; index++){
 
             try {
-                modelBuild.add( DAObuild.selectBuild(component[index], keyword));
 
-                counter =counter + modelBuild.get(index).getPrice();
-                if(index == 5 && counter > price){
-                    Log.d("TAKE QUIZ", "counter > price (counter ->"+ counter);
+                if(DAObuild.selectBuild(component[index], nameTable, price) == null){
+                    return beanBuildList;
+                }else {
+                    modelBuild.add(DAObuild.selectBuild(component[index], nameTable, price));
                 }
 
             } catch (SQLException e) {
-                throw new DAOException("error with select"+ component+ " from controller with keyword" + keyword);
+                e.printStackTrace();
             }
         }
         for (index =0; index <6; index++){

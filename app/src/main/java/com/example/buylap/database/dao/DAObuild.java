@@ -24,26 +24,26 @@ public class DAObuild {
     private DAObuild() {
         //Private constructor
     }
-    public static ModelBuild selectBuild(String name, String keyword) throws SQLException, DAOException {
+    public static ModelBuild selectBuild(String type, String nameTable, float price) throws SQLException{
         ModelBuild modelBuild = null;
         Connection connection = null;
         Statement statement = null;
 
         try {
-
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryBuild.retrieveBuild(statement, name, keyword);
+            ResultSet rs = QueryBuild.retrieveBuild(statement,type, nameTable, price);
             if (!rs.first()) {
-                throw new DAOException("Table not found with keyword " + keyword);
+                return modelBuild;
             }
-            String recordName = rs.getString(2);
-            String recordSubtitles = rs.getString(3);
-            String recordUrl = rs.getString(4);
-            float recordPrice = rs.getFloat(6);
+            String recordName = rs.getString(1);
+            String recordSubtitles = rs.getString(2);
+            String recordUrl = rs.getString(3);
+            float recordPrice = rs.getFloat(4);
+            System.out.println("RECORDNAME record " + recordUrl + recordName+ recordSubtitles);
             modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
             rs.close();
         } finally {

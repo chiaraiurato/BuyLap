@@ -1,5 +1,7 @@
 package com.example.buylap.database.query;
 
+import android.util.Log;
+
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
 
@@ -14,18 +16,22 @@ public class QueryBuild {
         throw new IllegalStateException("Utility class");
     }
 
-    public static ResultSet retrieveBuild(Statement stmt, String name,  String keyword) throws SQLException {
-        String query = "SELECT * " +
-                        "FROM " + name + " " +
-                        "WHERE category = '" + keyword + "';";
+    public static ResultSet retrieveBuild(Statement stmt, String type, String nameTable, float price) throws SQLException {
+        float firstPrice = price - 200;
+        float secondPrice = price + 200;
+        String query = "SELECT "+nameTable+"."+type+", "+type+".subtitles, "+type+".url, "+type+".price " +
+                        "FROM " +nameTable+ " " +
+                        "INNER JOIN "+type+" ON "+nameTable+"."+type+"="+type+".name "+
+                        "WHERE `price_total` BETWEEN "+ firstPrice +" AND "+secondPrice+";";
+        Log.d("DB STR", "ss "+ query);
         return stmt.executeQuery(query);
     }
 
 
     public static void insertComponent(Statement statement, BeanBuild beanBuild, BeanSession beanSession) throws SQLException {
-        String query = "INSERT INTO `"+beanBuild.getType()+"` (`name`,  `subtitles`, `url`, `price`, `username`) " +
-                "VALUES ('"+ beanBuild.getTitle()+"', '"+beanBuild.getSubtitles()+"', '"+beanBuild.getUrlEbay()+"', '"
-                + beanBuild.getPrice()+"', '"+beanSession.getUsername()+"');";
+        String query = "INSERT INTO `insert_component` (`username`, `type`, `name`,  `subtitles`,`price`, `url`) " +
+                "VALUES ('"+beanSession.getUsername() +"', '"+ beanBuild.getType()+"', '"+beanBuild.getTitle()+"', '"+beanBuild.getSubtitles()+"', '"
+                + beanBuild.getPrice()+"', ' "+ beanBuild.getUrlEbay()+"');";
         statement.executeUpdate(query);
     }
 }

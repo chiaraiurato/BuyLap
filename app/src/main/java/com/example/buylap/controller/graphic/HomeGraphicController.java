@@ -13,15 +13,16 @@ import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.InsertComponentActivity;
+import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.SellerFragment;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
 public class HomeGraphicController {
     HomeFragment homeFragment;
+
     SellerFragment sellerFragment;
     SessionManager sessionManager;
 

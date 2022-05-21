@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.utils;
 
 public class ConstantNameTable {
     private ConstantNameTable(){
@@ -10,4 +10,7 @@ public class ConstantNameTable {
     public static final String SSD = "ssd";
     public static final String POWER_SUPPLY = "powersupply";
     public static final String VIDEO_CARD = "videocard";
+    public static final String Gaming = "buildgamer";
+    public static final String Office_use ="buildofficer";
+    public static final String Home_use = "buildhome";
 }

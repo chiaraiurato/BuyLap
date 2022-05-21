@@ -4,14 +4,14 @@ public class ModelCreditCard {
     private String name;
     private String number;
     private String data;
-    private String cvv;
 
-    public ModelCreditCard(String name, String number, String data, String cvv) {
+
+    public ModelCreditCard(String name, String number, String data) {
         this.name = name;
 
         this.number = number;
         this.data = data;
-        this.cvv = cvv;
+
     }
 
     public String getName() {
@@ -38,14 +38,5 @@ public class ModelCreditCard {
     public void setData(String data) {
         this.data = data;
     }
-
-    public String getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
-    }
-
 
 }

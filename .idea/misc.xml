@@ -48,6 +48,7 @@
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/activity_take_quiz1.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/activity_test.xml" value="0.25" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/content_budget.xml" value="0.1" />
+        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/error_dialog.xml" value="0.2" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_add_cart.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_cashback.xml" value="0.264" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_guest.xml" value="0.22554347826086957" />
@@ -55,6 +56,7 @@
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_host.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_like.xml" value="0.264" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_list.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_no_build_found.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_search.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_seller.xml" value="0.4" />
         <entry key="..\:/Users/Chiara/Desktop/BuyLap/app/src/main/res/layout/fragment_shop.xml" value="0.234375" />

@@ -76,6 +76,7 @@ public class TakeQuizActivity extends AppCompatActivity {
     public void finished(BeanAnswer beanAnswer) {
 
         Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
+
         intent.putExtra("beanAnswer1", beanAnswer.getAnswer1());
         intent.putExtra("beanAnswer2", beanAnswer.getAnswer2());
         intent.putExtra("beanAnswer3", beanAnswer.getAnswer3());

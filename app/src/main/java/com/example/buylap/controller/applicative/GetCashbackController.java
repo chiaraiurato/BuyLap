@@ -31,7 +31,7 @@ public class GetCashbackController {
             beanCard.setCardHolderName(modelCreditCard.getName());
             beanCard.setCardNumber(modelCreditCard.getNumber());
             beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
-            beanCard.setCvv(modelCreditCard.getCvv());
+
             return beanCard;
         }catch (SQLException | FileNotFoundException e){
             throw new DAOException("error upload credit card");

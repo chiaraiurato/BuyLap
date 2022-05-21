@@ -21,7 +21,6 @@ public class AddCardActivity extends AppCompatActivity {
     private TextView name;
     private EditText numberCard;
     private EditText dateFormat;
-    private TextView cvv;
     private int prevCount = 0;
 
     @Override
@@ -32,7 +31,7 @@ public class AddCardActivity extends AppCompatActivity {
         name = findViewById(R.id.titles);
         numberCard = findViewById(R.id.subtitles);
         dateFormat = findViewById(R.id.editTextDate);
-        cvv = findViewById(R.id.cvv);
+
 
         Button saveCard = findViewById(R.id.save_item);
 
@@ -112,8 +111,5 @@ public class AddCardActivity extends AppCompatActivity {
     }
     public String sendDate(){
         return dateFormat.getText().toString();
-    }
-    public String sendCvv(){
-        return  cvv.getText().toString();
     }
 }

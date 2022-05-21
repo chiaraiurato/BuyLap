@@ -48,7 +48,6 @@ public class CashbackGraphicController {
         beanCard.setCardHolderName(addCardActivity.sendName());
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
-        beanCard.setCvv(addCardActivity.sendCvv());
 
         Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
