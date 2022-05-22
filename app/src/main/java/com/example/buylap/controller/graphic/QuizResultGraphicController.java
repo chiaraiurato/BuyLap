@@ -49,8 +49,8 @@ public class QuizResultGraphicController {
         this.budgetActivity = budgetActivity;
     }
 
-    public List<Category> setBuild(String a, String b, String c){
-         beanAnswer= takeQuizController.getBeanAnswer(a, b, c);
+    public List<Category> setBuild(String a){
+         beanAnswer= takeQuizController.getBeanAnswer(a);
 
          try {
              beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), price);

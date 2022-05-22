@@ -24,8 +24,8 @@ public class Data {
     public List<MostViewed> sendMostView(){
         List<MostViewed> mostViewed;
         mostViewed = new ArrayList<>();
-        mostViewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
-        mostViewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
+        mostViewed.add(new MostViewed("AMD", "Ryzen 9 5900X", "cpu"));
+        mostViewed.add(new MostViewed("NVIDIA", "RTX 3060", "videocard"));
         mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
         mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
         return mostViewed;

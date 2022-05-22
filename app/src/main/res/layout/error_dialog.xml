@@ -49,7 +49,7 @@
                 android:layout_marginTop="48dp"
                 android:fontFamily="@font/zcool_regular"
                 android:gravity="center"
-                android:text="No build found!Try with another price"
+                android:text="No build found! Try with another price"
                 android:textColor="@color/bluetext"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"

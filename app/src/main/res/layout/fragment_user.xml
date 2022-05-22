@@ -47,7 +47,7 @@
         android:layout_height="66dp"
         android:layout_marginTop="80dp"
         android:drawableLeft="@drawable/mail"
-        android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_right_24"
         android:drawablePadding="20dp"
 
         android:fontFamily="@font/zcool_regular"
@@ -66,7 +66,7 @@
         android:layout_height="66dp"
         android:layout_marginTop="156dp"
         android:drawableLeft="@drawable/pw"
-        android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_right_24"
         android:drawablePadding="20dp"
 
         android:fontFamily="@font/zcool_regular"
@@ -85,7 +85,7 @@
         android:layout_height="66dp"
         android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/user"
-        android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_right_24"
         android:drawablePadding="20dp"
 
         android:fontFamily="@font/zcool_regular"
@@ -104,9 +104,9 @@
         android:layout_height="63dp"
         android:checked="false"
         android:fontFamily="@font/zcool_regular"
-        android:text="Notificaton"
+        android:text="Subscribe to our newsletter and stay updated!"
         android:textColor="#535986"
-        android:textSize="24sp"
+        android:textSize="22sp"
 
         android:theme="@style/SCBSwitch"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,20 +116,21 @@
 
     <TextView
         android:id="@+id/notification"
-        android:layout_width="129dp"
-        android:layout_height="38dp"
+        android:layout_width="273dp"
+        android:layout_height="36dp"
         android:layout_marginBottom="240dp"
         android:layout_weight="1"
         android:fontFamily="@font/zcool_regular"
-        android:text="Notification"
+        android:text="Subscribe"
         android:textColor="@color/white"
 
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberCard" />
+        app:layout_constraintTop_toBottomOf="@+id/numberCard"
+        app:layout_constraintVertical_bias="0.506" />
 
     <Button
         android:id="@+id/signoutBtn"

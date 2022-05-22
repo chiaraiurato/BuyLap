@@ -13,11 +13,9 @@ import java.util.List;
 
 public class TakeQuizController {
 
-    public BeanAnswer getBeanAnswer(String answer1, String answer2, String answer3){
+    public BeanAnswer getBeanAnswer(String answer){
         BeanAnswer beanAnswer = new BeanAnswer();
-        beanAnswer.setAnswer1(answer1);
-        beanAnswer.setAnswer2(answer2);
-        beanAnswer.setAnswer3(answer3);
+        beanAnswer.setAnswer3(answer);
         return beanAnswer;
 
     }
