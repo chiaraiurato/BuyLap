@@ -28,9 +28,6 @@ public class DAOuser {
         Statement statement = null;
 
         try {
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -46,9 +43,6 @@ public class DAOuser {
         Statement statement = null;
         ModelUser modelUser;
         try {
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
