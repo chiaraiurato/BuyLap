@@ -1,1 +1,1 @@
-” 2javaXChr9app/src/main/java/com/example/buylap/MostViewAdapter.java
+” 2javaXQhrVapp/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.java

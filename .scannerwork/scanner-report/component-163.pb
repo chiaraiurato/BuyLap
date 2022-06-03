@@ -1,1 +1,1 @@
-£ 2javaX=hrAapp/src/main/java/com/example/buylap/view/QuizResultActivity.java
+£ 2javaX1hr8app/src/main/java/com/example/buylap/model/QuizList.java

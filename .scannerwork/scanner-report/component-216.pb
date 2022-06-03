@@ -1,0 +1,1 @@
+Ø 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml

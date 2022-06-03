@@ -23,7 +23,7 @@ public class QueryBuild {
                         "FROM " +nameTable+ " " +
                         "INNER JOIN "+type+" ON "+nameTable+"."+type+"="+type+".name "+
                         "WHERE `price_total` BETWEEN "+ firstPrice +" AND "+secondPrice+";";
-        Log.d("DB STR", "ss "+ query);
+       
         return stmt.executeQuery(query);
     }
 

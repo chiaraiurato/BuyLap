@@ -1,1 +1,1 @@
-ˆ 2javaX2hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java
+ˆ 2javaXhrZapp/src/main/java/com/example/buylap/controller/applicative/InsertComponentController.java

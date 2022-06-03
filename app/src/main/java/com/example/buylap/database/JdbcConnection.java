@@ -30,7 +30,7 @@ public class JdbcConnection {
             //Properties prop = propertiesReader.getProperties("db.properties");
             try{
 
-                this.connection = DriverManager.getConnection("jdbc:mysql://10.220.152.238/android", "andro", "andro");
+                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.7/android", "andro", "andro");
 
             } catch (SQLException e) {
                 e.printStackTrace();

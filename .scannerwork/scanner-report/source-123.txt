@@ -1,82 +1,95 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.CLI.main;
+import android.app.appsearch.ReportSystemUsageRequest;
+import android.os.Build;
 
-import android.content.Intent;
-import android.view.View;
+import androidx.annotation.RequiresApi;
 
-import com.example.buylap.Analytics;
-import com.example.buylap.MostViewed;
+import com.example.buylap.cli.graphicController.MainGraphicController;
+import com.example.buylap.cli.view.HomepageUser;
+import com.example.buylap.cli.view.SignIn;
+import com.example.buylap.cli.view.SignUp;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.utils.Data;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.BudgetActivity;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.InsertComponentActivity;
-import com.example.buylap.view.SellerFragment;
+import com.example.buylap.exceptions.DAOException;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLException;
 
-public class HomeGraphicController {
-    HomeFragment homeFragment;
-    SellerFragment sellerFragment;
-    SessionManager sessionManager;
+public class Main {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main (String[] args){
 
-    public HomeGraphicController(HomeFragment homeFragment) {
-        this.homeFragment = homeFragment;
-        sessionManager = new SessionManager(homeFragment.getContext());
-    }
-    public HomeGraphicController(SellerFragment sellerFragment){
-        this.sellerFragment = sellerFragment;
-        sessionManager = new SessionManager(sellerFragment.getContext());
-    }
+        System.out.println("" +
+                "------------------------     BUYLAP   -----------------------");
+        System.out.println("" +
+                "............................................................\n" +
+                ".............................. .............................\n" +
+                "..........................          ........................\n" +
+                "...................                       ..................\n" +
+                "................                              ..............\n" +
+                ".............                                    ...........\n" +
+                "...........                                        .........\n" +
+                "..........               ============               ........\n" +
+                ".........                &&  |  | &&                 .......\n" +
+                "........                 &&  |  | &&                  ......\n" +
+                ".......                  ============                 ......\n" +
+                ".......                                                .....\n" +
+                ".......             &&&&&&&&&&&&&&&&&&&&&&             .....\n" +
+                ".......             &&&&&&&&&&&&&&&&&&&&&&            ......\n" +
+                "........            &&&&&&&&&&&&&&&&&&&&&&            ......\n" +
+                ".........           &&&&&&&&&&&&&&&&&&&&&&           .......\n" +
+                "..........             ||           ||             .........\n" +
+                "............           ||           ||            ..........\n" +
+                "................                              ..............\n" +
+                "...................                       ..................\n" +
+                "..........................          ........................\n" +
+                ".............................. .............................\n" +
+                "............................................................\n");
+        System.out.println("\nAll commands :\n" +
+                "⚫ show (Display in output available commands)\n"+
+                "⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+                "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
+                "⚫ skip (skip registration)\n"+
+                "⚫ take_quiz \n" +
+                "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link] \n" +
+                "⚫ show_cashback\n" +
+                "⚫ cash_out \n" +
+                "⚫ add_card  -h [cardholder name] -n [number card] -d [expire date]   (Ex. -h Mario_Rossi -n 1234-1234-1234-1234 -d 22-09)\n"+
+                "⚫ delete_card\n"+
+                "⚫ exit (exit the program) \n");
+        MainGraphicController mainGraphicController = new MainGraphicController();
+        try{
 
-    public List<MostViewed> setAdapterMostView(){
-        Data data = new Data();
-        return data.sendMostView();
-
-    }
-    public List<Analytics> setAdapterAnalytics(){
-        Data data = new Data();
-        return data.sendAnalytics();
-    }
-    public void initializeSession(View view) throws BeanException {
-
-        Map<String, String> user = sessionManager.getUserDetails();
-        if(Objects.equals(user.get("type"), "USER")) {
-            BeanUser beanUser = new BeanUser();
-            beanUser.setUsername(user.get("user"));
-            homeFragment.setUser(beanUser, view);
-
-        }else{
-            homeFragment.setGuest(view);
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            String s = bufferRead.readLine();
+            mainGraphicController.parseInput(s);
         }
-    }
-    public void initializeSessionForSeller(View view){
-
-        Map<String, String> user = sessionManager.getUserDetails();
-        BeanSeller beanSeller = new BeanSeller();
-
-        beanSeller.setUsername(user.get("user"));
-        sellerFragment.setSeller(beanSeller, view);
-    }
-    public void goToTakeQuiz() {
-        Intent intent;
-        if(homeFragment == null) {
-            intent = new Intent(sellerFragment.getContext(), BudgetActivity.class);
-            sellerFragment.startActivity(intent);
+        catch(IOException | DAOException | BeanException | SQLException e)
+        {
+            e.printStackTrace();
         }
-        else{
-            intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
-            homeFragment.startActivity(intent);
-        }
-    }
 
-    public void gotoInsertComponent() {
-        Intent intent = new Intent(sellerFragment.getContext(), InsertComponentActivity.class);
-        sellerFragment.startActivity(intent);
+
+    }
+    public static void show(){
+        System.out.println("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+                "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
+                "⚫ skip (skip registration)\n");
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void runMain(){
+        MainGraphicController mainGraphicController = new MainGraphicController();
+        try{
+
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            String s = bufferRead.readLine();
+            mainGraphicController.parseInput(s);
+        }
+        catch(IOException | DAOException | BeanException | SQLException e)
+        {
+            e.printStackTrace();
+        }
+
     }
 }

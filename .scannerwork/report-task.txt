@@ -1,7 +1,7 @@
 organization=chiaraiurato
 projectKey=chiaraiurato_BuyLap
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.28615
+serverVersion=8.0.0.29453
 dashboardUrl=https://sonarcloud.io/dashboard?id=chiaraiurato_BuyLap
-ceTaskId=AYBrfaVRy-gTpwrAgtRE
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYBrfaVRy-gTpwrAgtRE
+ceTaskId=AYEqhrZ8Nq_J-Z1HjyD9
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYEqhrZ8Nq_J-Z1HjyD9

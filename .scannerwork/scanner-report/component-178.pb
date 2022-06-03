@@ -1,0 +1,1 @@
+² 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java

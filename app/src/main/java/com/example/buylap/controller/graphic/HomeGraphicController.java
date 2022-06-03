@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.buylap.Analytics;
-import com.example.buylap.CLI.main.utils.SessionManagerCLI;
 import com.example.buylap.MostViewed;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
@@ -14,7 +13,6 @@ import com.example.buylap.view.BudgetActivity;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.InsertComponentActivity;
-import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.SellerFragment;
 
 import java.util.List;
@@ -26,7 +24,7 @@ public class HomeGraphicController {
 
     SellerFragment sellerFragment;
     SessionManager sessionManager;
-    SessionManagerCLI sessionManagerCLI;
+
     public HomeGraphicController(HomeFragment homeFragment) {
         this.homeFragment = homeFragment;
         sessionManager = new SessionManager(homeFragment.getContext());
@@ -35,9 +33,7 @@ public class HomeGraphicController {
         this.sellerFragment = sellerFragment;
         sessionManager = new SessionManager(sellerFragment.getContext());
     }
-    public HomeGraphicController(){
-        this.sessionManagerCLI = new SessionManagerCLI();
-    }
+
     public List<MostViewed> setAdapterMostView(){
         Data data = new Data();
         return data.sendMostView();
@@ -59,16 +55,7 @@ public class HomeGraphicController {
             homeFragment.setGuest(view);
         }
     }
-    public String initializeSessionCLI() {
 
-        Map<String, String> user = sessionManagerCLI.getUserDetails();
-        if(Objects.equals(user.get("type"), "USER")) {
-            return user.get("user");
-
-        }else{
-            return "guest";
-        }
-    }
     public void initializeSessionForSeller(View view){
 
         Map<String, String> user = sessionManager.getUserDetails();

@@ -1,69 +1,80 @@
-package com.example.buylap.database.dao;
+package com.example.buylap.cli.view;
 
-import android.os.StrictMode;
+import android.os.Build;
 
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryRegistrationLogin;
+import androidx.annotation.RequiresApi;
+
+import com.example.buylap.cli.graphicController.QuizGraphicController;
+import com.example.buylap.controller.graphic.TakeQuizGraphicController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
 
-import java.io.FileNotFoundException;
-import java.sql.Connection;
-import java.sql.ResultSet;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.sql.Statement;
 
-public class DAOseller {
+public class TakeQuiz {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main() throws IOException, DAOException, BeanException, SQLException {
 
-    private DAOseller() {
-        //private constructor
-    }
-    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
-
-        Connection connection = null;
-        Statement statement = null;
-
+        System.out.println("---------------- TAKE QUIZ ----------------");
+        QuizGraphicController quizGraphicController = new QuizGraphicController();
+        System.out.println("\nChoose budget(up to 2000 $ ) ->");
+        String price = null;
+        String firstAnswer = null;
+        String secondAnswer = null;
+        String thirdAnswer = null;
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            price = bufferRead.readLine();
 
-            statement = connection.createStatement();
-            QueryRegistrationLogin.insertSeller(statement, beanSeller);
 
-        } catch (SQLIntegrityConstraintViolationException e) {
-            throw new DAOException("Username repetition");
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
-    }
+        quizGraphicController.setPrice(price);
 
-    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
-        Connection connection = null;
-        Statement statement = null;
-        ModelSeller modelSeller;
+        System.out.println("\nWho are you?");
+        System.out.println(
+                "1️⃣ Beginner\n" +
+                        "2️Nerd\n" +
+                        "3️Don't know\n");
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
-            if (!rs.first()) {
-                throw new DAOException("Table not found");
-            }
-            String recordEmail = rs.getString(3);
-            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            firstAnswer = bufferRead.readLine();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
-        return modelSeller;
+
+        System.out.println("\nWhat is your profession?");
+        System.out.println(
+                "1️⃣ Student\n" +
+                        "2️Worker\n" +
+                        "3️Business man\n");
+        try {
+
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            secondAnswer = bufferRead.readLine();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+
+        }
+        System.out.println("\nClick your category");
+        System.out.println(
+                "1️⃣ Gaming\n" +
+                        "2️Office use\n" +
+                        "3️Home use\n");
+        try {
+
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            thirdAnswer = bufferRead.readLine();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        quizGraphicController.startQuiz(firstAnswer, secondAnswer, thirdAnswer, price);
+
     }
 }
-

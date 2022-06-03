@@ -1,1 +1,1 @@
-Š 2javaX%hrHapp/src/main/java/com/example/buylap/database/query/QueryCreditCard.java
+Š 2javaX(hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java

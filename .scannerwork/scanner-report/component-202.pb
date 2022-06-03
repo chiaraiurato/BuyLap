@@ -1,1 +1,1 @@
-Ê 2xmlXhr5app/src/main/res/drawable/ic_baseline_settings_24.xml
+Ê 2xmlXhr8app/src/main/res/drawable/ic_baseline_arrow_right_24.xml

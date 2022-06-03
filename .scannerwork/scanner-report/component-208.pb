@@ -1,1 +1,1 @@
-Ð 2xmlXhr+app/src/main/res/drawable/item_selector.xml
+Ð 2xmlXhr3app/src/main/res/drawable/ic_baseline_delete_24.xml

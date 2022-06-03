@@ -1,1 +1,1 @@
-~ 2javaXhrRapp/src/main/java/com/example/buylap/controller/graphic/MainGraphicController.java
+~ 2javaXhrDapp/src/main/java/com/example/buylap/CLI/main/view/AddComponent.java

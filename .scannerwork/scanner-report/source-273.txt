@@ -1,28 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Customize your theme here. -->
-    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
-        <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">#41CD7D</item>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_gravity="end"
+    android:layout_margin="8dp"
+    android:background="@drawable/edit_background"
+    android:backgroundTint="#282C4C"
+    android:elevation="3dp">
 
-        <!-- inactive thumb color -->
-        <item name="colorSwitchThumbNormal">#f1f1f1
-        </item>
+    <ImageView
+        android:id="@+id/img_view"
 
-        <!-- inactive track color (30% transparency) -->
-        <item name="android:colorForeground">#42221f1f
-        </item>
-    </style>
-    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
-        <item name="android:progressBackgroundTint">@color/white</item>
-        <item name="android:progressTint">@color/green</item>
-        <item name="android:thumbTint">@color/green</item>
-    </style>
-    <style name="Buylap.PopupMenu" parent="Widget.AppCompat.PopupMenu">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:itemBackground">#535986</item>
-        <item name="android:fontFamily">@font/zcool_regular</item>
-    </style>
+        android:layout_width="39dp"
+        android:layout_height="37dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377"
+        app:srcCompat="@drawable/ic_baseline_laptop_24" />
 
+    <TextView
 
-</resources>
+        android:id="@+id/titleTxt2"
+        android:layout_width="132dp"
+        android:layout_height="39dp"
+
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center|start"
+        android:lines="2"
+        android:text="title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <TextView
+
+        android:id="@+id/titleTxt3"
+        android:layout_width="129dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center|start"
+        android:lines="2"
+        android:text="subtitle"
+        android:textColor="#535986"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_view"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt2" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="124dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center_vertical"
+        android:text="$"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/titleTxt3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="49dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

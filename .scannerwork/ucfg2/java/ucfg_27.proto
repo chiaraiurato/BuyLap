@@ -1,9 +1,21 @@
 
-'com.example.buylap.Category#getPrice()D[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("1*Ç
-1[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java ("e
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/Category.java (
-""B
-com.example.buylap.Category
+2com.example.buylap.CategoryAdapter#getItemCount()Ib
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java7 7("1*¾
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java8 8(¹
+¶
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java8 8(
+%0java.util.List"__id*4*2$
+"com.example.buylap.CategoryAdapter"
+
+categoryª§
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java8 8(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"l
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/CategoryAdapter.java8 8(
+""B&$
+"com.example.buylap.CategoryAdapter

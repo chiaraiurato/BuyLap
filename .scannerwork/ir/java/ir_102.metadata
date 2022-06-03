@@ -1,0 +1,3 @@
+com.example.buylap.cli.view.AddComponent#main(Ljava/lang/String;)V
+com.example.buylap.cli.graphicController.AddComponentGraphicController#<init>()V
+com.example.buylap.cli.graphicController.AddComponentGraphicController#instance-init#

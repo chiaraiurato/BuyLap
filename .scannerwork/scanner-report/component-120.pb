@@ -1,1 +1,1 @@
-x 2javaX(hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java
+x 2javaXWhrZapp/src/main/java/com/example/buylap/CLI/main/graphicController/QuizGraphicController.java

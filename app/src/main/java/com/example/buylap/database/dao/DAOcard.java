@@ -30,11 +30,8 @@ public class DAOcard {
 
         Connection connection = null;
         Statement statement = null;
-
-
-
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
+        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+       // StrictMode.setThreadPolicy(policy);
         connection = JdbcConnection.getInstance().getConnection();
 
         statement = connection.createStatement();
@@ -42,20 +39,20 @@ public class DAOcard {
 
     }
 
-    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         ModelCreditCard modelCreditCard;
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
             ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
             if (!rs.first()) {
-                throw new DAOException("Entry error");
+                return null;
             }
             String recordName = rs.getString(2);
             String recordNumber = rs.getString(3);
@@ -70,13 +67,13 @@ public class DAOcard {
         return modelCreditCard;
     }
 
-    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
+    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();

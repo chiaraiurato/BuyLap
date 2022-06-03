@@ -1,0 +1,22 @@
+
+†com.example.buylap.controller.applicative.RegistrationController#createSeller(Lcom/example/buylap/bean/BeanSeller;)Ljava/lang/Boolean;€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java ("4*’
+3€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java ("‰
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (2*â
+4€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (Ô
+Ñ
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (.
+
+%0void"]com.example.buylap.database.dao.DAOseller#insertSeller(Lcom/example/buylap/bean/BeanSeller;)V*-"+
+)com.example.buylap.database.dao.DAOseller*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+3:0
+
+beanSeller"com.example.buylap.bean.BeanSellerBDB
+@com.example.buylap.controller.applicative.RegistrationController

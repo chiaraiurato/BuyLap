@@ -1,1 +1,2 @@
-¤ 2javaXShrCapp/src/main/java/com/example/buylap/view/RegistrationActivity.java
+¤ 2javaX
+hrAapp/src/main/java/com/example/buylap/model/users/ModelSeller.java

@@ -1,1 +1,2 @@
-ì 2xmlXzhr+app/src/main/res/layout/activity_budget.xml
+ì 2xmlX
+hr(app/src/main/res/drawable/seek_thumb.xml

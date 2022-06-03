@@ -1,2 +1,1 @@
-’ 2javaX
-hrAapp/src/main/java/com/example/buylap/model/users/ModelSeller.java
+’ 2javaXƒhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

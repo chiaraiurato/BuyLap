@@ -1,16 +1,16 @@
 
-@com.example.buylap.bean.BeanBuild#getUrlEbay()Ljava/lang/String;a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java+ +("1* 
-1a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java, ,(¸
-µ
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java, ,(
-%0java.lang.String"__id*2*0#
-!com.example.buylap.bean.BeanBuild"	
-urlEbay"}
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java, ,(
+Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java ("1*»
+1h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (Ä
+Á
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (
+%0java.lang.String"__id*7*5*
+(com.example.buylap.model.users.ModelUser"
+email"„
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (
 
-%0java.lang.StringB%#
-!com.example.buylap.bean.BeanBuild
+%0java.lang.StringB,*
+(com.example.buylap.model.users.ModelUser

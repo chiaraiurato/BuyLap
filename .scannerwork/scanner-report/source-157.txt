@@ -1,72 +1,59 @@
-package com.example.buylap.view;
+package com.example.buylap.database.query;
 
-import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.graphic.HomeGraphicController;
-import com.example.buylap.MostViewAdapter;
-import com.example.buylap.R;
-import com.example.buylap.exceptions.BeanException;
 
-import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
+public class QueryRegistrationLogin {
 
-public class HomeFragment extends Fragment {
+    private static final String SELECT_ALL= "SELECT * ";
+    private static final String WHERE_USERNAME = "WHERE username = '";
 
-
-    private TextView accountName;
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        HomeGraphicController homeGraphicController =new HomeGraphicController(this);
-
-        RecyclerView.Adapter adapter;
-        RecyclerView recyclerView;
-
-
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        try {
-            homeGraphicController.initializeSession(view);
-        } catch (BeanException e) {
-            e.printStackTrace();
-        }
-
-        Button takeQuiz = view.findViewById(R.id.takequiz);
-        takeQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               homeGraphicController.goToTakeQuiz();
-            }
-        });
-
-        recyclerView = view.findViewById(R.id.RecyclerMostView);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        adapter = new MostViewAdapter(homeGraphicController.setAdapterMostView());
-        recyclerView.setAdapter(adapter);
-        return view;
+    private QueryRegistrationLogin() {
+        throw new IllegalStateException("Utility class");
     }
-    public void setUser(BeanUser beanUser, View view) {
-        accountName = view.findViewById(R.id.nameAccount);
-        if (beanUser.getUsername() != null) {
-            String username = beanUser.getUsername() + ",";
-            accountName.setText(username);
-        }
+    public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
+
+        String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`) " +
+                        "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"');";
+        stmt.executeUpdate(query);
+    }
+    public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+
+        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`) " +
+                        "VALUES ('"+ beanSeller.getUsername()+"', 'seller', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
+        stmt.executeUpdate(query);
     }
 
-    public void setGuest( View view) {
-        accountName = view.findViewById(R.id.nameAccount);
-        String username = "guest";
-        accountName.setText(username);
+    public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
+        String query = SELECT_ALL +
+                        "FROM users " +
+                        WHERE_USERNAME + beanUser.getUsername()+"' AND type = 'user' AND password = '"+beanUser.getPassword()+"';";
+        return stmt.executeQuery(query);
+
+    }
+
+    public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+        String query = SELECT_ALL +
+                        "FROM users " +
+                        WHERE_USERNAME+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
+        return stmt.executeQuery(query);
+    }
+
+    public static ResultSet searchPoints(Statement statement, BeanSession beanSession) throws SQLException{
+        String query = SELECT_ALL +
+                "FROM points_earned " +
+                WHERE_USERNAME+beanSession.getUsername()+"'";
+        return statement.executeQuery(query);
+    }
+
+    public static void deletePoints(Statement statement, BeanSession beanSession) throws SQLException {
+        String query = "DELETE FROM points_earned " +
+                WHERE_USERNAME+beanSession.getUsername()+"';";
+        statement.executeUpdate(query);
     }
 }

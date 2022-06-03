@@ -1,0 +1,3 @@
+com.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;
+com.example.buylap.database.JdbcConnection#instance-init#
+com.example.buylap.database.JdbcConnection#<init>()V

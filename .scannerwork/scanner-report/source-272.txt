@@ -1,36 +1,55 @@
-<resources>
-    <string name="app_name">Buylap</string>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/edit_background"
+    android:backgroundTint="#282C4C"
+    android:elevation="3dp">
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="update_balance_account">Update balance account</string>
-    <string name="result_of_quiz">Result of quiz</string>
-    <string name="build">BUILD</string>
-    <string name="card">Card</string>
-    <string name="_0000">**** **** **** 0000</string>
-    <string name="_00_00">00/00</string>
-    <string name="account_balance">Account Balance</string>
-    <string name="_10_00">$ 10,00</string>
-    <string name="cashout">Cashout</string>
-    <string name="mastercard">Mastercard</string>
-    <string name="addpayment">addPayment</string>
-    <string name="_0_00" />
-    <string name="title_activity_budget">BudgetActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <ImageView
+        android:id="@+id/img_view"
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="_0000_00">0000-00</string>
-    <string name="sign_in">Sign In</string>
-    <string name="choose_category">Choose category</string>
-    <string name="Cpu">Cpu</string>
-    <string name="Ram">Ram</string>
-    <string name="Motherboard">Motherboard</string>
-    <string name="Video_card">Video card</string>
-    <string name="Power_supply">Power supply</string>
-    <string name="Ssd">Ssd</string>
-</resources>
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_laptop_24" />
+
+    <TextView
+
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:gravity="start"
+        android:lines="2"
+        android:text="Title Component"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_view"
+        app:layout_constraintTop_toTopOf="@+id/img_view" />
+
+    <TextView
+        android:id="@+id/subTitleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Version Component"
+        android:textColor="#535986"
+        app:layout_constraintEnd_toEndOf="@+id/titleTxt"
+        app:layout_constraintStart_toStartOf="@+id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

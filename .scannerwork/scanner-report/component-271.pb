@@ -1,1 +1,1 @@
-è 2xmlXhr2app/src/main/res/values/ic_launcher_background.xml
+è 2xmlXòhr)app/src/main/res/layout/fragment_user.xml

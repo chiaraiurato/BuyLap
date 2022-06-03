@@ -1,92 +1,76 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.cli.graphicController;
 
-import android.util.Log;
-import android.widget.Toast;
+import android.os.Build;
 
-import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.controller.applicative.GetCashbackController;
+import androidx.annotation.RequiresApi;
+
+import com.example.buylap.commandLineInterface.utils.SessionManagerCLI;
+import com.example.buylap.cli.view.HomepageSeller;
+import com.example.buylap.cli.view.HomepageUser;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.AddCardActivity;
-import com.example.buylap.view.CashbackFragment;
 
-import java.io.FileNotFoundException;
+import org.asynchttpclient.util.Assertions;
+
+import java.io.IOException;
 import java.sql.SQLException;
+import java.util.StringTokenizer;
 
-import java.util.Map;
-
-
-public class CashbackGraphicController {
+public class SignUpGraphicController {
 
 
-    AddCardActivity addCardActivity;
-    CashbackFragment cashbackFragment;
-    GetCashbackController getCashbackController;
-    SessionManager sessionManager;
-    Map<String, String> user;
-    private BeanSession beanSession;
+    RegistrationController registrationController;
+    SessionManagerCLI sessionManagerCLI;
 
-    public CashbackGraphicController(AddCardActivity addCardActivity){
-        this.addCardActivity = addCardActivity;
-        this.getCashbackController = new GetCashbackController();
+    public SignUpGraphicController(){
+        this.registrationController = new RegistrationController();
+        this.sessionManagerCLI = new SessionManagerCLI();
     }
-    public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
-        this.cashbackFragment= cashbackFragment;
-        this.getCashbackController = new GetCashbackController();
-        this.sessionManager = new SessionManager(cashbackFragment.getContext());
-        this.user = sessionManager.getUserDetails();
-        beanSession = new BeanSession();
-        if(user.get("user") != null) {
-            beanSession.setUsername(user.get("user"));
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void parseInput(String input) throws DAOException, BeanException, IOException, SQLException {
+
+        String replaceSpace = input.replaceAll(" ", "");
+        String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");
+
+        String type = token[1];
+        String username = token[2];
+        String mail = token[3];
+        String password = token[4];
+
+        if (type.equals("user")) {
+
+            BeanUser beanUser = new BeanUser();
+            beanUser.setUsername(username);
+            beanUser.setEmail(mail);
+            beanUser.setPassword(password);
+            Boolean result = registrationController.createUser(beanUser);
+            if (Boolean.TRUE.equals(result)) {
+                System.out.println("SignUp success for User");
+            }
+            sessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            HomepageUser.main();
+
+
+        } else if (type.equals("seller")) {
+
+            BeanSeller beanSeller = new BeanSeller();
+            beanSeller.setUsername(username);
+            beanSeller.setEmail(mail);
+            beanSeller.setPassword(password);
+            Boolean result = registrationController.createSeller(beanSeller);
+            if (Boolean.TRUE.equals(result)) {
+                System.out.println("SignUp success for Seller");
+            }
+            sessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            HomepageSeller.main();
+
+
+        } else {
+            System.out.println("Type error! Please choose user or seller account");
         }
     }
-
-    public void saveCreditCard() throws DAOException, BeanException {
-        BeanCard beanCard = new BeanCard();
-        beanCard.setCardHolderName(addCardActivity.sendName());
-        beanCard.setCardNumber(addCardActivity.sendNumber());
-        beanCard.setData(addCardActivity.sendDate());
-        beanCard.setCvv(addCardActivity.sendCvv());
-
-        Boolean result = getCashbackController.createCard(beanCard, beanSession);
-        if (Boolean.TRUE.equals(result)) {
-            Log.d("DATABASE", "Credit card saved");
-        }
-    }
-    public void uploadCreditCard() throws DAOException {
-
-        BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
-
-        cashbackFragment.setCreditCard(beanCard);
-
-    }
-    public void uploadPoints() throws DAOException, SQLException, FileNotFoundException {
-        int points = getCashbackController.uploadPoints(beanSession);
-        cashbackFragment.setPoints(points);
-    }
-    public boolean verifyLengthOfCreditCard(){
-        if(addCardActivity.sendNumber().length() > 20) {
-            Toast.makeText(addCardActivity, "Length of credit card incorrect", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    return true;
-    }
-
-    public void deleteCreditCard() throws DAOException {
-
-        getCashbackController.deleteCreditCard(beanSession);
-        cashbackFragment.deleteCreditCard();
-    }
-
-
-    public void cashOutPoints() throws  SQLException, FileNotFoundException {
-
-        getCashbackController.deletePoints(beanSession);
-        cashbackFragment.cashOutPoints();
-
-    }
-
 
 }

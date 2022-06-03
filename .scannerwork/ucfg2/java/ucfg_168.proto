@@ -1,41 +1,15 @@
 
-acom.example.buylap.utils.PropertiesReader#getProperties(Ljava/lang/String;)Ljava/util/Properties;i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (#"4*˘
-4i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (8†
-ù
-i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (8"
-inputStreamjava.io.InputStream"__id*
-""œ
-Ã
-i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (
-%0java.util.Properties"__id*=*;+
-)com.example.buylap.utils.PropertiesReader"
-
-propertieséã
-i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java ((
-
-%1void"1java.util.Properties#load(Ljava/io/InputStream;)V*
-
-%0java.util.Properties*$
-"
-inputStreamjava.io.InputStream2load(Ljava/io/InputStream;)*
-1*Ã
-1i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (œ
-Ã
-i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (
-%3java.util.Properties"__id*=*;+
-)com.example.buylap.utils.PropertiesReader"
-
-properties"â
-i
-_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (
-
-%3java.util.Properties:
-fileNamejava.lang.StringB-+
-)com.example.buylap.utils.PropertiesReader
+<com.example.buylap.view.InsertComponentActivity#sendPrice()Fo
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaR R("1*∫
+1o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaS S(»
+≈
+o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaS S(;
+%0"/java.lang.Float#parseFloat(Ljava/lang/String;)F*"
+java.lang.Float*
+"""y
+o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaS S(<
+""B31
+/com.example.buylap.view.InsertComponentActivity

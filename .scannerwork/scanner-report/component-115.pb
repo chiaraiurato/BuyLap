@@ -1,1 +1,1 @@
-s 2javaXXhr9app/src/main/java/com/example/buylap/CategoryAdapter.java
+s 2javaXWhr9app/src/main/java/com/example/buylap/CategoryAdapter.java

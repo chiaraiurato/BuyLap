@@ -1,225 +1,9 @@
 
-Wcom.example.buylap.controller.graphic.InsertComponentGraphicController#saveComponent()V†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaJ J("4* <
-2†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaP P(–
-“
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaP' P(0'
-%7!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuild™–
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaP' P(:
-%8java.lang.String"=com.example.buylap.bean.BeanBuild#getType()Ljava/lang/String;*)
-'
-%7!com.example.buylap.bean.BeanBuild2	getType()Ý
-Ú
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaP P(:
-%9java.lang.String"__concat*
-component type *
-
-%8java.lang.String—
-”
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaQ Q((
-%10!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuild³
-°
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaQ Q(26
-%11/com.example.buylap.view.InsertComponentActivity"__id*g*eH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-insertComponentActivity»¸
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaQ Q(>
-%12java.lang.String"Mcom.example.buylap.view.InsertComponentActivity#sendTitle()Ljava/lang/String;*8
-6
-%11/com.example.buylap.view.InsertComponentActivity2sendTitle()¿¼
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaQ Q(?
-%13void"?com.example.buylap.bean.BeanBuild#setTitle(Ljava/lang/String;)V**
-(
-%10!com.example.buylap.bean.BeanBuild*
-
-%12java.lang.String2setTitle(Ljava/lang/String;)—
-”
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaR R((
-%14!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuild³
-°
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaR R(66
-%15/com.example.buylap.view.InsertComponentActivity"__id*g*eH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-insertComponentActivityÃÀ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaR R(F
-%16java.lang.String"Qcom.example.buylap.view.InsertComponentActivity#sendSubtitles()Ljava/lang/String;*8
-6
-%15/com.example.buylap.view.InsertComponentActivity2sendSubtitles()ÇÄ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaR R(G
-%17void"Ccom.example.buylap.bean.BeanBuild#setSubtitles(Ljava/lang/String;)V**
-(
-%14!com.example.buylap.bean.BeanBuild*
-
-%16java.lang.String2 setSubtitles(Ljava/lang/String;)—
-”
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaS S((
-%18!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuild³
-°
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaS S(26
-%19/com.example.buylap.view.InsertComponentActivity"__id*g*eH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-insertComponentActivityŸœ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaS S(>
-%20float"<com.example.buylap.view.InsertComponentActivity#sendPrice()F*8
-6
-%19/com.example.buylap.view.InsertComponentActivity2sendPrice()’
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaS S(?
-%21void".com.example.buylap.bean.BeanBuild#setPrice(F)V**
-(
-%18!com.example.buylap.bean.BeanBuild*
-
-%20float2setPrice(F)—
-”
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaT T((
-%22!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuild³
-°
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaT T(46
-%23/com.example.buylap.view.InsertComponentActivity"__id*g*eH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-insertComponentActivity·´
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaT T(>
-%24java.lang.String"Kcom.example.buylap.view.InsertComponentActivity#sendUrl()Ljava/lang/String;*8
-6
-%23/com.example.buylap.view.InsertComponentActivity2	sendUrl()ÃÀ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaT T(?
-%25void"Acom.example.buylap.bean.BeanBuild#setUrlEbay(Ljava/lang/String;)V**
-(
-%22!com.example.buylap.bean.BeanBuild*
-
-%24java.lang.String2setUrlEbay(Ljava/lang/String;)É
-Æ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaU U(1J
-%26Ccom.example.buylap.controller.applicative.InsertComponentController"__id*i*gH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-insertComponentController—
-”
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaU@ U(I(
-%27!com.example.buylap.bean.BeanBuild"__id*Y*WH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-	beanBuildàÝ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaU U(W
-%28java.lang.Boolean"®com.example.buylap.controller.applicative.InsertComponentController#saveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSession;)Ljava/lang/Boolean;*L
-J
-%26Ccom.example.buylap.controller.applicative.InsertComponentController**
-(
-%27!com.example.buylap.bean.BeanBuild*4
-2
-beanSession#com.example.buylap.bean.BeanSession2WsaveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSession;)Ë
-È
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaU U(X
-resultjava.lang.Boolean"__id*
-
-%28java.lang.Boolean´
-±
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaV V(
-%29java.lang.Boolean"__id*
-""¢Ÿ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaV V('
-%30boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
-
-%29java.lang.Boolean*
-
-resultjava.lang.Boolean2equals(Ljava/lang/Object;)*
-0*·
-3†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaN N(Ñ
-Î
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaN$ N(4
-%5java.lang.String"__mapGet*
-
-userjava.util.Map*
-userÏÌ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaN N(5
-
-%6void"Dcom.example.buylap.bean.BeanSession#setUsername(Ljava/lang/String;)V*4
-2
-beanSession#com.example.buylap.bean.BeanSession*
-
-%5java.lang.String2setUsername(Ljava/lang/String;)*
-2*Å
-4†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaK" K(3ÜÙ
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaK& K(1)
-%0#com.example.buylap.bean.BeanSession"#com.example.buylap.bean.BeanSessionî
-ë
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaK" K(3
-%1"-com.example.buylap.bean.BeanSession#<init>()V*+
-)
-%0#com.example.buylap.bean.BeanSessionó
-ð
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaK K(42
-beanSession#com.example.buylap.bean.BeanSession"__id*+
-)
-%0#com.example.buylap.bean.BeanSession¡
-ž
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaL# L(1-
-%2'com.example.buylap.utils.SessionManager"__id*^*\H
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController"
-sessionManager­ª
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaL# L(B
-%3java.util.Map"Gcom.example.buylap.utils.SessionManager#getUserDetails()Ljava/util/Map;*/
--
-%2'com.example.buylap.utils.SessionManager2getUserDetails()À
-½
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaL L(C
-userjava.util.Map"__id*
-
-%3java.util.MapÑ
-Î
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaM M(
-%4java.lang.String"__mapGet*
-
-userjava.util.Map*
-user*
-2
-3*¦
-0 "ž
-†
-|C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.javaZ Z(
-implicit returnBJH
-Fcom.example.buylap.controller.graphic.InsertComponentGraphicController
+Qcom.example.buylap.view.InsertComponentActivity#sendSubtitles()Ljava/lang/String;o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaN N("1*ï
+1o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaO O("y
+o
+eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaO O(.
+""B31
+/com.example.buylap.view.InsertComponentActivity

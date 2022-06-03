@@ -4,7 +4,6 @@ public class BeanCard {
     private String cardHolderName;
     private String cardNumber;
     private String data;
-    private String cvv;
 
     public String getCardHolderName() {
         return cardHolderName;
@@ -28,13 +27,5 @@ public class BeanCard {
 
     public void setData(String data) {
         this.data = data;
-    }
-
-    public String getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
     }
 }

@@ -1,80 +1,57 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.cli.view;
 
-import com.example.buylap.utils.Data;
-import com.example.buylap.bean.BeanAnswer;
+import android.os.Build;
 
-import com.example.buylap.model.QuizList;
-import com.example.buylap.view.TakeQuizActivity;
-import java.util.List;
+import androidx.annotation.RequiresApi;
 
-public class TakeQuizGraphicController {
+import com.example.buylap.cli.graphicController.HomepageGraphicController;
+import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.DAOException;
 
-    private final TakeQuizActivity takeQuizActivity;      //<--- VIEW
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLException;
 
-    private QuizList quizList;
-    List<QuizList> listQuest;
-    private final BeanAnswer beanAnswer;
-    Data data;
-    private int index;
+public class HomepageSeller {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main() throws IOException, DAOException, BeanException, SQLException {
+        System.out.println("------------------------ HOMEPAGE SELLER -----------------------");
+        String input= "";
+        HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
+        String name =homepageGraphicController.initializeSessionCLI();
 
-    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
+        System.out.println("\nHi "+name +",\nWelcome back!\n");
+        System.out.println(
+                "⚫ take_quiz \n" +
+                "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link]\n"+
+                "⚫ show_cashback\n" +
+                "⚫ cash_out \n" +
+                "⚫ add_card  -h [cardholder name] -n [number card] -d [expire date]\n"+
+                "⚫ delete_card\n");
 
-        this.takeQuizActivity = takeQuizActivity;
-        this.index = 0;
 
-        beanAnswer = new BeanAnswer();
-        data = new Data();
-        listQuest=data.sendQuestion();
-        quizList = listQuest.get(index);
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
+        input = numberBuffer.readLine();
+        homepageGraphicController.execute_command(input);
+
     }
-
-    public void setQuiz() {
-        takeQuizActivity.setNumberQuestion(index);
-        takeQuizActivity.setQuestion(quizList.getQuestion());
-        takeQuizActivity.setOp1(quizList.getOp1());
-        takeQuizActivity.setOp2(quizList.getOp2());
-        takeQuizActivity.setOp3(quizList.getOp3());
+    public static void show(){
+        System.out.println(
+                "⚫ take_quiz \n" +
+                "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link] \n" +
+                "⚫ show_cashback\n" +
+                "⚫ cash_out \n" +
+                "⚫ add_card  -h [cardholder name] -n [number card] -d [expire date]\n"+
+                "⚫ delete_card\n");
     }
-    public void goNext(String answer){
-        switch (index) {
-            case 0:
-                beanAnswer.setAnswer1(answer);
-                break;
-            case 1:
-                beanAnswer.setAnswer2(answer);
-                break;
-            case 2:
-                beanAnswer.setAnswer3(answer);
-                break;
-            default:
-                break;
-        }
-        index++;
-
-        if (index >= listQuest.size() ) {
-
-            takeQuizActivity.finished(beanAnswer);
-
-        } else {
-                takeQuizActivity.setNumberQuestion(index);
-                quizList = listQuest.get(index);
-
-                takeQuizActivity.resetColor();
-                setQuiz();
-            }
-        }
-
-    public String getAnswer1(){
-       return quizList.getOp1();
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void run() throws IOException, DAOException, BeanException, SQLException {
+        String input= "";
+        HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
+        input = numberBuffer.readLine();
+        homepageGraphicController.execute_command(input);
     }
-    public String getAnswer2(){
-        return quizList.getOp2();
-    }
-
-    public String getAnswer3(){
-        return quizList.getOp3();
-    }
-
-
 }
-

@@ -1,1 +1,1 @@
-v 2javaXhrZapp/src/main/java/com/example/buylap/controller/applicative/InsertComponentController.java
+v 2javaXrhr^app/src/main/java/com/example/buylap/CLI/main/graphicController/HomepageGraphicController.java

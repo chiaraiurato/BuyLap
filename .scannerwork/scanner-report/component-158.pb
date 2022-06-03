@@ -1,1 +1,1 @@
-ž 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java
+ž 2javaXhrBapp/src/main/java/com/example/buylap/exceptions/BeanException.java

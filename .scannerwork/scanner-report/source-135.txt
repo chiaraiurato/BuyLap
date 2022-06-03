@@ -1,113 +1,63 @@
-package com.example.buylap.database.dao;
-
-import android.os.StrictMode;
-import android.util.Log;
-
+package com.example.buylap.controller.applicative;
+import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.database.dao.DAOcard;
+import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelUser;
-
+import com.example.buylap.model.ModelCreditCard;
 import java.io.FileNotFoundException;
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.sql.Statement;
 
-public class DAOuser {
 
-    private DAOuser() {
-        //private constructor
-    }
-    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+public class GetCashbackController {
 
-        Connection connection = null;
-        Statement statement = null;
+    public Boolean createCard(BeanCard beanCard, BeanSession beanSession) throws DAOException {
 
         try {
+            DAOcard.insertCard(beanCard, beanSession);
+            return true;
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            QueryRegistrationLogin.insertUser(statement, beanUser);
-
-        } catch(SQLIntegrityConstraintViolationException e) {
-            throw new DAOException("Username repetition");
+        } catch(SQLException | FileNotFoundException e){
+            e.printStackTrace();
+            throw new DAOException("error saving credit card");
         }
     }
 
-    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
-        Connection connection = null;
-        Statement statement = null;
-        ModelUser modelUser;
+    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException {
+        ModelCreditCard modelCreditCard;
+        BeanCard beanCard = new BeanCard();
         try {
+            modelCreditCard = DAOcard.searchCard(beanSession);
+            if(modelCreditCard == null){
+                return null;
+            }else{
+                beanCard.setCardHolderName(modelCreditCard.getName());
+                beanCard.setCardNumber(modelCreditCard.getNumber());
+                beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+                return beanCard;
+            }
 
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchUser(statement, beanUser);
-            if (!rs.first()) {
-                throw new DAOException("Table not found");
-            }
-            String recordEmail = rs.getString(3);
-            modelUser = new ModelUser(beanUser.getUsername(), recordEmail, beanUser.getPassword());
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+        }catch (SQLException | FileNotFoundException e){
+            throw new DAOException("error upload credit card");
         }
-        return modelUser;
+
     }
 
-    public static int uploadPoints(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
-        Connection connection = null;
-        Statement statement = null;
-        int recordPoint;
+    public void deleteCreditCard(BeanSession beanSession) throws DAOException {
         try {
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanSession);
-            if (!rs.first()) {
-                Log.d("DATABASE", "No points associated to user");
-                return 0;
-            }
-            recordPoint = rs.getInt(3);
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+            DAOcard.deleteCreditCard(beanSession);
+        }catch(SQLException | FileNotFoundException e){
+            throw new DAOException("error delete credit card");
         }
-        return recordPoint;
     }
 
-    public static void deletePoints(BeanSession beanSession) throws FileNotFoundException, SQLException {
-        Connection connection = null;
-        Statement statement = null;
-        try {
+    public int uploadPoints(BeanSession beanSession) throws DAOException, SQLException, FileNotFoundException {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-            connection = JdbcConnection.getInstance().getConnection();
+        return DAOuser.uploadPoints(beanSession);
+    }
 
-            statement = connection.createStatement();
-             QueryRegistrationLogin.deletePoints(statement, beanSession);
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
-        }
+    public void deletePoints(BeanSession beanSession) throws SQLException, FileNotFoundException{
+        DAOuser.deletePoints(beanSession);
     }
 }

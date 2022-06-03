@@ -1,1 +1,1 @@
-Ž 2javaXhrJapp/src/main/java/com/example/buylap/exceptions/FileNotFoundException.java
+Ž 2javaX_hr]app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.java

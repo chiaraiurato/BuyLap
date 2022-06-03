@@ -1,43 +1,45 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.cli.graphicController;
 
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.database.dao.DAOseller;
-import com.example.buylap.database.dao.DAOuser;
+import android.app.appsearch.ReportSystemUsageRequest;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.example.buylap.cli.Main;
+import com.example.buylap.cli.view.Exit;
+import com.example.buylap.cli.view.SignIn;
+import com.example.buylap.cli.view.SignUp;
+import com.example.buylap.cli.view.TakeQuiz;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
+import java.util.StringTokenizer;
 
-public class LoginController {
+public class MainGraphicController {
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException {
+        StringTokenizer st = new StringTokenizer(s);
+        String command = st.nextToken();
 
-    public BeanUser searchUser(BeanUser beanUser) throws DAOException {
-        ModelUser modelUser;
-
-        try {
-            modelUser = DAOuser.searchUser(beanUser);
-            beanUser.setEmail(modelUser.getEmail());
-            return beanUser;
-
-        } catch (SQLException | FileNotFoundException e) {
-            throw new DAOException("error on signIn for user");
+        switch (command){
+            case "show":
+                Main.show();
+                Main.runMain();
+                break;
+            case "sign_up":
+                SignUp.main(s);
+                break;
+            case "sign_in":
+                SignIn.main(s);
+            case "exit":
+                Exit.main();
+                break;
+            default:
+                System.out.println("\nCommand Error! Press --help for command usage\n");
         }
-    }
 
-    public BeanSeller searchSeller(BeanSeller beanSeller) throws DAOException {
-        ModelSeller modelSeller;
-
-        try {
-            modelSeller = DAOseller.searchSeller(beanSeller);
-            beanSeller.setEmail(modelSeller.getEmail());
-            return beanSeller;
-
-        } catch (SQLException | FileNotFoundException e) {
-            throw new DAOException("error on signIn for seller");
-        }
     }
 }
-

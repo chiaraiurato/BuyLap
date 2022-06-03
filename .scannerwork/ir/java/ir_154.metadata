@@ -1,0 +1,5 @@
+com.example.buylap.cli.graphicController.SignUpGraphicController#<init>()V
+com.example.buylap.commandLineInterface.utils.SessionManagerCLI#<init>()V
+com.example.buylap.commandLineInterface.utils.SessionManagerCLI#instance-init#
+com.example.buylap.controller.applicative.RegistrationController#<init>()V
+com.example.buylap.controller.applicative.RegistrationController#instance-init#

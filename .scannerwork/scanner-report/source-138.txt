@@ -1,36 +1,39 @@
-package com.example.buylap.database.query;
+package com.example.buylap.controller.applicative;
 
-import android.util.Log;
-
-import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.dao.DAOseller;
+import com.example.buylap.database.dao.DAOuser;
+import com.example.buylap.exceptions.DAOException;
 
-import java.sql.ResultSet;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class QueryCreditCard {
+public class RegistrationController {
 
-    private QueryCreditCard() {
-        throw new IllegalStateException("Utility class");
+
+    public Boolean createUser(BeanUser beanUser) throws DAOException {
+
+            try {
+                DAOuser.insertUser(beanUser);
+                return true;
+
+            } catch (SQLException | FileNotFoundException e) {
+                throw new DAOException("error on signup for user");
+            }
+
     }
-    public static void insertCreditCard(Statement stmt, BeanCard beanCard, BeanSession beanSession) throws SQLException {
-        String query = "INSERT INTO `creditcard` (`name`, `numbercard`, `date`, `cvv`, `username`) " +
-                "VALUES ('"+ beanCard.getCardHolderName()+"', '"+beanCard.getCardNumber()+"', '"+beanCard.getData()+"-01','"+beanCard.getCvv()+"','"+beanSession.getUsername()+"');";
-        stmt.executeUpdate(query);
+    public Boolean createSeller(BeanSeller beanSeller) throws DAOException {
+
+        try {
+            DAOseller.insertSeller(beanSeller);
+            return true;
+
+        } catch (SQLException | FileNotFoundException e) {
+            throw new DAOException("error on signup for seller");
+        }
+
     }
 
-    public static ResultSet searchCard(Statement statement, BeanSession beanSession) throws SQLException {
-        String query = "SELECT * " +
-                "FROM creditcard " +
-                "WHERE username = '"+ beanSession.getUsername()+"';";
-        return statement.executeQuery(query);
-    }
 
-    public static void deleteCard(Statement statement, BeanSession beanSession) throws SQLException {
-        String query = "DELETE FROM creditcard " +
-                "WHERE username = '"+beanSession.getUsername()+"';";
-        statement.executeUpdate(query);
-    }
 }

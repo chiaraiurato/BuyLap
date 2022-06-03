@@ -1,1 +1,1 @@
-• 2xmlXhr*app/src/main/res/values-w1240dp/dimens.xml
+• 2xmlXhr2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml

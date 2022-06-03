@@ -61,20 +61,19 @@ public class DAOuser {
         return modelUser;
     }
 
-    public static int uploadPoints(BeanSession beanSession) throws SQLException, DAOException, FileNotFoundException {
+    public static int uploadPoints(BeanSession beanSession) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         int recordPoint;
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
             ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanSession);
             if (!rs.first()) {
-                Log.d("DATABASE", "No points associated to user");
                 return 0;
             }
             recordPoint = rs.getInt(3);
@@ -87,13 +86,13 @@ public class DAOuser {
         return recordPoint;
     }
 
-    public static void deletePoints(BeanSession beanSession) throws FileNotFoundException, SQLException {
+    public static void deletePoints(BeanSession beanSession) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();

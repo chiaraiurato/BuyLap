@@ -1,1 +1,1 @@
-¶ 2xmlXhr8app/src/main/res/drawable/ic_baseline_arrow_right_24.xml
+¶ 2javaX<hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java

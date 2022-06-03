@@ -1,1 +1,1 @@
-y 2javaXEhrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java
+y 2javaX=hr\app/src/main/java/com/example/buylap/CLI/main/graphicController/SignInGraphicController.java

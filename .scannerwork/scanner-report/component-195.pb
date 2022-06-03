@@ -1,1 +1,2 @@
-Ã 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml
+Ã 2xmlX
+hr-app/src/main/res/drawable/edit_background.xml

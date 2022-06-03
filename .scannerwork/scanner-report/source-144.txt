@@ -1,51 +1,29 @@
-package com.example.buylap.model;
+package com.example.buylap.controller.graphic;
 
-public class ModelCreditCard {
-    private String name;
-    private String number;
-    private String data;
-    private String cvv;
+import android.content.Intent;
 
-    public ModelCreditCard(String name, String number, String data, String cvv) {
-        this.name = name;
+import com.example.buylap.utils.SessionManager;
+import com.example.buylap.view.MainActivity;
+import com.example.buylap.view.NavigationActivity;
 
-        this.number = number;
-        this.data = data;
-        this.cvv = cvv;
+public class MainGraphicController {
+    MainActivity mainActivity;
+    SessionManager sessionManager;
+
+    public MainGraphicController(MainActivity mainActivity){
+        this.mainActivity = mainActivity;
+        this.sessionManager = new SessionManager(mainActivity.getApplicationContext());
+
     }
 
-    public String getName() {
-        return name;
+    public void setGuestAccount(){
+
+        sessionManager.createLoginSession("guest","guest", "GUEST");
+        Intent intent = new Intent(mainActivity, NavigationActivity.class);
+        mainActivity.startActivity(intent);
+
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    public String getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
-    }
 
 
 }

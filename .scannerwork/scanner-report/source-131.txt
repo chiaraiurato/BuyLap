@@ -1,45 +1,51 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.cli.view;
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.Toast;
+import android.os.Build;
 
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.UserFragment;
+import androidx.annotation.RequiresApi;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.example.buylap.cli.graphicController.HomepageGraphicController;
+import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.DAOException;
 
-public class UserFragmentGraphicController {
-    private final UserFragment userFragment;
-    private final SessionManager session;
-    private final Map<String, String> user;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLException;
 
-    public UserFragmentGraphicController(UserFragment userFragment){
-        this.userFragment = userFragment;
-        session = new SessionManager(userFragment.getContext());
-        this.user = session.getUserDetails();
-    }
-    public void initializeSession(View view){
-         if(user.get("type").equals("SELLER")) {
-             userFragment.setFragmentGuest(view);
-         }
+public class HomepageUser {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main() throws BeanException, IOException, DAOException, SQLException {
 
-    }
-    public void notifyGuest(View view){
-        Toast.makeText(view.getContext(), "You must be logged", Toast.LENGTH_SHORT).show();
-    }
-    public void onSignOut(){
+        System.out.println("------------------------ HOMEPAGE USER -----------------------");
+        String input= "";
+        HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
+        String name =homepageGraphicController.initializeSessionCLI();
 
-        session.logoutUser();
-        Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        userFragment.startActivity(intent);
+        System.out.println("\nHi "+name +",\nWelcome back!\n");
 
+
+
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
+        input = numberBuffer.readLine();
+        homepageGraphicController.execute_command(input);
 
     }
-
-
+    public static void show(){
+        System.out.println(
+                "⚫ take_quiz \n" +
+                "⚫ show_cashback\n" +
+                "⚫ cash_out \n" +
+                "⚫ add_cart  -h [cardholder name] -n [number card] -d [expire date]\n"+
+                "⚫ delete_card\n");
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void run() throws IOException, DAOException, BeanException, SQLException {
+        String input= "";
+        HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
+        input = numberBuffer.readLine();
+        homepageGraphicController.execute_command(input);
+    }
 }

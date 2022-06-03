@@ -1,1 +1,0 @@
-ó 2xmlXªhr.app/src/main/res/layout/activity_take_quiz.xml

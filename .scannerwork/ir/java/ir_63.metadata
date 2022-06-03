@@ -1,0 +1,2 @@
+com.example.buylap.controller.applicative.GetCashbackController#deletePoints(Lcom/example/buylap/bean/BeanSession;)V
+com.example.buylap.database.dao.DAOuser#deletePoints(Lcom/example/buylap/bean/BeanSession;)V

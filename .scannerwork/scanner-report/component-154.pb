@@ -1,1 +1,1 @@
-š 2javaXwhr>app/src/main/java/com/example/buylap/view/AddCardActivity.java
+š 2javaX+hrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java

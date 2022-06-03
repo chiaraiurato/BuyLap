@@ -1,1 +1,1 @@
-– 2xmlXhr)app/src/main/res/values-w600dp/dimens.xml
+– 2xmlXhr8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml

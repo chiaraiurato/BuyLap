@@ -1,1 +1,1 @@
-| 2javaX\hr]app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.java
+| 2javaX`hrIapp/src/main/java/com/example/buylap/CLI/main/utils/CommandLineTable.java

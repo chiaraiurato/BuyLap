@@ -1,22 +1,16 @@
 
-^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaC C("1*Ω
-1
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaD D(Ü
-É
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaD D('
-%0!com.example.buylap.model.QuizList"__id*Q*OA
-?com.example.buylap.controller.graphic.TakeQuizGraphicController"
-
-quizListèå
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaD D(
-%1java.lang.String"<com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;*)
-'
-%0!com.example.buylap.model.QuizList2getOp1()"õ
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaD D( 
+=com.example.buylap.bean.BeanBuild#getType()Ljava/lang/String;a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java ("1*ù
+1a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (µ
+≤
+a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
+%0java.lang.String"__id*/*-#
+!com.example.buylap.bean.BeanBuild"
+type"}
+a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
 
-%1java.lang.StringBCA
-?com.example.buylap.controller.graphic.TakeQuizGraphicController
+%0java.lang.StringB%#
+!com.example.buylap.bean.BeanBuild

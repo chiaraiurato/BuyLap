@@ -1,20 +1,17 @@
 
-3com.example.buylap.AnalyticsAdapter#getItemCount()Ic
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/AnalyticsAdapter.java+ +("1*ƒ
-1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/AnalyticsAdapter.java, ,(º
-π
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/AnalyticsAdapter.java, ,(
-%0java.util.List"__id*6*4%
-#com.example.buylap.AnalyticsAdapter"
-	analytics´®
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/AnalyticsAdapter.java, ,(	
-%1int"java.util.List#size()I*
-
-%0java.util.List2size()"m
-c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/AnalyticsAdapter.java, ,( 
-""B'%
-#com.example.buylap.AnalyticsAdapter
+@com.example.buylap.bean.BeanUser#getPassword()Ljava/lang/String;`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java ("1*ù
+1`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (∑
+¥
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (
+%0java.lang.String"__id*2*0"
+ com.example.buylap.bean.BeanUser"
+
+password"|
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java (
+
+%0java.lang.StringB$"
+ com.example.buylap.bean.BeanUser

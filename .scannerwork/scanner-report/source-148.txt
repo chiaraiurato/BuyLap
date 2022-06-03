@@ -1,66 +1,80 @@
-package com.example.buylap;
+package com.example.buylap.controller.graphic;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import com.example.buylap.utils.Data;
+import com.example.buylap.bean.BeanAnswer;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
+import com.example.buylap.model.QuizList;
+import com.example.buylap.view.TakeQuizActivity;
 import java.util.List;
 
+public class TakeQuizGraphicController {
 
-public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
+    private final TakeQuizActivity takeQuizActivity;      //<--- VIEW
 
-    List<MostViewed> mostViewDomains;
+    private QuizList quizList;
+    List<QuizList> listQuest;
+    private final BeanAnswer beanAnswer;
+    Data data;
+    private int index;
 
-    public MostViewAdapter(List<MostViewed> mostViewDomains) {
-        this.mostViewDomains = mostViewDomains;
+    public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {
+
+        this.takeQuizActivity = takeQuizActivity;
+        this.index = 0;
+
+        beanAnswer = new BeanAnswer();
+        data = new Data();
+        listQuest=data.sendQuestion();
+        quizList = listQuest.get(index);
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder, parent, false);
-        return new ViewHolder(inflate);
+    public void setQuiz() {
+        takeQuizActivity.setNumberQuestion(index);
+        takeQuizActivity.setQuestion(quizList.getQuestion());
+        takeQuizActivity.setOp1(quizList.getOp1());
+        takeQuizActivity.setOp2(quizList.getOp2());
+        takeQuizActivity.setOp3(quizList.getOp3());
     }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.titleTxt.setText(String.valueOf(mostViewDomains.get(position).getTitle()));
-        holder.subTitleTxt.setText(String.valueOf(mostViewDomains.get(position).getSubtitle()));
-
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(mostViewDomains.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
-
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .into(holder.removeItem);
-
-    }
-
-
-    @Override
-    public int getItemCount() {
-        return mostViewDomains.size();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTxt;
-        TextView subTitleTxt;
-        ImageView removeItem;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            titleTxt = itemView.findViewById(R.id.titleTxt);
-            subTitleTxt = itemView.findViewById(R.id.subTitleTxt);
-            removeItem = itemView.findViewById(R.id.img_view);
+    public void goNext(String answer){
+        switch (index) {
+            case 0:
+                beanAnswer.setAnswer1(answer);
+                break;
+            case 1:
+                beanAnswer.setAnswer2(answer);
+                break;
+            case 2:
+                beanAnswer.setAnswer3(answer);
+                break;
+            default:
+                break;
         }
+        index++;
+
+        if (index >= listQuest.size() ) {
+
+            takeQuizActivity.finished(beanAnswer);
+
+        } else {
+                takeQuizActivity.setNumberQuestion(index);
+                quizList = listQuest.get(index);
+
+                takeQuizActivity.resetColor();
+                setQuiz();
+            }
+        }
+
+    public String getAnswer1(){
+       return quizList.getOp1();
     }
+    public String getAnswer2(){
+        return quizList.getOp2();
+    }
+
+    public String getAnswer3(){
+        return quizList.getOp3();
+    }
+
+
 }
+

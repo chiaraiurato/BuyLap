@@ -28,11 +28,16 @@ public class GetCashbackController {
         BeanCard beanCard = new BeanCard();
         try {
             modelCreditCard = DAOcard.searchCard(beanSession);
-            beanCard.setCardHolderName(modelCreditCard.getName());
-            beanCard.setCardNumber(modelCreditCard.getNumber());
-            beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
+            if(modelCreditCard == null){
+                return null;
+            }else{
+                beanCard.setCardHolderName(modelCreditCard.getName());
+                beanCard.setCardNumber(modelCreditCard.getNumber());
+                beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
 
-            return beanCard;
+                return beanCard;
+            }
+
         }catch (SQLException | FileNotFoundException e){
             throw new DAOException("error upload credit card");
         }

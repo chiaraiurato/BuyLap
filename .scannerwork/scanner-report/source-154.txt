@@ -1,119 +1,42 @@
-package com.example.buylap.view;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import com.example.buylap.R;
-import com.example.buylap.controller.graphic.CashbackGraphicController;
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-
-public class AddCardActivity extends AppCompatActivity {
-
-    private TextView name;
-    private EditText numberCard;
-    private EditText dateFormat;
-    private TextView cvv;
-    private int prevCount = 0;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_card);
-        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController(this);
-        name = findViewById(R.id.titles);
-        numberCard = findViewById(R.id.subtitles);
-        dateFormat = findViewById(R.id.editTextDate);
-        cvv = findViewById(R.id.cvv);
-
-        Button saveCard = findViewById(R.id.save_item);
-
-        saveCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cashbackGraphicController.verifyLengthOfCreditCard()) {
-                    try {
-
-                        cashbackGraphicController.saveCreditCard();
-                    } catch (DAOException | BeanException e) {
-                        e.printStackTrace();
-                    }
-                    openAct();
-                }
-            }
-        });
+package com.example.buylap.database;
 
 
-        numberCard.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //this should be empty
-            }
+import com.example.buylap.utils.ContextHolder;
+import com.example.buylap.utils.PropertiesReader;
+import com.example.buylap.view.NavigationActivity;
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //this should be empty
-            }
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                String field = s.toString();
-                int currCount = field.length();
+public class JdbcConnection {
 
-                if (shouldIncrementOrDecrement(currCount, true)){
-                    appendOrStrip(field, true);
-                } else if (shouldIncrementOrDecrement(currCount, false)) {
-                    appendOrStrip(field, false);
-                }
-                prevCount = numberCard.getText().toString().length();
-            }
-        });
+    private static JdbcConnection instance = null;
+    private Connection connection = null;
+    protected JdbcConnection() {
+        //Singleton
     }
-    private boolean isAtSpaceDelimiter(int currCount) {
-        return currCount == 4 || currCount == 9 || currCount == 14;
-    }
-
-    private boolean shouldIncrementOrDecrement(int currCount, boolean shouldIncrement) {
-        if (shouldIncrement) {
-            return prevCount <= currCount && isAtSpaceDelimiter(currCount);
-        } else {
-            return prevCount > currCount && isAtSpaceDelimiter(currCount);
+    public static synchronized JdbcConnection getInstance(){
+        if (instance == null) {
+            instance = new JdbcConnection();
         }
+        return instance;
     }
+       public synchronized Connection getConnection() {
+        if(this.connection == null) {
 
-    private void appendOrStrip(String field, boolean shouldAppend) {
-        StringBuilder sb = new StringBuilder(field);
-        if (shouldAppend) {
-            sb.append(" ");
-        } else {
-            sb.setLength(sb.length() - 1);
+            //PropertiesReader propertiesReader = new PropertiesReader(ContextHolder.getInstance().getContext());
+            //Properties prop = propertiesReader.getProperties("db.properties");
+            try{
+
+                this.connection = DriverManager.getConnection("jdbc:mysql://192.168.182.7/android", "andro", "andro");
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-        numberCard.setText(sb.toString());
-        numberCard.setSelection(sb.length());
-    }
-    private void openAct(){
-        Intent intent = new Intent(this, NavigationActivity.class);
-        intent.putExtra("gotoCashback", true);
-        startActivity(intent);
-    }
-    public String sendName(){
-        return name.getText().toString();
-    }
-    public String sendNumber(){
-        return  numberCard.getText().toString();
-    }
-    public String sendDate(){
-        return dateFormat.getText().toString();
-    }
-    public String sendCvv(){
-        return  cvv.getText().toString();
-    }
+            return this.connection;
+        }
 }
+

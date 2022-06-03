@@ -1,1 +1,1 @@
-É 2xmlXhr8app/src/main/res/drawable/ic_baseline_search_24_blue.xml
+É 2xmlXhr<app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml

@@ -1,1 +1,0 @@
-ú 2xmlXZhr'app/src/main/res/layout/viewholder2.xml

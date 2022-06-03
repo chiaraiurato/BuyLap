@@ -1,6 +1,7 @@
-p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 266 p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2>> p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2FF &p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2VV %p
-javaS4507UMake sure this debug feature is deactivated before delivering the code in production. 2`` %
+¨
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2  :L
+Jœ	 œ:SQL Query is dynamically formatted and assigned to 'query'§
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2& +:K
+Iœ D:SQL Query is dynamically formatted and assigned to 'query'§
+javaS2077?Make sure using a dynamically formatted SQL query is safe here. 2!!  %:K
+Iœ  C:SQL Query is dynamically formatted and assigned to 'query'

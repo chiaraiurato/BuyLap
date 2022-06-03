@@ -1,42 +1,87 @@
-package com.example.buylap.utils;
+package com.example.buylap.database.dao;
 
-import android.os.Build;
+import android.os.StrictMode;
 
-import com.example.buylap.Analytics;
-import com.example.buylap.Category;
-import com.example.buylap.MostViewed;
+import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryBuild;
+import com.example.buylap.database.query.QueryCreditCard;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
-import com.example.buylap.model.QuizList;
+import com.example.buylap.model.ModelCreditCard;
+import com.example.buylap.model.users.ModelUser;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-public class Data {
+public class DAOcard {
 
-    public List<QuizList> sendQuestion() {
-        ArrayList<QuizList> listQuest;
-        listQuest = new ArrayList<>();
-        listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
-        listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
-        listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
-        return listQuest;
+    private DAOcard() {
+        //private constructor
+    }
+
+    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, FileNotFoundException {
+
+        Connection connection = null;
+        Statement statement = null;
+        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+       // StrictMode.setThreadPolicy(policy);
+        connection = JdbcConnection.getInstance().getConnection();
+
+        statement = connection.createStatement();
+        QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
+
+    }
+
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        ModelCreditCard modelCreditCard;
+        try {
+
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
+            if (!rs.first()) {
+                return null;
+            }
+            String recordName = rs.getString(2);
+            String recordNumber = rs.getString(3);
+            String recordDate = rs.getString(4);
+            modelCreditCard = new ModelCreditCard(recordName, recordNumber, recordDate);
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
         }
-    public List<MostViewed> sendMostView(){
-        List<MostViewed> mostViewed;
-        mostViewed = new ArrayList<>();
-        mostViewed.add(new MostViewed("AMD", "Ryzen 7 3700X", "cpu"));
-        mostViewed.add(new MostViewed("NVIDIA", "GTX 1800ti", "videocard"));
-        mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
-        mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
-        return mostViewed;
-    }
-    public List<Analytics> sendAnalytics(){
-        List<Analytics> analytics = new ArrayList<>();
-        analytics.add(new Analytics("statistics"));
-        analytics.add(new Analytics("chart"));
-        analytics.add(new Analytics("booklet"));
-        analytics.add(new Analytics("paidsearch"));
-        return analytics;
+        return modelCreditCard;
     }
 
+    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
+        Connection connection = null;
+        Statement statement = null;
+        try {
+
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            QueryCreditCard.deleteCard(statement, beanSession);
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+    }
 }

@@ -1,31 +1,43 @@
-package com.example.buylap.database.query;
+package com.example.buylap.controller.applicative;
 
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.dao.DAOseller;
+import com.example.buylap.database.dao.DAOuser;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 
-import java.sql.ResultSet;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class QueryBuild {
+public class LoginController {
 
 
-    private QueryBuild() {
-        throw new IllegalStateException("Utility class");
+    public BeanUser searchUser(BeanUser beanUser) throws DAOException {
+        ModelUser modelUser;
+
+        try {
+            modelUser = DAOuser.searchUser(beanUser);
+            beanUser.setEmail(modelUser.getEmail());
+            return beanUser;
+
+        } catch (SQLException | FileNotFoundException e) {
+            throw new DAOException("error on signIn for user");
+        }
     }
 
-    public static ResultSet retrieveBuild(Statement stmt, String name,  String keyword) throws SQLException {
-        String query = "SELECT * " +
-                        "FROM " + name + " " +
-                        "WHERE category = '" + keyword + "';";
-        return stmt.executeQuery(query);
-    }
+    public BeanSeller searchSeller(BeanSeller beanSeller) throws DAOException {
+        ModelSeller modelSeller;
 
+        try {
+            modelSeller = DAOseller.searchSeller(beanSeller);
+            beanSeller.setEmail(modelSeller.getEmail());
+            return beanSeller;
 
-    public static void insertComponent(Statement statement, BeanBuild beanBuild, BeanSession beanSession) throws SQLException {
-        String query = "INSERT INTO `"+beanBuild.getType()+"` (`name`,  `subtitles`, `url`, `price`, `username`) " +
-                "VALUES ('"+ beanBuild.getTitle()+"', '"+beanBuild.getSubtitles()+"', '"+beanBuild.getUrlEbay()+"', '"
-                + beanBuild.getPrice()+"', '"+beanSession.getUsername()+"');";
-        statement.executeUpdate(query);
+        } catch (SQLException | FileNotFoundException e) {
+            throw new DAOException("error on signIn for seller");
+        }
     }
 }
+

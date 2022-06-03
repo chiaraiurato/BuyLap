@@ -1,1 +1,0 @@
-Æ 2xmlXhr3app/src/main/res/drawable/ic_baseline_person_24.xml

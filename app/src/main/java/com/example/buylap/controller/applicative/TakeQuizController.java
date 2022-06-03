@@ -6,6 +6,7 @@ import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
+import com.example.buylap.utils.NameBuild;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -55,14 +56,18 @@ public class TakeQuizController {
                 e.printStackTrace();
             }
         }
-        for (index =0; index <6; index++){
+        index=0;
+        for(NameBuild e : NameBuild.values()) {
             BeanBuild beanBuild = new BeanBuild();
+            beanBuild.setType(e.name());
             beanBuild.setTitle(modelBuild.get(index).getName());
             beanBuild.setSubtitles(modelBuild.get(index).getSubtitles());
             beanBuild.setUrlEbay(modelBuild.get(index).getUrl());
             beanBuild.setPrice(modelBuild.get(index).getPrice());
             beanBuildList.add(beanBuild);
+            index++;
         }
+
         return beanBuildList;
 
     }

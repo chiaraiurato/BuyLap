@@ -1,60 +1,42 @@
-package com.example.buylap.view;
+package com.example.buylap.model;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import android.content.Context;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.WindowManager;
-
-import com.example.buylap.controller.graphic.NavigationGraphicController;
-import com.example.buylap.R;
-import com.example.buylap.utils.ContextHolder;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
-
-public class NavigationActivity extends AppCompatActivity {
+public class ModelCreditCard {
+    private String name;
+    private String number;
+    private String data;
 
 
-    BottomNavigationView navigationView;
-    NavigationGraphicController navigationGraphicController;
+    public ModelCreditCard(String name, String number, String data) {
+        this.name = name;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.number = number;
+        this.data = data;
 
-        ContextHolder contextHolder = ContextHolder.getInstance();
-        contextHolder.setContext(getApplicationContext());
-
-        this.navigationGraphicController = new NavigationGraphicController(this);
-
-        navigationView=findViewById(R.id.bottom_navigation);
-
-        navigationGraphicController.checkLogin();
-
-        Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
-        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
-
-
-        navigationView.setSelectedItemId(R.id.nav_home);
-        navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = navigationGraphicController.switchPage(item);
-                getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-                return true;
-
-            }
-        });
-        boolean gotoCashback = this.getIntent().getBooleanExtra("gotoCashback", false);
-        if(gotoCashback)
-        {
-            Fragment fragment = new CashbackFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-        }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
 }

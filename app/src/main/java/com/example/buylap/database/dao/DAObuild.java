@@ -30,8 +30,8 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+           // StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -43,7 +43,6 @@ public class DAObuild {
             String recordSubtitles = rs.getString(2);
             String recordUrl = rs.getString(3);
             float recordPrice = rs.getFloat(4);
-            System.out.println("RECORDNAME record " + recordUrl + recordName+ recordSubtitles);
             modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
             rs.close();
         } finally {
@@ -61,8 +60,8 @@ public class DAObuild {
 
         try {
 
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //StrictMode.setThreadPolicy(policy);
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
