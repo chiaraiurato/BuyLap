@@ -1,1 +1,1 @@
-com.example.buylap.view.LikeFragment#onCreateView(LLayoutInflater;LViewGroup;LBundle;)LView;
+com.example.buylap.bean.BeanCard#getData()Ljava/lang/String;

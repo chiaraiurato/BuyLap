@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.HomepageSeller#show()V
+com.example.buylap.bean.BeanSeller#getUsername()Ljava/lang/String;

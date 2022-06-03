@@ -25,15 +25,12 @@ public class QuizGraphicController {
     private TakeQuizController takeQuizController;
     private List<BeanBuild> beanBuild;
     private final BeanAnswer beanAnswer;
-
-    private SessionManagerCLI sessionManagerCLI;
     private Map<String, String> user;
 
     public QuizGraphicController(){
         beanAnswer = new BeanAnswer();
         takeQuizController = new TakeQuizController();
-        this.sessionManagerCLI = new SessionManagerCLI();
-        this.user = sessionManagerCLI.getUserDetails();
+        this.user = SessionManagerCLI.getUserDetails();
     }
 
 
@@ -49,11 +46,7 @@ public class QuizGraphicController {
         int index;
         float floatPrice = Float.parseFloat(price);
 
-        try {
-            beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
-        } catch (DAOException e) {
-            e.printStackTrace();
-        }
+        beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
         if (beanBuild.isEmpty()) {
             System.out.println("No build found! Try with another price\n");
         } else {

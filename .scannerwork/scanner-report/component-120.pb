@@ -1,1 +1,1 @@
-x 2javaXWhrZapp/src/main/java/com/example/buylap/CLI/main/graphicController/QuizGraphicController.java
+x 2javaXMhrVapp/src/main/java/com/example/buylap/cli/graphic_controller/QuizGraphicController.java

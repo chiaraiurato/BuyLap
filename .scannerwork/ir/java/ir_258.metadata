@@ -1,1 +1,5 @@
-com.example.buylap.controller.graphic.InsertComponentGraphicController#onMenuItemClick(LMenuItem;)Z
+com.example.buylap.utils.Data#sendAnalytics()Ljava/util/List;
+java.util.ArrayList#<init>()V
+com.example.buylap.Analytics#<init>(Ljava/lang/String;)V
+java.util.ArrayList#instance-init#
+com.example.buylap.Analytics#instance-init#

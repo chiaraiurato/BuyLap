@@ -1,1 +1,1 @@
-com.example.buylap.commandLineInterface.utils.CommandLineTable#printRow([Ljava/lang/String;[I)V
+com.example.buylap.bean.BeanBuild#setPrice(F)V

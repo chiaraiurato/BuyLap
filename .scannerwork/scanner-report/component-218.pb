@@ -1,1 +1,1 @@
-Ú 2xmlXhr:app/src/main/res/drawable/ic_baseline_notifications_24.xml
+Ú 2xmlXhr:app/src/main/res/drawable/ic_baseline_notifications_24.xml

@@ -32,9 +32,8 @@ public class QuizResultGraphicController {
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
-    private BudgetActivity budgetActivity;
     private SessionManager sessionManager;
-    private static float price;
+
 
      public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          this.build =  new ArrayList<>();
@@ -45,18 +44,12 @@ public class QuizResultGraphicController {
          this.sessionManager = new SessionManager(quizResultActivity.getApplicationContext());
      }
 
-    public QuizResultGraphicController(BudgetActivity budgetActivity) {
-        this.budgetActivity = budgetActivity;
-    }
 
-    public List<Category> setBuild(String a){
-         beanAnswer= takeQuizController.getBeanAnswer(a);
 
-         try {
-             beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), price);
-         } catch (DAOException e) {
-             e.printStackTrace();
-         }
+    public List<Category> setBuild(String a, String price){
+        beanAnswer= takeQuizController.getBeanAnswer(a);
+        float floatPrice = Float.parseFloat(price.substring(0, price.length() - 2));
+        beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
         if (beanBuild.isEmpty()){
             openErrorDialog();
         }else {
@@ -123,8 +116,4 @@ public class QuizResultGraphicController {
         }
     }
 
-    public void setPrice() {
-        String bg = budgetActivity.sendPrice();
-        price = Float.parseFloat(bg.substring(0, bg.length() -2 ));
-    }
 }

@@ -1,9 +1,12 @@
 package com.example.buylap.controller.graphic;
 
+import android.content.Intent;
+
 import com.example.buylap.utils.Data;
 import com.example.buylap.bean.BeanAnswer;
 
 import com.example.buylap.model.QuizList;
+import com.example.buylap.view.QuizResultActivity;
 import com.example.buylap.view.TakeQuizActivity;
 import java.util.List;
 
@@ -63,7 +66,12 @@ public class TakeQuizGraphicController {
                 setQuiz();
             }
         }
-
+    public void finishQuiz(BeanAnswer beanAnswer, String price){
+        Intent intent = new Intent(takeQuizActivity, QuizResultActivity.class);
+        intent.putExtra("price", price);
+        intent.putExtra("beanAnswer3", beanAnswer.getAnswer3());
+        takeQuizActivity.startActivity(intent);
+    }
     public String getAnswer1(){
        return quizList.getOp1();
     }
@@ -74,6 +82,7 @@ public class TakeQuizGraphicController {
     public String getAnswer3(){
         return quizList.getOp3();
     }
+
 
 
 }

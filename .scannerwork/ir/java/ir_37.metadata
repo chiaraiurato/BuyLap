@@ -1,4 +1,1 @@
-com.example.buylap.cli.graphicController.QuizGraphicController#runHomepage()V
-com.example.buylap.cli.view.HomepageUser#run()V
-java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-com.example.buylap.cli.view.HomepageSeller#run()V
+com.example.buylap.Category#getPrice()D

@@ -1,1 +1,1 @@
-com.example.buylap.MostViewed#instance-init#
+com.example.buylap.database.query.QueryBuild#insertComponent(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSession;)V

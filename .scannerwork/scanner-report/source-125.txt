@@ -1,31 +1,26 @@
-package com.example.buylap.commandLineInterface.utils;
+package com.example.buylap.cli.utils;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SessionManagerCLI {
 
-    public static  String KEY_USERNAME;
-    public static String KEY_PASSWORD;
-    public static String KEY_TYPE;
+    private static  String keyUsername;
+    private static String keyPassword;
+    private static String keyType;
 
-    public void  createLoginSession(String username, String password, String type){
-        KEY_USERNAME = username;
-        KEY_PASSWORD = password;
-        KEY_TYPE = type;
+    public static void  createLoginSession(String username, String password, String type){
+        keyUsername = username;
+        keyPassword = password;
+        keyType = type;
 
     }
 
-    public void logoutUser(){
-        KEY_USERNAME = "";
-        KEY_PASSWORD = "";
-        KEY_TYPE = "";
-    }
-    public Map<String, String> getUserDetails(){
+    public static Map<String, String> getUserDetails(){
         Map<String, String> user = new HashMap<>();
-        user.put("user", KEY_USERNAME );
-        user.put("password", KEY_PASSWORD);
-        user.put("type", KEY_TYPE);
+        user.put("user", keyUsername );
+        user.put("password", keyPassword);
+        user.put("type", keyType);
         return user;
     }
 }

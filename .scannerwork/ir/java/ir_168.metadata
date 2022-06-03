@@ -1,1 +1,1 @@
-com.example.buylap.database.query.QueryRegistrationLogin#instance-init#
+com.example.buylap.view.SellerFragment#setSeller(Lcom/example/buylap/bean/BeanSeller;LView;)V

@@ -14,6 +14,9 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 public class HomepageSeller {
+    private HomepageSeller(){
+        //View HomepageSeller
+    }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws IOException, DAOException, BeanException, SQLException {
         System.out.println("------------------------ HOMEPAGE SELLER -----------------------");

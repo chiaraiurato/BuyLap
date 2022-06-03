@@ -1,3 +1,1 @@
-com.example.buylap.MostViewAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/MostViewAdapter$ViewHolder;
-com.example.buylap.MostViewAdapter$ViewHolder#instance-init#
-com.example.buylap.MostViewAdapter$ViewHolder#<init>(Lcom/example/buylap/MostViewAdapter;LView;)V
+com.example.buylap.model.ModelCreditCard#setNumber(Ljava/lang/String;)V

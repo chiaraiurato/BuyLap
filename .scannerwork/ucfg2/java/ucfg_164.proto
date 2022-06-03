@@ -1,9 +1,20 @@
 
-Lcom.example.buylap.view.InsertComponentActivity#sendType()Ljava/lang/String;o
-eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaD D("1*ï
-1o
-eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaE E("y
-o
-eC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/InsertComponentActivity.javaE E(*
-""B31
-/com.example.buylap.view.InsertComponentActivity
+2com.example.buylap.MostViewAdapter#getItemCount()Ib
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewAdapter.java2 2("1*Å
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewAdapter.java3 3(À
+½
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewAdapter.java3 3(
+%0java.util.List"__id*;*9$
+"com.example.buylap.MostViewAdapter"
+mostViewDomainsª§
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewAdapter.java3 3(%	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"l
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewAdapter.java3 3(&
+""B&$
+"com.example.buylap.MostViewAdapter

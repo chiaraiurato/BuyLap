@@ -1,3 +1,1 @@
-com.example.buylap.view.LoginActivity#onCreate(LBundle;)V
-com.example.buylap.controller.graphic.LoginGraphicController#<init>(Lcom/example/buylap/view/LoginActivity;)V
-com.example.buylap.controller.graphic.LoginGraphicController#instance-init#
+com.example.buylap.view.InsertComponentActivity#setCpu()V

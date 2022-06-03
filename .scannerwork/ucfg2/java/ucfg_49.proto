@@ -1,23 +1,16 @@
 
-¦com.example.buylap.controller.applicative.GetCashbackController#createCard(Lcom/example/buylap/bean/BeanCard;Lcom/example/buylap/bean/BeanSession;)Ljava/lang/Boolean;
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java ("5*Ž
-4
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java ("‡
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java (2*­
-5
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java (¡
-ž
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java (5
-
-%0void"|com.example.buylap.database.dao.DAOcard#insertCard(Lcom/example/buylap/bean/BeanCard;Lcom/example/buylap/bean/BeanSession;)V*+")
-'com.example.buylap.database.dao.DAOcard*.
-,
-beanCard com.example.buylap.bean.BeanCard*4
-2
-beanSession#com.example.buylap.bean.BeanSession*
-4:,
-beanCard com.example.buylap.bean.BeanCard:2
-beanSession#com.example.buylap.bean.BeanSessionBCA
-?com.example.buylap.controller.applicative.GetCashbackController
+8com.example.buylap.MostViewed#getUrl()Ljava/lang/String;]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java ("1*Œ
+1]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (¬
+©
+]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
+%0java.lang.String"__id***(
+com.example.buylap.MostViewed"
+url"y
+]
+SC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/MostViewed.java (
+
+%0java.lang.StringB!
+com.example.buylap.MostViewed

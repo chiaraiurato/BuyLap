@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanBuild#getUrlEbay()Ljava/lang/String;
+com.example.buylap.bean.BeanUser#getUsername()Ljava/lang/String;

@@ -1,10 +1,10 @@
-package com.example.buylap.cli.graphicController;
+package com.example.buylap.cli.graphic_controller;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.commandLineInterface.utils.SessionManagerCLI;
+import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
 import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.bean.BeanAnswer;
@@ -12,7 +12,7 @@ import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.commandLineInterface.utils.CommandLineTable;
+import com.example.buylap.cli.utils.CommandLineTable;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -25,14 +25,12 @@ public class QuizGraphicController {
     private TakeQuizController takeQuizController;
     private List<BeanBuild> beanBuild;
     private final BeanAnswer beanAnswer;
-    private String price;
-    SessionManagerCLI sessionManagerCLI;
-    Map<String, String> user;
+    private Map<String, String> user;
+
     public QuizGraphicController(){
         beanAnswer = new BeanAnswer();
         takeQuizController = new TakeQuizController();
-        this.sessionManagerCLI = new SessionManagerCLI();
-        this.user = sessionManagerCLI.getUserDetails();
+        this.user = SessionManagerCLI.getUserDetails();
     }
 
 
@@ -46,19 +44,15 @@ public class QuizGraphicController {
             beanAnswer.setAnswer3("Home use");
         }
         int index;
-        float float_price = Float.parseFloat(price);
+        float floatPrice = Float.parseFloat(price);
 
-        try {
-            beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), float_price);
-        } catch (DAOException e) {
-            e.printStackTrace();
-        }
+        beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
         if (beanBuild.isEmpty()) {
             System.out.println("No build found! Try with another price\n");
         } else {
 
             CommandLineTable st = new CommandLineTable();
-            st.setShowVerticalLines(true);   //if false (default) then no vertical lines are shown
+            st.setShowVerticalLines(true);
             st.setHeaders("Type", "Title", "Subtitles", "Price", "Link");
             for (index = 0; index < 6; index++) {
                 st.addRow(beanBuild.get(index).getType() ,beanBuild.get(index).getTitle() ,
@@ -75,12 +69,8 @@ public class QuizGraphicController {
         if(Objects.equals(user.get("type"), "USER")) {
             HomepageUser.run();
 
-        }else if( Objects.equals(user.get("type"), "SELLER")){
+        }else if(Objects.equals(user.get("type"), "SELLER")){
             HomepageSeller.run();
         }
-    }
-
-    public void setPrice(String price){
-        this.price = price;
     }
 }

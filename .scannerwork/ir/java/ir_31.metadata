@@ -1,1 +1,3 @@
-com.example.buylap.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/CategoryAdapter$OnCatListener;)V
+com.example.buylap.database.query.QueryCreditCard#<init>()V
+java.lang.IllegalStateException#instance-init#
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V

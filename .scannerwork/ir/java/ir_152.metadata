@@ -1,4 +1,1 @@
-com.example.buylap.bean.BeanSession#setUsername(Ljava/lang/String;)V
-com.example.buylap.exceptions.BeanException#instance-init#
-java.lang.String#isEmpty()Z
-com.example.buylap.exceptions.BeanException#<init>(Ljava/lang/String;)V
+com.example.buylap.database.query.QueryRegistrationLogin#insertUser(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanUser;)V

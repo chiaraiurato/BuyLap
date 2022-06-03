@@ -1,1 +1,1 @@
-com.example.buylap.MostViewed#setTitle(Ljava/lang/String;)V
+com.example.buylap.view.TakeQuizActivity#setQuestion(Ljava/lang/String;)V

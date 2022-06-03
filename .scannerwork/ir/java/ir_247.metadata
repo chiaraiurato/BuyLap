@@ -1,2 +1,5 @@
-com.example.buylap.cli.graphicController.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;
-java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+com.example.buylap.controller.graphic.InsertComponentGraphicController#<init>(Lcom/example/buylap/view/InsertComponentActivity;)V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.controller.applicative.InsertComponentController#<init>()V
+com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.controller.applicative.InsertComponentController#instance-init#

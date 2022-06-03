@@ -1,1 +1,1 @@
-™ 2javaXkhr>app/src/main/java/com/example/buylap/database/dao/DAOuser.java
+™ 2javaXwhr>app/src/main/java/com/example/buylap/database/dao/DAOuser.java

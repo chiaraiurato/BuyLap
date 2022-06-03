@@ -1,5 +1,7 @@
 package com.example.buylap.database.dao;
 
+import static com.example.buylap.cli.Main.cli;
+
 import android.os.StrictMode;
 import android.util.Log;
 
@@ -28,6 +30,10 @@ public class DAOuser {
         Statement statement = null;
 
         try {
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -43,6 +49,10 @@ public class DAOuser {
         Statement statement = null;
         ModelUser modelUser;
         try {
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -66,9 +76,10 @@ public class DAOuser {
         Statement statement = null;
         int recordPoint;
         try {
-
-            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            //StrictMode.setThreadPolicy(policy);
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -90,9 +101,10 @@ public class DAOuser {
         Connection connection = null;
         Statement statement = null;
         try {
-
-            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            //StrictMode.setThreadPolicy(policy);
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();

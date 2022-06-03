@@ -1,7 +1,5 @@
-com.example.buylap.cli.graphicController.CashbackGraphicController#<init>()V
-com.example.buylap.commandLineInterface.utils.SessionManagerCLI#<init>()V
-com.example.buylap.commandLineInterface.utils.SessionManagerCLI#instance-init#
-com.example.buylap.controller.applicative.GetCashbackController#<init>()V
-com.example.buylap.bean.BeanSession#<init>()V
-com.example.buylap.controller.applicative.GetCashbackController#instance-init#
-com.example.buylap.bean.BeanSession#instance-init#
+com.example.buylap.cli.graphic_controller.AddComponentGraphicController#<init>()V
+com.example.buylap.bean.BeanBuild#<init>()V
+com.example.buylap.bean.BeanBuild#instance-init#
+com.example.buylap.controller.applicative.InsertComponentController#<init>()V
+com.example.buylap.controller.applicative.InsertComponentController#instance-init#

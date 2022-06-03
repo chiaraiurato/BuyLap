@@ -1,11 +1,9 @@
 package com.example.buylap.view;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.buylap.R;
-import com.example.buylap.controller.graphic.QuizResultGraphicController;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +19,6 @@ public class BudgetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
-        QuizResultGraphicController quizResultGraphicController = new QuizResultGraphicController(this);
         SeekBar mySeekbar = findViewById(R.id.seekBar);
         budget = findViewById(R.id.budget);
         TextView next = findViewById(R.id.next_btn);
@@ -45,15 +42,14 @@ public class BudgetActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                quizResultGraphicController.setPrice();
                 Intent intent = new Intent(BudgetActivity.this, TakeQuizActivity.class);
+                intent.putExtra("price",budget.getText().toString() );
                 startActivity(intent);
             }
         });
     }
-    public String sendPrice(){
-        return budget.getText().toString();
-    }
+
+
+
 
 }

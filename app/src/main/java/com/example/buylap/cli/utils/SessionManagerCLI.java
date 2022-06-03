@@ -9,7 +9,7 @@ public class SessionManagerCLI {
     private static String keyPassword;
     private static String keyType;
 
-    public void  createLoginSession(String username, String password, String type){
+    public static void  createLoginSession(String username, String password, String type){
         keyUsername = username;
         keyPassword = password;
         keyType = type;

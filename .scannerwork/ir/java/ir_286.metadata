@@ -1,1 +1,1 @@
-com.example.buylap.commandLineInterface.utils.CommandLineTable#addRow([Ljava/lang/String;)V
+com.example.buylap.controller.applicative.LoginController#instance-init#

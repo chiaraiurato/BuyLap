@@ -6,10 +6,6 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.buylap.commandLineInterface.utils.SessionManagerCLI;
-
-import com.example.buylap.cli.view.HomepageSeller;
-import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
@@ -18,8 +14,6 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
-
-import java.io.IOException;
 
 public class RegistrationGraphicController {
 

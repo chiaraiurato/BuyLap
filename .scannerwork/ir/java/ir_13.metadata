@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelBuild#getPrice()F
+com.example.buylap.model.ModelBuild#getName()Ljava/lang/String;

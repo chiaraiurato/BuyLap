@@ -13,7 +13,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
 
-public class TakeQuiz {
+public class TakeQuiz{
+
     private TakeQuiz(){
         //View TakeQuiz
     }

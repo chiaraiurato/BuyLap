@@ -1,1 +1,2 @@
-com.example.buylap.view.InsertComponentActivity#sendType()Ljava/lang/String;
+com.example.buylap.MostViewAdapter#onBindViewHolder(Lcom/example/buylap/MostViewAdapter$ViewHolder;I)V
+java.lang.String#valueOf(Ljava/lang/Object;)Ljava/lang/String;

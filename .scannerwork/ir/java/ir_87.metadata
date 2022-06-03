@@ -1,1 +1,1 @@
-com.example.buylap.view.TakeQuizActivity#choice(LCardView;Ljava/lang/String;)V
+com.example.buylap.view.AddCardActivity#sendName()Ljava/lang/String;

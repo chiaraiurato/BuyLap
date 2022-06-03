@@ -1,432 +1,16 @@
 
-mcom.example.buylap.controller.applicative.TakeQuizController#createBuild(Ljava/lang/String;F)Ljava/util/List;|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (&"21*î
-
-15|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java) )(≤Ø
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java*, *(7
-%19java.util.ArrayList"java.util.ArrayList≈
-¬
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java*( *(9
-%20"java.util.ArrayList#<init>()V*
-
-%19java.util.ArrayList∆
-√
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java* *(:
-beanBuildListjava.util.List"__id*
-
-%19java.util.ArrayList≤Ø
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java+* +(5
-%21java.util.ArrayList"java.util.ArrayList≈
-¬
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java+& +(7
-%22"java.util.ArrayList#<init>()V*
-
-%21java.util.ArrayList√
-¿
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java+ +(8
-
-modelBuildjava.util.List"__id*
-
-%21java.util.ArrayList*
-4
-12*˜
-16|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java& &()®
-•
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java& &(2
-%18java.lang.String"__id*
-""¡
-æ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java& &(2
-	nameTablejava.lang.String"__id*
-
-%18java.lang.String*
-15*ó
-17|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java% %(àÖ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java% %(+
-%17boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-keywordjava.lang.String*
-
-Home use2equals(Ljava/lang/Object;)*
-15
-16*˜
-18|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java$ $()®
-•
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java$ $(4
-%16java.lang.String"__id*
-""¡
-æ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java$ $(4
-	nameTablejava.lang.String"__id*
-
-%16java.lang.String*
-15*ô
-19|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java# #(äá
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java# #(-
-%15boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-keywordjava.lang.String*
-
-Office use2equals(Ljava/lang/Object;)*
-17
-18*•
-1|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaG G("°
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaG G(!
-
-beanBuildListjava.util.List*¥
-2|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java< <(∏
-µ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java< <('
-e"com.example.buylap.utils.NameBuild"__id*
-""Ì
-Í
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java< <('
-e"com.example.buylap.utils.NameBuild"
-__arrayGet*-
-+
-%29$com.example.buylap.utils.NameBuild[]*
-""*
-3
-1*˚%
-3|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java=" =(1ŒÀ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java=& =(/(
-%30!com.example.buylap.bean.BeanBuild"!com.example.buylap.bean.BeanBuild·
-ﬁ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java=" =(1
-%31"+com.example.buylap.bean.BeanBuild#<init>()V**
-(
-%30!com.example.buylap.bean.BeanBuild„
-‡
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java= =(2.
-	beanBuild!com.example.buylap.bean.BeanBuild"__id**
-(
-%30!com.example.buylap.bean.BeanBuildˆÛ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java> >(&
-%32java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
-'
-e"com.example.buylap.utils.NameBuild2name()∏µ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java> >('
-%33void">com.example.buylap.bean.BeanBuild#setType(Ljava/lang/String;)V*0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-
-%32java.lang.String2setType(Ljava/lang/String;)·
-ﬁ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java? ?(4*
-%34#com.example.buylap.model.ModelBuild"
-__arrayGet*
-
-
-modelBuildjava.util.List*
-""îë
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java? ?(>
-%35java.lang.String"?com.example.buylap.model.ModelBuild#getName()Ljava/lang/String;*,
-*
-%34#com.example.buylap.model.ModelBuild2	getName()∫∑
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java? ?(?
-%36void"?com.example.buylap.bean.BeanBuild#setTitle(Ljava/lang/String;)V*0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-
-%35java.lang.String2setTitle(Ljava/lang/String;)·
-ﬁ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java@# @(8*
-%37#com.example.buylap.model.ModelBuild"
-__arrayGet*
-
-
-modelBuildjava.util.List*
-""ûõ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java@# @(G
-%38java.lang.String"Dcom.example.buylap.model.ModelBuild#getSubtitles()Ljava/lang/String;*,
-*
-%37#com.example.buylap.model.ModelBuild2getSubtitles()¬ø
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java@ @(H
-%39void"Ccom.example.buylap.bean.BeanBuild#setSubtitles(Ljava/lang/String;)V*0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-
-%38java.lang.String2 setSubtitles(Ljava/lang/String;)·
-ﬁ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaA! A(6*
-%40#com.example.buylap.model.ModelBuild"
-__arrayGet*
-
-
-modelBuildjava.util.List*
-""íè
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaA! A(?
-%41java.lang.String">com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;*,
-*
-%40#com.example.buylap.model.ModelBuild2getUrl()æª
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaA A(@
-%42void"Acom.example.buylap.bean.BeanBuild#setUrlEbay(Ljava/lang/String;)V*0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-
-%41java.lang.String2setUrlEbay(Ljava/lang/String;)·
-ﬁ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaB B(4*
-%43#com.example.buylap.model.ModelBuild"
-__arrayGet*
-
-
-modelBuildjava.util.List*
-""˙˜
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaB B(?
-%44float"/com.example.buylap.model.ModelBuild#getPrice()F*,
-*
-%43#com.example.buylap.model.ModelBuild2
-getPrice()çä
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaB B(@
-%45void".com.example.buylap.bean.BeanBuild#setPrice(F)V*0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-
-%44float2setPrice(F)ˆ
-Û
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.javaC C((
-%46boolean"
-__arrayAdd*!
-
-beanBuildListjava.util.List*: *0
-.
-	beanBuild!com.example.buylap.bean.BeanBuild*
-2*±
-4|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java< <(#®
-•
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java< <(,+
-%29$com.example.buylap.utils.NameBuild[]"Pcom.example.buylap.utils.NameBuild#values()[Lcom/example/buylap/utils/NameBuild;*&"$
-"com.example.buylap.utils.NameBuild*
-2*¸
-8|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java4 4(\Ô
-Ï
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java4 4(\
-%27boolean"
-__arrayAdd*
-
-
-modelBuildjava.util.List*: *,
-*
-%26#com.example.buylap.model.ModelBuild*
-4
-12*ˇ
-9|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java4 4(—
-Œ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java48 4(H
-%25java.lang.String"
-__arrayGet*!
-
-	componentjava.lang.String[]*
-""¢
-ü
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java4# 4([*
-%26#com.example.buylap.model.ModelBuild"Äcom.example.buylap.database.dao.DAObuild#selectBuild(Ljava/lang/String;Ljava/lang/String;F)Lcom/example/buylap/model/ModelBuild;*,"*
-(com.example.buylap.database.dao.DAObuild*
-
-%25java.lang.String*
-
-	nameTablejava.lang.String*
-""*
-8*˜
-20|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java" "()®
-•
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java" "(0
-%14java.lang.String"__id*
-""¡
-æ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java" "(0
-	nameTablejava.lang.String"__id*
-
-%14java.lang.String*
-15*œ
-21|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java( ()Ø¨
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (*
-%0java.lang.String[]"java.lang.String[]ƒ
-¡
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (+
-	componentjava.lang.String[]"__id*
-
-%0java.lang.String[]™
-ß
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (
-	nameTablejava.lang.String"__id* ß
-§
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (4
-%1java.lang.String"__id*
-""‘
-—
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (4
-%2"
-__arraySet*!
-
-	componentjava.lang.String[]*2 *
+>com.example.buylap.bean.BeanBuild#getTitle()Ljava/lang/String;a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java ("1*û
+1a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (∂
+≥
+a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
+%0java.lang.String"__id*0*.#
+!com.example.buylap.bean.BeanBuild"
+title"}
+a
+WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
 
-%1java.lang.Stringß
-§
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%3java.lang.String"__id*
-""÷
-”
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%4"
-__arraySet*!
-
-	componentjava.lang.String[]*2*
-
-%3java.lang.Stringß
-§
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%5java.lang.String"__id*
-""÷
-”
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%6"
-__arraySet*!
-
-	componentjava.lang.String[]*2*
-
-%5java.lang.Stringß
-§
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%7java.lang.String"__id*
-""÷
-”
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (,
-%8"
-__arraySet*!
-
-	componentjava.lang.String[]*2*
-
-%7java.lang.Stringß
-§
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (3
-%9java.lang.String"__id*
-""◊
-‘
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (3
-%10"
-__arraySet*!
-
-	componentjava.lang.String[]*2*
-
-%9java.lang.String®
-•
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (5
-%11java.lang.String"__id*
-""ÿ
-’
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (5
-%12"
-__arraySet*!
-
-	componentjava.lang.String[]*2*
-
-%11java.lang.StringÜÉ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java! !(#
-%13boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-keywordjava.lang.String*
-
-Gaming2equals(Ljava/lang/Object;)*
-19
-20*¶
-10|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java2 2(("°
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java2 2()!
-
-beanBuildListjava.util.List*Ñ
-12|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java1 1(—
-Œ
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java1( 1(8
-%23java.lang.String"
-__arrayGet*!
-
-	componentjava.lang.String[]*
-""¢
-ü
-|
-rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java1 1(K*
-%24#com.example.buylap.model.ModelBuild"Äcom.example.buylap.database.dao.DAObuild#selectBuild(Ljava/lang/String;Ljava/lang/String;F)Lcom/example/buylap/model/ModelBuild;*,"*
-(com.example.buylap.database.dao.DAObuild*
-
-%23java.lang.String*
-
-	nameTablejava.lang.String*
-""*
-9
-10:
-keywordjava.lang.String:
-""B@>
-<com.example.buylap.controller.applicative.TakeQuizController
+%0java.lang.StringB%#
+!com.example.buylap.bean.BeanBuild

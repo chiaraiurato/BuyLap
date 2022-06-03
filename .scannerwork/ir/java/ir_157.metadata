@@ -1,1 +1,1 @@
-com.example.buylap.commandLineInterface.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.database.query.QueryRegistrationLogin#deletePoints(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSession;)V

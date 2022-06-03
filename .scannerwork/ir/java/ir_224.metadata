@@ -1,2 +1,1 @@
-com.example.buylap.view.InsertComponentActivity#sendPrice()F
-java.lang.Float#parseFloat(Ljava/lang/String;)F
+com.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;

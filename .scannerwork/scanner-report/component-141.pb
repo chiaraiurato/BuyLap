@@ -1,1 +1,1 @@
-ç 2javaXXhrRapp/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java
+ç 2javaXThrRapp/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java

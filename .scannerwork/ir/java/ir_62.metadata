@@ -1,2 +1,3 @@
-com.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanSession;)I
-com.example.buylap.database.dao.DAOuser#uploadPoints(Lcom/example/buylap/bean/BeanSession;)I
+com.example.buylap.database.query.QueryBuild#<init>()V
+java.lang.IllegalStateException#instance-init#
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V

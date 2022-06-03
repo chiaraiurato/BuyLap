@@ -1,3 +1,1 @@
-com.example.buylap.controller.graphic.MainGraphicController#<init>(Lcom/example/buylap/view/MainActivity;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.view.SellerFragment#<init>()V

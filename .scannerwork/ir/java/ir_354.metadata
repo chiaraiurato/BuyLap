@@ -1,3 +1,1 @@
-com.example.buylap.view.BudgetActivity#onCreate(LBundle;)V
-com.example.buylap.controller.graphic.QuizResultGraphicController#<init>(Lcom/example/buylap/view/BudgetActivity;)V
-com.example.buylap.controller.graphic.QuizResultGraphicController#instance-init#
+com.example.buylap.view.HomeFragment#setUser(Lcom/example/buylap/bean/BeanUser;LView;)V

@@ -1,1 +1,5 @@
-com.example.buylap.view.UserFragment#<init>()V
+com.example.buylap.controller.graphic.InsertComponentGraphicController#saveComponent()V
+null
+com.example.buylap.bean.BeanSession#<init>()V
+java.lang.Boolean#equals(Ljava/lang/Object;)Z
+com.example.buylap.bean.BeanSession#instance-init#

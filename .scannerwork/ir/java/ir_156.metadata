@@ -1,1 +1,1 @@
-com.example.buylap.commandLineInterface.utils.SessionManagerCLI#instance-init#
+com.example.buylap.database.query.QueryRegistrationLogin#searchPoints(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSession;)Ljava/sql/ResultSet;

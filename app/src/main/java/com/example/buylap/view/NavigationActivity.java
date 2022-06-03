@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.buylap.cli.Main;
 import com.example.buylap.controller.graphic.NavigationGraphicController;
 import com.example.buylap.R;
 import com.example.buylap.utils.ContextHolder;
@@ -26,7 +27,7 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        Main.cli = false;  //Android mode
         ContextHolder contextHolder = ContextHolder.getInstance();
         contextHolder.setContext(getApplicationContext());
 

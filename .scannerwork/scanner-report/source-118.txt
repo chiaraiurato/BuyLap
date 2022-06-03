@@ -1,10 +1,10 @@
-package com.example.buylap.cli.graphicController;
+package com.example.buylap.cli.graphic_controller;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.commandLineInterface.utils.SessionManagerCLI;
+import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.AddComponent;
 import com.example.buylap.cli.view.CreditCard;
 import com.example.buylap.cli.view.Cashback;
@@ -22,12 +22,12 @@ import java.util.Objects;
 import java.util.StringTokenizer;
 
 public class HomepageGraphicController {
-    SessionManagerCLI sessionManagerCLI;
-    Map<String, String> user;
+
+    private Map<String, String> user;
 
     public HomepageGraphicController(){
-        this.sessionManagerCLI = new SessionManagerCLI();
-        this.user = sessionManagerCLI.getUserDetails();
+
+        this.user = SessionManagerCLI.getUserDetails();
     }
     public String initializeSessionCLI() {
 
@@ -39,7 +39,7 @@ public class HomepageGraphicController {
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void execute_command(String input) throws IOException, DAOException, BeanException, SQLException {
+    public void executeCommand(String input) throws IOException, DAOException, BeanException, SQLException {
 
         if(Objects.equals(user.get("type"), "USER")) {
 
@@ -49,6 +49,7 @@ public class HomepageGraphicController {
                 case "show":
                     HomepageUser.show();
                     HomepageUser.run();
+                    break;
                 case "take_quiz":
                     TakeQuiz.main();
                     break;
@@ -63,9 +64,11 @@ public class HomepageGraphicController {
                 case "add_card":
                     CreditCard.save(input);
                     HomepageUser.run();
+                    break;
                 case "delete_card":
                     CreditCard.delete();
                     HomepageUser.run();
+                    break;
                 case "exit":
                     Exit.main();
                     break;
@@ -79,6 +82,7 @@ public class HomepageGraphicController {
             switch (command) {
                 case "show":
                     HomepageSeller.show();
+                    break;
                 case "take_quiz":
                     TakeQuiz.main();
                     break;
@@ -101,6 +105,7 @@ public class HomepageGraphicController {
                 case "delete_card":
                     CreditCard.delete();
                     HomepageSeller.run();
+                    break;
                 case "exit":
                     Exit.main();
                     break;

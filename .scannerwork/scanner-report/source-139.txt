@@ -20,7 +20,7 @@ public class TakeQuizController {
         return beanAnswer;
 
     }
-    public List<BeanBuild> createBuild(String keyword, float price) throws DAOException {
+    public List<BeanBuild> createBuild(String keyword, float price){
         String[] component = new String[6];
         String nameTable = "";
         component[0] = ConstantNameTable.MOTHERBOARD;
@@ -31,11 +31,11 @@ public class TakeQuizController {
         component[5] = ConstantNameTable.POWER_SUPPLY;
 
         if(keyword.equals("Gaming")){
-            nameTable = ConstantNameTable.Gaming;
+            nameTable = ConstantNameTable.GAMING;
         }else if(keyword.equals("Office use")){
-            nameTable = ConstantNameTable.Office_use;
+            nameTable = ConstantNameTable.OFFICE_USE;
         }else if(keyword.equals("Home use")){
-            nameTable = ConstantNameTable.Home_use;
+            nameTable = ConstantNameTable.HOME_USE;
         }
 
         int index;
@@ -71,6 +71,7 @@ public class TakeQuizController {
         return beanBuildList;
 
     }
+
 
 
 

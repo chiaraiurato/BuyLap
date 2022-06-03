@@ -1,1 +1,1 @@
-com.example.buylap.controller.graphic.UserFragmentGraphicController#notifyGuest(LView;)V
+com.example.buylap.view.InsertComponentActivity#sendType()Ljava/lang/String;

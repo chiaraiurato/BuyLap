@@ -1,1 +1,3 @@
-com.example.buylap.bean.BeanUser#getPoints()I
+com.example.buylap.cli.view.SignIn#main(Ljava/lang/String;)V
+com.example.buylap.cli.graphic_controller.SignInGraphicController#instance-init#
+com.example.buylap.cli.graphic_controller.SignInGraphicController#<init>()V

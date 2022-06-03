@@ -52,7 +52,7 @@ public class GetCashbackController {
         }
     }
 
-    public int uploadPoints(BeanSession beanSession) throws DAOException, SQLException, FileNotFoundException {
+    public int uploadPoints(BeanSession beanSession) throws SQLException, FileNotFoundException {
 
         return DAOuser.uploadPoints(beanSession);
     }

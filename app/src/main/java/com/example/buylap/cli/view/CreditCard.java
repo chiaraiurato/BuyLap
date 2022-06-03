@@ -5,6 +5,9 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
 public class CreditCard {
+    private CreditCard(){
+        //View Credit Card
+    }
     public static void save(String input) throws BeanException, DAOException {
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         cashbackGraphicController.saveCreditCard(input);

@@ -1,5 +1,4 @@
-t
-javaS120ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'. 2 )Ê
+Ê
 javaS2259I"NullPointerException" will be thrown when invoking method "printLine()". 2DD :ã
 1|JJ  3#Implies 'columnWidths' can be null.
 G|II% 19Implies 'columnWidths' has the same value as 'maxWidths'.

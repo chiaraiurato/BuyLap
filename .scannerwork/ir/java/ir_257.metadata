@@ -1,2 +1,5 @@
-com.example.buylap.controller.graphic.InsertComponentGraphicController#show(LView;)V
-null
+com.example.buylap.utils.Data#sendMostView()Ljava/util/List;
+java.util.ArrayList#<init>()V
+com.example.buylap.MostViewed#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.MostViewed#instance-init#
+java.util.ArrayList#instance-init#

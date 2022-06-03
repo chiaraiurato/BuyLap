@@ -32,6 +32,7 @@ public class MainGraphicController {
                 break;
             case "sign_in":
                 SignIn.main(s);
+                break;
             case "exit":
                 Exit.main();
                 break;

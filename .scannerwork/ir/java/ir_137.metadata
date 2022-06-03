@@ -1,1 +1,1 @@
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.bean.BeanSession#getUsername()Ljava/lang/String;

@@ -12,25 +12,23 @@ import java.util.Map;
 
 public class AddComponentGraphicController {
     private InsertComponentController insertComponentController;
-    private BeanBuild beanBuild = new BeanBuild();
-    SessionManagerCLI sessionManagerCLI;
-    Map<String, String> user;
+    private BeanBuild beanBuild;
 
     public AddComponentGraphicController(){
         this.insertComponentController = new InsertComponentController();
-        this.sessionManagerCLI = new SessionManagerCLI();
+        this.beanBuild = new BeanBuild();
     }
     public void saveComponent(String input) throws BeanException, DAOException {
         BeanSession beanSession = new BeanSession();
-        user = sessionManagerCLI.getUserDetails();
+        Map<String, String> user = SessionManagerCLI.getUserDetails();
         if(user.get("user") != null) {
             beanSession.setUsername(user.get("user"));
         }
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-c|\\-t|\\-s|\\-p|\\-l");
         beanBuild.setType(token[1]);
-        beanBuild.setTitle(token[2].replaceAll("_", " "));
-        beanBuild.setSubtitles(token[3].replaceAll("_", ""));
+        beanBuild.setTitle(token[2].replace("_", " "));
+        beanBuild.setSubtitles(token[3].replace("_", ""));
         beanBuild.setPrice(Float.valueOf(token[4]));
         beanBuild.setUrlEbay(token[5]);
         Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);

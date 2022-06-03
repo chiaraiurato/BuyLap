@@ -1,1 +1,1 @@
-} 2javaX hrJapp/src/main/java/com/example/buylap/CLI/main/utils/SessionManagerCLI.java
+} 2javaXhrEapp/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java

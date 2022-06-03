@@ -1,1 +1,1 @@
-com.example.buylap.ExampleUnitTest#instance-init#
+com.example.buylap.bean.BeanSeller#getEmail()Ljava/lang/String;

@@ -74,11 +74,12 @@ public class TakeQuizActivity extends AppCompatActivity {
     }
 
     public void finished(BeanAnswer beanAnswer) {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String price = extras.getString("price");
+            takeQuizGraphicController.finishQuiz(beanAnswer, price);
+        }
 
-        Intent intent = new Intent(TakeQuizActivity.this, QuizResultActivity.class);
-
-        intent.putExtra("beanAnswer3", beanAnswer.getAnswer3());
-        startActivity(intent);
     }
     public void choice(CardView cardview, String answer){
         cardview.setCardBackgroundColor(getResources().getColor(R.color.green));

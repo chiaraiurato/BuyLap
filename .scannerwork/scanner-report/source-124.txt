@@ -1,4 +1,4 @@
-package com.example.buylap.commandLineInterface.utils;
+package com.example.buylap.cli.utils;
 import android.annotation.SuppressLint;
 import android.os.Build;
 

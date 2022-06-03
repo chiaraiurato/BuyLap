@@ -1,1 +1,2 @@
-com.example.buylap.bean.BeanSession#getType()Ljava/lang/String;
+com.example.buylap.controller.graphic.MainGraphicController#setGuestAccount()V
+null

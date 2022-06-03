@@ -1,1 +1,3 @@
-com.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;
+com.example.buylap.cli.graphic_controller.SignUpGraphicController#<init>()V
+com.example.buylap.controller.applicative.RegistrationController#<init>()V
+com.example.buylap.controller.applicative.RegistrationController#instance-init#

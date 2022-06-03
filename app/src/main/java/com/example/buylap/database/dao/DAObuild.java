@@ -1,5 +1,7 @@
 package com.example.buylap.database.dao;
 
+import static com.example.buylap.cli.Main.cli;
+
 import android.os.StrictMode;
 import android.util.Log;
 
@@ -30,8 +32,10 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-           // StrictMode.setThreadPolicy(policy);
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
@@ -59,9 +63,10 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-
-            //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            //StrictMode.setThreadPolicy(policy);
+            if(!cli) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();

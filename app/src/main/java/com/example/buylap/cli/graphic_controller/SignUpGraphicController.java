@@ -20,11 +20,10 @@ public class SignUpGraphicController {
 
 
     RegistrationController registrationController;
-    SessionManagerCLI sessionManagerCLI;
+
 
     public SignUpGraphicController(){
         this.registrationController = new RegistrationController();
-        this.sessionManagerCLI = new SessionManagerCLI();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void parseInput(String input) throws DAOException, BeanException, IOException, SQLException {
@@ -47,7 +46,7 @@ public class SignUpGraphicController {
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for User");
             }
-            sessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
             HomepageUser.main();
 
 
@@ -61,7 +60,7 @@ public class SignUpGraphicController {
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for Seller");
             }
-            sessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             HomepageSeller.main();
 
 

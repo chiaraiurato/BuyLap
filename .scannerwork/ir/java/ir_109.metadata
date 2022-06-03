@@ -1,1 +1,5 @@
-com.example.buylap.view.AddCardActivity#sendName()Ljava/lang/String;
+com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountUser()V
+com.example.buylap.bean.BeanUser#instance-init#
+com.example.buylap.bean.BeanUser#<init>()V
+java.lang.Boolean#equals(Ljava/lang/Object;)Z
+com.example.buylap.controller.graphic.RegistrationGraphicController#goToNavigationActivity()V

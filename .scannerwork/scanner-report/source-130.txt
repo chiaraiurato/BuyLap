@@ -4,8 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.cli.graphicController.HomepageGraphicController;
-import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.cli.graphic_controller.HomepageGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
@@ -15,6 +14,9 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 public class HomepageSeller {
+    private HomepageSeller(){
+        //View HomepageSeller
+    }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws IOException, DAOException, BeanException, SQLException {
         System.out.println("------------------------ HOMEPAGE SELLER -----------------------");
@@ -34,7 +36,7 @@ public class HomepageSeller {
 
         BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
         input = numberBuffer.readLine();
-        homepageGraphicController.execute_command(input);
+        homepageGraphicController.executeCommand(input);
 
     }
     public static void show(){
@@ -52,6 +54,6 @@ public class HomepageSeller {
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
         BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
         input = numberBuffer.readLine();
-        homepageGraphicController.execute_command(input);
+        homepageGraphicController.executeCommand(input);
     }
 }

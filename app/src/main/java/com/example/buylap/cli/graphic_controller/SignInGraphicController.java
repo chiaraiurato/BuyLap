@@ -21,11 +21,8 @@ public class SignInGraphicController {
 
     private final LoginController loginController;
 
-    SessionManagerCLI sessionManagerCLI;
-
     public SignInGraphicController(){
         this.loginController = new LoginController();
-        this.sessionManagerCLI = new SessionManagerCLI();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -42,7 +39,7 @@ public class SignInGraphicController {
             beanUser.setPassword(password);
 
             beanUser = loginController.searchUser(beanUser);
-            sessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
             HomepageUser.main();
 
         }else if(type.equals("seller")){
@@ -52,7 +49,7 @@ public class SignInGraphicController {
             beanSeller.setPassword(password);
 
             beanSeller = loginController.searchSeller(beanSeller);
-            sessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             HomepageSeller.main();
         }
     }

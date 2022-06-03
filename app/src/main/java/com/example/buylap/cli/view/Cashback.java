@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 public class Cashback {
 
-    public Cashback(){
+    private Cashback(){
         //View Cashback
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -24,17 +24,7 @@ public class Cashback {
         System.out.println(
                 "                       CASHBACK                        ");
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
-        cashbackGraphicController.uploadCreditCard();
-        int points =cashbackGraphicController.uploadPoints();
-        if(points == -1){
-            System.out.println("\nPoints earned : 0");
-        }else{
-            System.out.println("\nPoints earned : "+ points);
-        }
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void setCreditCard(BeanCard beanCard){
+        BeanCard beanCard = cashbackGraphicController.uploadCreditCard();
         CommandLineTable st = new CommandLineTable();
         st.setShowVerticalLines(false);
         if(beanCard == null){
@@ -46,6 +36,12 @@ public class Cashback {
                     beanCard.getData());
             st.print();
 
+        }
+        int points =cashbackGraphicController.uploadPoints();
+        if(points == -1){
+            System.out.println("\nPoints earned : 0");
+        }else{
+            System.out.println("\nPoints earned : "+ points);
         }
 
     }

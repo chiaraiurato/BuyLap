@@ -23,7 +23,7 @@ import java.util.StringTokenizer;
 
 public class HomepageGraphicController {
 
-    Map<String, String> user;
+    private Map<String, String> user;
 
     public HomepageGraphicController(){
 

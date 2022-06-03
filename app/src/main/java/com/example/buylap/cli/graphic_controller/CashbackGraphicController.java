@@ -18,27 +18,23 @@ import java.util.Map;
 
 public class CashbackGraphicController {
     GetCashbackController getCashbackController;
-    private static final Cashback cashback = new Cashback();
-    SessionManagerCLI sessionManagerCLI;
-    Map<String, String> user;
+
+    private Map<String, String> user;
 
     private static BeanSession beanSession = new BeanSession();
 
      public CashbackGraphicController() throws BeanException {
          this.getCashbackController = new GetCashbackController();
-         this.sessionManagerCLI = new SessionManagerCLI();
-         this.user = sessionManagerCLI.getUserDetails();
+         this.user = SessionManagerCLI.getUserDetails();
          if(user.get("user") != null) {
              beanSession.setUsername(user.get("user"));
          }
      }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void uploadCreditCard() throws DAOException {
+    public BeanCard uploadCreditCard() throws DAOException {
 
-        BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
-
-        cashback.setCreditCard(beanCard);
+        return getCashbackController.uploadCreditCard(beanSession);
 
     }
     public void saveCreditCard(String input) throws DAOException{

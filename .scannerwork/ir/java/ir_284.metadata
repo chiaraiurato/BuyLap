@@ -1,1 +1,2 @@
-com.example.buylap.commandLineInterface.utils.CommandLineTable#setShowVerticalLines(Z)V
+com.example.buylap.view.CashbackFragment#setPoints(I)V
+java.lang.String#valueOf(I)Ljava/lang/String;

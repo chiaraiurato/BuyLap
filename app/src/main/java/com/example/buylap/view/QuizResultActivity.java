@@ -21,7 +21,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
 
 
     private QuizResultGraphicController quizResultGraphicController;
-    private RecyclerView.Adapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +34,11 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,  LinearLayoutManager.VERTICAL, false);
         recyclerViewBuild.setLayoutManager(linearLayoutManager);
-
+        String price = this.getIntent().getExtras().getString("price");
         String beanAnswer3 = this.getIntent().getExtras().getString("beanAnswer3");
 
-        List<Category> build = quizResultGraphicController.setBuild(beanAnswer3);
-        adapter = new CategoryAdapter(build, this);
+        List<Category> build = quizResultGraphicController.setBuild(beanAnswer3, price);
+        RecyclerView.Adapter adapter = new CategoryAdapter(build, this);
         recyclerViewBuild.setAdapter(adapter);
 
         if (!build.isEmpty()){

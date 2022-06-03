@@ -1,1 +1,1 @@
-com.example.buylap.model.QuizList#instance-init#
+com.example.buylap.controller.graphic.RegistrationGraphicController#selectTypeAccount(LRadioButton;LRadioButton;)Ljava/lang/String;

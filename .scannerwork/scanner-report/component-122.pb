@@ -1,1 +1,1 @@
-z 2javaXMhr\app/src/main/java/com/example/buylap/CLI/main/graphicController/SignUpGraphicController.java
+z 2javaXIhrXapp/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java

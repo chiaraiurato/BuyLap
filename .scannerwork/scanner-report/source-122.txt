@@ -1,10 +1,10 @@
-package com.example.buylap.cli.graphicController;
+package com.example.buylap.cli.graphic_controller;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.commandLineInterface.utils.SessionManagerCLI;
+import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
 import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.bean.BeanSeller;
@@ -13,26 +13,22 @@ import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
-import org.asynchttpclient.util.Assertions;
-
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.StringTokenizer;
 
 public class SignUpGraphicController {
 
 
     RegistrationController registrationController;
-    SessionManagerCLI sessionManagerCLI;
+
 
     public SignUpGraphicController(){
         this.registrationController = new RegistrationController();
-        this.sessionManagerCLI = new SessionManagerCLI();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void parseInput(String input) throws DAOException, BeanException, IOException, SQLException {
 
-        String replaceSpace = input.replaceAll(" ", "");
+        String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");
 
         String type = token[1];
@@ -50,7 +46,7 @@ public class SignUpGraphicController {
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for User");
             }
-            sessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
             HomepageUser.main();
 
 
@@ -64,7 +60,7 @@ public class SignUpGraphicController {
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for Seller");
             }
-            sessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             HomepageSeller.main();
 
 

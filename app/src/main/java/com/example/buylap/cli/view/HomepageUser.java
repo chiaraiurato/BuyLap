@@ -14,6 +14,9 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 public class HomepageUser {
+    private HomepageUser(){
+        //View HomepageUser
+    }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws BeanException, IOException, DAOException, SQLException {
 
@@ -21,11 +24,7 @@ public class HomepageUser {
         String input= "";
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
         String name =homepageGraphicController.initializeSessionCLI();
-
         System.out.println("\nHi "+name +",\nWelcome back!\n");
-
-
-
         BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
         input = numberBuffer.readLine();
         homepageGraphicController.executeCommand(input);

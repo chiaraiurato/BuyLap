@@ -26,7 +26,7 @@ public class CashbackGraphicController {
     GetCashbackController getCashbackController;
     SessionManager sessionManager;
     Map<String, String> user;
-    private static BeanSession beanSession;
+    private static BeanSession beanSession= new BeanSession();
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
         this.addCardActivity = addCardActivity;
@@ -37,7 +37,6 @@ public class CashbackGraphicController {
         this.getCashbackController = new GetCashbackController();
         this.sessionManager = new SessionManager(cashbackFragment.getContext());
         this.user = sessionManager.getUserDetails();
-        beanSession = new BeanSession();
         if(user.get("user") != null) {
             beanSession.setUsername(user.get("user"));
         }

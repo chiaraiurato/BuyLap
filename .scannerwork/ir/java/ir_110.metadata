@@ -1,1 +1,2 @@
-com.example.buylap.view.AddCardActivity#sendNumber()Ljava/lang/String;
+com.example.buylap.controller.graphic.RegistrationGraphicController#goToNavigationActivity()V
+null

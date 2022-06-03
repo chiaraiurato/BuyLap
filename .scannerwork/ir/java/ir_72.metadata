@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.CreditCard#instance-init#
+com.example.buylap.view.TakeQuizActivity#finished(Lcom/example/buylap/bean/BeanAnswer;)V
