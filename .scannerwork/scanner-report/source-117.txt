@@ -52,7 +52,7 @@ public class CashbackGraphicController {
 
         Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
-            System.console().printf("Credit card saved!");
+            System.out.println("Credit card saved!");
         }
     }
     public int uploadPoints() throws SQLException, FileNotFoundException {
@@ -68,6 +68,6 @@ public class CashbackGraphicController {
     }
     public void cashOutPoints() throws SQLException, FileNotFoundException {
         getCashbackController.deletePoints(beanSession);
-        System.console().printf("\nPoints earned correctly!");
+        System.out.println("\nPoints earned correctly!");
     }
 }

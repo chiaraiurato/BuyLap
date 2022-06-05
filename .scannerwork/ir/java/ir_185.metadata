@@ -4,7 +4,6 @@ com.example.buylap.cli.view.Cashback#cashOut()V
 com.example.buylap.cli.view.CreditCard#save(Ljava/lang/String;)V
 com.example.buylap.cli.view.TakeQuiz#main()V
 com.example.buylap.cli.view.Exit#main()V
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
 com.example.buylap.cli.view.Cashback#main()V
 com.example.buylap.cli.view.HomepageUser#run()V
 com.example.buylap.cli.view.AddComponent#main(Ljava/lang/String;)V
@@ -14,4 +13,3 @@ com.example.buylap.cli.view.HomepageSeller#run()V
 com.example.buylap.cli.view.CreditCard#delete()V
 java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 java.util.StringTokenizer#<init>(Ljava/lang/String;)V
-java.lang.System#console()Ljava/io/Console;

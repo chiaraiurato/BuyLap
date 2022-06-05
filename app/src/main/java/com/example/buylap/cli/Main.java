@@ -56,7 +56,6 @@ public class Main {
                     "⚫ exit (exit the program) \n");
 
         MainGraphicController mainGraphicController = new MainGraphicController();
-        mainGraphicController.cli = true;
         try{
 
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));

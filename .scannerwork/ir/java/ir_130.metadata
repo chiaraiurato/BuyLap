@@ -2,7 +2,5 @@ com.example.buylap.cli.graphic_controller.CashbackGraphicController#saveCreditCa
 java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;
 java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 com.example.buylap.bean.BeanCard#instance-init#
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
-java.lang.System#console()Ljava/io/Console;
 java.lang.Boolean#equals(Ljava/lang/Object;)Z
 com.example.buylap.bean.BeanCard#<init>()V

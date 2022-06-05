@@ -29,9 +29,8 @@ public class DAOuser {
         Statement statement = null;
 
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
 
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -50,9 +49,8 @@ public class DAOuser {
         Statement statement = null;
         ModelUser modelUser;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
 
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -79,8 +77,7 @@ public class DAOuser {
         Statement statement = null;
         int recordPoint;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -105,8 +102,7 @@ public class DAOuser {
         Connection connection = null;
         Statement statement = null;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

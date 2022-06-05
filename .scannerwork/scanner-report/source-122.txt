@@ -44,7 +44,7 @@ public class SignUpGraphicController {
             beanUser.setPassword(password);
             Boolean result = registrationController.createUser(beanUser);
             if (Boolean.TRUE.equals(result)) {
-                System.console().printf("SignUp success for User");
+                System.out.println("SignUp success for User");
             }
             SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
             HomepageUser.main();
@@ -58,14 +58,14 @@ public class SignUpGraphicController {
             beanSeller.setPassword(password);
             Boolean result = registrationController.createSeller(beanSeller);
             if (Boolean.TRUE.equals(result)) {
-                System.console().printf("SignUp success for Seller");
+                System.out.println("SignUp success for Seller");
             }
             SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             HomepageSeller.main();
 
 
         } else {
-            System.console().printf("Type error! Please choose user or seller account");
+            System.out.println("Type error! Please choose user or seller account");
         }
     }
 

@@ -1,5 +1,3 @@
 com.example.buylap.cli.view.CreditCard#delete()V
 com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
 com.example.buylap.cli.graphic_controller.CashbackGraphicController#instance-init#
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
-java.lang.System#console()Ljava/io/Console;

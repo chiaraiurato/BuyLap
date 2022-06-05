@@ -61,9 +61,7 @@ public class CashbackFragment extends Fragment {
         }
         try {
             cashbackGraphicController.uploadPoints();
-        } catch (DAOException e) {
-            Log.d("Upload failed points", "error");
-            cashOutPoints();
+
         } catch (SQLException | FileNotFoundException throwables) {
             throwables.printStackTrace();
         }

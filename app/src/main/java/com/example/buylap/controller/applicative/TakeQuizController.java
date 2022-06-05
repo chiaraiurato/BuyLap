@@ -4,7 +4,6 @@ import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.database.dao.DAObuild;
-import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
 import com.example.buylap.utils.NameBuild;
 

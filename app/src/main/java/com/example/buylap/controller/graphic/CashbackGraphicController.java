@@ -60,7 +60,7 @@ public class CashbackGraphicController {
         cashbackFragment.setCreditCard(beanCard);
 
     }
-    public void uploadPoints() throws DAOException, SQLException, FileNotFoundException {
+    public void uploadPoints() throws SQLException, FileNotFoundException {
         int points = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(points);
     }

@@ -1,2 +1,3 @@
-j
-javaS1104OMake cli a static final constant or non-public and provide accessors if needed. 2 
+<
+javaS1170!Make this final field static too. 2 S
+javaS1069Replace this use of System.out or System.err by a logger. 2** 

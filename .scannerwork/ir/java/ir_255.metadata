@@ -2,9 +2,7 @@ com.example.buylap.cli.graphic_controller.MainGraphicController#parseInput(Ljava
 java.util.StringTokenizer#instance-init#
 com.example.buylap.cli.Main#runMain()V
 com.example.buylap.cli.view.Exit#main()V
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
 java.util.StringTokenizer#<init>(Ljava/lang/String;)V
-java.lang.System#console()Ljava/io/Console;
 com.example.buylap.cli.view.SignIn#main(Ljava/lang/String;)V
 com.example.buylap.cli.Main#show()V
 com.example.buylap.cli.view.SignUp#main(Ljava/lang/String;)V

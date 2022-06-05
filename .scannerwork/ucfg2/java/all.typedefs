@@ -38,79 +38,89 @@ getEmail()Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String
 main([Ljava/lang/String;),test.TestSelenium#main([Ljava/lang/String;)V¨
 $com.example.buylap.cli.view.TakeQuizjava.lang.Object6
 main(),com.example.buylap.cli.view.TakeQuiz#main()V:
-<init>().com.example.buylap.cli.view.TakeQuiz#<init>()Vê
-java.lang.Systemjava.lang.Object^
-$identityHashCode(Ljava/lang/Object;)6java.lang.System#identityHashCode(Ljava/lang/Object;)I*
+<init>().com.example.buylap.cli.view.TakeQuiz#<init>()V(
+java.lang.Appendablejava.lang.Object+
+java.lang.AutoCloseablejava.lang.Object>
+java.io.Closeablejava.lang.Objectjava.lang.AutoCloseable%
+java.io.Flushablejava.lang.ObjectÉ
+java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
+nullOutputStream()=java.io.OutputStream#nullOutputStream()Ljava/io/OutputStream;,
+	write([B)java.io.OutputStream#write([B)V*
+<init>()java.io.OutputStream#<init>()V(
+flush()java.io.OutputStream#flush()V0
+write([BII)!java.io.OutputStream#write([BII)V(
+close()java.io.OutputStream#close()Vé
+java.io.FilterOutputStreamjava.io.OutputStream2
+	write([B)%java.io.FilterOutputStream#write([B)V\
+<init>(Ljava/io/OutputStream;):java.io.FilterOutputStream#<init>(Ljava/io/OutputStream;)V.
+flush()#java.io.FilterOutputStream#flush()V0
+write(I)$java.io.FilterOutputStream#write(I)V6
+write([BII)'java.io.FilterOutputStream#write([BII)V.
+close()#java.io.FilterOutputStream#close()VÖ 
+java.io.PrintStreamjava.lang.Appendablejava.io.Closeablejava.io.FilterOutputStream+
+	write([C)java.io.PrintStream#write([C)V)
+print(J)java.io.PrintStream#print(J)V-
 
-nanoTime()java.lang.System#nanoTime()Jt
-/setSecurityManager(Ljava/lang/SecurityManager;)Ajava.lang.System#setSecurityManager(Ljava/lang/SecurityManager;)Vk
-"mapLibraryName(Ljava/lang/String;)Ejava.lang.System#mapLibraryName(Ljava/lang/String;)Ljava/lang/String;[
-getenv(Ljava/lang/String;)=java.lang.System#getenv(Ljava/lang/String;)Ljava/lang/String;z
-2arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)Djava.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V8
-	console()+java.lang.System#console()Ljava/io/Console;8
-registerNatives()#java.lang.System#registerNatives()VP
-setOut(Ljava/io/PrintStream;)/java.lang.System#setOut(Ljava/io/PrintStream;)VN
-setIn(Ljava/io/InputStream;).java.lang.System#setIn(Ljava/io/InputStream;)Vå
-;logInitException(ZZLjava/lang/String;Ljava/lang/Throwable;)Mjava.lang.System#logInitException(ZZLjava/lang/String;Ljava/lang/Throwable;)VX
-getSecurityManager()@java.lang.System#getSecurityManager()Ljava/lang/SecurityManager;`
-%setProperties(Ljava/util/Properties;)7java.lang.System#setProperties(Ljava/util/Properties;)V<
-setJavaLangAccess()%java.lang.System#setJavaLangAccess()V(
-	checkIO()java.lang.System#checkIO()V&
-<init>()java.lang.System#<init>()VP
-setErr(Ljava/io/PrintStream;)/java.lang.System#setErr(Ljava/io/PrintStream;)Vâ
-1getProperty(Ljava/lang/String;Ljava/lang/String;)Tjava.lang.System#getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;N
-checkKey(Ljava/lang/String;).java.lang.System#checkKey(Ljava/lang/String;)V<
-currentTimeMillis()%java.lang.System#currentTimeMillis()JP
-setIn0(Ljava/io/InputStream;)/java.lang.System#setIn0(Ljava/io/InputStream;)V$
-exit(I)java.lang.System#exit(I)VE
-lineSeparator()2java.lang.System#lineSeparator()Ljava/lang/String;R
-setErr0(Ljava/io/PrintStream;)0java.lang.System#setErr0(Ljava/io/PrintStream;)Ve
-getProperty(Ljava/lang/String;)Bjava.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;â
-1setProperty(Ljava/lang/String;Ljava/lang/String;)Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;2
-initPhase2(ZZ) java.lang.System#initPhase2(ZZ)I8
-runFinalization()#java.lang.System#runFinalization()Vw
-&initProperties(Ljava/util/Properties;)Mjava.lang.System#initProperties(Ljava/util/Properties;)Ljava/util/Properties;T
-inheritedChannel()>java.lang.System#inheritedChannel()Ljava/nio/channels/Channel;ú
-7getLogger(Ljava/lang/String;Ljava/util/ResourceBundle;)ajava.lang.System#getLogger(Ljava/lang/String;Ljava/util/ResourceBundle;)Ljava/lang/System$Logger;
-gc()java.lang.System#gc()V¢
-<newPrintStream(Ljava/io/FileOutputStream;Ljava/lang/String;)bjava.lang.System#newPrintStream(Ljava/io/FileOutputStream;Ljava/lang/String;)Ljava/io/PrintStream;h
-getLogger(Ljava/lang/String;)Gjava.lang.System#getLogger(Ljava/lang/String;)Ljava/lang/System$Logger;v
-0setSecurityManager0(Ljava/lang/SecurityManager;)Bjava.lang.System#setSecurityManager0(Ljava/lang/SecurityManager;)V.
-initPhase1()java.lang.System#initPhase1()Vi
-!clearProperty(Ljava/lang/String;)Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;R
-setOut0(Ljava/io/PrintStream;)0java.lang.System#setOut0(Ljava/io/PrintStream;)V.
-initPhase3()java.lang.System#initPhase3()V4
-getenv()(java.lang.System#getenv()Ljava/util/Map;I
-getProperties()6java.lang.System#getProperties()Ljava/util/Properties;T
-loadLibrary(Ljava/lang/String;)1java.lang.System#loadLibrary(Ljava/lang/String;)VF
-load(Ljava/lang/String;)*java.lang.System#load(Ljava/lang/String;)V%
-java.io.Flushablejava.lang.ObjectÉ	
-java.io.Consolejava.lang.Objectjava.io.Flushable2
-readPassword() java.io.Console#readPassword()[C#
-echo(Z)java.io.Console#echo(Z)Z9
-writer()-java.io.Console#writer()Ljava/io/PrintWriter;#
-flush()java.io.Console#flush()V"
-grow()java.io.Console#grow()[C:
+println(J)java.io.PrintStream#println(J)V)
+print(F)java.io.PrintStream#print(F)V-
 
-readLine(),java.io.Console#readLine()Ljava/lang/String;?
-installShutdownHook()&java.io.Console#installShutdownHook()V,
-readline(Z)java.io.Console#readline(Z)[C
--printf(Ljava/lang/String;[Ljava/lang/Object;)Njava.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;#
-istty()java.io.Console#istty()Z%
-<init>()java.io.Console#<init>()V4
-reader()(java.io.Console#reader()Ljava/io/Reader;Ñ
-/readLine(Ljava/lang/String;[Ljava/lang/Object;)Qjava.io.Console#readLine(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
--format(Ljava/lang/String;[Ljava/lang/Object;)Njava.io.Console#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;|
-3readPassword(Ljava/lang/String;[Ljava/lang/Object;)Ejava.io.Console#readPassword(Ljava/lang/String;[Ljava/lang/Object;)[C:
+println(F)java.io.PrintStream#println(F)V/
+write([BII) java.io.PrintStream#write([BII)VÅ
+4<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)Ijava.io.PrintStream#<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V)
+print(Z)java.io.PrintStream#print(Z)V1
+clearError()!java.io.PrintStream#clearError()V-
 
-encoding(),java.io.Console#encoding()Ljava/lang/String;˙
+println(Z)java.io.PrintStream#println(Z)Vi
+(<init>(Ljava/io/File;Ljava/lang/String;)=java.io.PrintStream#<init>(Ljava/io/File;Ljava/lang/String;)V)
+write(I)java.io.PrintStream#write(I)VO
+println(Ljava/lang/Object;)0java.io.PrintStream#println(Ljava/lang/Object;)VK
+print(Ljava/lang/String;).java.io.PrintStream#print(Ljava/lang/String;)Ví
+4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Zjava.io.PrintStream#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;)
+print(I)java.io.PrintStream#print(I)V-
+
+println(I)java.io.PrintStream#println(I)V'
+flush()java.io.PrintStream#flush()V´
+?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;m
+ append(Ljava/lang/CharSequence;)Ijava.io.PrintStream#append(Ljava/lang/CharSequence;)Ljava/io/PrintStream;l
+toCharset(Ljava/lang/String;)Kjava.io.PrintStream#toCharset(Ljava/lang/String;)Ljava/nio/charset/Charset;W
+<init>(ZLjava/io/OutputStream;)4java.io.PrintStream#<init>(ZLjava/io/OutputStream;)V+
+	print([C)java.io.PrintStream#print([C)Vq
+"append(Ljava/lang/CharSequence;II)Kjava.io.PrintStream#append(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;)
+print(D)java.io.PrintStream#print(D)Vq
+,<init>(Ljava/lang/String;Ljava/lang/String;)Ajava.io.PrintStream#<init>(Ljava/lang/String;Ljava/lang/String;)V-
+
+println(D)java.io.PrintStream#println(D)VO
+println(Ljava/lang/String;)0java.io.PrintStream#println(Ljava/lang/String;)VW
+<init>(Ljava/io/OutputStream;Z)4java.io.PrintStream#<init>(Ljava/io/OutputStream;Z)VE
+<init>(Ljava/io/File;)+java.io.PrintStream#<init>(Ljava/io/File;)Vy
+0<init>(Ljava/io/File;Ljava/nio/charset/Charset;)Ejava.io.PrintStream#<init>(Ljava/io/File;Ljava/nio/charset/Charset;)V1
+ensureOpen()!java.io.PrintStream#ensureOpen()Vã
+9<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)Njava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)V´
+?printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;-
+
+setError()java.io.PrintStream#setError()Vá
+-printf(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;?
+	append(C)2java.io.PrintStream#append(C)Ljava/io/PrintStream;M
+<init>(Ljava/lang/String;)/java.io.PrintStream#<init>(Ljava/lang/String;)Vá
+-format(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;+
+	newLine()java.io.PrintStream#newLine()V)
+print(C)java.io.PrintStream#print(C)V1
+checkError()!java.io.PrintStream#checkError()Z+
+	println()java.io.PrintStream#println()V'
+close()java.io.PrintStream#close()V-
+
+println(C)java.io.PrintStream#println(C)VK
+write(Ljava/lang/String;).java.io.PrintStream#write(Ljava/lang/String;)VK
+print(Ljava/lang/Object;).java.io.PrintStream#print(Ljava/lang/Object;)V{
+1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
+<init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
+println([C) java.io.PrintStream#println([C)Vã
+9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)V˙
 ?com.example.buylap.cli.graphic_controller.QuizGraphicControllerjava.lang.ObjectU
 <init>()Icom.example.buylap.cli.graphic_controller.QuizGraphicController#<init>()V_
 runHomepage()Ncom.example.buylap.cli.graphic_controller.QuizGraphicController#runHomepage()VÏ
 SstartQuiz(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)îcom.example.buylap.cli.graphic_controller.QuizGraphicController#startQuiz(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V&
-java.lang.Readablejava.lang.Object+
-java.lang.AutoCloseablejava.lang.Object>
-java.io.Closeablejava.lang.Objectjava.lang.AutoCloseableú
+java.lang.Readablejava.lang.Objectú
 java.io.Readerjava.io.Closeablejava.lang.Readablejava.lang.Object"
 ready()java.io.Reader#ready()Z 
 read()java.io.Reader#read()I"
@@ -814,8 +824,7 @@ sendName()Dcom.example.buylap.view.AddCardActivity#sendName()Ljava/lang/String;
 TextWatcherjava.lang.ObjectÃ
 )com.example.buylap.view.AddCardActivity$2TextWatcherÉ
 *onTextChanged(Ljava/lang/CharSequence;III)Ucom.example.buylap.view.AddCardActivity$2#onTextChanged(Ljava/lang/CharSequence;III)Vã
-.beforeTextChanged(Ljava/lang/CharSequence;III)Ycom.example.buylap.view.AddCardActivity$2#beforeTextChanged(Ljava/lang/CharSequence;III)V(
-java.lang.Appendablejava.lang.Object¸3
+.beforeTextChanged(Ljava/lang/CharSequence;III)Ycom.example.buylap.view.AddCardActivity$2#beforeTextChanged(Ljava/lang/CharSequence;III)V¸3
 java.lang.AbstractStringBuilderjava.lang.CharSequencejava.lang.Appendablejava.lang.Object?
 setCharAt(IC).java.lang.AbstractStringBuilder#setCharAt(IC)VW
 ensureCapacityInternal(I):java.lang.AbstractStringBuilder#ensureCapacityInternal(I)V7
@@ -972,80 +981,7 @@ P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;
 Ccom.example.buylap.cli.graphic_controller.HomepageGraphicControllerjava.lang.ObjectY
 <init>()Mcom.example.buylap.cli.graphic_controller.HomepageGraphicController#<init>()VÜ
 initializeSessionCLI()lcom.example.buylap.cli.graphic_controller.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;ç
-"executeCommand(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.HomepageGraphicController#executeCommand(Ljava/lang/String;)VÉ
-java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
-nullOutputStream()=java.io.OutputStream#nullOutputStream()Ljava/io/OutputStream;,
-	write([B)java.io.OutputStream#write([B)V*
-<init>()java.io.OutputStream#<init>()V(
-flush()java.io.OutputStream#flush()V0
-write([BII)!java.io.OutputStream#write([BII)V(
-close()java.io.OutputStream#close()Vé
-java.io.FilterOutputStreamjava.io.OutputStream2
-	write([B)%java.io.FilterOutputStream#write([B)V\
-<init>(Ljava/io/OutputStream;):java.io.FilterOutputStream#<init>(Ljava/io/OutputStream;)V.
-flush()#java.io.FilterOutputStream#flush()V0
-write(I)$java.io.FilterOutputStream#write(I)V6
-write([BII)'java.io.FilterOutputStream#write([BII)V.
-close()#java.io.FilterOutputStream#close()VÖ 
-java.io.PrintStreamjava.lang.Appendablejava.io.Closeablejava.io.FilterOutputStream+
-	write([C)java.io.PrintStream#write([C)V)
-print(J)java.io.PrintStream#print(J)V-
-
-println(J)java.io.PrintStream#println(J)V)
-print(F)java.io.PrintStream#print(F)V-
-
-println(F)java.io.PrintStream#println(F)V/
-write([BII) java.io.PrintStream#write([BII)VÅ
-4<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)Ijava.io.PrintStream#<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V)
-print(Z)java.io.PrintStream#print(Z)V1
-clearError()!java.io.PrintStream#clearError()V-
-
-println(Z)java.io.PrintStream#println(Z)Vi
-(<init>(Ljava/io/File;Ljava/lang/String;)=java.io.PrintStream#<init>(Ljava/io/File;Ljava/lang/String;)V)
-write(I)java.io.PrintStream#write(I)VO
-println(Ljava/lang/Object;)0java.io.PrintStream#println(Ljava/lang/Object;)VK
-print(Ljava/lang/String;).java.io.PrintStream#print(Ljava/lang/String;)Ví
-4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Zjava.io.PrintStream#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;)
-print(I)java.io.PrintStream#print(I)V-
-
-println(I)java.io.PrintStream#println(I)V'
-flush()java.io.PrintStream#flush()V´
-?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;m
- append(Ljava/lang/CharSequence;)Ijava.io.PrintStream#append(Ljava/lang/CharSequence;)Ljava/io/PrintStream;l
-toCharset(Ljava/lang/String;)Kjava.io.PrintStream#toCharset(Ljava/lang/String;)Ljava/nio/charset/Charset;W
-<init>(ZLjava/io/OutputStream;)4java.io.PrintStream#<init>(ZLjava/io/OutputStream;)V+
-	print([C)java.io.PrintStream#print([C)Vq
-"append(Ljava/lang/CharSequence;II)Kjava.io.PrintStream#append(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;)
-print(D)java.io.PrintStream#print(D)Vq
-,<init>(Ljava/lang/String;Ljava/lang/String;)Ajava.io.PrintStream#<init>(Ljava/lang/String;Ljava/lang/String;)V-
-
-println(D)java.io.PrintStream#println(D)VO
-println(Ljava/lang/String;)0java.io.PrintStream#println(Ljava/lang/String;)VW
-<init>(Ljava/io/OutputStream;Z)4java.io.PrintStream#<init>(Ljava/io/OutputStream;Z)VE
-<init>(Ljava/io/File;)+java.io.PrintStream#<init>(Ljava/io/File;)Vy
-0<init>(Ljava/io/File;Ljava/nio/charset/Charset;)Ejava.io.PrintStream#<init>(Ljava/io/File;Ljava/nio/charset/Charset;)V1
-ensureOpen()!java.io.PrintStream#ensureOpen()Vã
-9<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)Njava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)V´
-?printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;-
-
-setError()java.io.PrintStream#setError()Vá
--printf(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;?
-	append(C)2java.io.PrintStream#append(C)Ljava/io/PrintStream;M
-<init>(Ljava/lang/String;)/java.io.PrintStream#<init>(Ljava/lang/String;)Vá
--format(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;+
-	newLine()java.io.PrintStream#newLine()V)
-print(C)java.io.PrintStream#print(C)V1
-checkError()!java.io.PrintStream#checkError()Z+
-	println()java.io.PrintStream#println()V'
-close()java.io.PrintStream#close()V-
-
-println(C)java.io.PrintStream#println(C)VK
-write(Ljava/lang/String;).java.io.PrintStream#write(Ljava/lang/String;)VK
-print(Ljava/lang/Object;).java.io.PrintStream#print(Ljava/lang/Object;)V{
-1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
-<init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
-println([C) java.io.PrintStream#println([C)Vã
-9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)VÑ
+"executeCommand(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.HomepageGraphicController#executeCommand(Ljava/lang/String;)VÑ
 Ccom.example.buylap.controller.graphic.RegistrationGraphicControllerjava.lang.Objecty
 goToNavigationActivity()]com.example.buylap.controller.graphic.RegistrationGraphicController#goToNavigationActivity()Vy
 registerNewAccountUser()]com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountUser()Vµ
@@ -1953,7 +1889,52 @@ $com.example.buylap.view.HomeFragmentFragment:
 <init>()0com.example.buylap.view.BudgetActivity#<init>()V3
 SeekBar.OnSeekBarChangeListenerjava.lang.ObjectK
 (com.example.buylap.view.BudgetActivity$1SeekBar.OnSeekBarChangeListener@
-(com.example.buylap.view.BudgetActivity$2View.OnClickListener©
+(com.example.buylap.view.BudgetActivity$2View.OnClickListenerê
+java.lang.Systemjava.lang.Object^
+$identityHashCode(Ljava/lang/Object;)6java.lang.System#identityHashCode(Ljava/lang/Object;)I*
+
+nanoTime()java.lang.System#nanoTime()Jt
+/setSecurityManager(Ljava/lang/SecurityManager;)Ajava.lang.System#setSecurityManager(Ljava/lang/SecurityManager;)Vk
+"mapLibraryName(Ljava/lang/String;)Ejava.lang.System#mapLibraryName(Ljava/lang/String;)Ljava/lang/String;[
+getenv(Ljava/lang/String;)=java.lang.System#getenv(Ljava/lang/String;)Ljava/lang/String;z
+2arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)Djava.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V8
+	console()+java.lang.System#console()Ljava/io/Console;8
+registerNatives()#java.lang.System#registerNatives()VP
+setOut(Ljava/io/PrintStream;)/java.lang.System#setOut(Ljava/io/PrintStream;)VN
+setIn(Ljava/io/InputStream;).java.lang.System#setIn(Ljava/io/InputStream;)Vå
+;logInitException(ZZLjava/lang/String;Ljava/lang/Throwable;)Mjava.lang.System#logInitException(ZZLjava/lang/String;Ljava/lang/Throwable;)VX
+getSecurityManager()@java.lang.System#getSecurityManager()Ljava/lang/SecurityManager;`
+%setProperties(Ljava/util/Properties;)7java.lang.System#setProperties(Ljava/util/Properties;)V<
+setJavaLangAccess()%java.lang.System#setJavaLangAccess()V(
+	checkIO()java.lang.System#checkIO()V&
+<init>()java.lang.System#<init>()VP
+setErr(Ljava/io/PrintStream;)/java.lang.System#setErr(Ljava/io/PrintStream;)Vâ
+1getProperty(Ljava/lang/String;Ljava/lang/String;)Tjava.lang.System#getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;N
+checkKey(Ljava/lang/String;).java.lang.System#checkKey(Ljava/lang/String;)V<
+currentTimeMillis()%java.lang.System#currentTimeMillis()JP
+setIn0(Ljava/io/InputStream;)/java.lang.System#setIn0(Ljava/io/InputStream;)V$
+exit(I)java.lang.System#exit(I)VE
+lineSeparator()2java.lang.System#lineSeparator()Ljava/lang/String;R
+setErr0(Ljava/io/PrintStream;)0java.lang.System#setErr0(Ljava/io/PrintStream;)Ve
+getProperty(Ljava/lang/String;)Bjava.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;â
+1setProperty(Ljava/lang/String;Ljava/lang/String;)Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;2
+initPhase2(ZZ) java.lang.System#initPhase2(ZZ)I8
+runFinalization()#java.lang.System#runFinalization()Vw
+&initProperties(Ljava/util/Properties;)Mjava.lang.System#initProperties(Ljava/util/Properties;)Ljava/util/Properties;T
+inheritedChannel()>java.lang.System#inheritedChannel()Ljava/nio/channels/Channel;ú
+7getLogger(Ljava/lang/String;Ljava/util/ResourceBundle;)ajava.lang.System#getLogger(Ljava/lang/String;Ljava/util/ResourceBundle;)Ljava/lang/System$Logger;
+gc()java.lang.System#gc()V¢
+<newPrintStream(Ljava/io/FileOutputStream;Ljava/lang/String;)bjava.lang.System#newPrintStream(Ljava/io/FileOutputStream;Ljava/lang/String;)Ljava/io/PrintStream;h
+getLogger(Ljava/lang/String;)Gjava.lang.System#getLogger(Ljava/lang/String;)Ljava/lang/System$Logger;v
+0setSecurityManager0(Ljava/lang/SecurityManager;)Bjava.lang.System#setSecurityManager0(Ljava/lang/SecurityManager;)V.
+initPhase1()java.lang.System#initPhase1()Vi
+!clearProperty(Ljava/lang/String;)Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;R
+setOut0(Ljava/io/PrintStream;)0java.lang.System#setOut0(Ljava/io/PrintStream;)V.
+initPhase3()java.lang.System#initPhase3()V4
+getenv()(java.lang.System#getenv()Ljava/util/Map;I
+getProperties()6java.lang.System#getProperties()Ljava/util/Properties;T
+loadLibrary(Ljava/lang/String;)1java.lang.System#loadLibrary(Ljava/lang/String;)VF
+load(Ljava/lang/String;)*java.lang.System#load(Ljava/lang/String;)V©
 ?com.example.buylap.controller.graphic.CashbackGraphicControllerjava.lang.Objectß
 1<init>(Lcom/example/buylap/view/AddCardActivity;)rcom.example.buylap.controller.graphic.CashbackGraphicController#<init>(Lcom/example/buylap/view/AddCardActivity;)Vi
 deleteCreditCard()Scom.example.buylap.controller.graphic.CashbackGraphicController#deleteCreditCard()Vi
@@ -1971,7 +1952,26 @@ $com.example.buylap.view.HomeFragmentFragment:
 ConBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)hcom.example.buylap.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/AnalyticsAdapter$ViewHolder;I)VY
 <init>(Ljava/util/List;)=com.example.buylap.AnalyticsAdapter#<init>(Ljava/util/List;)VE
 getItemCount()3com.example.buylap.AnalyticsAdapter#getItemCount()II
-.com.example.buylap.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolderø
+.com.example.buylap.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolderÉ	
+java.io.Consolejava.lang.Objectjava.io.Flushable2
+readPassword() java.io.Console#readPassword()[C#
+echo(Z)java.io.Console#echo(Z)Z9
+writer()-java.io.Console#writer()Ljava/io/PrintWriter;#
+flush()java.io.Console#flush()V"
+grow()java.io.Console#grow()[C:
+
+readLine(),java.io.Console#readLine()Ljava/lang/String;?
+installShutdownHook()&java.io.Console#installShutdownHook()V,
+readline(Z)java.io.Console#readline(Z)[C
+-printf(Ljava/lang/String;[Ljava/lang/Object;)Njava.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;#
+istty()java.io.Console#istty()Z%
+<init>()java.io.Console#<init>()V4
+reader()(java.io.Console#reader()Ljava/io/Reader;Ñ
+/readLine(Ljava/lang/String;[Ljava/lang/Object;)Qjava.io.Console#readLine(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+-format(Ljava/lang/String;[Ljava/lang/Object;)Njava.io.Console#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;|
+3readPassword(Ljava/lang/String;[Ljava/lang/Object;)Ejava.io.Console#readPassword(Ljava/lang/String;[Ljava/lang/Object;)[C:
+
+encoding(),java.io.Console#encoding()Ljava/lang/String;ø
 java.io.FileNotFoundExceptionjava.io.IOException3
 <init>()'java.io.FileNotFoundException#<init>()VW
 <init>(Ljava/lang/String;)9java.io.FileNotFoundException#<init>(Ljava/lang/String;)V{

@@ -32,20 +32,20 @@ wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic
 wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java@ @(!
 %37void"2com.example.buylap.cli.view.HomepageSeller#main()V*.",
 *com.example.buylap.cli.view.HomepageSeller*
-0*À
+0*„
 3Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =(‚
-ﬂ
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =(±
+Æ
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =( 
-%32java.io.Console"+java.lang.System#console()Ljava/io/Console;*"
-java.lang.System◊‘
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =(
+%32java.io.PrintStream"__id*
+""†ù
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =(D
-%33java.io.Console"Njava.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;*
-
-%32java.io.Console*
-SignUp success for Seller2-printf(Ljava/lang/String;[Ljava/lang/Object;)*
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java= =(?
+%33void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%32java.io.PrintStream*
+SignUp success for Seller2println(Ljava/lang/String;)*
 2*ü
 startingBlockÅ
 wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java ((»
@@ -179,20 +179,20 @@ wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic
 wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java2 2(
 %21void"0com.example.buylap.cli.view.HomepageUser#main()V*,"*
 (com.example.buylap.cli.view.HomepageUser*
-0*…
+0*·
 7Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /(‚
-ﬂ
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /(±
+Æ
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /( 
-%16java.io.Console"+java.lang.System#console()Ljava/io/Console;*"
-java.lang.System’“
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /(
+%16java.io.PrintStream"__id*
+""ûõ
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /(B
-%17java.io.Console"Njava.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;*
-
-%16java.io.Console*
-SignUp success for User2-printf(Ljava/lang/String;[Ljava/lang/Object;)*
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java/ /(=
+%17void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%16java.io.PrintStream*
+SignUp success for User2println(Ljava/lang/String;)*
 6*≤
 8Å
 wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java)  )(.—Œ
@@ -355,20 +355,20 @@ wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic
 0 "ô
 Å
 wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaF F(
-implicit return*‚
+implicit return*˙
 1Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(‚
-ﬂ
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(±
+Æ
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(
-%38java.io.Console"+java.lang.System#console()Ljava/io/Console;*"
-java.lang.SystemÓÎ
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(
+%38java.io.PrintStream"__id*
+""∑¥
 Å
-wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(W
-%39java.io.Console"Njava.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;*
-
-%38java.io.Console*42
-0Type error! Please choose user or seller account2-printf(Ljava/lang/String;[Ljava/lang/Object;)*
+wC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.javaD D(R
+%39void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%38java.io.PrintStream*42
+0Type error! Please choose user or seller account2println(Ljava/lang/String;)*
 0:
 inputjava.lang.StringBEC
 Acom.example.buylap.cli.graphic_controller.SignUpGraphicController

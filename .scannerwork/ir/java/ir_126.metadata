@@ -3,8 +3,6 @@ java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;
 java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 java.lang.Float#valueOf(Ljava/lang/String;)Ljava/lang/Float;
 com.example.buylap.bean.BeanSession#<init>()V
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
 com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;
-java.lang.System#console()Ljava/io/Console;
 java.lang.Boolean#equals(Ljava/lang/Object;)Z
 com.example.buylap.bean.BeanSession#instance-init#

@@ -2,7 +2,5 @@ com.example.buylap.cli.graphic_controller.QuizGraphicController#startQuiz(Ljava/
 com.example.buylap.cli.utils.CommandLineTable#<init>()V
 com.example.buylap.cli.graphic_controller.QuizGraphicController#runHomepage()V
 java.lang.String#equals(Ljava/lang/Object;)Z
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
 com.example.buylap.cli.utils.CommandLineTable#instance-init#
-java.lang.System#console()Ljava/io/Console;
 java.lang.Float#parseFloat(Ljava/lang/String;)F

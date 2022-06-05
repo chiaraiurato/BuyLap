@@ -25,9 +25,8 @@ public class DAOseller {
         Statement statement = null;
 
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
 
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -46,9 +45,7 @@ public class DAOseller {
         Statement statement = null;
         ModelSeller modelSeller;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

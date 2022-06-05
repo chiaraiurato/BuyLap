@@ -5,7 +5,6 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 import com.example.buylap.R;
-import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.HomeFragment;
@@ -31,8 +30,7 @@ public class NavigationGraphicController {
     }
 
     public void checkLogin(){
-        MainGraphicController mainGraphicController = new MainGraphicController();
-        mainGraphicController.cli = false;
+
         if(!sessionManager.isLoggedIn()){
             Intent intent = new Intent(navigationActivity.getApplicationContext(), MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

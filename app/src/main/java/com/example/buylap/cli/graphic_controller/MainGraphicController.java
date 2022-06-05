@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
 
 public class MainGraphicController {
 
-    public boolean cli;
+    public static final boolean cli =true;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException {

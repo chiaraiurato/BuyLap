@@ -21,9 +21,9 @@ public class TakeQuiz{
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws IOException, DAOException, BeanException, SQLException {
 
-        System.console().printf("---------------- TAKE QUIZ ----------------");
+        System.out.println("---------------- TAKE QUIZ ----------------");
         QuizGraphicController quizGraphicController = new QuizGraphicController();
-        System.console().printf("\nChoose budget(up to 2000 $ ) ->");
+        System.out.println("\nChoose budget(up to 2000 $ ) ->");
         String price = null;
         String firstAnswer = null;
         String secondAnswer = null;
@@ -37,8 +37,8 @@ public class TakeQuiz{
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
-        System.console().printf("\nWho are you?\n"+
-                        "1️⃣ Beginner\n" +
+        System.out.println("\nWho are you?\n"+
+                "1️⃣ Beginner\n" +
                         "2️Nerd\n" +
                         "3️Don't know\n");
         try {
@@ -49,8 +49,8 @@ public class TakeQuiz{
             ioException.printStackTrace();
         }
 
-        System.console().printf("\nWhat is your profession?\n"+
-                        "1️⃣ Student\n" +
+        System.out.println("\nWhat is your profession?\n"+
+                "1️⃣ Student\n" +
                         "2️Worker\n" +
                         "3️Business man\n");
         try {
@@ -61,8 +61,8 @@ public class TakeQuiz{
             ioException.printStackTrace();
 
         }
-        System.console().printf("\nClick your category\n"+
-                        "1️⃣ Gaming\n" +
+        System.out.println("\nClick your category\n"+
+                "1️⃣ Gaming\n" +
                         "2️Office use\n" +
                         "3️Home use\n");
         try {
