@@ -1,2 +1,1 @@
-com.example.buylap.cli.view.Exit#main()V
-java.lang.System#exit(I)V
+com.example.buylap.cli.view.Exit#<init>()V

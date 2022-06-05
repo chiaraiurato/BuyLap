@@ -19,13 +19,13 @@ public class HomepageSeller {
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws IOException, DAOException, BeanException, SQLException {
-        System.out.println("------------------------ HOMEPAGE SELLER -----------------------");
+        System.console().printf("------------------------ HOMEPAGE SELLER -----------------------");
         String input= "";
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
         String name =homepageGraphicController.initializeSessionCLI();
 
-        System.out.println("\nHi "+name +",\nWelcome back!\n");
-        System.out.println(
+        System.console().printf("\nHi "+name +",\nWelcome back!\n");
+        System.console().printf(
                 "⚫ take_quiz \n" +
                 "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link]\n"+
                 "⚫ show_cashback\n" +
@@ -40,7 +40,7 @@ public class HomepageSeller {
 
     }
     public static void show(){
-        System.out.println(
+        System.console().printf(
                 "⚫ take_quiz \n" +
                 "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link] \n" +
                 "⚫ show_cashback\n" +

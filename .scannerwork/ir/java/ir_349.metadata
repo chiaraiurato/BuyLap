@@ -1,1 +1,3 @@
-com.example.buylap.view.QuizResultActivity#instance-init#
+com.example.buylap.utils.ConstantNameTable#<init>()V
+java.lang.IllegalStateException#instance-init#
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V

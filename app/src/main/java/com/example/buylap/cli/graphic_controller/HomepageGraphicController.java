@@ -73,7 +73,7 @@ public class HomepageGraphicController {
                     Exit.main();
                     break;
                 default:
-                    System.out.println("Command error");
+                    System.console().printf("Command error");
                     HomepageUser.run();
             }
         }else if(Objects.equals(user.get("type"), "SELLER")){
@@ -110,7 +110,7 @@ public class HomepageGraphicController {
                     Exit.main();
                     break;
                 default:
-                    System.out.println("Command error");
+                    System.console().printf("Command error");
                     HomepageSeller.run();
             }
         }

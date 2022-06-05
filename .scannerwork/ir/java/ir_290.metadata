@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanBuild#getType()Ljava/lang/String;
+com.example.buylap.bean.BeanBuild#setPrice(F)V

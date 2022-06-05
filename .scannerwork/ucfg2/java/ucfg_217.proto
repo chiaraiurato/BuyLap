@@ -1,9 +1,59 @@
 
--com.example.buylap.bean.BeanBuild#getPrice()Fa
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java ("1*”
-1a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java ("k
-a
-WC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanBuild.java (
-""B%#
-!com.example.buylap.bean.BeanBuild
+êcom.example.buylap.controller.applicative.LoginController#searchSeller(Lcom/example/buylap/bean/BeanSeller;)Lcom/example/buylap/bean/BeanSeller;y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (""7*∞
+3y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java$ $("Ø
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java$ $(2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*æ
+4y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java# #(7∏µ
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java# #(7
+
+%2void"@com.example.buylap.bean.BeanSeller#setEmail(Ljava/lang/String;)V*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+
+%1java.lang.String2setEmail(Ljava/lang/String;)*
+3*¢
+5y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(<Û
+
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(<9
+modelSeller*com.example.buylap.model.users.ModelSeller"__id*2
+0
+%0*com.example.buylap.model.users.ModelSeller¶£
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java#  #(6
+%1java.lang.String"Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;*;
+9
+modelSeller*com.example.buylap.model.users.ModelSeller2
+getEmail()*
+4*§
+6y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(#û
+õ
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(<0
+%0*com.example.buylap.model.users.ModelSeller"àcom.example.buylap.database.dao.DAOseller#searchSeller(Lcom/example/buylap/bean/BeanSeller;)Lcom/example/buylap/model/users/ModelSeller;*-"+
+)com.example.buylap.database.dao.DAOseller*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+5*Õ
+7y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java ( «
+ƒ
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java ( 9
+modelSeller*com.example.buylap.model.users.ModelSeller"__id*
+""*
+6:0
+
+beanSeller"com.example.buylap.bean.BeanSellerB=;
+9com.example.buylap.controller.applicative.LoginController

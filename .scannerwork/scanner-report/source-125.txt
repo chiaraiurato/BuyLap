@@ -5,6 +5,9 @@ import java.util.Map;
 
 public class SessionManagerCLI {
 
+    private SessionManagerCLI(){
+        //Singleton
+    }
     private static  String keyUsername;
     private static String keyPassword;
     private static String keyType;

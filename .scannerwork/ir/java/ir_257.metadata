@@ -1,5 +1,5 @@
-com.example.buylap.utils.Data#sendMostView()Ljava/util/List;
+com.example.buylap.utils.Data#sendQuestion()Ljava/util/List;
 java.util.ArrayList#<init>()V
-com.example.buylap.MostViewed#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-com.example.buylap.MostViewed#instance-init#
+com.example.buylap.model.QuizList#instance-init#
 java.util.ArrayList#instance-init#
+com.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

@@ -1,1 +1,3 @@
-com.example.buylap.cli.utils.CommandLineTable#<init>()V
+com.example.buylap.cli.utils.CommandLineTable#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

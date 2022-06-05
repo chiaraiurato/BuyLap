@@ -84,9 +84,9 @@ public class CommandLineTable {
                 String s = cells[i];
                 String verStrTemp = i == cells.length - 1 ? verticalSep : "";
                 if (rightAlign) {
-                    System.out.printf("%s %" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp);
+                    System.out.printf(String.format("%s %" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
                 } else {
-                    System.out.printf("%s %-" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp);
+                    System.out.printf(String.format("%s %-" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
                 }
             }
             System.out.println();

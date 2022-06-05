@@ -1,1 +1,4 @@
-com.example.buylap.cli.utils.CommandLineTable#printRow([Ljava/lang/String;[I)V
+com.example.buylap.cli.utils.CommandLineTable#printLine([I)V
+java.lang.String#length()I
+java.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+java.util.Collections#nCopies(ILjava/lang/Object;)Ljava/util/List;

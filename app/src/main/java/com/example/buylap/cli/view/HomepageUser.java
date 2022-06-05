@@ -20,7 +20,7 @@ public class HomepageUser {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws BeanException, IOException, DAOException, SQLException {
 
-        System.out.println("------------------------ HOMEPAGE USER -----------------------");
+        System.console().printf("------------------------ HOMEPAGE USER -----------------------");
         String input= "";
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
         String name =homepageGraphicController.initializeSessionCLI();
@@ -31,7 +31,7 @@ public class HomepageUser {
 
     }
     public static void show(){
-        System.out.println(
+        System.console().printf(
                 "⚫ take_quiz \n" +
                 "⚫ show_cashback\n" +
                 "⚫ cash_out \n" +

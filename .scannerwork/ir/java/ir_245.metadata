@@ -1,3 +1,1 @@
-com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;
-java.util.HashMap#<init>()V
-java.util.HashMap#instance-init#
+com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

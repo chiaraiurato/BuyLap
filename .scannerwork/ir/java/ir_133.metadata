@@ -1,1 +1,3 @@
 com.example.buylap.cli.graphic_controller.CashbackGraphicController#cashOutPoints()V
+java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
+java.lang.System#console()Ljava/io/Console;

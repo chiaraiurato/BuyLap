@@ -21,14 +21,15 @@ public class Cashback {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main() throws BeanException, DAOException, SQLException, FileNotFoundException {
 
-        System.out.println(
-                "                       CASHBACK                        ");
+
+
+        System.console().printf("                       CASHBACK                        ");
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         BeanCard beanCard = cashbackGraphicController.uploadCreditCard();
         CommandLineTable st = new CommandLineTable();
         st.setShowVerticalLines(false);
         if(beanCard == null){
-            System.out.println("\nNo card associated to user! Please digit 'add_card' ");
+            System.console().printf("\nNo card associated to user! Please digit 'add_card' ");
         }else{
             st.setHeaders("Cardholder name", "Card number", "Expire Date");
 
@@ -39,9 +40,9 @@ public class Cashback {
         }
         int points =cashbackGraphicController.uploadPoints();
         if(points == -1){
-            System.out.println("\nPoints earned : 0");
+            System.console().printf("\nPoints earned : 0");
         }else{
-            System.out.println("\nPoints earned : "+ points);
+            System.console().printf("\nPoints earned : "+ points);
         }
 
     }

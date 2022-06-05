@@ -23,7 +23,6 @@ import java.util.Objects;
 public class QuizGraphicController {
 
     private TakeQuizController takeQuizController;
-    private List<BeanBuild> beanBuild;
     private final BeanAnswer beanAnswer;
     private Map<String, String> user;
 
@@ -46,16 +45,16 @@ public class QuizGraphicController {
         int index;
         float floatPrice = Float.parseFloat(price);
 
-        beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
+        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
         if (beanBuild.isEmpty()) {
-            System.out.println("No build found! Try with another price\n");
+            System.console().printf("No build found! Try with another price\n");
         } else {
 
             CommandLineTable st = new CommandLineTable();
             st.setShowVerticalLines(true);
             st.setHeaders("Type", "Title", "Subtitles", "Price", "Link");
             for (index = 0; index < 6; index++) {
-                st.addRow(beanBuild.get(index).getType() ,beanBuild.get(index).getTitle() ,
+                st.addRow(beanBuild.get(index).getType() , beanBuild.get(index).getTitle() ,
                         beanBuild.get(index).getSubtitles(), (beanBuild.get(index).getPrice()) + "$",
                         beanBuild.get(index).getUrlEbay());
             }

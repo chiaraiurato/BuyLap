@@ -1,12 +1,11 @@
 package com.example.buylap.database.dao;
 
-import static com.example.buylap.cli.Main.cli;
-
 import android.os.StrictMode;
 import android.util.Log;
 
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
@@ -30,7 +29,9 @@ public class DAOuser {
         Statement statement = null;
 
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -49,7 +50,9 @@ public class DAOuser {
         Statement statement = null;
         ModelUser modelUser;
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -76,7 +79,8 @@ public class DAOuser {
         Statement statement = null;
         int recordPoint;
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -101,7 +105,8 @@ public class DAOuser {
         Connection connection = null;
         Statement statement = null;
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

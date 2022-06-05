@@ -1,1 +1,3 @@
-com.example.buylap.cli.graphic_controller.MainGraphicController#instance-init#
+com.example.buylap.utils.PropertiesReader#<init>(LContext;)V
+java.util.Properties#instance-init#
+java.util.Properties#<init>()V

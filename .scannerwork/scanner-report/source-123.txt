@@ -17,9 +17,8 @@ public class Main {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main (String[] args){
 
-        System.out.println("" +
-                "------------------------     BUYLAP   -----------------------");
-        System.out.println("" +
+        System.console().printf("" +
+                "------------------------     BUYLAP   -----------------------\n"+
                 "............................................................\n" +
                 ".............................. .............................\n" +
                 "..........................          ........................\n" +
@@ -42,8 +41,8 @@ public class Main {
                 "...................                       ..................\n" +
                 "..........................          ........................\n" +
                 ".............................. .............................\n" +
-                "............................................................\n");
-        System.out.println("\nAll commands :\n" +
+                "............................................................\n" +
+                "\nAll commands :\n" +
                 "⚫ show (Display in output available commands)\n"+
                 "⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
                 "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
@@ -56,6 +55,7 @@ public class Main {
                 "⚫ delete_card\n"+
                 "⚫ exit (exit the program) \n");
         MainGraphicController mainGraphicController = new MainGraphicController();
+        mainGraphicController.cli = true;
         try{
 
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
@@ -70,7 +70,7 @@ public class Main {
 
     }
     public static void show(){
-        System.out.println("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+        System.console().printf("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
                 "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
                 "⚫ skip (skip registration)\n");
     }
@@ -89,6 +89,6 @@ public class Main {
         }
 
     }
-    public static boolean cli = true; //Cli mode active
+
 
 }

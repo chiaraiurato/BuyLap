@@ -16,6 +16,6 @@ public class CreditCard {
 
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         cashbackGraphicController.deleteCreditCard();
-        System.out.println("Credit card deleted");
+        System.console().printf("Credit card deleted");
     }
 }

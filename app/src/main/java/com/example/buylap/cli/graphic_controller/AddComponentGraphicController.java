@@ -33,7 +33,7 @@ public class AddComponentGraphicController {
         beanBuild.setUrlEbay(token[5]);
         Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);
         if (Boolean.TRUE.equals(result)) {
-            System.out.println("Component saved!");
+            System.console().printf("Component saved!");
         }
 
     }

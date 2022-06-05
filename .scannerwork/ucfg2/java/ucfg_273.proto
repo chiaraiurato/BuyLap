@@ -1,22 +1,22 @@
 
-^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer2()Ljava/lang/String;
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaN N("1*Ω
+^com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaK K("1*Ω
 1
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaO O(Ü
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaL L(Ü
 É
 
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaO O('
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaL L('
 %0!com.example.buylap.model.QuizList"__id*Q*OA
 ?com.example.buylap.controller.graphic.TakeQuizGraphicController"
 
 quizListèå
 
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaO O( 
-%1java.lang.String"<com.example.buylap.model.QuizList#getOp2()Ljava/lang/String;*)
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaL L(
+%1java.lang.String"<com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;*)
 '
-%0!com.example.buylap.model.QuizList2getOp2()"õ
+%0!com.example.buylap.model.QuizList2getOp1()"õ
 
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaO O(!
+uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.javaL L( 
 
 %1java.lang.StringBCA
 ?com.example.buylap.controller.graphic.TakeQuizGraphicController

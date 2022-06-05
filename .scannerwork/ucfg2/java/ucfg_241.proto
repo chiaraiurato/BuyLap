@@ -1,16 +1,50 @@
 
-Fcom.example.buylap.bean.BeanCard#getCardHolderName()Ljava/lang/String;`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCard.java (#"1*£
-1`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCard.java	 	(½
-º
-`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCard.java	 	(
-%0java.lang.String"__id*8*6"
- com.example.buylap.bean.BeanCard"
-cardHolderName"|
-`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCard.java	 	(
-
-%0java.lang.StringB$"
- com.example.buylap.bean.BeanCard
+Ocom.example.buylap.database.JdbcConnection#getConnection()Ljava/sql/Connection;j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java& (3"6*Ç
+2j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java! !(vÐ
+Í
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java! !(v<,
+*com.example.buylap.database.JdbcConnection"
+
+connection"__id*
+
+%1java.sql.Connection*
+1*Ï
+4j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java!" !(/Ø
+Õ
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java!" !(v
+%1java.sql.Connection"qjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/Connection;*"
+java.sql.DriverManager*'%
+#jdbc:mysql://192.168.182.50/android*	
+andro*	
+andro*
+2*Ê
+6j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (Ð
+Í
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java (
+%0java.sql.Connection"__id*>*<,
+*com.example.buylap.database.JdbcConnection"
+
+connection*
+4
+1*Î
+1j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java' '(Ð
+Í
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java' '("
+%3java.sql.Connection"__id*>*<,
+*com.example.buylap.database.JdbcConnection"
+
+connection"‰
+j
+`C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/JdbcConnection.java' '(#
+
+%3java.sql.ConnectionB.,
+*com.example.buylap.database.JdbcConnection

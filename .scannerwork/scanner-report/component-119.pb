@@ -1,1 +1,1 @@
-w 2javaX-hrVapp/src/main/java/com/example/buylap/cli/graphic_controller/MainGraphicController.java
+w 2javaX/hrVapp/src/main/java/com/example/buylap/cli/graphic_controller/MainGraphicController.java

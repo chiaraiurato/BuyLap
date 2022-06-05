@@ -1,2 +1,4 @@
-com.example.buylap.controller.graphic.LoginGraphicController#verifyFields(LRadioButton;LRadioButton;)Ljava/lang/String;
-java.lang.String#isEmpty()Z
+com.example.buylap.controller.graphic.LoginGraphicController#signInSeller()V
+com.example.buylap.bean.BeanSeller#<init>()V
+com.example.buylap.bean.BeanSeller#instance-init#
+com.example.buylap.controller.graphic.LoginGraphicController#gotoNavigationActivity()V

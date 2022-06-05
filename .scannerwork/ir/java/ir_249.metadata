@@ -1,1 +1,2 @@
-com.example.buylap.controller.graphic.InsertComponentGraphicController#onMenuItemClick(LMenuItem;)Z
+com.example.buylap.controller.graphic.InsertComponentGraphicController#show(LView;)V
+null

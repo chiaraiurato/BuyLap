@@ -1,1 +1,6 @@
-com.example.buylap.AnalyticsAdapter#instance-init#
+com.example.buylap.view.NavigationActivity#onCreate(LBundle;)V
+com.example.buylap.utils.ContextHolder#getInstance()Lcom/example/buylap/utils/ContextHolder;
+com.example.buylap.controller.graphic.NavigationGraphicController#<init>(Lcom/example/buylap/view/NavigationActivity;)V
+com.example.buylap.view.CashbackFragment#instance-init#
+com.example.buylap.view.CashbackFragment#<init>()V
+com.example.buylap.controller.graphic.NavigationGraphicController#instance-init#

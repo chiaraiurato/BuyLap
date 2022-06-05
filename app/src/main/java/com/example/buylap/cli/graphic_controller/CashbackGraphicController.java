@@ -38,7 +38,7 @@ public class CashbackGraphicController {
 
     }
     public void saveCreditCard(String input) throws DAOException{
-        String replaceSpace = input.replaceAll(" ", "");
+        String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-h|\\-n|\\-d");
 
 
@@ -52,10 +52,10 @@ public class CashbackGraphicController {
 
         Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
-            System.out.println("Credit card saved!");
+            System.console().printf("Credit card saved!");
         }
     }
-    public int uploadPoints() throws DAOException, SQLException, FileNotFoundException {
+    public int uploadPoints() throws SQLException, FileNotFoundException {
         int points = getCashbackController.uploadPoints(beanSession);
         if (points == 0){
             return -1;
@@ -68,6 +68,6 @@ public class CashbackGraphicController {
     }
     public void cashOutPoints() throws SQLException, FileNotFoundException {
         getCashbackController.deletePoints(beanSession);
-        System.out.println("\nPoints earned correctly!");
+        System.console().printf("\nPoints earned correctly!");
     }
 }

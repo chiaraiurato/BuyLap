@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanCard#getData()Ljava/lang/String;
+com.example.buylap.bean.BeanCard#setCardNumber(Ljava/lang/String;)V

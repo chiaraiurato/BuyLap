@@ -17,6 +17,8 @@ import java.util.StringTokenizer;
 
 public class MainGraphicController {
 
+    public boolean cli;
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException {
         StringTokenizer st = new StringTokenizer(s);
@@ -37,7 +39,7 @@ public class MainGraphicController {
                 Exit.main();
                 break;
             default:
-                System.out.println("\nCommand Error! Press --help for command usage\n");
+                System.console().printf("\nCommand Error! Press --help for command usage\n");
         }
 
     }

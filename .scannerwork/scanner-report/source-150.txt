@@ -1,24 +1,20 @@
 package com.example.buylap.database.dao;
 
-import static com.example.buylap.cli.Main.cli;
-
 import android.os.StrictMode;
-import android.util.Log;
+
 
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;
 
-import com.example.buylap.database.query.QueryRegistrationLogin;
-import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;
 
 import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 
 public class DAObuild {
@@ -32,7 +28,8 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -63,7 +60,8 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

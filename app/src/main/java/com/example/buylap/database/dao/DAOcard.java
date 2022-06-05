@@ -1,21 +1,13 @@
 package com.example.buylap.database.dao;
 
-import static com.example.buylap.cli.Main.cli;
-
 import android.os.StrictMode;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryBuild;
 import com.example.buylap.database.query.QueryCreditCard;
-import com.example.buylap.database.query.QueryRegistrationLogin;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.ModelBuild;
 import com.example.buylap.model.ModelCreditCard;
-import com.example.buylap.model.users.ModelUser;
-
 import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -32,7 +24,8 @@ public class DAOcard {
 
         Connection connection = null;
         Statement statement = null;
-        if(!cli) {
+        MainGraphicController mainGraphicController = new MainGraphicController();
+        if(!mainGraphicController.cli) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
@@ -48,7 +41,8 @@ public class DAOcard {
         Statement statement = null;
         ModelCreditCard modelCreditCard;
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -76,7 +70,8 @@ public class DAOcard {
         Connection connection = null;
         Statement statement = null;
         try {
-            if(!cli) {
+            MainGraphicController mainGraphicController = new MainGraphicController();
+            if(!mainGraphicController.cli) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

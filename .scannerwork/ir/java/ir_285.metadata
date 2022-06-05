@@ -1,1 +1,2 @@
-com.example.buylap.view.CashbackFragment#cashOutPoints()V
+com.example.buylap.view.CashbackFragment#setPoints(I)V
+java.lang.String#valueOf(I)Ljava/lang/String;
