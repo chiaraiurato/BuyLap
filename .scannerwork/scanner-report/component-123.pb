@@ -1,1 +1,1 @@
-{ 2javaX_hr2app/src/main/java/com/example/buylap/cli/Main.java
+{ 2javaXahr2app/src/main/java/com/example/buylap/cli/Main.java

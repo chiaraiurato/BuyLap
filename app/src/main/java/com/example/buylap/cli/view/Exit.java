@@ -6,7 +6,7 @@ public class Exit {
     }
     public static void main(){
 
-        System.console().printf("\nExiting program..\n");
+        System.out.println("\nExiting program..\n");
         System.exit(1);
     }
 }

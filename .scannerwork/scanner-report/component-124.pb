@@ -1,1 +1,1 @@
-| 2javaX`hrDapp/src/main/java/com/example/buylap/cli/utils/CommandLineTable.java
+| 2javaX`hrDapp/src/main/java/com/example/buylap/cli/utils/CommandLineTable.java

@@ -39,7 +39,7 @@ public class MainGraphicController {
                 Exit.main();
                 break;
             default:
-                System.console().printf("\nCommand Error! Press --help for command usage\n");
+                System.out.println("\nCommand Error! Press --help for command usage\n");
         }
 
     }

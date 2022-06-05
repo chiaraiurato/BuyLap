@@ -3,11 +3,6 @@
 1|JJ  3#Implies 'columnWidths' can be null.
 G|II% 19Implies 'columnWidths' has the same value as 'maxWidths'.
 5|DD #''maxWidths' is passed to 'printLine()'.
-.|,- U Implies 'maxWidths' can be null.S
-javaS1069Replace this use of System.out or System.err by a logger. 2MM S
-javaS1069Replace this use of System.out or System.err by a logger. 2OO S
-javaS1069Replace this use of System.out or System.err by a logger. 2WW \
-javaS3457AFormat specifiers should be used instead of string concatenation. 2WW& oS
-javaS1069Replace this use of System.out or System.err by a logger. 2YY \
-javaS3457AFormat specifiers should be used instead of string concatenation. 2YY& pS
-javaS1069Replace this use of System.out or System.err by a logger. 2\\ 
+.|,- U Implies 'maxWidths' can be null.\
+javaS3457AFormat specifiers should be used instead of string concatenation. 2WW, u\
+javaS3457AFormat specifiers should be used instead of string concatenation. 2YY, v

@@ -47,7 +47,7 @@ public class QuizGraphicController {
 
         List<BeanBuild> beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
         if (beanBuild.isEmpty()) {
-            System.console().printf("No build found! Try with another price\n");
+            System.out.println("No build found! Try with another price\n");
         } else {
 
             CommandLineTable st = new CommandLineTable();

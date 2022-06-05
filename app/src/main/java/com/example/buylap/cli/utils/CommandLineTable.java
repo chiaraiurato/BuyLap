@@ -74,9 +74,9 @@ public class CommandLineTable {
             for (int i = 0; i < columnWidths.length; i++) {
                 String line = String.join("", Collections.nCopies(columnWidths[i] +
                         verticalSep.length() + 1, HORIZONTAL_SEP));
-                System.console().printf(joinSep + line + (i == columnWidths.length - 1 ? joinSep : ""));
+                System.out.printf(joinSep + line + (i == columnWidths.length - 1 ? joinSep : ""));
             }
-            System.console().printf("\n");
+            System.out.println();
         }
 
         private void printRow(String[] cells, int[] maxWidths) {
@@ -84,12 +84,12 @@ public class CommandLineTable {
                 String s = cells[i];
                 String verStrTemp = i == cells.length - 1 ? verticalSep : "";
                 if (rightAlign) {
-                    System.console().printf(String.format("%s %" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
+                    System.out.printf(String.format("%s %" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
                 } else {
-                    System.console().printf(String.format("%s %-" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
+                    System.out.printf(String.format("%s %-" + maxWidths[i] + "s %s", verticalSep, s, verStrTemp));
                 }
             }
-            System.console().printf("\n");
+            System.out.println();
         }
 
 }

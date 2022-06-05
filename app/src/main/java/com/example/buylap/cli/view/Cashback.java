@@ -29,7 +29,7 @@ public class Cashback {
         CommandLineTable st = new CommandLineTable();
         st.setShowVerticalLines(false);
         if(beanCard == null){
-            System.console().printf("\nNo card associated to user! Please digit 'add_card' ");
+            System.out.println("\nNo card associated to user! Please digit 'add_card' ");
         }else{
             st.setHeaders("Cardholder name", "Card number", "Expire Date");
 
@@ -40,9 +40,9 @@ public class Cashback {
         }
         int points =cashbackGraphicController.uploadPoints();
         if(points == -1){
-            System.console().printf("\nPoints earned : 0");
+            System.out.println("\nPoints earned : 0");
         }else{
-            System.console().printf("\nPoints earned : "+ points);
+            System.out.println("\nPoints earned : "+ points);
         }
 
     }

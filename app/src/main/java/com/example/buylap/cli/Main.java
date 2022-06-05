@@ -18,8 +18,7 @@ public class Main {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main (String[] args){
 
-        PrintStream out =System.out ;
-        out.println("------------------------     BUYLAP   -----------------------\n" +
+        System.out.println("------------------------     BUYLAP   -----------------------\n" +
                     "............................................................\n" +
                     ".............................. .............................\n" +
                     "..........................          ........................\n" +
@@ -72,7 +71,7 @@ public class Main {
 
     }
     public static void show(){
-        System.console().printf("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+        System.out.println("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
                 "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
                 "⚫ skip (skip registration)\n");
     }
