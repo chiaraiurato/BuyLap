@@ -8,6 +8,7 @@ import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelSeller;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,7 +27,7 @@ public class DAOseller {
 
         try {
 
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -35,17 +36,17 @@ public class DAOseller {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertSeller(statement, beanSeller);
 
-        } catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException | IOException e) {
             throw new DAOException("Username repetition");
         }
     }
 
-    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
+    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, IOException {
         Connection connection = null;
         Statement statement = null;
         ModelSeller modelSeller;
         try {
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

@@ -82,6 +82,7 @@ public class HomepageGraphicController {
             switch (command) {
                 case "show":
                     HomepageSeller.show();
+                    HomepageSeller.run();
                     break;
                 case "take_quiz":
                     TakeQuiz.main();
@@ -96,7 +97,7 @@ public class HomepageGraphicController {
                     break;
                 case "cash_out":
                     Cashback.cashOut();
-                    HomepageUser.run();
+                    HomepageSeller.run();
                     break;
                 case "add_card":
                     CreditCard.save(input);

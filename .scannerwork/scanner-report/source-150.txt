@@ -28,8 +28,7 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -60,8 +59,7 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

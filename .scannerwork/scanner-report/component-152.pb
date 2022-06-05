@@ -1,1 +1,1 @@
-˜ 2javaXJhr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java
+˜ 2javaXGhr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java

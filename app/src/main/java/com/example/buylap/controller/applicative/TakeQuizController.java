@@ -7,6 +7,7 @@ import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.model.ModelBuild;
 import com.example.buylap.utils.NameBuild;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +52,7 @@ public class TakeQuizController {
                     modelBuild.add(DAObuild.selectBuild(component[index], nameTable, price));
                 }
 
-            } catch (SQLException e) {
+            } catch (SQLException | IOException e) {
                 e.printStackTrace();
             }
         }

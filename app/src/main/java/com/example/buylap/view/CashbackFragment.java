@@ -21,6 +21,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 
@@ -55,14 +56,14 @@ public class CashbackFragment extends Fragment {
         }
         try {
             cashbackGraphicController.uploadCreditCard();
-        } catch (DAOException e) {
+        } catch (DAOException | IOException e) {
             Log.d("failed credit card", "error");
             deleteCreditCard();
         }
         try {
             cashbackGraphicController.uploadPoints();
 
-        } catch (SQLException | FileNotFoundException throwables) {
+        } catch (SQLException | IOException throwables) {
             throwables.printStackTrace();
         }
         addCart.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +79,7 @@ public class CashbackFragment extends Fragment {
 
                 try {
                     cashbackGraphicController.cashOutPoints();
-                } catch (SQLException | FileNotFoundException e) {
+                } catch (SQLException | IOException e) {
                     e.printStackTrace();}
             }
         });

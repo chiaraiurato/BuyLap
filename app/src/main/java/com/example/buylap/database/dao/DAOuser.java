@@ -1,7 +1,6 @@
 package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
-import android.util.Log;
 
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
@@ -12,6 +11,7 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelUser;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,14 +23,14 @@ public class DAOuser {
     private DAOuser() {
         //private constructor
     }
-    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException{
 
         Connection connection = null;
         Statement statement = null;
 
         try {
 
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -39,18 +39,19 @@ public class DAOuser {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertUser(statement, beanUser);
 
-        } catch(SQLIntegrityConstraintViolationException e) {
-            throw new DAOException("Username repetition");
+        } catch(SQLIntegrityConstraintViolationException | IOException e) {
+           e.printStackTrace();
+            // throw new DAOException("Username repetition");
         }
     }
 
-    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException, FileNotFoundException {
+    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException, IOException {
         Connection connection = null;
         Statement statement = null;
         ModelUser modelUser;
         try {
 
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -72,12 +73,12 @@ public class DAOuser {
         return modelUser;
     }
 
-    public static int uploadPoints(BeanSession beanSession) throws SQLException {
+    public static int uploadPoints(BeanSession beanSession) throws SQLException, IOException {
         Connection connection = null;
         Statement statement = null;
         int recordPoint;
         try {
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -98,11 +99,11 @@ public class DAOuser {
         return recordPoint;
     }
 
-    public static void deletePoints(BeanSession beanSession) throws SQLException {
+    public static void deletePoints(BeanSession beanSession) throws SQLException, IOException {
         Connection connection = null;
         Statement statement = null;
         try {
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

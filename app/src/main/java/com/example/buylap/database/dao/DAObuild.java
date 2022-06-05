@@ -12,6 +12,7 @@ import com.example.buylap.database.query.QueryBuild;
 import com.example.buylap.model.ModelBuild;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,13 +23,13 @@ public class DAObuild {
     private DAObuild() {
         //Private constructor
     }
-    public static ModelBuild selectBuild(String type, String nameTable, float price) throws SQLException{
+    public static ModelBuild selectBuild(String type, String nameTable, float price) throws SQLException, IOException {
         ModelBuild modelBuild = null;
         Connection connection = null;
         Statement statement = null;
 
         try {
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -59,7 +60,7 @@ public class DAObuild {
         Statement statement = null;
 
         try {
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -68,7 +69,7 @@ public class DAObuild {
             statement = connection.createStatement();
             QueryBuild.insertComponent(statement, beanBuild, beanSession);
 
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
            e.printStackTrace();
         }
 

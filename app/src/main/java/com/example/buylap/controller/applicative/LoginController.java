@@ -9,12 +9,13 @@ import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginController {
 
 
-    public BeanUser searchUser(BeanUser beanUser) throws DAOException {
+    public BeanUser searchUser(BeanUser beanUser) throws DAOException{
         ModelUser modelUser;
 
         try {
@@ -22,8 +23,10 @@ public class LoginController {
             beanUser.setEmail(modelUser.getEmail());
             return beanUser;
 
-        } catch (SQLException | FileNotFoundException e) {
-            throw new DAOException("error on signIn for user");
+        } catch (SQLException | IOException e) {
+           // throw new DAOException("error on signIn for user");
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -35,7 +38,7 @@ public class LoginController {
             beanSeller.setEmail(modelSeller.getEmail());
             return beanSeller;
 
-        } catch (SQLException | FileNotFoundException e) {
+        } catch (SQLException | IOException e) {
             throw new DAOException("error on signIn for seller");
         }
     }

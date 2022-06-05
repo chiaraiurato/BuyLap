@@ -9,6 +9,7 @@ import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryCreditCard;
 import com.example.buylap.model.ModelCreditCard;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,12 +21,12 @@ public class DAOcard {
         //private constructor
     }
 
-    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, FileNotFoundException {
+    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, IOException {
 
         Connection connection = null;
         Statement statement = null;
 
-        if(!MainGraphicController.cli) {
+        if(!MainGraphicController.CLI) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
@@ -36,13 +37,13 @@ public class DAOcard {
 
     }
 
-    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, IOException {
         Connection connection = null;
         Statement statement = null;
         ModelCreditCard modelCreditCard;
         try {
 
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -66,12 +67,12 @@ public class DAOcard {
         return modelCreditCard;
     }
 
-    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, FileNotFoundException {
+    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, IOException {
         Connection connection = null;
         Statement statement = null;
         try {
 
-            if(!MainGraphicController.cli) {
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

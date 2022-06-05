@@ -1,6 +1,4 @@
 com.example.buylap.database.dao.DAOcard#insertCard(Lcom/example/buylap/bean/BeanCard;Lcom/example/buylap/bean/BeanSession;)V
 null
-com.example.buylap.cli.graphic_controller.MainGraphicController#<init>()V
-com.example.buylap.cli.graphic_controller.MainGraphicController#instance-init#
 com.example.buylap.database.JdbcConnection#getInstance()Lcom/example/buylap/database/JdbcConnection;
 com.example.buylap.database.query.QueryCreditCard#insertCreditCard(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanCard;Lcom/example/buylap/bean/BeanSession;)V

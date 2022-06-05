@@ -11,6 +11,7 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.cli.utils.CommandLineTable;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class Cashback {
@@ -19,7 +20,7 @@ public class Cashback {
         //View Cashback
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main() throws BeanException, DAOException, SQLException, FileNotFoundException {
+    public static void main() throws BeanException, DAOException, SQLException, IOException {
 
 
 
@@ -46,7 +47,7 @@ public class Cashback {
         }
 
     }
-    public static void cashOut() throws SQLException, FileNotFoundException, BeanException {
+    public static void cashOut() throws SQLException, IOException, BeanException {
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         cashbackGraphicController.cashOutPoints();
     }

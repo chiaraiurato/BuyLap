@@ -6,6 +6,7 @@ import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelCreditCard;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 
@@ -17,13 +18,13 @@ public class GetCashbackController {
             DAOcard.insertCard(beanCard, beanSession);
             return true;
 
-        } catch(SQLException | FileNotFoundException e){
+        } catch(SQLException | IOException e){
             e.printStackTrace();
             throw new DAOException("error saving credit card");
         }
     }
 
-    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException {
+    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException, IOException {
         ModelCreditCard modelCreditCard;
         BeanCard beanCard = new BeanCard();
         try {
@@ -49,15 +50,17 @@ public class GetCashbackController {
             DAOcard.deleteCreditCard(beanSession);
         }catch(SQLException | FileNotFoundException e){
             throw new DAOException("error delete credit card");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    public int uploadPoints(BeanSession beanSession) throws SQLException, FileNotFoundException {
+    public int uploadPoints(BeanSession beanSession) throws SQLException, IOException {
 
         return DAOuser.uploadPoints(beanSession);
     }
 
-    public void deletePoints(BeanSession beanSession) throws SQLException, FileNotFoundException{
+    public void deletePoints(BeanSession beanSession) throws SQLException, IOException {
         DAOuser.deletePoints(beanSession);
     }
 }

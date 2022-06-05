@@ -24,8 +24,8 @@ public class DAOcard {
 
         Connection connection = null;
         Statement statement = null;
-        MainGraphicController mainGraphicController = new MainGraphicController();
-        if(!mainGraphicController.cli) {
+
+        if(!MainGraphicController.CLI) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
@@ -41,8 +41,8 @@ public class DAOcard {
         Statement statement = null;
         ModelCreditCard modelCreditCard;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }
@@ -70,8 +70,8 @@ public class DAOcard {
         Connection connection = null;
         Statement statement = null;
         try {
-            MainGraphicController mainGraphicController = new MainGraphicController();
-            if(!mainGraphicController.cli) {
+
+            if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
             }

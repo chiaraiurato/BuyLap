@@ -13,6 +13,7 @@ import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 import java.util.Map;
@@ -53,14 +54,14 @@ public class CashbackGraphicController {
             Log.d("DATABASE", "Credit card saved");
         }
     }
-    public void uploadCreditCard() throws DAOException {
+    public void uploadCreditCard() throws DAOException, IOException {
 
         BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
-    public void uploadPoints() throws SQLException, FileNotFoundException {
+    public void uploadPoints() throws SQLException, IOException {
         int points = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(points);
     }
@@ -79,7 +80,7 @@ public class CashbackGraphicController {
     }
 
 
-    public void cashOutPoints() throws  SQLException, FileNotFoundException {
+    public void cashOutPoints() throws SQLException, IOException {
 
         getCashbackController.deletePoints(beanSession);
         cashbackFragment.cashOutPoints();

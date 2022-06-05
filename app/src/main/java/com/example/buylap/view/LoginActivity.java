@@ -14,6 +14,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.R;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginActivity extends AppCompatActivity {
@@ -51,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(type.equals("USER")) {
                     try {
                         loginGraphicController.signInUser();
-                    } catch (BeanException throwables) {
+                    } catch (BeanException | IOException throwables) {
                         throwables.printStackTrace();
                     } catch (DAOException e) {
                         Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
@@ -59,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     try {
                         loginGraphicController.signInSeller();
-                    } catch (DAOException e) {
+                    } catch (DAOException | IOException e) {
                         Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
                     }
 

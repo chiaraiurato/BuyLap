@@ -16,6 +16,8 @@ import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
 
+import java.io.IOException;
+
 public class LoginGraphicController {
 
     LoginActivity loginActivity;
@@ -40,7 +42,7 @@ public class LoginGraphicController {
         loginActivity.startActivity(intent);
     }
 
-    public void signInUser() throws DAOException, BeanException {
+    public void signInUser() throws DAOException, BeanException, IOException {
 
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(loginActivity.sendUsername());
@@ -51,7 +53,7 @@ public class LoginGraphicController {
             gotoNavigationActivity();
     }
 
-    public void signInSeller() throws DAOException {
+    public void signInSeller() throws DAOException, IOException {
 
             BeanSeller beanSeller = new BeanSeller();
             beanSeller.setUsername(loginActivity.sendUsername());
