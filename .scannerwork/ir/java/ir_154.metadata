@@ -1,1 +1,1 @@
-com.example.buylap.database.query.QueryRegistrationLogin#searchUser(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanUser;)Ljava/sql/ResultSet;
+com.example.buylap.database.query.QueryRegistrationLogin#searchSeller(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSeller;)Ljava/sql/ResultSet;

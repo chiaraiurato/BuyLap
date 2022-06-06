@@ -30,14 +30,7 @@ public class HomepageUser {
         homepageGraphicController.executeCommand(input);
 
     }
-    public static void show(){
-        System.out.println(
-                "⚫ take_quiz \n" +
-                "⚫ show_cashback\n" +
-                "⚫ cash_out \n" +
-                "⚫ add_cart  -h [cardholder name] -n [number card] -d [expire date]\n"+
-                "⚫ delete_card\n");
-    }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void run() throws IOException, DAOException, BeanException, SQLException {
         String input= "";

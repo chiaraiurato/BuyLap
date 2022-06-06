@@ -69,8 +69,7 @@ public class CashbackFragment extends Fragment {
         addCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), AddCardActivity.class);
-                startActivity(intent);
+                cashbackGraphicController.gotoAddCardActivity();
             }
         });
         cashout.setOnClickListener(new View.OnClickListener() {
@@ -98,11 +97,16 @@ public class CashbackFragment extends Fragment {
 
     }
     public void setCreditCard(BeanCard beanCard){
-        String numberCardBean = beanCard.getCardNumber();
-        String formatNumberCard = "**** **** **** "+ numberCardBean.substring(numberCardBean.length()-4);
-        numberCard.setText(formatNumberCard);
-        dateCard.setText(beanCard.getData());
-        cardHolderName.setText(beanCard.getCardHolderName());
+        if(beanCard == null){
+            deleteCreditCard();
+        }else{
+            String numberCardBean = beanCard.getCardNumber();
+            String formatNumberCard = "**** **** **** "+ numberCardBean.substring(numberCardBean.length()-4);
+            numberCard.setText(formatNumberCard);
+            dateCard.setText(beanCard.getData());
+            cardHolderName.setText(beanCard.getCardHolderName());
+        }
+
     }
 
     @SuppressLint("SetTextI18n")

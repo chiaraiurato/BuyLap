@@ -1,7 +1,1 @@
-com.example.buylap.cli.view.Cashback#main()V
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
-com.example.buylap.cli.utils.CommandLineTable#<init>()V
-java.io.Console#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/Console;
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#instance-init#
-com.example.buylap.cli.utils.CommandLineTable#instance-init#
-java.lang.System#console()Ljava/io/Console;
+com.example.buylap.AnalyticsAdapter#getItemCount()I

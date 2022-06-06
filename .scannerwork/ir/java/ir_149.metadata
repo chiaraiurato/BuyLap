@@ -1,2 +1,1 @@
-com.example.buylap.controller.graphic.MainGraphicController#setGuestAccount()V
-null
+com.example.buylap.database.query.QueryRegistrationLogin#instance-init#

@@ -29,37 +29,51 @@ public class JdbcConnection {
         }
         return instance;
     }
-       public synchronized Connection getConnection() throws IOException {
-        if(this.connection == null) {
+    public synchronized Connection getConnection() {
+
+        if (this.connection == null) {
             if (!MainGraphicController.CLI) {
-                PropertiesReader propertiesReader = new PropertiesReader(ContextHolder.getInstance().getContext());
-                Properties prop = propertiesReader.getProperties("db.properties");
-                try {
-
-                    this.connection = DriverManager.getConnection("jdbc:mysql://" + prop.getProperty("ip") + "/android", prop.getProperty("username"), prop.getProperty("password"));
-
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+               androidMode();
             } else {
+                String path = new File("").getAbsolutePath();
                 File file = new File(
-                        "C:\\Users\\Chiara\\Desktop\\BuyLap\\app\\src\\main\\assets\\db.properties");
-                BufferedReader br
-                        = new BufferedReader(new FileReader(file));
-                String username = br.readLine().replace("username=", "");
-                String password = br.readLine().replace("password=", "");
-                String ip = br.readLine().replace("ip=", "");
-
-                try {
-
-                    this.connection = DriverManager.getConnection("jdbc:mysql://" + ip + "/android", username, password);
-
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+                        path + "\\app\\src\\main\\assets\\db.properties");
+                cliMode(file);
             }
         }
-            return this.connection;
+        return this.connection;
+    }
+    private void androidMode() {
+        PropertiesReader propertiesReader = new PropertiesReader(ContextHolder.getInstance().getContext());
+        Properties prop = propertiesReader.getProperties("db.properties");
+        try {
+
+            this.connection = DriverManager.getConnection("jdbc:mysql://" + prop.getProperty("ip") + "/android", prop.getProperty("username"), prop.getProperty("password"));
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+    }
+    private void cliMode(File file) {
+
+        try(BufferedReader br = new BufferedReader(new FileReader(file));) {
+            String str = null;
+            StringBuilder strb = new StringBuilder();
+            while ((str = br.readLine()) != null) {
+                strb.append(str);
+            }
+            String username = strb.toString().replace("username=", "");
+            String password = strb.toString().replace("password=", "");
+            String ip = strb.toString().replace("ip=", "");
+
+            this.connection = DriverManager.getConnection("jdbc:mysql://" + ip + "/android", username, password);
+
+        } catch (FileNotFoundException f) {
+            System.out.println(file + " does not exist");
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
 

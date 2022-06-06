@@ -37,7 +37,7 @@ public class DAOcard {
 
     }
 
-    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException, IOException {
+    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         ModelCreditCard modelCreditCard;

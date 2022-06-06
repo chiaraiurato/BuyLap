@@ -1,1 +1,1 @@
-com.example.buylap.cli.utils.CommandLineTable#addRow([Ljava/lang/String;)V
+com.example.buylap.cli.utils.CommandLineTable#setShowVerticalLines(Z)V

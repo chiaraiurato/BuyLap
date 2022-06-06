@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanBuild#getSubtitles()Ljava/lang/String;
+com.example.buylap.bean.BeanBuild#setTitle(Ljava/lang/String;)V

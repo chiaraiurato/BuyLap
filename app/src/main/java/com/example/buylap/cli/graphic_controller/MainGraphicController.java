@@ -1,15 +1,19 @@
 package com.example.buylap.cli.graphic_controller;
 
+import android.content.Intent;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
 import com.example.buylap.cli.Main;
+import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.Exit;
+import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.cli.view.SignIn;
 import com.example.buylap.cli.view.SignUp;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.view.NavigationActivity;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -35,12 +39,19 @@ public class MainGraphicController {
             case "sign_in":
                 SignIn.main(s);
                 break;
+            case "skip":
+                setGuestAccount();
+                break;
             case "exit":
                 Exit.main();
                 break;
             default:
                 System.out.println("\nCommand Error! Press --help for command usage\n");
         }
-
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void setGuestAccount() throws DAOException, SQLException, BeanException, IOException {
+        SessionManagerCLI.createLoginSession("guest","guest", "GUEST");
+        HomepageUser.main();
     }
 }

@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.AddComponent;
 import com.example.buylap.cli.view.CreditCard;
@@ -22,21 +23,23 @@ import java.util.Objects;
 import java.util.StringTokenizer;
 
 public class HomepageGraphicController {
-
+    private static final String ERROR_MSG = "Command error! Digit 'show' for usage";
+    private static final String SHOW = "show";
+    private static final String TAKE_QUIZ = "take_quiz";
+    private static final String EXIT = "exit";
     private Map<String, String> user;
+    private static BeanSession beanSession = new BeanSession();
 
-    public HomepageGraphicController(){
+    public HomepageGraphicController() throws BeanException {
 
         this.user = SessionManagerCLI.getUserDetails();
+        if(user.get("user") != null) {
+            beanSession.setUsername(user.get("user"));
+        }
     }
     public String initializeSessionCLI() {
-
-        if(Objects.equals(user.get("type"), "USER") || Objects.equals(user.get("type"), "SELLER")) {
             return user.get("user");
 
-        }else{
-            return "guest";
-        }
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void executeCommand(String input) throws IOException, DAOException, BeanException, SQLException {
@@ -46,11 +49,11 @@ public class HomepageGraphicController {
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
-                case "show":
-                    HomepageUser.show();
+                case SHOW:
+                    showCommands();
                     HomepageUser.run();
                     break;
-                case "take_quiz":
+                case TAKE_QUIZ:
                     TakeQuiz.main();
                     break;
                 case "show_cashback":
@@ -69,21 +72,22 @@ public class HomepageGraphicController {
                     CreditCard.delete();
                     HomepageUser.run();
                     break;
-                case "exit":
+                case EXIT:
                     Exit.main();
                     break;
                 default:
-                    System.out.println("Command error");
+                    System.out.println(ERROR_MSG);
                     HomepageUser.run();
             }
         }else if(Objects.equals(user.get("type"), "SELLER")){
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
-                case "show":
+                case SHOW:
                     HomepageSeller.show();
+                    HomepageSeller.run();
                     break;
-                case "take_quiz":
+                case TAKE_QUIZ:
                     TakeQuiz.main();
                     break;
                 case "add_component":
@@ -96,7 +100,7 @@ public class HomepageGraphicController {
                     break;
                 case "cash_out":
                     Cashback.cashOut();
-                    HomepageUser.run();
+                    HomepageSeller.run();
                     break;
                 case "add_card":
                     CreditCard.save(input);
@@ -106,13 +110,46 @@ public class HomepageGraphicController {
                     CreditCard.delete();
                     HomepageSeller.run();
                     break;
-                case "exit":
+                case EXIT:
                     Exit.main();
                     break;
                 default:
-                    System.out.println("Command error");
+                    System.out.println(ERROR_MSG);
                     HomepageSeller.run();
+
             }
+        }else if(Objects.equals(user.get("type"), "GUEST")){
+            StringTokenizer st = new StringTokenizer(input);
+            String command = st.nextToken();
+            switch (command) {
+                case SHOW:
+                    showCommands();
+                    HomepageUser.run();
+                    break;
+                case TAKE_QUIZ:
+                    TakeQuiz.main();
+                    break;
+                case EXIT:
+                    Exit.main();
+                    break;
+                default:
+                    System.out.println(ERROR_MSG);
+                    HomepageUser.run();
         }
     }
+}
+    public static void showCommands(){
+        if(beanSession.getUsername().equals("guest")) {
+            System.out.println(
+                            "âš« take_quiz \n" +
+                            "âš« exit\n");
+        }else{
+            System.out.println(
+                                "âš« take_quiz \n" +
+                                "âš« show_cashback\n" +
+                                "âš« cash_out \n" +
+                                "âš« add_cart  -h [cardholder name] -n [number card] -d [expire date]\n"+
+                                "âš« delete_card\n");
+            }
+        }
 }

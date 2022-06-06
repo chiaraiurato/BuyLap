@@ -1,1 +1,1 @@
-— 2javaXYhr>app/src/main/java/com/example/buylap/database/dao/DAOcard.java
+— 2javaXZhr>app/src/main/java/com/example/buylap/database/dao/DAOcard.java

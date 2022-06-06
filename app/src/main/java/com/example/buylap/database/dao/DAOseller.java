@@ -36,7 +36,7 @@ public class DAOseller {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertSeller(statement, beanSeller);
 
-        } catch (SQLIntegrityConstraintViolationException | IOException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             throw new DAOException("Username repetition");
         }
     }

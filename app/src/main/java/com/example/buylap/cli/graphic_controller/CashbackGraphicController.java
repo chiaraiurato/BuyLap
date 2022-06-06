@@ -33,7 +33,7 @@ public class CashbackGraphicController {
      }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public BeanCard uploadCreditCard() throws DAOException, IOException {
+    public BeanCard uploadCreditCard() throws DAOException {
 
         return getCashbackController.uploadCreditCard(beanSession);
 

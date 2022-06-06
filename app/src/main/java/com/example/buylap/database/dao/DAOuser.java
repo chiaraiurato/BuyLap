@@ -39,9 +39,8 @@ public class DAOuser {
             statement = connection.createStatement();
             QueryRegistrationLogin.insertUser(statement, beanUser);
 
-        } catch(SQLIntegrityConstraintViolationException | IOException e) {
-           e.printStackTrace();
-            // throw new DAOException("Username repetition");
+        } catch(SQLIntegrityConstraintViolationException e) {
+            throw new DAOException("Username repetition");
         }
     }
 

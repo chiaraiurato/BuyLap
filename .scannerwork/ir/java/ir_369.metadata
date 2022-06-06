@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.Exit#<init>()V
+com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer3()Ljava/lang/String;

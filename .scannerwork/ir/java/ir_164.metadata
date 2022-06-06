@@ -1,11 +1,1 @@
-com.example.buylap.cli.graphic_controller.SignInGraphicController#parseInput(Ljava/lang/String;)V
-com.example.buylap.bean.BeanSeller#<init>()V
-java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;
-java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-com.example.buylap.cli.view.HomepageUser#main()V
-java.lang.String#equals(Ljava/lang/Object;)Z
-com.example.buylap.bean.BeanUser#instance-init#
-com.example.buylap.bean.BeanUser#<init>()V
-com.example.buylap.bean.BeanSeller#instance-init#
-com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-com.example.buylap.cli.view.HomepageSeller#main()V
+com.example.buylap.view.SellerFragment#instance-init#

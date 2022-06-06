@@ -42,7 +42,7 @@ public class LoginGraphicController {
         loginActivity.startActivity(intent);
     }
 
-    public void signInUser() throws DAOException, BeanException, IOException {
+    public void signInUser() throws DAOException, BeanException{
 
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(loginActivity.sendUsername());
@@ -53,7 +53,7 @@ public class LoginGraphicController {
             gotoNavigationActivity();
     }
 
-    public void signInSeller() throws DAOException, IOException {
+    public void signInSeller() throws DAOException {
 
             BeanSeller beanSeller = new BeanSeller();
             beanSeller.setUsername(loginActivity.sendUsername());

@@ -1,6 +1,6 @@
-com.example.buylap.cli.graphic_controller.QuizGraphicController#startQuiz(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-com.example.buylap.cli.utils.CommandLineTable#<init>()V
-com.example.buylap.cli.graphic_controller.QuizGraphicController#runHomepage()V
-java.lang.String#equals(Ljava/lang/Object;)Z
-com.example.buylap.cli.utils.CommandLineTable#instance-init#
-java.lang.Float#parseFloat(Ljava/lang/String;)F
+com.example.buylap.cli.graphic_controller.QuizGraphicController#<init>()V
+com.example.buylap.bean.BeanAnswer#instance-init#
+com.example.buylap.bean.BeanAnswer#<init>()V
+com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;
+com.example.buylap.controller.applicative.TakeQuizController#instance-init#
+com.example.buylap.controller.applicative.TakeQuizController#<init>()V

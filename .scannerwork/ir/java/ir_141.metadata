@@ -1,2 +1,6 @@
-com.example.buylap.controller.graphic.NavigationGraphicController#checkLogin()V
-null
+com.example.buylap.controller.graphic.NavigationGraphicController#selectTypeHomepage()LFragment;
+com.example.buylap.view.HomeFragment#<init>()V
+com.example.buylap.view.SellerFragment#instance-init#
+java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+com.example.buylap.view.HomeFragment#instance-init#
+com.example.buylap.view.SellerFragment#<init>()V

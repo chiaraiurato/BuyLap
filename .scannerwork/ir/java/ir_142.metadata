@@ -1,6 +1,12 @@
-com.example.buylap.controller.graphic.NavigationGraphicController#selectTypeHomepage()LFragment;
+com.example.buylap.controller.graphic.NavigationGraphicController#switchPage(LMenuItem;)LFragment;
 com.example.buylap.view.HomeFragment#<init>()V
 com.example.buylap.view.SellerFragment#instance-init#
-java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+com.example.buylap.view.LikeFragment#<init>()V
+java.lang.String#equals(Ljava/lang/Object;)Z
+com.example.buylap.view.CashbackFragment#instance-init#
+com.example.buylap.view.LikeFragment#instance-init#
+com.example.buylap.view.UserFragment#instance-init#
+com.example.buylap.view.UserFragment#<init>()V
+com.example.buylap.view.CashbackFragment#<init>()V
 com.example.buylap.view.HomeFragment#instance-init#
 com.example.buylap.view.SellerFragment#<init>()V

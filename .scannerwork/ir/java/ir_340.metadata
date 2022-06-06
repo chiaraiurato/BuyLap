@@ -1,1 +1,8 @@
-com.example.buylap.cli.view.HomepageSeller#instance-init#
+com.example.buylap.cli.utils.CommandLineTable#printLine([I)V
+java.lang.StringBuilder#instance-init#
+java.lang.String#length()I
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+java.lang.StringBuilder#<init>()V
+java.util.Collections#nCopies(ILjava/lang/Object;)Ljava/util/List;
+java.lang.StringBuilder#toString()Ljava/lang/String;

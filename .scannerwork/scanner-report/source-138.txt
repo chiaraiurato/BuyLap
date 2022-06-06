@@ -18,7 +18,7 @@ public class RegistrationController {
                 DAOuser.insertUser(beanUser);
                 return true;
 
-            } catch (SQLException | FileNotFoundException e) {
+            } catch (SQLException e) {
                 throw new DAOException("error on signup for user");
             }
 

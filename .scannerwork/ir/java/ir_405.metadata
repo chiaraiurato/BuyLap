@@ -1,3 +1,1 @@
-com.example.buylap.cli.view.CreditCard#delete()V
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#instance-init#
+com.example.buylap.cli.view.CreditCard#instance-init#

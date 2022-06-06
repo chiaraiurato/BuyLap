@@ -108,12 +108,13 @@ public class QuizResultGraphicController {
      }
 
 
-    public void initializeSession(View view) {
-
+    public void updateBalance(View v) {
+        Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
+        intent.putExtra("gotoCashback", true);
         Map<String, String> user = sessionManager.getUserDetails();
         if(user.get("type").equals("GUEST")){
-            quizResultActivity.setMessageGuest(view);
+            quizResultActivity.setMessageGuest(v);
         }
+        quizResultActivity.startActivity(intent);
     }
-
 }

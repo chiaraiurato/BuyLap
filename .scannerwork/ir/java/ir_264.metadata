@@ -1,1 +1,4 @@
-com.example.buylap.model.users.ModelUser#instance-init#
+com.example.buylap.cli.graphic_controller.QuizGraphicController#runHomepage()V
+com.example.buylap.cli.view.HomepageSeller#run()V
+java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+com.example.buylap.cli.view.HomepageUser#run()V

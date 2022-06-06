@@ -1,1 +1,3 @@
-com.example.buylap.view.CashbackFragment#instance-init#
+com.example.buylap.controller.applicative.TakeQuizController#getBeanAnswer(Ljava/lang/String;)Lcom/example/buylap/bean/BeanAnswer;
+com.example.buylap.bean.BeanAnswer#instance-init#
+com.example.buylap.bean.BeanAnswer#<init>()V

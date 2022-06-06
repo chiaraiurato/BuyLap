@@ -69,7 +69,7 @@ public class DAObuild {
             statement = connection.createStatement();
             QueryBuild.insertComponent(statement, beanBuild, beanSession);
 
-        } catch (SQLException | IOException e) {
+        } catch (SQLException e) {
            e.printStackTrace();
         }
 

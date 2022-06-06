@@ -24,7 +24,7 @@ public class GetCashbackController {
         }
     }
 
-    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException, IOException {
+    public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException {
         ModelCreditCard modelCreditCard;
         BeanCard beanCard = new BeanCard();
         try {
@@ -39,7 +39,7 @@ public class GetCashbackController {
                 return beanCard;
             }
 
-        }catch (SQLException | FileNotFoundException e){
+        }catch (SQLException e){
             throw new DAOException("error upload credit card");
         }
 

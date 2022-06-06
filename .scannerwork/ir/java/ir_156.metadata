@@ -1,1 +1,1 @@
-com.example.buylap.database.query.QueryRegistrationLogin#searchPoints(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSession;)Ljava/sql/ResultSet;
+com.example.buylap.database.query.QueryRegistrationLogin#deletePoints(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSession;)V

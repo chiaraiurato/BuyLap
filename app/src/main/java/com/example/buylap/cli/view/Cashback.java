@@ -24,7 +24,7 @@ public class Cashback {
 
 
 
-        System.console().printf("                       CASHBACK                        ");
+        System.out.println("                       CASHBACK                        ");
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         BeanCard beanCard = cashbackGraphicController.uploadCreditCard();
         CommandLineTable st = new CommandLineTable();

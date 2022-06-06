@@ -1,5 +1,6 @@
 package com.example.buylap.controller.graphic;
 
+import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -11,6 +12,7 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
+import com.example.buylap.view.LoginActivity;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,7 +22,6 @@ import java.util.Map;
 
 
 public class CashbackGraphicController {
-
 
     AddCardActivity addCardActivity;
     CashbackFragment cashbackFragment;
@@ -54,7 +55,7 @@ public class CashbackGraphicController {
             Log.d("DATABASE", "Credit card saved");
         }
     }
-    public void uploadCreditCard() throws DAOException, IOException {
+    public void uploadCreditCard() throws DAOException{
 
         BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
 
@@ -87,5 +88,13 @@ public class CashbackGraphicController {
 
     }
 
-
+    public void gotoAddCardActivity() {
+        if(beanSession.getUsername().equals("guest"))
+        {
+            Toast.makeText(cashbackFragment.getContext(), "You need to be logged! ", Toast.LENGTH_SHORT).show();
+        }else {
+            Intent intent = new Intent(cashbackFragment.getContext(), AddCardActivity.class);
+            cashbackFragment.startActivity(intent);
+        }
+    }
 }

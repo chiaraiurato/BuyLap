@@ -1,3 +1,1 @@
-com.example.buylap.cli.view.CreditCard#save(Ljava/lang/String;)V
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#instance-init#
+com.example.buylap.bean.BeanSeller#setUsername(Ljava/lang/String;)V

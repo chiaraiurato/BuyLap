@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
 import com.example.buylap.cli.view.HomepageUser;
@@ -25,8 +26,7 @@ public class QuizGraphicController {
     private TakeQuizController takeQuizController;
     private final BeanAnswer beanAnswer;
     private Map<String, String> user;
-
-    public QuizGraphicController(){
+    public QuizGraphicController() {
         beanAnswer = new BeanAnswer();
         takeQuizController = new TakeQuizController();
         this.user = SessionManagerCLI.getUserDetails();
@@ -65,7 +65,7 @@ public class QuizGraphicController {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void runHomepage() throws IOException, DAOException, BeanException, SQLException {
-        if(Objects.equals(user.get("type"), "USER")) {
+        if(Objects.equals(user.get("type"), "USER") || Objects.equals(user.get("type"), "GUEST") ) {
             HomepageUser.run();
 
         }else if(Objects.equals(user.get("type"), "SELLER")){

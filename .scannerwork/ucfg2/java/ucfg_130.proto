@@ -1,30 +1,30 @@
 
-`com.example.buylap.controller.graphic.HomeGraphicController#setAdapterMostView()Ljava/util/List;{
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java% %(."1*ü	
+acom.example.buylap.controller.graphic.HomeGraphicController#setAdapterAnalytics()Ljava/util/List;{
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java* *(."1*°	
 1{
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java& &(ƒ¡
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java+ +(ƒ¡
 {
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java& &(#
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java+ +(#
 %0com.example.buylap.utils.Data"com.example.buylap.utils.Data÷
 ”
 {
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java& &(
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java+ +(
 %1"'com.example.buylap.utils.Data#<init>()V*%
 #
 %0com.example.buylap.utils.Data‘
 —
 {
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java& &(%
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java+ +(%
 datacom.example.buylap.utils.Data"__id*%
 #
-%0com.example.buylap.utils.Dataçä
+%0com.example.buylap.utils.Dataèå
 {
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java' '("
-%2java.util.List"<com.example.buylap.utils.Data#sendMostView()Ljava/util/List;*'
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java, ,(#
+%2java.util.List"=com.example.buylap.utils.Data#sendAnalytics()Ljava/util/List;*'
 %
-datacom.example.buylap.utils.Data2sendMostView()"ï
+datacom.example.buylap.utils.Data2sendAnalytics()"ï
 {
-qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java' '(#
+qC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/HomeGraphicController.java, ,($
 
 %2java.util.ListB?=
 ;com.example.buylap.controller.graphic.HomeGraphicController

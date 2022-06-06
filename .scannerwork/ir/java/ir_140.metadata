@@ -1,3 +1,2 @@
-com.example.buylap.controller.graphic.NavigationGraphicController#<init>(Lcom/example/buylap/view/NavigationActivity;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.controller.graphic.NavigationGraphicController#checkLogin()V
+null

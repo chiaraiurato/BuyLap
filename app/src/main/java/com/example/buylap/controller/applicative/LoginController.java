@@ -7,8 +7,6 @@ import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -24,9 +22,7 @@ public class LoginController {
             return beanUser;
 
         } catch (SQLException | IOException e) {
-           // throw new DAOException("error on signIn for user");
-            e.printStackTrace();
-            return null;
+            throw new DAOException("error on signIn for user");
         }
     }
 

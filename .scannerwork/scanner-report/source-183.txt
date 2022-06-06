@@ -46,10 +46,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
             updateAccBalance.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(QuizResultActivity.this, NavigationActivity.class);
-                    intent.putExtra("gotoCashback", true);
-                    quizResultGraphicController.initializeSession(v);
-                    startActivity(intent);
+                    quizResultGraphicController.updateBalance(v);
                 }
             });
         }
