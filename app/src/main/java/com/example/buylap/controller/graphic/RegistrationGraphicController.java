@@ -17,9 +17,9 @@ import com.example.buylap.view.RegistrationActivity;
 
 public class RegistrationGraphicController {
 
-    RegistrationActivity registrationActivity;
-    RegistrationController registrationController;
-    SessionManager sessionManager;
+    private RegistrationActivity registrationActivity;
+    private RegistrationController registrationController;
+    private SessionManager sessionManager;
 
     public RegistrationGraphicController(RegistrationActivity registrationActivity) {
         this.registrationActivity = registrationActivity;

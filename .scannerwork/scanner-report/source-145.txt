@@ -8,7 +8,7 @@ import com.example.buylap.R;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.LikeFragment;
+import com.example.buylap.view.NotificationFragment;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.SellerFragment;

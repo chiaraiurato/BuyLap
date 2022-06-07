@@ -94,8 +94,8 @@
 
     <TextView
         android:id="@+id/nameAccount"
-        android:layout_width="95dp"
-        android:layout_height="34dp"
+        android:layout_width="170dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/zcool_regular"
         android:textColor="#FFFFFF"
         android:textSize="28sp"

@@ -56,7 +56,7 @@ public class CashbackFragment extends Fragment {
         }
         try {
             cashbackGraphicController.uploadCreditCard();
-        } catch (DAOException | IOException e) {
+        } catch (DAOException e) {
             Log.d("failed credit card", "error");
             deleteCreditCard();
         }

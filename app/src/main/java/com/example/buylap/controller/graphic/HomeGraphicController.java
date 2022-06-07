@@ -20,10 +20,10 @@ import java.util.Map;
 import java.util.Objects;
 
 public class HomeGraphicController {
-    HomeFragment homeFragment;
+    private HomeFragment homeFragment;
 
-    SellerFragment sellerFragment;
-    SessionManager sessionManager;
+    private SellerFragment sellerFragment;
+    private SessionManager sessionManager;
 
     public HomeGraphicController(HomeFragment homeFragment) {
         this.homeFragment = homeFragment;

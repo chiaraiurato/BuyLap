@@ -15,9 +15,9 @@ public class TakeQuizGraphicController {
     private final TakeQuizActivity takeQuizActivity;      //<--- VIEW
 
     private QuizList quizList;
-    List<QuizList> listQuest;
+    private List<QuizList> listQuest;
     private final BeanAnswer beanAnswer;
-    Data data;
+    private Data data;
     private int index;
 
     public TakeQuizGraphicController( TakeQuizActivity takeQuizActivity) {

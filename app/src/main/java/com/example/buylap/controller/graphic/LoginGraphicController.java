@@ -20,9 +20,9 @@ import java.io.IOException;
 
 public class LoginGraphicController {
 
-    LoginActivity loginActivity;
+    private LoginActivity loginActivity;
     private final LoginController loginController;
-    SessionManager sessionManager;
+    private SessionManager sessionManager;
 
 
     public LoginGraphicController(LoginActivity loginActivity) {

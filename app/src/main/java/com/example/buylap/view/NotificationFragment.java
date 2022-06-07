@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.example.buylap.R;
 
 
-public class LikeFragment extends Fragment {
+public class NotificationFragment extends Fragment {
 
 
 

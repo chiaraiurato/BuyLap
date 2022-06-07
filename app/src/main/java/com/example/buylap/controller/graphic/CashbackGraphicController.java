@@ -23,11 +23,11 @@ import java.util.Map;
 
 public class CashbackGraphicController {
 
-    AddCardActivity addCardActivity;
-    CashbackFragment cashbackFragment;
-    GetCashbackController getCashbackController;
-    SessionManager sessionManager;
-    Map<String, String> user;
+    private AddCardActivity addCardActivity;
+    private CashbackFragment cashbackFragment;
+    private GetCashbackController getCashbackController;
+    private SessionManager sessionManager;
+    private Map<String, String> user;
     private static BeanSession beanSession= new BeanSession();
 
     public CashbackGraphicController(AddCardActivity addCardActivity){

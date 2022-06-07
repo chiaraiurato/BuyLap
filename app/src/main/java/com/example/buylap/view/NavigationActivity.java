@@ -38,8 +38,9 @@ public class NavigationActivity extends AppCompatActivity {
 
         navigationGraphicController.checkLogin();
 
-        Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
-        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
+        navigationGraphicController.selectTypeHomepage();
+        //Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
+       // getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
 
 
         navigationView.setSelectedItemId(R.id.nav_home);

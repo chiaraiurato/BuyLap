@@ -7,8 +7,8 @@ import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
 
 public class MainGraphicController {
-    MainActivity mainActivity;
-    SessionManager sessionManager;
+    private MainActivity mainActivity;
+    private SessionManager sessionManager;
 
     public MainGraphicController(MainActivity mainActivity){
         this.mainActivity = mainActivity;
