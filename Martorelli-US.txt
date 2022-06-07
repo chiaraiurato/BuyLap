@@ -1,6 +1,0 @@
-1) As an advanced player, I want a gaming PC with a RTX 3060, so that I can play with excellent performances.
-
-2) As a student, I want a cheap PC, so that I can afford it and equally performing basic tasks.
-
-3) As a user, I want to save computers, so that I can check them when I want.
-
