@@ -21,16 +21,17 @@ import com.example.buylap.view.NavigationActivity;
 
 import java.util.Map;
 
-public class InsertComponentGraphicController implements PopupMenu.OnMenuItemClickListener{
+public class InsertComponentGraphicController extends SessionGraphicController implements PopupMenu.OnMenuItemClickListener{
     private InsertComponentActivity insertComponentActivity;
-    private SessionManager sessionManager;
     private InsertComponentController insertComponentController;
-    private BeanBuild beanBuild = new BeanBuild();
+    private BeanBuild beanBuild;
+
 
     public InsertComponentGraphicController(InsertComponentActivity insertComponentActivity) {
+        super(insertComponentActivity.getApplicationContext());
         this.insertComponentActivity = insertComponentActivity;
         this.insertComponentController = new InsertComponentController();
-        this.sessionManager = new SessionManager(insertComponentActivity.getApplicationContext());
+        this.beanBuild=new BeanBuild();
     }
     public void show(View view){
         Context wrapper = new ContextThemeWrapper(insertComponentActivity, R.style.Buylap_PopupMenu);
@@ -74,17 +75,12 @@ public class InsertComponentGraphicController implements PopupMenu.OnMenuItemCli
     }
 
     public void saveComponent() throws BeanException, DAOException {
-        BeanSession beanSession = new BeanSession();
-        Map<String, String> user = sessionManager.getUserDetails();
-        if(user.get("user") != null) {
-            beanSession.setUsername(user.get("user"));
-        }
 
         beanBuild.setTitle(insertComponentActivity.sendTitle());
         beanBuild.setSubtitles(insertComponentActivity.sendSubtitles());
         beanBuild.setPrice(insertComponentActivity.sendPrice());
         beanBuild.setUrlEbay(insertComponentActivity.sendUrl());
-       Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);
+        Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Component saved");
         }

@@ -25,7 +25,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        HomeGraphicController homeGraphicController =new HomeGraphicController(this);
+        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
+
 
         RecyclerView.Adapter adapter;
         RecyclerView recyclerView;

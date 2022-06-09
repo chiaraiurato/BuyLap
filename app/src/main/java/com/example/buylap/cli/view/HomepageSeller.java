@@ -7,18 +7,22 @@ import androidx.annotation.RequiresApi;
 import com.example.buylap.cli.graphic_controller.HomepageGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.zip.DataFormatException;
 
 public class HomepageSeller {
     private HomepageSeller(){
         //View HomepageSeller
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main() throws IOException, DAOException, BeanException, SQLException {
+    public static void main() throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         System.out.println("------------------------ HOMEPAGE SELLER -----------------------");
         String input= "";
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
@@ -49,7 +53,7 @@ public class HomepageSeller {
                 "⚫ delete_card\n");
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void run() throws IOException, DAOException, BeanException, SQLException {
+    public static void run() throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         String input= "";
         HomepageGraphicController homepageGraphicController = new HomepageGraphicController();
         BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));

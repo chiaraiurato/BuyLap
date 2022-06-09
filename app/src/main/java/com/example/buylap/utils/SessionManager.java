@@ -42,6 +42,7 @@ public class SessionManager {
         editor.commit();
     }
     public Map<String, String> getUserDetails(){
+
         Map<String, String> user = new HashMap<>();
         user.put(KEY_USERNAME, shar.getString(KEY_USERNAME, null));
         user.put(KEY_PASSWORD, shar.getString(KEY_PASSWORD, null));

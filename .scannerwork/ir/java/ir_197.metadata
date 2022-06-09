@@ -1,2 +1,2 @@
-com.example.buylap.controller.graphic.UserFragmentGraphicController#initializeSession(LView;)V
+com.example.buylap.controller.graphic.SettingFragmentGraphicController#initializeSession(LView;)V
 java.lang.String#equals(Ljava/lang/Object;)Z

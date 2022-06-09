@@ -5,46 +5,53 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.LoginActivity;
+import com.example.buylap.view.NavigationActivity;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import java.text.ParseException;
 import java.util.Map;
+import java.util.zip.DataFormatException;
 
 
-public class CashbackGraphicController {
+public class CashbackGraphicController extends SessionGraphicController{
 
     private AddCardActivity addCardActivity;
     private CashbackFragment cashbackFragment;
     private GetCashbackController getCashbackController;
-    private SessionManager sessionManager;
-    private Map<String, String> user;
-    private static BeanSession beanSession= new BeanSession();
+    private BeanPoints beanPoints;
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
+        super(addCardActivity.getApplicationContext());
         this.addCardActivity = addCardActivity;
         this.getCashbackController = new GetCashbackController();
     }
     public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
+        super(cashbackFragment.getContext());
         this.cashbackFragment= cashbackFragment;
         this.getCashbackController = new GetCashbackController();
-        this.sessionManager = new SessionManager(cashbackFragment.getContext());
-        this.user = sessionManager.getUserDetails();
-        if(user.get("user") != null) {
-            beanSession.setUsername(user.get("user"));
-        }
-    }
+        beanPoints = new BeanPoints();
 
-    public void saveCreditCard() throws DAOException, BeanException {
+    }
+    private void gotoNavigationActivity(){
+        Intent intent = new Intent(addCardActivity, NavigationActivity.class);
+        intent.putExtra("gotoCashback", true);
+        addCardActivity.startActivity(intent);
+    }
+    public void saveCreditCard() throws DAOException, BeanException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         BeanCard beanCard = new BeanCard();
         beanCard.setCardHolderName(addCardActivity.sendName());
         beanCard.setCardNumber(addCardActivity.sendNumber());
@@ -54,24 +61,19 @@ public class CashbackGraphicController {
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }
+        gotoNavigationActivity();
     }
-    public void uploadCreditCard() throws DAOException{
+    public void uploadCreditCard() throws DAOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
 
-        BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
+        BeanCard beanCard = getCashbackController.uploadCreditCard(beanSession);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
     public void uploadPoints() throws SQLException, IOException {
-        int points = getCashbackController.uploadPoints(beanSession);
-        cashbackFragment.setPoints(points);
-    }
-    public boolean verifyLengthOfCreditCard(){
-        if(addCardActivity.sendNumber().length() > 20) {
-            Toast.makeText(addCardActivity, "Length of credit card incorrect", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    return true;
+
+        beanPoints.setPoints(getCashbackController.uploadPoints(beanSession));
+        cashbackFragment.setPoints(beanPoints);
     }
 
     public void deleteCreditCard() throws DAOException {
@@ -84,7 +86,8 @@ public class CashbackGraphicController {
     public void cashOutPoints() throws SQLException, IOException {
 
         getCashbackController.deletePoints(beanSession);
-        cashbackFragment.cashOutPoints();
+        beanPoints.setPoints(0);
+        cashbackFragment.cashOutPoints(beanPoints);
 
     }
 

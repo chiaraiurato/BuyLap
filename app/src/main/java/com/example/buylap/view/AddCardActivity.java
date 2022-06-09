@@ -10,11 +10,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.buylap.R;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
+
+import java.text.ParseException;
+import java.util.zip.DataFormatException;
 
 public class AddCardActivity extends AppCompatActivity {
 
@@ -38,15 +44,18 @@ public class AddCardActivity extends AppCompatActivity {
         saveCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cashbackGraphicController.verifyLengthOfCreditCard()) {
-                    try {
-
-                        cashbackGraphicController.saveCreditCard();
-                    } catch (DAOException | BeanException e) {
-                        e.printStackTrace();
-                    }
-                    openAct();
+                try {
+                    cashbackGraphicController.saveCreditCard();
+                } catch (DAOException | BeanException  e) {
+                    Toast.makeText(getApplicationContext(), "Error while saving credit card..  ", Toast.LENGTH_SHORT).show();
+                }catch (LengthBeanCardException e){
+                    Toast.makeText(getApplicationContext(), "Length card > 20  ", Toast.LENGTH_SHORT).show();
+                } catch (ExpiredDateCardException e) {
+                    Toast.makeText(getApplicationContext(), "Expired date", Toast.LENGTH_SHORT).show();
+                } catch (ParseException e) {
+                    Toast.makeText(getApplicationContext(), "Date format incorrect (YY/MM)", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
@@ -97,11 +106,6 @@ public class AddCardActivity extends AppCompatActivity {
         }
         numberCard.setText(sb.toString());
         numberCard.setSelection(sb.length());
-    }
-    private void openAct(){
-        Intent intent = new Intent(this, NavigationActivity.class);
-        intent.putExtra("gotoCashback", true);
-        startActivity(intent);
     }
     public String sendName(){
         return name.getText().toString();

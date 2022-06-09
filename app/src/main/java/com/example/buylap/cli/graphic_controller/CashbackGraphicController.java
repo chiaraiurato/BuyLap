@@ -11,11 +11,15 @@ import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Map;
+import java.util.zip.DataFormatException;
 
 public class CashbackGraphicController {
     GetCashbackController getCashbackController;
@@ -33,12 +37,12 @@ public class CashbackGraphicController {
      }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public BeanCard uploadCreditCard() throws DAOException {
+    public BeanCard uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
 
         return getCashbackController.uploadCreditCard(beanSession);
 
     }
-    public void saveCreditCard(String input) throws DAOException{
+    public void saveCreditCard(String input) throws DAOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-h|\\-n|\\-d");
 

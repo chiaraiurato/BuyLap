@@ -20,28 +20,24 @@ import com.google.android.material.navigation.NavigationBarView;
 public class NavigationActivity extends AppCompatActivity {
 
 
-    BottomNavigationView navigationView;
-    NavigationGraphicController navigationGraphicController;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BottomNavigationView navigationView;
+        NavigationGraphicController navigationGraphicController = new NavigationGraphicController(this);
         setContentView(R.layout.activity_homepage);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         ContextHolder contextHolder = ContextHolder.getInstance();
         contextHolder.setContext(getApplicationContext());
 
-        this.navigationGraphicController = new NavigationGraphicController(this);
-
         navigationView=findViewById(R.id.bottom_navigation);
 
         navigationGraphicController.checkLogin();
 
-        navigationGraphicController.selectTypeHomepage();
-        //Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
-       // getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
-
+        navigationGraphicController.getMyFragment();
 
         navigationView.setSelectedItemId(R.id.nav_home);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

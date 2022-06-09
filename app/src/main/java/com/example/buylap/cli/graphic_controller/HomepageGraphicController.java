@@ -15,12 +15,16 @@ import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.cli.view.TakeQuiz;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Map;
 import java.util.Objects;
 import java.util.StringTokenizer;
+import java.util.zip.DataFormatException;
 
 public class HomepageGraphicController {
     private static final String ERROR_MSG = "Command error! Digit 'show' for usage";
@@ -42,7 +46,7 @@ public class HomepageGraphicController {
 
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void executeCommand(String input) throws IOException, DAOException, BeanException, SQLException {
+    public void executeCommand(String input) throws IOException, DAOException, BeanException, SQLException,LengthBeanCardException, ExpiredDateCardException, ParseException {
 
         if(Objects.equals(user.get("type"), "USER")) {
 

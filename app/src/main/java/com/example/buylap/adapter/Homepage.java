@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment;
 
 public interface Homepage {
 
-    Fragment switchPage();
+    Fragment switchMainPage();
 
-
+    Fragment switchSettingPage();
 }

@@ -7,6 +7,7 @@ import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryCreditCard;
+import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.model.ModelCreditCard;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class DAOcard {
         //private constructor
     }
 
-    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, IOException {
+    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, IOException, LengthBeanCardException {
 
         Connection connection = null;
         Statement statement = null;

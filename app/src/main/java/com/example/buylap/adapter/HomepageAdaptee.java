@@ -1,13 +1,8 @@
 package com.example.buylap.adapter;
-
-import androidx.fragment.app.Fragment;
-
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.MainActivity;
+
 import com.example.buylap.view.NavigationActivity;
-import com.example.buylap.view.SellerFragment;
+
 
 import java.util.Map;
 import java.util.Objects;

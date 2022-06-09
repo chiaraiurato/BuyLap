@@ -13,16 +13,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 
 public class CashbackFragment extends Fragment {
@@ -32,10 +37,6 @@ public class CashbackFragment extends Fragment {
     private TextView dateCard;
     private TextView cardHolderName;
     private TextView pointsEarned;
-
-    public CashbackFragment() {
-        // Required empty public constructor
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,8 +58,14 @@ public class CashbackFragment extends Fragment {
         try {
             cashbackGraphicController.uploadCreditCard();
         } catch (DAOException e) {
-            Log.d("failed credit card", "error");
+            Log.d("DAOcard", "empty card");
             deleteCreditCard();
+        }catch (LengthBeanCardException e){
+            Log.d("LengthBeanCardException","Length of credit card incorrect");
+        } catch (ExpiredDateCardException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            Log.d("ParseException", "format date incorrect");
         }
         try {
             cashbackGraphicController.uploadPoints();
@@ -96,7 +103,7 @@ public class CashbackFragment extends Fragment {
         return view;
 
     }
-    public void setCreditCard(BeanCard beanCard){
+    public void setCreditCard(BeanCard beanCard) throws LengthBeanCardException {
         if(beanCard == null){
             deleteCreditCard();
         }else{
@@ -116,10 +123,10 @@ public class CashbackFragment extends Fragment {
         cardHolderName.setText("");
     }
 
-    public void setPoints(int points) {
-        pointsEarned.setText(String.valueOf(points));
+    public void setPoints(BeanPoints beanPoints) {
+        pointsEarned.setText(String.valueOf(beanPoints.getPoints()));
     }
-    public void cashOutPoints(){
-        pointsEarned.setText("0");
+    public void cashOutPoints(BeanPoints beanPoints){
+        pointsEarned.setText(beanPoints.getPoints());
     }
 }

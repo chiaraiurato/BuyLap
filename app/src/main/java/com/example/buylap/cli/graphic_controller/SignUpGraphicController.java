@@ -12,9 +12,12 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 public class SignUpGraphicController {
 
@@ -26,7 +29,7 @@ public class SignUpGraphicController {
         this.registrationController = new RegistrationController();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String input) throws DAOException, BeanException, IOException, SQLException {
+    public void parseInput(String input) throws DAOException, BeanException, IOException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
 
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");

@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-Buylap is an Android App that permits you to show your PC-build and get cashback.
+BuyLap is an Android App that permits you to discovery the perfect PC-build and get cashback.
 ## Technologies
 Project is created with:
 * Android Studio

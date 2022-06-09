@@ -7,9 +7,12 @@ import androidx.annotation.RequiresApi;
 import com.example.buylap.cli.graphic_controller.SignUpGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 public class SignUp {
 
@@ -17,7 +20,7 @@ public class SignUp {
         //View SignUp
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main(String input) throws IOException, DAOException, BeanException, SQLException {
+    public static void main(String input) throws IOException, DAOException, BeanException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
 
         SignUpGraphicController signUpGraphicController = new SignUpGraphicController();
         signUpGraphicController.parseInput(input);

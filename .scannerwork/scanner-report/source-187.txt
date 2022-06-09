@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.buylap.R;
-import com.example.buylap.controller.graphic.UserFragmentGraphicController;
+import com.example.buylap.controller.graphic.SettingFragmentGraphicController;
 
 public class UserFragment extends Fragment {
 
@@ -19,22 +19,22 @@ public class UserFragment extends Fragment {
     public UserFragment() {
         // Required empty public constructor
     }
-    private UserFragmentGraphicController userFragmentGraphicController;
+    private UserFragmentGraphicController settingFragmentGraphicController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Button signOut;
 
-        userFragmentGraphicController= new UserFragmentGraphicController(this);
+        settingFragmentGraphicController= new UserFragmentGraphicController(this);
 
         View view= inflater.inflate(R.layout.fragment_user, container, false);
-        userFragmentGraphicController.initializeSession(view);
+        settingFragmentGraphicController.initializeSession(view);
         signOut=view.findViewById(R.id.signoutBtn);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userFragmentGraphicController.onSignOut();
+                settingFragmentGraphicController.onSignOut();
             }
         });
 
@@ -47,7 +47,7 @@ public class UserFragment extends Fragment {
         editUsername.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userFragmentGraphicController.notifyGuest(v);
+                settingFragmentGraphicController.notifyGuest(v);
             }
         });
         TextView editEmail;
@@ -55,7 +55,7 @@ public class UserFragment extends Fragment {
         editEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userFragmentGraphicController.notifyGuest(v);
+                settingFragmentGraphicController.notifyGuest(v);
             }
         });
         TextView editPassword;
@@ -63,7 +63,7 @@ public class UserFragment extends Fragment {
         editPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userFragmentGraphicController.notifyGuest(v);
+                settingFragmentGraphicController.notifyGuest(v);
             }
         });
     }

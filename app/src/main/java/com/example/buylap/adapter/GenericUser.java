@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment;
 public class GenericUser {
 
     public Fragment gotoMyHomepage(Homepage a){
-        return a.switchPage();
-
+        return a.switchMainPage();
     }
 
+    public Fragment gotoMySetting(Homepage a){
+        return a.switchSettingPage();
+    }
 }

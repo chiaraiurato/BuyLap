@@ -9,10 +9,13 @@ import com.example.buylap.bean.BeanCard;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.cli.utils.CommandLineTable;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 public class Cashback {
 
@@ -20,7 +23,7 @@ public class Cashback {
         //View Cashback
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main() throws BeanException, DAOException, SQLException, IOException {
+    public static void main() throws BeanException, DAOException, SQLException, IOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
 
 
 

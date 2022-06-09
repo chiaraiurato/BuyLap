@@ -25,24 +25,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class QuizResultGraphicController {
+public class QuizResultGraphicController extends SessionGraphicController {
     private List<Category> build;
 
     private TakeQuizController takeQuizController;
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
-    private SessionManager sessionManager;
 
-
-     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
+    public QuizResultGraphicController(QuizResultActivity quizResultActivity){
+         super(quizResultActivity.getApplicationContext());
          this.build =  new ArrayList<>();
          this.takeQuizController = new TakeQuizController();
          this.quizResultActivity = quizResultActivity;
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
-         this.sessionManager = new SessionManager(quizResultActivity.getApplicationContext());
-     }
+    }
 
 
 
@@ -111,8 +109,8 @@ public class QuizResultGraphicController {
     public void updateBalance(View v) {
         Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
         intent.putExtra("gotoCashback", true);
-        Map<String, String> user = sessionManager.getUserDetails();
-        if(user.get("type").equals("GUEST")){
+
+        if(beanSession.getType().equals("GUEST")){
             quizResultActivity.setMessageGuest(v);
         }
         quizResultActivity.startActivity(intent);

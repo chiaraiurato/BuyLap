@@ -13,10 +13,13 @@ import com.example.buylap.cli.view.SignIn;
 import com.example.buylap.cli.view.SignUp;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.view.NavigationActivity;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.StringTokenizer;
 
 public class MainGraphicController {
@@ -24,7 +27,7 @@ public class MainGraphicController {
     public static final boolean CLI =false;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException {
+    public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         StringTokenizer st = new StringTokenizer(s);
         String command = st.nextToken();
 
@@ -50,7 +53,7 @@ public class MainGraphicController {
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void setGuestAccount() throws DAOException, SQLException, BeanException, IOException {
+    public void setGuestAccount() throws DAOException, SQLException, BeanException, IOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         SessionManagerCLI.createLoginSession("guest","guest", "GUEST");
         HomepageUser.main();
     }

@@ -6,24 +6,24 @@ import android.widget.Toast;
 
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.UserFragment;
+import com.example.buylap.view.SettingFragment;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class UserFragmentGraphicController {
-    private final UserFragment userFragment;
+    private final UserFragment settingFragment;
     private final SessionManager session;
     private final Map<String, String> user;
 
-    public UserFragmentGraphicController(UserFragment userFragment){
-        this.userFragment = userFragment;
-        session = new SessionManager(userFragment.getContext());
+    public UserFragmentGraphicController(UserFragment settingFragment){
+        this.settingFragment = settingFragment;
+        session = new SessionManager(settingFragment.getContext());
         this.user = session.getUserDetails();
     }
     public void initializeSession(View view){
          if(user.get("type").equals("SELLER")) {
-             userFragment.setFragmentGuest(view);
+             settingFragment.setFragmentGuest(view);
          }
 
     }
@@ -33,10 +33,10 @@ public class UserFragmentGraphicController {
     public void onSignOut(){
 
         session.logoutUser();
-        Intent intent = new Intent(userFragment.getContext(), MainActivity.class);
+        Intent intent = new Intent(settingFragment.getContext(), MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        userFragment.startActivity(intent);
+        settingFragment.startActivity(intent);
 
 
     }

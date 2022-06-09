@@ -14,12 +14,16 @@ import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.cli.utils.CommandLineTable;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.zip.DataFormatException;
 
 public class QuizGraphicController {
 
@@ -34,7 +38,7 @@ public class QuizGraphicController {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void startQuiz(String a, String b, String c, String price ) throws IOException, DAOException, BeanException, SQLException {
+    public void startQuiz(String a, String b, String c, String price ) throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         if (c.equals("1")) {
             beanAnswer.setAnswer3("Gaming");
         } else if (c.equals("2")) {
@@ -64,7 +68,7 @@ public class QuizGraphicController {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void runHomepage() throws IOException, DAOException, BeanException, SQLException {
+    private void runHomepage() throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
         if(Objects.equals(user.get("type"), "USER") || Objects.equals(user.get("type"), "GUEST") ) {
             HomepageUser.run();
 
