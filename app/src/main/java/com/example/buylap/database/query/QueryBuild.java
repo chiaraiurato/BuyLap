@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
+import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.users.ModelSeller;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,10 +30,10 @@ public class QueryBuild {
     }
 
 
-    public static void insertComponent(Statement statement, BeanBuild beanBuild, BeanSession beanSession) throws SQLException {
+    public static void insertComponent(Statement statement, ModelBuild modelBuild, ModelSeller modelSeller) throws SQLException {
         String query = "INSERT INTO `insert_component` (`username`, `type`, `name`,  `subtitles`,`price`, `url`) " +
-                "VALUES ('"+beanSession.getUsername() +"', '"+ beanBuild.getType()+"', '"+beanBuild.getTitle()+"', '"+beanBuild.getSubtitles()+"', '"
-                + beanBuild.getPrice()+"', ' "+ beanBuild.getUrlEbay()+"');";
+                "VALUES ('"+modelSeller.getUsername() +"', '"+ modelBuild.getType()+"', '"+modelBuild.getTitle()+"', '"+modelBuild.getSubtitles()+"', '"
+                + modelBuild.getPrice()+"', ' "+ modelBuild.getUrlEbay()+"');";
         statement.executeUpdate(query);
     }
 }

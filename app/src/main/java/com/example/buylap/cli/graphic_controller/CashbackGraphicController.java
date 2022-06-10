@@ -39,7 +39,6 @@ public class CashbackGraphicController {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public BeanCard uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
-
         return getCashbackController.uploadCreditCard(beanSession);
 
     }

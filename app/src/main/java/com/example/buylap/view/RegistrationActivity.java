@@ -26,8 +26,6 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         this.registrationGraphicController = new RegistrationGraphicController(this);
-        RadioButton userRadio = findViewById(R.id.radio_user);
-        RadioButton sellerRadio = findViewById(R.id.radio_seller);
 
         username = findViewById(R.id.select);
         email = findViewById(R.id.Mail);
@@ -38,31 +36,18 @@ public class RegistrationActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
-                startActivity(intent);
+                registrationGraphicController.gotoSignIn();
             }
         });
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String type = registrationGraphicController.selectTypeAccount(userRadio, sellerRadio);
-                switch (type){
-                    case "USER":
-                        try {
-                            registrationGraphicController.registerNewAccountUser();
-
-                        } catch (DAOException | BeanException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case "SELLER":
-                        try {
-                            registrationGraphicController.registerNewAccountSeller();
-                        } catch (DAOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    default:
+                try {
+                    if(registrationGraphicController.verifyFields()) {
+                        registrationGraphicController.registerNewAccountUser();
+                    }
+                } catch (DAOException | BeanException e) {
+                    e.printStackTrace();
                 }
             }
         });

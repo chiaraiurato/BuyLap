@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
+import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanBuild;
@@ -80,7 +81,9 @@ public class InsertComponentGraphicController extends SessionGraphicController i
         beanBuild.setSubtitles(insertComponentActivity.sendSubtitles());
         beanBuild.setPrice(insertComponentActivity.sendPrice());
         beanBuild.setUrlEbay(insertComponentActivity.sendUrl());
-        Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);
+        BeanSeller beanSeller = new BeanSeller();
+        //VEDERE
+        Boolean result=  insertComponentController.saveComponent(beanBuild, beanSeller);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Component saved");
         }

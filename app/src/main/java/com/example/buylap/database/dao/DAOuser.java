@@ -23,7 +23,7 @@ public class DAOuser {
     private DAOuser() {
         //private constructor
     }
-    public static void insertUser(BeanUser beanUser) throws SQLException, DAOException{
+    public static void insertUser(ModelUser modelUser) throws SQLException, DAOException{
 
         Connection connection = null;
         Statement statement = null;
@@ -35,9 +35,10 @@ public class DAOuser {
                 StrictMode.setThreadPolicy(policy);
             }
             connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            QueryRegistrationLogin.insertUser(statement, beanUser);
+            if(connection != null) {
+                statement = connection.createStatement();
+                QueryRegistrationLogin.insertUser(statement, modelUser);
+            }
 
         } catch(SQLIntegrityConstraintViolationException e) {
             throw new DAOException("Username repetition");

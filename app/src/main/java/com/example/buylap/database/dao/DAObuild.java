@@ -10,6 +10,8 @@ import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;
 
 import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.ModelRequestBuild;
+import com.example.buylap.model.users.ModelSeller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -23,7 +25,7 @@ public class DAObuild {
     private DAObuild() {
         //Private constructor
     }
-    public static ModelBuild selectBuild(String type, String nameTable, float price) throws SQLException, IOException {
+    public static ModelBuild selectBuild(String type, String nameTable, ModelRequestBuild modelRequestBuild) throws SQLException, IOException {
         ModelBuild modelBuild = null;
         Connection connection = null;
         Statement statement = null;
@@ -36,7 +38,7 @@ public class DAObuild {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryBuild.retrieveBuild(statement,type, nameTable, price);
+            ResultSet rs = QueryBuild.retrieveBuild(statement,type, nameTable, modelRequestBuild.getPrice());
             if (!rs.first()) {
                 return modelBuild;
             }
@@ -44,7 +46,7 @@ public class DAObuild {
             String recordSubtitles = rs.getString(2);
             String recordUrl = rs.getString(3);
             float recordPrice = rs.getFloat(4);
-            modelBuild = new ModelBuild(recordName, recordSubtitles, recordUrl , recordPrice);
+            modelBuild = new ModelBuild(type, recordName, recordSubtitles, recordUrl , recordPrice);
             rs.close();
         } finally {
             if (statement != null) {
@@ -55,7 +57,7 @@ public class DAObuild {
         return modelBuild;
     }
 
-    public static void insertComponent(BeanBuild beanBuild, BeanSession beanSession) throws FileNotFoundException {
+    public static void insertComponent(ModelSeller modelSeller, ModelBuild modelBuild) throws FileNotFoundException {
         Connection connection = null;
         Statement statement = null;
 
@@ -67,7 +69,7 @@ public class DAObuild {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryBuild.insertComponent(statement, beanBuild, beanSession);
+            QueryBuild.insertComponent(statement, modelBuild, modelSeller);
 
         } catch (SQLException e) {
            e.printStackTrace();

@@ -24,7 +24,7 @@ public class Cashback {
         //View Cashback
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main() throws BeanException, DAOException, SQLException, IOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
+    public static void main() throws BeanException, DAOException, SQLException, IOException, ExpiredDateCardException, ParseException {
 
 
 

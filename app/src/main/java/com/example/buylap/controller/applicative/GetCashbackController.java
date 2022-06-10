@@ -1,4 +1,6 @@
 package com.example.buylap.controller.applicative;
+import android.util.Log;
+
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
@@ -34,15 +36,16 @@ public class GetCashbackController {
     public BeanCard uploadCreditCard(BeanSession beanSession) throws DAOException, ExpiredDateCardException, ParseException {
         ModelCreditCard modelCreditCard;
         BeanCard beanCard = new BeanCard();
+
         try {
             modelCreditCard = DAOcard.searchCard(beanSession);
             if(modelCreditCard == null){
+
                 return null;
             }else{
                 beanCard.setCardHolderName(modelCreditCard.getName());
                 beanCard.setCardNumber(modelCreditCard.getNumber());
                 beanCard.setData(modelCreditCard.getData().substring(0, Math.min(modelCreditCard.getData().length(), 7)));
-
                 return beanCard;
             }
 

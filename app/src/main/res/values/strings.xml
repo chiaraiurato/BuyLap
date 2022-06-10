@@ -33,4 +33,5 @@
     <string name="Video_card">Video card</string>
     <string name="Power_supply">Power supply</string>
     <string name="Ssd">Ssd</string>
+    <string name="title_activity_sign_up_seller">SignUpSellerActivity</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
+import android.util.Log;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanSession;
@@ -31,11 +32,13 @@ public class DAOcard {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
+
+
         connection = JdbcConnection.getInstance().getConnection();
-
-        statement = connection.createStatement();
-        QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
-
+        if(connection != null) {
+            statement = connection.createStatement();
+            QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
+        }
     }
 
     public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException {
@@ -49,8 +52,8 @@ public class DAOcard {
                 StrictMode.setThreadPolicy(policy);
             }
             connection = JdbcConnection.getInstance().getConnection();
-
             statement = connection.createStatement();
+
             ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
             if (!rs.first()) {
                 return null;
@@ -59,6 +62,7 @@ public class DAOcard {
             String recordNumber = rs.getString(3);
             String recordDate = rs.getString(4);
             modelCreditCard = new ModelCreditCard(recordName, recordNumber, recordDate);
+
             rs.close();
         } finally {
             if (statement != null) {

@@ -4,6 +4,7 @@ public class BeanSeller {
     private String businessName;
     private String businessEmail;
     private String password;
+    private String pIva;
 
     public String getEmail() {
         return businessEmail;
@@ -30,4 +31,13 @@ public class BeanSeller {
     public void setUsername(String businessName) {
         this.businessName = businessName;
     }
+
+    public String getIva() {
+        return pIva;
+    }
+
+    public void setIva(String pIva) {
+        this.pIva = pIva;
+    }
+
 }

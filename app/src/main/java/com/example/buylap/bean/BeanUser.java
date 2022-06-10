@@ -1,29 +1,23 @@
 package com.example.buylap.bean;
 
 import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.EmailVerifyException;
 
 public class BeanUser {
     private String username;
     private String email;
     private String password;
-    private int points;
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String email) throws EmailVerifyException {
+        if(email.contains("@")) {
+            this.email = email;
+        }else{
+            throw new EmailVerifyException("Email invalid");
+        }
     }
 
 

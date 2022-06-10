@@ -20,7 +20,7 @@ public class DAOseller {
     private DAOseller() {
         //private constructor
     }
-    public static void insertSeller(BeanSeller beanSeller) throws SQLException, DAOException, FileNotFoundException {
+    public static void insertSeller(ModelSeller modelSeller) throws SQLException, DAOException, FileNotFoundException {
 
         Connection connection = null;
         Statement statement = null;
@@ -34,7 +34,7 @@ public class DAOseller {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryRegistrationLogin.insertSeller(statement, beanSeller);
+            QueryRegistrationLogin.insertSeller(statement, modelSeller);
 
         } catch (SQLIntegrityConstraintViolationException e) {
             throw new DAOException("Username repetition");
@@ -58,7 +58,7 @@ public class DAOseller {
                 throw new DAOException("Table not found");
             }
             String recordEmail = rs.getString(3);
-            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword());
+            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword(), beanSeller.getIva());
             rs.close();
         } finally {
             if (statement != null) {

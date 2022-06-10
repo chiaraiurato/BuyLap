@@ -1,5 +1,7 @@
 package com.example.buylap.bean;
 
+import android.util.Log;
+
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 
@@ -10,7 +12,7 @@ import java.util.Date;
 public class BeanCard {
     private String cardHolderName;
     private String cardNumber;
-    private Date expireDate;
+    private String expireDate;
 
     public String getCardHolderName() {
         return cardHolderName;
@@ -20,32 +22,42 @@ public class BeanCard {
         this.cardHolderName = cardHolderName;
     }
 
-    public String getCardNumber() throws LengthBeanCardException {
-        checkLength();
+    public String getCardNumber(){
+
         return cardNumber;
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber(String cardNumber)  {
+        try {
+            checkLength();
+        } catch (LengthBeanCardException e) {
+            e.printStackTrace();
+        }
         this.cardNumber = cardNumber;
     }
 
     public String getData() {
-        return expireDate.toString();
+        return expireDate;
     }
 
     public void setData(String date) throws ParseException, ExpiredDateCardException {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-mm");
         simpleDateFormat.setLenient(false);
-        this.expireDate = simpleDateFormat.parse(date);
-        boolean expired = expireDate.before(new Date());
+        Date expireDateFormat =simpleDateFormat.parse(date);
+
+        boolean expired = expireDateFormat.before(new Date());
         if(expired){
             throw new ExpiredDateCardException("Date is expired");
+        }else{
+            this.expireDate= date;
         }
     }
     private void checkLength() throws LengthBeanCardException {
-        if(cardNumber.length() > 20){
-            throw new LengthBeanCardException("Number card is invalid");
+        if(cardNumber != null) {
+            if (cardNumber.length() > 20) {
+                throw new LengthBeanCardException("Number card is invalid");
+            }
         }
 
     }

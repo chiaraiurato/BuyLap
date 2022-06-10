@@ -3,12 +3,12 @@ package com.example.buylap;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import static test.TestSelenium.main;
+import static test.TestSeleniumAPI.main;
 
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
-import test.TestSelenium;
+import test.TestSeleniumAPI;
 
 
 public class TestExample {

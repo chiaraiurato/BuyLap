@@ -5,6 +5,7 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.dao.DAOseller;
 import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.EmailVerifyException;
 import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class LoginController {
             beanUser.setEmail(modelUser.getEmail());
             return beanUser;
 
-        } catch (SQLException | IOException e) {
+        } catch (SQLException | IOException | EmailVerifyException e) {
             throw new DAOException("error on signIn for user");
         }
     }

@@ -1,5 +1,7 @@
 package com.example.buylap.controller.applicative;
 
+import com.example.buylap.bean.BeanRequestBuild;
+import com.example.buylap.model.ModelRequestBuild;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
@@ -20,8 +22,10 @@ public class TakeQuizController {
         return beanAnswer;
 
     }
-    public List<BeanBuild> createBuild(String keyword, float price){
+    public List<BeanBuild> createBuild(BeanRequestBuild beanRequestBuild){
         String[] component = new String[6];
+        ModelRequestBuild modelRequestBuild = new ModelRequestBuild(beanRequestBuild.getKeyword(),
+                beanRequestBuild.getPrice());
         String nameTable = "";
         component[0] = ConstantNameTable.MOTHERBOARD;
         component[1] = ConstantNameTable.SSD;
@@ -30,11 +34,11 @@ public class TakeQuizController {
         component[4] = ConstantNameTable.VIDEO_CARD;
         component[5] = ConstantNameTable.POWER_SUPPLY;
 
-        if(keyword.equals("Gaming")){
+        if(beanRequestBuild.getKeyword().equals("Gaming")){
             nameTable = ConstantNameTable.GAMING;
-        }else if(keyword.equals("Office use")){
+        }else if(beanRequestBuild.getKeyword().equals("Office use")){
             nameTable = ConstantNameTable.OFFICE_USE;
-        }else if(keyword.equals("Home use")){
+        }else if(beanRequestBuild.getKeyword().equals("Home use")){
             nameTable = ConstantNameTable.HOME_USE;
         }
 
@@ -46,10 +50,10 @@ public class TakeQuizController {
 
             try {
 
-                if(DAObuild.selectBuild(component[index], nameTable, price) == null){
+                if(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild) == null){
                     return beanBuildList;
                 }else {
-                    modelBuild.add(DAObuild.selectBuild(component[index], nameTable, price));
+                    modelBuild.add(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild));
                 }
 
             } catch (SQLException | IOException e) {
@@ -60,9 +64,9 @@ public class TakeQuizController {
         for(NameBuild e : NameBuild.values()) {
             BeanBuild beanBuild = new BeanBuild();
             beanBuild.setType(e.name());
-            beanBuild.setTitle(modelBuild.get(index).getName());
+            beanBuild.setTitle(modelBuild.get(index).getTitle());
             beanBuild.setSubtitles(modelBuild.get(index).getSubtitles());
-            beanBuild.setUrlEbay(modelBuild.get(index).getUrl());
+            beanBuild.setUrlEbay(modelBuild.get(index).getUrlEbay());
             beanBuild.setPrice(modelBuild.get(index).getPrice());
             beanBuildList.add(beanBuild);
             index++;

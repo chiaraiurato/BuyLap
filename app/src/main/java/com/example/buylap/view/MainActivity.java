@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import com.example.buylap.R;
+import com.example.buylap.SelectTypeAccountActivity;
 import com.example.buylap.controller.graphic.MainGraphicController;
 
 public class MainActivity extends AppCompatActivity{
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity{
         moveSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+                Intent intent = new Intent(MainActivity.this, SelectTypeAccountActivity.class);
                 startActivity(intent);
 
             }

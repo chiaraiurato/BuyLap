@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.buylap.R;
+import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
@@ -27,11 +28,11 @@ import java.util.Map;
 
 public class QuizResultGraphicController extends SessionGraphicController {
     private List<Category> build;
-
     private TakeQuizController takeQuizController;
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
+    private BeanRequestBuild beanRequestBuild;
 
     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          super(quizResultActivity.getApplicationContext());
@@ -40,14 +41,15 @@ public class QuizResultGraphicController extends SessionGraphicController {
          this.quizResultActivity = quizResultActivity;
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
+         this.beanRequestBuild = new BeanRequestBuild();
     }
 
-
-
     public List<Category> setBuild(String a, String price){
+
         beanAnswer= takeQuizController.getBeanAnswer(a);
-        float floatPrice = Float.parseFloat(price.substring(0, price.length() - 2));
-        beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
+        beanRequestBuild.setKeyword(beanAnswer);
+        beanRequestBuild.setPrice(price);
+        beanBuild = takeQuizController.createBuild(beanRequestBuild);
         if (beanBuild.isEmpty()){
             openErrorDialog();
         }else {

@@ -31,10 +31,13 @@ public class AddComponentGraphicController {
         beanBuild.setSubtitles(token[3].replace("_", ""));
         beanBuild.setPrice(Float.valueOf(token[4]));
         beanBuild.setUrlEbay(token[5]);
+        /*
         Boolean result=  insertComponentController.saveComponent(beanBuild, beanSession);
         if (Boolean.TRUE.equals(result)) {
             System.out.println("Component saved!");
         }
+
+         */
 
     }
 }

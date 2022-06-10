@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.EmailVerifyException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 
@@ -65,7 +66,7 @@ public class Main {
             String s = bufferRead.readLine();
             mainGraphicController.parseInput(s);
         }
-        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException e)
+        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException | EmailVerifyException e)
         {
             e.printStackTrace();
         }
@@ -86,7 +87,7 @@ public class Main {
             String s = bufferRead.readLine();
             mainGraphicController.parseInput(s);
         }
-        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException e)
+        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException | EmailVerifyException e)
         {
             e.printStackTrace();
         }

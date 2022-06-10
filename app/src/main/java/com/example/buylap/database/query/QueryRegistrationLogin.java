@@ -3,6 +3,9 @@ package com.example.buylap.database.query;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
+import com.example.buylap.cli.Main;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,16 +19,16 @@ public class QueryRegistrationLogin {
     private QueryRegistrationLogin() {
         throw new IllegalStateException("Utility class");
     }
-    public static void insertUser(Statement stmt, BeanUser beanUser) throws SQLException {
+    public static void insertUser(Statement stmt, ModelUser modelUser) throws SQLException {
 
         String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`) " +
-                        "VALUES ('"+ beanUser.getUsername()+"', 'user', '"+beanUser.getEmail()+"', '"+beanUser.getPassword()+"');";
+                        "VALUES ('"+ modelUser.getUsername()+"', 'user', '"+modelUser.getEmail()+"', '"+modelUser.getPassword()+"');";
         stmt.executeUpdate(query);
     }
-    public static void insertSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+    public static void insertSeller(Statement stmt, ModelSeller modelSeller) throws SQLException {
 
-        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`) " +
-                        "VALUES ('"+ beanSeller.getUsername()+"', 'seller', '"+beanSeller.getEmail()+"', '"+beanSeller.getPassword()+"');";
+        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`, `piva` ) " +
+                        "VALUES ('"+ modelSeller.getUsername()+"', 'seller', '"+modelSeller.getEmail()+"', '"+modelSeller.getPassword()+"', '"+modelSeller.getP_iva()+"');";
         stmt.executeUpdate(query);
     }
 

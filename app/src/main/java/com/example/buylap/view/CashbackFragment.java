@@ -60,8 +60,6 @@ public class CashbackFragment extends Fragment {
         } catch (DAOException e) {
             Log.d("DAOcard", "empty card");
             deleteCreditCard();
-        }catch (LengthBeanCardException e){
-            Log.d("LengthBeanCardException","Length of credit card incorrect");
         } catch (ExpiredDateCardException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -103,7 +101,7 @@ public class CashbackFragment extends Fragment {
         return view;
 
     }
-    public void setCreditCard(BeanCard beanCard) throws LengthBeanCardException {
+    public void setCreditCard(BeanCard beanCard) {
         if(beanCard == null){
             deleteCreditCard();
         }else{

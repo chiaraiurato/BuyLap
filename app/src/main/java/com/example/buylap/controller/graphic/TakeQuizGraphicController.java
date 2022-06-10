@@ -24,7 +24,6 @@ public class TakeQuizGraphicController {
 
         this.takeQuizActivity = takeQuizActivity;
         this.index = 0;
-
         beanAnswer = new BeanAnswer();
         data = new Data();
         listQuest=data.sendQuestion();

@@ -33,17 +33,20 @@ public class CashbackGraphicController extends SessionGraphicController{
     private CashbackFragment cashbackFragment;
     private GetCashbackController getCashbackController;
     private BeanPoints beanPoints;
+    private BeanSession beanSession;
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
         super(addCardActivity.getApplicationContext());
         this.addCardActivity = addCardActivity;
         this.getCashbackController = new GetCashbackController();
+        this.beanSession = getBeanSession();
     }
     public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
         super(cashbackFragment.getContext());
         this.cashbackFragment= cashbackFragment;
         this.getCashbackController = new GetCashbackController();
-        beanPoints = new BeanPoints();
+        this.beanSession = getBeanSession();
+        this.beanPoints = new BeanPoints();
 
     }
     private void gotoNavigationActivity(){
@@ -57,28 +60,28 @@ public class CashbackGraphicController extends SessionGraphicController{
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
 
-        Boolean result = getCashbackController.createCard(beanCard, beanSession);
+        Boolean result = getCashbackController.createCard(beanCard, this.beanSession);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }
         gotoNavigationActivity();
     }
-    public void uploadCreditCard() throws DAOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
+    public void uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
 
-        BeanCard beanCard = getCashbackController.uploadCreditCard(beanSession);
+        BeanCard beanCard = getCashbackController.uploadCreditCard(this.beanSession);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
     public void uploadPoints() throws SQLException, IOException {
 
-        beanPoints = getCashbackController.uploadPoints(beanSession);
-        cashbackFragment.setPoints(beanPoints);
+        this.beanPoints = getCashbackController.uploadPoints(this.beanSession);
+        cashbackFragment.setPoints(this.beanPoints);
     }
 
     public void deleteCreditCard() throws DAOException {
 
-        getCashbackController.deleteCreditCard(beanSession);
+        getCashbackController.deleteCreditCard(this.beanSession);
         cashbackFragment.deleteCreditCard();
     }
 

@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
@@ -47,9 +48,10 @@ public class QuizGraphicController {
             beanAnswer.setAnswer3("Home use");
         }
         int index;
-        float floatPrice = Float.parseFloat(price);
-
-        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanAnswer.getAnswer3(), floatPrice);
+        BeanRequestBuild beanRequestBuild = new BeanRequestBuild();
+        beanRequestBuild.setKeyword(beanAnswer);
+        beanRequestBuild.setPrice(price);
+        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanRequestBuild);
         if (beanBuild.isEmpty()) {
             System.out.println("No build found! Try with another price\n");
         } else {

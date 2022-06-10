@@ -30,7 +30,7 @@ public class SessionGraphicController {
                 Log.d("BeanSession", "Field username is null");
             }
         }
-        Log.d("user ", " "+session.isLoggedIn());
+
         return this.beanSession;
     }
     protected boolean isLogged(){
