@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.cli.graphic_controller.CashbackGraphicController;
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.exceptions.BeanException;
@@ -42,12 +43,9 @@ public class Cashback {
             st.print();
 
         }
-        int points =cashbackGraphicController.uploadPoints();
-        if(points == -1){
-            System.out.println("\nPoints earned : 0");
-        }else{
-            System.out.println("\nPoints earned : "+ points);
-        }
+        BeanPoints points =cashbackGraphicController.uploadPoints();
+        System.out.println("\nPoints earned : "+ points);
+
 
     }
     public static void cashOut() throws SQLException, IOException, BeanException {

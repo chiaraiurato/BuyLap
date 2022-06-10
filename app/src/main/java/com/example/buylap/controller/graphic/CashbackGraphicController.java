@@ -72,7 +72,7 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
     public void uploadPoints() throws SQLException, IOException {
 
-        beanPoints.setPoints(getCashbackController.uploadPoints(beanSession));
+        beanPoints = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(beanPoints);
     }
 

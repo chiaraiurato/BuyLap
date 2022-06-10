@@ -1,5 +1,6 @@
 package com.example.buylap.controller.applicative;
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.database.dao.DAOcard;
 import com.example.buylap.database.dao.DAOuser;
@@ -61,9 +62,10 @@ public class GetCashbackController {
         }
     }
 
-    public int uploadPoints(BeanSession beanSession) throws SQLException, IOException {
-
-        return DAOuser.uploadPoints(beanSession);
+    public BeanPoints uploadPoints(BeanSession beanSession) throws SQLException, IOException {
+        BeanPoints beanPoints = new BeanPoints();
+        beanPoints.setPoints(DAOuser.uploadPoints(beanSession));
+        return beanPoints;
     }
 
     public void deletePoints(BeanSession beanSession) throws SQLException, IOException {

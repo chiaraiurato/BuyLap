@@ -1,6 +1,7 @@
 package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
@@ -37,10 +38,14 @@ public class NavigationGraphicController extends SessionGraphicController{
     public void checkLogin(){
 
         if(!isLogged()){
+            Log.d("logged", ""+isLogged());
             Intent intent = new Intent(navigationActivity.getApplicationContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+           intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             navigationActivity.startActivity(intent);
+        }else{
+            Fragment fragment = selectTypeHomepage();
+            navigationActivity.getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
         }
     }
     public Fragment selectTypeHomepage(){
@@ -48,12 +53,6 @@ public class NavigationGraphicController extends SessionGraphicController{
         return u.gotoMyHomepage(a);
 
     }
-
-    public void getMyFragment(){
-        Fragment fragment = selectTypeHomepage();
-        navigationActivity.getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-    }
-
 
     public Fragment switchPage(MenuItem item){
 

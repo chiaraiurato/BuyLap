@@ -3,6 +3,7 @@ package com.example.buylap.controller.graphic;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.utils.SessionManager;
@@ -19,20 +20,20 @@ public class SessionGraphicController {
         this.session = new SessionManager(context);
         this.user = session.getUserDetails();
         this.beanSession = new BeanSession();
+    }
+    protected BeanSession getBeanSession(){
         if(user.get("user") != null) {
             try {
                 beanSession.setUsername(Objects.requireNonNull(user.get("user")));
+                beanSession.setType(user.get("type"));
             } catch (BeanException e) {
                 Log.d("BeanSession", "Field username is null");
             }
         }
         Log.d("user ", " "+session.isLoggedIn());
-        beanSession.setType(user.get("type"));
-    }
-    public BeanSession getBeanSession(){
         return this.beanSession;
     }
-    public boolean isLogged(){
+    protected boolean isLogged(){
         return session.isLoggedIn();
     }
 }

@@ -48,6 +48,7 @@ public class HomeGraphicController extends SessionGraphicController{
         return data.sendAnalytics();
     }
     public void initializeSession(View view) throws BeanException {
+        Log.d("beans", ""+beanSession.getUsername());
         if(beanSession.getType() != null) {
             if (beanSession.getType().equals("user")) {
                 BeanUser beanUser = new BeanUser();

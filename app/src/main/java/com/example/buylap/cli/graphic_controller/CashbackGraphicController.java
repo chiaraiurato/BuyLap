@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.Cashback;
 import com.example.buylap.bean.BeanCard;
@@ -60,12 +61,15 @@ public class CashbackGraphicController {
             System.out.println("Credit card saved!");
         }
     }
-    public int uploadPoints() throws SQLException, IOException {
-        int points = getCashbackController.uploadPoints(beanSession);
-        if (points == 0){
+    public BeanPoints uploadPoints() throws SQLException, IOException {
+        BeanPoints beanPoints = getCashbackController.uploadPoints(beanSession);
+        /*
+        if (beanPoints.getPoints() == 0){
             return -1;
         }
-        return points;
+
+         */
+        return beanPoints;
     }
     public void deleteCreditCard() throws DAOException {
 

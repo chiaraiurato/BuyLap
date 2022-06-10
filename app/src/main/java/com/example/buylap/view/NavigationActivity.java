@@ -37,8 +37,6 @@ public class NavigationActivity extends AppCompatActivity {
 
         navigationGraphicController.checkLogin();
 
-        navigationGraphicController.getMyFragment();
-
         navigationView.setSelectedItemId(R.id.nav_home);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
