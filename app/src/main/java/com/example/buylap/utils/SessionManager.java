@@ -25,7 +25,7 @@ public class SessionManager {
         shar = context.getSharedPreferences(PREF_NAME, privateMode);
         editor = shar.edit();
     }
-    public void  createLoginSession(String username, String password, String type){
+    public void createLoginSession(String username, String password, String type){
         editor.putBoolean(IS_LOGIN,true);
         editor.putString(KEY_USERNAME, username);
         editor.putString(KEY_PASSWORD, password);

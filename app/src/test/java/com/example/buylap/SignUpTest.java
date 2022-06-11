@@ -11,37 +11,7 @@ import org.junit.Test;
 
 
 public class SignUpTest {
-    //Test registration account
-    @Test
-    public void testSignUp() {
-        boolean checkRegistration;
-        boolean checkEmail= true;
-        BeanUser beanUser = new BeanUser();
-        try {
-            beanUser.setUsername("test");
-        } catch (BeanException e) {
-            e.printStackTrace();
-        }
-        try {
-            beanUser.setEmail("test@gmail.com");
-        } catch (EmailVerifyException e) {
-            checkEmail = false;
-        }
-        assertTrue(checkEmail);
-        try {
-            beanUser.setPassword("test");
-        } catch (BeanException e) {
-            e.printStackTrace();
-        }
-        RegistrationController registrationController = new RegistrationController();
+    //Test conversion points
 
-        try {
-            checkRegistration = registrationController.createUser(beanUser);
-        } catch (DAOException e) {
-            checkRegistration= false;
-        }
-        assertTrue("SignUp error", checkRegistration );
-
-    }
 
 }

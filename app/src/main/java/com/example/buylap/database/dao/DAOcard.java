@@ -10,6 +10,8 @@ import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryCreditCard;
 import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.model.ModelCreditCard;
+import com.example.buylap.model.users.ModelUser;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
@@ -23,7 +25,7 @@ public class DAOcard {
         //private constructor
     }
 
-    public static void insertCard(BeanCard beanCard, BeanSession beanSession) throws SQLException, IOException, LengthBeanCardException {
+    public static void insertCard(ModelCreditCard modelCreditCard, String username) throws SQLException, IOException, LengthBeanCardException {
 
         Connection connection = null;
         Statement statement = null;
@@ -32,16 +34,14 @@ public class DAOcard {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
-
         connection = JdbcConnection.getInstance().getConnection();
         if(connection != null) {
             statement = connection.createStatement();
-            QueryCreditCard.insertCreditCard(statement, beanCard, beanSession);
+            QueryCreditCard.insertCreditCard(statement, modelCreditCard, username);
         }
     }
 
-    public static ModelCreditCard searchCard(BeanSession beanSession) throws SQLException {
+    public static ModelCreditCard searchCard(String username) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         ModelCreditCard modelCreditCard;
@@ -54,7 +54,7 @@ public class DAOcard {
             connection = JdbcConnection.getInstance().getConnection();
             statement = connection.createStatement();
 
-            ResultSet rs = QueryCreditCard.searchCard(statement, beanSession);
+            ResultSet rs = QueryCreditCard.searchCard(statement, username);
             if (!rs.first()) {
                 return null;
             }
@@ -72,7 +72,7 @@ public class DAOcard {
         return modelCreditCard;
     }
 
-    public static void deleteCreditCard(BeanSession beanSession) throws SQLException, IOException {
+    public static void deleteCreditCard(String username) throws SQLException, IOException {
         Connection connection = null;
         Statement statement = null;
         try {
@@ -84,7 +84,7 @@ public class DAOcard {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryCreditCard.deleteCard(statement, beanSession);
+            QueryCreditCard.deleteCard(statement, username);
         } finally {
             if (statement != null) {
                 statement.close();

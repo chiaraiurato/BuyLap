@@ -11,6 +11,8 @@ import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.LoginController;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
@@ -48,8 +50,8 @@ public class LoginGraphicController {
             beanUser.setUsername(loginActivity.sendUsername());
             beanUser.setPassword(loginActivity.sendPassword());
 
-            beanUser = loginController.searchUser(beanUser);
-            sessionManager.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            ModelUser modelUser = loginController.searchUser(beanUser);
+            sessionManager.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "USER");
             gotoNavigationActivity();
     }
 
@@ -59,8 +61,8 @@ public class LoginGraphicController {
             beanSeller.setUsername(loginActivity.sendUsername());
             beanSeller.setPassword(loginActivity.sendPassword());
 
-            beanSeller = loginController.searchSeller(beanSeller);
-            sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            ModelSeller modelSeller = loginController.searchSeller(beanSeller);
+            sessionManager.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "SELLER");
             gotoNavigationActivity();
     }
 

@@ -14,26 +14,24 @@ import java.sql.SQLException;
 public class LoginController {
 
 
-    public BeanUser searchUser(BeanUser beanUser) throws DAOException{
-        ModelUser modelUser;
+    public ModelUser searchUser(BeanUser beanUser) throws DAOException{ ;
 
         try {
-            modelUser = DAOuser.searchUser(beanUser);
-            beanUser.setEmail(modelUser.getEmail());
-            return beanUser;
+            ModelUser modelUser = new ModelUser(beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword());
+            modelUser = DAOuser.searchUser(modelUser);
+            return modelUser;
 
-        } catch (SQLException | IOException | EmailVerifyException e) {
+        } catch (SQLException | IOException e) {
             throw new DAOException("error on signIn for user");
         }
     }
 
-    public BeanSeller searchSeller(BeanSeller beanSeller) throws DAOException {
-        ModelSeller modelSeller;
+    public ModelSeller searchSeller(BeanSeller beanSeller) throws DAOException {
 
         try {
-            modelSeller = DAOseller.searchSeller(beanSeller);
-            beanSeller.setEmail(modelSeller.getEmail());
-            return beanSeller;
+            ModelSeller modelSeller = new ModelSeller(beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(), beanSeller.getIva());
+            modelSeller = DAOseller.searchSeller(modelSeller);
+            return modelSeller;
 
         } catch (SQLException | IOException e) {
             throw new DAOException("error on signIn for seller");

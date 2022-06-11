@@ -48,9 +48,12 @@ public class Cashback {
 
 
     }
+    /*
     public static void cashOut() throws SQLException, IOException, BeanException {
         CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
         cashbackGraphicController.cashOutPoints();
     }
+
+     */
 
 }

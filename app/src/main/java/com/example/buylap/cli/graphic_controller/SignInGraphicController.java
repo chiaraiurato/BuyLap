@@ -14,6 +14,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
+import com.example.buylap.model.users.ModelUser;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -40,8 +41,7 @@ public class SignInGraphicController {
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(username);
             beanUser.setPassword(password);
-
-            beanUser = loginController.searchUser(beanUser);
+           // ModelUser modelUser = loginController.searchUser(beanUser);
             SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
             HomepageUser.main();
 
@@ -51,7 +51,7 @@ public class SignInGraphicController {
             beanSeller.setUsername(username);
             beanSeller.setPassword(password);
 
-            beanSeller = loginController.searchSeller(beanSeller);
+           // beanSeller = loginController.searchSeller(beanSeller);
             SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
             HomepageSeller.main();
         }

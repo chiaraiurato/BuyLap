@@ -1,5 +1,7 @@
 package com.example.buylap.database.query;
 
+import android.graphics.ColorSpace;
+
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
@@ -32,31 +34,18 @@ public class QueryRegistrationLogin {
         stmt.executeUpdate(query);
     }
 
-    public static ResultSet searchUser(Statement stmt, BeanUser beanUser) throws    SQLException{
+    public static ResultSet searchUser(Statement stmt, ModelUser modelUser) throws    SQLException{
         String query = SELECT_ALL +
                         "FROM users " +
-                        WHERE_USERNAME + beanUser.getUsername()+"' AND type = 'user' AND password = '"+beanUser.getPassword()+"';";
+                        WHERE_USERNAME + modelUser.getUsername()+"' AND type = 'user' AND password = '"+modelUser.getPassword()+"';";
         return stmt.executeQuery(query);
 
     }
 
-    public static ResultSet searchSeller(Statement stmt, BeanSeller beanSeller) throws SQLException {
+    public static ResultSet searchSeller(Statement stmt, ModelSeller modelSeller) throws SQLException {
         String query = SELECT_ALL +
                         "FROM users " +
-                        WHERE_USERNAME+ beanSeller.getUsername()+"' AND type = 'seller' AND password = '"+beanSeller.getPassword()+"';";
+                        WHERE_USERNAME+ modelSeller.getUsername()+"' AND type = 'seller' AND password = '"+modelSeller.getPassword()+"';";
         return stmt.executeQuery(query);
-    }
-
-    public static ResultSet searchPoints(Statement statement, BeanSession beanSession) throws SQLException{
-        String query = SELECT_ALL +
-                "FROM points_earned " +
-                WHERE_USERNAME+beanSession.getUsername()+"'";
-        return statement.executeQuery(query);
-    }
-
-    public static void deletePoints(Statement statement, BeanSession beanSession) throws SQLException {
-        String query = "DELETE FROM points_earned " +
-                WHERE_USERNAME+beanSession.getUsername()+"';";
-        statement.executeUpdate(query);
     }
 }

@@ -2,12 +2,14 @@ package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
 
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelPoints;
 import com.example.buylap.model.users.ModelUser;
 
 import java.io.FileNotFoundException;
@@ -45,10 +47,9 @@ public class DAOuser {
         }
     }
 
-    public static ModelUser searchUser(BeanUser beanUser) throws SQLException, DAOException, IOException {
+    public static ModelUser searchUser(ModelUser modelUser) throws SQLException, DAOException, IOException {
         Connection connection = null;
         Statement statement = null;
-        ModelUser modelUser;
         try {
 
             if(!MainGraphicController.CLI) {
@@ -58,12 +59,10 @@ public class DAOuser {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchUser(statement, beanUser);
+            ResultSet rs = QueryRegistrationLogin.searchUser(statement, modelUser);
             if (!rs.first()) {
-                throw new DAOException("Table not found");
+                throw new DAOException("Entry not found");
             }
-            String recordEmail = rs.getString(3);
-            modelUser = new ModelUser(beanUser.getUsername(), recordEmail, beanUser.getPassword());
             rs.close();
         } finally {
             if (statement != null) {
@@ -73,48 +72,5 @@ public class DAOuser {
         return modelUser;
     }
 
-    public static int uploadPoints(BeanSession beanSession) throws SQLException, IOException {
-        Connection connection = null;
-        Statement statement = null;
-        int recordPoint;
-        try {
-            if(!MainGraphicController.CLI) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
-            }
-            connection = JdbcConnection.getInstance().getConnection();
 
-            statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchPoints(statement, beanSession);
-            if (!rs.first()) {
-                return 0;
-            }
-            recordPoint = rs.getInt(3);
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
-        }
-        return recordPoint;
-    }
-
-    public static void deletePoints(BeanSession beanSession) throws SQLException, IOException {
-        Connection connection = null;
-        Statement statement = null;
-        try {
-            if(!MainGraphicController.CLI) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
-            }
-            connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-             QueryRegistrationLogin.deletePoints(statement, beanSession);
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
-        }
-    }
 }

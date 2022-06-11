@@ -5,7 +5,6 @@ public class ModelCreditCard {
     private String number;
     private String data;
 
-
     public ModelCreditCard(String name, String number, String data) {
         this.name = name;
 
@@ -13,7 +12,6 @@ public class ModelCreditCard {
         this.data = data;
 
     }
-
     public String getName() {
         return name;
     }

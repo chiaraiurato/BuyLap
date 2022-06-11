@@ -121,10 +121,8 @@ public class CashbackFragment extends Fragment {
         cardHolderName.setText("");
     }
 
-    public void setPoints(BeanPoints beanPoints) {
-        pointsEarned.setText(String.valueOf(beanPoints.getPoints()));
-    }
-    public void cashOutPoints(BeanPoints beanPoints){
-        pointsEarned.setText(beanPoints.getPoints());
+    public void setPoints(BeanPoints beanPoints){
+        String points = String.valueOf(beanPoints.getPoints());
+        pointsEarned.setText(points);
     }
 }

@@ -41,10 +41,9 @@ public class DAOseller {
         }
     }
 
-    public static ModelSeller searchSeller(BeanSeller beanSeller) throws SQLException, DAOException, IOException {
+    public static ModelSeller searchSeller(ModelSeller modelSeller) throws SQLException, DAOException, IOException {
         Connection connection = null;
         Statement statement = null;
-        ModelSeller modelSeller;
         try {
             if(!MainGraphicController.CLI) {
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -53,12 +52,10 @@ public class DAOseller {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, beanSeller);
+            ResultSet rs = QueryRegistrationLogin.searchSeller(statement, modelSeller);
             if (!rs.first()) {
-                throw new DAOException("Table not found");
+                throw new DAOException("Entry not found");
             }
-            String recordEmail = rs.getString(3);
-            modelSeller = new ModelSeller(beanSeller.getUsername(), recordEmail, beanSeller.getPassword(), beanSeller.getIva());
             rs.close();
         } finally {
             if (statement != null) {

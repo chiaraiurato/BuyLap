@@ -74,8 +74,11 @@ public class CashbackGraphicController {
 
         getCashbackController.deleteCreditCard(beanSession);
     }
-    public void cashOutPoints() throws SQLException, IOException {
+    /*
+    public void cashOutPoints() throws SQLException {
         getCashbackController.deletePoints(beanSession);
         System.out.println("\nPoints earned correctly!");
     }
+
+     */
 }

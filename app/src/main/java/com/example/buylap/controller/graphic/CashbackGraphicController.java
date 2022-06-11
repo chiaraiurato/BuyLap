@@ -60,7 +60,7 @@ public class CashbackGraphicController extends SessionGraphicController{
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
 
-        Boolean result = getCashbackController.createCard(beanCard, this.beanSession);
+        Boolean result = getCashbackController.createCard(beanCard, beanSession);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }
@@ -68,29 +68,32 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
     public void uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
 
-        BeanCard beanCard = getCashbackController.uploadCreditCard(this.beanSession);
+        BeanCard beanCard = getCashbackController.uploadCreditCard(beanSession);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
     public void uploadPoints() throws SQLException, IOException {
 
-        this.beanPoints = getCashbackController.uploadPoints(this.beanSession);
-        cashbackFragment.setPoints(this.beanPoints);
+        this.beanPoints = getCashbackController.uploadPoints(beanSession);
+        cashbackFragment.setPoints(beanPoints);
     }
 
     public void deleteCreditCard() throws DAOException {
 
-        getCashbackController.deleteCreditCard(this.beanSession);
+        getCashbackController.deleteCreditCard(beanSession);
         cashbackFragment.deleteCreditCard();
     }
 
-
     public void cashOutPoints() throws SQLException, IOException {
-
-        getCashbackController.deletePoints(beanSession);
-        beanPoints.setPoints(0);
-        cashbackFragment.cashOutPoints(beanPoints);
+        if(beanPoints.getPoints() < 100){
+            Toast.makeText(cashbackFragment.getContext(), "Required a minimum of 100 points ", Toast.LENGTH_SHORT).show();
+        }else {
+            int remainingPoints = beanPoints.getPoints() - 100;
+            beanPoints.setPoints(remainingPoints);
+            beanPoints=getCashbackController.updatePoints(beanPoints , beanSession);
+            cashbackFragment.setPoints(beanPoints);
+        }
 
     }
 

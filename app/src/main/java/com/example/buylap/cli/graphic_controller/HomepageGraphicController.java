@@ -64,10 +64,13 @@ public class HomepageGraphicController {
                     Cashback.main();
                     HomepageUser.run();
                     break;
+                    /*
                 case "cash_out":
                     Cashback.cashOut();
                     HomepageUser.run();
                     break;
+
+                     */
                 case "add_card":
                     CreditCard.save(input);
                     HomepageUser.run();
@@ -103,8 +106,11 @@ public class HomepageGraphicController {
                     HomepageSeller.run();
                     break;
                 case "cash_out":
+                    /*
                     Cashback.cashOut();
                     HomepageSeller.run();
+
+                     */
                     break;
                 case "add_card":
                     CreditCard.save(input);
