@@ -4,14 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.buylap.Category;
-import com.example.buylap.CategoryAdapter;
+import com.example.buylap.model.Category;
+import com.example.buylap.adapterGUI.CategoryAdapter;
 import com.example.buylap.controller.graphic.QuizResultGraphicController;
 import com.example.buylap.R;
 

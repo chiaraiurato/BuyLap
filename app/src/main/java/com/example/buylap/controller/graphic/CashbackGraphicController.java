@@ -12,6 +12,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
+import com.example.buylap.exceptions.NoCardInsertedException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
@@ -34,12 +35,14 @@ public class CashbackGraphicController extends SessionGraphicController{
     private GetCashbackController getCashbackController;
     private BeanPoints beanPoints;
     private BeanSession beanSession;
+    private BeanCard beanCard;
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
         super(addCardActivity.getApplicationContext());
         this.addCardActivity = addCardActivity;
         this.getCashbackController = new GetCashbackController();
         this.beanSession = getBeanSession();
+        this.beanCard = new BeanCard();
     }
     public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
         super(cashbackFragment.getContext());
@@ -55,7 +58,7 @@ public class CashbackGraphicController extends SessionGraphicController{
         addCardActivity.startActivity(intent);
     }
     public void saveCreditCard() throws DAOException, BeanException, LengthBeanCardException, ExpiredDateCardException, ParseException {
-        BeanCard beanCard = new BeanCard();
+
         beanCard.setCardHolderName(addCardActivity.sendName());
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
@@ -75,7 +78,7 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
     public void uploadPoints() throws SQLException, IOException {
 
-        this.beanPoints = getCashbackController.uploadPoints(beanSession);
+        beanPoints = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(beanPoints);
     }
 
@@ -91,8 +94,14 @@ public class CashbackGraphicController extends SessionGraphicController{
         }else {
             int remainingPoints = beanPoints.getPoints() - 100;
             beanPoints.setPoints(remainingPoints);
-            beanPoints=getCashbackController.updatePoints(beanPoints , beanSession);
-            cashbackFragment.setPoints(beanPoints);
+            try {
+                getCashbackController.sendMoneyToCreditCard(beanCard);
+                beanPoints=getCashbackController.updatePoints(beanPoints , beanSession);
+                cashbackFragment.setPoints(beanPoints);
+            } catch (NoCardInsertedException e) {
+                Toast.makeText(cashbackFragment.getContext(), "You need to add a credit card ", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
     }

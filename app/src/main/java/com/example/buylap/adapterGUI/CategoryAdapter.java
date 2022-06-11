@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.adapterGUI;
 
 
 import android.content.Context;
@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.buylap.R;
+import com.example.buylap.model.Category;
 
 import java.util.List;
 

@@ -1,1 +1,1 @@
-com.example.buylap.MostViewed#getTitle()Ljava/lang/String;
+com.example.buylap.model.MostViewed#getTitle()Ljava/lang/String;

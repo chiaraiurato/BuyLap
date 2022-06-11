@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Buylap">
         <activity
-            android:name=".SelectTypeAccountActivity"
+            android:name=".view.SelectTypeAccountActivity"
             android:exported="false" />
         <activity
             android:name=".view.RegistrationSellerActivity"

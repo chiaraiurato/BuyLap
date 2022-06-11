@@ -1,1 +1,1 @@
-com.example.buylap.MostViewed#setUrl(Ljava/lang/String;)V
+com.example.buylap.model.MostViewed#setUrl(Ljava/lang/String;)V

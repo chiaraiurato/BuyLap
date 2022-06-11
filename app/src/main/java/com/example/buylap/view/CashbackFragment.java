@@ -113,7 +113,6 @@ public class CashbackFragment extends Fragment {
         }
 
     }
-
     @SuppressLint("SetTextI18n")
     public void deleteCreditCard() {
         numberCard.setText("**** **** **** 0000");

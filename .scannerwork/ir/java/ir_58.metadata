@@ -1,1 +1,1 @@
-com.example.buylap.MostViewed#setSubtitle(Ljava/lang/String;)V
+com.example.buylap.model.MostViewed#setSubtitle(Ljava/lang/String;)V

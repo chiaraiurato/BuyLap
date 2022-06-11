@@ -1,1 +1,1 @@
-com.example.buylap.Analytics#getUrl()Ljava/lang/String;
+com.example.buylap.model.Analytics#getUrl()Ljava/lang/String;

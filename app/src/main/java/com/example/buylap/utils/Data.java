@@ -1,11 +1,7 @@
 package com.example.buylap.utils;
 
-import android.os.Build;
-
-import com.example.buylap.Analytics;
-import com.example.buylap.Category;
-import com.example.buylap.MostViewed;
-import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.Analytics;
+import com.example.buylap.model.MostViewed;
 import com.example.buylap.model.QuizList;
 
 import java.util.ArrayList;

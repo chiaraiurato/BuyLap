@@ -1,28 +1,22 @@
 package com.example.buylap.controller.applicative;
-import android.util.Log;
 
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
+import com.example.buylap.boundary.BoundaryPayment;
 import com.example.buylap.database.dao.DAOcard;
 import com.example.buylap.database.dao.DAOpoints;
-import com.example.buylap.database.dao.DAOuser;
-import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
+import com.example.buylap.exceptions.NoCardInsertedException;
 import com.example.buylap.model.ModelCreditCard;
 import com.example.buylap.model.ModelPoints;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.zip.DataFormatException;
-
 
 public class GetCashbackController {
 
@@ -96,8 +90,11 @@ public class GetCashbackController {
         return beanPoints;
 
     }
-    public void deletePoints(BeanSession beanSession) throws SQLException {
-        String username = beanSession.getUsername();
-        DAOpoints.deletePoints(username);
+    public void sendMoneyToCreditCard(BeanCard beanCard) throws NoCardInsertedException {
+        BoundaryPayment boundaryPayment = new BoundaryPayment();
+        BeanCashback beanCashback = new BeanCashback();
+        beanCashback.setBeanCard(beanCard);
+        beanCashback.setAmount(0.29);
+        boundaryPayment.pay(beanCashback);
     }
 }

@@ -1,12 +1,10 @@
 package com.example.buylap.controller.graphic;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,16 +13,12 @@ import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.Category;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.BudgetActivity;
+import com.example.buylap.model.Category;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.QuizResultActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class QuizResultGraphicController extends SessionGraphicController {
     private List<Category> build;

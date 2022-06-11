@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.buylap.SelectTypeAccountActivity;
+import com.example.buylap.view.SelectTypeAccountActivity;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.bean.BeanUser;

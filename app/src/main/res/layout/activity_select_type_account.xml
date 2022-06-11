@@ -7,7 +7,7 @@
     android:background="#202442"
     app:circularflow_defaultRadius="28dp"
     app:circularflow_radiusInDP="28dp"
-    tools:context=".SelectTypeAccountActivity">
+    tools:context=".view.SelectTypeAccountActivity">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="368dp"

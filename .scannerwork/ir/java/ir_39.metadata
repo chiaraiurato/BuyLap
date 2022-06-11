@@ -1,1 +1,1 @@
-com.example.buylap.Category#getTitle()Ljava/lang/String;
+com.example.buylap.model.Category#getTitle()Ljava/lang/String;

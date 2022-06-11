@@ -14,7 +14,7 @@
         android:inputType="date"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Add payment"
+        android:text="Add credit card"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"

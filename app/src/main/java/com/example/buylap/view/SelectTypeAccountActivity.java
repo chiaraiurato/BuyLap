@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.example.buylap.R;
 import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.controller.graphic.RegistrationGraphicController;
 import com.example.buylap.exceptions.BeanException;

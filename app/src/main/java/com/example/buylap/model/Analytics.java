@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.model;
 
 public class Analytics {
     private String url;

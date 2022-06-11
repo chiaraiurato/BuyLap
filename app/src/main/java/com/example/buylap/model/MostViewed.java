@@ -1,4 +1,4 @@
-package com.example.buylap;
+package com.example.buylap.model;
 
 public class MostViewed {
     private String title;

@@ -3,8 +3,8 @@ package com.example.buylap.controller.graphic;
 import android.content.Intent;
 import android.view.View;
 
-import com.example.buylap.Analytics;
-import com.example.buylap.MostViewed;
+import com.example.buylap.model.Analytics;
+import com.example.buylap.model.MostViewed;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.Data;

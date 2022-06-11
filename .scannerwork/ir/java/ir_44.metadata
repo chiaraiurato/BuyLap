@@ -1,1 +1,1 @@
-com.example.buylap.Category#setSubtitles(Ljava/lang/String;)V
+com.example.buylap.model.Category#setSubtitles(Ljava/lang/String;)V
