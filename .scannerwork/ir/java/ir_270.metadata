@@ -1,1 +1,1 @@
-com.example.buylap.model.users.ModelUser#setPassword(Ljava/lang/String;)V
+com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

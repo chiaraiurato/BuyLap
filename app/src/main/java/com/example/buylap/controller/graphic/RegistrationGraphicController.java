@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.buylap.exceptions.IvaLengthException;
 import com.example.buylap.view.SelectTypeAccountActivity;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
@@ -72,13 +73,19 @@ public class RegistrationGraphicController {
         beanSeller.setUsername(registrationSellerActivity.sendUsername());
         beanSeller.setEmail(registrationSellerActivity.sendEmail());
         beanSeller.setPassword(registrationSellerActivity.sendPassword());
-        beanSeller.setIva(registrationSellerActivity.sendIva());
-        Boolean result = registrationController.createSeller(beanSeller);
-        if (Boolean.TRUE.equals(result)) {
-            Log.d("DATABASE", "SignUp success for Seller");
+        try {
+            beanSeller.setIva(registrationSellerActivity.sendIva());
+            Boolean result = registrationController.createSeller(beanSeller);
+            if (Boolean.TRUE.equals(result)) {
+                Log.d("DATABASE", "SignUp success for Seller");
+            }
+            sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            gotoNavigationSeller();
+
+        } catch (IvaLengthException e) {
+            Toast.makeText(registrationActivity, "Not a VAT number", Toast.LENGTH_SHORT).show();
         }
-        sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
-        gotoNavigationSeller();
+
     }
     public boolean verifyFields(){
         if (TextUtils.isEmpty(registrationActivity.sendUsername()) || TextUtils.isEmpty(registrationActivity.sendEmail())

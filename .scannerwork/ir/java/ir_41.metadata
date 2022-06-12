@@ -1,1 +1,4 @@
-com.example.buylap.model.Category#getUrl()Ljava/lang/String;
+com.example.buylap.controller.applicative.GetCashbackController#updatePoints(Lcom/example/buylap/bean/BeanPoints;Lcom/example/buylap/bean/BeanSession;)Lcom/example/buylap/bean/BeanPoints;
+com.example.buylap.database.dao.DAOpoints#updatePoints(Lcom/example/buylap/model/ModelPoints;Ljava/lang/String;)Z
+com.example.buylap.model.ModelPoints#instance-init#
+com.example.buylap.model.ModelPoints#<init>(I)V

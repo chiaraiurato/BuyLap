@@ -1,2 +1,1 @@
-com.example.buylap.view.AddCardActivity#shouldIncrementOrDecrement(IZ)Z
-com.example.buylap.view.AddCardActivity#isAtSpaceDelimiter(I)Z
+com.example.buylap.bean.BeanPoints#setPoints(I)V

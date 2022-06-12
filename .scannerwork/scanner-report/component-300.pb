@@ -1,1 +1,1 @@
-¬ 2xmlXhr*app/src/main/res/values-w1240dp/dimens.xml
+¬ 2xmlX7hr&app/src/main/res/layout/viewholder.xml

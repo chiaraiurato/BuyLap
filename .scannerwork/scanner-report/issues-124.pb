@@ -1,11 +1,7 @@
-Ê
-javaS2259I"NullPointerException" will be thrown when invoking method "printLine()". 2DD :ã
-1|JJ  3#Implies 'columnWidths' can be null.
-G|II% 19Implies 'columnWidths' has the same value as 'maxWidths'.
-5|DD #''maxWidths' is passed to 'printLine()'.
-.|,- U Implies 'maxWidths' can be null.S
-javaS1069Replace this use of System.out or System.err by a logger. 2QQ S
-javaS1069Replace this use of System.out or System.err by a logger. 2SS S
-javaS1069Replace this use of System.out or System.err by a logger. 2`` S
-javaS1069Replace this use of System.out or System.err by a logger. 2ff S
-javaS1069Replace this use of System.out or System.err by a logger. 2ii 
+Ÿ
+javaS1130ƒRemove the declaration of thrown exception 'com.example.buylap.exceptions.DAOException', as it cannot be thrown from method's body. 2B N˜
+javaS125<This block of commented-out lines of code should be removed. 2## Y:
+|$$ *Code:
+|%% 3Code:
+|&& 	CodeX
+javaS1068=Remove this unused "insertComponentController" private field. 2& ?

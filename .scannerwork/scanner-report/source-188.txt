@@ -1,25 +1,38 @@
-package test;
+package com.example.buylap.utils;
 
+import com.example.buylap.model.Analytics;
+import com.example.buylap.model.MostViewed;
+import com.example.buylap.model.QuizList;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.ArrayList;
+import java.util.List;
 
-public class TestSelenium {
+public class Data {
 
-    public static void main(String[] args) {
-
+    public List<QuizList> sendQuestion() {
+        ArrayList<QuizList> listQuest;
+        listQuest = new ArrayList<>();
+        listQuest.add(new QuizList("Who are you?", "Beginner", "Nerd", "Don't know"));
+        listQuest.add(new QuizList("What is your profession ?", "Student", "Worker", "Business man"));
+        listQuest.add(new QuizList("Click your category", "Gaming", "Office use", "Home use"));
+        return listQuest;
+        }
+    public List<MostViewed> sendMostView(){
+        List<MostViewed> mostViewed;
+        mostViewed = new ArrayList<>();
+        mostViewed.add(new MostViewed("AMD", "Ryzen 9 5900X", "cpu"));
+        mostViewed.add(new MostViewed("NVIDIA", "RTX 3060", "videocard"));
+        mostViewed.add(new MostViewed("CORSAIR", "DDR4 32GB", "ram"));
+        mostViewed.add(new MostViewed("MSI B550-A PRO", "ATX DDR4 LAN USB 3.2 Gen2 Front Type-C HDMI DisplayPort", "motherboard96"));
+        return mostViewed;
     }
-    public WebElement openDriver(){
-        System.setProperty("webdriver.chrome.driver", "src/androidTest/java/driver/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.cpubenchmark.net/cpu_list.php");
-        driver.findElement(By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[2]")).click();
-        driver.findElement(By.xpath("//*[@id=\"autocomplete-list\"]")).sendKeys("I7-11700K");
-        driver.findElement(By.xpath("//*[@id=\"main_content\"]/div[3]/div[1]/div/form/input[2]")).click();
-        return driver.findElement(By.xpath("//*[@id=\"cpu3896\"]/td[1]/a"));
+    public List<Analytics> sendAnalytics(){
+        List<Analytics> analytics = new ArrayList<>();
+        analytics.add(new Analytics("statistics"));
+        analytics.add(new Analytics("chart"));
+        analytics.add(new Analytics("booklet"));
+        analytics.add(new Analytics("paidsearch"));
+        return analytics;
     }
-
 
 }

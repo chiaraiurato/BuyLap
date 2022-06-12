@@ -1,1 +1,1 @@
-com.example.buylap.view.TakeQuizActivity#finished(Lcom/example/buylap/bean/BeanAnswer;)V
+com.example.buylap.model.QuizList#instance-init#

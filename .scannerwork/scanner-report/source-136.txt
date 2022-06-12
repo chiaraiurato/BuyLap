@@ -1,21 +1,26 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.cli.view;
 
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.database.dao.DAObuild;
+import com.example.buylap.cli.graphic_controller.CashbackGraphicController;
+import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
-import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.util.zip.DataFormatException;
 
-public class InsertComponentController {
-    public Boolean saveComponent(BeanBuild beanBuild, BeanSession beanSession) throws DAOException {
-        try {
-            DAObuild.insertComponent(beanBuild, beanSession);
-            return true;
+public class CreditCard {
+    private CreditCard(){
+        //View Credit Card
+    }
+    public static void save(String input) throws BeanException, DAOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
+        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
+        cashbackGraphicController.saveCreditCard(input);
+    }
+    public static void delete() throws BeanException, DAOException {
 
-        } catch(FileNotFoundException e){
-            e.printStackTrace();
-            throw new DAOException("error saving component");
-        }
+        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
+        cashbackGraphicController.deleteCreditCard();
+        System.out.println("Credit card deleted");
     }
 }

@@ -1,1 +1,2 @@
-com.example.buylap.adapterGUI.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/CategoryAdapter$OnCatListener;)V
+com.example.buylap.controller.graphic.QuizResultGraphicController#openErrorDialog()V
+null

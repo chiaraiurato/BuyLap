@@ -1,1 +1,2 @@
-com.example.buylap.database.query.QueryBuild#instance-init#
+com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V
+java.lang.String#valueOf(I)Ljava/lang/String;

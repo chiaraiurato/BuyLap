@@ -1,3 +1,1 @@
-com.example.buylap.controller.graphic.HomeGraphicController#<init>(Lcom/example/buylap/view/HomeFragment;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.bean.BeanRequestBuild#setKeyword(Lcom/example/buylap/bean/BeanAnswer;)V

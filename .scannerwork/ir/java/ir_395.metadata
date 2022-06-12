@@ -1,3 +1,1 @@
-com.example.buylap.cli.graphic_controller.SignUpGraphicController#<init>()V
-com.example.buylap.controller.applicative.RegistrationController#<init>()V
-com.example.buylap.controller.applicative.RegistrationController#instance-init#
+com.example.buylap.cli.utils.CommandLineTable#addRow([Ljava/lang/String;)V

@@ -1,36 +1,70 @@
-<resources>
-    <string name="app_name">Buylap</string>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202442"
+    tools:context=".view.GuestFragment">
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="update_balance_account">Update balance account</string>
-    <string name="result_of_quiz">Result of quiz</string>
-    <string name="build">BUILD</string>
-    <string name="card">Card</string>
-    <string name="_0000">**** **** **** 0000</string>
-    <string name="_00_00">00/00</string>
-    <string name="account_balance">Account Balance</string>
-    <string name="_10_00">$ 10,00</string>
-    <string name="cashout">Cashout</string>
-    <string name="mastercard">Mastercard</string>
-    <string name="addpayment">addPayment</string>
-    <string name="_0_00" />
-    <string name="title_activity_budget">BudgetActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="_0000_00">0000-00</string>
-    <string name="sign_in">Sign In</string>
-    <string name="choose_category">Choose category</string>
-    <string name="Cpu">Cpu</string>
-    <string name="Ram">Ram</string>
-    <string name="Motherboard">Motherboard</string>
-    <string name="Video_card">Video card</string>
-    <string name="Power_supply">Power supply</string>
-    <string name="Ssd">Ssd</string>
-</resources>
+    <TextView
+        android:id="@+id/MyaccountGuest"
+        android:layout_width="222dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="My account"
+        android:textColor="#FFFFFF"
+
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/signoutGuest"
+        android:layout_width="330dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="96dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Exit"
+        android:textAllCaps="false"
+        android:textColor="#1F2341"
+        android:textSize="24sp"
+        android:background="@drawable/bg_greenbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="88dp"
+        android:src="@drawable/icons8_cash_in_hand_96"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyaccountGuest" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="330dp"
+        android:layout_height="63dp"
+        android:checked="false"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Register an account and get cashback!"
+        android:textColor="#535986"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/signoutGuest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,1 +1,1 @@
-com.example.buylap.controller.applicative.TakeQuizController#instance-init#
+com.example.buylap.adapter.GenericUser#gotoMyHomepage(Lcom/example/buylap/adapter/Homepage;)LFragment;

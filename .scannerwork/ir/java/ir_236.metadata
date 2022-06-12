@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)V
+com.example.buylap.view.InsertComponentActivity#sendUrl()Ljava/lang/String;

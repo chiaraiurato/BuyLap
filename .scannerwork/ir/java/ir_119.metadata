@@ -1,1 +1,3 @@
+com.example.buylap.utils.ContextHolder#getInstance()Lcom/example/buylap/utils/ContextHolder;
+com.example.buylap.utils.ContextHolder#instance-init#
 com.example.buylap.utils.ContextHolder#<init>()V

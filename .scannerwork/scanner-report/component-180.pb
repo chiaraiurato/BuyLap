@@ -1,1 +1,1 @@
-´ 2javaXNhr<app/src/main/java/com/example/buylap/view/LoginActivity.java
+´ 2javaXhr;app/src/main/java/com/example/buylap/model/ModelPoints.java

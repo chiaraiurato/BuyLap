@@ -1,3 +1,1 @@
-com.example.buylap.view.SettingFragment#onCreateView(LLayoutInflater;LViewGroup;LBundle;)LView;
-com.example.buylap.controller.graphic.SettingFragmentGraphicController#<init>(Lcom/example/buylap/view/UserFragment;)V
-com.example.buylap.controller.graphic.SettingFragmentGraphicController#instance-init#
+com.example.buylap.cli.view.SignUp#instance-init#

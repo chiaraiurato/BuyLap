@@ -1,5 +1,7 @@
 package com.example.buylap.cli.view;
 
+import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -21,10 +23,14 @@ public class SignUp {
         //View SignUp
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main(String input) throws IOException, DAOException, BeanException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException, EmailVerifyException {
+    public static void main(String input){
 
         SignUpGraphicController signUpGraphicController = new SignUpGraphicController();
-        signUpGraphicController.parseInput(input);
+        try {
+            signUpGraphicController.parseInput(input);
+        } catch (BeanException e) {
+            System.out.println(BEAN_EXCEPTION);
+        }
 
 
     }

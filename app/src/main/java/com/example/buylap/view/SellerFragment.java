@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.buylap.adapterGUI.AnalyticsAdapter;
+import com.example.buylap.adaptergui.AnalyticsAdapter;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.R;

@@ -1,31 +1,33 @@
-package com.example.buylap.bean;
+package com.example.buylap.adapter;
+import com.example.buylap.utils.SessionManager;
 
-public class BeanAnswer {
-    private String answer1;
-    private String answer2;
-    private String answer3;
+import com.example.buylap.view.NavigationActivity;
 
-    public String getAnswer1() {
-        return answer1;
+
+import java.util.Map;
+import java.util.Objects;
+
+public class HomepageAdaptee {
+
+    private SessionManager sessionManager;
+    private TypeAccount type;
+    private Map<String, String> user;
+
+    public HomepageAdaptee(NavigationActivity navigationActivity){
+        this.sessionManager = new SessionManager(navigationActivity.getApplicationContext());
+        this.user = sessionManager.getUserDetails();
+
+        if(Objects.equals(user.get("type"), "USER")){
+            type=TypeAccount.USER;
+        }else if(Objects.equals(user.get("type"), "SELLER")){
+            type= TypeAccount.SELLER;
+        }else if(Objects.equals(user.get("type"), "GUEST")){
+            type = TypeAccount.GUEST;
+        }
     }
 
-    public void setAnswer1(String answer1) {
-        this.answer1 = answer1;
+    public TypeAccount getTypeAccount() {
+        return this.type;
     }
 
-    public String getAnswer2() {
-        return answer2;
-    }
-
-    public void setAnswer2(String answer2) {
-        this.answer2 = answer2;
-    }
-
-    public String getAnswer3() {
-        return answer3;
-    }
-
-    public void setAnswer3(String answer3) {
-        this.answer3 = answer3;
-    }
 }

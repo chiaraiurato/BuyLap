@@ -1,1 +1,1 @@
-¹ 2javaXHhr=app/src/main/java/com/example/buylap/view/SellerFragment.java
+¹ 2javaXLhr?app/src/main/java/com/example/buylap/model/users/ModelUser.java

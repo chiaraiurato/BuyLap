@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.SignIn#<init>()V
+com.example.buylap.model.users.ModelUser#setEmail(Ljava/lang/String;)V

@@ -1,100 +1,33 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.cli.view;
+import android.os.Build;
 
-import android.content.Intent;
-import android.util.Log;
-import android.widget.Toast;
+import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.controller.applicative.GetCashbackController;
+import com.example.buylap.cli.graphic_controller.SignInGraphicController;
+
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.AddCardActivity;
-import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.LoginActivity;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
-import java.util.Map;
-
-
-public class CashbackGraphicController {
-
-    AddCardActivity addCardActivity;
-    CashbackFragment cashbackFragment;
-    GetCashbackController getCashbackController;
-    SessionManager sessionManager;
-    Map<String, String> user;
-    private static BeanSession beanSession= new BeanSession();
-
-    public CashbackGraphicController(AddCardActivity addCardActivity){
-        this.addCardActivity = addCardActivity;
-        this.getCashbackController = new GetCashbackController();
-    }
-    public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
-        this.cashbackFragment= cashbackFragment;
-        this.getCashbackController = new GetCashbackController();
-        this.sessionManager = new SessionManager(cashbackFragment.getContext());
-        this.user = sessionManager.getUserDetails();
-        if(user.get("user") != null) {
-            beanSession.setUsername(user.get("user"));
-        }
+public class SignIn {
+    private SignIn(){
+        //View SignIn
     }
 
-    public void saveCreditCard() throws DAOException, BeanException {
-        BeanCard beanCard = new BeanCard();
-        beanCard.setCardHolderName(addCardActivity.sendName());
-        beanCard.setCardNumber(addCardActivity.sendNumber());
-        beanCard.setData(addCardActivity.sendDate());
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main(String input) throws IOException, DAOException, BeanException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
 
-        Boolean result = getCashbackController.createCard(beanCard, beanSession);
-        if (Boolean.TRUE.equals(result)) {
-            Log.d("DATABASE", "Credit card saved");
-        }
-    }
-    public void uploadCreditCard() throws DAOException{
+        SignInGraphicController signInGraphicController = new SignInGraphicController();
 
-        BeanCard beanCard= getCashbackController.uploadCreditCard(beanSession);
+        signInGraphicController.parseInput(input);
 
-        cashbackFragment.setCreditCard(beanCard);
-
-    }
-    public void uploadPoints() throws SQLException, IOException {
-        int points = getCashbackController.uploadPoints(beanSession);
-        cashbackFragment.setPoints(points);
-    }
-    public boolean verifyLengthOfCreditCard(){
-        if(addCardActivity.sendNumber().length() > 20) {
-            Toast.makeText(addCardActivity, "Length of credit card incorrect", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    return true;
-    }
-
-    public void deleteCreditCard() throws DAOException {
-
-        getCashbackController.deleteCreditCard(beanSession);
-        cashbackFragment.deleteCreditCard();
     }
 
 
-    public void cashOutPoints() throws SQLException, IOException {
 
-        getCashbackController.deletePoints(beanSession);
-        cashbackFragment.cashOutPoints();
-
-    }
-
-    public void gotoAddCardActivity() {
-        if(beanSession.getUsername().equals("guest"))
-        {
-            Toast.makeText(cashbackFragment.getContext(), "You need to be logged! ", Toast.LENGTH_SHORT).show();
-        }else {
-            Intent intent = new Intent(cashbackFragment.getContext(), AddCardActivity.class);
-            cashbackFragment.startActivity(intent);
-        }
-    }
 }

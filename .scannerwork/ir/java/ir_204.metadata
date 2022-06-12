@@ -1,1 +1,2 @@
-com.example.buylap.view.InsertComponentActivity#setRam()V
+com.example.buylap.cli.graphic_controller.HomepageGraphicController#<init>()V
+com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;

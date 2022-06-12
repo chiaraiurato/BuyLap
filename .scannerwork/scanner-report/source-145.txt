@@ -1,79 +1,41 @@
-package com.example.buylap.controller.graphic;
+package com.example.buylap.controller.applicative;
 
-import android.content.Intent;
-import android.view.MenuItem;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.database.dao.DAOseller;
+import com.example.buylap.database.dao.DAOuser;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.EmailVerifyException;
+import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
+import java.io.IOException;
+import java.sql.SQLException;
 
-import androidx.fragment.app.Fragment;
-import com.example.buylap.R;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.NotificationFragment;
-import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.NavigationActivity;
-import com.example.buylap.view.SellerFragment;
-import com.example.buylap.view.SettingFragment;
+public class LoginController {
 
-import java.util.Map;
-import java.util.Objects;
 
-public class NavigationGraphicController {
+    public ModelUser searchUser(BeanUser beanUser) throws DAOException{ ;
 
-    private NavigationActivity navigationActivity;
-    private SessionManager sessionManager;
-    private Map<String, String> user;
+        try {
+            ModelUser modelUser = new ModelUser(beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword());
+            modelUser = DAOuser.searchUser(modelUser);
+            return modelUser;
 
-    public NavigationGraphicController(NavigationActivity navigationActivity) {
-        this.navigationActivity = navigationActivity;
-        this.sessionManager = new SessionManager(navigationActivity.getApplicationContext());
-        this.user = sessionManager.getUserDetails();
-    }
-
-    public void checkLogin(){
-
-        if(!sessionManager.isLoggedIn()){
-            Intent intent = new Intent(navigationActivity.getApplicationContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            navigationActivity.startActivity(intent);
+        } catch (SQLException | IOException e) {
+            throw new DAOException("error on signIn for user");
         }
     }
-    public Fragment selectTypeHomepage(){
-        Fragment fragment;
 
-        if(Objects.equals(user.get("type"), "USER")){
+    public ModelSeller searchSeller(BeanSeller beanSeller) throws DAOException {
 
-            fragment = new HomeFragment();
-        }else if(Objects.equals(user.get("type"), "SELLER")){
-            fragment = new SellerFragment();
-        }else{
-            fragment = new HomeFragment();
+        try {
+            ModelSeller modelSeller = new ModelSeller(beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(), beanSeller.getIva());
+            modelSeller = DAOseller.searchSeller(modelSeller);
+            return modelSeller;
+
+        } catch (SQLException | IOException e) {
+            throw new DAOException("error on signIn for seller");
         }
-        return fragment;
-
-    }
-    public Fragment switchPage(MenuItem item){
-
-        Fragment fragment = null;
-        switch (item.getItemId()){
-            case R.id.nav_home:
-                if(user.get("type").equals("USER") || user.get("type").equals("GUEST")){
-                    fragment = new HomeFragment();
-                }else{
-                    fragment = new SellerFragment();
-                }
-                break;
-            case R.id.nav_cashback:
-                fragment = new CashbackFragment();
-                break;
-            case R.id.nav_like:
-                fragment= new LikeFragment();
-                break;
-            case R.id.nav_user:
-                fragment= new UserFragment();
-                break;
-        }
-        return fragment;
-
     }
 }
+

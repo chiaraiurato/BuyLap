@@ -1,1 +1,1 @@
-com.example.buylap.view.BudgetActivity#onCreate(LBundle;)V
+com.example.buylap.bean.BeanUser#getEmail()Ljava/lang/String;

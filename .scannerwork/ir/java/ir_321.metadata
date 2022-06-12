@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanCard#instance-init#
+com.example.buylap.model.users.ModelUser#setCreditCard(Lcom/example/buylap/model/ModelCreditCard;)V

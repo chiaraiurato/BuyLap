@@ -1,72 +1,76 @@
-package com.example.buylap.view;
+package com.example.buylap.model.users;
 
-import android.os.Bundle;
+import com.example.buylap.model.ModelCreditCard;
+import com.example.buylap.model.ModelPoints;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+public class ModelUser{
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+    private String username;
+    private String email;
+    private String password;
+    private ModelCreditCard creditCard;
+    private ModelPoints modelPoints;
 
-import com.example.buylap.model.Analytics;
-import com.example.buylap.adapterGUI.AnalyticsAdapter;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.controller.graphic.HomeGraphicController;
-import com.example.buylap.R;
-
-import java.util.ArrayList;
-
-public class SellerFragment extends Fragment {
-
-    private TextView accountName;
-
-    public SellerFragment() {
-        //Singleton
+    public ModelUser(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.creditCard = new ModelCreditCard("","0000 0000 0000 0000", "00-00" );
+        this.modelPoints = new ModelPoints(0);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
-        View view= inflater.inflate(R.layout.fragment_seller, container, false);
-        accountName = view.findViewById(R.id.businessAccount);
-        Button takeQuiz = view.findViewById(R.id.takeQuiz);
-        takeQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                homeGraphicController.goToTakeQuiz();
-            }
-        });
-        homeGraphicController.initializeSessionForSeller(view);
-        Button insertComponent = view.findViewById(R.id.insertComp);
-        insertComponent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                homeGraphicController.gotoInsertComponent();
-            }
-        });
-        RecyclerView.Adapter adapter = new AnalyticsAdapter(homeGraphicController.setAdapterAnalytics());
-
-        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-
-        recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.setAdapter(adapter);
-        return view;
+    public ModelUser(String username, String email, String password, ModelCreditCard creditCard) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.creditCard = creditCard;
     }
-    public void setSeller(BeanSeller beanSeller, View view){
-        accountName = view.findViewById(R.id.businessAccount);
+    public ModelUser(String username, String email, String password, ModelCreditCard creditCard, ModelPoints modelPoints) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.creditCard = creditCard;
+        this.modelPoints = modelPoints;
+    }
+    public String getEmail() {
+        return email;
+    }
 
-        if(beanSeller.getUsername() != null) {
-            String username = beanSeller.getUsername() + ",";
-            accountName.setText(username);
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public ModelCreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(ModelCreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public ModelPoints getModelPoints() {
+        return modelPoints;
+    }
+
+    public void setModelPoints(ModelPoints modelPoints) {
+        this.modelPoints = modelPoints;
     }
 }

@@ -1,1 +1,1 @@
-¥ 2xmlXhr"app/src/main/res/values/colors.xml
+¥ 2xmlXOhr(app/src/main/res/layout/error_dialog.xml

@@ -1,1 +1,2 @@
-com.example.buylap.view.InsertComponentActivity#setPowerSupply()V
+com.example.buylap.cli.graphic_controller.HomepageGraphicController#showCommands()V
+java.lang.String#equals(Ljava/lang/Object;)Z

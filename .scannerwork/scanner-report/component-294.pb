@@ -1,1 +1,1 @@
-¦ 2xmlXhr2app/src/main/res/values/ic_launcher_background.xml
+¦ 2xmlXÇhr-app/src/main/res/layout/fragment_cashback.xml

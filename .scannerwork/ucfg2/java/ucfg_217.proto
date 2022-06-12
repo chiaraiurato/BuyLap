@@ -1,55 +1,9 @@
 
-Šcom.example.buylap.controller.applicative.LoginController#searchUser(Lcom/example/buylap/bean/BeanUser;)Lcom/example/buylap/bean/BeanUser;y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java ("7*¬
-3y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java ("«
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (.
-,
-beanUser com.example.buylap.bean.BeanUser*¸
-4y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (3²¯
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (3
-
-%2void">com.example.buylap.bean.BeanUser#setEmail(Ljava/lang/String;)V*.
-,
-beanUser com.example.buylap.bean.BeanUser*
-
-%1java.lang.String2setEmail(Ljava/lang/String;)*
-3*˜
-5y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (4í
-ê
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (45
-	modelUser(com.example.buylap.model.users.ModelUser"__id*0
-.
-%0(com.example.buylap.model.users.ModelUser¢Ÿ
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (2
-%1java.lang.String"Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;*7
-5
-	modelUser(com.example.buylap.model.users.ModelUser2
-getEmail()*
-4*”
-6y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (Ž
-‹
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (4.
-%0(com.example.buylap.model.users.ModelUser"€com.example.buylap.database.dao.DAOuser#searchUser(Lcom/example/buylap/bean/BeanUser;)Lcom/example/buylap/model/users/ModelUser;*+")
-'com.example.buylap.database.dao.DAOuser*.
-,
-beanUser com.example.buylap.bean.BeanUser*
-5*É
-7y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (Ã
-À
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (5
-	modelUser(com.example.buylap.model.users.ModelUser"__id*
-""*
-6:,
-beanUser com.example.buylap.bean.BeanUserB=;
-9com.example.buylap.controller.applicative.LoginController
+Pcom.example.buylap.view.RegistrationSellerActivity#sendEmail()Ljava/lang/String;r
+hC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java> >("1*õ
+1r
+hC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java? ?("|
+r
+hC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java? ?(*
+""B64
+2com.example.buylap.view.RegistrationSellerActivity

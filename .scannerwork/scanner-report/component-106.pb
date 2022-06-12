@@ -1,1 +1,1 @@
-j 2javaX8hr:app/src/main/java/com/example/buylap/AnalyticsAdapter.java
+j 2javaXhr:app/src/main/java/com/example/buylap/adapter/Homepage.java

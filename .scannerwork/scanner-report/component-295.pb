@@ -1,1 +1,1 @@
-§ 2xmlX$hr#app/src/main/res/values/strings.xml
+§ 2xmlXFhr*app/src/main/res/layout/fragment_guest.xml

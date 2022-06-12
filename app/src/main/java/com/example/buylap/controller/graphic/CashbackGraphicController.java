@@ -71,12 +71,12 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
     public void uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
 
-        BeanCard beanCard = getCashbackController.uploadCreditCard(beanSession);
+        beanCard = getCashbackController.uploadCreditCard(beanSession);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
-    public void uploadPoints() throws SQLException, IOException {
+    public void uploadPoints() throws SQLException{
 
         beanPoints = getCashbackController.uploadPoints(beanSession);
         cashbackFragment.setPoints(beanPoints);

@@ -1,82 +1,21 @@
 
-Gcom.example.buylap.utils.SessionManager#getUserDetails()Ljava/util/Map;g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java, ,(-"1*ç
-1g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java-# -(2òï
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java-' -(0
-%0java.util.HashMap"java.util.HashMap™
-ß
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java-# -(2
-%1"java.util.HashMap#<init>()V*
-
-%0java.util.HashMap§
-°
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java- -(3
-userjava.util.Map"__id*
-
-%0java.util.HashMapí
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java. .(
-%2java.lang.String"__id*
-""í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java.. .(:
-%3java.lang.String"__id*
-""∑
-¥
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java. .(B
-%4"__mapSet*
-
-userjava.util.Map*
-
-%2java.lang.String*
-""í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/ /(
-%5java.lang.String"__id*
-""í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/. /(:
-%6java.lang.String"__id*
-""∑
-¥
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/ /(B
-%7"__mapSet*
-
-userjava.util.Map*
-
-%5java.lang.String*
-""í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0 0(
-%8java.lang.String"__id*
-""í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0* 0(2
-%9java.lang.String"__id*
-""∏
-µ
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0 0(:
-%10"__mapSet*
-
-userjava.util.Map*
-
-%8java.lang.String*
-"""Ç
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java1 1(
-
-userjava.util.MapB+)
-'com.example.buylap.utils.SessionManager
+=com.example.buylap.adapterGUI.CategoryAdapter#getItemCount()Im
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java9 9("1*ı
+1m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(œ
+Ã
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(
+%0java.util.List"__id*?*=/
+-com.example.buylap.adapterGUI.CategoryAdapter"
+
+categoryµ≤
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"w
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(
+""B1/
+-com.example.buylap.adapterGUI.CategoryAdapter

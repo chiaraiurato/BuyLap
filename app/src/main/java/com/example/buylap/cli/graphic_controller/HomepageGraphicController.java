@@ -27,29 +27,25 @@ import java.util.StringTokenizer;
 import java.util.zip.DataFormatException;
 
 public class HomepageGraphicController {
+
     private static final String ERROR_MSG = "Command error! Digit 'show' for usage";
     private static final String SHOW = "show";
     private static final String TAKE_QUIZ = "take_quiz";
     private static final String EXIT = "exit";
-    private Map<String, String> user;
-    private static BeanSession beanSession = new BeanSession();
+
+    private BeanSession beanSession;
 
     public HomepageGraphicController() throws BeanException {
 
-        this.user = SessionManagerCLI.getUserDetails();
-        if(user.get("user") != null) {
-            beanSession.setUsername(user.get("user"));
-        }
+        beanSession = SessionManagerCLI.getUserDetails();
     }
     public String initializeSessionCLI() {
-            return user.get("user");
-
+            return beanSession.getUsername();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void executeCommand(String input) throws IOException, DAOException, BeanException, SQLException,LengthBeanCardException, ExpiredDateCardException, ParseException {
+    public void executeCommand(String input) throws IOException {
 
-        if(Objects.equals(user.get("type"), "USER")) {
-
+        if(beanSession.getType().equals("user")) {
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -64,13 +60,10 @@ public class HomepageGraphicController {
                     Cashback.main();
                     HomepageUser.run();
                     break;
-                    /*
                 case "cash_out":
                     Cashback.cashOut();
                     HomepageUser.run();
                     break;
-
-                     */
                 case "add_card":
                     CreditCard.save(input);
                     HomepageUser.run();
@@ -86,7 +79,7 @@ public class HomepageGraphicController {
                     System.out.println(ERROR_MSG);
                     HomepageUser.run();
             }
-        }else if(Objects.equals(user.get("type"), "SELLER")){
+        }else if(beanSession.getType().equals("seller")){
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -106,11 +99,8 @@ public class HomepageGraphicController {
                     HomepageSeller.run();
                     break;
                 case "cash_out":
-                    /*
                     Cashback.cashOut();
                     HomepageSeller.run();
-
-                     */
                     break;
                 case "add_card":
                     CreditCard.save(input);
@@ -128,7 +118,7 @@ public class HomepageGraphicController {
                     HomepageSeller.run();
 
             }
-        }else if(Objects.equals(user.get("type"), "GUEST")){
+        }else if(beanSession.getType().equals("guest")){
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -149,6 +139,12 @@ public class HomepageGraphicController {
     }
 }
     public static void showCommands(){
+        BeanSession beanSession= null;
+        try {
+            beanSession = SessionManagerCLI.getUserDetails();
+        } catch (BeanException e) {
+            System.out.println("BeanException");
+        }
         if(beanSession.getUsername().equals("guest")) {
             System.out.println(
                             "⚫ take_quiz \n" +

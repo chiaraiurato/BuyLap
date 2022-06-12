@@ -1,1 +1,1 @@
-® 2javaXshr>app/src/main/java/com/example/buylap/view/AddCardActivity.java
+® 2javaXhrLapp/src/main/java/com/example/buylap/exceptions/LengthBeanCardException.java

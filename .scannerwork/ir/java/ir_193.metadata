@@ -1,1 +1,1 @@
-com.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;
+com.example.buylap.database.dao.DAOseller#instance-init#

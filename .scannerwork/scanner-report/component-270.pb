@@ -1,1 +1,1 @@
-Ž 2xmlX~hr+app/src/main/res/layout/fragment_seller.xml
+Ž 2xmlX#hr8app/src/main/res/drawable-v24/ic_launcher_foreground.xml

@@ -1,1 +1,1 @@
-n 2javaXhr8app/src/main/java/com/example/buylap/bean/BeanGuest.java
+n 2javaX9hrEapp/src/main/java/com/example/buylap/adapterGUI/AnalyticsAdapter.java

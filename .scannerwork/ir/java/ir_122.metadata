@@ -1,1 +1,1 @@
-com.example.buylap.utils.ContextHolder#setContext(LContext;)V
+com.example.buylap.cli.graphic_controller.AddComponentGraphicController#instance-init#

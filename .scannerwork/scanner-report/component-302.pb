@@ -1,1 +1,1 @@
-® 2javaXhr9app/src/test/java/com/example/buylap/ExampleUnitTest.java
+® 2xmlXhr-app/src/main/res/layout/viewholder_seller.xml

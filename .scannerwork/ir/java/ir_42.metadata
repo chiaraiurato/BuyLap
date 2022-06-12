@@ -1,1 +1,5 @@
-com.example.buylap.model.Category#setUrl(Ljava/lang/String;)V
+com.example.buylap.controller.applicative.GetCashbackController#sendMoneyToCreditCard(Lcom/example/buylap/bean/BeanCard;)V
+com.example.buylap.bean.BeanCashback#<init>()V
+com.example.buylap.boundary.BoundaryPayment#instance-init#
+com.example.buylap.boundary.BoundaryPayment#<init>()V
+com.example.buylap.bean.BeanCashback#instance-init#

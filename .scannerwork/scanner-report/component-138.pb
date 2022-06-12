@@ -1,1 +1,1 @@
-Š 2javaX(hrWapp/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java
+Š 2javaX@hrAapp/src/main/java/com/example/buylap/cli/view/HomepageSeller.java

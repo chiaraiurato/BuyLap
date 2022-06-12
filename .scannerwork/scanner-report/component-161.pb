@@ -1,1 +1,1 @@
-¡ 2javaX.hr:app/src/main/java/com/example/buylap/model/ModelBuild.java
+¡ 2javaXRhr@app/src/main/java/com/example/buylap/database/dao/DAOpoints.java

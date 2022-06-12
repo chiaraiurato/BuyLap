@@ -2,7 +2,6 @@ package com.example.buylap.controller.applicative;
 
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.model.ModelBuild;

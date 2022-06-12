@@ -1,109 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#202442"
-    tools:context=".view.AddCardActivity">
-    <TextView
-        android:id="@+id/add_payment"
-        android:layout_width="313dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="44dp"
-        android:inputType="date"
-        android:layout_marginTop="44dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Add payment"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="line"
+           >
+            <stroke
+                android:color="@color/bluebutton"
+                android:width="8dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape
+                android:shape="line">
+                <stroke
+                    android:color="@color/green"
+                    android:width="8dp"/>
+            </shape>
+        </clip>
+    </item>
 
-    <EditText
-        android:id="@+id/titles"
-        android:layout_width="329dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/edit_background"
-        android:backgroundTint="#282C4C"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:fontFamily="@font/zcool_regular"
-        android:hint="Cardholder name"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:textColor="#535986"
-        android:textColorHint="#535986"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_payment"
-        tools:ignore="TextContrastCheck" />
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape
+                android:shape="line">
+                <stroke
+                    android:color="@color/green"
+                    android:width="8dp"/>
+            </shape>
+        </clip>
+    </item>
 
-    <EditText
-        android:id="@+id/subtitles"
-        android:layout_width="329dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/edit_background"
-        android:backgroundTint="#282C4C"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:drawableLeft="@drawable/ic_baseline_numbers_24"
-        android:fontFamily="@font/zcool_regular"
-        android:hint="Card number"
-        android:inputType="phone"
-        android:paddingLeft="20dp"
-        android:textColor="#535986"
-        android:textColorHint="#535986"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titles"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/save_item"
-        android:layout_width="330dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="112dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Save card"
-        android:textAllCaps="false"
-
-        android:textColor="@color/bluebutton"
-        android:textSize="24sp"
-        android:background="@drawable/bg_greenbutton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="326dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/edit_background"
-        android:backgroundTint="#282C4C"
-        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:fontFamily="@font/zcool_regular"
-        android:hint="yyyy-mm"
-        android:inputType="phone"
-        android:paddingLeft="20dp"
-        android:textColor="#535986"
-        android:textColorHint="#535986"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/save_item"
-        app:layout_constraintStart_toStartOf="@+id/subtitles" />
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layer-list>

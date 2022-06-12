@@ -25,10 +25,10 @@ import java.util.StringTokenizer;
 
 public class MainGraphicController {
 
-    public static final boolean CLI = false;
+    public static final boolean CLI = true;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String s) throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException, EmailVerifyException {
+    public void parseInput(String s){
         StringTokenizer st = new StringTokenizer(s);
         String command = st.nextToken();
 
@@ -54,8 +54,8 @@ public class MainGraphicController {
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void setGuestAccount() throws DAOException, SQLException, BeanException, IOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
-        SessionManagerCLI.createLoginSession("guest","guest", "GUEST");
+    public void setGuestAccount(){
+        SessionManagerCLI.createLoginSession("guest","guest", "guest");
         HomepageUser.main();
     }
 }

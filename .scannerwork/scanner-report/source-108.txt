@@ -1,50 +1,48 @@
-package com.example.buylap.bean;
+package com.example.buylap.adapter;
 
-public class BeanBuild {
+import androidx.fragment.app.Fragment;
 
-    private String type;
-    private String title;
-    private String subtitles;
-    private String urlEbay;
-    private float price;
+import com.example.buylap.view.GuestFragment;
+import com.example.buylap.view.HomeFragment;
+import com.example.buylap.view.SellerFragment;
+import com.example.buylap.view.UserFragment;
 
-    public float getPrice() {
-        return price;
+
+public class HomepageAdapter implements Homepage{
+
+    private HomepageAdaptee homepageAdaptee;
+
+    public HomepageAdapter(HomepageAdaptee homepageAdaptee){
+        this.homepageAdaptee = homepageAdaptee;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    @Override
+    public Fragment switchMainPage() {
+        Fragment fragment = null;
+        TypeAccount typeAccount = homepageAdaptee.getTypeAccount();
+        if(typeAccount == TypeAccount.USER){
+            fragment = new HomeFragment();
+        }else if(typeAccount == TypeAccount.SELLER){
+            fragment = new SellerFragment();
+        }else if(typeAccount == TypeAccount.GUEST){
+            fragment = new HomeFragment();
+        }
+        return fragment;
     }
 
-    public String getType() {
-        return type;
+    @Override
+    public Fragment switchSettingPage() {
+        Fragment fragment = null;
+        TypeAccount typeAccount = homepageAdaptee.getTypeAccount();
+        if(typeAccount == TypeAccount.USER){
+            fragment = new UserFragment();
+        }else if(typeAccount == TypeAccount.SELLER){
+            fragment = new UserFragment();
+        }else if(typeAccount == TypeAccount.GUEST){
+            fragment = new GuestFragment();
+        }
+        return fragment;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getSubtitles() {
-        return subtitles;
-    }
-
-    public void setSubtitles(String subtitles) {
-        this.subtitles = subtitles;
-    }
-
-    public String getUrlEbay() {
-        return urlEbay;
-    }
-
-    public void setUrlEbay(String urlEbay ){
-        this.urlEbay = urlEbay;
-    }
 }

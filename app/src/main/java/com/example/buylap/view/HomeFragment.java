@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
-import com.example.buylap.adapterGUI.MostViewAdapter;
+import com.example.buylap.adaptergui.MostViewAdapter;
 import com.example.buylap.R;
 import com.example.buylap.exceptions.BeanException;
 

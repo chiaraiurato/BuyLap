@@ -1,2 +1,5 @@
-com.example.buylap.view.CashbackFragment#setPoints(I)V
-java.lang.String#valueOf(I)Ljava/lang/String;
+com.example.buylap.utils.Data#sendQuestion()Ljava/util/List;
+java.util.ArrayList#<init>()V
+com.example.buylap.model.QuizList#instance-init#
+java.util.ArrayList#instance-init#
+com.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

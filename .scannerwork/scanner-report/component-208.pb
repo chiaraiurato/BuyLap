@@ -1,1 +1,1 @@
-Ð 2xmlXhr3app/src/main/res/drawable/ic_baseline_delete_24.xml
+Ð 2javaX-hr;app/src/main/java/com/example/buylap/view/UserFragment.java

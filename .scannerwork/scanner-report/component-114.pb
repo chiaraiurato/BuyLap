@@ -1,1 +1,1 @@
-r 2javaX.hr2app/src/main/java/com/example/buylap/Category.java
+r 2javaX3hr8app/src/main/java/com/example/buylap/bean/BeanBuild.java

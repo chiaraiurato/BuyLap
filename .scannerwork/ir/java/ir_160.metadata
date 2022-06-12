@@ -1,1 +1,1 @@
-com.example.buylap.model.Analytics#setUrl(Ljava/lang/String;)V
+com.example.buylap.model.Category#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;F)V

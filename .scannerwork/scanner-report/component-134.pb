@@ -1,1 +1,1 @@
-† 2javaXOhr;app/src/main/java/com/example/buylap/cli/view/TakeQuiz.java
+† 2javaXhr?app/src/main/java/com/example/buylap/cli/view/AddComponent.java

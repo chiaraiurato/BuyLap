@@ -1,2 +1,1 @@
-com.example.buylap.controller.graphic.SettingFragmentGraphicController#initializeSession(LView;)V
-java.lang.String#equals(Ljava/lang/Object;)Z
+com.example.buylap.model.MostViewed#getTitle()Ljava/lang/String;

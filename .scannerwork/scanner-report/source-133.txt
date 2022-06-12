@@ -1,31 +1,29 @@
-package com.example.buylap.cli.view;
+package com.example.buylap.cli.utils;
 
-import android.os.Build;
+import java.util.HashMap;
+import java.util.Map;
 
-import androidx.annotation.RequiresApi;
+public class SessionManagerCLI {
 
-import com.example.buylap.cli.graphic_controller.SignUpGraphicController;
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-
-import java.io.IOException;
-import java.sql.SQLException;
-
-public class SignUp {
-
-    private SignUp(){
-        //View SignUp
+    private SessionManagerCLI(){
+        //Singleton
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main(String input) throws IOException, DAOException, BeanException, SQLException {
+    private static  String keyUsername;
+    private static String keyPassword;
+    private static String keyType;
 
-        SignUpGraphicController signUpGraphicController = new SignUpGraphicController();
-        signUpGraphicController.parseInput(input);
-
+    public static void  createLoginSession(String username, String password, String type){
+        keyUsername = username;
+        keyPassword = password;
+        keyType = type;
 
     }
 
-
+    public static Map<String, String> getUserDetails(){
+        Map<String, String> user = new HashMap<>();
+        user.put("user", keyUsername );
+        user.put("password", keyPassword);
+        user.put("type", keyType);
+        return user;
+    }
 }
-
-

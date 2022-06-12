@@ -1,1 +1,1 @@
- 2javaX<hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java
+ 2javaXYhrVapp/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.java

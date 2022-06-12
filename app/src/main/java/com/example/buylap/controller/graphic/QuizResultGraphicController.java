@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanRequestBuild;
+import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
@@ -27,6 +29,7 @@ public class QuizResultGraphicController extends SessionGraphicController {
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
     private BeanRequestBuild beanRequestBuild;
+    private BeanSession beanSession;
 
     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          super(quizResultActivity.getApplicationContext());
@@ -35,6 +38,7 @@ public class QuizResultGraphicController extends SessionGraphicController {
          this.quizResultActivity = quizResultActivity;
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
+         this.beanSession = getBeanSession();
          this.beanRequestBuild = new BeanRequestBuild();
     }
 
@@ -105,7 +109,6 @@ public class QuizResultGraphicController extends SessionGraphicController {
     public void updateBalance(View v) {
         Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
         intent.putExtra("gotoCashback", true);
-
         if(beanSession.getType().equals("GUEST")){
             quizResultActivity.setMessageGuest(v);
         }

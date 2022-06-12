@@ -1,1 +1,3 @@
-com.example.buylap.bean.BeanBuild#getPrice()F
+com.example.buylap.QuizResultTest#testQuizResult()V
+com.example.buylap.bean.BeanAnswer#instance-init#
+com.example.buylap.bean.BeanAnswer#<init>()V

@@ -68,8 +68,8 @@ public class CashbackFragment extends Fragment {
         try {
             cashbackGraphicController.uploadPoints();
 
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         addCart.setOnClickListener(new View.OnClickListener() {
             @Override

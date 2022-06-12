@@ -1,16 +1,20 @@
 
-Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java ("1*»
-1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (Ä
-Á
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (
-%0java.lang.String"__id*7*5*
-(com.example.buylap.model.users.ModelUser"
-email"„
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java (
-
-%0java.lang.StringB,*
-(com.example.buylap.model.users.ModelUser
+Jcom.example.buylap.controller.graphic.SessionGraphicController#isLogged()Z~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java$ $("1*¥
+1~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(‰
+†
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(-
+%0'com.example.buylap.utils.SessionManager"__id*O*M@
+>com.example.buylap.controller.graphic.SessionGraphicController"	
+sessionˆ…
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(#
+%1boolean"5com.example.buylap.utils.SessionManager#isLoggedIn()Z*/
+-
+%0'com.example.buylap.utils.SessionManager2isLoggedIn()"ˆ
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %($
+""BB@
+>com.example.buylap.controller.graphic.SessionGraphicController

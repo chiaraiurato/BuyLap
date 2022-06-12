@@ -1,1 +1,2 @@
-com.example.buylap.cli.view.HomepageUser#instance-init#
+com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignUpUser()V
+null

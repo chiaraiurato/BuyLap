@@ -1,1 +1,5 @@
-com.example.buylap.bean.BeanCard#getData()Ljava/lang/String;
+com.example.buylap.controller.graphic.LoginGraphicController#<init>(Lcom/example/buylap/view/LoginActivity;)V
+com.example.buylap.controller.applicative.LoginController#<init>()V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.controller.applicative.LoginController#instance-init#
+com.example.buylap.utils.SessionManager#instance-init#

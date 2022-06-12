@@ -1,5 +1,4 @@
-com.example.buylap.controller.graphic.TakeQuizGraphicController#<init>(Lcom/example/buylap/view/TakeQuizActivity;)V
-com.example.buylap.bean.BeanAnswer#instance-init#
-com.example.buylap.bean.BeanAnswer#<init>()V
-com.example.buylap.utils.Data#<init>()V
-com.example.buylap.utils.Data#instance-init#
+com.example.buylap.bean.BeanUser#setPassword(Ljava/lang/String;)V
+com.example.buylap.exceptions.BeanException#instance-init#
+java.lang.String#isEmpty()Z
+com.example.buylap.exceptions.BeanException#<init>(Ljava/lang/String;)V

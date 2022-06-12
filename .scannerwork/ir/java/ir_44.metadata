@@ -1,1 +1,3 @@
-com.example.buylap.model.Category#setSubtitles(Ljava/lang/String;)V
+com.example.buylap.boundary.BoundaryPayment#pay(Lcom/example/buylap/bean/BeanCashback;)V
+com.example.buylap.exceptions.NoCardInsertedException#<init>(Ljava/lang/String;)V
+com.example.buylap.exceptions.NoCardInsertedException#instance-init#

@@ -1,3 +1,1 @@
-com.example.buylap.controller.graphic.SettingFragmentGraphicController#<init>(Lcom/example/buylap/view/UserFragment;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.model.MostViewed#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

@@ -1,1 +1,1 @@
-com.example.buylap.view.InsertComponentActivity#setMotherboard()V
+com.example.buylap.cli.graphic_controller.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;

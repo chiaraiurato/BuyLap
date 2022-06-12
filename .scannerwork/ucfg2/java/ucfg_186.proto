@@ -1,71 +1,16 @@
 
-Ncom.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java& (4"1*ç
-1n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java# (2üú
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java' (0
-%0java.util.HashMap"java.util.HashMap±
-Æ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java# (2
-%1"java.util.HashMap#<init>()V*
-
-%0java.util.HashMap´
-®
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (3
-userjava.util.Map"__id*
-
-%0java.util.HashMap÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ($
-%2java.lang.String"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-keyUsername“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (&
-%3java.lang.String"__mapSet*
-
-userjava.util.Map*
-user*
+Dcom.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java ("1*∫
+1h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (√
+¿
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (
+%0java.lang.String"__id*6*4*
+(com.example.buylap.model.ModelCreditCard"
+name"Ñ
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (
 
-%2java.lang.String÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ((
-%4java.lang.String"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-keyPassword÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ()
-%5java.lang.String"__mapSet*
-
-userjava.util.Map*
-
-password*
-
-%4java.lang.String“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ( 
-%6java.lang.String"__id*?*=0
-.com.example.buylap.cli.utils.SessionManagerCLI"	
-keyType“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (!
-%7java.lang.String"__mapSet*
-
-userjava.util.Map*
-type*
-
-%6java.lang.String"â
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (
-
-userjava.util.MapB2"0
-.com.example.buylap.cli.utils.SessionManagerCLI
+%0java.lang.StringB,*
+(com.example.buylap.model.ModelCreditCard

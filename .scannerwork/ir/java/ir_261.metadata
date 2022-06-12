@@ -1,1 +1,1 @@
-com.example.buylap.cli.graphic_controller.QuizGraphicController#instance-init#
+com.example.buylap.controller.graphic.SessionGraphicController#isLogged()Z

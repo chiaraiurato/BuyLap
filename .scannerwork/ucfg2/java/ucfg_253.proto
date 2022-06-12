@@ -1,366 +1,91 @@
 
-6com.example.buylap.cli.Main#main([Ljava/lang/String;)V[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java ("startingBlock*Ê
-2[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java> >(-ò
-ï
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java> >(-
-sjava.lang.String"__id*
-
-%44java.lang.String„‡
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java? ?(/
-%45void"_com.example.buylap.cli.graphic_controller.MainGraphicController#parseInput(Ljava/lang/String;)V*Z
-X
-mainGraphicController?com.example.buylap.cli.graphic_controller.MainGraphicController*
-
-sjava.lang.String2parseInput(Ljava/lang/String;)*
-0*˙
-3[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java= =(]≠
-™
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java= =(]$
+òcom.example.buylap.controller.applicative.LoginController#searchSeller(Lcom/example/buylap/bean/BeanSeller;)Lcom/example/buylap/model/users/ModelSeller;y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (#"9*Ø
+3y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=Û
+
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=9
+modelSeller*com.example.buylap.model.users.ModelSeller"__id*2
+0
+%6*com.example.buylap.model.users.ModelSeller"∏
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(;
+9
+modelSeller*com.example.buylap.model.users.ModelSeller*≠
+4z
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java   (ñÙ
+Ò
+z
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java   (ñ9
+modelSeller*com.example.buylap.model.users.ModelSeller"__id*2
+0
+%4*com.example.buylap.model.users.ModelSellerØ
+¨
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=0
+%6*com.example.buylap.model.users.ModelSeller"êcom.example.buylap.database.dao.DAOseller#searchSeller(Lcom/example/buylap/model/users/ModelSeller;)Lcom/example/buylap/model/users/ModelSeller;*-"+
+)com.example.buylap.database.dao.DAOseller*;
+9
+modelSeller*com.example.buylap.model.users.ModelSeller*
+3*Ö
+5z
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java &  (ï‹Ÿ
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java *  (50
+%4*com.example.buylap.model.users.ModelSeller"*com.example.buylap.model.users.ModelSellerü
+ú
+z
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java &  (ï
+%5"|com.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*2
+0
+%4*com.example.buylap.model.users.ModelSeller*
+
+%0java.lang.String*
+
+%1java.lang.String*
+
+%2java.lang.String*
+
+%3java.lang.String*
+4*ù
+6{
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java Å  (ãïí
+{
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java Å  (î
+%3java.lang.String"=com.example.buylap.bean.BeanSeller#getIva()Ljava/lang/String;*2
+0
 
-bufferReadjava.io.BufferedReader"__id*
-
-%42java.io.BufferedReader‚ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java> >(,
-%44java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*&
-$
+beanSeller"com.example.buylap.bean.BeanSeller2getIva()*
+5*£
+7y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java g  (qùö
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java g  (
+%2java.lang.String"Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;*2
+0
 
-bufferReadjava.io.BufferedReader2
-readLine()*
-2*¨
-startingBlock[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (+¢
-ü
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (-
-%47"
-__annotate*
-RequiresApi*
-
-argsjava.lang.String[]ì
-ê
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java& (*
-argsjava.lang.String[]"__annotation*
-
-%47*
-6*‡
-4[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=( =(\óî
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=, =(:
-%42java.io.BufferedReader"java.io.BufferedReaderﬁ
-€
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=( =(\
-%43"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
-
-%42java.io.BufferedReader*"
- 
-%40java.io.InputStreamReader*
-3*¯
-5[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=Q =(Wä
-á
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=Q =(Z
-%39java.io.InputStream"__id*
-""ùö
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=? =(P 
-%40java.io.InputStreamReader"java.io.InputStreamReader„
-‡
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java=; =([
-%41"8java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V*"
- 
-%40java.io.InputStreamReader*
-
-%39java.io.InputStream*
-4*úG
-6[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (â
-Ü
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (
-%0java.io.PrintStream"__id*
-""ã
-à
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%1java.lang.String"__concat*CA
-?------------------------     BUYLAP   -----------------------\n*B@
->............................................................\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%2java.lang.String"__concat*
-
-%1java.lang.String*B@
->.............................. .............................\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%3java.lang.String"__concat*
-
-%2java.lang.String*B@
->..........................          ........................\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%4java.lang.String"__concat*
-
-%3java.lang.String*B@
->...................                       ..................\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%5java.lang.String"__concat*
-
-%4java.lang.String*B@
->................                              ..............\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%6java.lang.String"__concat*
-
-%5java.lang.String*B@
->.............                                    ...........\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%7java.lang.String"__concat*
-
-%6java.lang.String*B@
->...........                                        .........\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%8java.lang.String"__concat*
-
-%7java.lang.String*B@
->..........               ============               ........\n‡
-›
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%9java.lang.String"__concat*
-
-%8java.lang.String*B@
->.........                &&  |  | &&                 .......\n·
-ﬁ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java (T
-%10java.lang.String"__concat*
-
-%9java.lang.String*B@
->........                 &&  |  | &&                  ......\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java  (T
-%11java.lang.String"__concat*
-
-%10java.lang.String*B@
->.......                  ============                 ......\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java !(T
-%12java.lang.String"__concat*
-
-%11java.lang.String*B@
->.......                                                .....\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java "(T
-%13java.lang.String"__concat*
-
-%12java.lang.String*B@
->.......             &&&&&&&&&&&&&&&&&&&&&&             .....\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java #(T
-%14java.lang.String"__concat*
-
-%13java.lang.String*B@
->.......             &&&&&&&&&&&&&&&&&&&&&&            ......\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java $(T
-%15java.lang.String"__concat*
-
-%14java.lang.String*B@
->........            &&&&&&&&&&&&&&&&&&&&&&            ......\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java %(T
-%16java.lang.String"__concat*
-
-%15java.lang.String*B@
->.........           &&&&&&&&&&&&&&&&&&&&&&           .......\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java &(T
-%17java.lang.String"__concat*
-
-%16java.lang.String*B@
->..........             ||           ||             .........\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java '(T
-%18java.lang.String"__concat*
-
-%17java.lang.String*B@
->............           ||           ||            ..........\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java ((T
-%19java.lang.String"__concat*
-
-%18java.lang.String*B@
->................                              ..............\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java )(T
-%20java.lang.String"__concat*
-
-%19java.lang.String*B@
->...................                       ..................\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java *(T
-%21java.lang.String"__concat*
-
-%20java.lang.String*B@
->..........................          ........................\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java +(T
-%22java.lang.String"__concat*
-
-%21java.lang.String*B@
->.............................. .............................\n‚
-ﬂ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java ,(T
-%23java.lang.String"__concat*
-
-%22java.lang.String*B@
->............................................................\n∂
-≥
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java -((
-%24java.lang.String"__concat*
-
-%23java.lang.String*
-\nAll commands :\n’
-“
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java .(E
-%25java.lang.String"__concat*
-
-%24java.lang.String*53
-1‚ö´ show (Display in output available commands)\nä
-á
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java /(z
-%26java.lang.String"__concat*
-
-%25java.lang.String*jh
-f‚ö´ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\nË
-Â
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 0(X
-%27java.lang.String"__concat*
-
-%26java.lang.String*HF
-D‚ö´ sign_in -t [type] -u [username] -p [password] (Log-in account)\n¬
-ø
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 1(2
-%28java.lang.String"__concat*
-
-%27java.lang.String*" 
-‚ö´ skip (skip registration)\n¥
-±
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 2($
-%29java.lang.String"__concat*
-
-%28java.lang.String*
-‚ö´ take_quiz \nˆ
-Û
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 3(f
-%30java.lang.String"__concat*
-
-%29java.lang.String*VT
-R‚ö´ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link] \n∑
-¥
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 4('
-%31java.lang.String"__concat*
-
-%30java.lang.String*
-‚ö´ show_cashback\n≥
-∞
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 5(#
-%32java.lang.String"__concat*
-
-%31java.lang.String*
-‚ö´ cash_out \n£
-†
-\
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 6(ë
-%33java.lang.String"__concat*
-
-%32java.lang.String*Å
-}‚ö´ add_card  -h [cardholder name] -n [number card] -d [expire date]   (Ex. -h Mario_Rossi -n 1234-1234-1234-1234 -d 22-09)\nµ
-≤
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 7(%
-%34java.lang.String"__concat*
-
-%33java.lang.String*
-‚ö´ delete_card\n¬
-ø
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 8(2
-%35java.lang.String"__concat*
-
-%34java.lang.String*" 
-‚ö´ exit (exit the program) \nÙÒ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java 8(3
-%36void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%0java.io.PrintStream*
-
-%35java.lang.String2println(Ljava/lang/String;)ÈÊ
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java:: :(OF
-%37?com.example.buylap.cli.graphic_controller.MainGraphicController"?com.example.buylap.cli.graphic_controller.MainGraphicController¸
-˘
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java:6 :(Q
-%38"Icom.example.buylap.cli.graphic_controller.MainGraphicController#<init>()V*H
-F
-%37?com.example.buylap.cli.graphic_controller.MainGraphicControllerä
-á
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.java: :(RX
-mainGraphicController?com.example.buylap.cli.graphic_controller.MainGraphicController"__id*H
-F
-%37?com.example.buylap.cli.graphic_controller.MainGraphicController*
-5*y
-0 "r
-[
-QC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/Main.javaG G(
-implicit return:
-argsjava.lang.String[]B"
-com.example.buylap.cli.Main
+beanSeller"com.example.buylap.bean.BeanSeller2getPassword()*
+6*ù
+8y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java P  (Zóî
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java P  (e
+%1java.lang.String"?com.example.buylap.bean.BeanSeller#getEmail()Ljava/lang/String;*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller2
+getEmail()*
+7*£
+9y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java 6  (@ùö
+y
+oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java 6  (N
+%0java.lang.String"Bcom.example.buylap.bean.BeanSeller#getUsername()Ljava/lang/String;*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller2getUsername()*
+8:0
+
+beanSeller"com.example.buylap.bean.BeanSellerB=;
+9com.example.buylap.controller.applicative.LoginController

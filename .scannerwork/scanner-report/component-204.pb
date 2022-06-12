@@ -1,1 +1,1 @@
-Ì 2xmlXhr;app/src/main/res/drawable/ic_baseline_calendar_month_24.xml
+Ì 2javaXGhrIapp/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java

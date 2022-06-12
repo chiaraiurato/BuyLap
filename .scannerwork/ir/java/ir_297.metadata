@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanBuild#setSubtitles(Ljava/lang/String;)V
+com.example.buylap.exceptions.LengthBeanCardException#instance-init#

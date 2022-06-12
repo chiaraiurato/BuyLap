@@ -1,1 +1,1 @@
-ë 2xmlX#hr&app/src/main/res/drawable/seek_bar.xml
+ë 2xmlXhr6app/src/main/res/drawable/ic_baseline_home_work_24.xml

@@ -1,1 +1,1 @@
-com.example.buylap.view.RegistrationActivity#sendEmail()Ljava/lang/String;
+com.example.buylap.database.query.QueryBuild#insertComponent(Ljava/sql/Statement;Lcom/example/buylap/model/ModelBuild;Lcom/example/buylap/model/users/ModelSeller;)V

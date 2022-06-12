@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanSession#getUsername()Ljava/lang/String;
+com.example.buylap.exceptions.EmailVerifyException#instance-init#

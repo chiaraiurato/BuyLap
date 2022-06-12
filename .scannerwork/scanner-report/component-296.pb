@@ -1,1 +1,1 @@
-¨ 2xmlXhr!app/src/main/res/values/style.xml
+¨ 2xmlXjhr)app/src/main/res/layout/fragment_home.xml

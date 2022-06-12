@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.buylap.model.Category;
-import com.example.buylap.adapterGUI.CategoryAdapter;
+import com.example.buylap.adaptergui.CategoryAdapter;
 import com.example.buylap.controller.graphic.QuizResultGraphicController;
 import com.example.buylap.R;
 

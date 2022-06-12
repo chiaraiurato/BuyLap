@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanSeller#setPassword(Ljava/lang/String;)V
+com.example.buylap.cli.view.HomepageSeller#show()V

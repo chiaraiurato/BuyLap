@@ -1,2 +1,1 @@
-com.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanSession;)I
-com.example.buylap.database.dao.DAOuser#uploadPoints(Lcom/example/buylap/bean/BeanSession;)I
+com.example.buylap.view.TakeQuizActivity#setQuestion(Ljava/lang/String;)V

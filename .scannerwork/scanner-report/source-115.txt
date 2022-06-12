@@ -1,86 +1,64 @@
-package com.example.buylap;
+package com.example.buylap.bean;
 
+import android.util.Log;
 
-import android.content.Context;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+public class BeanCard {
+    private String cardHolderName;
+    private String cardNumber;
+    private String expireDate;
 
-import com.bumptech.glide.Glide;
-
-import java.util.List;
-
-
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder>{
-
-    List<Category> category;
-
-    private OnCatListener mOnCatListener;
-
-    public CategoryAdapter(List<Category> category, OnCatListener onCatListener) {
-
-        this.category = category;
-        this.mOnCatListener=onCatListener;
-
+    public String getCardHolderName() {
+        return cardHolderName;
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_build, parent, false);
-        return new ViewHolder(inflate, mOnCatListener);
+    public void setCardHolderName(String cardHolderName) {
+        this.cardHolderName = cardHolderName;
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.titleTxt.setText(String.valueOf(category.get(position).getTitle()));
-        holder.subTitleTxt.setText(String.valueOf(category.get(position).getSubtitles()));
-        String priceFormat =String.format("%.2f",category.get(position).getPrice() )+ " $";
-        holder.price.setText(priceFormat);
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(category.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
+    public String getCardNumber(){
 
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .into(holder.imageCat);
+        return cardNumber;
     }
 
-
-    @Override
-    public int getItemCount() {
-        return category.size();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView titleTxt;
-        TextView subTitleTxt;
-        TextView price;
-
-        ImageView imageCat;
-        OnCatListener onCatListener;
-        Context context;
-        public ViewHolder(View itemView, OnCatListener onCatListener) {
-            super(itemView);
-            context= itemView.getContext();
-            titleTxt = itemView.findViewById(R.id.titleTxt2);
-            subTitleTxt = itemView.findViewById(R.id.titleTxt3);
-            imageCat = itemView.findViewById(R.id.img_view);
-            price = itemView.findViewById(R.id.price);
-            this.onCatListener=onCatListener;
-            itemView.setOnClickListener(this);
+    public void setCardNumber(String cardNumber)  {
+        try {
+            checkLength();
+        } catch (LengthBeanCardException e) {
+            e.printStackTrace();
         }
+        this.cardNumber = cardNumber;
+    }
 
-        @Override
-        public void onClick(View v) {
-            onCatListener.onCatClick(getAdapterPosition());
+    public String getData() {
+        return expireDate;
+    }
+
+    public void setData(String date) throws ParseException, ExpiredDateCardException {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-mm");
+        simpleDateFormat.setLenient(false);
+        Date expireDateFormat =simpleDateFormat.parse(date);
+
+        boolean expired = expireDateFormat.before(new Date());
+        if(expired){
+            throw new ExpiredDateCardException("Date is expired");
+        }else{
+            this.expireDate= date;
         }
     }
-    public interface OnCatListener{
-        void onCatClick(int position);
+    private void checkLength() throws LengthBeanCardException {
+        if(cardNumber != null) {
+            if (cardNumber.length() > 20) {
+                throw new LengthBeanCardException("Number card is invalid");
+            }
+        }
+
     }
 }

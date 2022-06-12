@@ -1,10 +1,7 @@
-package com.example.buylap.utils;
+package com.example.buylap.exceptions;
 
-public enum NameBuild {
-    PCB,
-    SSD,
-    CPU,
-    RAM,
-    GPU,
-    PSU
+public class EmailVerifyException extends Exception{
+    public EmailVerifyException(String message) {
+        super(message);
+    }
 }

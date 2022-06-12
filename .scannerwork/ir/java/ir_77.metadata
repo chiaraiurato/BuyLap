@@ -1,2 +1,1 @@
-com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V
-java.lang.String#valueOf(I)Ljava/lang/String;
+com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)V

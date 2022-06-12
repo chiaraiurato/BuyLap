@@ -1,5 +1,7 @@
 package com.example.buylap.controller.applicative;
 
+import android.util.Log;
+
 import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.model.ModelRequestBuild;
 import com.example.buylap.utils.ConstantNameTable;
@@ -34,11 +36,11 @@ public class TakeQuizController {
         component[4] = ConstantNameTable.VIDEO_CARD;
         component[5] = ConstantNameTable.POWER_SUPPLY;
 
-        if(beanRequestBuild.getKeyword().equals("Gaming")){
+        if(beanRequestBuild.getKeyword().getAnswer3().equals("Gaming")){
             nameTable = ConstantNameTable.GAMING;
-        }else if(beanRequestBuild.getKeyword().equals("Office use")){
+        }else if(beanRequestBuild.getKeyword().getAnswer3().equals("Office use")){
             nameTable = ConstantNameTable.OFFICE_USE;
-        }else if(beanRequestBuild.getKeyword().equals("Home use")){
+        }else if(beanRequestBuild.getKeyword().getAnswer3().equals("Home use")){
             nameTable = ConstantNameTable.HOME_USE;
         }
 
@@ -47,7 +49,6 @@ public class TakeQuizController {
         List<ModelBuild> modelBuild = new ArrayList<>();
 
         for(index = 0; index < 6; index++){
-
             try {
 
                 if(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild) == null){

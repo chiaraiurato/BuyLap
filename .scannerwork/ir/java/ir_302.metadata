@@ -1,3 +1,1 @@
-test.TestSeleniumAPI#openDriver()LWebElement;
-null
-java.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+com.example.buylap.model.ModelPoints#<init>(I)V

@@ -1,3 +1,1 @@
-com.example.buylap.cli.view.SignUp#main(Ljava/lang/String;)V
-com.example.buylap.cli.graphic_controller.SignUpGraphicController#<init>()V
-com.example.buylap.cli.graphic_controller.SignUpGraphicController#instance-init#
+com.example.buylap.view.LoginActivity#sendPassword()Ljava/lang/String;

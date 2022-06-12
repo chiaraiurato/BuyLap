@@ -1,1 +1,1 @@
-com.example.buylap.database.JdbcConnection#instance-init#
+com.example.buylap.model.users.ModelUser#setPassword(Ljava/lang/String;)V

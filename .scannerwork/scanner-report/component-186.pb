@@ -1,1 +1,1 @@
-º 2javaXthr?app/src/main/java/com/example/buylap/view/TakeQuizActivity.java
+º 2javaXhrAapp/src/main/java/com/example/buylap/utils/ConstantNameTable.java

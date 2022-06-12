@@ -1,35 +1,39 @@
-package com.example.buylap.database.query;
+package com.example.buylap.controller.graphic;
 
+import android.content.Context;
+import android.util.Log;
 
-import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.bean.BeanSession;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.utils.SessionManager;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Map;
+import java.util.Objects;
 
-public class QueryCreditCard {
+public class SessionGraphicController {
+    protected SessionManager session;
+    protected BeanSession beanSession;
+    protected Map<String, String> user;
 
-    private QueryCreditCard() {
-        throw new IllegalStateException("Utility class");
+    protected SessionGraphicController(Context context) {
+        this.session = new SessionManager(context);
+        this.user = session.getUserDetails();
+        this.beanSession = new BeanSession();
     }
+    protected BeanSession getBeanSession(){
+        if(user.get("user") != null) {
+            try {
+                beanSession.setUsername(Objects.requireNonNull(user.get("user")));
+                beanSession.setType(user.get("type"));
+            } catch (BeanException e) {
+                Log.d("BeanSession", "Field username is null");
+            }
+        }
 
-    public static void insertCreditCard(Statement stmt, BeanCard beanCard, BeanSession beanSession) throws SQLException {
-        String query = "INSERT INTO `creditcard` (`name`, `numbercard`, `date`, `username`) " +
-                "VALUES ('"+ beanCard.getCardHolderName()+"', '"+beanCard.getCardNumber()+"', '"+beanCard.getData()+"-01','"+beanSession.getUsername()+"');";
-        stmt.executeUpdate(query);
+        return this.beanSession;
     }
-
-    public static ResultSet searchCard(Statement statement, BeanSession beanSession) throws SQLException {
-        String query = "SELECT * " +
-                "FROM creditcard " +
-                "WHERE username = '"+ beanSession.getUsername()+"';";
-        return statement.executeQuery(query);
-    }
-
-    public static void deleteCard(Statement statement, BeanSession beanSession) throws SQLException {
-        String query = "DELETE FROM creditcard " +
-                "WHERE username = '"+beanSession.getUsername()+"';";
-        statement.executeUpdate(query);
+    protected boolean isLogged(){
+        return session.isLoggedIn();
     }
 }

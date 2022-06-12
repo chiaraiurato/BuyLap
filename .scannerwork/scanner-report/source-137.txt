@@ -1,42 +1,12 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.cli.view;
 
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.database.dao.DAOseller;
-import com.example.buylap.database.dao.DAOuser;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
-import java.io.IOException;
-import java.sql.SQLException;
-
-public class LoginController {
-
-
-    public BeanUser searchUser(BeanUser beanUser) throws DAOException{
-        ModelUser modelUser;
-
-        try {
-            modelUser = DAOuser.searchUser(beanUser);
-            beanUser.setEmail(modelUser.getEmail());
-            return beanUser;
-
-        } catch (SQLException | IOException e) {
-            throw new DAOException("error on signIn for user");
-        }
+public class Exit {
+    private Exit(){
+        //View Exit
     }
+    public static void main(){
 
-    public BeanSeller searchSeller(BeanSeller beanSeller) throws DAOException {
-        ModelSeller modelSeller;
-
-        try {
-            modelSeller = DAOseller.searchSeller(beanSeller);
-            beanSeller.setEmail(modelSeller.getEmail());
-            return beanSeller;
-
-        } catch (SQLException | IOException e) {
-            throw new DAOException("error on signIn for seller");
-        }
+        System.out.println("\nExiting program..\n");
+        System.exit(1);
     }
 }
-

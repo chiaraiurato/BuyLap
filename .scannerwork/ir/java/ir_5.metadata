@@ -1,1 +1,3 @@
-com.example.buylap.cli.view.TakeQuiz#instance-init#
+com.example.buylap.view.SelectTypeAccountActivity#onCreate(LBundle;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#instance-init#
+com.example.buylap.controller.graphic.RegistrationGraphicController#<init>(Lcom/example/buylap/view/SelectTypeAccountActivity;)V

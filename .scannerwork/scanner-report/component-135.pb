@@ -1,1 +1,1 @@
-‡ 2javaXChrVapp/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.java
+‡ 2javaX<hr;app/src/main/java/com/example/buylap/cli/view/Cashback.java

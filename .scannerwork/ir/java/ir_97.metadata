@@ -1,1 +1,2 @@
-com.example.buylap.model.QuizList#setOp2(Ljava/lang/String;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#gotoNavigationSeller()V
+null

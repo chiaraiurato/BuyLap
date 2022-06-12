@@ -1,1 +1,1 @@
-com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#<init>(Lcom/example/buylap/view/SelectTypeAccountActivity;)V

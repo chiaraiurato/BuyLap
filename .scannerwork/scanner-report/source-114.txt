@@ -1,24 +1,29 @@
-package com.example.buylap;
+package com.example.buylap.bean;
 
-public class Category {
+public class BeanBuild {
+
+    private String type;
     private String title;
-    private String url;
     private String subtitles;
+    private String urlEbay;
     private float price;
 
-    public Category(String title, String url, String subtitles, float price){
-        this.title =title;
-        this.url= url;
-        this.subtitles = subtitles;
-        this.price = price;
-    }
-    public double getPrice() {
+    public float getPrice() {
         return price;
     }
 
     public void setPrice(float price) {
         this.price = price;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -27,19 +32,19 @@ public class Category {
         this.title = title;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getSubtitles() {
         return subtitles;
     }
 
     public void setSubtitles(String subtitles) {
         this.subtitles = subtitles;
+    }
+
+    public String getUrlEbay() {
+        return urlEbay;
+    }
+
+    public void setUrlEbay(String urlEbay ){
+        this.urlEbay = urlEbay;
     }
 }

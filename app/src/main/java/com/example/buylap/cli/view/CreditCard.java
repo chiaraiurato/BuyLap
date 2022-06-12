@@ -13,14 +13,34 @@ public class CreditCard {
     private CreditCard(){
         //View Credit Card
     }
-    public static void save(String input) throws BeanException, DAOException, LengthBeanCardException, ExpiredDateCardException, ParseException {
-        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
-        cashbackGraphicController.saveCreditCard(input);
+    public static void save(String input){
+        CashbackGraphicController cashbackGraphicController = null;
+        try {
+            cashbackGraphicController = new CashbackGraphicController();
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
+        try {
+            cashbackGraphicController.saveCreditCard(input);
+        } catch (DAOException e) {
+            System.out.println("Error while saving credit card...");
+        } catch (LengthBeanCardException e) {
+            System.out.println("Length maximum is 20");
+        }
     }
-    public static void delete() throws BeanException, DAOException {
+    public static void delete(){
 
-        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController();
-        cashbackGraphicController.deleteCreditCard();
+        CashbackGraphicController cashbackGraphicController = null;
+        try {
+            cashbackGraphicController = new CashbackGraphicController();
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
+        try {
+            cashbackGraphicController.deleteCreditCard();
+        } catch (DAOException e) {
+            System.out.println("Error while deleting credit card");
+        }
         System.out.println("Credit card deleted");
     }
 }

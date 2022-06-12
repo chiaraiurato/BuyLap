@@ -1,62 +1,37 @@
-package com.example.buylap.view;
+package com.example.buylap.model;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+public class MostViewed {
+    private String title;
+    private String subtitle;
+    private String url;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.WindowManager;
+    public MostViewed(String title, String subtitle, String url) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.url = url;
+    }
 
-import com.example.buylap.cli.Main;
-import com.example.buylap.cli.graphic_controller.MainGraphicController;
-import com.example.buylap.controller.graphic.NavigationGraphicController;
-import com.example.buylap.R;
-import com.example.buylap.utils.ContextHolder;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+    public String getTitle() {
+        return title;
+    }
 
-public class NavigationActivity extends AppCompatActivity {
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public String getSubtitle() {
+        return subtitle;
+    }
 
-    BottomNavigationView navigationView;
-    NavigationGraphicController navigationGraphicController;
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    public String getUrl() {
+        return url;
+    }
 
-        ContextHolder contextHolder = ContextHolder.getInstance();
-        contextHolder.setContext(getApplicationContext());
-
-        this.navigationGraphicController = new NavigationGraphicController(this);
-
-        navigationView=findViewById(R.id.bottom_navigation);
-
-        navigationGraphicController.checkLogin();
-
-        Fragment fragmentChoice =navigationGraphicController.selectTypeHomepage();
-        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragmentChoice).commit();
-
-
-        navigationView.setSelectedItemId(R.id.nav_home);
-        navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = navigationGraphicController.switchPage(item);
-                getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-                return true;
-
-            }
-        });
-        boolean gotoCashback = this.getIntent().getBooleanExtra("gotoCashback", false);
-        if(gotoCashback)
-        {
-            Fragment fragment = new CashbackFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-        }
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -1,1 +1,1 @@
-à 2xmlXhr5app/src/main/res/drawable/ic_baseline_settings_24.xml
+à 2xmlXhr9app/src/main/res/drawable/ic_baseline_attach_money_24.xml

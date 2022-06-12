@@ -1,1 +1,1 @@
-š 2javaXPhrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java
+š 2javaXshrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.SignUp#<init>()V
+com.example.buylap.view.LoginActivity#sendUsername()Ljava/lang/String;

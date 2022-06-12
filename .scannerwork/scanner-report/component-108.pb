@@ -1,1 +1,1 @@
-l 2javaX3hr8app/src/main/java/com/example/buylap/bean/BeanBuild.java
+l 2javaX1hrAapp/src/main/java/com/example/buylap/adapter/HomepageAdapter.java

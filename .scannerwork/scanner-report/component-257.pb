@@ -1,1 +1,1 @@
-Å 2xmlXmhr-app/src/main/res/layout/activity_add_card.xml
+Å 2xmlX#hr&app/src/main/res/drawable/seek_bar.xml

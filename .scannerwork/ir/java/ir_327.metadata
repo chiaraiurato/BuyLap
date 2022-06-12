@@ -1,1 +1,2 @@
-com.example.buylap.bean.BeanCard#setData(Ljava/lang/String;)V
+com.example.buylap.controller.graphic.LoginGraphicController#goToRegistration()V
+null

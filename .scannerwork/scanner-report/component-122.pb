@@ -1,1 +1,1 @@
-z 2javaXIhrXapp/src/main/java/com/example/buylap/cli/graphic_controller/SignUpGraphicController.java
+z 2javaX.hr7app/src/main/java/com/example/buylap/bean/BeanUser.java

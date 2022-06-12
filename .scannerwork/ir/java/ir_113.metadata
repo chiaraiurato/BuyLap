@@ -1,1 +1,1 @@
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.adapterGUI.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)V

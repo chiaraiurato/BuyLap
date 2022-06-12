@@ -1,0 +1,60 @@
+
+‚com.example.buylap.controller.applicative.RegistrationController#createUser(Lcom/example/buylap/bean/BeanUser;)Ljava/lang/Boolean;€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java ("5*’
+3€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java ("‰
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (2*ç
+4€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (Ù
+Ö
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (-
+
+%5void"_com.example.buylap.database.dao.DAOuser#insertUser(Lcom/example/buylap/model/users/ModelUser;)V*+")
+'com.example.buylap.database.dao.DAOuser*7
+5
+	modelUser(com.example.buylap.model.users.ModelUser*
+3*¿
+5€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java, (4Ÿœ
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java, (B
+%0java.lang.String"@com.example.buylap.bean.BeanUser#getUsername()Ljava/lang/String;*.
+,
+beanUser com.example.buylap.bean.BeanUser2getUsername()™–
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.javaD (W
+%1java.lang.String"=com.example.buylap.bean.BeanUser#getEmail()Ljava/lang/String;*.
+,
+beanUser com.example.buylap.bean.BeanUser2
+getEmail()Ÿœ
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.javaY (o
+%2java.lang.String"@com.example.buylap.bean.BeanUser#getPassword()Ljava/lang/String;*.
+,
+beanUser com.example.buylap.bean.BeanUser2getPassword()àÝ
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java" (+.
+%3(com.example.buylap.model.users.ModelUser"(com.example.buylap.model.users.ModelUserö
+ó
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (p
+%4"hcom.example.buylap.model.users.ModelUser#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*0
+.
+%3(com.example.buylap.model.users.ModelUser*
+
+%0java.lang.String*
+
+%1java.lang.String*
+
+%2java.lang.Stringõ
+ò
+€
+vC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/RegistrationController.java (q5
+	modelUser(com.example.buylap.model.users.ModelUser"__id*0
+.
+%3(com.example.buylap.model.users.ModelUser*
+4:,
+beanUser com.example.buylap.bean.BeanUserBDB
+@com.example.buylap.controller.applicative.RegistrationController

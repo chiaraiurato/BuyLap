@@ -1,1 +1,1 @@
-com.example.buylap.view.SellerFragment#<init>()V
+com.example.buylap.model.Category#getUrl()Ljava/lang/String;

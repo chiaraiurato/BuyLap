@@ -3,7 +3,7 @@ SonarCloud plugins:
   - PL/SQL Code Quality and Security 3.7.0.4372 (plsql)
   - Scala Code Quality and Security 1.9.0.3429 (sonarscala)
   - C# Code Quality and Security 8.40.0.48530 (csharp)
-  - Vulnerability Analysis 9.5.0.16418 (security)
+  - Vulnerability Analysis 9.5.1.16463 (security)
   - Java Code Quality and Security 7.12.0.29739 (java)
   - HTML Code Quality and Security 3.6.0.3106 (web)
   - Flex Code Quality and Security 2.7.0.2865 (flex)
@@ -22,16 +22,16 @@ SonarCloud plugins:
   - Apex Code Quality and Security 1.9.0.3429 (sonarapex)
   - JavaScript/TypeScript/CSS Code Quality and Security 9.3.0.18033 (javascript)
   - Ruby Code Quality and Security 1.9.0.3429 (ruby)
-  - Vulnerability Rules for C# 9.5.0.16418 (securitycsharpfrontend)
-  - Vulnerability Rules for Java 9.5.0.16418 (securityjavafrontend)
-  - License for SonarLint 8.0.0.29453 (license)
-  - Vulnerability Rules for JS 9.5.0.16418 (securityjsfrontend)
+  - Vulnerability Rules for C# 9.5.1.16463 (securitycsharpfrontend)
+  - Vulnerability Rules for Java 9.5.1.16463 (securityjavafrontend)
+  - License for SonarLint task ':private:sonarlint-license-plugin:jar' property 'archiveVersion' (license)
+  - Vulnerability Rules for JS 9.5.1.16463 (securityjsfrontend)
   - COBOL Code Quality 5.0.0.5433 (cobol)
-  - Vulnerability Rules for Python 9.5.0.16418 (securitypythonfrontend)
+  - Vulnerability Rules for Python 9.5.1.16463 (securitypythonfrontend)
   - PHP Code Quality and Security 3.23.1.8766 (php)
   - ABAP Code Quality and Security 3.10.0.3628 (abap)
   - Configuration detection fot Code Quality and Security 1.2.0.267 (config)
-  - Vulnerability Rules for PHP 9.5.0.16418 (securityphpfrontend)
+  - Vulnerability Rules for PHP 9.5.1.16463 (securityphpfrontend)
 Global server settings:
   - email.from=noreply@sonarcloud.io
   - email.fromName=SonarCloud
@@ -40,7 +40,7 @@ Global server settings:
   - sonar.auth.microsoft.enabled=true
   - sonar.core.id=1BD809FA-AWHW8ct9-T_TB3XqouNu
   - sonar.core.serverBaseURL=https://sonarcloud.io
-  - sonar.core.startTime=2022-06-02T16:06:16+0200
+  - sonar.core.startTime=2022-06-09T14:56:39+0200
   - sonar.dbcleaner.weeksBeforeDeletingAllSnapshots=260
   - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByMonth=4
   - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek=1

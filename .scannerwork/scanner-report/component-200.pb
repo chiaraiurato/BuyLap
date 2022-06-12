@@ -1,1 +1,1 @@
-È 2xmlXhr>app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml
+È 2javaX6hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java

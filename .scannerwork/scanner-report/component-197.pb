@@ -1,1 +1,1 @@
-Å 2xmlXhr&app/src/main/res/drawable/gradient.xml
+Å 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java

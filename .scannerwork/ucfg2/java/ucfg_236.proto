@@ -1,17 +1,17 @@
 
-@com.example.buylap.bean.BeanUser#getUsername()Ljava/lang/String;`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java) )("1*ù
-1`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java* *(∑
-¥
-`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java* *(
-%0java.lang.String"__id*2*0"
- com.example.buylap.bean.BeanUser"
+Hcom.example.buylap.model.users.ModelUser#getUsername()Ljava/lang/String;h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java5 5("1*æ
+1h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java6 6(«
+ƒ
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java6 6(
+%0java.lang.String"__id*:*8*
+(com.example.buylap.model.users.ModelUser"
 
-username"|
-`
-VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java* *(
+username"Ñ
+h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java6 6(
 
-%0java.lang.StringB$"
- com.example.buylap.bean.BeanUser
+%0java.lang.StringB,*
+(com.example.buylap.model.users.ModelUser

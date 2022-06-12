@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanBuild#setUrlEbay(Ljava/lang/String;)V
+com.example.buylap.exceptions.ExpiredDateCardException#instance-init#

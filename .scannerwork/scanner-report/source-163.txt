@@ -1,47 +1,75 @@
-package com.example.buylap.model;
-public class QuizList {
-    String question;
-    String op1;
-    String op2;
-    String op3;
+package com.example.buylap.database.dao;
 
-    public QuizList(String question, String op1, String op2, String op3) {
-        this.question = question;
-        this.op1 = op1;
-        this.op2 = op2;
-        this.op3 = op3;
+import android.os.StrictMode;
+
+import com.example.buylap.bean.BeanPoints;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
+import com.example.buylap.database.JdbcConnection;
+import com.example.buylap.database.query.QueryRegistrationLogin;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.model.ModelPoints;
+import com.example.buylap.model.users.ModelUser;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
+
+public class DAOuser {
+
+    private DAOuser() {
+        //private constructor
+    }
+    public static void insertUser(ModelUser modelUser) throws SQLException, DAOException{
+
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+
+            if(!MainGraphicController.CLI) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
+            connection = JdbcConnection.getInstance().getConnection();
+            if(connection != null) {
+                statement = connection.createStatement();
+                QueryRegistrationLogin.insertUser(statement, modelUser);
+            }
+
+        } catch(SQLIntegrityConstraintViolationException e) {
+            throw new DAOException("Username repetition");
+        }
     }
 
-    public String getQuestion() {
-        return question;
-    }
+    public static ModelUser searchUser(ModelUser modelUser) throws SQLException, DAOException, IOException {
+        Connection connection = null;
+        Statement statement = null;
+        try {
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
+            if(!MainGraphicController.CLI) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
+            connection = JdbcConnection.getInstance().getConnection();
 
-    public String getOp1() {
-        return op1;
-    }
-
-    public void setOp1(String op1) {
-        this.op1 = op1;
-    }
-
-    public String getOp2() {
-        return op2;
-    }
-
-    public void setOp2(String op2) {
-        this.op2 = op2;
-    }
-
-    public String getOp3() {
-        return op3;
-    }
-
-    public void setOp3(String op3) {
-        this.op3 = op3;
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchUser(statement, modelUser);
+            if (!rs.first()) {
+                throw new DAOException("Entry not found");
+            }
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelUser;
     }
 
 

@@ -1,1 +1,1 @@
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#cashOutPoints()V
+com.example.buylap.bean.BeanSession#getType()Ljava/lang/String;

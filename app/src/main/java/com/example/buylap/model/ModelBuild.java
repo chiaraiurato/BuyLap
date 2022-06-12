@@ -42,6 +42,7 @@ public class ModelBuild {
     }
 
     public void setSubtitles(String subtitles) {
+
         this.subtitles = subtitles;
     }
 
@@ -49,7 +50,4 @@ public class ModelBuild {
         return urlEbay;
     }
 
-    public void setUrlEbay(String urlEbay) {
-        this.urlEbay = urlEbay;
-    }
 }

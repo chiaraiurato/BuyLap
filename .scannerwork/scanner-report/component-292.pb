@@ -1,1 +1,1 @@
-¤ 2xmlXhr)app/src/main/res/navigation/nav_graph.xml
+¤ 2xmlXªhr.app/src/main/res/layout/activity_take_quiz.xml

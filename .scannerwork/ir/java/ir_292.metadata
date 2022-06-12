@@ -1,1 +1,3 @@
-com.example.buylap.bean.BeanBuild#getType()Ljava/lang/String;
+com.example.buylap.view.RegistrationSellerActivity#onCreate(LBundle;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#instance-init#
+com.example.buylap.controller.graphic.RegistrationGraphicController#<init>(Lcom/example/buylap/view/RegistrationSellerActivity;)V

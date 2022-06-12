@@ -1,1 +1,2 @@
-com.example.buylap.database.query.QueryRegistrationLogin#insertSeller(Ljava/sql/Statement;Lcom/example/buylap/bean/BeanSeller;)V
+com.example.buylap.controller.graphic.MainGraphicController#setGuestAccount()V
+null

@@ -1,1 +1,3 @@
-com.example.buylap.utils.SessionManager#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.adapterGUI.CategoryAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/adapterGUI/CategoryAdapter$ViewHolder;
+com.example.buylap.adapterGUI.CategoryAdapter$ViewHolder#instance-init#
+com.example.buylap.adapterGUI.CategoryAdapter$ViewHolder#<init>(Lcom/example/buylap/adapterGUI/CategoryAdapter;LView;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)V

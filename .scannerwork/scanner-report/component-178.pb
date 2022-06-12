@@ -1,1 +1,1 @@
-² 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java
+² 2javaX8hr:app/src/main/java/com/example/buylap/model/ModelBuild.java

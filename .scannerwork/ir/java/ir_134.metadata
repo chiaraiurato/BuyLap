@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanSession#getType()Ljava/lang/String;
+com.example.buylap.bean.BeanSession#getUsername()Ljava/lang/String;

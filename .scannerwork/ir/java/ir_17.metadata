@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelBuild#getUrl()Ljava/lang/String;
+com.example.buylap.model.ModelBuild#setTitle(Ljava/lang/String;)V

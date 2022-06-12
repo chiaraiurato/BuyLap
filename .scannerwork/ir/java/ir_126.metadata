@@ -1,1 +1,4 @@
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#instance-init#
+com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
+com.example.buylap.controller.applicative.GetCashbackController#<init>()V
+com.example.buylap.controller.applicative.GetCashbackController#instance-init#
+com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;

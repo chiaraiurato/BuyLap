@@ -2,44 +2,81 @@ package com.example.buylap.controller.graphic;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.SettingFragment;
+import com.example.buylap.model.Analytics;
+import com.example.buylap.model.MostViewed;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.utils.Data;
+import com.example.buylap.view.BudgetActivity;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.view.HomeFragment;
+import com.example.buylap.view.InsertComponentActivity;
+import com.example.buylap.view.SellerFragment;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
-public class UserFragmentGraphicController {
-    private final UserFragment settingFragment;
-    private final SessionManager session;
-    private final Map<String, String> user;
+public class HomeGraphicController extends SessionGraphicController{
+    private HomeFragment homeFragment;
+    private SellerFragment sellerFragment;
+    private BeanSession beanSession;
 
-    public UserFragmentGraphicController(UserFragment settingFragment){
-        this.settingFragment = settingFragment;
-        session = new SessionManager(settingFragment.getContext());
-        this.user = session.getUserDetails();
-    }
-    public void initializeSession(View view){
-         if(user.get("type").equals("SELLER")) {
-             settingFragment.setFragmentGuest(view);
-         }
-
-    }
-    public void notifyGuest(View view){
-        Toast.makeText(view.getContext(), "You must be logged", Toast.LENGTH_SHORT).show();
-    }
-    public void onSignOut(){
-
-        session.logoutUser();
-        Intent intent = new Intent(settingFragment.getContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        settingFragment.startActivity(intent);
-
+    public HomeGraphicController(HomeFragment homeFragment) {
+        super(homeFragment.getContext());
+        this.homeFragment = homeFragment;
+        beanSession = getBeanSession();
 
     }
+    public HomeGraphicController(SellerFragment sellerFragment) {
+        super(sellerFragment.getContext());
+        this.sellerFragment = sellerFragment;
+        beanSession = getBeanSession();
+    }
 
+    public List<MostViewed> setAdapterMostView(){
+        Data data = new Data();
+        return data.sendMostView();
 
+    }
+    public List<Analytics> setAdapterAnalytics(){
+        Data data = new Data();
+        return data.sendAnalytics();
+    }
+    public void initializeSession(View view) throws BeanException {
+
+        if(beanSession.getType() != null) {
+            if (beanSession.getType().equals("USER")) {
+                BeanUser beanUser = new BeanUser();
+                beanUser.setUsername(beanSession.getUsername());
+                homeFragment.setUser(beanUser, view);
+
+            } else {
+                homeFragment.setGuest(view);
+            }
+        }
+    }
+
+    public void initializeSessionForSeller(View view){
+
+        BeanSeller beanSeller = new BeanSeller();
+        beanSeller.setUsername(beanSession.getUsername());
+        sellerFragment.setSeller(beanSeller, view);
+    }
+    public void goToTakeQuiz() {
+        Intent intent;
+        if(homeFragment == null) {
+            intent = new Intent(sellerFragment.getContext(), BudgetActivity.class);
+            sellerFragment.startActivity(intent);
+        }
+        else{
+            intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
+            homeFragment.startActivity(intent);
+        }
+    }
+
+    public void gotoInsertComponent() {
+        Intent intent = new Intent(sellerFragment.getContext(), InsertComponentActivity.class);
+        sellerFragment.startActivity(intent);
+    }
 }

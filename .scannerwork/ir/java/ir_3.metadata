@@ -1,3 +1,1 @@
-com.example.buylap.SignUpTest#testingExample()V
-test.TestSeleniumAPI#instance-init#
-test.TestSeleniumAPI#<init>()V
+com.example.buylap.model.users.ModelSeller#setP_iva(Ljava/lang/String;)V

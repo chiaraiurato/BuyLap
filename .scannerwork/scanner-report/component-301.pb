@@ -1,1 +1,1 @@
-­ 2xmlXhr)app/src/main/res/values-w600dp/dimens.xml
+­ 2xmlXZhr,app/src/main/res/layout/viewholder_build.xml
