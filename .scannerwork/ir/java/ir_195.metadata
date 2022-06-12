@@ -1,1 +1,1 @@
-com.example.buylap.model.MostViewed#instance-init#
+com.example.buylap.model.MostViewed#getUrl()Ljava/lang/String;

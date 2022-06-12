@@ -1,1 +1,2 @@
-com.example.buylap.controller.graphic.RegistrationGraphicController#selectTypeAccount(LRadioButton;LRadioButton;)Ljava/lang/String;
+com.example.buylap.controller.graphic.RegistrationGraphicController#goToNavigationActivity()V
+null

@@ -1,1 +1,4 @@
-com.example.buylap.adapter.Homepage#instance-init#
+com.example.buylap.controller.graphic.LoginGraphicController#signInUser()V
+com.example.buylap.bean.BeanUser#instance-init#
+com.example.buylap.bean.BeanUser#<init>()V
+com.example.buylap.controller.graphic.LoginGraphicController#gotoNavigationActivity()V

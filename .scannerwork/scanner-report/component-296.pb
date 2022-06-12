@@ -1,1 +1,1 @@
-¨ 2xmlXjhr)app/src/main/res/layout/fragment_home.xml
+¨ 2xmlXFhr*app/src/main/res/layout/fragment_guest.xml

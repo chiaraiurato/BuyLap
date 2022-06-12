@@ -1,4 +1,6 @@
 package com.example.buylap.cli;
+import static com.example.buylap.cli.view.HomepageUser.IO_EXCEPTION;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -9,6 +11,8 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.EmailVerifyException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
+
+import org.openqa.selenium.devtools.v85.io.IO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -48,7 +52,8 @@ public class Main {
                     "............................................................\n" +
                     "\nAll commands :\n" +
                     "⚫ show (Display in output available commands)\n" +
-                    "⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+                    "⚫ sign_up -t user -u [username] -m [mail] -p [password] (Register new account as user)\n" +
+                    "⚫ sign_up -t seller -u [username] -m [mail] -v [vat number] -p [password] (Register new account as seller)\n" +
                     "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
                     "⚫ skip (skip registration)\n" +
                     "⚫ take_quiz \n" +
@@ -60,21 +65,23 @@ public class Main {
                     "⚫ exit (exit the program) \n");
 
         MainGraphicController mainGraphicController = new MainGraphicController();
-        try{
+
 
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-            String s = bufferRead.readLine();
-            mainGraphicController.parseInput(s);
+        String s = null;
+        try {
+            s = bufferRead.readLine();
+        } catch (IOException e) {
+            System.out.println("IOException");
         }
-        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException | EmailVerifyException e)
-        {
-            e.printStackTrace();
-        }
+        mainGraphicController.parseInput(s);
+
 
 
     }
     public static void show(){
-        System.out.println("\n⚫ sign_up -t [type] -u [username] -m [mail] -p [password] (Register new account as user or seller)\n" +
+        System.out.println("\n⚫ sign_up -t user -u [username] -m [mail] -p [password] (Register new account as user)\n" +
+        "⚫ sign_up -t seller -u [username] -m [mail] -v [vat number] -p [password] (Register new account as seller)\n" +
                 "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
                 "⚫ skip (skip registration)\n");
     }
@@ -87,9 +94,9 @@ public class Main {
             String s = bufferRead.readLine();
             mainGraphicController.parseInput(s);
         }
-        catch(IOException | DAOException | BeanException | SQLException | LengthBeanCardException | ExpiredDateCardException | ParseException | EmailVerifyException e)
+        catch(IOException e)
         {
-            e.printStackTrace();
+            System.out.println(IO_EXCEPTION);
         }
 
     }

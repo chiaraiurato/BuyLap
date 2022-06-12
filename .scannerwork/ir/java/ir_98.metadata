@@ -1,5 +1,5 @@
-com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountSeller()V
-com.example.buylap.bean.BeanSeller#<init>()V
-java.lang.Boolean#equals(Ljava/lang/Object;)Z
-com.example.buylap.bean.BeanSeller#instance-init#
-com.example.buylap.controller.graphic.RegistrationGraphicController#gotoNavigationSeller()V
+com.example.buylap.controller.graphic.RegistrationGraphicController#<init>(Lcom/example/buylap/view/RegistrationActivity;)V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.controller.applicative.RegistrationController#<init>()V
+com.example.buylap.controller.applicative.RegistrationController#instance-init#
+com.example.buylap.utils.SessionManager#instance-init#

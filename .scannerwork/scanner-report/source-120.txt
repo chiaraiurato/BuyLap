@@ -1,5 +1,7 @@
 package com.example.buylap.bean;
 
+import com.example.buylap.exceptions.IvaLengthException;
+
 public class BeanSeller {
     private String businessName;
     private String businessEmail;
@@ -36,7 +38,10 @@ public class BeanSeller {
         return pIva;
     }
 
-    public void setIva(String pIva) {
+    public void setIva(String pIva) throws IvaLengthException {
+        if(pIva.length()>11){
+            throw new IvaLengthException("Not a VAT number");
+        }
         this.pIva = pIva;
     }
 

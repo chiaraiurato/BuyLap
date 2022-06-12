@@ -1,1 +1,1 @@
-ž 2xmlXêhr*app/src/main/res/layout/activity_login.xml
+ž 2xmlX¢hr5app/src/main/res/layout/activity_insert_component.xml

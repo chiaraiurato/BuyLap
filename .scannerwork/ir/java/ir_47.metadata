@@ -1,1 +1,3 @@
-com.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;F)Ljava/sql/ResultSet;
+com.example.buylap.adaptergui.CategoryAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/adaptergui/CategoryAdapter$ViewHolder;
+com.example.buylap.adaptergui.CategoryAdapter$ViewHolder#instance-init#
+com.example.buylap.adaptergui.CategoryAdapter$ViewHolder#<init>(Lcom/example/buylap/adaptergui/CategoryAdapter;LView;Lcom/example/buylap/adaptergui/CategoryAdapter$OnCatListener;)V

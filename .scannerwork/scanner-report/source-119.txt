@@ -1,5 +1,7 @@
 package com.example.buylap.bean;
 
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
+
 public class BeanRequestBuild {
 
     private BeanAnswer keyword;
@@ -18,8 +20,12 @@ public class BeanRequestBuild {
     }
 
     public void setPrice(String price) {
-        float floatPrice = Float.parseFloat(price.substring(0, price.length() - 2));
-        this.price = floatPrice;
+        if(!MainGraphicController.CLI){
+            this.price = Float.parseFloat(price.substring(0, price.length() - 2));
+        }else{
+            this.price = Float.parseFloat(price);
+        }
+
     }
 
 

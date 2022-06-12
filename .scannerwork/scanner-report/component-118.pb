@@ -1,1 +1,1 @@
-v 2javaXhr9app/src/main/java/com/example/buylap/bean/BeanPoints.java
+v 2javaXhr9app/src/main/java/com/example/buylap/bean/BeanPoints.java

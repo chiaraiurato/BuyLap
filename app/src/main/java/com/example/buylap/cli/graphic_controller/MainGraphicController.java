@@ -24,7 +24,7 @@ import java.text.ParseException;
 import java.util.StringTokenizer;
 
 public class MainGraphicController {
-
+    public static final String GUEST = "guest";
     public static final boolean CLI = true;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -55,7 +55,7 @@ public class MainGraphicController {
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void setGuestAccount(){
-        SessionManagerCLI.createLoginSession("guest","guest", "guest");
+        SessionManagerCLI.createLoginSession(GUEST,GUEST, GUEST);
         HomepageUser.main();
     }
 }

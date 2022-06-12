@@ -1,1 +1,1 @@
-com.example.buylap.exceptions.NoCardInsertedException#<init>(Ljava/lang/String;)V
+com.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;

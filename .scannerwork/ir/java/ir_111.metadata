@@ -1,3 +1,1 @@
-com.example.buylap.utils.SessionManager#getUserDetails()Ljava/util/Map;
-java.util.HashMap#<init>()V
-java.util.HashMap#instance-init#
+com.example.buylap.utils.SessionManager#<init>(LContext;)V

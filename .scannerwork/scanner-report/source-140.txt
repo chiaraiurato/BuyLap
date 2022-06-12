@@ -1,4 +1,6 @@
 package com.example.buylap.cli.view;
+import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -20,11 +22,15 @@ public class SignIn {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main(String input) throws IOException, DAOException, BeanException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
+    public static void main(String input){
 
         SignInGraphicController signInGraphicController = new SignInGraphicController();
 
-        signInGraphicController.parseInput(input);
+        try {
+            signInGraphicController.parseInput(input);
+        } catch (BeanException e) {
+            System.out.println(BEAN_EXCEPTION);
+        }
 
     }
 

@@ -1,3 +1,0 @@
-com.example.buylap.adapterGUI.MostViewAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/adapterGUI/MostViewAdapter$ViewHolder;
-com.example.buylap.adapterGUI.MostViewAdapter$ViewHolder#<init>(Lcom/example/buylap/adapterGUI/MostViewAdapter;LView;)V
-com.example.buylap.adapterGUI.MostViewAdapter$ViewHolder#instance-init#

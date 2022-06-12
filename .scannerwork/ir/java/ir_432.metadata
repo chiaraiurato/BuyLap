@@ -1,2 +1,1 @@
-com.example.buylap.controller.graphic.TakeQuizGraphicController#finishQuiz(Lcom/example/buylap/bean/BeanAnswer;Ljava/lang/String;)V
-null
+com.example.buylap.controller.graphic.CashbackGraphicController#uploadPoints()V

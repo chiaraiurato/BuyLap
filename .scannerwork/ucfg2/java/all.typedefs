@@ -31,11 +31,10 @@ h<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/example/buyla
 9setCreditCard(Lcom/example/buylap/model/ModelCreditCard;)ccom.example.buylap.model.users.ModelUser#setCreditCard(Lcom/example/buylap/model/ModelCreditCard;)VS
 
 getEmail()Ecom.example.buylap.model.users.ModelUser#getEmail()Ljava/lang/String;l
-setUsername(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setUsername(Ljava/lang/String;)VÍ
-*com.example.buylap.model.users.ModelSeller(com.example.buylap.model.users.ModelUserU
-
-getP_iva()Gcom.example.buylap.model.users.ModelSeller#getP_iva()Ljava/lang/String;h
-setP_iva(Ljava/lang/String;)Hcom.example.buylap.model.users.ModelSeller#setP_iva(Ljava/lang/String;)V–
+setUsername(Ljava/lang/String;)Icom.example.buylap.model.users.ModelUser#setUsername(Ljava/lang/String;)V‚
+*com.example.buylap.model.users.ModelSeller(com.example.buylap.model.users.ModelUserQ
+getIva()Ecom.example.buylap.model.users.ModelSeller#getIva()Ljava/lang/String;d
+setIva(Ljava/lang/String;)Fcom.example.buylap.model.users.ModelSeller#setIva(Ljava/lang/String;)V–
 P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)|com.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V%
 AppCompatActivityjava.lang.Objectè
 1com.example.buylap.view.SelectTypeAccountActivityAppCompatActivityG
@@ -242,13 +241,12 @@ vinsertComponent(Ljava/sql/Statement;Lcom/example/buylap/model/ModelBuild;Lcom/e
 DupdateObject(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;)Xjava.sql.ResultSet#updateObject(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;)VÄ
 4updateObject(ILjava/lang/Object;Ljava/sql/SQLType;I)Hjava.sql.ResultSet#updateObject(ILjava/lang/Object;Ljava/sql/SQLType;I)V¢
 EupdateObject(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;I)Yjava.sql.ResultSet#updateObject(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;I)V~
-3updateObject(ILjava/lang/Object;Ljava/sql/SQLType;)Gjava.sql.ResultSet#updateObject(ILjava/lang/Object;Ljava/sql/SQLType;)VÂ
+3updateObject(ILjava/lang/Object;Ljava/sql/SQLType;)Gjava.sql.ResultSet#updateObject(ILjava/lang/Object;Ljava/sql/SQLType;)V˛
 #com.example.buylap.model.ModelBuildjava.lang.ObjectN
 
 getTitle()@com.example.buylap.model.ModelBuild#getTitle()Ljava/lang/String;=
 
-getPrice()/com.example.buylap.model.ModelBuild#getPrice()Fe
-setUrlEbay(Ljava/lang/String;)Ccom.example.buylap.model.ModelBuild#setUrlEbay(Ljava/lang/String;)VR
+getPrice()/com.example.buylap.model.ModelBuild#getPrice()FR
 getUrlEbay()Bcom.example.buylap.model.ModelBuild#getUrlEbay()Ljava/lang/String;V
 getSubtitles()Dcom.example.buylap.model.ModelBuild#getSubtitles()Ljava/lang/String;_
 setType(Ljava/lang/String;)@com.example.buylap.model.ModelBuild#setType(Ljava/lang/String;)Vi
@@ -777,7 +775,14 @@ $com.example.buylap.bean.BeanCashbackjava.lang.Object:
 setAmount(D)2com.example.buylap.bean.BeanCashback#setAmount(D)V@
 getAmount()1com.example.buylap.bean.BeanCashback#getAmount()DΩ
 5com.example.buylap.exceptions.NoCardInsertedExceptionjava.lang.Exceptiono
-<init>(Ljava/lang/String;)Qcom.example.buylap.exceptions.NoCardInsertedException#<init>(Ljava/lang/String;)Vƒ
+<init>(Ljava/lang/String;)Qcom.example.buylap.exceptions.NoCardInsertedException#<init>(Ljava/lang/String;)V√
+-com.example.buylap.adaptergui.CategoryAdapterjava.lang.ObjectÕ
+MonBindViewHolder(Lcom/example/buylap/adaptergui/CategoryAdapter$ViewHolder;I)|com.example.buylap.adaptergui.CategoryAdapter#onBindViewHolder(Lcom/example/buylap/adaptergui/CategoryAdapter$ViewHolder;I)VO
+getItemCount()=com.example.buylap.adaptergui.CategoryAdapter#getItemCount()Iﬁ
+U<init>(Ljava/util/List;Lcom/example/buylap/adaptergui/CategoryAdapter$OnCatListener;)Ñcom.example.buylap.adaptergui.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adaptergui/CategoryAdapter$OnCatListener;)V+
+RecyclerView.ViewHolderjava.lang.Objecti
+8com.example.buylap.adaptergui.CategoryAdapter$ViewHolderView.OnClickListenerRecyclerView.ViewHolderO
+;com.example.buylap.adaptergui.CategoryAdapter$OnCatListenerjava.lang.Objectƒ
 (com.example.buylap.view.TakeQuizActivityAppCompatActivityb
 setOp3(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp3(Ljava/lang/String;)Vb
 setOp1(Ljava/lang/String;)Dcom.example.buylap.view.TakeQuizActivity#setOp1(Ljava/lang/String;)Vä
@@ -951,7 +956,9 @@ insert(IJ);java.lang.StringBuilder#insert(IJ)Ljava/lang/StringBuilder;]
 insert(ID);java.lang.StringBuilder#insert(ID)Ljava/lang/StringBuilder;o
 )writeObject(Ljava/io/ObjectOutputStream;)Bjava.lang.StringBuilder#writeObject(Ljava/io/ObjectOutputStream;)VI
 
-insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;Ø
+insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;≥
+0com.example.buylap.exceptions.IvaLengthExceptionjava.lang.Exceptionj
+<init>(Ljava/lang/String;)Lcom.example.buylap.exceptions.IvaLengthException#<init>(Ljava/lang/String;)VØ
 !com.example.buylap.model.QuizListjava.lang.Object[
 setOp3(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp3(Ljava/lang/String;)V[
 setOp1(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp1(Ljava/lang/String;)VH
@@ -961,9 +968,14 @@ insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;Ø
 setOp2(Ljava/lang/String;)=com.example.buylap.model.QuizList#setOp2(Ljava/lang/String;)V«
 P<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)scom.example.buylap.model.QuizList#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ve
 setQuestion(Ljava/lang/String;)Bcom.example.buylap.model.QuizList#setQuestion(Ljava/lang/String;)VR
-getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;f
+getQuestion()Acom.example.buylap.model.QuizList#getQuestion()Ljava/lang/String;Ø
 com.example.buylap.SignUpTestjava.lang.Object3
-<init>()'com.example.buylap.SignUpTest#<init>()VÚ
+<init>()'com.example.buylap.SignUpTest#<init>()VG
+testSignUpSeller()1com.example.buylap.SignUpTest#testSignUpSeller()Vˆ
+)com.example.buylap.database.dao.DAOsellerjava.lang.Object£
+:insertSeller(Lcom/example/buylap/model/users/ModelSeller;)ecom.example.buylap.database.dao.DAOseller#insertSeller(Lcom/example/buylap/model/users/ModelSeller;)V?
+<init>()3com.example.buylap.database.dao.DAOseller#<init>()Vœ
+:searchSeller(Lcom/example/buylap/model/users/ModelSeller;)êcom.example.buylap.database.dao.DAOseller#searchSeller(Lcom/example/buylap/model/users/ModelSeller;)Lcom/example/buylap/model/users/ModelSeller;Ú
 (com.example.buylap.cli.view.HomepageUserjava.lang.Object8
 run()/com.example.buylap.cli.view.HomepageUser#run()V:
 main()0com.example.buylap.cli.view.HomepageUser#main()V>
@@ -972,7 +984,9 @@ Ccom.example.buylap.cli.graphic_controller.HomepageGraphicControllerjava.lang.
 <init>()Mcom.example.buylap.cli.graphic_controller.HomepageGraphicController#<init>()VÜ
 initializeSessionCLI()lcom.example.buylap.cli.graphic_controller.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;e
 showCommands()Scom.example.buylap.cli.graphic_controller.HomepageGraphicController#showCommands()Vç
-"executeCommand(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.HomepageGraphicController#executeCommand(Ljava/lang/String;)Vâ
+"executeCommand(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.HomepageGraphicController#executeCommand(Ljava/lang/String;)V©
++com.example.buylap.exceptions.BeanExceptionjava.lang.Exceptione
+<init>(Ljava/lang/String;)Gcom.example.buylap.exceptions.BeanException#<init>(Ljava/lang/String;)Vâ
 Ccom.example.buylap.controller.graphic.RegistrationGraphicControllerjava.lang.Objecty
 goToNavigationActivity()]com.example.buylap.controller.graphic.RegistrationGraphicController#goToNavigationActivity()Vy
 registerNewAccountUser()]com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountUser()Vm
@@ -1144,28 +1158,21 @@ CcomputeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)gjava.util.
 afterNodeInsertion(Z)(java.util.HashMap#afterNodeInsertion(Z)Vi
 )afterNodeAccess(Ljava/util/HashMap$Node;)<java.util.HashMap#afterNodeAccess(Ljava/util/HashMap$Node;)Vi
 )writeObject(Ljava/io/ObjectOutputStream;)<java.util.HashMap#writeObject(Ljava/io/ObjectOutputStream;)V#
-size()java.util.HashMap#size()I√
--com.example.buylap.adapterGUI.CategoryAdapterjava.lang.Objectﬁ
-U<init>(Ljava/util/List;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)Ñcom.example.buylap.adapterGUI.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)VÕ
-MonBindViewHolder(Lcom/example/buylap/adapterGUI/CategoryAdapter$ViewHolder;I)|com.example.buylap.adapterGUI.CategoryAdapter#onBindViewHolder(Lcom/example/buylap/adapterGUI/CategoryAdapter$ViewHolder;I)VO
-getItemCount()=com.example.buylap.adapterGUI.CategoryAdapter#getItemCount()I+
-RecyclerView.ViewHolderjava.lang.Objecti
-8com.example.buylap.adapterGUI.CategoryAdapter$ViewHolderView.OnClickListenerRecyclerView.ViewHolderO
-;com.example.buylap.adapterGUI.CategoryAdapter$OnCatListenerjava.lang.Objectµ
+size()java.util.HashMap#size()Iµ
 &com.example.buylap.utils.ContextHolderjava.lang.Object<
 <init>()0com.example.buylap.utils.ContextHolder#<init>()VL
 getContext()<com.example.buylap.utils.ContextHolder#getContext()LContext;m
 getInstance()\com.example.buylap.utils.ContextHolder#getInstance()Lcom/example/buylap/utils/ContextHolder;Ã
 Gcom.example.buylap.cli.graphic_controller.AddComponentGraphicControllerjava.lang.Object]
 <init>()Qcom.example.buylap.cli.graphic_controller.AddComponentGraphicController#<init>()Vè
-!saveComponent(Ljava/lang/String;)jcom.example.buylap.cli.graphic_controller.AddComponentGraphicController#saveComponent(Ljava/lang/String;)VΩ
+!saveComponent(Ljava/lang/String;)jcom.example.buylap.cli.graphic_controller.AddComponentGraphicController#saveComponent(Ljava/lang/String;)VÕ
+.com.example.buylap.cli.utils.SessionManagerCLIjava.lang.ObjectD
+<init>()8com.example.buylap.cli.utils.SessionManagerCLI#<init>()Vx
+getUserDetails()dcom.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Lcom/example/buylap/bean/BeanSession;»
+JcreateLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)zcom.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VΩ
 Ccom.example.buylap.controller.applicative.InsertComponentControllerjava.lang.ObjectY
 <init>()Mcom.example.buylap.controller.applicative.InsertComponentController#<init>()Và
-VsaveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSeller;)≠com.example.buylap.controller.applicative.InsertComponentController#saveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSeller;)Ljava/lang/Boolean;∑
-.com.example.buylap.cli.utils.SessionManagerCLIjava.lang.ObjectD
-<init>()8com.example.buylap.cli.utils.SessionManagerCLI#<init>()Vb
-getUserDetails()Ncom.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;»
-JcreateLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)zcom.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V¿
+VsaveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSeller;)≠com.example.buylap.controller.applicative.InsertComponentController#saveComponent(Lcom/example/buylap/bean/BeanBuild;Lcom/example/buylap/bean/BeanSeller;)Ljava/lang/Boolean;¿
 java.lang.Numberjava.lang.Objectjava.io.Serializable.
 shortValue()java.lang.Number#shortValue()S&
 <init>()java.lang.Number#<init>()V,
@@ -1205,15 +1212,19 @@ toString(),java.lang.Float#toString()Ljava/lang/String;'
 doubleValue()java.lang.Float#doubleValue()D/
 isInfinite(F)java.lang.Float#isInfinite(F)Z+
 isFinite(F)java.lang.Float#isFinite(F)Z<
-toString(F)-java.lang.Float#toString(F)Ljava/lang/String;Õ
+toString(F)-java.lang.Float#toString(F)Ljava/lang/String;ˇ
 Ccom.example.buylap.cli.graphic_controller.CashbackGraphicControllerjava.lang.Objectm
 deleteCreditCard()Wcom.example.buylap.cli.graphic_controller.CashbackGraphicController#deleteCreditCard()VY
 <init>()Mcom.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()Vé
-uploadCreditCard()xcom.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadCreditCard()Lcom/example/buylap/bean/BeanCard;à
+uploadCreditCard()xcom.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadCreditCard()Lcom/example/buylap/bean/BeanCard;Ø
+3cashOutPoints(Lcom/example/buylap/bean/BeanPoints;)xcom.example.buylap.cli.graphic_controller.CashbackGraphicController#cashOutPoints(Lcom/example/buylap/bean/BeanPoints;)Và
 uploadPoints()vcom.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadPoints()Lcom/example/buylap/bean/BeanPoints;ç
-"saveCreditCard(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.CashbackGraphicController#saveCreditCard(Ljava/lang/String;)V©
-+com.example.buylap.exceptions.BeanExceptionjava.lang.Exceptione
-<init>(Ljava/lang/String;)Gcom.example.buylap.exceptions.BeanException#<init>(Ljava/lang/String;)V∑
+"saveCreditCard(Ljava/lang/String;)gcom.example.buylap.cli.graphic_controller.CashbackGraphicController#saveCreditCard(Ljava/lang/String;)Vı
+$com.example.buylap.cli.view.Cashbackjava.lang.Object<
+	cashOut()/com.example.buylap.cli.view.Cashback#cashOut()V6
+main(),com.example.buylap.cli.view.Cashback#main()V:
+<init>().com.example.buylap.cli.view.Cashback#<init>()Và
+/setPoints(Lcom/example/buylap/bean/BeanPoints;)Ucom.example.buylap.cli.view.Cashback#setPoints(Lcom/example/buylap/bean/BeanPoints;)V∑
 2com.example.buylap.exceptions.EmailVerifyExceptionjava.lang.Exceptionl
 <init>(Ljava/lang/String;)Ncom.example.buylap.exceptions.EmailVerifyException#<init>(Ljava/lang/String;)Vê
 Acom.example.buylap.controller.graphic.NavigationGraphicController>com.example.buylap.controller.graphic.SessionGraphicControllerx
@@ -1279,11 +1290,7 @@ Acom.example.buylap.cli.graphic_controller.SignInGraphicControllerjava.lang.Ob
 sendQuestion()<com.example.buylap.utils.Data#sendQuestion()Ljava/util/List;’
 'com.example.buylap.InsertCreditCardTestjava.lang.ObjectY
 testInsertCreditCard()?com.example.buylap.InsertCreditCardTest#testInsertCreditCard()V=
-<init>()1com.example.buylap.InsertCreditCardTest#<init>()Vˆ
-)com.example.buylap.database.dao.DAOsellerjava.lang.Object£
-:insertSeller(Lcom/example/buylap/model/users/ModelSeller;)ecom.example.buylap.database.dao.DAOseller#insertSeller(Lcom/example/buylap/model/users/ModelSeller;)V?
-<init>()3com.example.buylap.database.dao.DAOseller#<init>()Vœ
-:searchSeller(Lcom/example/buylap/model/users/ModelSeller;)êcom.example.buylap.database.dao.DAOseller#searchSeller(Lcom/example/buylap/model/users/ModelSeller;)Lcom/example/buylap/model/users/ModelSeller;¸
+<init>()1com.example.buylap.InsertCreditCardTest#<init>()V¸
 #com.example.buylap.model.MostViewedjava.lang.ObjectN
 
 getTitle()@com.example.buylap.model.MostViewed#getTitle()Ljava/lang/String;T
@@ -1292,29 +1299,7 @@ getTitle()@com.example.buylap.model.MostViewed#getTitle()Ljava/lang/String;T
 setSubtitle(Ljava/lang/String;)Dcom.example.buylap.model.MostViewed#setSubtitle(Ljava/lang/String;)VJ
 getUrl()>com.example.buylap.model.MostViewed#getUrl()Ljava/lang/String;a
 setTitle(Ljava/lang/String;)Acom.example.buylap.model.MostViewed#setTitle(Ljava/lang/String;)V]
-setUrl(Ljava/lang/String;)?com.example.buylap.model.MostViewed#setUrl(Ljava/lang/String;)V¥
-java.util.Objectsjava.lang.Objectê
-4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Xjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;ò
-8requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)\java.util.Objects#requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;E
-checkFromIndexSize(III)*java.util.Objects#checkFromIndexSize(III)I`
-toString(Ljava/lang/Object;)@java.util.Objects#toString(Ljava/lang/Object;)Ljava/lang/String;M
-nonNull(Ljava/lang/Object;).java.util.Objects#nonNull(Ljava/lang/Object;)ZÑ
-.toString(Ljava/lang/Object;Ljava/lang/String;)Rjava.util.Objects#toString(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;I
-hash([Ljava/lang/Object;),java.util.Objects#hash([Ljava/lang/Object;)IK
-isNull(Ljava/lang/Object;)-java.util.Objects#isNull(Ljava/lang/Object;)Z¥
-FrequireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)jjava.util.Objects#requireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;o
-,equals(Ljava/lang/Object;Ljava/lang/Object;)?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)ZA
-checkFromToIndex(III)(java.util.Objects#checkFromToIndex(III)I¶
-?requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)cjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;O
-hashCode(Ljava/lang/Object;)/java.util.Objects#hashCode(Ljava/lang/Object;)I'
-<init>()java.util.Objects#<init>()Vù
-Ccompare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Vjava.util.Objects#compare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Iw
-0deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Cjava.util.Objects#deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Zl
-"requireNonNull(Ljava/lang/Object;)Fjava.util.Objects#requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;3
-checkIndex(II)!java.util.Objects#checkIndex(II)I¨
-$com.example.buylap.cli.view.Cashbackjava.lang.Object6
-main(),com.example.buylap.cli.view.Cashback#main()V:
-<init>().com.example.buylap.cli.view.Cashback#<init>()Vî
+setUrl(Ljava/lang/String;)?com.example.buylap.model.MostViewed#setUrl(Ljava/lang/String;)Vî
 &com.example.buylap.cli.view.CreditCardjava.lang.Object\
 save(Ljava/lang/String;)@com.example.buylap.cli.view.CreditCard#save(Ljava/lang/String;)V<
 <init>()0com.example.buylap.cli.view.CreditCard#<init>()V<
@@ -1375,7 +1360,31 @@ sendType()Lcom.example.buylap.view.InsertComponentActivity#sendType()Ljava/lang
 <init>(),com.example.buylap.cli.view.SignUp#<init>()V¥
 Acom.example.buylap.cli.graphic_controller.SignUpGraphicControllerjava.lang.ObjectW
 <init>()Kcom.example.buylap.cli.graphic_controller.SignUpGraphicController#<init>()VÉ
-parseInput(Ljava/lang/String;)acom.example.buylap.cli.graphic_controller.SignUpGraphicController#parseInput(Ljava/lang/String;)Vl
+parseInput(Ljava/lang/String;)acom.example.buylap.cli.graphic_controller.SignUpGraphicController#parseInput(Ljava/lang/String;)V«
+-com.example.buylap.adaptergui.MostViewAdapterjava.lang.ObjectÕ
+MonBindViewHolder(Lcom/example/buylap/adaptergui/MostViewAdapter$ViewHolder;I)|com.example.buylap.adaptergui.MostViewAdapter#onBindViewHolder(Lcom/example/buylap/adaptergui/MostViewAdapter$ViewHolder;I)Vc
+<init>(Ljava/util/List;)Gcom.example.buylap.adaptergui.MostViewAdapter#<init>(Ljava/util/List;)VO
+getItemCount()=com.example.buylap.adaptergui.MostViewAdapter#getItemCount()IS
+8com.example.buylap.adaptergui.MostViewAdapter$ViewHolderRecyclerView.ViewHolder¥
+java.util.Objectsjava.lang.Objectê
+4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Xjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;ò
+8requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)\java.util.Objects#requireNonNullElse(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;E
+checkFromIndexSize(III)*java.util.Objects#checkFromIndexSize(III)I`
+toString(Ljava/lang/Object;)@java.util.Objects#toString(Ljava/lang/Object;)Ljava/lang/String;M
+nonNull(Ljava/lang/Object;).java.util.Objects#nonNull(Ljava/lang/Object;)ZÑ
+.toString(Ljava/lang/Object;Ljava/lang/String;)Rjava.util.Objects#toString(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;I
+hash([Ljava/lang/Object;),java.util.Objects#hash([Ljava/lang/Object;)IK
+isNull(Ljava/lang/Object;)-java.util.Objects#isNull(Ljava/lang/Object;)Z¥
+FrequireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)jjava.util.Objects#requireNonNullElseGet(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;o
+,equals(Ljava/lang/Object;Ljava/lang/Object;)?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)ZA
+checkFromToIndex(III)(java.util.Objects#checkFromToIndex(III)I¶
+?requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)cjava.util.Objects#requireNonNull(Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;O
+hashCode(Ljava/lang/Object;)/java.util.Objects#hashCode(Ljava/lang/Object;)I'
+<init>()java.util.Objects#<init>()Vù
+Ccompare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Vjava.util.Objects#compare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Iw
+0deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Cjava.util.Objects#deepEquals(Ljava/lang/Object;Ljava/lang/Object;)Zl
+"requireNonNull(Ljava/lang/Object;)Fjava.util.Objects#requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;3
+checkIndex(II)!java.util.Objects#checkIndex(II)Il
 $com.example.buylap.view.UserFragmentFragment:
 <init>().com.example.buylap.view.UserFragment#<init>()V>
 &com.example.buylap.view.UserFragment$1View.OnClickListener‹
@@ -2187,15 +2196,10 @@ $com.example.buylap.view.MainActivityAppCompatActivity:
 <init>().com.example.buylap.view.MainActivity#<init>()V>
 &com.example.buylap.view.MainActivity$1View.OnClickListener>
 &com.example.buylap.view.MainActivity$2View.OnClickListener>
-&com.example.buylap.view.MainActivity$3View.OnClickListenerÕ
-.com.example.buylap.adapterGUI.AnalyticsAdapterjava.lang.Objectd
-<init>(Ljava/util/List;)Hcom.example.buylap.adapterGUI.AnalyticsAdapter#<init>(Ljava/util/List;)V–
-NonBindViewHolder(Lcom/example/buylap/adapterGUI/AnalyticsAdapter$ViewHolder;I)~com.example.buylap.adapterGUI.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/adapterGUI/AnalyticsAdapter$ViewHolder;I)VP
-getItemCount()>com.example.buylap.adapterGUI.AnalyticsAdapter#getItemCount()IT
-9com.example.buylap.adapterGUI.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolderÄ
+&com.example.buylap.view.MainActivity$3View.OnClickListenerÄ
 *com.example.buylap.utils.ConstantNameTablejava.lang.Object@
 <init>()4com.example.buylap.utils.ConstantNameTable#<init>()Vä
-*com.example.buylap.view.QuizResultActivity;com.example.buylap.adapterGUI.CategoryAdapter$OnCatListenerAppCompatActivityJ
+*com.example.buylap.view.QuizResultActivityAppCompatActivity;com.example.buylap.adaptergui.CategoryAdapter$OnCatListenerJ
 onCatClick(I)9com.example.buylap.view.QuizResultActivity#onCatClick(I)V@
 <init>()4com.example.buylap.view.QuizResultActivity#<init>()VD
 ,com.example.buylap.view.QuizResultActivity$1View.OnClickListenerl
@@ -2261,7 +2265,12 @@ nanoTime()java.lang.System#nanoTime()Jt
 uploadPoints()Ocom.example.buylap.controller.graphic.CashbackGraphicController#uploadPoints()Vu
 gotoNavigationActivity()Ycom.example.buylap.controller.graphic.CashbackGraphicController#gotoNavigationActivity()Vc
 cashOutPoints()Pcom.example.buylap.controller.graphic.CashbackGraphicController#cashOutPoints()V©
-2<init>(Lcom/example/buylap/view/CashbackFragment;)scom.example.buylap.controller.graphic.CashbackGraphicController#<init>(Lcom/example/buylap/view/CashbackFragment;)VÅ
+2<init>(Lcom/example/buylap/view/CashbackFragment;)scom.example.buylap.controller.graphic.CashbackGraphicController#<init>(Lcom/example/buylap/view/CashbackFragment;)VÕ
+.com.example.buylap.adaptergui.AnalyticsAdapterjava.lang.Object–
+NonBindViewHolder(Lcom/example/buylap/adaptergui/AnalyticsAdapter$ViewHolder;I)~com.example.buylap.adaptergui.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/adaptergui/AnalyticsAdapter$ViewHolder;I)Vd
+<init>(Ljava/util/List;)Hcom.example.buylap.adaptergui.AnalyticsAdapter#<init>(Ljava/util/List;)VP
+getItemCount()>com.example.buylap.adaptergui.AnalyticsAdapter#getItemCount()IT
+9com.example.buylap.adaptergui.AnalyticsAdapter$ViewHolderRecyclerView.ViewHolderÅ
 *com.example.buylap.view.NavigationActivityAppCompatActivity@
 <init>()4com.example.buylap.view.NavigationActivity#<init>()V<
 (NavigationBarView.OnItemSelectedListenerjava.lang.ObjectX
@@ -2269,9 +2278,4 @@ nanoTime()java.lang.System#nanoTime()Jt
 java.io.FileNotFoundExceptionjava.io.IOException3
 <init>()'java.io.FileNotFoundException#<init>()VW
 <init>(Ljava/lang/String;)9java.io.FileNotFoundException#<init>(Ljava/lang/String;)V{
-,<init>(Ljava/lang/String;Ljava/lang/String;)Kjava.io.FileNotFoundException#<init>(Ljava/lang/String;Ljava/lang/String;)V«
--com.example.buylap.adapterGUI.MostViewAdapterjava.lang.Objectc
-<init>(Ljava/util/List;)Gcom.example.buylap.adapterGUI.MostViewAdapter#<init>(Ljava/util/List;)VÕ
-MonBindViewHolder(Lcom/example/buylap/adapterGUI/MostViewAdapter$ViewHolder;I)|com.example.buylap.adapterGUI.MostViewAdapter#onBindViewHolder(Lcom/example/buylap/adapterGUI/MostViewAdapter$ViewHolder;I)VO
-getItemCount()=com.example.buylap.adapterGUI.MostViewAdapter#getItemCount()IS
-8com.example.buylap.adapterGUI.MostViewAdapter$ViewHolderRecyclerView.ViewHolder
+,<init>(Ljava/lang/String;Ljava/lang/String;)Kjava.io.FileNotFoundException#<init>(Ljava/lang/String;Ljava/lang/String;)V

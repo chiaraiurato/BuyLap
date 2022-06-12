@@ -1,1 +1,5 @@
-com.example.buylap.view.MainActivity#instance-init#
+com.example.buylap.adapter.HomepageAdapter#switchSettingPage()LFragment;
+com.example.buylap.view.GuestFragment#instance-init#
+com.example.buylap.view.GuestFragment#<init>()V
+com.example.buylap.view.UserFragment#instance-init#
+com.example.buylap.view.UserFragment#<init>()V

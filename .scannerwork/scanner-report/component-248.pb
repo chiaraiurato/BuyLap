@@ -1,1 +1,1 @@
-ø 2xmlXhr4app/src/main/res/drawable/ic_baseline_vpn_key_24.xml
+ø 2xmlXhr:app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml

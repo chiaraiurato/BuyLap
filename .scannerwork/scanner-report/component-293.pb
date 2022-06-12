@@ -1,1 +1,1 @@
-¥ 2xmlXOhr(app/src/main/res/layout/error_dialog.xml
+¥ 2xmlXªhr.app/src/main/res/layout/activity_take_quiz.xml

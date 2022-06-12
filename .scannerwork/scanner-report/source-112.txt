@@ -1,4 +1,4 @@
-package com.example.buylap.adapterGUI;
+package com.example.buylap.adaptergui;
 
 import android.view.LayoutInflater;
 import android.view.View;

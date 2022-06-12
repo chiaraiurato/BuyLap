@@ -14,6 +14,7 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
+import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
 
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class SignInGraphicController {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String input) throws BeanException, DAOException, IOException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
+    public void parseInput(String input) throws BeanException {
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");
 
@@ -38,21 +39,33 @@ public class SignInGraphicController {
         String username = token[2];
         String password = token[3];
         if (type.equals("user")) {
+            ModelUser modelUser = null;
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(username);
             beanUser.setPassword(password);
-           // ModelUser modelUser = loginController.searchUser(beanUser);
-            SessionManagerCLI.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+            try {
+                modelUser = loginController.searchUser(beanUser);
+            } catch (DAOException e) {
+                e.printStackTrace();
+            }
+            assert modelUser != null;
+            System.out.println("model user "+modelUser.getUsername());
+            SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "user");
             HomepageUser.main();
 
         }else if(type.equals("seller")){
-
+            ModelSeller modelSeller = null;
             BeanSeller beanSeller = new BeanSeller();
             beanSeller.setUsername(username);
             beanSeller.setPassword(password);
 
-           // beanSeller = loginController.searchSeller(beanSeller);
-            SessionManagerCLI.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            try {
+                modelSeller = loginController.searchSeller(beanSeller);
+            } catch (DAOException e) {
+                e.printStackTrace();
+            }
+            assert modelSeller != null;
+            SessionManagerCLI.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "seller");
             HomepageSeller.main();
         }
     }

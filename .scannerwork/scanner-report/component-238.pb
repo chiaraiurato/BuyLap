@@ -1,1 +1,1 @@
-î 2xmlXhr1app/src/main/res/drawable/ic_baseline_mail_24.xml
+î 2xmlXhr3app/src/main/res/drawable/ic_baseline_laptop_24.xml

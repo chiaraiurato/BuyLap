@@ -1,5 +1,7 @@
 package com.example.buylap.cli.view;
 
+import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -22,10 +24,14 @@ public class TakeQuiz{
         //View TakeQuiz
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main() throws IOException, DAOException, BeanException, SQLException, ExpiredDateCardException, ParseException, LengthBeanCardException {
-
+    public static void main(){
         System.out.println("---------------- TAKE QUIZ ----------------");
-        QuizGraphicController quizGraphicController = new QuizGraphicController();
+        QuizGraphicController quizGraphicController = null;
+        try {
+            quizGraphicController = new QuizGraphicController();
+        } catch (BeanException e) {
+            System.out.println(BEAN_EXCEPTION);
+        }
         System.out.println("\nChoose budget(up to 2000 $ ) ->");
         String price = null;
         String firstAnswer = null;
@@ -75,6 +81,8 @@ public class TakeQuiz{
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+        System.out.println(price);
+        assert quizGraphicController != null;
         quizGraphicController.startQuiz(firstAnswer, secondAnswer, thirdAnswer, price);
 
     }

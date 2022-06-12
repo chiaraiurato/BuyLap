@@ -1,1 +1,1 @@
-s 2javaXAhr7app/src/main/java/com/example/buylap/bean/BeanCard.java
+s 2javaX@hr7app/src/main/java/com/example/buylap/bean/BeanCard.java

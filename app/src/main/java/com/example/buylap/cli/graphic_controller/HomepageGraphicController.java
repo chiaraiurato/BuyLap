@@ -145,6 +145,7 @@ public class HomepageGraphicController {
         } catch (BeanException e) {
             System.out.println("BeanException");
         }
+        assert beanSession != null;
         if(beanSession.getUsername().equals("guest")) {
             System.out.println(
                             "⚫ take_quiz \n" +

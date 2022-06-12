@@ -1,1 +1,1 @@
-Æ 2xmlXhr!app/src/main/res/values/style.xml
+Æ 2xmlX%hr#app/src/main/res/values/strings.xml

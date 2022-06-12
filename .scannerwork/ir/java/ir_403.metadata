@@ -1,7 +1,5 @@
-com.example.buylap.cli.view.HomepageSeller#run()V
-com.example.buylap.cli.graphic_controller.HomepageGraphicController#<init>()V
-java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V
-java.io.BufferedReader#instance-init#
-java.io.BufferedReader#<init>(Ljava/io/Reader;)V
-com.example.buylap.cli.graphic_controller.HomepageGraphicController#instance-init#
-java.io.InputStreamReader#instance-init#
+com.example.buylap.adapter.HomepageAdapter#switchMainPage()LFragment;
+com.example.buylap.view.HomeFragment#<init>()V
+com.example.buylap.view.SellerFragment#instance-init#
+com.example.buylap.view.HomeFragment#instance-init#
+com.example.buylap.view.SellerFragment#<init>()V

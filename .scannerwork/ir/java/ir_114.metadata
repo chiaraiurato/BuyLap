@@ -1,3 +1,1 @@
-com.example.buylap.adapterGUI.CategoryAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/adapterGUI/CategoryAdapter$ViewHolder;
-com.example.buylap.adapterGUI.CategoryAdapter$ViewHolder#instance-init#
-com.example.buylap.adapterGUI.CategoryAdapter$ViewHolder#<init>(Lcom/example/buylap/adapterGUI/CategoryAdapter;LView;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)V
+com.example.buylap.utils.SessionManager#logoutUser()V

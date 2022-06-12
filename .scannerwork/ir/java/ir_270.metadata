@@ -1,1 +1,5 @@
-com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.controller.graphic.InsertComponentGraphicController#<init>(Lcom/example/buylap/view/InsertComponentActivity;)V
+com.example.buylap.bean.BeanBuild#<init>()V
+com.example.buylap.bean.BeanBuild#instance-init#
+com.example.buylap.controller.applicative.InsertComponentController#<init>()V
+com.example.buylap.controller.applicative.InsertComponentController#instance-init#

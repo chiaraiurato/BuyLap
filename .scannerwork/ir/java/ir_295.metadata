@@ -1,1 +1,1 @@
-com.example.buylap.view.RegistrationSellerActivity#sendPassword()Ljava/lang/String;
+com.example.buylap.exceptions.ExpiredDateCardException#instance-init#

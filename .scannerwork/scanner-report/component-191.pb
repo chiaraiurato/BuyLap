@@ -1,1 +1,1 @@
-¿ 2javaX5hr>app/src/main/java/com/example/buylap/utils/SessionManager.java
+¿ 2javaX"hr@app/src/main/java/com/example/buylap/utils/PropertiesReader.java

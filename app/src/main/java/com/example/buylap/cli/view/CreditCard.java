@@ -3,11 +3,8 @@ package com.example.buylap.cli.view;
 import com.example.buylap.cli.graphic_controller.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 
-import java.text.ParseException;
-import java.util.zip.DataFormatException;
 
 public class CreditCard {
     private CreditCard(){
@@ -21,6 +18,7 @@ public class CreditCard {
             e.printStackTrace();
         }
         try {
+            assert cashbackGraphicController != null;
             cashbackGraphicController.saveCreditCard(input);
         } catch (DAOException e) {
             System.out.println("Error while saving credit card...");
@@ -37,6 +35,7 @@ public class CreditCard {
             e.printStackTrace();
         }
         try {
+            assert cashbackGraphicController != null;
             cashbackGraphicController.deleteCreditCard();
         } catch (DAOException e) {
             System.out.println("Error while deleting credit card");

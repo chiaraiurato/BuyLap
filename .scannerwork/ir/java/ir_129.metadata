@@ -1,1 +1,1 @@
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadPoints()Lcom/example/buylap/bean/BeanPoints;
+com.example.buylap.bean.BeanSession#setType(Ljava/lang/String;)V

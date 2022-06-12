@@ -1,1 +1,1 @@
-¤ 2xmlXªhr.app/src/main/res/layout/activity_take_quiz.xml
+¤ 2xmlXŠhr+app/src/main/res/layout/activity_signup.xml

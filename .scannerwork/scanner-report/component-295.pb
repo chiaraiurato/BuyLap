@@ -1,1 +1,1 @@
-§ 2xmlXFhr*app/src/main/res/layout/fragment_guest.xml
+§ 2xmlXÇhr-app/src/main/res/layout/fragment_cashback.xml

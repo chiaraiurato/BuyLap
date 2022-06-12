@@ -1,5 +1,7 @@
 package com.example.buylap.cli.graphic_controller;
 
+import static com.example.buylap.cli.view.HomepageUser.IO_EXCEPTION;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -30,16 +32,16 @@ public class QuizGraphicController {
 
     private TakeQuizController takeQuizController;
     private final BeanAnswer beanAnswer;
-    private Map<String, String> user;
-    public QuizGraphicController() {
+    private BeanSession beanSession;
+    public QuizGraphicController() throws BeanException {
         beanAnswer = new BeanAnswer();
         takeQuizController = new TakeQuizController();
-        this.user = SessionManagerCLI.getUserDetails();
+        this.beanSession = SessionManagerCLI.getUserDetails();
     }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void startQuiz(String a, String b, String c, String price ) throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
+    public void startQuiz(String a, String b, String c, String price ){
         if (c.equals("1")) {
             beanAnswer.setAnswer3("Gaming");
         } else if (c.equals("2")) {
@@ -53,9 +55,8 @@ public class QuizGraphicController {
         beanRequestBuild.setPrice(price);
         List<BeanBuild> beanBuild = takeQuizController.createBuild(beanRequestBuild);
         if (beanBuild.isEmpty()) {
-            System.out.println("No build found! Try with another price\n");
+            System.out.println("No build found! Try with another price\n"+ beanRequestBuild.getPrice());
         } else {
-
             CommandLineTable st = new CommandLineTable();
             st.setShowVerticalLines(true);
             st.setHeaders("Type", "Title", "Subtitles", "Price", "Link");
@@ -65,16 +66,20 @@ public class QuizGraphicController {
                         beanBuild.get(index).getUrlEbay());
             }
             st.print();
-            runHomepage();
         }
+        runHomepage();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void runHomepage() throws IOException, DAOException, BeanException, SQLException, LengthBeanCardException, ExpiredDateCardException, ParseException {
-        if(Objects.equals(user.get("type"), "USER") || Objects.equals(user.get("type"), "GUEST") ) {
-            HomepageUser.run();
+    private void runHomepage() {
+        if(beanSession.getType().equals("user") || beanSession.getType().equals("guest") ) {
+            try {
+                HomepageUser.run();
+            } catch (IOException e) {
+                System.out.println(IO_EXCEPTION);
+            }
 
-        }else if(Objects.equals(user.get("type"), "SELLER")){
+        }else if(beanSession.getType().equals("seller")){
             HomepageSeller.run();
         }
     }

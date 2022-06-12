@@ -1,1 +1,3 @@
-com.example.buylap.view.TakeQuizActivity#resetColor()V
+com.example.buylap.view.TakeQuizActivity#onCreate(LBundle;)V
+com.example.buylap.controller.graphic.TakeQuizGraphicController#instance-init#
+com.example.buylap.controller.graphic.TakeQuizGraphicController#<init>(Lcom/example/buylap/view/TakeQuizActivity;)V

@@ -1,1 +1,1 @@
-p 2javaXBhrDapp/src/main/java/com/example/buylap/adapterGUI/MostViewAdapter.java
+p 2javaXBhrDapp/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java

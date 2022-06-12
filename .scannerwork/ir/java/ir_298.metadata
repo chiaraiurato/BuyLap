@@ -1,1 +1,1 @@
-com.example.buylap.exceptions.LengthBeanCardException#<init>(Ljava/lang/String;)V
+com.example.buylap.model.ModelPoints#<init>(I)V

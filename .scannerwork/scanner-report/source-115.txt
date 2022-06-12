@@ -54,11 +54,10 @@ public class BeanCard {
         }
     }
     private void checkLength() throws LengthBeanCardException {
-        if(cardNumber != null) {
-            if (cardNumber.length() > 20) {
+        if(cardNumber != null && cardNumber.length() > 20) {
                 throw new LengthBeanCardException("Number card is invalid");
             }
         }
 
-    }
 }
+

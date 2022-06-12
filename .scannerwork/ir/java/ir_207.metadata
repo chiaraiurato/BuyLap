@@ -1,2 +1,3 @@
-com.example.buylap.cli.graphic_controller.HomepageGraphicController#showCommands()V
-java.lang.String#equals(Ljava/lang/Object;)Z
+com.example.buylap.view.LoginActivity#onCreate(LBundle;)V
+com.example.buylap.controller.graphic.LoginGraphicController#<init>(Lcom/example/buylap/view/LoginActivity;)V
+com.example.buylap.controller.graphic.LoginGraphicController#instance-init#

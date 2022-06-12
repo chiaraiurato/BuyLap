@@ -5,7 +5,7 @@ import com.example.buylap.bean.BeanUser;
 import com.example.buylap.database.dao.DAOseller;
 import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.EmailVerifyException;
+
 import com.example.buylap.model.users.ModelSeller;
 import com.example.buylap.model.users.ModelUser;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class LoginController {
 
 
-    public ModelUser searchUser(BeanUser beanUser) throws DAOException{ ;
+    public ModelUser searchUser(BeanUser beanUser) throws DAOException{
 
         try {
             ModelUser modelUser = new ModelUser(beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword());

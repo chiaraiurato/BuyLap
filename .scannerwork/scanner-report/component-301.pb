@@ -1,1 +1,1 @@
-­ 2xmlXZhr,app/src/main/res/layout/viewholder_build.xml
+­ 2xmlX7hr&app/src/main/res/layout/viewholder.xml

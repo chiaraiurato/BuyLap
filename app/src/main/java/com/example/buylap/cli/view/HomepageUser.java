@@ -6,16 +6,9 @@ import androidx.annotation.RequiresApi;
 
 import com.example.buylap.cli.graphic_controller.HomepageGraphicController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.util.zip.DataFormatException;
 
 public class HomepageUser {
     public static final String IO_EXCEPTION = "IOException";
@@ -32,11 +25,11 @@ public class HomepageUser {
         try {
             homepageGraphicController = new HomepageGraphicController();
         } catch (BeanException e) {
-            System.out.println(BEAN_EXCEPTION);
+            e.printStackTrace();
         }
         assert homepageGraphicController != null;
-        String name =homepageGraphicController.initializeSessionCLI();
-        System.out.println("\nHi "+name +",\nWelcome back!\n");
+        System.out.println("\nHi "+homepageGraphicController.initializeSessionCLI()+",\nWelcome back!\n");
+
         BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
         try {
             input = numberBuffer.readLine();

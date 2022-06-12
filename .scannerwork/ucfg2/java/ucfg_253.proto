@@ -1,91 +1,38 @@
 
-òcom.example.buylap.controller.applicative.LoginController#searchSeller(Lcom/example/buylap/bean/BeanSeller;)Lcom/example/buylap/model/users/ModelSeller;y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java (#"9*Ø
-3y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=Û
-
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=9
-modelSeller*com.example.buylap.model.users.ModelSeller"__id*2
-0
-%6*com.example.buylap.model.users.ModelSeller"∏
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java" "(;
-9
-modelSeller*com.example.buylap.model.users.ModelSeller*≠
-4z
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java   (ñÙ
-Ò
-z
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java   (ñ9
-modelSeller*com.example.buylap.model.users.ModelSeller"__id*2
-0
-%4*com.example.buylap.model.users.ModelSellerØ
-¨
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java! !(=0
-%6*com.example.buylap.model.users.ModelSeller"êcom.example.buylap.database.dao.DAOseller#searchSeller(Lcom/example/buylap/model/users/ModelSeller;)Lcom/example/buylap/model/users/ModelSeller;*-"+
-)com.example.buylap.database.dao.DAOseller*;
-9
-modelSeller*com.example.buylap.model.users.ModelSeller*
-3*Ö
-5z
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java &  (ï‹Ÿ
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java *  (50
-%4*com.example.buylap.model.users.ModelSeller"*com.example.buylap.model.users.ModelSellerü
-ú
-z
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java &  (ï
-%5"|com.example.buylap.model.users.ModelSeller#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*2
-0
-%4*com.example.buylap.model.users.ModelSeller*
-
-%0java.lang.String*
-
-%1java.lang.String*
-
-%2java.lang.String*
-
-%3java.lang.String*
-4*ù
-6{
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java Å  (ãïí
-{
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java Å  (î
-%3java.lang.String"=com.example.buylap.bean.BeanSeller#getIva()Ljava/lang/String;*2
+Çcom.example.buylap.controller.applicative.TakeQuizController#getBeanAnswer(Ljava/lang/String;)Lcom/example/buylap/bean/BeanAnswer;|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (#"1*ö
+
+1|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java  (0œÃ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java$ (.(
+%0"com.example.buylap.bean.BeanAnswer""com.example.buylap.bean.BeanAnswer·
+ﬁ
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java  (0
+%1",com.example.buylap.bean.BeanAnswer#<init>()V**
+(
+%0"com.example.buylap.bean.BeanAnswerÂ
+‚
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (10
+
+beanAnswer"com.example.buylap.bean.BeanAnswer"__id**
+(
+%0"com.example.buylap.bean.BeanAnswer√¿
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (%
+
+%2void"Bcom.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)V*2
 0
 
-beanSeller"com.example.buylap.bean.BeanSeller2getIva()*
-5*£
-7y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java g  (qùö
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java g  (
-%2java.lang.String"Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;*2
+beanAnswer"com.example.buylap.bean.BeanAnswer*
+
+answerjava.lang.String2setAnswer3(Ljava/lang/String;)"≤
+|
+rC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java (2
 0
 
-beanSeller"com.example.buylap.bean.BeanSeller2getPassword()*
-6*ù
-8y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java P  (Zóî
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java P  (e
-%1java.lang.String"?com.example.buylap.bean.BeanSeller#getEmail()Ljava/lang/String;*2
-0
-
-beanSeller"com.example.buylap.bean.BeanSeller2
-getEmail()*
-7*£
-9y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java 6  (@ùö
-y
-oC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/LoginController.java 6  (N
-%0java.lang.String"Bcom.example.buylap.bean.BeanSeller#getUsername()Ljava/lang/String;*2
-0
-
-beanSeller"com.example.buylap.bean.BeanSeller2getUsername()*
-8:0
-
-beanSeller"com.example.buylap.bean.BeanSellerB=;
-9com.example.buylap.controller.applicative.LoginController
+beanAnswer"com.example.buylap.bean.BeanAnswer:
+answerjava.lang.StringB@>
+<com.example.buylap.controller.applicative.TakeQuizController

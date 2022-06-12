@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanCashback#setBeanCard(Lcom/example/buylap/bean/BeanCard;)V
+com.example.buylap.bean.BeanBuild#setPrice(F)V

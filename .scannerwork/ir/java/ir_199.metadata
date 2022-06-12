@@ -1,1 +1,1 @@
-com.example.buylap.model.MostViewed#getSubtitle()Ljava/lang/String;
+com.example.buylap.cli.graphic_controller.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;

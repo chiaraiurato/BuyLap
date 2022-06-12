@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelBuild#setUrlEbay(Ljava/lang/String;)V
+com.example.buylap.database.dao.DAOpoints#instance-init#

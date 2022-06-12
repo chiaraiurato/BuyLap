@@ -1,1 +1,1 @@
-€ 2javaXRhrVapp/src/main/java/com/example/buylap/cli/graphic_controller/QuizGraphicController.java
+€ 2javaXWhrVapp/src/main/java/com/example/buylap/cli/graphic_controller/QuizGraphicController.java

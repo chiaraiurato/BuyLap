@@ -1,1 +1,1 @@
-è 2xmlXhr5app/src/main/res/drawable/ic_baseline_favorite_24.xml
+è 2xmlXhr2app/src/main/res/drawable/ic_baseline_error_24.xml

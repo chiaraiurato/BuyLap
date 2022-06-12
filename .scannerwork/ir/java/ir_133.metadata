@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanSession#setType(Ljava/lang/String;)V
+com.example.buylap.exceptions.EmailVerifyException#<init>(Ljava/lang/String;)V

@@ -6,6 +6,8 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
+
 import com.example.buylap.exceptions.IvaLengthException;
 import com.example.buylap.view.SelectTypeAccountActivity;
 import com.example.buylap.exceptions.BeanException;
@@ -102,15 +104,6 @@ public class RegistrationGraphicController {
             return false;
         }
         return true;
-    }
-    public String selectTypeAccount( RadioButton userRadio, RadioButton sellerRadio) {
-
-        if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
-            Toast.makeText(selectTypeAccountActivity, "Select type account", Toast.LENGTH_SHORT).show();
-            return "";
-        } else if (userRadio.isChecked())
-            return "USER";
-        return "SELLER";
     }
     public void gotoSignUpUser(){
 

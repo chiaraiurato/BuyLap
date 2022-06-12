@@ -1,1 +1,1 @@
-É 2javaXhrCapp/src/main/java/com/example/buylap/view/NotificationFragment.java
+É 2javaX6hrAapp/src/main/java/com/example/buylap/view/NavigationActivity.java

@@ -1,1 +1,1 @@
-Ì 2javaX:hr>app/src/test/java/com/example/buylap/InsertCreditCardTest.java
+Ì 2xmlXhr)app/src/main/res/values-w600dp/dimens.xml

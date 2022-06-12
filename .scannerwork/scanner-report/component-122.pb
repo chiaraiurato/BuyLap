@@ -1,1 +1,1 @@
-z 2javaX.hr7app/src/main/java/com/example/buylap/bean/BeanUser.java
+z 2javaX.hr7app/src/main/java/com/example/buylap/bean/BeanUser.java

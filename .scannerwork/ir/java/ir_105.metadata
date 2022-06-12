@@ -1,2 +1,1 @@
-com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignInSeller()V
-null
+com.example.buylap.controller.graphic.RegistrationGraphicController#selectTypeAccount(LRadioButton;LRadioButton;)Ljava/lang/String;

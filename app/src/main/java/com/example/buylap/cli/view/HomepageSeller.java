@@ -85,6 +85,7 @@ public class HomepageSeller {
             System.out.println(IO_EXCEPTION);
         }
         try {
+            assert homepageGraphicController != null;
             homepageGraphicController.executeCommand(input);
         } catch (IOException e) {
             System.out.println(IO_EXCEPTION);

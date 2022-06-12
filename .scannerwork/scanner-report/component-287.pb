@@ -1,1 +1,1 @@
-Ÿ 2xmlXOhr)app/src/main/res/layout/activity_main.xml
+Ÿ 2xmlXêhr*app/src/main/res/layout/activity_login.xml

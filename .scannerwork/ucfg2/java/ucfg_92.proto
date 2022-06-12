@@ -1,21 +1,14 @@
 
-=com.example.buylap.adapterGUI.CategoryAdapter#getItemCount()Im
-cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java9 9("1*ı
-1m
-cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(œ
-Ã
-m
-cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(
-%0java.util.List"__id*?*=/
--com.example.buylap.adapterGUI.CategoryAdapter"
-
-categoryµ≤
-m
-cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(	
-%1int"java.util.List#size()I*
-
-%0java.util.List2size()"w
-m
-cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java: :(
-""B1/
--com.example.buylap.adapterGUI.CategoryAdapter
+5com.example.buylap.utils.SessionManager#isLoggedIn()Zg
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java$ $("1*Ù
+1g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %(í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %('
+%0java.lang.String"__id*
+"""q
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %(0
+""B+)
+'com.example.buylap.utils.SessionManager

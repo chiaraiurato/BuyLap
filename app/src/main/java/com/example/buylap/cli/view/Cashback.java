@@ -37,6 +37,7 @@ public class Cashback {
         }
         BeanCard beanCard = null;
         try {
+            assert cashbackGraphicController != null;
             beanCard = cashbackGraphicController.uploadCreditCard();
         } catch (DAOException e) {
             System.out.println("Error while uploading credit card");
@@ -70,6 +71,7 @@ public class Cashback {
             e.printStackTrace();
         }
         try {
+            assert cashbackGraphicController != null;
             cashbackGraphicController.cashOutPoints(cashbackGraphicController.uploadPoints());
         } catch (SQLException throwables) {
             throwables.printStackTrace();

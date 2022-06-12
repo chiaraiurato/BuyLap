@@ -1,1 +1,1 @@
-com.example.buylap.database.query.QueryPoints#updatePoints(Ljava/sql/Statement;Lcom/example/buylap/model/ModelPoints;Ljava/lang/String;)V
+com.example.buylap.bean.BeanCard#getCardNumber()Ljava/lang/String;

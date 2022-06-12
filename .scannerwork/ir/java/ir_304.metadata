@@ -1,1 +1,7 @@
-com.example.buylap.model.ModelPoints#getPoints()I
+com.example.buylap.cli.graphic_controller.QuizGraphicController#startQuiz(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.cli.utils.CommandLineTable#<init>()V
+com.example.buylap.cli.graphic_controller.QuizGraphicController#runHomepage()V
+java.lang.String#equals(Ljava/lang/Object;)Z
+com.example.buylap.cli.utils.CommandLineTable#instance-init#
+com.example.buylap.bean.BeanRequestBuild#instance-init#
+com.example.buylap.bean.BeanRequestBuild#<init>()V

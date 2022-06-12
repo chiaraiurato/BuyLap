@@ -1,3 +1,2 @@
-com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Ljava/util/Map;
-java.util.HashMap#<init>()V
-java.util.HashMap#instance-init#
+com.example.buylap.controller.graphic.InsertComponentGraphicController#show(LView;)V
+null

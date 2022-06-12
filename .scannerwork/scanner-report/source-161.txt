@@ -13,6 +13,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DAOpoints {
+    private DAOpoints() {
+        //Private constructor
+    }
     public static ModelPoints uploadPoints(ModelPoints modelPoints, String username) throws SQLException {
         Connection connection = null;
         Statement statement = null;

@@ -36,6 +36,7 @@ public class JdbcConnection {
                androidMode();
             } else {
                 String path = new File("").getAbsolutePath();
+
                 File file = new File(
                         path + "\\app\\src\\main\\assets\\db.properties");
                 cliMode(file);
@@ -56,20 +57,25 @@ public class JdbcConnection {
     }
     private void cliMode(File file) {
 
-        try(BufferedReader br = new BufferedReader(new FileReader(file));) {
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
             String str = null;
             StringBuilder strb = new StringBuilder();
             while ((str = br.readLine()) != null) {
                 strb.append(str);
             }
-            String username = strb.toString().replace("username=", "");
-            String password = strb.toString().replace("password=", "");
-            String ip = strb.toString().replace("ip=", "");
+
+            String username = strb.toString().replace("username=", "").substring(0, 5);
+
+            String password = strb.toString().replace("password=", "").substring(9, 14);
+
+            String ip = strb.toString().replace("ip=", "").substring(28);
 
             this.connection = DriverManager.getConnection("jdbc:mysql://" + ip + "/android", username, password);
 
         } catch (FileNotFoundException f) {
+
             System.out.println(file + " does not exist");
+
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }

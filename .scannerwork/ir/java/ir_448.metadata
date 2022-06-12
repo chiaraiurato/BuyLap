@@ -1,1 +1,1 @@
-com.example.buylap.view.NavigationActivity#instance-init#
+com.example.buylap.model.ModelRequestBuild#setKeyword(Lcom/example/buylap/bean/BeanAnswer;)V

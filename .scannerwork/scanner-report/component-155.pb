@@ -1,1 +1,1 @@
-› 2javaX€hrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java
+› 2javaX‡hrZapp/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java

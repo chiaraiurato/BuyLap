@@ -1,37 +1,29 @@
 
-vcom.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadPoints()Lcom/example/buylap/bean/BeanPoints;É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java? ?(""1*Ö
+xcom.example.buylap.cli.graphic_controller.CashbackGraphicController#uploadCreditCard()Lcom/example/buylap/bean/BeanCard;É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java) )($"1*è
 1É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java@  @(5∫
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java* *($∫
 ∑
 É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java@  @(5E
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java* *($E
 %0?com.example.buylap.controller.applicative.GetCashbackController"__id*b*`E
 Ccom.example.buylap.cli.graphic_controller.CashbackGraphicController"
 getCashbackControllerî
 ë
 É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java@C @(N)
-%1#com.example.buylap.bean.BeanSession"__id*X*VE
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java*6 *(A)
+%1#com.example.buylap.bean.BeanSession"__id*X*VE
 Ccom.example.buylap.cli.graphic_controller.CashbackGraphicController"
-beanSession¯ı
+beanSession¸˘
 É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java@  @(O(
-%2"com.example.buylap.bean.BeanPoints"ócom.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanSession;)Lcom/example/buylap/bean/BeanPoints;*G
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java* *(B&
+%2 com.example.buylap.bean.BeanCard"ôcom.example.buylap.controller.applicative.GetCashbackController#uploadCreditCard(Lcom/example/buylap/bean/BeanSession;)Lcom/example/buylap/bean/BeanCard;*G
 E
 %0?com.example.buylap.controller.applicative.GetCashbackController*+
 )
-%1#com.example.buylap.bean.BeanSession23uploadPoints(Lcom/example/buylap/bean/BeanSession;)Ì
-Í
+%1#com.example.buylap.bean.BeanSession27uploadCreditCard(Lcom/example/buylap/bean/BeanSession;)"∞
 É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java@ @(P0
-
-beanPoints"com.example.buylap.bean.BeanPoints"__id**
-(
-%2"com.example.buylap.bean.BeanPoints"∫
-É
-yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.javaG G(2
-0
-
-beanPoints"com.example.buylap.bean.BeanPointsBGE
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java* *(C(
+&
+%2 com.example.buylap.bean.BeanCardBGE
 Ccom.example.buylap.cli.graphic_controller.CashbackGraphicController

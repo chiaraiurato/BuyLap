@@ -1,1 +1,1 @@
-ú 2xmlXhr.app/src/main/res/drawable/ic_round_home_24.xml
+ú 2xmlXhr6app/src/main/res/drawable/ic_round_architecture_24.xml

@@ -1,1 +1,1 @@
-Ï 2javaXthr?app/src/main/java/com/example/buylap/view/TakeQuizActivity.java
+Ï 2javaXEhr=app/src/main/java/com/example/buylap/view/SellerFragment.java

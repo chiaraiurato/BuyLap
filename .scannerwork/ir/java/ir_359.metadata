@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanUser#instance-init#
+com.example.buylap.bean.BeanUser#getUsername()Ljava/lang/String;

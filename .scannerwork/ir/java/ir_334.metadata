@@ -1,1 +1,2 @@
-com.example.buylap.controller.applicative.TakeQuizController#instance-init#
+com.example.buylap.view.CashbackFragment#setPoints(Lcom/example/buylap/bean/BeanPoints;)V
+java.lang.String#valueOf(I)Ljava/lang/String;

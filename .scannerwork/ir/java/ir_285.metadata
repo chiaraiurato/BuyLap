@@ -1,1 +1,5 @@
-com.example.buylap.utils.Data#instance-init#
+com.example.buylap.utils.Data#sendAnalytics()Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#
+com.example.buylap.model.Analytics#<init>(Ljava/lang/String;)V
+com.example.buylap.model.Analytics#instance-init#

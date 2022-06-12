@@ -1,1 +1,1 @@
-com.example.buylap.adapterGUI.AnalyticsAdapter#getItemCount()I
+com.example.buylap.view.HomeFragment#setUser(Lcom/example/buylap/bean/BeanUser;LView;)V

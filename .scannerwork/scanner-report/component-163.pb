@@ -1,1 +1,1 @@
-£ 2javaXMhr>app/src/main/java/com/example/buylap/database/dao/DAOuser.java
+£ 2javaXMhr>app/src/main/java/com/example/buylap/database/dao/DAOuser.java

@@ -1,16 +1,17 @@
 
-_com.example.buylap.model.users.ModelUser#getModelPoints()Lcom/example/buylap/model/ModelPoints;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.javaE E(%"1*é
+Hcom.example.buylap.model.users.ModelUser#getPassword()Ljava/lang/String;h
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java, ,("1*¾
 1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.javaF F(Þ
-Û
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java- -(Ç
+Ä
 h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.javaF F(*
-%0$com.example.buylap.model.ModelPoints"__id*=*;*
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java- -(
+%0java.lang.String"__id*:*8*
 (com.example.buylap.model.users.ModelUser"
-modelPoints"˜
+
+password"„
 h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.javaF F(,
-*
-%0$com.example.buylap.model.ModelPointsB,*
+^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/users/ModelUser.java- -(
+
+%0java.lang.StringB,*
 (com.example.buylap.model.users.ModelUser

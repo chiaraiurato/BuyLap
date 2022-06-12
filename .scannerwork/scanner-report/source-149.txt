@@ -20,18 +20,18 @@ import java.util.List;
 public class HomeGraphicController extends SessionGraphicController{
     private HomeFragment homeFragment;
     private SellerFragment sellerFragment;
-    private BeanSession beanSession;
+    private BeanSession credentials;
 
     public HomeGraphicController(HomeFragment homeFragment) {
         super(homeFragment.getContext());
         this.homeFragment = homeFragment;
-        beanSession = getBeanSession();
+        credentials = getBeanSession();
 
     }
     public HomeGraphicController(SellerFragment sellerFragment) {
         super(sellerFragment.getContext());
         this.sellerFragment = sellerFragment;
-        beanSession = getBeanSession();
+        credentials = getBeanSession();
     }
 
     public List<MostViewed> setAdapterMostView(){
@@ -45,10 +45,10 @@ public class HomeGraphicController extends SessionGraphicController{
     }
     public void initializeSession(View view) throws BeanException {
 
-        if(beanSession.getType() != null) {
-            if (beanSession.getType().equals("USER")) {
+        if(credentials.getType() != null) {
+            if (credentials.getType().equals("USER")) {
                 BeanUser beanUser = new BeanUser();
-                beanUser.setUsername(beanSession.getUsername());
+                beanUser.setUsername(credentials.getUsername());
                 homeFragment.setUser(beanUser, view);
 
             } else {
@@ -60,7 +60,7 @@ public class HomeGraphicController extends SessionGraphicController{
     public void initializeSessionForSeller(View view){
 
         BeanSeller beanSeller = new BeanSeller();
-        beanSeller.setUsername(beanSession.getUsername());
+        beanSeller.setUsername(credentials.getUsername());
         sellerFragment.setSeller(beanSeller, view);
     }
     public void goToTakeQuiz() {

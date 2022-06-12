@@ -1,1 +1,1 @@
-com.example.buylap.view.QuizResultActivity#onCatClick(I)V
+com.example.buylap.controller.graphic.TakeQuizGraphicController#getAnswer1()Ljava/lang/String;

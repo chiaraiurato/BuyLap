@@ -1,1 +1,1 @@
-  2xmlXWhr0app/src/main/res/layout/activity_quiz_result.xml
+  2xmlXOhr)app/src/main/res/layout/activity_main.xml

@@ -1,1 +1,1 @@
-} 2javaXUhrZapp/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java
+} 2javaXahrZapp/src/main/java/com/example/buylap/cli/graphic_controller/CashbackGraphicController.java

@@ -1,1 +1,1 @@
-Ç 2javaX8hr;app/src/main/java/com/example/buylap/view/MainActivity.java
+Ç 2javaXNhr<app/src/main/java/com/example/buylap/view/LoginActivity.java

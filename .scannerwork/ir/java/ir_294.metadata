@@ -1,1 +1,1 @@
-com.example.buylap.view.RegistrationSellerActivity#sendEmail()Ljava/lang/String;
+com.example.buylap.exceptions.LengthBeanCardException#<init>(Ljava/lang/String;)V

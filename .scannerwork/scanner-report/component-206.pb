@@ -1,1 +1,1 @@
-Î 2javaXEhr=app/src/main/java/com/example/buylap/view/SellerFragment.java
+Î 2javaX.hrHapp/src/main/java/com/example/buylap/view/SelectTypeAccountActivity.java

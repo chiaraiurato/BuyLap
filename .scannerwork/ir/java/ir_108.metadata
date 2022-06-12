@@ -1,1 +1,2 @@
-com.example.buylap.utils.SessionManager#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignIn()V
+null

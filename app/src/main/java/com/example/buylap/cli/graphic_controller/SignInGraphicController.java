@@ -48,6 +48,7 @@ public class SignInGraphicController {
             } catch (DAOException e) {
                 e.printStackTrace();
             }
+            assert modelUser != null;
             System.out.println("model user "+modelUser.getUsername());
             SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "user");
             HomepageUser.main();
@@ -63,6 +64,7 @@ public class SignInGraphicController {
             } catch (DAOException e) {
                 e.printStackTrace();
             }
+            assert modelSeller != null;
             SessionManagerCLI.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "seller");
             HomepageSeller.main();
         }

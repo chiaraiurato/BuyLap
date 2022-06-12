@@ -1,1 +1,1 @@
-² 2xmlXhr8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+² 2xmlXhr2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml

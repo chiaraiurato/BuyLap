@@ -1,1 +1,2 @@
-com.example.buylap.exceptions.EmailVerifyException#instance-init#
+com.example.buylap.controller.graphic.NavigationGraphicController#checkLogin()V
+null

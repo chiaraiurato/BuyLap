@@ -1,1 +1,1 @@
-com.example.buylap.model.users.ModelSeller#setP_iva(Ljava/lang/String;)V
+com.example.buylap.model.users.ModelSeller#setIva(Ljava/lang/String;)V

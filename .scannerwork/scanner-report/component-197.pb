@@ -1,1 +1,1 @@
-Å 2javaXUhrFapp/src/main/java/com/example/buylap/view/InsertComponentActivity.java
+Å 2javaXHhr;app/src/main/java/com/example/buylap/view/HomeFragment.java

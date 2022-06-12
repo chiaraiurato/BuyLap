@@ -1,1 +1,1 @@
-com.example.buylap.utils.PropertiesReader#instance-init#
+com.example.buylap.adapter.GenericUser#gotoMyHomepage(Lcom/example/buylap/adapter/Homepage;)LFragment;

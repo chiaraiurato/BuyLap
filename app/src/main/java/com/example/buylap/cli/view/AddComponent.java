@@ -4,7 +4,6 @@ import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
 
 import com.example.buylap.cli.graphic_controller.AddComponentGraphicController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
 
 public class AddComponent {
     private AddComponent(){

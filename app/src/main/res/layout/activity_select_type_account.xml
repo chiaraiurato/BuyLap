@@ -22,67 +22,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="192dp"
-        android:layout_height="26dp"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center"
-        android:text="Business Account"
-        android:textColor="#535986"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPersonal"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="76dp"
+        android:onClick="personalClick"
+        app:cardBackgroundColor="@color/bluebutton"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewBusiness"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="155dp"
-        android:layout_height="26dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center"
-        android:text="Personal Account"
-        android:textColor="#535986"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="250dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="180dp"
-        android:orientation="horizontal"
+        <ImageView
+            android:id="@+id/imageViewPersonal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:translationY="-25dp"
+            app:srcCompat="@drawable/icon8_user_circle" />
+
+        <TextView
+            android:id="@+id/text_personal"
+            android:layout_width="149dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/zcool_regular"
+            android:gravity="center"
+            android:text="Personal Account"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:translationY="40dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBusiness"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="276dp"
+        android:onClick="businessClick"
+        app:cardBackgroundColor="@color/bluebutton"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0">
 
-        <RadioButton
-            android:id="@+id/radio_user"
-            android:layout_width="207dp"
-            android:layout_height="88dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="32dp"
-            android:buttonTint="#41CD7D"
-            android:checked="false"
-            android:minHeight="48dp" />
+        <ImageView
+            android:id="@+id/imageViewVenti"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:translationY="-25dp"
+            app:srcCompat="@drawable/icons8ventiquattrore128" />
 
-        <RadioButton
-            android:id="@+id/radio_seller"
-            android:layout_width="77dp"
-            android:layout_height="90dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="32dp"
-            android:buttonTint="#41CD7D" />
-
-    </RadioGroup>
+        <TextView
+            android:id="@+id/text_business"
+            android:layout_width="149dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/zcool_regular"
+            android:gravity="center"
+            android:text="Business Account"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:translationY="40dp" />
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/next"
@@ -97,30 +105,8 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="95dp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.969"
-        app:srcCompat="@drawable/icons8_reseller_96" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/icons8_customer_96" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

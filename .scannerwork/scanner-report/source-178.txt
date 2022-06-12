@@ -1,21 +1,18 @@
 package com.example.buylap.model;
 
-public class ModelBuild {
-
-    private String type;
+public class Category {
     private String title;
+    private String url;
     private String subtitles;
-    private String urlEbay;
     private float price;
 
-    public ModelBuild(String type, String title, String subtitles, String urlEbay, float price) {
-        this.type = type;
-        this.title = title;
+    public Category(String title, String url, String subtitles, float price){
+        this.title =title;
+        this.url= url;
         this.subtitles = subtitles;
-        this.urlEbay = urlEbay;
         this.price = price;
     }
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -25,16 +22,17 @@ public class ModelBuild {
     public String getTitle() {
         return title;
     }
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getSubtitles() {
@@ -43,13 +41,5 @@ public class ModelBuild {
 
     public void setSubtitles(String subtitles) {
         this.subtitles = subtitles;
-    }
-
-    public String getUrlEbay() {
-        return urlEbay;
-    }
-
-    public void setUrlEbay(String urlEbay) {
-        this.urlEbay = urlEbay;
     }
 }

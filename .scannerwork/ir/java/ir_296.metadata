@@ -1,1 +1,1 @@
-com.example.buylap.view.RegistrationSellerActivity#sendIva()Ljava/lang/String;
+com.example.buylap.exceptions.ExpiredDateCardException#<init>(Ljava/lang/String;)V

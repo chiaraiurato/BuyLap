@@ -31,9 +31,7 @@ public class InsertCreditCardTest {
         beanCard.setCardNumber("1234 1234 1234 1234");
         try {
             beanCard.setData("23-09");
-        } catch (ParseException e) {
-            checkInfoCard = false;
-        } catch (ExpiredDateCardException e) {
+        } catch (ParseException | ExpiredDateCardException e) {
             checkInfoCard = false;
         }
         beanCard.setCardHolderName("Mr. Test");
@@ -48,10 +46,8 @@ public class InsertCreditCardTest {
         GetCashbackController controller = new GetCashbackController();
         try {
             checkAdditionToDb=controller.createCard(beanCard, beanSession);
-        } catch (DAOException e) {
+        } catch (DAOException | LengthBeanCardException e) {
            checkAdditionToDb = false;
-        }catch (LengthBeanCardException e){
-            checkAdditionToDb = false;
         }
         assertTrue(checkAdditionToDb);
     }

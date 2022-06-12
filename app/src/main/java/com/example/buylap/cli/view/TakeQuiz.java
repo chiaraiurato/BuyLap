@@ -82,6 +82,7 @@ public class TakeQuiz{
             ioException.printStackTrace();
         }
         System.out.println(price);
+        assert quizGraphicController != null;
         quizGraphicController.startQuiz(firstAnswer, secondAnswer, thirdAnswer, price);
 
     }

@@ -1,1 +1,1 @@
-š 2javaXshrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java
+š 2javaXuhrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java

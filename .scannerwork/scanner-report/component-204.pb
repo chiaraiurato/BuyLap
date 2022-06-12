@@ -1,1 +1,1 @@
-Ì 2javaXGhrIapp/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java
+Ì 2javaXDhrCapp/src/main/java/com/example/buylap/view/RegistrationActivity.java

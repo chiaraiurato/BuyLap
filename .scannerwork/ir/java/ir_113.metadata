@@ -1,1 +1,1 @@
-com.example.buylap.adapterGUI.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adapterGUI/CategoryAdapter$OnCatListener;)V
+com.example.buylap.utils.SessionManager#isLoggedIn()Z

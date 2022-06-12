@@ -13,19 +13,14 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.exceptions.NoCardInsertedException;
-import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.AddCardActivity;
 import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
 import java.text.ParseException;
-import java.util.Map;
-import java.util.zip.DataFormatException;
 
 
 public class CashbackGraphicController extends SessionGraphicController{
@@ -34,21 +29,21 @@ public class CashbackGraphicController extends SessionGraphicController{
     private CashbackFragment cashbackFragment;
     private GetCashbackController getCashbackController;
     private BeanPoints beanPoints;
-    private BeanSession beanSession;
+    private BeanSession credentials;
     private BeanCard beanCard;
 
     public CashbackGraphicController(AddCardActivity addCardActivity){
         super(addCardActivity.getApplicationContext());
         this.addCardActivity = addCardActivity;
         this.getCashbackController = new GetCashbackController();
-        this.beanSession = getBeanSession();
+        this.credentials = getBeanSession();
         this.beanCard = new BeanCard();
     }
     public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
         super(cashbackFragment.getContext());
         this.cashbackFragment= cashbackFragment;
         this.getCashbackController = new GetCashbackController();
-        this.beanSession = getBeanSession();
+        this.credentials = getBeanSession();
         this.beanPoints = new BeanPoints();
 
     }
@@ -63,7 +58,7 @@ public class CashbackGraphicController extends SessionGraphicController{
         beanCard.setCardNumber(addCardActivity.sendNumber());
         beanCard.setData(addCardActivity.sendDate());
 
-        Boolean result = getCashbackController.createCard(beanCard, beanSession);
+        Boolean result = getCashbackController.createCard(beanCard, credentials);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Credit card saved");
         }
@@ -71,20 +66,20 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
     public void uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
 
-        beanCard = getCashbackController.uploadCreditCard(beanSession);
+        beanCard = getCashbackController.uploadCreditCard(credentials);
 
         cashbackFragment.setCreditCard(beanCard);
 
     }
     public void uploadPoints() throws SQLException{
 
-        beanPoints = getCashbackController.uploadPoints(beanSession);
+        beanPoints = getCashbackController.uploadPoints(credentials);
         cashbackFragment.setPoints(beanPoints);
     }
 
     public void deleteCreditCard() throws DAOException {
 
-        getCashbackController.deleteCreditCard(beanSession);
+        getCashbackController.deleteCreditCard(credentials);
         cashbackFragment.deleteCreditCard();
     }
 
@@ -96,7 +91,7 @@ public class CashbackGraphicController extends SessionGraphicController{
             beanPoints.setPoints(remainingPoints);
             try {
                 getCashbackController.sendMoneyToCreditCard(beanCard);
-                beanPoints=getCashbackController.updatePoints(beanPoints , beanSession);
+                beanPoints=getCashbackController.updatePoints(beanPoints , credentials);
                 cashbackFragment.setPoints(beanPoints);
             } catch (NoCardInsertedException e) {
                 Toast.makeText(cashbackFragment.getContext(), "You need to add a credit card ", Toast.LENGTH_SHORT).show();
@@ -107,7 +102,7 @@ public class CashbackGraphicController extends SessionGraphicController{
     }
 
     public void gotoAddCardActivity() {
-        if(beanSession.getUsername().equals("guest"))
+        if(credentials.getUsername().equals("guest"))
         {
             Toast.makeText(cashbackFragment.getContext(), "You need to be logged! ", Toast.LENGTH_SHORT).show();
         }else {

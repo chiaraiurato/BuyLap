@@ -1,1 +1,3 @@
-com.example.buylap.adapter.GenericUser#gotoMySetting(Lcom/example/buylap/adapter/Homepage;)LFragment;
+com.example.buylap.cli.graphic_controller.MainGraphicController#setGuestAccount()V
+com.example.buylap.cli.view.HomepageUser#main()V
+com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

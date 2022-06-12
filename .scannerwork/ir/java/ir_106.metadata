@@ -1,1 +1,2 @@
-com.example.buylap.utils.SessionManager#instance-init#
+com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignUpUser()V
+null

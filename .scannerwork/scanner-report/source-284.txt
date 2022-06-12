@@ -1,32 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/body_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="clip_horizontal|fill_horizontal"
     android:background="#202442"
-    app:circularflow_defaultRadius="28dp"
-    app:circularflow_radiusInDP="28dp"
-    tools:context=".view.NavigationActivity">
+    tools:context=".view.BudgetActivity">
+
+    <TextView
+        android:id="@+id/Hi"
+        android:layout_width="254dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center"
+        android:text="1/4 Question"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="97dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toEndOf="@+id/Hi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#1F2341"
+        android:textSize="24sp"
+        android:background="@drawable/bg_greenbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="338dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="368dp"
+        app:cardBackgroundColor="@color/bluebutton"
+
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtqst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/zcool_regular"
+            android:text="Select your budget"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+    </androidx.cardview.widget.CardView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/round_bottombar"
-        android:elevation="2dp"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemRippleColor="@android:color/transparent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/menu_appbar" />
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="337dp"
+        android:layout_height="55dp"
+        android:max="2000"
+        android:progressTint="@color/green"
+        android:thumb="@drawable/seek_thumb"
+        android:progressDrawable="@drawable/seek_bar"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="254dp"
+        android:layout_height="84dp"
+        app:cardBackgroundColor="@color/bluebutton"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/budget"
+        android:layout_width="221dp"
+        android:layout_height="73dp"
+        android:layout_gravity="center"
+        android:hint="0 $"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/zcool_regular"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+        app:layout_constraintEnd_toEndOf="@+id/cardView1"
+        app:layout_constraintStart_toStartOf="@+id/cardView1"
+        app:layout_constraintTop_toTopOf="@+id/cardView1" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

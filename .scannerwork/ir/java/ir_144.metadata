@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.AddComponent#<init>()V
+com.example.buylap.model.Analytics#setUrl(Ljava/lang/String;)V

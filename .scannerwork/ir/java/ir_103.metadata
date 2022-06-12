@@ -1,2 +1,1 @@
-com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignUpSeller()V
-null
+com.example.buylap.controller.graphic.RegistrationGraphicController#verifyFields()Z

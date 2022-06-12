@@ -9,8 +9,6 @@ import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 
 
-import java.util.Map;
-
 public class AddComponentGraphicController {
     private InsertComponentController insertComponentController;
     private BeanBuild beanBuild;

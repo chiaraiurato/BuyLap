@@ -1,1 +1,1 @@
-Ë 2xmlXhr)app/src/main/res/values-w600dp/dimens.xml
+Ë 2xmlXhr*app/src/main/res/values-w1240dp/dimens.xml

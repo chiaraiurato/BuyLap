@@ -1,1 +1,1 @@
-o 2javaXYhrDapp/src/main/java/com/example/buylap/adapterGUI/CategoryAdapter.java
+o 2javaXYhrDapp/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java

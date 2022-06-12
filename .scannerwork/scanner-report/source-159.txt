@@ -36,18 +36,19 @@ public class DAObuild {
                 StrictMode.setThreadPolicy(policy);
             }
             connection = JdbcConnection.getInstance().getConnection();
-
-            statement = connection.createStatement();
-            ResultSet rs = QueryBuild.retrieveBuild(statement,type, nameTable, modelRequestBuild.getPrice());
-            if (!rs.first()) {
-                return modelBuild;
+            if(connection != null) {
+                statement = connection.createStatement();
+                ResultSet rs = QueryBuild.retrieveBuild(statement, type, nameTable, modelRequestBuild.getPrice());
+                if (!rs.first()) {
+                    return modelBuild;
+                }
+                String recordName = rs.getString(1);
+                String recordSubtitles = rs.getString(2);
+                String recordUrl = rs.getString(3);
+                float recordPrice = rs.getFloat(4);
+                modelBuild = new ModelBuild(type, recordName, recordSubtitles, recordUrl, recordPrice);
+                rs.close();
             }
-            String recordName = rs.getString(1);
-            String recordSubtitles = rs.getString(2);
-            String recordUrl = rs.getString(3);
-            float recordPrice = rs.getFloat(4);
-            modelBuild = new ModelBuild(type, recordName, recordSubtitles, recordUrl , recordPrice);
-            rs.close();
         } finally {
             if (statement != null) {
                 statement.close();

@@ -2,233 +2,161 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/body_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="clip_horizontal|fill_horizontal"
     android:background="#202442"
-    app:circularflow_defaultRadius="28dp"
-    app:circularflow_radiusInDP="28dp"
-    tools:context=".view.LoginActivity">
+    tools:context=".view.InsertComponentActivity"
+    tools:layout_editor_absoluteX="-2dp"
+    tools:layout_editor_absoluteY="-2dp">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="368dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/add_payment"
+        android:layout_width="313dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Sign In"
+        android:inputType="date"
+        android:text="Insert a component"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="46sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Dont"
-        android:layout_width="173dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="56dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Don't have a new account ?"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/social_icon"
-        app:layout_constraintVertical_bias="0.555" />
-
-    <TextView
-        android:id="@+id/create_new_one"
-        android:layout_width="117dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Create  new one"
-        android:textColor="#41CD7D"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Dont"
-        app:layout_constraintTop_toBottomOf="@+id/social_icon"
-        app:layout_constraintVertical_bias="0.979" />
-
-    <TextView
-        android:id="@+id/businessAcc"
-        android:layout_width="192dp"
-        android:layout_height="26dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center"
-        android:text="Business Account"
-        android:textColor="#535986"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.978" />
-
-    <TextView
-        android:id="@+id/personal_Acc"
-        android:layout_width="155dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/zcool_regular"
-        android:gravity="center"
-        android:text="Personal Account"
-        android:textColor="#535986"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="250dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/select"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RadioButton
-            android:id="@+id/radio_user_login"
-            android:layout_width="207dp"
-            android:layout_height="88dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="32dp"
-            android:buttonTint="#41CD7D"
-            android:checked="false"
-            android:minHeight="48dp" />
-
-        <RadioButton
-            android:id="@+id/radio_seller_login"
-            android:layout_width="77dp"
-            android:layout_height="90dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="32dp"
-            android:buttonTint="#41CD7D" />
-
-    </RadioGroup>
-
     <EditText
-        android:id="@+id/select"
+        android:id="@+id/subtitles"
         android:layout_width="329dp"
         android:layout_height="53dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="20dp"
+
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
-        android:hint="username"
+        android:hint="Subtitles"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titles"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/titles"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="Titles"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:textColor="#535986"
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/type_item"
         tools:ignore="TextContrastCheck" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#41CD7D"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Remember me"
-        android:textColor="#535986"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/signIn_btn"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="136dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="36dp"
-        android:fontFamily="@font/zcool_regular"
-        android:text="Forgot password ?"
-        android:textColor="#535986"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/signIn_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.196" />
-
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/price_item"
         android:layout_width="329dp"
         android:layout_height="53dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
-        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
         android:drawablePadding="20dp"
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
-        android:hint="password"
-        android:inputType="textPassword"
+        android:hint="Price"
+
         android:paddingLeft="20dp"
         android:textColor="#535986"
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitles"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/url_ebay"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:drawableLeft="@drawable/ic_baseline_insert_link_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="URL ebay"
+        android:paddingLeft="20dp"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_item"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/type_item"
+        android:layout_width="329dp"
+        android:inputType="none"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edit_background"
+        android:backgroundTint="#282C4C"
+        android:paddingLeft="20dp"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/zcool_regular"
+        android:hint="@string/choose_category"
+        android:textColor="#535986"
+        android:textColorHint="#535986"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_payment"
+
+        />
 
     <Button
-        android:id="@+id/signIn_btn"
+        android:id="@+id/save_item"
         android:layout_width="330dp"
         android:layout_height="57dp"
-        android:layout_marginTop="76dp"
-        android:background = "@drawable/bg_greenbutton"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_greenbutton"
         android:fontFamily="@font/zcool_regular"
-        android:text="@string/sign_in"
+        android:text="Save"
+
         android:textAllCaps="false"
-        android:textColor="#1F2341"
+        android:textColor="@color/bluebutton"
         android:textSize="24sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
-
-    <LinearLayout
-        android:id="@+id/social_icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/googlelogo" />
+    <ImageView
+        android:onClick="showPopup"
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_item"
+        app:layout_constraintEnd_toEndOf="@+id/type_item"
+        app:layout_constraintTop_toTopOf="@+id/type_item"
+        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24" />
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/fb" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

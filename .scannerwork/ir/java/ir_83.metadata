@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanPoints#getPoints()I
+com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;
