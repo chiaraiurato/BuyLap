@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.buylap.bean.BeanCard;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.GetCashbackController;
@@ -90,7 +91,7 @@ public class CashbackGraphicController extends SessionGraphicController{
             int remainingPoints = beanPoints.getPoints() - 100;
             beanPoints.setPoints(remainingPoints);
             try {
-                getCashbackController.sendMoneyToCreditCard(beanCard);
+                getCashbackController.sendMoneyToCreditCard(beanCard, cashbackFragment.getContext());
                 beanPoints=getCashbackController.updatePoints(beanPoints , credentials);
                 cashbackFragment.setPoints(beanPoints);
             } catch (NoCardInsertedException e) {

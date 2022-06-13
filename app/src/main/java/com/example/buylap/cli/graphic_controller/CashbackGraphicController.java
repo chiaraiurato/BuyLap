@@ -82,6 +82,7 @@ public class CashbackGraphicController {
         } else {
             int remainingPoints = beanPoints.getPoints() - 100;
             beanPoints.setPoints(remainingPoints);
+            /*
             try {
                 getCashbackController.sendMoneyToCreditCard(beanCard);
                 beanPoints = getCashbackController.updatePoints(beanPoints, beanSession);
@@ -90,6 +91,8 @@ public class CashbackGraphicController {
             } catch (NoCardInsertedException e) {
                 System.out.println("You need to add a credit card ");
             }
+
+             */
 
         }
     }

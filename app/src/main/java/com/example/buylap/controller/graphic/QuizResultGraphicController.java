@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.buylap.R;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.TakeQuizController;
@@ -18,6 +19,7 @@ import com.example.buylap.model.Category;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.QuizResultActivity;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,5 +114,37 @@ public class QuizResultGraphicController extends SessionGraphicController {
             quizResultActivity.setMessageGuest(v);
         }
         quizResultActivity.startActivity(intent);
+    }
+
+    public void madePurchase(int position) {
+        float price;
+        switch (position){
+            case 0:
+                price = beanBuild.get(0).getPrice();
+                break;
+            case 1:
+                price =  beanBuild.get(1).getPrice();
+                break;
+            case 2:
+                price =  beanBuild.get(2).getPrice();
+                break;
+            case 3:
+                price =  beanBuild.get(3).getPrice();
+                break;
+            case 4:
+                price =  beanBuild.get(4).getPrice();
+                break;
+            default:
+                price =  beanBuild.get(5).getPrice();
+                break;
+        }
+        BeanCashback beanCashback = new BeanCashback();
+        beanCashback.setAmount(price);
+        try {
+            takeQuizController.selectPrice(beanCashback, credentials);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.buylap.model;
 public class QuizList {
+
     String question;
     String op1;
     String op2;

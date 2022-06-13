@@ -17,6 +17,7 @@ import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.LoginActivity;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.RegistrationActivity;
+import com.example.buylap.view.SelectTypeAccountActivity;
 
 import java.io.IOException;
 
@@ -35,7 +36,7 @@ public class LoginGraphicController {
 
 
     public void goToRegistration() {
-        Intent intent = new Intent(loginActivity, RegistrationActivity.class);
+        Intent intent = new Intent(loginActivity, SelectTypeAccountActivity.class);
         loginActivity.startActivity(intent);
     }
 

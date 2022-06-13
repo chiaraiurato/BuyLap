@@ -53,6 +53,7 @@ public class QuizResultActivity extends AppCompatActivity implements CategoryAda
     @Override
     public void onCatClick(int position) {
         this.startActivity(quizResultGraphicController.linkToEbay(position));
+        quizResultGraphicController.madePurchase(position);
     }
 
     public void setMessageGuest(View view) {

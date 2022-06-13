@@ -1,5 +1,7 @@
 package com.example.buylap.database.query;
 
+import android.graphics.ColorSpace;
+
 import com.example.buylap.model.ModelPoints;
 
 import java.sql.ResultSet;
@@ -26,9 +28,9 @@ public class QueryPoints {
         return statement.executeQuery(query);
     }
 
-    public static void deletePoints(Statement statement, String username) throws SQLException {
-        String query = "DELETE FROM points_earned " +
-                WHERE_USERNAME+username+"';";
+    public static void addPoints(Statement statement, String username, ModelPoints modelPoints) throws SQLException {
+        String query = "INSERT INTO `points_earned` (`username`,  `token`) " +
+                "VALUES ('"+ username+"', '"+modelPoints.getPoints()+"');";
         statement.executeUpdate(query);
     }
 }

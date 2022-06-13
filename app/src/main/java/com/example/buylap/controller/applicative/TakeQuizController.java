@@ -2,7 +2,14 @@ package com.example.buylap.controller.applicative;
 
 import android.util.Log;
 
+import com.example.buylap.bean.BeanCashback;
+import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanRequestBuild;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.boundary.BoundaryEbay;
+import com.example.buylap.database.dao.DAOpoints;
+import com.example.buylap.exceptions.NoCardInsertedException;
+import com.example.buylap.model.ModelPoints;
 import com.example.buylap.model.ModelRequestBuild;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
@@ -76,8 +83,26 @@ public class TakeQuizController {
         return beanBuildList;
 
     }
+    public void selectPrice(BeanCashback beanCashback, BeanSession beanSession) throws SQLException {
+        BoundaryEbay boundaryEbay = new BoundaryEbay();
+        String username = beanSession.getUsername();
+        BeanPoints beanPoints= boundaryEbay.madePurchase(beanCashback);
+
+        ModelPoints modelPointsNew = new ModelPoints(beanPoints.getPoints());
+        ModelPoints modelPointsOld = new ModelPoints();
+
+        modelPointsOld = DAOpoints.uploadPoints(modelPointsOld, username);
+
+        if( modelPointsOld.getPoints() != 0) {
+            DAOpoints.updatePoints(modelPointsNew, username);
+        }else{
+            try {
+                DAOpoints.addPoints(modelPointsNew, username);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
 
 
-
-
+    }
 }

@@ -43,7 +43,7 @@ public class DAOpoints {
         return modelPoints;
     }
 
-    public static void deletePoints(String username) throws SQLException{
+    public static void addPoints(ModelPoints modelPoints, String username) throws SQLException{
         Connection connection = null;
         Statement statement = null;
         try {
@@ -54,7 +54,7 @@ public class DAOpoints {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryPoints.deletePoints(statement, username);
+            QueryPoints.addPoints(statement, username, modelPoints);
         } finally {
             if (statement != null) {
                 statement.close();

@@ -1,5 +1,7 @@
 package com.example.buylap.controller.applicative;
 
+import android.content.Context;
+
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.bean.BeanPoints;
@@ -90,11 +92,8 @@ public class GetCashbackController {
         return beanPoints;
 
     }
-    public void sendMoneyToCreditCard(BeanCard beanCard) throws NoCardInsertedException {
+    public void sendMoneyToCreditCard(BeanCard beanCard, Context context) throws NoCardInsertedException {
         BoundaryPayment boundaryPayment = new BoundaryPayment();
-        BeanCashback beanCashback = new BeanCashback();
-        beanCashback.setBeanCard(beanCard);
-        beanCashback.setAmount(0.29);
-        boundaryPayment.pay(beanCashback);
+        boundaryPayment.pay(beanCard,context );
     }
 }
