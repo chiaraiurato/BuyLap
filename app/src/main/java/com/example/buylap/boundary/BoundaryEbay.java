@@ -10,7 +10,7 @@ public class BoundaryEbay {
     public BeanPoints madePurchase(BeanCashback beanCashback){
 
         double amount = beanCashback.getAmount();
-        double conversion = amount * 0.02;
+        double conversion = amount * 0.10;
         BeanPoints beanPoints = new BeanPoints();
         beanPoints.setPoints((int)Math.round(conversion));
         return beanPoints;

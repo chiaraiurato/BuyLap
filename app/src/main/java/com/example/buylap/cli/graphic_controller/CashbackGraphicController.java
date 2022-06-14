@@ -82,17 +82,14 @@ public class CashbackGraphicController {
         } else {
             int remainingPoints = beanPoints.getPoints() - 100;
             beanPoints.setPoints(remainingPoints);
-            /*
+
             try {
-                getCashbackController.sendMoneyToCreditCard(beanCard);
+                getCashbackController.sendMoneyToCreditCardCLI(beanCard);
                 beanPoints = getCashbackController.updatePoints(beanPoints, beanSession);
                 Cashback.setPoints(beanPoints);
-                System.out.println("Earned 0.50 $ ! Sending payment to you credit card...");
             } catch (NoCardInsertedException e) {
                 System.out.println("You need to add a credit card ");
             }
-
-             */
 
         }
     }

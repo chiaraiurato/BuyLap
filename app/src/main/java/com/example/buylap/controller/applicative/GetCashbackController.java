@@ -96,4 +96,8 @@ public class GetCashbackController {
         BoundaryPayment boundaryPayment = new BoundaryPayment();
         boundaryPayment.pay(beanCard,context );
     }
+    public void sendMoneyToCreditCardCLI(BeanCard beanCard) throws NoCardInsertedException {
+        BoundaryPayment boundaryPayment = new BoundaryPayment();
+        boundaryPayment.payCLI(beanCard);
+    }
 }

@@ -55,7 +55,7 @@ public class QuizGraphicController {
         beanRequestBuild.setPrice(price);
         List<BeanBuild> beanBuild = takeQuizController.createBuild(beanRequestBuild);
         if (beanBuild.isEmpty()) {
-            System.out.println("No build found! Try with another price\n"+ beanRequestBuild.getPrice());
+            System.out.println("No build found! Try with another price\n");
         } else {
             CommandLineTable st = new CommandLineTable();
             st.setShowVerticalLines(true);

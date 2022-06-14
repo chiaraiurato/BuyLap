@@ -9,15 +9,24 @@ import com.example.buylap.exceptions.NoCardInsertedException;
 
 public class BoundaryPayment {
 
-//Reset the amount of the payment
+    //Simulate the payment
 
     public void pay(BeanCard beanCard, Context context) throws NoCardInsertedException {
 
        if(beanCard != null){
-           Toast.makeText(context, "Earned 0.50 $ ! Sending payment to you credit card... ", Toast.LENGTH_SHORT).show();
+           Toast.makeText(context, "Earned 100 $ ! Sending payment to you credit card... ", Toast.LENGTH_SHORT).show();
        }else{
            throw new NoCardInsertedException("Card not exist");
        }
+
+    }
+    public void payCLI(BeanCard beanCard) throws NoCardInsertedException {
+
+        if(beanCard != null){
+            System.out.println("Earned 100 $ ! Sending payment to you credit card... ");
+        }else{
+            throw new NoCardInsertedException("Card not exist");
+        }
 
     }
 }

@@ -88,6 +88,7 @@
         android:id="@+id/editTextDate"
         android:layout_width="326dp"
         android:layout_height="61dp"
+        android:layout_marginTop="44dp"
         android:layout_marginBottom="84dp"
         android:background="@drawable/edit_background"
         android:backgroundTint="#282C4C"
@@ -96,13 +97,14 @@
         android:ems="10"
         android:fontFamily="@font/zcool_regular"
         android:hint="yyyy-mm"
-        android:inputType="phone"
         android:paddingLeft="20dp"
         android:textColor="#535986"
         android:textColorHint="#535986"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/save_item"
-        app:layout_constraintStart_toStartOf="@+id/subtitles" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitles" />
 
 
 
