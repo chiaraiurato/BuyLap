@@ -3,13 +3,10 @@ package com.example.buylap.controller.applicative;
 import android.util.Log;
 
 import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanPoints;
-import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.boundary.BoundaryEbay;
 import com.example.buylap.database.dao.DAOpoints;
-import com.example.buylap.exceptions.NoCardInsertedException;
-import com.example.buylap.model.ModelPoints;
+import com.example.buylap.model.ModelCashback;
 import com.example.buylap.model.ModelRequestBuild;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
@@ -25,16 +22,11 @@ import java.util.List;
 
 public class TakeQuizController {
 
-    public BeanAnswer getBeanAnswer(String answer){
-        BeanAnswer beanAnswer = new BeanAnswer();
-        beanAnswer.setAnswer3(answer);
-        return beanAnswer;
 
-    }
-    public List<BeanBuild> createBuild(BeanRequestBuild beanRequestBuild){
+    public List<BeanBuild> createBuild(BeanAnswer beanAnswer){
         String[] component = new String[6];
-        ModelRequestBuild modelRequestBuild = new ModelRequestBuild(beanRequestBuild.getKeyword(),
-                beanRequestBuild.getPrice());
+        ModelRequestBuild modelRequestBuild = new ModelRequestBuild(beanAnswer,
+                beanAnswer.getPriceSelected());
         String nameTable = "";
         component[0] = ConstantNameTable.MOTHERBOARD;
         component[1] = ConstantNameTable.SSD;
@@ -43,11 +35,11 @@ public class TakeQuizController {
         component[4] = ConstantNameTable.VIDEO_CARD;
         component[5] = ConstantNameTable.POWER_SUPPLY;
 
-        if(beanRequestBuild.getKeyword().getAnswer3().equals("Gaming")){
+        if(beanAnswer.getAnswer3().equals("Gaming")){
             nameTable = ConstantNameTable.GAMING;
-        }else if(beanRequestBuild.getKeyword().getAnswer3().equals("Office use")){
+        }else if(beanAnswer.getAnswer3().equals("Office use")){
             nameTable = ConstantNameTable.OFFICE_USE;
-        }else if(beanRequestBuild.getKeyword().getAnswer3().equals("Home use")){
+        }else if(beanAnswer.getAnswer3().equals("Home use")){
             nameTable = ConstantNameTable.HOME_USE;
         }
 
@@ -86,18 +78,19 @@ public class TakeQuizController {
     public void selectPrice(BeanCashback beanCashback, BeanSession beanSession) throws SQLException {
         BoundaryEbay boundaryEbay = new BoundaryEbay();
         String username = beanSession.getUsername();
-        BeanPoints beanPoints= boundaryEbay.madePurchase(beanCashback);
+        BeanCashback beanPoints= boundaryEbay.madePurchase(beanCashback);
 
-        ModelPoints modelPointsNew = new ModelPoints(beanPoints.getPoints());
-        ModelPoints modelPointsOld = new ModelPoints();
+        ModelCashback modelCashbackNew = new ModelCashback(beanPoints.getPoints());
+        ModelCashback modelCashbackOld = new ModelCashback();
 
-        modelPointsOld = DAOpoints.uploadPoints(modelPointsOld, username);
+        modelCashbackOld = DAOpoints.uploadPoints(modelCashbackOld, username);
 
-        if( modelPointsOld.getPoints() != 0) {
-            DAOpoints.updatePoints(modelPointsNew, username);
+        if( modelCashbackOld.getPoints() != 0) {
+            modelCashbackNew.setPoints(modelCashbackNew.getPoints()+ modelCashbackOld.getPoints());
+            DAOpoints.updatePoints(modelCashbackNew, username);
         }else{
             try {
-                DAOpoints.addPoints(modelPointsNew, username);
+                DAOpoints.addPoints(modelCashbackNew, username);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

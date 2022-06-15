@@ -1,7 +1,7 @@
 package com.example.buylap.model.users;
 
+import com.example.buylap.model.ModelCashback;
 import com.example.buylap.model.ModelCreditCard;
-import com.example.buylap.model.ModelPoints;
 
 public class ModelUser{
 
@@ -9,14 +9,14 @@ public class ModelUser{
     private String email;
     private String password;
     private ModelCreditCard creditCard;
-    private ModelPoints modelPoints;
+    private ModelCashback modelCashback; //modificare in beancashback
 
     public ModelUser(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.creditCard = new ModelCreditCard("","0000 0000 0000 0000", "00-00" );
-        this.modelPoints = new ModelPoints(0);
+        this.modelCashback = new ModelCashback(0);
     }
 
     public ModelUser(String username, String email, String password, ModelCreditCard creditCard) {
@@ -25,12 +25,12 @@ public class ModelUser{
         this.password = password;
         this.creditCard = creditCard;
     }
-    public ModelUser(String username, String email, String password, ModelCreditCard creditCard, ModelPoints modelPoints) {
+    public ModelUser(String username, String email, String password, ModelCreditCard creditCard, ModelCashback modelCashback) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.creditCard = creditCard;
-        this.modelPoints = modelPoints;
+        this.modelCashback = modelCashback;
     }
     public String getEmail() {
         return email;
@@ -66,11 +66,11 @@ public class ModelUser{
         this.creditCard = creditCard;
     }
 
-    public ModelPoints getModelPoints() {
-        return modelPoints;
+    public ModelCashback getModelPoints() {
+        return modelCashback;
     }
 
-    public void setModelPoints(ModelPoints modelPoints) {
-        this.modelPoints = modelPoints;
+    public void setModelPoints(ModelCashback modelCashback) {
+        this.modelCashback = modelCashback;
     }
 }

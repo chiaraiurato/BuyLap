@@ -5,33 +5,41 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.load.resource.gif.GifBitmapProvider;
 import com.example.buylap.R;
 import com.example.buylap.adapter.GenericUser;
 import com.example.buylap.adapter.Homepage;
-import com.example.buylap.adapter.HomepageAdaptee;
 import com.example.buylap.adapter.HomepageAdapter;
-import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.CashbackFragment;
+import com.example.buylap.view.GuestFragment;
 import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.NotificationFragment;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
+import com.example.buylap.view.SellerFragment;
 import com.example.buylap.view.UserFragment;
-
-import java.util.Map;
 
 public class NavigationGraphicController extends SessionGraphicController{
 
     private NavigationActivity navigationActivity;
     private GenericUser u;
-    private HomepageAdaptee s1;
+    private HomeFragment homeFragment;
+    private SellerFragment sellerFragment;
+    private GuestFragment guestFragment;
+    private UserFragment userFragment;
+
     private Homepage a;
+
     public NavigationGraphicController(NavigationActivity navigationActivity) {
         super(navigationActivity.getApplicationContext());
         this.navigationActivity = navigationActivity;
         this.u =new GenericUser();
-        this.s1= new HomepageAdaptee(navigationActivity);
-        this.a= new HomepageAdapter(s1);
+        this.homeFragment= new HomeFragment();
+        this.sellerFragment = new SellerFragment();
+        this.guestFragment = new GuestFragment();
+        this.userFragment = new UserFragment();
+        this.a= new HomepageAdapter(userFragment, sellerFragment, homeFragment, guestFragment, navigationActivity );
 
     }
 

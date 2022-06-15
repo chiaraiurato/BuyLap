@@ -5,7 +5,7 @@ import android.os.StrictMode;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryPoints;
-import com.example.buylap.model.ModelPoints;
+import com.example.buylap.model.ModelCashback;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +16,7 @@ public class DAOpoints {
     private DAOpoints() {
         //Private constructor
     }
-    public static ModelPoints uploadPoints(ModelPoints modelPoints, String username) throws SQLException {
+    public static ModelCashback uploadPoints(ModelCashback modelCashback, String username) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         int recordPoint;
@@ -30,20 +30,20 @@ public class DAOpoints {
             statement = connection.createStatement();
             ResultSet rs = QueryPoints.searchPoints(statement, username);
             if (!rs.first()) {
-                return modelPoints;
+                return modelCashback;
             }
             recordPoint = rs.getInt(3);
-            modelPoints.setPoints(recordPoint);
+            modelCashback.setPoints(recordPoint);
             rs.close();
         } finally {
             if (statement != null) {
                 statement.close();
             }
         }
-        return modelPoints;
+        return modelCashback;
     }
 
-    public static void addPoints(ModelPoints modelPoints, String username) throws SQLException{
+    public static void addPoints(ModelCashback modelCashback, String username) throws SQLException{
         Connection connection = null;
         Statement statement = null;
         try {
@@ -54,7 +54,7 @@ public class DAOpoints {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryPoints.addPoints(statement, username, modelPoints);
+            QueryPoints.addPoints(statement, username, modelCashback);
         } finally {
             if (statement != null) {
                 statement.close();
@@ -62,7 +62,7 @@ public class DAOpoints {
         }
     }
 
-    public static boolean updatePoints(ModelPoints modelPoints, String username) throws SQLException {
+    public static boolean updatePoints(ModelCashback modelCashback, String username) throws SQLException {
         Connection connection = null;
         Statement statement = null;
         try {
@@ -73,7 +73,7 @@ public class DAOpoints {
             connection = JdbcConnection.getInstance().getConnection();
 
             statement = connection.createStatement();
-            QueryPoints.updatePoints(statement,modelPoints, username);
+            QueryPoints.updatePoints(statement, modelCashback, username);
         } finally {
             if (statement != null) {
                 statement.close();

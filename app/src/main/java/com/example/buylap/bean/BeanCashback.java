@@ -2,18 +2,16 @@ package com.example.buylap.bean;
 
 public class BeanCashback {
 
-
-    private BeanCard beanCard;
+    private int points;
     private double amount;
 
-    public BeanCard getBeanCard() {
-        return beanCard;
+    public int getPoints() {
+        return points;
     }
 
-    public void setBeanCard(BeanCard beanCard) {
-        this.beanCard = beanCard;
+    public void setPoints(int points) {
+        this.points = points;
     }
-
     public double getAmount() {
         return amount;
     }

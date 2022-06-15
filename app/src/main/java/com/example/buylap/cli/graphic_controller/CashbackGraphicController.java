@@ -1,11 +1,10 @@
 package com.example.buylap.cli.graphic_controller;
 
 import android.os.Build;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanPoints;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.Cashback;
 import com.example.buylap.bean.BeanCard;
@@ -17,29 +16,26 @@ import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.exceptions.NoCardInsertedException;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.Map;
-import java.util.zip.DataFormatException;
 
 public class CashbackGraphicController {
     private GetCashbackController getCashbackController;
     private BeanSession beanSession;
-    private BeanPoints beanPoints;
+    private BeanCashback beanCashback;
     private BeanCard beanCard;
 
      public CashbackGraphicController() throws BeanException {
          this.getCashbackController = new GetCashbackController();
          this.beanSession = SessionManagerCLI.getUserDetails();
-         this.beanCard = new BeanCard();
-         this.beanPoints =  new BeanPoints();
+         this.beanCashback =  new BeanCashback();
      }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public BeanCard uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
-        return getCashbackController.uploadCreditCard(beanSession);
+        beanCard = getCashbackController.uploadCreditCard(beanSession);
+
+        return beanCard;
 
     }
     public void saveCreditCard(String input) throws DAOException, LengthBeanCardException {
@@ -63,32 +59,35 @@ public class CashbackGraphicController {
             System.out.println("Credit card saved!");
         }
     }
-    public BeanPoints uploadPoints() {
-        beanPoints = null;
+    public BeanCashback uploadPoints() {
+        beanCashback = null;
         try {
-            beanPoints = getCashbackController.uploadPoints(beanSession);
+            beanCashback = getCashbackController.uploadPoints(beanSession);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return beanPoints;
+        return beanCashback;
     }
     public void deleteCreditCard() throws DAOException {
 
         getCashbackController.deleteCreditCard(beanSession);
     }
-    public void cashOutPoints(BeanPoints beanPoints) throws SQLException {
-        if (beanPoints.getPoints() < 100) {
-            System.out.println("Required a minimum of 100 points. You have "+beanPoints.getPoints()+" points");
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void cashOutPoints(BeanCashback beanCashback) throws SQLException {
+        if (beanCashback.getPoints() < 50) {
+            System.out.println("Required a minimum of 50 points. You have "+beanCashback.getPoints()+" points");
         } else {
-            int remainingPoints = beanPoints.getPoints() - 100;
-            beanPoints.setPoints(remainingPoints);
+            int remainingPoints = beanCashback.getPoints() - 50;
+            beanCashback.setPoints(remainingPoints);
 
             try {
-                getCashbackController.sendMoneyToCreditCardCLI(beanCard);
-                beanPoints = getCashbackController.updatePoints(beanPoints, beanSession);
-                Cashback.setPoints(beanPoints);
+                getCashbackController.sendMoneyToCreditCardCLI(uploadCreditCard());
+                beanCashback = getCashbackController.updatePoints(beanCashback, beanSession);
+                Cashback.setPoints(beanCashback);
             } catch (NoCardInsertedException e) {
                 System.out.println("You need to add a credit card ");
+            } catch (DAOException | ExpiredDateCardException | ParseException e) {
+                e.printStackTrace();
             }
 
         }

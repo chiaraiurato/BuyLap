@@ -12,7 +12,7 @@ import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.exceptions.NoCardInsertedException;
 import com.example.buylap.model.ModelCreditCard;
-import com.example.buylap.model.ModelPoints;
+import com.example.buylap.model.ModelCashback;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -71,19 +71,19 @@ public class GetCashbackController {
     public BeanPoints uploadPoints(BeanSession beanSession) throws SQLException{
         BeanPoints beanPoints = new BeanPoints();
         String username = beanSession.getUsername();
-        ModelPoints modelPoints = new ModelPoints();
-        modelPoints = DAOpoints.uploadPoints(modelPoints, username);
-        beanPoints.setPoints(modelPoints.getPoints());
+        ModelPoints modelCashback = new ModelPoints();
+        modelCashback = DAOpoints.uploadPoints(modelCashback, username);
+        beanPoints.setPoints(modelCashback.getPoints());
         return beanPoints;
     }
     public BeanPoints updatePoints(BeanPoints beanPoints, BeanSession beanSession) throws SQLException {
 
         String username = beanSession.getUsername();
-        ModelPoints modelPoints = new ModelPoints(beanPoints.getPoints());
-        if( DAOpoints.updatePoints(modelPoints, username))
+        ModelPoints modelCashback = new ModelPoints(beanPoints.getPoints());
+        if( DAOpoints.updatePoints(modelCashback, username))
         {
 
-            beanPoints.setPoints(modelPoints.getPoints());
+            beanPoints.setPoints(modelCashback.getPoints());
         }else {
             beanPoints.setPoints(0);
         }

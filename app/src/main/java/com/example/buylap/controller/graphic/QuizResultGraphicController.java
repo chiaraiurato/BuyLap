@@ -10,7 +10,6 @@ import android.widget.Button;
 
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
@@ -29,7 +28,6 @@ public class QuizResultGraphicController extends SessionGraphicController {
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
     private List<BeanBuild> beanBuild;
-    private BeanRequestBuild beanRequestBuild;
     private BeanSession credentials;
 
     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
@@ -40,15 +38,14 @@ public class QuizResultGraphicController extends SessionGraphicController {
          this.beanAnswer = new BeanAnswer();
          this.beanBuild = new ArrayList<>();
          this.credentials = getBeanSession();
-         this.beanRequestBuild = new BeanRequestBuild();
     }
 
     public List<Category> setBuild(String a, String price){
 
-        beanAnswer= takeQuizController.getBeanAnswer(a);
-        beanRequestBuild.setKeyword(beanAnswer);
-        beanRequestBuild.setPrice(price);
-        beanBuild = takeQuizController.createBuild(beanRequestBuild);
+        beanAnswer.setAnswer3(a);
+        beanAnswer.setPriceSelected(price);
+
+        beanBuild = takeQuizController.createBuild(beanAnswer);
         if (beanBuild.isEmpty()){
             openErrorDialog();
         }else {

@@ -1,7 +1,6 @@
 package com.example.buylap.view;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,18 +12,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanPoints;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -120,8 +116,8 @@ public class CashbackFragment extends Fragment {
         cardHolderName.setText("");
     }
 
-    public void setPoints(BeanPoints beanPoints){
-        String points = String.valueOf(beanPoints.getPoints());
+    public void setPoints(BeanCashback beanCashback){
+        String points = String.valueOf(beanCashback.getPoints());
         pointsEarned.setText(points);
     }
 }

@@ -14,7 +14,7 @@ public class BoundaryPayment {
     public void pay(BeanCard beanCard, Context context) throws NoCardInsertedException {
 
        if(beanCard != null){
-           Toast.makeText(context, "Earned 100 $ ! Sending payment to you credit card... ", Toast.LENGTH_SHORT).show();
+           Toast.makeText(context, "Earned 50 $ ! Sending payment to you credit card... ", Toast.LENGTH_SHORT).show();
        }else{
            throw new NoCardInsertedException("Card not exist");
        }
@@ -23,7 +23,7 @@ public class BoundaryPayment {
     public void payCLI(BeanCard beanCard) throws NoCardInsertedException {
 
         if(beanCard != null){
-            System.out.println("Earned 100 $ ! Sending payment to you credit card... ");
+            System.out.println("Earned 50 $ ! Sending payment to you credit card... ");
         }else{
             throw new NoCardInsertedException("Card not exist");
         }

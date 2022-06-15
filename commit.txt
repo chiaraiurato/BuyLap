@@ -1,0 +1,671 @@
+commit 9949c20ad0fe3dac61d7fbbb9e3766da18f8a3e9
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Jun 14 12:38:29 2022 +0200
+
+    -mode cli modified
+
+commit 35ae87b9cd672c5cf5aa5f0519769c598ef70753
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Jun 13 14:43:51 2022 +0200
+
+    -added boundary ebay
+
+commit e8ee350da6146fd9a2c119d47c707d9191ebe6e3
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 12 15:00:38 2022 +0200
+
+    -better UI choose type account
+
+commit 63601dde31fb457e19638635bd1f935d2c96137c
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 12 12:49:05 2022 +0200
+
+    -add boundary
+
+commit c6df513d890d1b3bfc420029509464490f97dad1
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Jun 11 18:44:27 2022 +0200
+
+    -add boundary
+
+commit 02bf0546db45702c0f54f8f1fd14314b1c533273
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Jun 11 17:22:20 2022 +0200
+
+    -add points logic
+
+commit 88967edaf9cd2d1f3821923fa714f074723625e0
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Jun 10 22:59:36 2022 +0200
+
+    -add p iva to ModelSeller.java
+
+commit fb6965dc4021c4cf4a7ecee61d0f1739c2580b80
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Jun 10 12:59:05 2022 +0200
+
+    -remove useless file
+
+commit 274f393ac17d3d5a978963c9420555eb1efda5ec
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Jun 9 12:44:59 2022 +0200
+
+    -Better management of switch GUI
+
+commit 6bdefb58d109bae4a10a47d4e1c44f4bde9868e5
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Jun 7 16:51:44 2022 +0200
+
+    -modify README.md
+
+commit 8f1dbf77679e0deb40809fbc5da84737b92dabc4
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Jun 7 16:35:53 2022 +0200
+
+    -Adapter Pattern
+
+commit 636b580ba3222f87698415103f5cc14abb4bf31e
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Jun 6 15:52:09 2022 +0200
+
+    -resolving some smell code (5)
+
+commit a08c26296db5b03f9a1388ca05385545556584bf
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 5 21:06:52 2022 +0200
+
+    -resolving some smell code (4)
+
+commit b0b7248ec90519c29504fe906bd2ac72219d0eec
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 5 19:34:47 2022 +0200
+
+    -resolving some smell code (3)
+
+commit 77493432b88c375bfeed8eaa3acfa2d7acb753fb
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 5 18:44:30 2022 +0200
+
+    -resolving some smell code (2)
+
+commit 4848c9bf6a8b786f9cd21d71fda872685b33ee1e
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jun 5 18:31:26 2022 +0200
+
+    -resolving some smell code
+
+commit ef42bc730613590341c16d798c640f013ac51def
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Jun 3 22:04:36 2022 +0200
+
+    -TO DO : resolve reading info db from a file
+
+commit aefa97bb5ec6c85eb87444e1041e7182432548fc
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Jun 3 19:53:32 2022 +0200
+
+    -second view finished
+    -resolving smell code
+
+commit 675b033dd68367cfcf077d37b77032cf5480d9df
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed May 25 17:02:50 2022 +0200
+
+    -working on second view
+
+commit 50f021cf4d8011767f5def3fc58247126ee2cb41
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun May 22 21:35:03 2022 +0200
+
+    -resolved credit card error
+
+commit d83abf9d24e774ee2c7ee05745001eac2890d769
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat May 21 21:41:58 2022 +0200
+
+    -better Quiz logic
+    -create Dialog error_dialog.xml
+    -resolved some bugs
+
+commit 33184a47ae8c6be32d0680127c3c0ddb743fb1bd
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Apr 29 20:36:19 2022 +0200
+
+    -second interface
+
+commit 9afafefbc8eddb8ba557ad34d396273b285b7e99
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Apr 27 18:01:39 2022 +0200
+
+    -0 smell code
+
+commit ec6951071e7bd9d1c81c3509d083f022ec1e3836
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Apr 22 20:32:59 2022 +0200
+
+    -added spaces when digit credit card numbers
+
+commit cf33754b61cf9736dbda532cb852af0b69d8ce72
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Apr 22 19:59:55 2022 +0200
+
+    -resolved rounded float visualization bug
+    -Created InsertComponentGraphicController.java
+
+commit c39cfd2976a1101c4d38d4ec294cd0cfcbe6c742
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Apr 21 17:33:02 2022 +0200
+
+    -created InsertComponentActivity.java
+
+commit 4ed5aa680779d2a5f586050ebe8d7423678fbf57
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Apr 21 12:37:57 2022 +0200
+
+    -resolved some bugs
+
+commit e62419691a535a5ac300bd29ace0340a9487da4d
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Apr 4 16:02:33 2022 +0200
+
+    -added points
+
+commit 88d1040a6d6e4b7a3b908bb62e6c9c278475b546
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Apr 3 20:58:24 2022 +0200
+
+    -price now appears on QuizResultGraphicController.java
+
+commit 25e91bd068bdadbc58c4fabb4b47a5c17c1a8bbf
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Apr 3 19:13:12 2022 +0200
+
+    -Better UI of CashbackFragment.java
+    -Modified AddCardActivity.java
+
+commit 31fd2b16908d08df5b96b1de4776fa1b0e898d52
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Mar 29 18:07:08 2022 +0200
+
+    -One table for user
+    -delete singleton classes
+
+commit 6be201ad5e48483278ecadf00fa419f11315fb26
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Mar 27 21:15:46 2022 +0200
+
+    -Credit card saved on Database
+    -Creating SessionManager.java
+
+commit 1109230f77381604b24c85168c3f8a32f2cc6010
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Mar 22 18:11:13 2022 +0100
+
+    -Working on Cashback use case
+
+commit 91df14ece8b058e755ee29a5b6ed8c93bbf35490
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Mar 21 12:46:00 2022 +0100
+
+    - JdbcConnection.java read from file db.properties
+
+commit d6fb8452a8293799b91ecde3f9d91d9a4a7264a7
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Mar 19 18:43:19 2022 +0100
+
+    -resolve some smell code
+
+commit 50e89b8d1b84f0c0aa788de0d9c63a0a48a3e577
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Mar 18 21:44:38 2022 +0100
+
+    -resolved test result
+
+commit 0d86d0e7844c5098eb238116107784ad7f0f2fc0
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Mar 18 20:12:14 2022 +0100
+
+    -implementing selenium test via API
+
+commit 6b22458cc5f7692b811c202bba413477c87dfc4e
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Mar 17 16:04:13 2022 +0100
+
+    -better UI
+    -resolved bug signIn for businessman
+
+commit f2cb7fa33e4c4a25ec2a74d78e57530860f25e00
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Mar 12 21:43:55 2022 +0100
+
+    -solve bug of Selenium lib and update chromedriver.exe
+
+commit aec73a52b75dbff01436166aa76fd79dfaaa39c2
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Mar 8 17:24:50 2022 +0100
+
+    -installing Selenium libraries
+
+commit 5e417aa9c3e85316d245f7505cb4398072443fc1
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Mar 7 14:55:32 2022 +0100
+
+    -sign in and sign up done
+
+commit b6157d45db9e026f9354d51dd7843f1a8180d14d
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Mar 1 17:41:05 2022 +0100
+
+    -better image in SellerFragment.java
+
+commit 695364422e8cb082bfff216e801cacd138af48a3
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Mar 1 16:05:44 2022 +0100
+
+    -delete gui cli
+
+commit a6be3e5b8aea69ca008858948c2a1fb6c7b89dfa
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Feb 6 20:38:29 2022 +0100
+
+    -added more graphics
+
+commit 3eb44e36131362967315d494761d2985f75ad524
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Feb 6 15:29:17 2022 +0100
+
+    -2 GUI work in progress
+
+commit 8a07850aaa921d834de4f72e98037e2a22a371c1
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Feb 6 14:04:45 2022 +0100
+
+    -now guest works
+    -add a better seek_bar.xml
+
+commit 7ec5d938a9ba599904f94bdfad813962a4bb2946
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Feb 5 21:46:01 2022 +0100
+
+    -handled guest user
+    -TO DO: improve take quiz result with BudgetActivity
+
+commit 5e5069aeb002e26391b28c72d6e459ca4707306e
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Feb 5 14:30:02 2022 +0100
+
+    -another smell code
+
+commit ce985c51b5bec75ce3c3dc782de42747d514001a
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Feb 5 14:05:45 2022 +0100
+
+    -resolved some smell code
+
+commit 2c0ad3195317f5178ee3080b8056d9724821b65c
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Feb 5 13:34:55 2022 +0100
+
+    -Login works
+
+commit c1056ffd9afcb8e1c6df2b20aead96f6504b3983
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Feb 4 21:26:02 2022 +0100
+
+    -Seller and User share view
+    -insertSeller works
+
+commit ce9f0f99b102201e349e50e68e17decf3fa787a8
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Feb 3 21:51:10 2022 +0100
+
+    -Now radio button works and DB insertUser
+    -Applied Singleton to communication between controller
+
+commit 6c3b152e0c7e69296492f5c878df87895db224df
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Feb 3 13:01:13 2022 +0100
+
+    -Change logic of radio button
+    -UC Registration work in progress
+
+commit 6dc758c1dccdedfdb7541a8175ce56d14a48b969
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Feb 2 21:40:57 2022 +0100
+
+    -Login use case working progress
+
+commit 166fbe8aa6844eeaf1325015eb418672dc3a525c
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Feb 2 14:52:42 2022 +0100
+
+    -Now ram, cpu, ssd, power, videocard, motherboard are linked in one list ->optimized line of code
+    -TODO: QuizResultActivity.java should be a View
+
+commit 24ddd9519378a468e69c3a4e99049dbcc1338605
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Feb 1 20:06:09 2022 +0100
+
+    -Now QuizResultActivity.java show build in function of the answer clicked by the user
+    -TO DO: code smell on code due to repetition
+
+commit 482c83409acb89d6a810fd34086dfce8e6cf0194
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Jan 31 19:42:14 2022 +0100
+
+    -Reorganized class works
+    -TO DO: find a way to sendAnswer
+
+commit b8e38ffc354e93fedf494c3d442938ff4c370340
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Jan 31 19:41:49 2022 +0100
+
+    -Reorganized class works
+    -TO DO: find a way to sendAnswer
+
+commit bac568e180fea79753ab3081d1a3bc72ac1778d0
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Jan 30 21:46:21 2022 +0100
+
+    -Now DB works
+    -TO DO: reorganize activity in graphic controller,application controller and view
+
+commit e846354b6f5a396a923f12ad6949e00334557a70
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Jan 29 21:38:00 2022 +0100
+
+    -Created JdbcConnection.java
+    -Created BEANcpu.java, DAOcpu.java..
+    -To do: separate controller and testing db
+
+commit 5e2bbd43567ec4932ddca48f4ef5618cea2690c6
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Jan 29 12:11:15 2022 +0100
+
+    Resolved next button at the end of the quiz
+
+commit b3f707b34c2391f3fdaa5e9264acdb60e8296e7f
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Dec 22 21:30:36 2021 +0100
+
+    change icon motherboard.png
+
+commit ca07561fedf707803865678c05fd2f368edccafe
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Dec 22 21:28:29 2021 +0100
+
+    change icon motherboard.png
+
+commit 413192d9fb4caa135f35748a25c36b0ebfb0cf68
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Dec 21 19:18:18 2021 +0100
+
+    local db fixed
+
+commit 7cbfddf15041a9070bb1a1f5141476c3b192a06c
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Tue Dec 21 11:28:10 2021 +0100
+
+    test jdbc
+
+commit f8b4954122e1991d854647aa1b9c82481fe22bf1
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Dec 19 21:19:21 2021 +0100
+
+    import connector java
+
+commit 192f886df7dfd8cb508bc470f6fb4da93766f373
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Dec 19 20:25:25 2021 +0100
+
+    import jtds
+
+commit e2e0014d974dab298797a03d4f75b440cf854cc6
+Author: Luca <lacam0109@gmail.com>
+Date:   Sun Dec 19 17:52:12 2021 +0100
+
+    android.overridePathCheck=false
+
+commit 8c64fa8372da3711c3113fd374f8b7bde389fd30
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Dec 19 17:40:55 2021 +0100
+
+    import jtds
+
+commit 47c88afe618197c29639a8246c5fafb7384c0fa8
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Dec 19 17:29:25 2021 +0100
+
+    import jtds
+
+commit 07ad713e1e8e887565bc020a54c4d144d6163dc5
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sun Dec 19 17:24:12 2021 +0100
+
+    import jtds
+
+commit f2f683e69fa3a8721e043d88450547683a531296
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Dec 13 16:49:41 2021 +0100
+
+    moved into package
+
+commit c1e3c4111cb08bdd884671927a82934a2b7e6da8
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Dec 13 16:29:12 2021 +0100
+
+    created some entities
+    resolved moved to cashback
+
+commit 3842d570699c3f3d22608ca6e09ae2329a87e680
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Dec 11 19:24:15 2021 +0100
+
+    Resolved some bugs
+    Try badge on BottomNav
+
+commit 93f8ff258d12925dc105203f77cd5860e451ba79
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Dec 11 18:03:43 2021 +0100
+
+    Try link to ebay
+
+commit a0a7ec1c3b577a5acff1e06c013ba589ccd043eb
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Dec 10 16:13:16 2021 +0100
+
+    Try webView with amazon
+
+commit 17887dc62b11d41a68f99de1882af5300233aa9e
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Dec 10 15:42:21 2021 +0100
+
+    finished QuizResultActivity.java
+
+commit 2f2a076751bdfad0c6def0e6da5a9b81e26f87f0
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Fri Dec 10 12:55:24 2021 +0100
+
+    completed CashbackFragment.java
+    modified HomepageActivity.java
+
+commit 626b6a167643cb16821c4c791639b3fb6d5c2568
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Thu Dec 9 23:58:57 2021 +0100
+
+    completed CashbackFragment.java
+    modified HomepageActivity.java
+
+commit ae2736c78ff68151020612a665bb938c914413ca
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Wed Dec 8 23:30:23 2021 +0100
+
+    account balance
+
+commit f2a94b32fd4a5ed000eb0af8968546b058c7d3eb
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Mon Dec 6 17:22:26 2021 +0100
+
+    'gradle'
+
+commit 084b58ed9f30fe3b8bdf2d9169f52c73ce20ac23
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Dec 4 22:23:13 2021 +0100
+
+    resolve some code smell
+
+commit ad2b28da888c34bea257ed3a79da90b6e5f03e22
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Dec 4 22:12:04 2021 +0100
+
+    resolve some code smell
+
+commit 90bd86e17e18622833e032153b982fb291c60362
+Author: chiaraiurato <chiara.iurato@gmail.com>
+Date:   Sat Dec 4 21:59:15 2021 +0100
+
+    add project
+
+commit 484f7b496fb1a1848198583da763369d0bc6ef87
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Tue Nov 30 10:44:25 2021 +0100
+
+commit f6c025d09459b73ea6631541e07217a8e000af83
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 22 23:10:14 2021 +0100
+
+commit 642fbbeb37b31ec572c0ef137da45498f0368709
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 22 22:39:28 2021 +0100
+
+    Delete BuyLap directory
+
+commit dfd7c06a08fe0e6add8417bf07d083a1e5b9afdc
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 12 15:14:48 2021 +0100
+
+commit b58243e58edcd2c0f124a21ba4a506ff39deadde
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 12 14:31:58 2021 +0100
+
+commit db1df8460ab453d841aed4fd46fafc806d4091be
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Wed Nov 10 11:54:53 2021 +0100
+
+commit b35c468e8e063ed3d4fcbf4e3a72177f3bf65d04
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Wed Nov 10 11:54:24 2021 +0100
+
+commit 00dd13f481600669a20b6eb23996979d8d4c7447
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 23:20:29 2021 +0100
+
+commit 6b66a94d8fa669e88202ac602de6866f39b218e6
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 18:04:46 2021 +0100
+
+commit 08bcfbd4251ff0b1a1698e406be69e7dcd785156
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 18:03:30 2021 +0100
+
+commit 432838523e1ca4f9afa3763d8a8559b9f42c053d
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 17:03:05 2021 +0100
+
+commit 571cfa263fbafdcc377d5f16456dd19cdd52d976
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 17:02:49 2021 +0100
+
+commit 4adbaa677e669e2199eea6e8b68008b05ab4df41
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 17:02:31 2021 +0100
+
+commit d22563575cdec838847496b096f7cb778319cf30
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 8 16:22:44 2021 +0100
+
+commit 644cf33826e1ae6bb85bcd01aa9b15e64442dec5
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 8 16:21:21 2021 +0100
+
+commit 52cdd652f0d73fd456a5a0a520459cd03dd050a4
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 8 16:18:27 2021 +0100
+
+commit c6e5dda3ae1785a67570dd6a6524b3c9e7efac30
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 8 16:09:26 2021 +0100
+
+commit 6690ed89e6ad8565210e277375879b25d1f83d15
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Mon Nov 8 16:06:49 2021 +0100
+
+commit 33174ed3128cbc67b487128ddf77cc22c1bb7060
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Mon Nov 8 11:29:52 2021 +0100
+
+commit 618d6a52e936d03b5ebb25014cbbc422e1ba305f
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 23:10:08 2021 +0100
+
+commit 80164c3ed31bd89bd1b67d1893a19924176274b1
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 23:08:31 2021 +0100
+
+commit b55b0f6156b4052b586455bd536ce5ae55dcbe1a
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 23:08:03 2021 +0100
+
+commit 6cd3f4b68ec7ee049a88a5d33a017c792ae38cfa
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 23:07:20 2021 +0100
+
+commit 0d853c7c51bcc2150e0423d33e33c08ad9a538ef
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 17:52:45 2021 +0100
+
+commit a9f91f741cc41d569db0385de7b19d165552242d
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 17:51:27 2021 +0100
+
+commit 2b3a4a2a1470b2b3e0b21be143787eaddcc21cf1
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 17:50:41 2021 +0100
+
+commit 741af52f49301ac5d6c90980b0effec357a39b71
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 17:49:54 2021 +0100
+
+commit 2f6979565d7655d689033ac7146ce438299440cb
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 13:03:46 2021 +0100
+
+commit 89ad16fbe6d79ab308f28e2c2ce703bd8bfc72e2
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 12:56:48 2021 +0100
+
+commit 9cadcca48171d10833214205494f8741b0db9dc6
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 12:56:17 2021 +0100
+
+commit 66947807638b2e8c2528ee156954d4e7154b1583
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 12:37:13 2021 +0100
+
+commit bdf3d811f0727e711d63301403e338e044f8c2b4
+Author: MartorelliLuca <92364829+MartorelliLuca@users.noreply.github.com>
+Date:   Fri Nov 5 12:35:39 2021 +0100
+
+commit 43a9e1dadf759af56003a347e65fe8ec4217f667
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 12:08:05 2021 +0100
+
+commit 5ea877618c0e9fa2276788c8655a75ba7fd806e4
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 11:59:17 2021 +0100
+
+commit 0fe0721a71a9f610bc252bbd8f673736b7d24fc3
+Author: chiaraiurato <92391371+chiaraiurato@users.noreply.github.com>
+Date:   Fri Nov 5 11:55:24 2021 +0100
+
+    Initial commit

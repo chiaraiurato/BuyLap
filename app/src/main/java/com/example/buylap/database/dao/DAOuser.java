@@ -2,17 +2,12 @@ package com.example.buylap.database.dao;
 
 import android.os.StrictMode;
 
-import com.example.buylap.bean.BeanPoints;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryRegistrationLogin;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.ModelPoints;
 import com.example.buylap.model.users.ModelUser;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;

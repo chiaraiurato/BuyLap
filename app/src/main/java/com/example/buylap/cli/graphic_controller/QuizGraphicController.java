@@ -6,7 +6,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanRequestBuild;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
@@ -15,18 +14,10 @@ import com.example.buylap.bean.BeanAnswer;
 import com.example.buylap.bean.BeanBuild;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.cli.utils.CommandLineTable;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.text.ParseException;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.zip.DataFormatException;
 
 public class QuizGraphicController {
 
@@ -50,10 +41,8 @@ public class QuizGraphicController {
             beanAnswer.setAnswer3("Home use");
         }
         int index;
-        BeanRequestBuild beanRequestBuild = new BeanRequestBuild();
-        beanRequestBuild.setKeyword(beanAnswer);
-        beanRequestBuild.setPrice(price);
-        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanRequestBuild);
+        beanAnswer.setPriceSelected(price);
+        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanAnswer);
         if (beanBuild.isEmpty()) {
             System.out.println("No build found! Try with another price\n");
         } else {

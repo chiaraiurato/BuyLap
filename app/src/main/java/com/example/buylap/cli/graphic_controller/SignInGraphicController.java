@@ -49,7 +49,6 @@ public class SignInGraphicController {
                 e.printStackTrace();
             }
             assert modelUser != null;
-            System.out.println("model user "+modelUser.getUsername());
             SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "user");
             HomepageUser.main();
 

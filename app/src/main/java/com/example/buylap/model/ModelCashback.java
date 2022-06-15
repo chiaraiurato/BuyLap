@@ -1,10 +1,10 @@
 package com.example.buylap.model;
 
-public class ModelPoints {
-    public ModelPoints(int points) {
+public class ModelCashback {
+    public ModelCashback(int points) {
         this.points = points;
     }
-    public ModelPoints(){
+    public ModelCashback(){
         this.points = 0;
     }
 

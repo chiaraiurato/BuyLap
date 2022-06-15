@@ -1,8 +1,6 @@
 package com.example.buylap.database.query;
 
-import android.graphics.ColorSpace;
-
-import com.example.buylap.model.ModelPoints;
+import com.example.buylap.model.ModelCashback;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,9 +13,9 @@ public class QueryPoints {
     private QueryPoints(){
         throw new IllegalStateException("Utility class");
     }
-    public static void updatePoints(Statement statement, ModelPoints modelPoints, String username) throws SQLException {
+    public static void updatePoints(Statement statement, ModelCashback modelCashback, String username) throws SQLException {
         String query = "UPDATE points_earned " +
-                "SET token = " + modelPoints.getPoints()+ " " +
+                "SET token = " + modelCashback.getPoints()+ " " +
                 WHERE_USERNAME+username+"'";
         statement.executeUpdate(query);
     }
@@ -28,9 +26,9 @@ public class QueryPoints {
         return statement.executeQuery(query);
     }
 
-    public static void addPoints(Statement statement, String username, ModelPoints modelPoints) throws SQLException {
+    public static void addPoints(Statement statement, String username, ModelCashback modelCashback) throws SQLException {
         String query = "INSERT INTO `points_earned` (`username`,  `token`) " +
-                "VALUES ('"+ username+"', '"+modelPoints.getPoints()+"');";
+                "VALUES ('"+ username+"', '"+ modelCashback.getPoints()+"');";
         statement.executeUpdate(query);
     }
 }

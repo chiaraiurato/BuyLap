@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanPoints;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.boundary.BoundaryPayment;
 import com.example.buylap.database.dao.DAOcard;
@@ -13,8 +12,9 @@ import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
 import com.example.buylap.exceptions.NoCardInsertedException;
+import com.example.buylap.model.ModelCashback;
 import com.example.buylap.model.ModelCreditCard;
-import com.example.buylap.model.ModelPoints;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -70,26 +70,26 @@ public class GetCashbackController {
         }
     }
 
-    public BeanPoints uploadPoints(BeanSession beanSession) throws SQLException{
-        BeanPoints beanPoints = new BeanPoints();
+    public BeanCashback uploadPoints(BeanSession beanSession) throws SQLException{
+        BeanCashback beanCashback = new BeanCashback();
         String username = beanSession.getUsername();
-        ModelPoints modelPoints = new ModelPoints();
-        modelPoints = DAOpoints.uploadPoints(modelPoints, username);
-        beanPoints.setPoints(modelPoints.getPoints());
-        return beanPoints;
+        ModelCashback modelCashback = new ModelCashback();
+        modelCashback = DAOpoints.uploadPoints(modelCashback, username);
+        beanCashback.setPoints(modelCashback.getPoints());
+        return beanCashback;
     }
-    public BeanPoints updatePoints(BeanPoints beanPoints, BeanSession beanSession) throws SQLException {
+    public BeanCashback updatePoints(BeanCashback beanCashback, BeanSession beanSession) throws SQLException {
 
         String username = beanSession.getUsername();
-        ModelPoints modelPoints = new ModelPoints(beanPoints.getPoints());
-        if( DAOpoints.updatePoints(modelPoints, username))
+        ModelCashback modelCashback = new ModelCashback(beanCashback.getPoints());
+        if( DAOpoints.updatePoints(modelCashback, username))
         {
 
-            beanPoints.setPoints(modelPoints.getPoints());
+            beanCashback.setPoints(modelCashback.getPoints());
         }else {
-            beanPoints.setPoints(0);
+            beanCashback.setPoints(0);
         }
-        return beanPoints;
+        return beanCashback;
 
     }
     public void sendMoneyToCreditCard(BeanCard beanCard, Context context) throws NoCardInsertedException {

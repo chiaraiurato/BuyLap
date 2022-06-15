@@ -4,17 +4,14 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanPoints;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.cli.graphic_controller.CashbackGraphicController;
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.cli.utils.CommandLineTable;
 import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 
@@ -60,9 +57,10 @@ public class Cashback {
         setPoints(cashbackGraphicController.uploadPoints());
 
     }
-    public static void setPoints(BeanPoints beanPoints){
+    public static void setPoints(BeanCashback beanPoints){
         System.out.println("\nPoints earned : " + beanPoints.getPoints());
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public static void cashOut(){
          CashbackGraphicController cashbackGraphicController = null;
         try {

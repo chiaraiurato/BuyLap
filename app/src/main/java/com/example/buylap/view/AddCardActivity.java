@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.buylap.R;
+import com.example.buylap.controller.graphic.AddCardGraphicController;
 import com.example.buylap.controller.graphic.CashbackGraphicController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -33,7 +34,7 @@ public class AddCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
-        CashbackGraphicController cashbackGraphicController = new CashbackGraphicController(this);
+        AddCardGraphicController addCardGraphicController = new AddCardGraphicController(this);
         name = findViewById(R.id.titles);
         numberCard = findViewById(R.id.subtitles);
         dateFormat = findViewById(R.id.editTextDate);
@@ -45,7 +46,7 @@ public class AddCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    cashbackGraphicController.saveCreditCard();
+                    addCardGraphicController.saveCreditCard();
                 } catch (DAOException | BeanException  e) {
                     Toast.makeText(getApplicationContext(), "Error while saving credit card..  ", Toast.LENGTH_SHORT).show();
                 }catch (LengthBeanCardException e){
