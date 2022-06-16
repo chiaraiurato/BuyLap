@@ -1,1 +1,1 @@
-Ÿ 2javaXEhr@app/src/main/java/com/example/buylap/database/dao/DAOseller.java
+Ÿ 2javaX$hrCapp/src/main/java/com/example/buylap/database/query/QueryBuild.java

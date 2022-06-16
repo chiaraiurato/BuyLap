@@ -1,1 +1,1 @@
-i 2javaX<hrBapp/src/main/java/com/example/buylap/abstract_factory/Factory.java
+i 2javaX9hrEapp/src/main/java/com/example/buylap/adaptergui/AnalyticsAdapter.java

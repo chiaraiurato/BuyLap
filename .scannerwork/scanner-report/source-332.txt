@@ -1,54 +1,64 @@
 package com.example.buylap;
 
+import com.example.buylap.bean.BeanAnswer;
+import com.example.buylap.database.dao.DAObuild;
+import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.ModelRequestBuild;
+import com.example.buylap.utils.ConstantNameTable;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.controller.applicative.GetCashbackController;
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
-import com.example.buylap.model.ModelCreditCard;
-
-import java.text.ParseException;
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-public class InsertCreditCardTest {
-
-    //Test the correct functioning of the credit card addition
+public class QuizResultTest {
     @Test
-    public void testInsertCreditCard() {
-        boolean checkInfoCard= true;
-        boolean checkAdditionToDb;
-        BeanCard beanCard = new BeanCard();
-        beanCard.setCardNumber("1234 1234 1234 1234");
-        try {
-            beanCard.setData("23-09");
-        } catch (ParseException | ExpiredDateCardException e) {
-            checkInfoCard = false;
+    public void testQuizResult(){
+        int index;
+        boolean error= true;
+        String[] component = new String[6];
+
+        component[0] = ConstantNameTable.MOTHERBOARD;
+        component[1] = ConstantNameTable.SSD;
+        component[2] = ConstantNameTable.CPU;
+        component[3] = ConstantNameTable.RAM;
+        component[4] = ConstantNameTable.VIDEO_CARD;
+        component[5] = ConstantNameTable.POWER_SUPPLY;
+        BeanAnswer beanAnswer = new BeanAnswer();
+        beanAnswer.setAnswer3("Gaming");
+
+        String nameTable = ConstantNameTable.GAMING;
+
+        ModelRequestBuild modelRequestBuild = new ModelRequestBuild(beanAnswer, 1100);
+
+        List<ModelBuild> modelBuild = new ArrayList<>();
+        for(index = 0; index < 6; index++){
+
+            try {
+
+                if(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild ) == null){
+
+                    error = false;
+                }else {
+
+                    modelBuild.add(DAObuild.selectBuild(component[index], nameTable,modelRequestBuild ));
+                }
+
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
         }
-        beanCard.setCardHolderName("Mr. Test");
-        BeanSession beanSession = new BeanSession();
-        try {
-            beanSession.setUsername("test");
-        } catch (BeanException e) {
-            e.printStackTrace();
-        }
-        beanSession.setType("guest");
-        assertTrue(checkInfoCard);
-        GetCashbackController controller = new GetCashbackController();
-        try {
-            checkAdditionToDb=controller.createCard(beanCard, beanSession);
-        } catch (DAOException | LengthBeanCardException e) {
-           checkAdditionToDb = false;
-        }
-        assertTrue(checkAdditionToDb);
+        assertTrue("no build find with price 1100 $", error);
+        assertEquals("MSI AMD B550-A PRO", modelBuild.get(0).getTitle());
+        assertEquals("CRUCIAL SSD", modelBuild.get(1).getTitle());
+        assertEquals("RYZEN 5", modelBuild.get(2).getTitle());
+        assertEquals("Corsair VENGEANCELPX", modelBuild.get(3).getTitle());
+        assertEquals("GIGABYTE GTX 1080", modelBuild.get(4).getTitle());
+        assertEquals("COOLER MASTER", modelBuild.get(5).getTitle());
+
     }
+
+
 }

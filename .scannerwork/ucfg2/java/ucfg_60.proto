@@ -1,10 +1,19 @@
 
->com.example.buylap.view.AddCardActivity#isAtSpaceDelimiter(I)Zg
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/AddCardActivity.javaY Y(&"1*ß
-1g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/AddCardActivity.javaZ Z(C"q
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/view/AddCardActivity.javaZ Z(C
-"":
-""B+)
-'com.example.buylap.view.AddCardActivity
+_com.example.buylap.factory.Factory#createGuestFragment()Lcom/example/buylap/view/GuestFragment;b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/factory/Factory.java/ /(,"1*‹
+1b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/factory/Factory.java0 0("»¸
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/factory/Factory.java0 0( +
+%0%com.example.buylap.view.GuestFragment"%com.example.buylap.view.GuestFragmentÍ
+Ê
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/factory/Factory.java0 0("
+%1"/com.example.buylap.view.GuestFragment#<init>()V*-
++
+%0%com.example.buylap.view.GuestFragment"“
+b
+XC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/factory/Factory.java0 0(#-
++
+%0%com.example.buylap.view.GuestFragmentB&$
+"com.example.buylap.factory.Factory

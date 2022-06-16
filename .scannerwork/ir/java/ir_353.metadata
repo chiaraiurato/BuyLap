@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanComponentFromEbay#setPrice(F)V
+com.example.buylap.database.JdbcConnection#instance-init#

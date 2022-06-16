@@ -1,84 +1,85 @@
-package com.example.buylap.database.dao;
+package com.example.buylap.database;
 
-import android.os.StrictMode;
 
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
-import com.example.buylap.database.JdbcConnection;
-import com.example.buylap.database.query.QueryPoints;
-import com.example.buylap.model.ModelCashback;
+import com.example.buylap.utils.ContextHolder;
+import com.example.buylap.utils.PropertiesReader;
+import com.example.buylap.view.NavigationActivity;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
-import java.sql.ResultSet;
+import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Properties;
 
-public class DAOpoints {
-    private DAOpoints() {
-        //Private constructor
+public class JdbcConnection {
+
+    private static JdbcConnection instance = null;
+    private Connection connection = null;
+    protected JdbcConnection() {
+        //Singleton
     }
-    public static ModelCashback uploadPoints(ModelCashback modelCashback, String username) throws SQLException {
-        Connection connection = null;
-        Statement statement = null;
-        int recordPoint;
-        try {
-            if(!MainGraphicController.CLI) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
-            }
-            connection = JdbcConnection.getInstance().getConnection();
+    public static synchronized JdbcConnection getInstance(){
+        if (instance == null) {
+            instance = new JdbcConnection();
+        }
+        return instance;
+    }
+    public synchronized Connection getConnection() {
 
-            statement = connection.createStatement();
-            ResultSet rs = QueryPoints.searchPoints(statement, username);
-            if (!rs.first()) {
-                return modelCashback;
-            }
-            recordPoint = rs.getInt(3);
-            modelCashback.setPoints(recordPoint);
-            rs.close();
-        } finally {
-            if (statement != null) {
-                statement.close();
+        if (this.connection == null) {
+            if (!MainGraphicController.CLI) {
+               androidMode();
+            } else {
+                String path = new File("").getAbsolutePath();
+
+                File file = new File(
+                        path + "\\app\\src\\main\\assets\\db.properties");
+                cliMode(file);
             }
         }
-        return modelCashback;
+        return this.connection;
     }
-
-    public static void addPoints(ModelCashback modelCashback, String username) throws SQLException{
-        Connection connection = null;
-        Statement statement = null;
+    private void androidMode() {
+        PropertiesReader propertiesReader = new PropertiesReader(ContextHolder.getInstance().getContext());
+        Properties prop = propertiesReader.getProperties("db.properties");
         try {
-            if(!MainGraphicController.CLI) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
-            }
-            connection = JdbcConnection.getInstance().getConnection();
 
-            statement = connection.createStatement();
-            QueryPoints.addPoints(statement, username, modelCashback);
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+            this.connection = DriverManager.getConnection("jdbc:mysql://" + prop.getProperty("ip") + "/android", prop.getProperty("username"), prop.getProperty("password"));
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
+    private void cliMode(File file) {
 
-    public static boolean updatePoints(ModelCashback modelCashback, String username) throws SQLException {
-        Connection connection = null;
-        Statement statement = null;
-        try {
-            if(!MainGraphicController.CLI) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                StrictMode.setThreadPolicy(policy);
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String str = null;
+            StringBuilder strb = new StringBuilder();
+            while ((str = br.readLine()) != null) {
+                strb.append(str);
             }
-            connection = JdbcConnection.getInstance().getConnection();
 
-            statement = connection.createStatement();
-            QueryPoints.updatePoints(statement, modelCashback, username);
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
+            String username = strb.toString().replace("username=", "").substring(0, 5);
+
+            String password = strb.toString().replace("password=", "").substring(9, 14);
+
+            String ip = strb.toString().replace("ip=", "").substring(28);
+
+            this.connection = DriverManager.getConnection("jdbc:mysql://" + ip + "/android", username, password);
+
+        } catch (FileNotFoundException f) {
+
+            System.out.println(file + " does not exist");
+
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
         }
-        return true;
     }
 }
+
+

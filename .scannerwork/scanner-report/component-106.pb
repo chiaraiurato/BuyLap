@@ -1,1 +1,1 @@
-j 2javaX	hrLapp/src/main/java/com/example/buylap/abstract_factory/NavigationFactory.java
+j 2javaXYhrDapp/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java

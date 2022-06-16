@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.RegistrationController;
 import com.example.buylap.database.dao.DAOseller;
+import com.example.buylap.database.dao.DAOuser;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.EmailVerifyException;
@@ -21,7 +22,7 @@ public class SignUpTest {
 @Test
     public void testSignUpSeller(){
 
-    ModelSeller modelSeller = new ModelSeller("test", "test@gmail.com", "test",
+    ModelSeller modelSeller = new ModelSeller("seller", "test", "test@gmail.com", "test",
             "12345678910");
     try {
         DAOseller.insertSeller(modelSeller);
@@ -37,7 +38,7 @@ public class SignUpTest {
         assertEquals("test", modelSeller.getPassword());
         assertEquals("12345678910", modelSeller.getIva());
 
-    } catch (SQLException | IOException | DAOException e) {
+    } catch (SQLException | DAOException e) {
         e.printStackTrace();
     }
 

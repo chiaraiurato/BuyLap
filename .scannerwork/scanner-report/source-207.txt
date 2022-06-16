@@ -1,49 +1,25 @@
-package com.example.buylap.view;
-
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.example.buylap.R;
-import com.example.buylap.abstract_factory.NavigationFactory;
-import com.example.buylap.controller.graphic.UserFragmentGraphicController;
-
-public class UserFragment extends Fragment implements NavigationFactory {
+package test;
 
 
-    public UserFragment() {
-        // Required empty public constructor
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestSeleniumAPI {
+
+    public static void main(String[] args) {
+            openDriver();
     }
-    private UserFragmentGraphicController userFragmentGraphicController;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Button signOut;
-
-        userFragmentGraphicController= new UserFragmentGraphicController(this);
-
-        View view= inflater.inflate(R.layout.fragment_user, container, false);
-        signOut=view.findViewById(R.id.signoutBtn);
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                userFragmentGraphicController.onSignOut();
-            }
-        });
-
-        return view;
+    public static WebElement openDriver(){
+        System.setProperty("webdriver.chrome.driver", "src/androidTest/java/driver/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.cpubenchmark.net/cpu_list.php");
+        driver.findElement(By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"autocomplete-list\"]")).sendKeys("I7-11700K");
+        driver.findElement(By.xpath("//*[@id=\"main_content\"]/div[3]/div[1]/div/form/input[2]")).click();
+        return driver.findElement(By.xpath("//*[@id=\"cpu3896\"]/td[1]/a"));
     }
 
 
-    @Override
-    public Fragment selectMyFragment() {
-        return this;
-    }
 }

@@ -1,78 +1,85 @@
 package com.example.buylap.view;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.buylap.abstract_factory.NavigationFactory;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.graphic.HomeGraphicController;
-import com.example.buylap.adaptergui.MostViewAdapter;
 import com.example.buylap.R;
+import com.example.buylap.controller.graphic.InsertComponentGraphicController;
 import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.exceptions.DAOException;
 
 
-public class HomeFragment extends Fragment implements NavigationFactory {
-
-
-    private TextView accountName;
+public class InsertComponentActivity extends AppCompatActivity  {
+    private TextView choose;
+    private EditText urlEbay;
+    private EditText titles;
+    private EditText subtitles;
+    private EditText price;
+    private InsertComponentGraphicController insertComponentGraphicController;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
-
-
-        RecyclerView.Adapter adapter;
-        RecyclerView recyclerView;
-
-
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        try {
-            homeGraphicController.initializeSession(view);
-        } catch (BeanException e) {
-            e.printStackTrace();
-        }
-
-        Button takeQuiz = view.findViewById(R.id.takequiz);
-        takeQuiz.setOnClickListener(new View.OnClickListener() {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_insert_component);
+        choose = findViewById(R.id.type_item);
+        urlEbay = findViewById(R.id.url_ebay);
+        titles = findViewById(R.id.titles);
+        subtitles = findViewById(R.id.subtitles);
+        price = findViewById(R.id.price_item);
+        insertComponentGraphicController = new InsertComponentGraphicController(this);
+        Button save = findViewById(R.id.save_item);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               homeGraphicController.goToTakeQuiz();
+                try {
+                    insertComponentGraphicController.saveComponent();
+                } catch (BeanException | DAOException e) {
+                    e.printStackTrace();
+                }
             }
         });
-
-        recyclerView = view.findViewById(R.id.RecyclerMostView);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        adapter = new MostViewAdapter(homeGraphicController.setAdapterMostView());
-        recyclerView.setAdapter(adapter);
-        return view;
-    }
-    public void setUser(BeanUser beanUser, View view) {
-        accountName = view.findViewById(R.id.nameAccount);
-        if (beanUser.getUsername() != null) {
-            String username = beanUser.getUsername() + ",";
-            accountName.setText(username);
-        }
     }
 
-    public void setGuest( View view) {
-        accountName = view.findViewById(R.id.nameAccount);
-        String username = "guest,";
-        accountName.setText(username);
+    public void showPopup(View view){
+        insertComponentGraphicController.show(view);
+    }
+    public void setCpu(){
+        choose.setText(R.string.Cpu);
+    }
+    public void setRam() {
+        choose.setText(R.string.Ram);
+    }
+    public void setMotherboard() {
+        choose.setText(R.string.Motherboard);
+    }
+    public void setVideoCard() {
+        choose.setText(R.string.Video_card);
+    }
+    public void setPowerSupply() {
+        choose.setText(R.string.Power_supply);
+    }
+    public void setSsd() {
+        choose.setText(R.string.Ssd);
+    }
+    public String sendType(){
+       return choose.getText().toString();
+    }
+    public String sendTitle(){
+        return titles.getText().toString();
+    }
+    public String sendUrl(){
+        return urlEbay.getText().toString();
     }
 
-    @Override
-    public Fragment selectMyFragment() {
-        return this;
+    public String sendSubtitles() {
+        return subtitles.getText().toString();
+    }
+
+    public float sendPrice() {
+        return Float.parseFloat(price.getText().toString());
     }
 }

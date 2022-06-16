@@ -1,65 +1,63 @@
-package com.example.buylap.adaptergui;
+package com.example.buylap.bean;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
-import com.bumptech.glide.Glide;
-import com.example.buylap.R;
-import com.example.buylap.model.MostViewed;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import java.util.List;
+public class BeanCard {
+    private String cardHolderName;
+    private String cardNumber;
+    private String expireDate;
 
-
-public class MostViewAdapter extends RecyclerView.Adapter<MostViewAdapter.ViewHolder> {
-
-    List<MostViewed> mostViewDomains;
-
-    public MostViewAdapter(List<MostViewed> mostViewDomains) {
-        this.mostViewDomains = mostViewDomains;
+    public String getCardHolderName() {
+        return cardHolderName;
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder, parent, false);
-        return new ViewHolder(inflate);
+    public void setCardHolderName(String cardHolderName) {
+        this.cardHolderName = cardHolderName;
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.titleTxt.setText(String.valueOf(mostViewDomains.get(position).getTitle()));
-        holder.subTitleTxt.setText(String.valueOf(mostViewDomains.get(position).getSubtitle()));
+    public String getCardNumber(){
 
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(mostViewDomains.get(position).getUrl(), "drawable", holder.itemView.getContext().getPackageName());
-
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .into(holder.removeItem);
-
+        return cardNumber;
     }
 
-
-    @Override
-    public int getItemCount() {
-        return mostViewDomains.size();
+    public void setCardNumber(String cardNumber)  {
+        try {
+            checkLength();
+        } catch (LengthBeanCardException e) {
+            e.printStackTrace();
+        }
+        this.cardNumber = cardNumber;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTxt;
-        TextView subTitleTxt;
-        ImageView removeItem;
+    public String getData() {
+        return expireDate;
+    }
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            titleTxt = itemView.findViewById(R.id.titleTxt);
-            subTitleTxt = itemView.findViewById(R.id.subTitleTxt);
-            removeItem = itemView.findViewById(R.id.img_view);
+    public void setData(String date) throws ParseException, ExpiredDateCardException {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-mm");
+        simpleDateFormat.setLenient(false);
+        Date expireDateFormat =simpleDateFormat.parse(date);
+
+        boolean expired = expireDateFormat.before(new Date());
+        if(expired){
+            throw new ExpiredDateCardException("Date is expired");
+        }else{
+            this.expireDate= date;
         }
     }
+    private void checkLength() throws LengthBeanCardException {
+        if(cardNumber != null && cardNumber.length() > 20) {
+                throw new LengthBeanCardException("Number card is invalid");
+            }
+        }
+
 }
+

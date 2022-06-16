@@ -1,3 +1,5 @@
-com.example.buylap.utils.PropertiesReader#<init>(LContext;)V
-java.util.Properties#instance-init#
-java.util.Properties#<init>()V
+com.example.buylap.utils.Data#sendMostView()Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#
+com.example.buylap.model.MostViewed#instance-init#
+com.example.buylap.model.MostViewed#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

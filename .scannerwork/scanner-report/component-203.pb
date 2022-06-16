@@ -1,1 +1,1 @@
-Ë 2javaXGhrIapp/src/main/java/com/example/buylap/view/RegistrationSellerActivity.java
+Ë 2javaX?hrHapp/src/main/java/com/example/buylap/view/SelectTypeAccountActivity.java

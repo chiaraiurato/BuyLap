@@ -1,3 +1,6 @@
-com.example.buylap.controller.applicative.GetCashbackController#sendMoneyToCreditCard(Lcom/example/buylap/bean/BeanCard;LContext;)V
-com.example.buylap.boundary.BoundaryPayment#instance-init#
-com.example.buylap.boundary.BoundaryPayment#<init>()V
+com.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanUser;)Lcom/example/buylap/bean/BeanCashback;
+com.example.buylap.bean.BeanCashback#<init>()V
+com.example.buylap.bean.BeanCashback#instance-init#
+com.example.buylap.model.ModelCashback#instance-init#
+com.example.buylap.model.ModelCashback#<init>()V
+com.example.buylap.database.dao.DAOpoints#uploadPoints(Lcom/example/buylap/model/ModelCashback;Ljava/lang/String;)Lcom/example/buylap/model/ModelCashback;

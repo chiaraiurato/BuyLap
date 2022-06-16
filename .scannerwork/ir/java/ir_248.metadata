@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelCreditCard#instance-init#
+com.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;

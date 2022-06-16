@@ -1,1 +1,1 @@
-¥ 2javaX.hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java
+¥ 2javaXhrIapp/src/main/java/com/example/buylap/exceptions/EmailVerifyException.java

@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanComponentFromEbay#getType()Ljava/lang/String;
+com.example.buylap.database.JdbcConnection#<init>()V

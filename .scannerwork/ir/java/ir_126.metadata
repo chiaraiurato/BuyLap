@@ -1,1 +1,1 @@
-com.example.buylap.utils.ContextHolder#getContext()LContext;
+com.example.buylap.utils.SessionManager#isLoggedIn()Z

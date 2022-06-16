@@ -1,1 +1,4 @@
-com.example.buylap.view.NavigationActivity#instance-init#
+com.example.buylap.model.ModelRequestBuild#setPrice(Ljava/lang/String;)V
+java.lang.String#length()I
+java.lang.String#substring(II)Ljava/lang/String;
+java.lang.Float#parseFloat(Ljava/lang/String;)F

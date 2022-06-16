@@ -1,3 +1,1 @@
-com.example.buylap.boundary.BoundaryPayment#payCLI(Lcom/example/buylap/bean/BeanCard;)V
-com.example.buylap.exceptions.NoCardInsertedException#<init>(Ljava/lang/String;)V
-com.example.buylap.exceptions.NoCardInsertedException#instance-init#
+com.example.buylap.boundary.BoundaryPayment#instance-init#

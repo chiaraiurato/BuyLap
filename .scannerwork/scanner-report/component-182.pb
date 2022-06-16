@@ -1,1 +1,1 @@
-¶ 2javaX2hr8app/src/main/java/com/example/buylap/model/QuizList.java
+¶ 2javaXhrAapp/src/main/java/com/example/buylap/model/users/ModelSeller.java

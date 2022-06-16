@@ -1,2 +1,1 @@
-com.example.buylap.boundary.BoundaryEbay#madePurchase(Lcom/example/buylap/bean/BeanCashback;)Lcom/example/buylap/bean/BeanCashback;
-java.lang.Math#round(D)J
+com.example.buylap.QuizResultTest#instance-init#

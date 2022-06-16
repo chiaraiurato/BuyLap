@@ -1,6 +1,6 @@
 package com.example.buylap.bean;
 
-public class BeanBuild {
+public class BeanComponentFromEbay {
 
     private String type;
     private String title;

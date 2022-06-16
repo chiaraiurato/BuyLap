@@ -1,1 +1,1 @@
-£ 2javaX(hrHapp/src/main/java/com/example/buylap/database/query/QueryCreditCard.java
+£ 2javaXhrBapp/src/main/java/com/example/buylap/exceptions/BeanException.java

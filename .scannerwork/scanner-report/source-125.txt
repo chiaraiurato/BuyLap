@@ -1,71 +1,108 @@
-package com.example.buylap.cli.graphic_controller;
-
+package com.example.buylap.cli.utils;
+import android.annotation.SuppressLint;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.cli.utils.SessionManagerCLI;
-import com.example.buylap.cli.view.HomepageSeller;
-import com.example.buylap.cli.view.HomepageUser;
-import com.example.buylap.bean.BeanSeller;
-import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.LoginController;
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.text.ParseException;
+public class CommandLineTable {
+        private static final String HORIZONTAL_SEP = "-";
+        private String verticalSep;
+        private String joinSep;
+        private String[] headers;
+        private List<String[]> rows = new ArrayList<>();
+        private boolean rightAlign;
 
-
-public class SignInGraphicController {
-
-    private final LoginController loginController;
-
-    public SignInGraphicController(){
-        this.loginController = new LoginController();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String input) throws BeanException {
-        String replaceSpace = input.replace(" ", "");
-        String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");
-
-        String type = token[1];
-        String username = token[2];
-        String password = token[3];
-        if (type.equals("user")) {
-            ModelUser modelUser = null;
-            BeanUser beanUser = new BeanUser();
-            beanUser.setUsername(username);
-            beanUser.setPassword(password);
-            try {
-                modelUser = loginController.searchUser(beanUser);
-            } catch (DAOException e) {
-                e.printStackTrace();
-            }
-            assert modelUser != null;
-            SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "user");
-            HomepageUser.main();
-
-        }else if(type.equals("seller")){
-            ModelSeller modelSeller = null;
-            BeanSeller beanSeller = new BeanSeller();
-            beanSeller.setUsername(username);
-            beanSeller.setPassword(password);
-
-            try {
-                modelSeller = loginController.searchSeller(beanSeller);
-            } catch (DAOException e) {
-                e.printStackTrace();
-            }
-            assert modelSeller != null;
-            SessionManagerCLI.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "seller");
-            HomepageSeller.main();
+        public CommandLineTable() {
+            setShowVerticalLines(false);
         }
-    }
+
+        public void setRightAlign(boolean rightAlign) {
+            this.rightAlign = rightAlign;
+        }
+
+        public void setShowVerticalLines(boolean showVerticalLines) {
+            verticalSep = showVerticalLines ? "|" : "";
+            joinSep = showVerticalLines ? "+" : " ";
+        }
+
+        public void setHeaders(String... headers) {
+            this.headers = headers;
+        }
+
+        public void addRow(String... cells) {
+            rows.add(cells);
+        }
+
+        @SuppressLint("NewApi")
+        @RequiresApi(api = Build.VERSION_CODES.N)
+        public void print() {
+            int[] maxWidths = headers != null ?
+                    Arrays.stream(headers).mapToInt(String::length).toArray() : null;
+
+            for (String[] cells : rows) {
+                if (maxWidths == null) {
+                    maxWidths = new int[cells.length];
+                }
+                if (cells.length != maxWidths.length) {
+                    throw new IllegalArgumentException("Number of row-cells and headers should be consistent");
+                }
+                for (int i = 0; i < cells.length; i++) {
+                    maxWidths[i] = Math.max(maxWidths[i], cells[i].length());
+                }
+            }
+
+            if (headers != null) {
+                printLine(maxWidths);
+                printRow(headers, maxWidths);
+                printLine(maxWidths);
+            }
+            for (String[] cells : rows) {
+                printRow(cells, maxWidths);
+            }
+            if (headers != null) {
+                printLine(maxWidths);
+            }
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        private void printLine(int[] columnWidths) {
+            for (int i = 0; i < columnWidths.length; i++) {
+                String line = String.join("", Collections.nCopies(columnWidths[i] +
+                        verticalSep.length() + 1, HORIZONTAL_SEP));
+                StringBuilder demo = new StringBuilder();
+                demo.append(joinSep);
+                demo.append(line);
+                demo.append((i == columnWidths.length - 1 ? joinSep : ""));
+                System.out.printf(demo.toString());
+            }
+            System.out.println();
+        }
+
+        private void printRow(String[] cells, int[] maxWidths) {
+            for (int i = 0; i < cells.length; i++) {
+                String s = cells[i];
+                String verStrTemp = i == cells.length - 1 ? verticalSep : "";
+                StringBuilder demo = new StringBuilder();
+                if (rightAlign) {
+                    demo.append("%");
+                    demo.append(maxWidths[i]);
+                    demo.append("s");
+                    String string = String.format(demo.toString(), s);
+                    System.out.printf("%s %s %s", verticalSep, string, verStrTemp);
+                } else {
+                    demo.append("%-");
+                    demo.append(maxWidths[i]);
+                    demo.append("s");
+                    String string = String.format(demo.toString(), s);
+                    System.out.printf(String.format("%s %s %s", verticalSep, string, verStrTemp));
+                }
+            }
+            System.out.println();
+        }
+
 }

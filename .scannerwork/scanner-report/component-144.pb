@@ -1,1 +1,1 @@
-ê 2javaX3hrUapp/src/main/java/com/example/buylap/controller/graphic/AddCardGraphicController.java
+ê 2javaXZhr]app/src/main/java/com/example/buylap/controller/graphic/InsertComponentGraphicController.java

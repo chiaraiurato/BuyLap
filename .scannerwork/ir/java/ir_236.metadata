@@ -1,1 +1,2 @@
-com.example.buylap.view.InsertComponentActivity#sendUrl()Ljava/lang/String;
+com.example.buylap.view.InsertComponentActivity#sendPrice()F
+java.lang.Float#parseFloat(Ljava/lang/String;)F

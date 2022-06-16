@@ -1,1 +1,2 @@
-com.example.buylap.utils.SessionManager#logoutUser()V
+com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignIn()V
+null

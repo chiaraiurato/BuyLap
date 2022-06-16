@@ -1,1 +1,1 @@
- 2javaXjhr2app/src/main/java/com/example/buylap/cli/Main.java
+ 2javaXhr?app/src/main/java/com/example/buylap/cli/view/AddComponent.java

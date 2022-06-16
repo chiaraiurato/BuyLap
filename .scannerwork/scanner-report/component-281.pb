@@ -1,0 +1,1 @@
+™ 2xmlXohr-app/src/main/res/layout/activity_add_card.xml

@@ -1,1 +1,1 @@
-Œ 2javaXhrZapp/src/main/java/com/example/buylap/controller/applicative/InsertComponentController.java
+Œ 2javaXHhrSapp/src/main/java/com/example/buylap/controller/applicative/TakeQuizController.java

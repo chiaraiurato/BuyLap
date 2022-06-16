@@ -1,1 +1,1 @@
-com.example.buylap.utils.ContextHolder#setContext(LContext;)V
+com.example.buylap.utils.SessionManager#logoutUser()V

@@ -1,63 +1,80 @@
 package com.example.buylap.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.TextView;
 
-import com.example.buylap.R;
-import com.example.buylap.controller.applicative.RegistrationController;
-import com.example.buylap.controller.graphic.RegistrationGraphicController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.factory.NavigationFactory;
+import com.example.buylap.adaptergui.AnalyticsAdapter;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.controller.graphic.HomeGraphicController;
+import com.example.buylap.R;
 
-public class SelectTypeAccountActivity extends AppCompatActivity {
-    private CardView cardViewPersonal;
-    private CardView cardViewBusiness;
-    private Button next;
-    private RegistrationGraphicController registrationGraphicController;
+public class SellerFragment extends Fragment implements NavigationFactory {
+
+    private TextView accountName;
+
+    public SellerFragment() {
+        //Singleton
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_type_account);
-        registrationGraphicController = new RegistrationGraphicController(this);
-        next = findViewById(R.id.next);
-        cardViewPersonal = findViewById(R.id.cardViewPersonal);
-        cardViewBusiness = findViewById(R.id.cardViewBusiness);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-    }
-    public void personalClick (View view){
-        resetColor();
-        cardViewPersonal.setCardBackgroundColor(getResources().getColor(R.color.green));
-        chooseAccount(cardViewPersonal, "personal");
-    }
-    public void businessClick(View view){
-        resetColor();
-        cardViewBusiness.setCardBackgroundColor(getResources().getColor(R.color.green));
-        chooseAccount(cardViewBusiness, "business");
-
-    }
-    private void chooseAccount(CardView cardview, String answer){
-        cardview.setCardBackgroundColor(getResources().getColor(R.color.green));
-
-        next.setOnClickListener(new View.OnClickListener() {
+        HomeGraphicController homeGraphicController = new HomeGraphicController(this);
+        View view= inflater.inflate(R.layout.fragment_seller, container, false);
+        accountName = view.findViewById(R.id.businessAccount);
+        Button takeQuiz = view.findViewById(R.id.takeQuiz);
+        takeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(answer.equals("personal")){
-                    registrationGraphicController.gotoSignUpUser();
-                }else if(answer.equals("business")){
-                    registrationGraphicController.gotoSignUpSeller();
-                }
+                homeGraphicController.goToTakeQuiz();
             }
         });
+        try {
+            homeGraphicController.initializeSessionForSeller(view);
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
+        Button insertComponent = view.findViewById(R.id.insertComp);
+        insertComponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeGraphicController.gotoInsertComponent();
+            }
+        });
+        RecyclerView.Adapter adapter = new AnalyticsAdapter(homeGraphicController.setAdapterAnalytics());
+
+        RecyclerView recyclerView = view.findViewById(R.id.RecyclerFunct);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
+        return view;
     }
-    private void resetColor() {
-        cardViewPersonal.setCardBackgroundColor(getResources().getColor(R.color.bluebutton));
-        cardViewBusiness.setCardBackgroundColor(getResources().getColor(R.color.bluebutton));
-    }
+    public void setSeller(BeanSeller beanSeller, View view){
+        accountName = view.findViewById(R.id.businessAccount);
+
+        if(beanSeller.getUsername() != null) {
+            String username = beanSeller.getUsername() + ",";
+            accountName.setText(username);
+        }
 
 
+    }
+
+    @Override
+    public Fragment selectMyFragment() {
+        return this;
+    }
 }

@@ -1,1 +1,1 @@
-— 2javaX”hrXapp/src/main/java/com/example/buylap/controller/graphic/QuizResultGraphicController.java
+— 2javaXYhrVapp/src/main/java/com/example/buylap/controller/graphic/TakeQuizGraphicController.java

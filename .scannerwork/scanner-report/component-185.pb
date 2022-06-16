@@ -1,1 +1,1 @@
-¹ 2javaXhrAapp/src/main/java/com/example/buylap/utils/ConstantNameTable.java
+¹ 2javaXhr=app/src/main/java/com/example/buylap/utils/ContextHolder.java

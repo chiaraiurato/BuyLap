@@ -1,1 +1,1 @@
-x 2javaX.hr^app/src/main/java/com/example/buylap/cli/graphic_controller/AddComponentGraphicController.java
+x 2javaX>hrVapp/src/main/java/com/example/buylap/cli/graphic_controller/MainGraphicController.java

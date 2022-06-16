@@ -1,1 +1,1 @@
-Í 2javaXAhr8app/src/test/java/com/example/buylap/QuizResultTest.java
+Í 2javaX2hr4app/src/test/java/com/example/buylap/SignUpTest.java

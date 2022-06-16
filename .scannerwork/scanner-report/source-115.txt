@@ -1,48 +1,17 @@
-package com.example.buylap.bean;
+package com.example.buylap.boundary;
 
-import com.example.buylap.exceptions.IvaLengthException;
+import com.example.buylap.bean.BeanCashback;
 
-public class BeanSeller {
-    private String businessName;
-    private String businessEmail;
-    private String password;
-    private String pIva;
+public class BoundaryEbay {
 
-    public String getEmail() {
-        return businessEmail;
+    //Simulate the purchase made by user
+
+    public BeanCashback madePurchase(BeanCashback beanCashback){
+
+        double amount = beanCashback.getAmount();
+        double conversion = amount * 0.10;
+        beanCashback.setPoints((int)Math.round(conversion));
+        return beanCashback;
+
     }
-
-    public void setEmail(String businessEmail) {
-        this.businessEmail = businessEmail;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getUsername() {
-        return businessName;
-    }
-
-    public void setUsername(String businessName) {
-        this.businessName = businessName;
-    }
-
-    public String getIva() {
-        return pIva;
-    }
-
-    public void setIva(String pIva) throws IvaLengthException {
-        if(pIva.length()>11){
-            throw new IvaLengthException("Not a VAT number");
-        }
-        this.pIva = pIva;
-    }
-
 }

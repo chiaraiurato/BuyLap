@@ -1,2 +1,5 @@
-com.example.buylap.controller.graphic.RegistrationGraphicController#gotoSignUpUser()V
-null
+com.example.buylap.controller.graphic.RegistrationGraphicController#<init>(Lcom/example/buylap/view/RegistrationSellerActivity;)V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.controller.applicative.RegistrationController#<init>()V
+com.example.buylap.controller.applicative.RegistrationController#instance-init#
+com.example.buylap.utils.SessionManager#instance-init#

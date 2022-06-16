@@ -1,17 +1,16 @@
 
-Ccom.example.buylap.model.MostViewed#getSubtitle()Ljava/lang/String;c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java ("1*©
+@com.example.buylap.model.MostViewed#getTitle()Ljava/lang/String;c
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java ("1*¦
 1c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (½
-º
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (º
+·
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (
-%0java.lang.String"__id*5*3%
-#com.example.buylap.model.MostViewed"
-
-subtitle"
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (
+%0java.lang.String"__id*2*0%
+#com.example.buylap.model.MostViewed"
+title"
 c
-YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (
+YC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/MostViewed.java (
 
 %0java.lang.StringB'%
 #com.example.buylap.model.MostViewed

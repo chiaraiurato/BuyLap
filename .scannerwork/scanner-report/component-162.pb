@@ -1,1 +1,1 @@
-¢ 2javaX(hrCapp/src/main/java/com/example/buylap/database/query/QueryBuild.java
+¢ 2javaX(hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java

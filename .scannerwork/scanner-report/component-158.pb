@@ -1,1 +1,1 @@
-ž 2javaXUhr@app/src/main/java/com/example/buylap/database/dao/DAOpoints.java
+ž 2javaXVhrAapp/src/main/java/com/example/buylap/database/JdbcConnection.java

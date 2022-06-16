@@ -1,7 +1,8 @@
 package com.example.buylap.exceptions;
 
-public class BeanException extends  Exception {
-    public BeanException(String message) {
+public class ExpiredDateCardException extends Exception{
+    public ExpiredDateCardException (String message){
         super(message);
     }
+
 }

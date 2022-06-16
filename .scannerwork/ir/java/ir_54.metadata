@@ -1,3 +1,1 @@
-com.example.buylap.adaptergui.CategoryAdapter#onBindViewHolder(Lcom/example/buylap/adaptergui/CategoryAdapter$ViewHolder;I)V
-java.lang.String#valueOf(Ljava/lang/Object;)Ljava/lang/String;
-java.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+com.example.buylap.adaptergui.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adaptergui/CategoryAdapter$OnCatListener;)V

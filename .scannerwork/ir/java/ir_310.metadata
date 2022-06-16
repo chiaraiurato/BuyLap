@@ -1,1 +1,1 @@
-com.example.buylap.exceptions.ExpiredDateCardException#<init>(Ljava/lang/String;)V
+com.example.buylap.model.users.ModelUser#getType()Ljava/lang/String;

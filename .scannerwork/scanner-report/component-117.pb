@@ -1,1 +1,1 @@
-u 2javaX.hr7app/src/main/java/com/example/buylap/bean/BeanUser.java
+u 2javaX.hr^app/src/main/java/com/example/buylap/cli/graphic_controller/AddComponentGraphicController.java

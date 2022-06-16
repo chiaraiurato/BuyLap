@@ -1,37 +1,49 @@
 package com.example.buylap.model;
+public class QuizList {
 
-public class MostViewed {
-    private String title;
-    private String subtitle;
-    private String url;
+    String question;
+    String op1;
+    String op2;
+    String op3;
 
-    public MostViewed(String title, String subtitle, String url) {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.url = url;
+    public QuizList(String question, String op1, String op2, String op3) {
+        this.question = question;
+        this.op1 = op1;
+        this.op2 = op2;
+        this.op3 = op3;
     }
 
-    public String getTitle() {
-        return title;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public String getOp1() {
+        return op1;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+    public void setOp1(String op1) {
+        this.op1 = op1;
     }
 
-    public String getUrl() {
-        return url;
+    public String getOp2() {
+        return op2;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setOp2(String op2) {
+        this.op2 = op2;
     }
+
+    public String getOp3() {
+        return op3;
+    }
+
+    public void setOp3(String op3) {
+        this.op3 = op3;
+    }
+
+
 }

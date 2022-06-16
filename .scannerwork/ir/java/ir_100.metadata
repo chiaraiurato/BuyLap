@@ -1,1 +1,1 @@
-com.example.buylap.exceptions.DAOException#<init>(Ljava/lang/String;)V
+com.example.buylap.model.QuizList#getOp1()Ljava/lang/String;

@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanComponentFromEbay#getUrlEbay()Ljava/lang/String;
+com.example.buylap.database.query.QueryPoints#searchPoints(Ljava/sql/Statement;Ljava/lang/String;)Ljava/sql/ResultSet;

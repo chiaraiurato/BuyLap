@@ -1,1 +1,1 @@
-com.example.buylap.database.query.QueryCreditCard#searchCard(Ljava/sql/Statement;Ljava/lang/String;)Ljava/sql/ResultSet;
+com.example.buylap.database.query.QueryCreditCard#insertCreditCard(Ljava/sql/Statement;Lcom/example/buylap/model/ModelCreditCard;Ljava/lang/String;)V

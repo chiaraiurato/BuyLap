@@ -1,53 +1,20 @@
 package com.example.buylap.model;
 
-public class ModelBuild {
-
-    private String type;
-    private String title;
-    private String subtitles;
-    private String urlEbay;
-    private float price;
-
-    public ModelBuild(String type, String title, String subtitles, String urlEbay, float price) {
-        this.type = type;
-        this.title = title;
-        this.subtitles = subtitles;
-        this.urlEbay = urlEbay;
-        this.price = price;
+public class ModelCashback {
+    public ModelCashback(int points) {
+        this.points = points;
     }
-    public float getPrice() {
-        return price;
+    public ModelCashback(){
+        this.points = 0;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
-    public String getTitle() {
-        return title;
-    }
-    public String getType() {
-        return type;
+    private int points;
+
+    public int getPoints() {
+        return points;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPoints(int points) {
+        this.points = points;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getSubtitles() {
-        return subtitles;
-    }
-
-    public void setSubtitles(String subtitles) {
-
-        this.subtitles = subtitles;
-    }
-
-    public String getUrlEbay() {
-        return urlEbay;
-    }
-
 }

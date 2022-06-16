@@ -1,1 +1,1 @@
-ª 2javaXhrJapp/src/main/java/com/example/buylap/exceptions/FileNotFoundException.java
+ª 2javaXhrLapp/src/main/java/com/example/buylap/exceptions/LengthBeanCardException.java

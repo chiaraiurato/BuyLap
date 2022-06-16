@@ -1,6 +1,1 @@
-com.example.buylap.view.QuizResultActivity#onCreate(LBundle;)V
-null
-com.example.buylap.adaptergui.CategoryAdapter#instance-init#
-com.example.buylap.adaptergui.CategoryAdapter#<init>(Ljava/util/List;Lcom/example/buylap/adaptergui/CategoryAdapter$OnCatListener;)V
-com.example.buylap.controller.graphic.QuizResultGraphicController#<init>(Lcom/example/buylap/view/QuizResultActivity;)V
-com.example.buylap.controller.graphic.QuizResultGraphicController#instance-init#
+com.example.buylap.view.BudgetActivity#instance-init#

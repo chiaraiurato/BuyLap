@@ -1,1 +1,2 @@
-com.example.buylap.model.users.ModelUser#setCreditCard(Lcom/example/buylap/model/ModelCreditCard;)V
+com.example.buylap.controller.graphic.LoginGraphicController#verifyFields(LRadioButton;LRadioButton;)Ljava/lang/String;
+java.lang.String#isEmpty()Z

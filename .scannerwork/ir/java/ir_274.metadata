@@ -1,1 +1,3 @@
-com.example.buylap.view.UserFragment#instance-init#
+com.example.buylap.cli.utils.SessionManagerCLI#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+com.example.buylap.bean.BeanUser#instance-init#
+com.example.buylap.bean.BeanUser#<init>()V

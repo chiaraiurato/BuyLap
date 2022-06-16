@@ -1,1 +1,1 @@
-com.example.buylap.utils.ContextHolder#<init>()V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V

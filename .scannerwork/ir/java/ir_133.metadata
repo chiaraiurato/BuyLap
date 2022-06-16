@@ -1,1 +1,1 @@
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#deleteCreditCard()V
+com.example.buylap.utils.ContextHolder#setContext(LContext;)V

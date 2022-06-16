@@ -1,1 +1,1 @@
-com.example.buylap.adaptergui.AnalyticsAdapter#onBindViewHolder(Lcom/example/buylap/adaptergui/AnalyticsAdapter$ViewHolder;I)V
+com.example.buylap.model.ModelRequestBuild#setKeyword(Lcom/example/buylap/bean/BeanAnswer;)V

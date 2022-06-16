@@ -1,14 +1,65 @@
 
-5com.example.buylap.utils.SessionManager#isLoggedIn()Zg
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java$ $("1*Ù
-1g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %(í
-è
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %('
-%0java.lang.String"__id*
-"""q
-g
-]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java% %(0
-""B+)
-'com.example.buylap.utils.SessionManager
+Scom.example.buylap.controller.graphic.RegistrationGraphicController#verifyFields()ZÉ
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java` `("5*√
+2É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javac c(¶
+£
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javac c(/2
+%6,com.example.buylap.view.RegistrationActivity"__id*a*_E
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationActivity"é
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javad d(
+""*Û
+3É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javab b(¶
+£
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javab% b(92
+%4,com.example.buylap.view.RegistrationActivity"__id*a*_E
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationActivity∂≥
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javab% b(H
+%5java.lang.String"Mcom.example.buylap.view.RegistrationActivity#sendPassword()Ljava/lang/String;*4
+2
+%4,com.example.buylap.view.RegistrationActivity2sendPassword()*
+2
+1*Ì
+4É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaaF a(O¶
+£
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaaX a(l2
+%2,com.example.buylap.view.RegistrationActivity"__id*a*_E
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationActivity∞≠
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaaX a(x
+%3java.lang.String"Jcom.example.buylap.view.RegistrationActivity#sendEmail()Ljava/lang/String;*4
+2
+%2,com.example.buylap.view.RegistrationActivity2sendEmail()*
+2
+3*Û
+5É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaa a(¶
+£
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaa a(22
+%0,com.example.buylap.view.RegistrationActivity"__id*a*_E
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationActivity∂≥
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaa a(A
+%1java.lang.String"Mcom.example.buylap.view.RegistrationActivity#sendUsername()Ljava/lang/String;*4
+2
+%0,com.example.buylap.view.RegistrationActivity2sendUsername()*
+2
+4*ö
+1É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaf f("é
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaf f(
+""BGE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController

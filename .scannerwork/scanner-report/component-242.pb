@@ -1,1 +1,1 @@
-ò 2xmlXhr3app/src/main/res/drawable/ic_baseline_person_24.xml
+ò 2xmlXhr@app/src/main/res/drawable/ic_baseline_playlist_add_circle_24.xml

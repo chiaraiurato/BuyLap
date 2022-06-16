@@ -1,83 +1,149 @@
 package com.example.buylap.controller.graphic;
 
+import android.app.Dialog;
 import android.content.Intent;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.view.View;
+import android.widget.Button;
 
-import com.example.buylap.cli.utils.SessionManagerCLI;
-
-import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.R;
+import com.example.buylap.bean.BeanCashback;
 import com.example.buylap.bean.BeanUser;
-import com.example.buylap.controller.applicative.LoginController;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.model.users.ModelSeller;
-import com.example.buylap.model.users.ModelUser;
-import com.example.buylap.utils.SessionManager;
-import com.example.buylap.view.LoginActivity;
+import com.example.buylap.controller.applicative.GetCashbackController;
+import com.example.buylap.controller.applicative.TakeQuizController;
+import com.example.buylap.bean.BeanAnswer;
+import com.example.buylap.bean.BeanComponentFromEbay;
+import com.example.buylap.model.Category;
 import com.example.buylap.view.NavigationActivity;
-import com.example.buylap.view.RegistrationActivity;
-import com.example.buylap.view.SelectTypeAccountActivity;
+import com.example.buylap.view.QuizResultActivity;
 
-import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class LoginGraphicController {
+public class QuizResultGraphicController extends SessionGraphicController {
+    private List<Category> build;
+    private TakeQuizController takeQuizController;
+    private GetCashbackController getCashbackController;
+    private QuizResultActivity quizResultActivity;
+    private BeanAnswer beanAnswer;
+    private List<BeanComponentFromEbay> beanComponentFromEbay;
+    private BeanUser credentials;
 
-    private LoginActivity loginActivity;
-    private final LoginController loginController;
-    private SessionManager sessionManager;
-
-
-    public LoginGraphicController(LoginActivity loginActivity) {
-        this.loginActivity = loginActivity;
-        this.loginController = new LoginController();
-        this.sessionManager = new SessionManager(loginActivity.getApplicationContext());
+    public QuizResultGraphicController(QuizResultActivity quizResultActivity){
+         super(quizResultActivity.getApplicationContext());
+         this.build =  new ArrayList<>();
+         this.takeQuizController = new TakeQuizController();
+         this.quizResultActivity = quizResultActivity;
+         this.beanAnswer = new BeanAnswer();
+         this.beanComponentFromEbay = new ArrayList<>();
+         this.credentials = getBeanSession();
     }
 
+    public List<Category> setBuild(String a, String price){
 
-    public void goToRegistration() {
-        Intent intent = new Intent(loginActivity, SelectTypeAccountActivity.class);
-        loginActivity.startActivity(intent);
+        beanAnswer.setAnswer3(a);
+        beanAnswer.setPriceSelected(price);
+
+        beanComponentFromEbay = takeQuizController.createBuild(beanAnswer);
+        if (beanComponentFromEbay.isEmpty()){
+            openErrorDialog();
+        }else {
+            build.add(new Category(beanComponentFromEbay.get(0).getTitle(), "motherboard96", beanComponentFromEbay.get(0).getSubtitles(), beanComponentFromEbay.get(0).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(1).getTitle(), "ssd", beanComponentFromEbay.get(1).getSubtitles(), beanComponentFromEbay.get(1).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(2).getTitle(), "cpu", beanComponentFromEbay.get(2).getSubtitles(), beanComponentFromEbay.get(2).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(3).getTitle(), "ram", beanComponentFromEbay.get(3).getSubtitles(), beanComponentFromEbay.get(3).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(4).getTitle(), "videocard", beanComponentFromEbay.get(4).getSubtitles(), beanComponentFromEbay.get(4).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(5).getTitle(), "powersupply", beanComponentFromEbay.get(5).getSubtitles(), beanComponentFromEbay.get(5).getPrice()));
+        }
+         return build;
+     }
+
+    private void openErrorDialog() {
+        Dialog dialog = new Dialog(quizResultActivity);
+        dialog.setContentView(R.layout.error_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button goToHome = dialog.findViewById(R.id.gotoHome);
+        goToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
+                quizResultActivity.startActivity(intent);
+            }
+        });
+        dialog.show();
+
     }
 
-    private void gotoNavigationActivity(){
-        Intent intent = new Intent(loginActivity, NavigationActivity.class);
-        loginActivity.startActivity(intent);
+    public Intent linkToEbay(int position){
+         final Intent intent;
+             switch (position){
+                 case 0:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(0).getUrlEbay()));
+                     break;
+
+                 case 1:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(1).getUrlEbay()));
+                     break;
+                 case 2:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(2).getUrlEbay()));
+                     break;
+                 case 3:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(3).getUrlEbay()));
+                     break;
+                 case 4:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(4).getUrlEbay()));
+                     break;
+
+                 default:
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(5).getUrlEbay()));
+                     break;
+             }
+         return intent;
+     }
+
+
+    public void updateBalance(View v) {
+        Intent intent = new Intent(quizResultActivity, NavigationActivity.class);
+        intent.putExtra("gotoCashback", true);
+        if(credentials.getType().equals("GUEST")){
+            quizResultActivity.setMessageGuest(v);
+        }
+        quizResultActivity.startActivity(intent);
     }
 
-    public void signInUser() throws DAOException, BeanException{
+    public void madePurchase(int position) {
+        float price;
+        switch (position){
+            case 0:
+                price = beanComponentFromEbay.get(0).getPrice();
+                break;
+            case 1:
+                price =  beanComponentFromEbay.get(1).getPrice();
+                break;
+            case 2:
+                price =  beanComponentFromEbay.get(2).getPrice();
+                break;
+            case 3:
+                price =  beanComponentFromEbay.get(3).getPrice();
+                break;
+            case 4:
+                price =  beanComponentFromEbay.get(4).getPrice();
+                break;
+            default:
+                price =  beanComponentFromEbay.get(5).getPrice();
+                break;
+        }
+        BeanCashback beanCashback = new BeanCashback();
+        beanCashback.setAmount(price);
+        try {
+           getCashbackController.purchasedFromEbay(beanCashback, credentials);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
-            BeanUser beanUser = new BeanUser();
-            beanUser.setUsername(loginActivity.sendUsername());
-            beanUser.setPassword(loginActivity.sendPassword());
-
-            ModelUser modelUser = loginController.searchUser(beanUser);
-            sessionManager.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "USER");
-            gotoNavigationActivity();
     }
-
-    public void signInSeller() throws DAOException {
-
-            BeanSeller beanSeller = new BeanSeller();
-            beanSeller.setUsername(loginActivity.sendUsername());
-            beanSeller.setPassword(loginActivity.sendPassword());
-
-            ModelSeller modelSeller = loginController.searchSeller(beanSeller);
-            sessionManager.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "SELLER");
-            gotoNavigationActivity();
-    }
-
-    public String verifyFields( RadioButton userRadio, RadioButton sellerRadio) {
-        if (loginActivity.sendUsername().isEmpty() || loginActivity.sendPassword().isEmpty()) {
-            Toast.makeText(loginActivity, "All field required", Toast.LENGTH_SHORT).show();
-            return "";
-        } else if (!userRadio.isChecked() && !sellerRadio.isChecked()) {
-            Toast.makeText(loginActivity, "Select type account", Toast.LENGTH_SHORT).show();
-            return "";
-        } else if (userRadio.isChecked())
-            return "USER";
-        return "SELLER";
-    }
-
-
 }

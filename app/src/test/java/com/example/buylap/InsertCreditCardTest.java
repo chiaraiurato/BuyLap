@@ -49,6 +49,7 @@ public class InsertCreditCardTest {
             e.printStackTrace();
         }
         try {
+            assert controller != null;
             checkAdditionToDb=controller.createCard(beanCard, beanUser);
         } catch (DAOException | LengthBeanCardException e) {
            checkAdditionToDb = false;

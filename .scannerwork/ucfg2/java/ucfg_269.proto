@@ -1,9 +1,17 @@
 
-1com.example.buylap.bean.BeanCashback#getAmount()Dd
-ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCashback.java ("1*Ÿ
-1d
-ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCashback.java ("n
-d
-ZC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanCashback.java (
-""B(&
-$com.example.buylap.bean.BeanCashback
+@com.example.buylap.bean.BeanUser#getPassword()Ljava/lang/String;`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java! !("1*ù
+1`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java" "(∑
+¥
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java" "(
+%0java.lang.String"__id*2*0"
+ com.example.buylap.bean.BeanUser"
+
+password"|
+`
+VC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/bean/BeanUser.java" "(
+
+%0java.lang.StringB$"
+ com.example.buylap.bean.BeanUser

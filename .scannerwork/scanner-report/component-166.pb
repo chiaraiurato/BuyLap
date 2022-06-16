@@ -1,1 +1,1 @@
-¦ 2javaXhrBapp/src/main/java/com/example/buylap/exceptions/BeanException.java
+¦ 2javaX	hrMapp/src/main/java/com/example/buylap/exceptions/ExpiredDateCardException.java

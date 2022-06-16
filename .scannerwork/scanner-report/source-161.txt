@@ -1,85 +1,34 @@
-package com.example.buylap.database;
+package com.example.buylap.database.query;
 
+import com.example.buylap.model.ModelCashback;
 
-import com.example.buylap.cli.graphic_controller.MainGraphicController;
-import com.example.buylap.utils.ContextHolder;
-import com.example.buylap.utils.PropertiesReader;
-import com.example.buylap.view.NavigationActivity;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.sql.Statement;
 
-public class JdbcConnection {
+public class QueryPoints {
+    private static final String SELECT_ALL= "SELECT * ";
+    private static final String WHERE_USERNAME = "WHERE username = '";
 
-    private static JdbcConnection instance = null;
-    private Connection connection = null;
-    protected JdbcConnection() {
-        //Singleton
+    private QueryPoints(){
+        throw new IllegalStateException("Utility class");
     }
-    public static synchronized JdbcConnection getInstance(){
-        if (instance == null) {
-            instance = new JdbcConnection();
-        }
-        return instance;
+    public static void updatePoints(Statement statement, ModelCashback modelCashback, String username) throws SQLException {
+        String query = "UPDATE points_earned " +
+                "SET token = " + modelCashback.getPoints()+ " " +
+                WHERE_USERNAME+username+"'";
+        statement.executeUpdate(query);
     }
-    public synchronized Connection getConnection() {
-
-        if (this.connection == null) {
-            if (!MainGraphicController.CLI) {
-               androidMode();
-            } else {
-                String path = new File("").getAbsolutePath();
-
-                File file = new File(
-                        path + "\\app\\src\\main\\assets\\db.properties");
-                cliMode(file);
-            }
-        }
-        return this.connection;
+    public static ResultSet searchPoints(Statement statement, String username) throws SQLException {
+        String query = SELECT_ALL +
+                "FROM points_earned " +
+                WHERE_USERNAME+username+"'";
+        return statement.executeQuery(query);
     }
-    private void androidMode() {
-        PropertiesReader propertiesReader = new PropertiesReader(ContextHolder.getInstance().getContext());
-        Properties prop = propertiesReader.getProperties("db.properties");
-        try {
 
-            this.connection = DriverManager.getConnection("jdbc:mysql://" + prop.getProperty("ip") + "/android", prop.getProperty("username"), prop.getProperty("password"));
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    private void cliMode(File file) {
-
-        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String str = null;
-            StringBuilder strb = new StringBuilder();
-            while ((str = br.readLine()) != null) {
-                strb.append(str);
-            }
-
-            String username = strb.toString().replace("username=", "").substring(0, 5);
-
-            String password = strb.toString().replace("password=", "").substring(9, 14);
-
-            String ip = strb.toString().replace("ip=", "").substring(28);
-
-            this.connection = DriverManager.getConnection("jdbc:mysql://" + ip + "/android", username, password);
-
-        } catch (FileNotFoundException f) {
-
-            System.out.println(file + " does not exist");
-
-        } catch (IOException | SQLException e) {
-            e.printStackTrace();
-        }
+    public static void addPoints(Statement statement, String username, ModelCashback modelCashback) throws SQLException {
+        String query = "INSERT INTO `points_earned` (`username`,  `token`) " +
+                "VALUES ('"+ username+"', '"+ modelCashback.getPoints()+"');";
+        statement.executeUpdate(query);
     }
 }
-
-

@@ -1,16 +1,20 @@
 
-Dcom.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java ("1*º
-1h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (Ã
-À
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (
-%0java.lang.String"__id*6*4*
-(com.example.buylap.model.ModelCreditCard"
-name"„
-h
-^C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/model/ModelCreditCard.java (
-
-%0java.lang.StringB,*
-(com.example.buylap.model.ModelCreditCard
+=com.example.buylap.adaptergui.MostViewAdapter#getItemCount()Im
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java1 1("1*ü
+1m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java2 2(Ö
+Ó
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java2 2(
+%0java.util.List"__id*F*D/
+-com.example.buylap.adaptergui.MostViewAdapter"
+mostViewDomainsµ²
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java2 2(%	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"w
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java2 2(&
+""B1/
+-com.example.buylap.adaptergui.MostViewAdapter

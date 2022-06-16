@@ -1,25 +1,19 @@
 package com.example.buylap.bean;
 
-public class BeanCashback {
+import com.example.buylap.exceptions.IvaLengthException;
 
-    private int points;
-    private double amount;
+public class BeanSeller extends BeanUser {
 
-    public int getPoints() {
-        return points;
+    private String pIva;
+    public String getIva() {
+        return pIva;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setIva(String pIva) throws IvaLengthException {
+        if(pIva.length()>11){
+            throw new IvaLengthException("Not a VAT number");
+        }
+        this.pIva = pIva;
     }
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-
 
 }

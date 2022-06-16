@@ -1,1 +1,1 @@
-¸ 2javaXLhr?app/src/main/java/com/example/buylap/model/users/ModelUser.java
+¸ 2javaXhrAapp/src/main/java/com/example/buylap/utils/ConstantNameTable.java

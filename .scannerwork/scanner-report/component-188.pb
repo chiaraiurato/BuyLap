@@ -1,1 +1,1 @@
-¼ 2javaXhr9app/src/main/java/com/example/buylap/utils/NameBuild.java
+¼ 2javaX"hr@app/src/main/java/com/example/buylap/utils/PropertiesReader.java

@@ -1,1 +1,1 @@
-com.example.buylap.view.TakeQuizActivity#Op1Click(LView;)V
+com.example.buylap.view.TakeQuizActivity#finished(Lcom/example/buylap/bean/BeanAnswer;)V

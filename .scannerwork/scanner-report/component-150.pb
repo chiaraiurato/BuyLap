@@ -1,1 +1,1 @@
-– 2javaXQhrXapp/src/main/java/com/example/buylap/controller/graphic/NavigationGraphicController.java
+– 2javaX(hrUapp/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java

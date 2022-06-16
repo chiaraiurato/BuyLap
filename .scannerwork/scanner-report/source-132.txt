@@ -1,45 +1,61 @@
 package com.example.buylap.cli.view;
 
-import com.example.buylap.cli.graphic_controller.CashbackGraphicController;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.example.buylap.cli.graphic_controller.HomepageGraphicController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.LengthBeanCardException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-
-public class CreditCard {
-    private CreditCard(){
-        //View Credit Card
+public class HomepageUser {
+    public static final String IO_EXCEPTION = "IOException";
+    public static final String BEAN_EXCEPTION="BeanSession is null";
+    private HomepageUser(){
+        //View HomepageUser
     }
-    public static void save(String input){
-        CashbackGraphicController cashbackGraphicController = null;
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main() {
+
+        System.out.println("------------------------ HOMEPAGE USER -----------------------");
+        String input= "";
+        HomepageGraphicController homepageGraphicController = null;
         try {
-            cashbackGraphicController = new CashbackGraphicController();
+            homepageGraphicController = new HomepageGraphicController();
         } catch (BeanException e) {
             e.printStackTrace();
         }
-        try {
-            assert cashbackGraphicController != null;
-            cashbackGraphicController.saveCreditCard(input);
-        } catch (DAOException e) {
-            System.out.println("Error while saving credit card...");
-        } catch (LengthBeanCardException e) {
-            System.out.println("Length maximum is 20");
-        }
-    }
-    public static void delete(){
+        assert homepageGraphicController != null;
+        System.out.println("\nHi "+homepageGraphicController.initializeSessionCLI()+",\nWelcome back!\n");
 
-        CashbackGraphicController cashbackGraphicController = null;
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
         try {
-            cashbackGraphicController = new CashbackGraphicController();
+            input = numberBuffer.readLine();
+        } catch (IOException e) {
+            System.out.println(IO_EXCEPTION);
+        }
+        try {
+            homepageGraphicController.executeCommand(input);
+        } catch (IOException e) {
+            System.out.println(IO_EXCEPTION);
+        }
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void run() throws IOException{
+        String input= "";
+        HomepageGraphicController homepageGraphicController = null;
+        try {
+            homepageGraphicController = new HomepageGraphicController();
         } catch (BeanException e) {
-            e.printStackTrace();
+            System.out.println(BEAN_EXCEPTION);
         }
-        try {
-            assert cashbackGraphicController != null;
-            cashbackGraphicController.deleteCreditCard();
-        } catch (DAOException e) {
-            System.out.println("Error while deleting credit card");
-        }
-        System.out.println("Credit card deleted");
+        BufferedReader numberBuffer = new BufferedReader(new InputStreamReader(System.in));
+        input = numberBuffer.readLine();
+        assert homepageGraphicController != null;
+        homepageGraphicController.executeCommand(input);
     }
 }

@@ -1,39 +1,39 @@
 package com.example.buylap.database.query;
 
-import android.util.Log;
-
-import com.example.buylap.bean.BeanComponentFromEbay;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.model.ModelBuild;
 import com.example.buylap.model.users.ModelSeller;
+import com.example.buylap.model.users.ModelUser;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class QueryBuild {
+public class QueryRegistrationLogin {
 
+    private static final String SELECT_ALL= "SELECT * ";
+    private static final String WHERE_USERNAME = "WHERE username = '";
 
-    private QueryBuild() {
+    private QueryRegistrationLogin() {
         throw new IllegalStateException("Utility class");
     }
+    public static void insertUser(Statement stmt, ModelUser modelUser) throws SQLException {
 
-    public static ResultSet retrieveBuild(Statement stmt, String type, String nameTable, float price) throws SQLException {
-        float firstPrice = price - 200;
-        float secondPrice = price + 200;
-        String query = "SELECT "+nameTable+"."+type+", "+type+".subtitles, "+type+".url, "+type+".price " +
-                        "FROM " +nameTable+ " " +
-                        "INNER JOIN "+type+" ON "+nameTable+"."+type+"="+type+".name "+
-                        "WHERE `price_total` BETWEEN "+ firstPrice +" AND "+secondPrice+";";
-       
+        String query = "INSERT INTO `users` (`username`,  `type`, `mail`, `password`) " +
+                        "VALUES ('"+ modelUser.getUsername()+"', 'user', '"+modelUser.getEmail()+"', '"+modelUser.getPassword()+"');";
+        stmt.executeUpdate(query);
+    }
+    public static void insertSeller(Statement stmt, ModelSeller modelSeller) throws SQLException {
+
+        String query = "INSERT INTO `users` (`username`, `type`,  `mail`, `password`, `piva` ) " +
+                        "VALUES ('"+ modelSeller.getUsername()+"', 'seller', '"+modelSeller.getEmail()+"', '"+modelSeller.getPassword()+"', '"+modelSeller.getIva()+"');";
+        stmt.executeUpdate(query);
+    }
+
+    public static ResultSet searchUser(Statement stmt, ModelUser modelUser) throws    SQLException{
+        String query = SELECT_ALL +
+                        "FROM users " +
+                        WHERE_USERNAME + modelUser.getUsername()+"' AND type = '"+modelUser.getType()+"' AND password = '"+modelUser.getPassword()+"';";
         return stmt.executeQuery(query);
+
     }
 
-
-    public static void insertComponent(Statement statement, ModelBuild modelBuild, ModelSeller modelSeller) throws SQLException {
-        String query = "INSERT INTO `insert_component` (`username`, `type`, `name`,  `subtitles`,`price`, `url`) " +
-                "VALUES ('"+modelSeller.getUsername() +"', '"+ modelBuild.getType()+"', '"+modelBuild.getTitle()+"', '"+modelBuild.getSubtitles()+"', '"
-                + modelBuild.getPrice()+"', ' "+ modelBuild.getUrlEbay()+"');";
-        statement.executeUpdate(query);
-    }
 }

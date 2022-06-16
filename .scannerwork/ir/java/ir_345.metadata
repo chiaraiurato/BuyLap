@@ -1,1 +1,1 @@
-com.example.buylap.view.NotificationFragment#onCreateView(LLayoutInflater;LViewGroup;LBundle;)LView;
+com.example.buylap.bean.BeanUser#getEmail()Ljava/lang/String;

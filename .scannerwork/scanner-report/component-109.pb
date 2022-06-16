@@ -1,1 +1,1 @@
-m 2javaXBhrDapp/src/main/java/com/example/buylap/adaptergui/MostViewAdapter.java
+m 2javaX@hr7app/src/main/java/com/example/buylap/bean/BeanCard.java

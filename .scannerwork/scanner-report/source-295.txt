@@ -5,66 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#202442"
-    tools:context=".view.GuestFragment">
-
+    tools:context=".view.HomeFragment">
 
     <TextView
-        android:id="@+id/MyaccountGuest"
-        android:layout_width="222dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="44dp"
+        android:id="@+id/Hi"
+        android:layout_width="28dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="My account"
+        android:text="Hi"
         android:textColor="#FFFFFF"
-
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/signoutGuest"
-        android:layout_width="330dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="96dp"
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="198dp"
+        android:layout_height="49dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Exit"
+        android:text="Welcome back"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Hi"
+        app:layout_constraintTop_toBottomOf="@+id/Hi" />
+
+    <Button
+        android:id="@+id/takequiz"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/zcool_regular"
+        android:text="Take Quiz"
         android:textAllCaps="false"
         android:textColor="#1F2341"
         android:textSize="24sp"
         android:background="@drawable/bg_greenbutton"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="404dp"
+        android:layout_height="512dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="88dp"
-        android:src="@drawable/icons8_cash_in_hand_96"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MyaccountGuest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/Analitycs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/zcool_regular"
+                android:text="Most viewed"
+                android:textColor="#535986"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerMostView"
+            android:layout_width="355dp"
+            android:layout_height="406dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="10dp" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/message"
-        android:layout_width="330dp"
-        android:layout_height="63dp"
-        android:checked="false"
+        android:id="@+id/nameAccount"
+        android:layout_width="170dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/zcool_regular"
-        android:text="Register an account and get cashback!"
-        android:textColor="#535986"
-        android:textAlignment="center"
-        android:textSize="27sp"
-        app:layout_constraintBottom_toTopOf="@+id/signoutGuest"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcome"
+        app:layout_constraintStart_toEndOf="@+id/Hi" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

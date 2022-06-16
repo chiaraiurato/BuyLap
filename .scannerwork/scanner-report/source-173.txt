@@ -1,7 +1,8 @@
-package com.example.buylap.exceptions;
+package com.example.buylap.factory;
 
-public class LengthBeanCardException  extends Exception{
-    public LengthBeanCardException (String message){
-        super(message);
-    }
+import androidx.fragment.app.Fragment;
+
+public interface NavigationFactory {
+
+    Fragment selectMyFragment();
 }

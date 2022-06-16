@@ -1,1 +1,1 @@
-com.example.buylap.view.RegistrationActivity#sendPassword()Ljava/lang/String;
+com.example.buylap.view.RegistrationActivity#sendEmail()Ljava/lang/String;

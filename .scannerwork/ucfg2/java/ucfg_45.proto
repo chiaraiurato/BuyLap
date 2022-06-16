@@ -1,227 +1,21 @@
 
-‰com.example.buylap.database.query.QueryBuild#retrieveBuild(Ljava/sql/Statement;Ljava/lang/String;Ljava/lang/String;F)Ljava/sql/ResultSet;l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ()"1*ô.
-1l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ( Á
-¾
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (*
-%0java.lang.String"__concat*	
-SELECT *
-
-	nameTablejava.lang.String´
-±
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (.
-%1java.lang.String"__concat*
-
-%0java.lang.String*
-.É
-Æ
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (3
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-
-typejava.lang.Stringµ
-²
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (8
-%3java.lang.String"__concat*
-
-%2java.lang.String*
-, É
-Æ
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (=
-%4java.lang.String"__concat*
-
-%3java.lang.String*
-
-typejava.lang.String¿
-¼
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (L
-%5java.lang.String"__concat*
-
-%4java.lang.String*
-.subtitles, É
-Æ
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (Q
-%6java.lang.String"__concat*
-
-%5java.lang.String*
-
-typejava.lang.String¹
-¶
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (Z
-%7java.lang.String"__concat*
-
-%6java.lang.String*
-
-.url, É
-Æ
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (_
-%8java.lang.String"__concat*
-
-%7java.lang.String*
-
-typejava.lang.Stringº
-·
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (i
-%9java.lang.String"__concat*
-
-%8java.lang.String*	
-.price ¹
-¶
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (
-%10java.lang.String"__concat*
-
-%9java.lang.String*	
-FROM Ð
-Í
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (*
-%11java.lang.String"__concat*
-
-%10java.lang.String*
-
-	nameTablejava.lang.String¶
-³
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (/
-%12java.lang.String"__concat*
-
-%11java.lang.String*
- À
-½
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (%
-%13java.lang.String"__concat*
-
-%12java.lang.String*
-INNER JOIN Ë
-È
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (*
-%14java.lang.String"__concat*
-
-%13java.lang.String*
-
-typejava.lang.String¹
-¶
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (1
-%15java.lang.String"__concat*
-
-%14java.lang.String*
- ON Ð
-Í
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (;
-%16java.lang.String"__concat*
-
-%15java.lang.String*
-
-	nameTablejava.lang.String¶
-³
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (?
-%17java.lang.String"__concat*
-
-%16java.lang.String*
-.Ë
-È
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (D
-%18java.lang.String"__concat*
-
-%17java.lang.String*
-
-typejava.lang.String¶
-³
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (H
-%19java.lang.String"__concat*
-
-%18java.lang.String*
-=Ë
-È
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (M
-%20java.lang.String"__concat*
-
-%19java.lang.String*
-
-typejava.lang.String»
-¸
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (V
-%21java.lang.String"__concat*
-
-%20java.lang.String*
-
-.name Ñ
-Î
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (6
-%22java.lang.String"__concat*
-
-%21java.lang.String* 
-WHERE `price_total` BETWEEN ·
-´
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (B
-%23java.lang.String"__concat*
-
-%22java.lang.String*
-""º
-·
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (K
-%24java.lang.String"__concat*
-
-%23java.lang.String*	
- AND ·
-´
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (W
-%25java.lang.String"__concat*
-
-%24java.lang.String*
-""¶
-³
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ([
-%26java.lang.String"__concat*
-
-%25java.lang.String*
-;­
-ª
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java (\
-queryjava.lang.String"__id*
-
-%26java.lang.String²¯
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ('
-%27java.sql.ResultSet"Gjava.sql.Statement#executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;*
-
-stmtjava.sql.Statement*
-
-queryjava.lang.String2 executeQuery(Ljava/lang/String;)"‹
-l
-bC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryBuild.java ((
-
-%27java.sql.ResultSet:
-stmtjava.sql.Statement:
-typejava.lang.String:
-	nameTablejava.lang.String:
-""B0".
-,com.example.buylap.database.query.QueryBuild
+=com.example.buylap.adaptergui.CategoryAdapter#getItemCount()Im
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java9 9("1*õ
+1m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java: :(Ï
+Ì
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java: :(
+%0java.util.List"__id*?*=/
+-com.example.buylap.adaptergui.CategoryAdapter"
+
+categoryµ²
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java: :(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"w
+m
+cC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/adaptergui/CategoryAdapter.java: :(
+""B1/
+-com.example.buylap.adaptergui.CategoryAdapter

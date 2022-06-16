@@ -28,7 +28,7 @@ public class SignUp {
         SignUpGraphicController signUpGraphicController = new SignUpGraphicController();
         try {
             signUpGraphicController.parseInput(input);
-        } catch (BeanException e) {
+        } catch (BeanException | DAOException e) {
             System.out.println(BEAN_EXCEPTION);
         }
 

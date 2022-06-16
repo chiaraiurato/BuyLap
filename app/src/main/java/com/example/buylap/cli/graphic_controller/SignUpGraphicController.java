@@ -33,7 +33,7 @@ public class SignUpGraphicController {
         this.registrationController = new RegistrationController();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void parseInput(String input) throws BeanException {
+    public void parseInput(String input) throws BeanException, DAOException {
 
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-t|\\-u|\\-p|\\-m");
@@ -54,12 +54,10 @@ public class SignUpGraphicController {
                 System.out.println(EMAIL_LENGTH);
             }
             beanUser.setPassword(password);
-            Boolean result = null;
-            try {
-                result = registrationController.createUser(beanUser);
-            } catch (DAOException e) {
-                e.printStackTrace();
-            }
+            Boolean result;
+
+            result = registrationController.createUser(beanUser);
+
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for User");
             }
@@ -84,12 +82,10 @@ public class SignUpGraphicController {
                 System.out.println("Length of VAT number must be 11");
             }
             beanSeller.setPassword(password);
-            Boolean result = null;
-            try {
-                result = registrationController.createSeller(beanSeller);
-            } catch (DAOException e) {
-                e.printStackTrace();
-            }
+            Boolean result;
+
+            result = registrationController.createSeller(beanSeller);
+
             if (Boolean.TRUE.equals(result)) {
                 System.out.println("SignUp success for Seller");
             }

@@ -1,1 +1,1 @@
-com.example.buylap.bean.BeanUser#getEmail()Ljava/lang/String;
+com.example.buylap.bean.BeanCard#getCardHolderName()Ljava/lang/String;

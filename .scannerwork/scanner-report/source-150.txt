@@ -1,80 +1,39 @@
 package com.example.buylap.controller.graphic;
 
-import android.content.Intent;
+import android.content.Context;
 import android.util.Log;
-import android.view.MenuItem;
 
-import androidx.fragment.app.Fragment;
-import com.example.buylap.R;
-import com.example.buylap.abstract_factory.Factory;
-import com.example.buylap.abstract_factory.NavigationFactory;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.exceptions.InvalidTypeAccountException;
-import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.NotificationFragment;
-import com.example.buylap.view.MainActivity;
-import com.example.buylap.view.NavigationActivity;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.utils.SessionManager;
 
+import java.util.Map;
+import java.util.Objects;
 
-public class NavigationGraphicController extends SessionGraphicController{
+public class SessionGraphicController {
+    protected SessionManager session;
+    protected BeanUser beanSession;
+    protected Map<String, String> user;
 
-    private NavigationActivity navigationActivity;
-    private BeanSession credentials;
-    private NavigationFactory navigationHome;
-    private NavigationFactory navigationSetting;
-
-    public NavigationGraphicController(NavigationActivity navigationActivity) {
-        super(navigationActivity.getApplicationContext());
-        this.navigationActivity = navigationActivity;
-        this.credentials = getBeanSession();
-        Factory factory = new Factory();
-        try {
-            navigationHome = factory.createNavigationFactory("home", credentials.getType());
-            navigationSetting = factory.createNavigationFactory("setting", credentials.getType());
-
-        } catch (InvalidTypeAccountException e) {
-            e.printStackTrace();
+    protected SessionGraphicController(Context context) {
+        this.session = new SessionManager(context);
+        this.user = session.getUserDetails();
+        this.beanSession = new BeanUser();
+    }
+    protected BeanUser getBeanSession(){
+        if(user.get("user") != null) {
+            try {
+                beanSession.setUsername(Objects.requireNonNull(user.get("user")));
+                beanSession.setType(Objects.requireNonNull(user.get("type")));
+                beanSession.setPassword(Objects.requireNonNull(user.get("pass")));
+            } catch (BeanException e) {
+                Log.d("BeanSession", "Field username is null");
+            }
         }
 
+        return this.beanSession;
     }
-
-    public void checkLogin(){
-
-        if(!isLogged()){
-            Log.d("logged", ""+isLogged());
-            Intent intent = new Intent(navigationActivity.getApplicationContext(), MainActivity.class);
-           intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            navigationActivity.startActivity(intent);
-        }else{
-            Fragment fragment = selectTypeHomepage();
-            navigationActivity.getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-        }
+    protected boolean isLogged(){
+        return session.isLoggedIn();
     }
-    public Fragment selectTypeHomepage(){
-        return navigationHome.selectMyFragment();
-    }
-
-    public Fragment switchPage(MenuItem item){
-
-        Fragment fragment = null;
-        switch (item.getItemId()){
-            case R.id.nav_home:
-                fragment = navigationHome.selectMyFragment();
-                break;
-            case R.id.nav_cashback:
-                fragment = new CashbackFragment();
-                break;
-            case R.id.nav_notification:
-                fragment= new NotificationFragment();
-                break;
-            case R.id.nav_user:
-                fragment=  navigationSetting.selectMyFragment();
-                break;
-        }
-        return fragment;
-
-    }
-
-
 }

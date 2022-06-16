@@ -1,1 +1,1 @@
-ª 2xmlX~hr+app/src/main/res/layout/fragment_seller.xml
+ª 2xmlX˜hr)app/src/main/res/layout/fragment_user.xml

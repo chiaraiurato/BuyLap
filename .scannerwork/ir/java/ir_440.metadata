@@ -1,1 +1,1 @@
-com.example.buylap.adaptergui.AnalyticsAdapter#<init>(Ljava/util/List;)V
+com.example.buylap.model.ModelRequestBuild#<init>(Lcom/example/buylap/bean/BeanAnswer;F)V

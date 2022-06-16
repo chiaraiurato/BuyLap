@@ -1,1 +1,1 @@
-com.example.buylap.view.InsertComponentActivity#setPowerSupply()V
+com.example.buylap.view.InsertComponentActivity#sendType()Ljava/lang/String;

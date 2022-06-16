@@ -1,19 +1,20 @@
 
-fcom.example.buylap.abstract_factory.Factory#createHomeFragment()Lcom/example/buylap/view/HomeFragment;k
-aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/abstract_factory/Factory.java3 3(*"1*ª
-1k
-aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/abstract_factory/Factory.java4 4(!Â¿
-k
-aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/abstract_factory/Factory.java4 4(*
-%0$com.example.buylap.view.HomeFragment"$com.example.buylap.view.HomeFragmentÔ
-Ñ
-k
-aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/abstract_factory/Factory.java4 4(!
-%1".com.example.buylap.view.HomeFragment#<init>()V*,
-*
-%0$com.example.buylap.view.HomeFragment"›
-k
-aC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/abstract_factory/Factory.java4 4(",
-*
-%0$com.example.buylap.view.HomeFragmentB/-
-+com.example.buylap.abstract_factory.Factory
+Jcom.example.buylap.controller.graphic.SessionGraphicController#isLogged()Z~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java$ $("1*¥
+1~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(‰
+†
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(-
+%0'com.example.buylap.utils.SessionManager"__id*O*M@
+>com.example.buylap.controller.graphic.SessionGraphicController"	
+sessionˆ…
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %(#
+%1boolean"5com.example.buylap.utils.SessionManager#isLoggedIn()Z*/
+-
+%0'com.example.buylap.utils.SessionManager2isLoggedIn()"ˆ
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java% %($
+""BB@
+>com.example.buylap.controller.graphic.SessionGraphicController

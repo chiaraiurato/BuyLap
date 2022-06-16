@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelCreditCard#getName()Ljava/lang/String;
+com.example.buylap.model.ModelCreditCard#getNumber()Ljava/lang/String;

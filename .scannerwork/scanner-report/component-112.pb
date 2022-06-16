@@ -1,1 +1,1 @@
-p 2javaX@hr7app/src/main/java/com/example/buylap/bean/BeanCard.java
+p 2javaXhr8app/src/main/java/com/example/buylap/bean/BeanGuest.java

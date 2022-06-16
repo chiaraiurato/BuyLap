@@ -1,1 +1,1 @@
-com.example.buylap.model.users.ModelUser#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/example/buylap/model/ModelCreditCard;)V
+com.example.buylap.model.users.ModelUser#getCreditCard()Lcom/example/buylap/model/ModelCreditCard;

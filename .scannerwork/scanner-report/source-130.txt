@@ -1,22 +1,19 @@
 package com.example.buylap.cli.view;
 
-import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
+import android.os.Build;
 
-import com.example.buylap.cli.graphic_controller.AddComponentGraphicController;
-import com.example.buylap.exceptions.BeanException;
+import androidx.annotation.RequiresApi;
 
-public class AddComponent {
-    private AddComponent(){
-        //View AddComponent
+import com.example.buylap.cli.Main;
+
+public class Exit {
+    private Exit(){
+        //View Exit
     }
-    public static void main(String input){
-        AddComponentGraphicController addComponentGraphicController = null;
-        try {
-            addComponentGraphicController = new AddComponentGraphicController();
-        } catch (BeanException e) {
-            System.out.println(BEAN_EXCEPTION);
-        }
-        assert addComponentGraphicController != null;
-        addComponentGraphicController.saveComponent(input);
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static void main(){
+
+        System.out.println("\nExiting..\n");
+        Main.runMain();
     }
 }

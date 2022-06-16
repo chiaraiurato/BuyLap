@@ -1,1 +1,1 @@
-š 2xmlXohr-app/src/main/res/layout/activity_add_card.xml
+š 2xmlXzhr+app/src/main/res/layout/activity_budget.xml

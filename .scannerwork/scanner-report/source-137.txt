@@ -1,41 +1,27 @@
-package com.example.buylap.cli.view;
+package com.example.buylap.controller.applicative;
 
-import static com.example.buylap.cli.view.HomepageUser.BEAN_EXCEPTION;
-
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
-import com.example.buylap.cli.graphic_controller.SignUpGraphicController;
-import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.bean.BeanComponentFromEbay;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.EmailVerifyException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
+import com.example.buylap.model.ModelBuild;
+import com.example.buylap.model.users.ModelSeller;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.text.ParseException;
+import java.io.FileNotFoundException;
 
-public class SignUp {
-
-    private SignUp(){
-        //View SignUp
-    }
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public static void main(String input){
-
-        SignUpGraphicController signUpGraphicController = new SignUpGraphicController();
+public class InsertComponentController {
+    public Boolean saveComponent(BeanComponentFromEbay beanComponentFromEbay, BeanSeller beanSeller) throws DAOException {
+        ModelSeller modelSeller = new ModelSeller("SELLER",beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(),
+                beanSeller.getIva());
+        ModelBuild modelBuild = new ModelBuild(beanComponentFromEbay.getType(), beanComponentFromEbay.getTitle(), beanComponentFromEbay.getSubtitles(),
+                beanComponentFromEbay.getUrlEbay(), beanComponentFromEbay.getPrice());
         try {
-            signUpGraphicController.parseInput(input);
-        } catch (BeanException e) {
-            System.out.println(BEAN_EXCEPTION);
+            DAObuild.insertComponent(modelSeller, modelBuild);
+            return true;
+
+        } catch(FileNotFoundException e){
+            e.printStackTrace();
+            throw new DAOException("error saving component");
         }
-
-
     }
-
-
 }
-
-

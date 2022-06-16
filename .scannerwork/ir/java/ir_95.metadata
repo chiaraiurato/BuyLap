@@ -1,1 +1,1 @@
-com.example.buylap.model.QuizList#getOp2()Ljava/lang/String;
+com.example.buylap.exceptions.IvaLengthException#<init>(Ljava/lang/String;)V

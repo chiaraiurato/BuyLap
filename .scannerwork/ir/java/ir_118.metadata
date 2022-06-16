@@ -1,1 +1,1 @@
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.controller.graphic.RegistrationGraphicController#verifyFieldsSeller()Z

@@ -1,1 +1,1 @@
-t 2javaXhr:app/src/main/java/com/example/buylap/bean/BeanSession.java
+t 2javaX!hrBapp/src/main/java/com/example/buylap/boundary/BoundaryPayment.java

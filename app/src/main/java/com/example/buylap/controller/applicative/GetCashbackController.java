@@ -34,7 +34,7 @@ public class GetCashbackController {
     public Boolean createCard(BeanCard beanCard, BeanUser beanUser) throws DAOException, LengthBeanCardException {
         ModelCreditCard modelCreditCard = new ModelCreditCard(beanCard.getCardHolderName(), beanCard.getCardNumber(),
                 beanCard.getData());
-        ModelUser modelUser = new LoginController().searchUser(beanUser);
+
         modelUser.setCreditCard(modelCreditCard);
 
         String username = beanUser.getUsername();
@@ -53,7 +53,7 @@ public class GetCashbackController {
     public BeanCard uploadCreditCard(BeanUser beanUser) throws DAOException, ExpiredDateCardException, ParseException {
         ModelCreditCard modelCreditCard;
         BeanCard beanCard = new BeanCard();
-        ModelUser modelUser = new LoginController().searchUser(beanUser);
+
         String username = beanUser.getUsername();
         try {
             modelCreditCard = DAOcard.searchCard(username);

@@ -1,3 +1,2 @@
-com.example.buylap.controller.graphic.QuizResultGraphicController#updateBalance(LView;)V
+com.example.buylap.controller.graphic.QuizResultGraphicController#linkToEbay(I)LIntent;
 null
-java.lang.String#equals(Ljava/lang/Object;)Z

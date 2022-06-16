@@ -1,1 +1,1 @@
-¢ 2xmlXphr8app/src/main/res/layout/activity_select_type_account.xml
+¢ 2xmlXŠhr+app/src/main/res/layout/activity_signup.xml

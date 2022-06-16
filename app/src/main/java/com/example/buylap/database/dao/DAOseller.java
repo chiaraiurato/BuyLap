@@ -40,5 +40,29 @@ public class DAOseller {
             throw new DAOException("Username repetition");
         }
     }
+
+    public static ModelSeller searchSeller(ModelSeller modelSeller) throws SQLException, DAOException {
+        Connection connection = null;
+        Statement statement = null;
+        try {
+            if(!MainGraphicController.CLI) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
+            connection = JdbcConnection.getInstance().getConnection();
+
+            statement = connection.createStatement();
+            ResultSet rs = QueryRegistrationLogin.searchUser(statement, modelSeller);
+            if (!rs.first()) {
+                throw new DAOException("Entry not found");
+            }
+            rs.close();
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+        }
+        return modelSeller;
+    }
 }
 

@@ -1,1 +1,5 @@
-com.example.buylap.bean.BeanAnswer#setAnswer3(Ljava/lang/String;)V
+com.example.buylap.controller.graphic.SessionGraphicController#<init>(LContext;)V
+com.example.buylap.utils.SessionManager#<init>(LContext;)V
+com.example.buylap.bean.BeanUser#instance-init#
+com.example.buylap.bean.BeanUser#<init>()V
+com.example.buylap.utils.SessionManager#instance-init#

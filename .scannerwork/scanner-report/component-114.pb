@@ -1,1 +1,1 @@
-r 2javaXhr8app/src/main/java/com/example/buylap/bean/BeanGuest.java
+r 2javaX7hr7app/src/main/java/com/example/buylap/bean/BeanUser.java

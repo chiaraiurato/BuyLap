@@ -1,1 +1,4 @@
-com.example.buylap.bean.BeanAnswer#instance-init#
+com.example.buylap.bean.BeanAnswer#setPriceSelected(Ljava/lang/String;)V
+java.lang.String#length()I
+java.lang.String#substring(II)Ljava/lang/String;
+java.lang.Float#parseFloat(Ljava/lang/String;)F

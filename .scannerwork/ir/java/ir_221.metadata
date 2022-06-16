@@ -1,1 +1,2 @@
-com.example.buylap.model.ModelCashback#setPoints(I)V
+test.TestSeleniumAPI#main([Ljava/lang/String;)V
+test.TestSeleniumAPI#openDriver()LWebElement;

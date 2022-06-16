@@ -1,75 +1,105 @@
-package com.example.buylap.cli.graphic_controller;
-
+package com.example.buylap.cli;
 import static com.example.buylap.cli.view.HomepageUser.IO_EXCEPTION;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.cli.utils.SessionManagerCLI;
-import com.example.buylap.cli.view.HomepageSeller;
-import com.example.buylap.cli.view.HomepageUser;
-import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanComponentFromEbay;
-import com.example.buylap.controller.applicative.TakeQuizController;
+import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.cli.utils.CommandLineTable;
+import com.example.buylap.exceptions.DAOException;
+import com.example.buylap.exceptions.EmailVerifyException;
+import com.example.buylap.exceptions.ExpiredDateCardException;
+import com.example.buylap.exceptions.LengthBeanCardException;
 
+import org.openqa.selenium.devtools.v85.io.IO;
+
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.List;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.sql.SQLException;
+import java.text.ParseException;
 
-public class QuizGraphicController {
-
-    private TakeQuizController takeQuizController;
-    private final BeanAnswer beanAnswer;
-    private BeanSession beanSession;
-    public QuizGraphicController() throws BeanException {
-        beanAnswer = new BeanAnswer();
-        takeQuizController = new TakeQuizController();
-        this.beanSession = SessionManagerCLI.getUserDetails();
-    }
-
+public class Main {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void startQuiz(String a, String b, String c, String price ){
-        if (c.equals("1")) {
-            beanAnswer.setAnswer3("Gaming");
-        } else if (c.equals("2")) {
-            beanAnswer.setAnswer3("Office use");
-        } else if (c.equals("3")) {
-            beanAnswer.setAnswer3("Home use");
-        }
-        int index;
-        beanAnswer.setPriceSelected(price);
-        List<BeanBuild> beanComponentFromEbay = takeQuizController.createBuild(beanAnswer);
-        if (beanComponentFromEbay.isEmpty()) {
-            System.out.println("No build found! Try with another price\n");
-        } else {
-            CommandLineTable st = new CommandLineTable();
-            st.setShowVerticalLines(true);
-            st.setHeaders("Type", "Title", "Subtitles", "Price", "Link");
-            for (index = 0; index < 6; index++) {
-                st.addRow(beanComponentFromEbay.get(index).getType() , beanComponentFromEbay.get(index).getTitle() ,
-                        beanComponentFromEbay.get(index).getSubtitles(), (beanComponentFromEbay.get(index).getPrice()) + "$",
-                        beanComponentFromEbay.get(index).getUrlEbay());
-            }
-            st.print();
-        }
-        runHomepage();
-    }
+    public static void main (String[] args){
 
+        System.out.println("------------------------     BUYLAP   -----------------------\n" +
+                    "............................................................\n" +
+                    ".............................. .............................\n" +
+                    "..........................          ........................\n" +
+                    "...................                       ..................\n" +
+                    "................                              ..............\n" +
+                    ".............                                    ...........\n" +
+                    "...........                                        .........\n" +
+                    "..........               ============               ........\n" +
+                    ".........                &&  |  | &&                 .......\n" +
+                    "........                 &&  |  | &&                  ......\n" +
+                    ".......                  ============                 ......\n" +
+                    ".......                                                .....\n" +
+                    ".......             &&&&&&&&&&&&&&&&&&&&&&             .....\n" +
+                    ".......             &&&&&&&&&&&&&&&&&&&&&&            ......\n" +
+                    "........            &&&&&&&&&&&&&&&&&&&&&&            ......\n" +
+                    ".........           &&&&&&&&&&&&&&&&&&&&&&           .......\n" +
+                    "..........             ||           ||             .........\n" +
+                    "............           ||           ||            ..........\n" +
+                    "................                              ..............\n" +
+                    "...................                       ..................\n" +
+                    "..........................          ........................\n" +
+                    ".............................. .............................\n" +
+                    "............................................................\n" +
+                    "\nAll commands :\n" +
+                    "⚫ show (Display in output available commands)\n" +
+                    "⚫ sign_up -t user -u [username] -m [mail] -p [password] (Register new account as user)\n" +
+                    "⚫ sign_up -t seller -u [username] -m [mail] -v [vat number] -p [password] (Register new account as seller)\n" +
+                    "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
+                    "⚫ skip (skip registration)\n" +
+                    "⚫ take_quiz \n" +
+                    "⚫ add_component -c [category] -t [titles] -s [subtitles] -p [price] -l [link] \n" +
+                    "⚫ show_cashback\n" +
+                    "⚫ cash_out \n" +
+                    "⚫ add_card  -h [cardholder name] -n [number card] -d [expire date]   (Ex. -h Mario_Rossi -n 1234-1234-1234-1234 -d 22-09)\n" +
+                    "⚫ delete_card\n" +
+                    "⚫ exit (exit the program) \n");
+
+        MainGraphicController mainGraphicController = new MainGraphicController();
+
+
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+        String s = null;
+        try {
+            s = bufferRead.readLine();
+        } catch (IOException e) {
+            System.out.println("IOException");
+        }
+        mainGraphicController.parseInput(s);
+
+
+
+    }
+    public static void show(){
+        System.out.println("\n⚫ sign_up -t user -u [username] -m [mail] -p [password] (Register new account as user)\n" +
+        "⚫ sign_up -t seller -u [username] -m [mail] -v [vat number] -p [password] (Register new account as seller)\n" +
+                "⚫ sign_in -t [type] -u [username] -p [password] (Log-in account)\n" +
+                "⚫ skip (skip registration)\n");
+    }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void runHomepage() {
-        if(beanSession.getType().equals("user") || beanSession.getType().equals("guest") ) {
-            try {
-                HomepageUser.run();
-            } catch (IOException e) {
-                System.out.println(IO_EXCEPTION);
-            }
+    public static void runMain(){
+        MainGraphicController mainGraphicController = new MainGraphicController();
+        try{
 
-        }else if(beanSession.getType().equals("seller")){
-            HomepageSeller.run();
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+            String s = bufferRead.readLine();
+            mainGraphicController.parseInput(s);
         }
+        catch(IOException e)
+        {
+            System.out.println(IO_EXCEPTION);
+        }
+
     }
+
+
 }

@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.HomepageSeller#instance-init#
+com.example.buylap.exceptions.InvalidTypeAccountException#<init>(Ljava/lang/String;)V

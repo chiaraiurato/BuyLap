@@ -1,1 +1,2 @@
-com.example.buylap.ExampleInstrumentedTest#useAppContext()V
+com.example.buylap.view.TakeQuizActivity#setNumberQuestion(I)V
+java.lang.String#valueOf(I)Ljava/lang/String;

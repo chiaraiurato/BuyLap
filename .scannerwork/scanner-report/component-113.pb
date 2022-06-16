@@ -1,1 +1,1 @@
-q 2javaXhr;app/src/main/java/com/example/buylap/bean/BeanCashback.java
+q 2javaXhr9app/src/main/java/com/example/buylap/bean/BeanSeller.java

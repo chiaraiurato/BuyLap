@@ -1,1 +1,1 @@
-Ü 2xmlXhr5app/src/main/res/drawable/ic_baseline_add_card_24.xml
+Ü 2xmlXhr>app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml

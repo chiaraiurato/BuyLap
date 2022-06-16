@@ -1,1 +1,1 @@
-com.example.buylap.cli.view.Cashback#instance-init#
+com.example.buylap.bean.BeanSeller#getIva()Ljava/lang/String;

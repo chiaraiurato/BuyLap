@@ -1,1 +1,1 @@
-com.example.buylap.cli.graphic_controller.HomepageGraphicController#instance-init#
+com.example.buylap.cli.graphic_controller.HomepageGraphicController#initializeSessionCLI()Ljava/lang/String;

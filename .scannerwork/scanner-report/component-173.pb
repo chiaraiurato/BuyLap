@@ -1,1 +1,1 @@
-­ 2javaXhrLapp/src/main/java/com/example/buylap/exceptions/LengthBeanCardException.java
+­ 2javaX	hrCapp/src/main/java/com/example/buylap/factory/NavigationFactory.java

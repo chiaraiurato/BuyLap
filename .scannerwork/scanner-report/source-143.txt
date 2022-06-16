@@ -1,101 +1,81 @@
-package com.example.buylap.controller.applicative;
+package com.example.buylap.controller.graphic;
 
-import android.util.Log;
+import android.content.Intent;
+import android.view.View;
 
-import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanSession;
-import com.example.buylap.boundary.BoundaryEbay;
-import com.example.buylap.database.dao.DAOpoints;
-import com.example.buylap.model.ModelCashback;
-import com.example.buylap.model.ModelRequestBuild;
-import com.example.buylap.utils.ConstantNameTable;
-import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanComponentFromEbay;
-import com.example.buylap.database.dao.DAObuild;
-import com.example.buylap.model.ModelBuild;
-import com.example.buylap.utils.NameBuild;
+import com.example.buylap.model.Analytics;
+import com.example.buylap.model.MostViewed;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.utils.Data;
+import com.example.buylap.view.BudgetActivity;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.view.HomeFragment;
+import com.example.buylap.view.InsertComponentActivity;
+import com.example.buylap.view.SellerFragment;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-public class TakeQuizController {
+public class HomeGraphicController extends SessionGraphicController{
+    private HomeFragment homeFragment;
+    private SellerFragment sellerFragment;
+    private BeanUser credentials;
 
-
-    public List<BeanBuild> createBuild(BeanAnswer beanAnswer){
-        String[] component = new String[6];
-        ModelRequestBuild modelRequestBuild = new ModelRequestBuild(beanAnswer,
-                beanAnswer.getPriceSelected());
-        String nameTable = "";
-        component[0] = ConstantNameTable.MOTHERBOARD;
-        component[1] = ConstantNameTable.SSD;
-        component[2] = ConstantNameTable.CPU;
-        component[3] = ConstantNameTable.RAM;
-        component[4] = ConstantNameTable.VIDEO_CARD;
-        component[5] = ConstantNameTable.POWER_SUPPLY;
-
-        if(beanAnswer.getAnswer3().equals("Gaming")){
-            nameTable = ConstantNameTable.GAMING;
-        }else if(beanAnswer.getAnswer3().equals("Office use")){
-            nameTable = ConstantNameTable.OFFICE_USE;
-        }else if(beanAnswer.getAnswer3().equals("Home use")){
-            nameTable = ConstantNameTable.HOME_USE;
-        }
-
-        int index;
-        List<BeanBuild> beanComponentFromEbayList = new ArrayList<>();
-        List<ModelBuild> modelBuild = new ArrayList<>();
-
-        for(index = 0; index < 6; index++){
-            try {
-
-                if(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild) == null){
-                    return beanComponentFromEbayList;
-                }else {
-                    modelBuild.add(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild));
-                }
-
-            } catch (SQLException | IOException e) {
-                e.printStackTrace();
-            }
-        }
-        index=0;
-        for(NameBuild e : NameBuild.values()) {
-            BeanBuild beanComponentFromEbay = new BeanBuild();
-            beanComponentFromEbay.setType(e.name());
-            beanComponentFromEbay.setTitle(modelBuild.get(index).getTitle());
-            beanComponentFromEbay.setSubtitles(modelBuild.get(index).getSubtitles());
-            beanComponentFromEbay.setUrlEbay(modelBuild.get(index).getUrlEbay());
-            beanComponentFromEbay.setPrice(modelBuild.get(index).getPrice());
-            beanComponentFromEbayList.add(beanComponentFromEbay);
-            index++;
-        }
-
-        return beanComponentFromEbayList;
+    public HomeGraphicController(HomeFragment homeFragment) {
+        super(homeFragment.getContext());
+        this.homeFragment = homeFragment;
+        credentials = getBeanSession();
 
     }
-    public void selectPrice(BeanCashback beanCashback, BeanSession beanSession) throws SQLException {
-        BoundaryEbay boundaryEbay = new BoundaryEbay();
-        String username = beanSession.getUsername();
-        BeanCashback beanPoints= boundaryEbay.madePurchase(beanCashback);
+    public HomeGraphicController(SellerFragment sellerFragment) {
+        super(sellerFragment.getContext());
+        this.sellerFragment = sellerFragment;
+        credentials = getBeanSession();
+    }
 
-        ModelCashback modelCashbackNew = new ModelCashback(beanPoints.getPoints());
-        ModelCashback modelCashbackOld = new ModelCashback();
+    public List<MostViewed> setAdapterMostView(){
+        Data data = new Data();
+        return data.sendMostView();
 
-        modelCashbackOld = DAOpoints.uploadPoints(modelCashbackOld, username);
+    }
+    public List<Analytics> setAdapterAnalytics(){
+        Data data = new Data();
+        return data.sendAnalytics();
+    }
+    public void initializeSession(View view) throws BeanException {
 
-        if( modelCashbackOld.getPoints() != 0) {
-            modelCashbackNew.setPoints(modelCashbackNew.getPoints()+ modelCashbackOld.getPoints());
-            DAOpoints.updatePoints(modelCashbackNew, username);
-        }else{
-            try {
-                DAOpoints.addPoints(modelCashbackNew, username);
-            } catch (SQLException e) {
-                e.printStackTrace();
+        if(credentials.getType() != null) {
+            if (credentials.getType().equals("USER")) {
+                BeanUser beanUser = new BeanUser();
+                beanUser.setUsername(credentials.getUsername());
+                homeFragment.setUser(beanUser, view);
+
+            } else {
+                homeFragment.setGuest(view);
             }
         }
+    }
 
+    public void initializeSessionForSeller(View view) throws BeanException {
 
+        BeanSeller beanSeller = new BeanSeller();
+        beanSeller.setUsername(credentials.getUsername());
+        sellerFragment.setSeller(beanSeller, view);
+    }
+    public void goToTakeQuiz() {
+        Intent intent;
+        if(homeFragment == null) {
+            intent = new Intent(sellerFragment.getContext(), BudgetActivity.class);
+            sellerFragment.startActivity(intent);
+        }
+        else{
+            intent = new Intent(homeFragment.getContext(), BudgetActivity.class);
+            homeFragment.startActivity(intent);
+        }
+    }
+
+    public void gotoInsertComponent() {
+        Intent intent = new Intent(sellerFragment.getContext(), InsertComponentActivity.class);
+        sellerFragment.startActivity(intent);
     }
 }

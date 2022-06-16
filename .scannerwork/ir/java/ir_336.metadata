@@ -1,3 +1,1 @@
-com.example.buylap.view.GuestFragment#onCreateView(LLayoutInflater;LViewGroup;LBundle;)LView;
-com.example.buylap.controller.graphic.UserFragmentGraphicController#<init>(Lcom/example/buylap/view/GuestFragment;)V
-com.example.buylap.controller.graphic.UserFragmentGraphicController#instance-init#
+com.example.buylap.view.NotificationFragment#onCreateView(LLayoutInflater;LViewGroup;LBundle;)LView;

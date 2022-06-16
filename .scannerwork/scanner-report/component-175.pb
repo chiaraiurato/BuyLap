@@ -1,1 +1,1 @@
-¯ 2javaXhr9app/src/main/java/com/example/buylap/model/Analytics.java
+¯ 2javaX.hr8app/src/main/java/com/example/buylap/model/Category.java

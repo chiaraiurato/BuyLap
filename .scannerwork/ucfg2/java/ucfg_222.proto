@@ -1,117 +1,41 @@
 
-dcom.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Lcom/example/buylap/bean/BeanSession;n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (,"1*ª
-1n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java# (2üú
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java' (0
-%0java.util.HashMap"java.util.HashMap±
-Æ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java# (2
-%1"java.util.HashMap#<init>()V*
-
-%0java.util.HashMap´
-®
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (3
-userjava.util.Map"__id*
-
-%0java.util.HashMap÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ((
-%2java.lang.String"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-keyPassword÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ()
-%3java.lang.String"__mapSet*
-
-userjava.util.Map*
+acom.example.buylap.utils.PropertiesReader#getProperties(Ljava/lang/String;)Ljava/util/Properties;i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (#"4*˘
+4i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (8†
+ù
+i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (8"
+inputStreamjava.io.InputStream"__id*
+""œ
+Ã
+i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java (
+%0java.util.Properties"__id*=*;+
+)com.example.buylap.utils.PropertiesReader"
 
-password*
-
-%2java.lang.String“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ( 
-%4java.lang.String"__id*?*=0
-.com.example.buylap.cli.utils.SessionManagerCLI"	
-keyType“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (!
-%5java.lang.String"__mapSet*
-
-userjava.util.Map*
-type*
-
-%4java.lang.String÷
-”
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java ($
-%6java.lang.String"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-keyUsername“
-œ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java (&
-%7java.lang.String"__mapSet*
-
-userjava.util.Map*
-user*
-
-%6java.lang.StringÈ
-Ê
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java   ()
-%8#com.example.buylap.bean.BeanSession"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-beanSession∏
-µ
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java   (,
-%9java.lang.String"__mapGet*
-
-userjava.util.Map*
-type¶£
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java   (-
-%10void"@com.example.buylap.bean.BeanSession#setType(Ljava/lang/String;)V*+
-)
-%8#com.example.buylap.bean.BeanSession*
-
-%9java.lang.String2setType(Ljava/lang/String;)Í
-Á
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java! !(*
-%11#com.example.buylap.bean.BeanSession"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-beanSessionπ
-∂
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java!  !(0
-%12java.lang.String"__mapGet*
-
-userjava.util.Map*
-user∞≠
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java! !(1
-%13void"Dcom.example.buylap.bean.BeanSession#setUsername(Ljava/lang/String;)V*,
-*
-%11#com.example.buylap.bean.BeanSession*
-
-%12java.lang.String2setUsername(Ljava/lang/String;)Í
-Á
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java" "(*
-%14#com.example.buylap.bean.BeanSession"__id*C*A0
-.com.example.buylap.cli.utils.SessionManagerCLI"
-beanSession"û
-n
-dC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/cli/utils/SessionManagerCLI.java" "(,
-*
-%14#com.example.buylap.bean.BeanSessionB2"0
-.com.example.buylap.cli.utils.SessionManagerCLI
+propertieséã
+i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java ((
+
+%1void"1java.util.Properties#load(Ljava/io/InputStream;)V*
+
+%0java.util.Properties*$
+"
+inputStreamjava.io.InputStream2load(Ljava/io/InputStream;)*
+1*Ã
+1i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (œ
+Ã
+i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (
+%3java.util.Properties"__id*=*;+
+)com.example.buylap.utils.PropertiesReader"
+
+properties"â
+i
+_C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/PropertiesReader.java   (
+
+%3java.util.Properties:
+fileNamejava.lang.StringB-+
+)com.example.buylap.utils.PropertiesReader

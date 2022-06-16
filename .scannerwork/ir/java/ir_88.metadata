@@ -1,1 +1,1 @@
-com.example.buylap.exceptions.IvaLengthException#<init>(Ljava/lang/String;)V
+com.example.buylap.view.AddCardActivity#isAtSpaceDelimiter(I)Z

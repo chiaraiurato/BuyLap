@@ -1,1 +1,1 @@
-com.example.buylap.utils.ConstantNameTable#instance-init#
+com.example.buylap.view.HomeFragment#setUser(Lcom/example/buylap/bean/BeanUser;LView;)V
