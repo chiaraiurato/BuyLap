@@ -1,1 +1,0 @@
-› 2xmlXmhr-app/src/main/res/layout/activity_add_card.xml

@@ -1,1 +1,0 @@
-¢ 2xmlX¢hr8app/src/main/res/layout/activity_registration_seller.xml

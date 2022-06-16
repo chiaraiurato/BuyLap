@@ -1,1 +1,0 @@
-è 2xmlXhr2app/src/main/res/drawable/ic_baseline_error_24.xml

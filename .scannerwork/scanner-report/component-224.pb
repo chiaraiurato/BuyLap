@@ -1,1 +1,0 @@
-à 2xmlXhr8app/src/main/res/drawable/ic_baseline_arrow_right_24.xml

@@ -1,1 +1,0 @@
-Ë 2javaX>hrAapp/src/main/java/com/example/buylap/view/QuizResultActivity.java

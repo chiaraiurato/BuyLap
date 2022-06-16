@@ -2,6 +2,7 @@ package com.example.buylap.abstract_factory;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.buylap.exceptions.InvalidTypeAccountException;
 import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.GuestFragment;
 import com.example.buylap.view.HomeFragment;
@@ -15,7 +16,7 @@ import java.util.Objects;
 
 public class Factory {
 
-    public NavigationFactory createNavigationFactory(String page, String type) throws Exception {
+    public NavigationFactory createNavigationFactory(String page, String type) throws InvalidTypeAccountException {
         if (page.equals("home")) {
             switch (type) {
                 case "USER":
@@ -24,7 +25,7 @@ public class Factory {
                 case "SELLER":
                     return new SellerFragment();
                 default:
-                    throw new Exception("Invalid type : " + type);
+                    throw new InvalidTypeAccountException("Invalid type : " + type);
             }
         } else {
             switch (type) {
@@ -34,7 +35,7 @@ public class Factory {
                 case "GUEST":
                     return new GuestFragment();
                 default:
-                    throw new Exception("Invalid type : " + type);
+                    throw new InvalidTypeAccountException("Invalid type : " + type);
             }
         }
     }

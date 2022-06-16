@@ -1,1 +1,0 @@
-x 2javaX1hr9app/src/main/java/com/example/buylap/bean/BeanSeller.java

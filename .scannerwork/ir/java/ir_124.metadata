@@ -1,8 +1,0 @@
-com.example.buylap.cli.graphic_controller.CashbackGraphicController#<init>()V
-com.example.buylap.bean.BeanPoints#instance-init#
-com.example.buylap.controller.applicative.GetCashbackController#<init>()V
-com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Lcom/example/buylap/bean/BeanSession;
-com.example.buylap.bean.BeanCard#instance-init#
-com.example.buylap.bean.BeanPoints#<init>()V
-com.example.buylap.controller.applicative.GetCashbackController#instance-init#
-com.example.buylap.bean.BeanCard#<init>()V

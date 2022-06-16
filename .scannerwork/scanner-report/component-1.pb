@@ -1,2 +1,0 @@
-BuyLap :ä¹ÅÎ°¯Ÿ³ ¡šœï¦ÌüæŸ®ñã{ÈoÃ¥Ğdİ
-Á±ª®¸Â¢³òv¥¨ªîÏ‹›¦ÁÀ¼|¤}y«ÄßŞ™†ƒ±˜¨²wÏ©•ÍÉ¢	«·~ è›­f÷ÇÒÆ°p´ÙqœÑ£m…–¿Æi½²‚ÎÍøà¯¬¬µ€ºjÊ—Äğ“êÃ‘¡Ê©trzŒû¤ë§suƒ„ŠÈ’õ»Ël§áËÅÇíÂı¾ôÛÌ£­‰”nÉçóâk¶ù‡‚ÔúéxˆöìÓB*&https://github.com/chiaraiurato/BuyLapB-)https://travis-ci.org/chiaraiurato/BuyLapB1-https://github.com/chiaraiurato/BuyLap/issuesB*&https://github.com/chiaraiurato/BuyLapRchiaraiurato_BuyLap

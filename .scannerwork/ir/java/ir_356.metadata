@@ -1,4 +1,0 @@
-com.example.buylap.bean.BeanUser#setEmail(Ljava/lang/String;)V
-com.example.buylap.exceptions.EmailVerifyException#<init>(Ljava/lang/String;)V
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
-com.example.buylap.exceptions.EmailVerifyException#instance-init#

@@ -1,7 +1,0 @@
-com.example.buylap.controller.graphic.NavigationGraphicController#<init>(Lcom/example/buylap/view/NavigationActivity;)V
-com.example.buylap.adapter.HomepageAdapter#<init>(Lcom/example/buylap/adapter/HomepageAdaptee;)V
-com.example.buylap.adapter.GenericUser#instance-init#
-com.example.buylap.adapter.HomepageAdaptee#instance-init#
-com.example.buylap.adapter.HomepageAdaptee#<init>(Lcom/example/buylap/view/NavigationActivity;)V
-com.example.buylap.adapter.HomepageAdapter#instance-init#
-com.example.buylap.adapter.GenericUser#<init>()V

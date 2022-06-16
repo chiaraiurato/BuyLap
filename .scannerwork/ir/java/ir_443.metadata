@@ -1,4 +1,0 @@
-com.example.buylap.adapter.HomepageAdaptee#<init>(Lcom/example/buylap/view/NavigationActivity;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-com.example.buylap.utils.SessionManager#instance-init#

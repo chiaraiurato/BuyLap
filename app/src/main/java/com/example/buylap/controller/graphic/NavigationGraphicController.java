@@ -6,7 +6,10 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 import com.example.buylap.R;
-import com.example.buylap.abstract_factory.Client;
+import com.example.buylap.abstract_factory.Factory;
+import com.example.buylap.abstract_factory.NavigationFactory;
+import com.example.buylap.bean.BeanSession;
+import com.example.buylap.exceptions.InvalidTypeAccountException;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.NotificationFragment;
 import com.example.buylap.view.MainActivity;
@@ -16,12 +19,22 @@ import com.example.buylap.view.NavigationActivity;
 public class NavigationGraphicController extends SessionGraphicController{
 
     private NavigationActivity navigationActivity;
-    private Client client;
+    private BeanSession beanSession;
+    private NavigationFactory navigationHome;
+    private NavigationFactory navigationSetting;
 
     public NavigationGraphicController(NavigationActivity navigationActivity) {
         super(navigationActivity.getApplicationContext());
         this.navigationActivity = navigationActivity;
-        this.client = new Client(navigationActivity);
+        this.beanSession = getBeanSession();
+        Factory factory = new Factory();
+        try {
+            navigationHome = factory.createNavigationFactory("home", beanSession.getType());
+            navigationSetting = factory.createNavigationFactory("setting", beanSession.getType());
+
+        } catch (InvalidTypeAccountException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -39,7 +52,7 @@ public class NavigationGraphicController extends SessionGraphicController{
         }
     }
     public Fragment selectTypeHomepage(){
-        return client.navigationHome.selectMyFragment();
+        return navigationHome.selectMyFragment();
     }
 
     public Fragment switchPage(MenuItem item){
@@ -47,7 +60,7 @@ public class NavigationGraphicController extends SessionGraphicController{
         Fragment fragment = null;
         switch (item.getItemId()){
             case R.id.nav_home:
-                fragment = client.navigationHome.selectMyFragment();
+                fragment = navigationHome.selectMyFragment();
                 break;
             case R.id.nav_cashback:
                 fragment = new CashbackFragment();
@@ -56,7 +69,7 @@ public class NavigationGraphicController extends SessionGraphicController{
                 fragment= new NotificationFragment();
                 break;
             case R.id.nav_user:
-                fragment=  client.navigationSetting.selectMyFragment();
+                fragment=  navigationSetting.selectMyFragment();
                 break;
         }
         return fragment;

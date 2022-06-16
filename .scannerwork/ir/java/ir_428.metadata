@@ -1,5 +1,0 @@
-com.example.buylap.controller.graphic.CashbackGraphicController#<init>(Lcom/example/buylap/view/CashbackFragment;)V
-com.example.buylap.bean.BeanPoints#instance-init#
-com.example.buylap.controller.applicative.GetCashbackController#<init>()V
-com.example.buylap.bean.BeanPoints#<init>()V
-com.example.buylap.controller.applicative.GetCashbackController#instance-init#

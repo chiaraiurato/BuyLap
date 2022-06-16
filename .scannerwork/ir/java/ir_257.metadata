@@ -1,5 +1,0 @@
-com.example.buylap.controller.graphic.SessionGraphicController#<init>(LContext;)V
-com.example.buylap.utils.SessionManager#<init>(LContext;)V
-com.example.buylap.bean.BeanSession#<init>()V
-com.example.buylap.utils.SessionManager#instance-init#
-com.example.buylap.bean.BeanSession#instance-init#

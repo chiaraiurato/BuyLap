@@ -1,83 +1,0 @@
-
-—com.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanSession;)Lcom/example/buylap/bean/BeanPoints;
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaG G(""1*ä
-1
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaH  H(0ÒÏ
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaH$ H(.(
-%0"com.example.buylap.bean.BeanPoints""com.example.buylap.bean.BeanPointsä
-á
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaH  H(0
-%1",com.example.buylap.bean.BeanPoints#<init>()V**
-(
-%0"com.example.buylap.bean.BeanPointsè
-å
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaH H(10
-
-beanPoints"com.example.buylap.bean.BeanPoints"__id**
-(
-%0"com.example.buylap.bean.BeanPoints¦£
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaI I(3
-%2java.lang.String"Ccom.example.buylap.bean.BeanSession#getUsername()Ljava/lang/String;*4
-2
-beanSession#com.example.buylap.bean.BeanSession2getUsername()Â
-¿
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaI I(4
-usernamejava.lang.String"__id*
-
-%2java.lang.StringÖÓ
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaJ& J(1*
-%3$com.example.buylap.model.ModelPoints"$com.example.buylap.model.ModelPointsè
-å
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaJ" J(3
-%4".com.example.buylap.model.ModelPoints#<init>()V*,
-*
-%3$com.example.buylap.model.ModelPointsí
-ê
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaJ J(43
-modelPoints$com.example.buylap.model.ModelPoints"__id*,
-*
-%3$com.example.buylap.model.ModelPointsÏ
-Ì
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaK K(C*
-%5$com.example.buylap.model.ModelPoints"–com.example.buylap.database.dao.DAOpoints#uploadPoints(Lcom/example/buylap/model/ModelPoints;Ljava/lang/String;)Lcom/example/buylap/model/ModelPoints;*-"+
-)com.example.buylap.database.dao.DAOpoints*5
-3
-modelPoints$com.example.buylap.model.ModelPoints*
-
-usernamejava.lang.Stringí
-ê
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaK K(C3
-modelPoints$com.example.buylap.model.ModelPoints"__id*,
-*
-%5$com.example.buylap.model.ModelPoints†ƒ
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaL L(4	
-%6int"1com.example.buylap.model.ModelPoints#getPoints()I*5
-3
-modelPoints$com.example.buylap.model.ModelPoints2getPoints()‘Ž
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaL L(5
-
-%7void"0com.example.buylap.bean.BeanPoints#setPoints(I)V*2
-0
-
-beanPoints"com.example.buylap.bean.BeanPoints*
-	
-%6int2setPoints(I)"µ
-
-uC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/applicative/GetCashbackController.javaM M(2
-0
-
-beanPoints"com.example.buylap.bean.BeanPoints:2
-beanSession#com.example.buylap.bean.BeanSessionBCA
-?com.example.buylap.controller.applicative.GetCashbackController

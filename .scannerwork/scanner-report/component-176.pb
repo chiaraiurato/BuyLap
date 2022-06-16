@@ -1,1 +1,0 @@
-° 2javaXhrLapp/src/main/java/com/example/buylap/exceptions/NoCardInsertedException.java

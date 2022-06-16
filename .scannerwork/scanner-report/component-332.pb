@@ -1,1 +1,0 @@
-Ì 2xmlXhr)app/src/main/res/values-w600dp/dimens.xml

@@ -1,1 +1,0 @@
-Î 2javaXAhr8app/src/test/java/com/example/buylap/QuizResultTest.java

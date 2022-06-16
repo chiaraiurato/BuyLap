@@ -1,3 +1,0 @@
-com.example.buylap.adaptergui.AnalyticsAdapter#onCreateViewHolder(LViewGroup;I)Lcom/example/buylap/adaptergui/AnalyticsAdapter$ViewHolder;
-com.example.buylap.adaptergui.AnalyticsAdapter$ViewHolder#<init>(Lcom/example/buylap/adaptergui/AnalyticsAdapter;LView;)V
-com.example.buylap.adaptergui.AnalyticsAdapter$ViewHolder#instance-init#

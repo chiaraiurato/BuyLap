@@ -1,1 +1,0 @@
-ê 2xmlXhr4app/src/main/res/drawable/ic_baseline_gamepad_24.xml

@@ -1,1 +1,0 @@
-  2javaX_hr>app/src/main/java/com/example/buylap/database/dao/DAOcard.java

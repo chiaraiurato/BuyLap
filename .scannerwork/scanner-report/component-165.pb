@@ -1,1 +1,0 @@
-¥ 2javaX(hrCapp/src/main/java/com/example/buylap/database/query/QueryBuild.java
