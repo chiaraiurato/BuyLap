@@ -1,0 +1,108 @@
+
+tcom.example.buylap.controller.graphic.SessionGraphicController#getBeanSession()Lcom/example/buylap/bean/BeanSession;~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (("9*Á
+3~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (5¶³
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (5
+%10void"@com.example.buylap.bean.BeanSession#setType(Ljava/lang/String;)V*+
+)
+%7#com.example.buylap.bean.BeanSession*
+
+%9java.lang.String2setType(Ljava/lang/String;)*
+1*Ì
+4~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (‰
+†
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java ()
+%7#com.example.buylap.bean.BeanSession"__id*S*Q@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+beanSessionì
+é
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java$ ((
+%8java.util.Map"__id*L*J@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+userÆ
+Ã
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java$ (4
+%9java.lang.String"__mapGet*
+
+%8java.util.Map*
+type*
+3*È
+5~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (Q½º
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (Q
+
+%6void"Dcom.example.buylap.bean.BeanSession#setUsername(Ljava/lang/String;)V*+
+)
+%2#com.example.buylap.bean.BeanSession*
+
+%5java.lang.String2setUsername(Ljava/lang/String;)*
+4*Ÿ
+6~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java( (P”
+‘
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java( (P
+%5java.lang.String"Fjava.util.Objects#requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;*"
+java.util.Objects*
+
+%4java.lang.String*
+5*Ì
+7~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (‰
+†
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java ()
+%2#com.example.buylap.bean.BeanSession"__id*S*Q@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+beanSessionì
+é
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java? (C
+%3java.util.Map"__id*L*J@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+userÆ
+Ã
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java? (O
+%4java.lang.String"__mapGet*
+
+%3java.util.Map*
+user*
+6*Ã
+9~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (ì
+é
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (
+%0java.util.Map"__id*L*J@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+userÆ
+Ã
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java (
+%1java.lang.String"__mapGet*
+
+%0java.util.Map*
+user*
+7
+1*Á
+1~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java" "(Š
+‡
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java" "(*
+%11#com.example.buylap.bean.BeanSession"__id*S*Q@
+>com.example.buylap.controller.graphic.SessionGraphicController"
+beanSession"®
+~
+tC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/SessionGraphicController.java" "( ,
+*
+%11#com.example.buylap.bean.BeanSessionBB@
+>com.example.buylap.controller.graphic.SessionGraphicController

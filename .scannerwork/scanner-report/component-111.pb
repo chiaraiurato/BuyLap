@@ -1,0 +1,1 @@
+o 2javaX3hr8app/src/main/java/com/example/buylap/bean/BeanBuild.java

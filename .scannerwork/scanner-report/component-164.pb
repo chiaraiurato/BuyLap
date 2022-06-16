@@ -1,0 +1,1 @@
+¤ 2javaX#hrDapp/src/main/java/com/example/buylap/database/query/QueryPoints.java

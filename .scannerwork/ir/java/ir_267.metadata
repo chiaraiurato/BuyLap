@@ -1,0 +1,3 @@
+com.example.buylap.abstract_factory.Factory#createUserFragment()Lcom/example/buylap/view/UserFragment;
+com.example.buylap.view.UserFragment#instance-init#
+com.example.buylap.view.UserFragment#<init>()V

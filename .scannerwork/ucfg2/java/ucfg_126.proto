@@ -1,0 +1,90 @@
+
+›com.example.buylap.database.query.QueryRegistrationLogin#searchSeller(Ljava/sql/Statement;Lcom/example/buylap/model/users/ModelSeller;)Ljava/sql/ResultSet;x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java' '(("1*º
+1x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( ((!£
+ 
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( ((!
+%0java.lang.String"__id*
+""Ê
+Ç
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( )(%
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+FROM users £
+ 
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java* *(&
+%2java.lang.String"__id*
+""Ó
+Ð
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(&
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String«¨
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java*( *(A
+%4java.lang.String"Hcom.example.buylap.model.users.ModelUser#getUsername()Ljava/lang/String;*;
+9
+modelSeller*com.example.buylap.model.users.ModelSeller2getUsername()Ó
+Ð
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(A
+%5java.lang.String"__concat*
+
+%3java.lang.String*
+
+%4java.lang.Stringå
+â
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(j
+%6java.lang.String"__concat*
+
+%5java.lang.String**(
+&' AND type = 'seller' AND password = '¬©
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java*k *(„
+%7java.lang.String"Hcom.example.buylap.model.users.ModelUser#getPassword()Ljava/lang/String;*;
+9
+modelSeller*com.example.buylap.model.users.ModelSeller2getPassword()Ô
+Ñ
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(„
+%8java.lang.String"__concat*
+
+%6java.lang.String*
+
+%7java.lang.StringÂ
+¿
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(‰
+%9java.lang.String"__concat*
+
+%8java.lang.String*
+';¹
+¶
+y
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java( *(Š
+queryjava.lang.String"__id*
+
+%9java.lang.String¾»
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java+ +('
+%10java.sql.ResultSet"Gjava.sql.Statement#executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;*
+
+stmtjava.sql.Statement*
+
+queryjava.lang.String2 executeQuery(Ljava/lang/String;)"—
+x
+nC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java+ +((
+
+%10java.sql.ResultSet:
+stmtjava.sql.Statement:9
+modelSeller*com.example.buylap.model.users.ModelSellerB<":
+8com.example.buylap.database.query.QueryRegistrationLogin

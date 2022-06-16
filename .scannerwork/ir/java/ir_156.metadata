@@ -1,0 +1,1 @@
+com.example.buylap.database.query.QueryRegistrationLogin#insertUser(Ljava/sql/Statement;Lcom/example/buylap/model/users/ModelUser;)V

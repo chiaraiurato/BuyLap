@@ -1,1 +1,1 @@
-com.example.buylap.model.ModelRequestBuild#getKeyword()Lcom/example/buylap/bean/BeanAnswer;
+com.example.buylap.model.ModelRequestBuild#<init>(Lcom/example/buylap/bean/BeanAnswer;F)V

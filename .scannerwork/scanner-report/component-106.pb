@@ -1,0 +1,1 @@
+j 2javaX	hrLapp/src/main/java/com/example/buylap/abstract_factory/NavigationFactory.java

@@ -1,0 +1,1 @@
+¥ 2javaX.hrOapp/src/main/java/com/example/buylap/database/query/QueryRegistrationLogin.java

@@ -1,0 +1,1 @@
+½ 2javaX"hr@app/src/main/java/com/example/buylap/utils/PropertiesReader.java

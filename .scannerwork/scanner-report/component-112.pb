@@ -1,0 +1,1 @@
+p 2javaX@hr7app/src/main/java/com/example/buylap/bean/BeanCard.java

@@ -1,0 +1,82 @@
+
+Gcom.example.buylap.utils.SessionManager#getUserDetails()Ljava/util/Map;g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java, ,(-"1*ç
+1g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java.# .(2òï
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java.' .(0
+%0java.util.HashMap"java.util.HashMap™
+ß
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java.# .(2
+%1"java.util.HashMap#<init>()V*
+
+%0java.util.HashMap§
+°
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java. .(3
+userjava.util.Map"__id*
+
+%0java.util.HashMapí
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/ /(
+%2java.lang.String"__id*
+""í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/. /(:
+%3java.lang.String"__id*
+""∑
+¥
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java/ /(B
+%4"__mapSet*
+
+userjava.util.Map*
+
+%2java.lang.String*
+""í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0 0(
+%5java.lang.String"__id*
+""í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0. 0(:
+%6java.lang.String"__id*
+""∑
+¥
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java0 0(B
+%7"__mapSet*
+
+userjava.util.Map*
+
+%5java.lang.String*
+""í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java1 1(
+%8java.lang.String"__id*
+""í
+è
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java1* 1(2
+%9java.lang.String"__id*
+""∏
+µ
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java1 1(:
+%10"__mapSet*
+
+userjava.util.Map*
+
+%8java.lang.String*
+"""Ç
+g
+]C:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/utils/SessionManager.java2 2(
+
+userjava.util.MapB+)
+'com.example.buylap.utils.SessionManager

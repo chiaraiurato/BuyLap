@@ -1,0 +1,195 @@
+
+_com.example.buylap.controller.graphic.RegistrationGraphicController#registerNewAccountSeller()VÉ
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaI I(("13*ç
+13É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaJ  J(0◊‘
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaJ$ J(.(
+%0"com.example.buylap.bean.BeanSeller""com.example.buylap.bean.BeanSellerÈ
+Ê
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaJ  J(0
+%1",com.example.buylap.bean.BeanSeller#<init>()V**
+(
+%0"com.example.buylap.bean.BeanSellerÌ
+Í
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaJ J(10
+
+beanSeller"com.example.buylap.bean.BeanSeller"__id**
+(
+%0"com.example.buylap.bean.BeanSeller≤
+Ø
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaK K(98
+%22com.example.buylap.view.RegistrationSellerActivity"__id*g*eE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationSellerActivity¬ø
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaK K(H
+%3java.lang.String"Scom.example.buylap.view.RegistrationSellerActivity#sendUsername()Ljava/lang/String;*:
+8
+%22com.example.buylap.view.RegistrationSellerActivity2sendUsername()…∆
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaK K(I
+
+%4void"Ccom.example.buylap.bean.BeanSeller#setUsername(Ljava/lang/String;)V*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+
+%3java.lang.String2setUsername(Ljava/lang/String;)≤
+Ø
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaL L(68
+%52com.example.buylap.view.RegistrationSellerActivity"__id*g*eE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationSellerActivityºπ
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaL L(B
+%6java.lang.String"Pcom.example.buylap.view.RegistrationSellerActivity#sendEmail()Ljava/lang/String;*:
+8
+%52com.example.buylap.view.RegistrationSellerActivity2sendEmail()√¿
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaL L(C
+
+%7void"@com.example.buylap.bean.BeanSeller#setEmail(Ljava/lang/String;)V*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+
+%6java.lang.String2setEmail(Ljava/lang/String;)≤
+Ø
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaM M(98
+%82com.example.buylap.view.RegistrationSellerActivity"__id*g*eE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationSellerActivity¬ø
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaM M(H
+%9java.lang.String"Scom.example.buylap.view.RegistrationSellerActivity#sendPassword()Ljava/lang/String;*:
+8
+%82com.example.buylap.view.RegistrationSellerActivity2sendPassword() «
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaM M(I
+%10void"Ccom.example.buylap.bean.BeanSeller#setPassword(Ljava/lang/String;)V*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+
+%9java.lang.String2setPassword(Ljava/lang/String;)*
+12*Õ
+3É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaU U( º
+π
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaU U("
+%22void"[com.example.buylap.controller.graphic.RegistrationGraphicController#gotoNavigationSeller()V*GE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController*
+0*‹
+4É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaTb T(jÀ»
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaT T(k
+%21void"scom.example.buylap.utils.SessionManager#createLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*0
+.
+%18'com.example.buylap.utils.SessionManager*
+
+%19java.lang.String*
+
+%20java.lang.String*
+
+SELLER2JcreateLoginSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+3*∫
+5É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaTH T(R©¶
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaTH T(`
+%20java.lang.String"Bcom.example.buylap.bean.BeanSeller#getPassword()Ljava/lang/String;*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller2getPassword()*
+4*Ÿ
+6É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaT T(ú
+ô
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaT T(.
+%18'com.example.buylap.utils.SessionManager"__id*[*YE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+sessionManager©¶
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaT. T(F
+%19java.lang.String"Bcom.example.buylap.bean.BeanSeller#getUsername()Ljava/lang/String;*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller2getUsername()*
+5*Ø
+9É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaP P(M»
+≈
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaP P(M
+resultjava.lang.Boolean"__id*
+
+%15java.lang.Boolean±
+Æ
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaQ Q(
+%16java.lang.Boolean"__id*
+""üú
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaQ Q(+
+%17boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%16java.lang.Boolean*
+
+resultjava.lang.Boolean2equals(Ljava/lang/Object;)*
+6*±
+10É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaP P(3Ω
+∫
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaP P(3G
+%14@com.example.buylap.controller.applicative.RegistrationController"__id*c*aE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationControllerﬂ‹
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaP P(L
+%15java.lang.Boolean"Ücom.example.buylap.controller.applicative.RegistrationController#createSeller(Lcom/example/buylap/bean/BeanSeller;)Ljava/lang/Boolean;*I
+G
+%14@com.example.buylap.controller.applicative.RegistrationController*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller22createSeller(Lcom/example/buylap/bean/BeanSeller;)*
+9*‘
+11É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaO O(C¡æ
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaO O(C
+%13void">com.example.buylap.bean.BeanSeller#setIva(Ljava/lang/String;)V*2
+0
+
+beanSeller"com.example.buylap.bean.BeanSeller*
+
+%12java.lang.String2setIva(Ljava/lang/String;)*
+10*£
+0 "õ
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.java[ [(
+implicit return*É
+12É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaO O(≥
+∞
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaO O(89
+%112com.example.buylap.view.RegistrationSellerActivity"__id*g*eE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController"
+registrationSellerActivity∫∑
+É
+yC:/Users/Chiara/Desktop/BuyLap/app/src/main/java/com/example/buylap/controller/graphic/RegistrationGraphicController.javaO O(B
+%12java.lang.String"Ncom.example.buylap.view.RegistrationSellerActivity#sendIva()Ljava/lang/String;*;
+9
+%112com.example.buylap.view.RegistrationSellerActivity2	sendIva()*
+11BGE
+Ccom.example.buylap.controller.graphic.RegistrationGraphicController

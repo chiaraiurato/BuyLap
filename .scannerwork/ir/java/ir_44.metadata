@@ -1,0 +1,6 @@
+com.example.buylap.controller.applicative.GetCashbackController#uploadPoints(Lcom/example/buylap/bean/BeanSession;)Lcom/example/buylap/bean/BeanCashback;
+com.example.buylap.bean.BeanCashback#<init>()V
+com.example.buylap.bean.BeanCashback#instance-init#
+com.example.buylap.model.ModelCashback#instance-init#
+com.example.buylap.model.ModelCashback#<init>()V
+com.example.buylap.database.dao.DAOpoints#uploadPoints(Lcom/example/buylap/model/ModelCashback;Ljava/lang/String;)Lcom/example/buylap/model/ModelCashback;

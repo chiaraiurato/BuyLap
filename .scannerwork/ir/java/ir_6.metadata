@@ -1,0 +1,3 @@
+com.example.buylap.view.SelectTypeAccountActivity#personalClick(LView;)V
+com.example.buylap.view.SelectTypeAccountActivity#chooseAccount(LCardView;Ljava/lang/String;)V
+com.example.buylap.view.SelectTypeAccountActivity#resetColor()V
