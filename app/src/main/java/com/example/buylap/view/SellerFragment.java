@@ -12,12 +12,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.buylap.abstract_factory.NavigationFactory;
 import com.example.buylap.adaptergui.AnalyticsAdapter;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.R;
 
-public class SellerFragment extends Fragment {
+public class SellerFragment extends Fragment implements NavigationFactory {
 
     private TextView accountName;
 
@@ -65,5 +66,10 @@ public class SellerFragment extends Fragment {
         }
 
 
+    }
+
+    @Override
+    public Fragment selectMyFragment() {
+        return this;
     }
 }

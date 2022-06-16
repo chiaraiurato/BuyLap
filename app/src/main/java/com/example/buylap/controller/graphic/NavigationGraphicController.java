@@ -5,41 +5,23 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
-
-import com.bumptech.glide.load.resource.gif.GifBitmapProvider;
 import com.example.buylap.R;
-import com.example.buylap.adapter.GenericUser;
-import com.example.buylap.adapter.Homepage;
-import com.example.buylap.adapter.HomepageAdapter;
+import com.example.buylap.abstract_factory.Client;
 import com.example.buylap.view.CashbackFragment;
-import com.example.buylap.view.GuestFragment;
-import com.example.buylap.view.HomeFragment;
 import com.example.buylap.view.NotificationFragment;
 import com.example.buylap.view.MainActivity;
 import com.example.buylap.view.NavigationActivity;
-import com.example.buylap.view.SellerFragment;
-import com.example.buylap.view.UserFragment;
+
 
 public class NavigationGraphicController extends SessionGraphicController{
 
     private NavigationActivity navigationActivity;
-    private GenericUser u;
-    private HomeFragment homeFragment;
-    private SellerFragment sellerFragment;
-    private GuestFragment guestFragment;
-    private UserFragment userFragment;
-
-    private Homepage a;
+    private Client client;
 
     public NavigationGraphicController(NavigationActivity navigationActivity) {
         super(navigationActivity.getApplicationContext());
         this.navigationActivity = navigationActivity;
-        this.u =new GenericUser();
-        this.homeFragment= new HomeFragment();
-        this.sellerFragment = new SellerFragment();
-        this.guestFragment = new GuestFragment();
-        this.userFragment = new UserFragment();
-        this.a= new HomepageAdapter(userFragment, sellerFragment, homeFragment, guestFragment, navigationActivity );
+        this.client = new Client(navigationActivity);
 
     }
 
@@ -57,9 +39,7 @@ public class NavigationGraphicController extends SessionGraphicController{
         }
     }
     public Fragment selectTypeHomepage(){
-
-        return u.gotoMyHomepage(a);
-
+        return client.navigationHome.selectMyFragment();
     }
 
     public Fragment switchPage(MenuItem item){
@@ -67,7 +47,7 @@ public class NavigationGraphicController extends SessionGraphicController{
         Fragment fragment = null;
         switch (item.getItemId()){
             case R.id.nav_home:
-                fragment = u.gotoMyHomepage(a);
+                fragment = client.navigationHome.selectMyFragment();
                 break;
             case R.id.nav_cashback:
                 fragment = new CashbackFragment();
@@ -76,7 +56,7 @@ public class NavigationGraphicController extends SessionGraphicController{
                 fragment= new NotificationFragment();
                 break;
             case R.id.nav_user:
-                fragment=  u.gotoMySetting(a);
+                fragment=  client.navigationSetting.selectMyFragment();
                 break;
         }
         return fragment;

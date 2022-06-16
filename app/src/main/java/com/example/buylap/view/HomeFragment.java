@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.buylap.abstract_factory.NavigationFactory;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.adaptergui.MostViewAdapter;
@@ -16,7 +18,7 @@ import com.example.buylap.R;
 import com.example.buylap.exceptions.BeanException;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements NavigationFactory {
 
 
     private TextView accountName;
@@ -67,5 +69,10 @@ public class HomeFragment extends Fragment {
         accountName = view.findViewById(R.id.nameAccount);
         String username = "guest,";
         accountName.setText(username);
+    }
+
+    @Override
+    public Fragment selectMyFragment() {
+        return this;
     }
 }

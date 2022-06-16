@@ -11,9 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.buylap.R;
+import com.example.buylap.abstract_factory.NavigationFactory;
 import com.example.buylap.controller.graphic.UserFragmentGraphicController;
 
-public class UserFragment extends Fragment {
+public class UserFragment extends Fragment implements NavigationFactory {
 
 
     public UserFragment() {
@@ -41,5 +42,8 @@ public class UserFragment extends Fragment {
     }
 
 
-
+    @Override
+    public Fragment selectMyFragment() {
+        return this;
+    }
 }
