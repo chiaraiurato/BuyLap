@@ -10,7 +10,7 @@ import com.example.buylap.model.ModelCashback;
 import com.example.buylap.model.ModelRequestBuild;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.database.dao.DAObuild;
 import com.example.buylap.model.ModelBuild;
 import com.example.buylap.utils.NameBuild;
@@ -44,14 +44,14 @@ public class TakeQuizController {
         }
 
         int index;
-        List<BeanBuild> beanBuildList = new ArrayList<>();
+        List<BeanBuild> beanComponentFromEbayList = new ArrayList<>();
         List<ModelBuild> modelBuild = new ArrayList<>();
 
         for(index = 0; index < 6; index++){
             try {
 
                 if(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild) == null){
-                    return beanBuildList;
+                    return beanComponentFromEbayList;
                 }else {
                     modelBuild.add(DAObuild.selectBuild(component[index], nameTable, modelRequestBuild));
                 }
@@ -62,17 +62,17 @@ public class TakeQuizController {
         }
         index=0;
         for(NameBuild e : NameBuild.values()) {
-            BeanBuild beanBuild = new BeanBuild();
-            beanBuild.setType(e.name());
-            beanBuild.setTitle(modelBuild.get(index).getTitle());
-            beanBuild.setSubtitles(modelBuild.get(index).getSubtitles());
-            beanBuild.setUrlEbay(modelBuild.get(index).getUrlEbay());
-            beanBuild.setPrice(modelBuild.get(index).getPrice());
-            beanBuildList.add(beanBuild);
+            BeanBuild beanComponentFromEbay = new BeanBuild();
+            beanComponentFromEbay.setType(e.name());
+            beanComponentFromEbay.setTitle(modelBuild.get(index).getTitle());
+            beanComponentFromEbay.setSubtitles(modelBuild.get(index).getSubtitles());
+            beanComponentFromEbay.setUrlEbay(modelBuild.get(index).getUrlEbay());
+            beanComponentFromEbay.setPrice(modelBuild.get(index).getPrice());
+            beanComponentFromEbayList.add(beanComponentFromEbay);
             index++;
         }
 
-        return beanBuildList;
+        return beanComponentFromEbayList;
 
     }
     public void selectPrice(BeanCashback beanCashback, BeanSession beanSession) throws SQLException {

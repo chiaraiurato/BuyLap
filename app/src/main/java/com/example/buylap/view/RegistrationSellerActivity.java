@@ -47,7 +47,7 @@ public class RegistrationSellerActivity extends AppCompatActivity {
                     if(registrationGraphicController.verifyFieldsSeller()) {
                         registrationGraphicController.registerNewAccountSeller();
                     }
-                } catch (DAOException e) {
+                } catch (DAOException | BeanException e) {
                     e.printStackTrace();
                 }
 

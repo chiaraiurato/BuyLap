@@ -1,6 +1,6 @@
 com.example.buylap.cli.graphic_controller.AddComponentGraphicController#<init>()V
 com.example.buylap.cli.utils.SessionManagerCLI#getUserDetails()Lcom/example/buylap/bean/BeanSession;
-com.example.buylap.bean.BeanBuild#<init>()V
-com.example.buylap.bean.BeanBuild#instance-init#
+com.example.buylap.bean.BeanComponentFromEbay#<init>()V
+com.example.buylap.bean.BeanComponentFromEbay#instance-init#
 com.example.buylap.controller.applicative.InsertComponentController#<init>()V
 com.example.buylap.controller.applicative.InsertComponentController#instance-init#

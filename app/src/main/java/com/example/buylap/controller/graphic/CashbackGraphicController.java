@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 import com.example.buylap.bean.BeanCard;
 import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -26,15 +26,16 @@ public class CashbackGraphicController extends SessionGraphicController{
     private CashbackFragment cashbackFragment;
     private GetCashbackController getCashbackController;
     private BeanCashback beanCashback;
-    private BeanSession credentials;
+    private BeanUser credentials;
     private BeanCard beanCard;
 
 
-    public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException {
+    public CashbackGraphicController(CashbackFragment cashbackFragment) throws BeanException, DAOException {
         super(cashbackFragment.getContext());
         this.cashbackFragment= cashbackFragment;
-        this.getCashbackController = new GetCashbackController();
+
         this.credentials = getBeanSession();
+        this.getCashbackController = new GetCashbackController(credentials);
         this.beanCashback = new BeanCashback();
 
     }

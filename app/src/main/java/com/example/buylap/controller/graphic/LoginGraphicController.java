@@ -45,25 +45,14 @@ public class LoginGraphicController {
         loginActivity.startActivity(intent);
     }
 
-    public void signInUser() throws DAOException, BeanException{
+    public void signInUser(String type) throws DAOException, BeanException{
 
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(loginActivity.sendUsername());
             beanUser.setPassword(loginActivity.sendPassword());
 
             ModelUser modelUser = loginController.searchUser(beanUser);
-            sessionManager.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "USER");
-            gotoNavigationActivity();
-    }
-
-    public void signInSeller() throws DAOException {
-
-            BeanSeller beanSeller = new BeanSeller();
-            beanSeller.setUsername(loginActivity.sendUsername());
-            beanSeller.setPassword(loginActivity.sendPassword());
-
-            ModelSeller modelSeller = loginController.searchSeller(beanSeller);
-            sessionManager.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "SELLER");
+            sessionManager.createLoginSession(modelUser.getUsername(),modelUser.getEmail(), modelUser.getPassword(), type);
             gotoNavigationActivity();
     }
 

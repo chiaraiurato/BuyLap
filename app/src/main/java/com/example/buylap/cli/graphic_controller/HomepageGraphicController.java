@@ -4,7 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.AddComponent;
 import com.example.buylap.cli.view.CreditCard;
@@ -14,17 +14,9 @@ import com.example.buylap.cli.view.HomepageSeller;
 import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.cli.view.TakeQuiz;
 import com.example.buylap.exceptions.BeanException;
-import com.example.buylap.exceptions.DAOException;
-import com.example.buylap.exceptions.ExpiredDateCardException;
-import com.example.buylap.exceptions.LengthBeanCardException;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.util.Map;
-import java.util.Objects;
 import java.util.StringTokenizer;
-import java.util.zip.DataFormatException;
 
 public class HomepageGraphicController {
 
@@ -33,19 +25,19 @@ public class HomepageGraphicController {
     private static final String TAKE_QUIZ = "take_quiz";
     private static final String EXIT = "exit";
 
-    private BeanSession beanSession;
+    private BeanUser beanUser;
 
     public HomepageGraphicController() throws BeanException {
 
-        beanSession = SessionManagerCLI.getUserDetails();
+        beanUser = SessionManagerCLI.getUserDetails();
     }
     public String initializeSessionCLI() {
-            return beanSession.getUsername();
+            return beanUser.getUsername();
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void executeCommand(String input) throws IOException {
 
-        if(beanSession.getType().equals("user")) {
+        if(beanUser.getType().equals("user")) {
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -79,7 +71,7 @@ public class HomepageGraphicController {
                     System.out.println(ERROR_MSG);
                     HomepageUser.run();
             }
-        }else if(beanSession.getType().equals("seller")){
+        }else if(beanUser.getType().equals("seller")){
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -118,7 +110,7 @@ public class HomepageGraphicController {
                     HomepageSeller.run();
 
             }
-        }else if(beanSession.getType().equals("guest")){
+        }else if(beanUser.getType().equals("guest")){
             StringTokenizer st = new StringTokenizer(input);
             String command = st.nextToken();
             switch (command) {
@@ -139,14 +131,14 @@ public class HomepageGraphicController {
     }
 }
     public static void showCommands(){
-        BeanSession beanSession= null;
+        BeanUser beanUser= null;
         try {
-            beanSession = SessionManagerCLI.getUserDetails();
+            beanUser = SessionManagerCLI.getUserDetails();
         } catch (BeanException e) {
             System.out.println("BeanException");
         }
-        assert beanSession != null;
-        if(beanSession.getUsername().equals("guest")) {
+        assert beanUser != null;
+        if(beanUser.getUsername().equals("guest")) {
             System.out.println(
                             "⚫ take_quiz \n" +
                             "⚫ exit\n");

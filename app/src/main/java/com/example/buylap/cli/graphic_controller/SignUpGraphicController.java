@@ -73,7 +73,11 @@ public class SignUpGraphicController {
             String iva = token1[4];
             BeanSeller beanSeller = new BeanSeller();
             beanSeller.setUsername(username);
-            beanSeller.setEmail(mail);
+            try {
+                beanSeller.setEmail(mail);
+            } catch (EmailVerifyException e) {
+                System.out.println(EMAIL_LENGTH);
+            }
             try {
                 beanSeller.setIva(iva);
             } catch (IvaLengthException e) {

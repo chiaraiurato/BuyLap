@@ -11,7 +11,7 @@ import android.widget.PopupMenu;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.ConstantNameTable;
 import com.example.buylap.R;
-import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.InsertComponentController;
 import com.example.buylap.exceptions.BeanException;
@@ -25,14 +25,14 @@ import java.util.Map;
 public class InsertComponentGraphicController extends SessionGraphicController implements PopupMenu.OnMenuItemClickListener{
     private InsertComponentActivity insertComponentActivity;
     private InsertComponentController insertComponentController;
-    private BeanBuild beanBuild;
+    private BeanBuild beanComponentFromEbay;
 
 
     public InsertComponentGraphicController(InsertComponentActivity insertComponentActivity) {
         super(insertComponentActivity.getApplicationContext());
         this.insertComponentActivity = insertComponentActivity;
         this.insertComponentController = new InsertComponentController();
-        this.beanBuild=new BeanBuild();
+        this.beanComponentFromEbay=new BeanBuild();
     }
     public void show(View view){
         Context wrapper = new ContextThemeWrapper(insertComponentActivity, R.style.Buylap_PopupMenu);
@@ -48,27 +48,27 @@ public class InsertComponentGraphicController extends SessionGraphicController i
         switch (item.getItemId()){
             case R.id.nav_cpu:
                 insertComponentActivity.setCpu();
-                beanBuild.setType(ConstantNameTable.CPU);
+                beanComponentFromEbay.setType(ConstantNameTable.CPU);
                 return true;
             case R.id.nav_ram:
                 insertComponentActivity.setRam();
-                beanBuild.setType(ConstantNameTable.RAM);
+                beanComponentFromEbay.setType(ConstantNameTable.RAM);
                 return true;
             case R.id.nav_motherboard:
                 insertComponentActivity.setMotherboard();
-                beanBuild.setType(ConstantNameTable.MOTHERBOARD);
+                beanComponentFromEbay.setType(ConstantNameTable.MOTHERBOARD);
                 return true;
             case R.id.nav_videocard:
                 insertComponentActivity.setVideoCard();
-                beanBuild.setType(ConstantNameTable.VIDEO_CARD);
+                beanComponentFromEbay.setType(ConstantNameTable.VIDEO_CARD);
                 return true;
             case R.id.nav_powersupply:
                 insertComponentActivity.setPowerSupply();
-                beanBuild.setType(ConstantNameTable.POWER_SUPPLY);
+                beanComponentFromEbay.setType(ConstantNameTable.POWER_SUPPLY);
                 return true;
             case R.id.nav_ssd:
                 insertComponentActivity.setSsd();
-                beanBuild.setType(ConstantNameTable.SSD);
+                beanComponentFromEbay.setType(ConstantNameTable.SSD);
                 return true;
             default:
                 return false;
@@ -77,13 +77,13 @@ public class InsertComponentGraphicController extends SessionGraphicController i
 
     public void saveComponent() throws BeanException, DAOException {
 
-        beanBuild.setTitle(insertComponentActivity.sendTitle());
-        beanBuild.setSubtitles(insertComponentActivity.sendSubtitles());
-        beanBuild.setPrice(insertComponentActivity.sendPrice());
-        beanBuild.setUrlEbay(insertComponentActivity.sendUrl());
+        beanComponentFromEbay.setTitle(insertComponentActivity.sendTitle());
+        beanComponentFromEbay.setSubtitles(insertComponentActivity.sendSubtitles());
+        beanComponentFromEbay.setPrice(insertComponentActivity.sendPrice());
+        beanComponentFromEbay.setUrlEbay(insertComponentActivity.sendUrl());
         BeanSeller beanSeller = new BeanSeller();
         //VEDERE
-        Boolean result=  insertComponentController.saveComponent(beanBuild, beanSeller);
+        Boolean result=  insertComponentController.saveComponent(beanComponentFromEbay, beanSeller);
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "Component saved");
         }

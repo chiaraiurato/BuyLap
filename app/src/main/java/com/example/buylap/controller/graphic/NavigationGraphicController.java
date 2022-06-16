@@ -6,9 +6,9 @@ import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 import com.example.buylap.R;
-import com.example.buylap.abstract_factory.Factory;
-import com.example.buylap.abstract_factory.NavigationFactory;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.factory.Factory;
+import com.example.buylap.factory.NavigationFactory;
 import com.example.buylap.exceptions.InvalidTypeAccountException;
 import com.example.buylap.view.CashbackFragment;
 import com.example.buylap.view.NotificationFragment;
@@ -19,7 +19,7 @@ import com.example.buylap.view.NavigationActivity;
 public class NavigationGraphicController extends SessionGraphicController{
 
     private NavigationActivity navigationActivity;
-    private BeanSession credentials;
+    private BeanUser credentials;
     private NavigationFactory navigationHome;
     private NavigationFactory navigationSetting;
 
@@ -27,15 +27,6 @@ public class NavigationGraphicController extends SessionGraphicController{
         super(navigationActivity.getApplicationContext());
         this.navigationActivity = navigationActivity;
         this.credentials = getBeanSession();
-        Factory factory = new Factory();
-        try {
-            navigationHome = factory.createNavigationFactory("home", credentials.getType());
-            navigationSetting = factory.createNavigationFactory("setting", credentials.getType());
-
-        } catch (InvalidTypeAccountException e) {
-            e.printStackTrace();
-        }
-
     }
 
     public void checkLogin(){
@@ -47,6 +38,15 @@ public class NavigationGraphicController extends SessionGraphicController{
            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             navigationActivity.startActivity(intent);
         }else{
+
+            Factory factory = new Factory();
+            try {
+                navigationHome = factory.createNavigationFactory("home", credentials.getType());
+                navigationSetting = factory.createNavigationFactory("setting", credentials.getType());
+
+            } catch (InvalidTypeAccountException e) {
+                e.printStackTrace();
+            }
             Fragment fragment = selectTypeHomepage();
             navigationActivity.getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
         }

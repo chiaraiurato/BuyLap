@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-BuyLap is an Android App that permits you to discovery the perfect PC-build and get cashback.
+Tired of searching hours and hours on the internet for a build of your dream computer ?  So, you are in the right place. BuyLap is an application that allows you through a quiz to view the build that suits you best. Thanks to the partnership with eBay, you can earn a 10% cashback if you purchase one of the components suggested by the quiz.
 ## Technologies
 Project is created with:
 * Android Studio

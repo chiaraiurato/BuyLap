@@ -5,10 +5,10 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import com.example.buylap.bean.BeanCashback;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.Cashback;
 import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -21,19 +21,24 @@ import java.text.ParseException;
 
 public class CashbackGraphicController {
     private GetCashbackController getCashbackController;
-    private BeanSession beanSession;
+    private BeanUser beanUser;
     private BeanCashback beanCashback;
     private BeanCard beanCard;
 
      public CashbackGraphicController() throws BeanException {
-         this.getCashbackController = new GetCashbackController();
-         this.beanSession = SessionManagerCLI.getUserDetails();
+
+         this.beanUser = SessionManagerCLI.getUserDetails();
+         try {
+             this.getCashbackController = new GetCashbackController(beanUser);
+         } catch (DAOException e) {
+             e.printStackTrace();
+         }
          this.beanCashback =  new BeanCashback();
      }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public BeanCard uploadCreditCard() throws DAOException, ExpiredDateCardException, ParseException {
-        beanCard = getCashbackController.uploadCreditCard(beanSession);
+        beanCard = getCashbackController.uploadCreditCard(beanUser);
 
         return beanCard;
 
@@ -54,7 +59,7 @@ public class CashbackGraphicController {
             System.out.println("Date is expired");
         }
 
-        Boolean result = getCashbackController.createCard(beanCard, beanSession);
+        Boolean result = getCashbackController.createCard(beanCard, beanUser);
         if (Boolean.TRUE.equals(result)) {
             System.out.println("Credit card saved!");
         }
@@ -62,7 +67,7 @@ public class CashbackGraphicController {
     public BeanCashback uploadPoints() {
         beanCashback = null;
         try {
-            beanCashback = getCashbackController.uploadPoints(beanSession);
+            beanCashback = getCashbackController.uploadPoints(beanUser);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -70,7 +75,7 @@ public class CashbackGraphicController {
     }
     public void deleteCreditCard() throws DAOException {
 
-        getCashbackController.deleteCreditCard(beanSession);
+        getCashbackController.deleteCreditCard(beanUser);
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void cashOutPoints(BeanCashback beanCashback) throws SQLException {
@@ -82,7 +87,7 @@ public class CashbackGraphicController {
 
             try {
                 getCashbackController.sendMoneyToCreditCardCLI(uploadCreditCard());
-                beanCashback = getCashbackController.updatePoints(beanCashback, beanSession);
+                beanCashback = getCashbackController.updatePoints(beanCashback, beanUser);
                 Cashback.setPoints(beanCashback);
             } catch (NoCardInsertedException e) {
                 System.out.println("You need to add a credit card ");

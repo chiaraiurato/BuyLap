@@ -1,11 +1,10 @@
 package com.example.buylap.controller.graphic;
 
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
 import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -20,14 +19,15 @@ public class AddCardGraphicController extends SessionGraphicController{
 
     private AddCardActivity addCardActivity;
     private BeanCard beanCard;
-    private BeanSession credentials;
+    private BeanUser credentials;
     private GetCashbackController getCashbackController;
 
-    public AddCardGraphicController(AddCardActivity addCardActivity){
+    public AddCardGraphicController(AddCardActivity addCardActivity) throws DAOException {
         super(addCardActivity.getApplicationContext());
         this.addCardActivity = addCardActivity;
-        this.getCashbackController = new GetCashbackController();
+
         this.credentials = getBeanSession();
+        this.getCashbackController = new GetCashbackController(credentials);
         this.beanCard = new BeanCard();
     }
     private void gotoNavigationActivity(){

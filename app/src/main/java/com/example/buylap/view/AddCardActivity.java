@@ -34,7 +34,12 @@ public class AddCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
-        AddCardGraphicController addCardGraphicController = new AddCardGraphicController(this);
+        AddCardGraphicController addCardGraphicController = null;
+        try {
+            addCardGraphicController = new AddCardGraphicController(this);
+        } catch (DAOException e) {
+            e.printStackTrace();
+        }
         name = findViewById(R.id.titles);
         numberCard = findViewById(R.id.subtitles);
         dateFormat = findViewById(R.id.editTextDate);
@@ -42,11 +47,12 @@ public class AddCardActivity extends AppCompatActivity {
 
         Button saveCard = findViewById(R.id.save_item);
 
+        AddCardGraphicController finalAddCardGraphicController = addCardGraphicController;
         saveCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    addCardGraphicController.saveCreditCard();
+                    finalAddCardGraphicController.saveCreditCard();
                 } catch (DAOException | BeanException  e) {
                     Toast.makeText(getApplicationContext(), "Error while saving credit card..  ", Toast.LENGTH_SHORT).show();
                 }catch (LengthBeanCardException e){

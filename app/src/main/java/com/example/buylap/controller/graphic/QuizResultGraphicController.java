@@ -10,10 +10,11 @@ import android.widget.Button;
 
 import com.example.buylap.R;
 import com.example.buylap.bean.BeanCashback;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
+import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.model.Category;
 import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.QuizResultActivity;
@@ -25,10 +26,11 @@ import java.util.List;
 public class QuizResultGraphicController extends SessionGraphicController {
     private List<Category> build;
     private TakeQuizController takeQuizController;
+    private GetCashbackController getCashbackController;
     private QuizResultActivity quizResultActivity;
     private BeanAnswer beanAnswer;
-    private List<BeanBuild> beanBuild;
-    private BeanSession credentials;
+    private List<BeanComponentFromEbay> beanComponentFromEbay;
+    private BeanUser credentials;
 
     public QuizResultGraphicController(QuizResultActivity quizResultActivity){
          super(quizResultActivity.getApplicationContext());
@@ -36,7 +38,7 @@ public class QuizResultGraphicController extends SessionGraphicController {
          this.takeQuizController = new TakeQuizController();
          this.quizResultActivity = quizResultActivity;
          this.beanAnswer = new BeanAnswer();
-         this.beanBuild = new ArrayList<>();
+         this.beanComponentFromEbay = new ArrayList<>();
          this.credentials = getBeanSession();
     }
 
@@ -45,16 +47,16 @@ public class QuizResultGraphicController extends SessionGraphicController {
         beanAnswer.setAnswer3(a);
         beanAnswer.setPriceSelected(price);
 
-        beanBuild = takeQuizController.createBuild(beanAnswer);
-        if (beanBuild.isEmpty()){
+        beanComponentFromEbay = takeQuizController.createBuild(beanAnswer);
+        if (beanComponentFromEbay.isEmpty()){
             openErrorDialog();
         }else {
-            build.add(new Category(beanBuild.get(0).getTitle(), "motherboard96", beanBuild.get(0).getSubtitles(), beanBuild.get(0).getPrice()));
-            build.add(new Category(beanBuild.get(1).getTitle(), "ssd", beanBuild.get(1).getSubtitles(), beanBuild.get(1).getPrice()));
-            build.add(new Category(beanBuild.get(2).getTitle(), "cpu", beanBuild.get(2).getSubtitles(), beanBuild.get(2).getPrice()));
-            build.add(new Category(beanBuild.get(3).getTitle(), "ram", beanBuild.get(3).getSubtitles(), beanBuild.get(3).getPrice()));
-            build.add(new Category(beanBuild.get(4).getTitle(), "videocard", beanBuild.get(4).getSubtitles(), beanBuild.get(4).getPrice()));
-            build.add(new Category(beanBuild.get(5).getTitle(), "powersupply", beanBuild.get(5).getSubtitles(), beanBuild.get(5).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(0).getTitle(), "motherboard96", beanComponentFromEbay.get(0).getSubtitles(), beanComponentFromEbay.get(0).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(1).getTitle(), "ssd", beanComponentFromEbay.get(1).getSubtitles(), beanComponentFromEbay.get(1).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(2).getTitle(), "cpu", beanComponentFromEbay.get(2).getSubtitles(), beanComponentFromEbay.get(2).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(3).getTitle(), "ram", beanComponentFromEbay.get(3).getSubtitles(), beanComponentFromEbay.get(3).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(4).getTitle(), "videocard", beanComponentFromEbay.get(4).getSubtitles(), beanComponentFromEbay.get(4).getPrice()));
+            build.add(new Category(beanComponentFromEbay.get(5).getTitle(), "powersupply", beanComponentFromEbay.get(5).getSubtitles(), beanComponentFromEbay.get(5).getPrice()));
         }
          return build;
      }
@@ -80,24 +82,24 @@ public class QuizResultGraphicController extends SessionGraphicController {
          final Intent intent;
              switch (position){
                  case 0:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(0).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(0).getUrlEbay()));
                      break;
 
                  case 1:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(1).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(1).getUrlEbay()));
                      break;
                  case 2:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(2).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(2).getUrlEbay()));
                      break;
                  case 3:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(3).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(3).getUrlEbay()));
                      break;
                  case 4:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(4).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(4).getUrlEbay()));
                      break;
 
                  default:
-                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanBuild.get(5).getUrlEbay()));
+                     intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(beanComponentFromEbay.get(5).getUrlEbay()));
                      break;
              }
          return intent;
@@ -117,28 +119,28 @@ public class QuizResultGraphicController extends SessionGraphicController {
         float price;
         switch (position){
             case 0:
-                price = beanBuild.get(0).getPrice();
+                price = beanComponentFromEbay.get(0).getPrice();
                 break;
             case 1:
-                price =  beanBuild.get(1).getPrice();
+                price =  beanComponentFromEbay.get(1).getPrice();
                 break;
             case 2:
-                price =  beanBuild.get(2).getPrice();
+                price =  beanComponentFromEbay.get(2).getPrice();
                 break;
             case 3:
-                price =  beanBuild.get(3).getPrice();
+                price =  beanComponentFromEbay.get(3).getPrice();
                 break;
             case 4:
-                price =  beanBuild.get(4).getPrice();
+                price =  beanComponentFromEbay.get(4).getPrice();
                 break;
             default:
-                price =  beanBuild.get(5).getPrice();
+                price =  beanComponentFromEbay.get(5).getPrice();
                 break;
         }
         BeanCashback beanCashback = new BeanCashback();
         beanCashback.setAmount(price);
         try {
-            takeQuizController.selectPrice(beanCashback, credentials);
+           getCashbackController.purchasedFromEbay(beanCashback, credentials);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

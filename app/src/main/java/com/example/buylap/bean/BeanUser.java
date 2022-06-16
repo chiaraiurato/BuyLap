@@ -3,11 +3,20 @@ package com.example.buylap.bean;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.EmailVerifyException;
 
-public class BeanUser {
+public class BeanUser{
+
+
+    private String type;
     private String username;
     private String email;
     private String password;
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
     public String getEmail() {
         return email;
     }

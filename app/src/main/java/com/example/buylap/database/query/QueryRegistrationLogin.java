@@ -31,15 +31,9 @@ public class QueryRegistrationLogin {
     public static ResultSet searchUser(Statement stmt, ModelUser modelUser) throws    SQLException{
         String query = SELECT_ALL +
                         "FROM users " +
-                        WHERE_USERNAME + modelUser.getUsername()+"' AND type = 'user' AND password = '"+modelUser.getPassword()+"';";
+                        WHERE_USERNAME + modelUser.getUsername()+"' AND type = '"+modelUser.getType()+"' AND password = '"+modelUser.getPassword()+"';";
         return stmt.executeQuery(query);
 
     }
 
-    public static ResultSet searchSeller(Statement stmt, ModelSeller modelSeller) throws SQLException {
-        String query = SELECT_ALL +
-                        "FROM users " +
-                        WHERE_USERNAME+ modelSeller.getUsername()+"' AND type = 'seller' AND password = '"+modelSeller.getPassword()+"';";
-        return stmt.executeQuery(query);
-    }
 }

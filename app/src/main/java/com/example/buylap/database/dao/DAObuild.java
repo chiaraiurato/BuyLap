@@ -3,8 +3,6 @@ package com.example.buylap.database.dao;
 import android.os.StrictMode;
 
 
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.cli.graphic_controller.MainGraphicController;
 import com.example.buylap.database.JdbcConnection;
 import com.example.buylap.database.query.QueryBuild;

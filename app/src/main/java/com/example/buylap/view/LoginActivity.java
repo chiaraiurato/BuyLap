@@ -49,21 +49,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String type = loginGraphicController.verifyFields(userRadio, sellerRadio);
-                if(type.equals("USER")) {
-                    try {
-                        loginGraphicController.signInUser();
-                    } catch (BeanException throwables) {
-                        throwables.printStackTrace();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
-                    }
-                }else{
-                    try {
-                        loginGraphicController.signInSeller();
-                    } catch (DAOException e) {
-                        Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
-                    }
 
+                try {
+                    loginGraphicController.signInUser(type);
+                } catch (BeanException throwables) {
+                    throwables.printStackTrace();
+                } catch (DAOException e) {
+                    Toast.makeText(LoginActivity.this, "Sign in failed : wrong credential ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

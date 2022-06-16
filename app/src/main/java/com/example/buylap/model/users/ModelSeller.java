@@ -5,8 +5,8 @@ public class ModelSeller extends ModelUser{
 
     private String pIva;
 
-    public ModelSeller(String username, String email, String password, String pIva) {
-        super(username, email, password);
+    public ModelSeller(String type, String username, String email, String password, String pIva) {
+        super(type, username, email, password);
         this.pIva = pIva;
     }
     public String getIva() {

@@ -38,7 +38,7 @@ public class SignInGraphicController {
         String type = token[1];
         String username = token[2];
         String password = token[3];
-        if (type.equals("user")) {
+
             ModelUser modelUser = null;
             BeanUser beanUser = new BeanUser();
             beanUser.setUsername(username);
@@ -49,23 +49,8 @@ public class SignInGraphicController {
                 e.printStackTrace();
             }
             assert modelUser != null;
-            SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), "user");
+            SessionManagerCLI.createLoginSession(modelUser.getUsername(), modelUser.getPassword(), type);
             HomepageUser.main();
 
-        }else if(type.equals("seller")){
-            ModelSeller modelSeller = null;
-            BeanSeller beanSeller = new BeanSeller();
-            beanSeller.setUsername(username);
-            beanSeller.setPassword(password);
-
-            try {
-                modelSeller = loginController.searchSeller(beanSeller);
-            } catch (DAOException e) {
-                e.printStackTrace();
-            }
-            assert modelSeller != null;
-            SessionManagerCLI.createLoginSession(modelSeller.getUsername(), modelSeller.getPassword(), "seller");
-            HomepageSeller.main();
-        }
     }
 }

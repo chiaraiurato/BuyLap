@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.buylap.abstract_factory.NavigationFactory;
+import com.example.buylap.factory.NavigationFactory;
 import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.graphic.HomeGraphicController;
 import com.example.buylap.adaptergui.MostViewAdapter;

@@ -57,7 +57,7 @@ public class RegistrationGraphicController {
         if (Boolean.TRUE.equals(result)) {
             Log.d("DATABASE", "SignUp success for User");
         }
-        sessionManager.createLoginSession(beanUser.getUsername(), beanUser.getPassword(), "USER");
+        sessionManager.createLoginSession(beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword(), "USER");
         goToNavigationActivity();
 
     }
@@ -70,10 +70,14 @@ public class RegistrationGraphicController {
         registrationSellerActivity.startActivity(intent);
     }
 
-    public void registerNewAccountSeller() throws DAOException {
+    public void registerNewAccountSeller() throws DAOException, BeanException {
         BeanSeller beanSeller = new BeanSeller();
         beanSeller.setUsername(registrationSellerActivity.sendUsername());
-        beanSeller.setEmail(registrationSellerActivity.sendEmail());
+        try {
+            beanSeller.setEmail(registrationSellerActivity.sendEmail());
+        } catch (EmailVerifyException e) {
+            Toast.makeText(registrationActivity, "Email is invalid for seller", Toast.LENGTH_SHORT).show();
+        }
         beanSeller.setPassword(registrationSellerActivity.sendPassword());
         try {
             beanSeller.setIva(registrationSellerActivity.sendIva());
@@ -81,7 +85,7 @@ public class RegistrationGraphicController {
             if (Boolean.TRUE.equals(result)) {
                 Log.d("DATABASE", "SignUp success for Seller");
             }
-            sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getPassword(), "SELLER");
+            sessionManager.createLoginSession(beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(), "SELLER");
             gotoNavigationSeller();
 
         } catch (IvaLengthException e) {

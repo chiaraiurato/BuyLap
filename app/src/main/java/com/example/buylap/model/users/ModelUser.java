@@ -5,13 +5,15 @@ import com.example.buylap.model.ModelCreditCard;
 
 public class ModelUser{
 
+    private String type;
     private String username;
     private String email;
     private String password;
     private ModelCreditCard creditCard;
-    private ModelCashback modelCashback; //modificare in beancashback
+    private ModelCashback modelCashback;
 
-    public ModelUser(String username, String email, String password) {
+    public ModelUser(String type, String username, String email, String password) {
+        this.type = type;
         this.username = username;
         this.email = email;
         this.password = password;
@@ -19,25 +21,19 @@ public class ModelUser{
         this.modelCashback = new ModelCashback(0);
     }
 
-    public ModelUser(String username, String email, String password, ModelCreditCard creditCard) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.creditCard = creditCard;
-    }
-    public ModelUser(String username, String email, String password, ModelCreditCard creditCard, ModelCashback modelCashback) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.creditCard = creditCard;
-        this.modelCashback = modelCashback;
-    }
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 
@@ -66,11 +62,11 @@ public class ModelUser{
         this.creditCard = creditCard;
     }
 
-    public ModelCashback getModelPoints() {
+    public ModelCashback getModelCashback() {
         return modelCashback;
     }
 
-    public void setModelPoints(ModelCashback modelCashback) {
+    public void setModelCashback(ModelCashback modelCashback) {
         this.modelCashback = modelCashback;
     }
 }

@@ -1,9 +1,5 @@
 package com.example.buylap.database.query;
 
-import android.util.Log;
-
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.model.ModelBuild;
 import com.example.buylap.model.users.ModelSeller;
 

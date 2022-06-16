@@ -48,7 +48,7 @@ public class CashbackFragment extends Fragment {
 
         try {
             this.cashbackGraphicController = new CashbackGraphicController(this);
-        } catch (BeanException e) {
+        } catch (BeanException | DAOException e) {
             e.printStackTrace();
         }
         try {

@@ -5,13 +5,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.example.buylap.bean.BeanCard;
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.controller.applicative.GetCashbackController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
 import com.example.buylap.exceptions.ExpiredDateCardException;
 import com.example.buylap.exceptions.LengthBeanCardException;
-import com.example.buylap.model.ModelCreditCard;
 
 import java.text.ParseException;
 
@@ -35,17 +34,22 @@ public class InsertCreditCardTest {
             checkInfoCard = false;
         }
         beanCard.setCardHolderName("Mr. Test");
-        BeanSession beanSession = new BeanSession();
+        BeanUser beanUser = new BeanUser();
         try {
-            beanSession.setUsername("test");
+            beanUser.setUsername("test");
         } catch (BeanException e) {
             e.printStackTrace();
         }
-        beanSession.setType("guest");
+
         assertTrue(checkInfoCard);
-        GetCashbackController controller = new GetCashbackController();
+        GetCashbackController controller = null;
         try {
-            checkAdditionToDb=controller.createCard(beanCard, beanSession);
+            controller = new GetCashbackController(beanUser);
+        } catch (DAOException e) {
+            e.printStackTrace();
+        }
+        try {
+            checkAdditionToDb=controller.createCard(beanCard, beanUser);
         } catch (DAOException | LengthBeanCardException e) {
            checkAdditionToDb = false;
         }

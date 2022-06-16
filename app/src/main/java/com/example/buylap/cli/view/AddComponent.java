@@ -17,6 +17,10 @@ public class AddComponent {
             System.out.println(BEAN_EXCEPTION);
         }
         assert addComponentGraphicController != null;
-        addComponentGraphicController.saveComponent(input);
+        try {
+            addComponentGraphicController.saveComponent(input);
+        } catch (BeanException e) {
+            System.out.println(BEAN_EXCEPTION);
+        }
     }
 }

@@ -3,7 +3,7 @@ package com.example.buylap.controller.graphic;
 import android.content.Context;
 import android.util.Log;
 
-import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.bean.BeanSession;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.utils.SessionManager;

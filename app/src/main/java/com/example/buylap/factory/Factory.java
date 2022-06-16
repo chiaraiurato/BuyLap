@@ -1,17 +1,10 @@
-package com.example.buylap.abstract_factory;
-
-import androidx.fragment.app.Fragment;
+package com.example.buylap.factory;
 
 import com.example.buylap.exceptions.InvalidTypeAccountException;
-import com.example.buylap.utils.SessionManager;
 import com.example.buylap.view.GuestFragment;
 import com.example.buylap.view.HomeFragment;
-import com.example.buylap.view.NavigationActivity;
 import com.example.buylap.view.SellerFragment;
 import com.example.buylap.view.UserFragment;
-
-import java.util.Map;
-import java.util.Objects;
 
 
 public class Factory {

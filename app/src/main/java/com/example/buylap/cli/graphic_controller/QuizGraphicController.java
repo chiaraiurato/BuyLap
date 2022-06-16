@@ -6,12 +6,12 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.buylap.bean.BeanSession;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.utils.SessionManagerCLI;
 import com.example.buylap.cli.view.HomepageSeller;
 import com.example.buylap.cli.view.HomepageUser;
 import com.example.buylap.bean.BeanAnswer;
-import com.example.buylap.bean.BeanBuild;
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.controller.applicative.TakeQuizController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.cli.utils.CommandLineTable;
@@ -23,11 +23,11 @@ public class QuizGraphicController {
 
     private TakeQuizController takeQuizController;
     private final BeanAnswer beanAnswer;
-    private BeanSession beanSession;
+    private BeanUser beanUser;
     public QuizGraphicController() throws BeanException {
         beanAnswer = new BeanAnswer();
         takeQuizController = new TakeQuizController();
-        this.beanSession = SessionManagerCLI.getUserDetails();
+        this.beanUser = SessionManagerCLI.getUserDetails();
     }
 
 
@@ -42,17 +42,17 @@ public class QuizGraphicController {
         }
         int index;
         beanAnswer.setPriceSelected(price);
-        List<BeanBuild> beanBuild = takeQuizController.createBuild(beanAnswer);
-        if (beanBuild.isEmpty()) {
+        List<BeanComponentFromEbay> beanComponentFromEbay = takeQuizController.createBuild(beanAnswer);
+        if (beanComponentFromEbay.isEmpty()) {
             System.out.println("No build found! Try with another price\n");
         } else {
             CommandLineTable st = new CommandLineTable();
             st.setShowVerticalLines(true);
             st.setHeaders("Type", "Title", "Subtitles", "Price", "Link");
             for (index = 0; index < 6; index++) {
-                st.addRow(beanBuild.get(index).getType() , beanBuild.get(index).getTitle() ,
-                        beanBuild.get(index).getSubtitles(), (beanBuild.get(index).getPrice()) + "$",
-                        beanBuild.get(index).getUrlEbay());
+                st.addRow(beanComponentFromEbay.get(index).getType() , beanComponentFromEbay.get(index).getTitle() ,
+                        beanComponentFromEbay.get(index).getSubtitles(), (beanComponentFromEbay.get(index).getPrice()) + "$",
+                        beanComponentFromEbay.get(index).getUrlEbay());
             }
             st.print();
         }
@@ -61,14 +61,14 @@ public class QuizGraphicController {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void runHomepage() {
-        if(beanSession.getType().equals("user") || beanSession.getType().equals("guest") ) {
+        if(beanUser.getType().equals("user") || beanUser.getType().equals("guest") ) {
             try {
                 HomepageUser.run();
             } catch (IOException e) {
                 System.out.println(IO_EXCEPTION);
             }
 
-        }else if(beanSession.getType().equals("seller")){
+        }else if(beanUser.getType().equals("seller")){
             HomepageSeller.run();
         }
     }

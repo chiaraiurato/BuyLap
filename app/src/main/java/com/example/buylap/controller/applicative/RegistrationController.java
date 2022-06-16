@@ -15,7 +15,7 @@ public class RegistrationController {
 
 
     public Boolean createUser(BeanUser beanUser) throws DAOException {
-        ModelUser modelUser = new ModelUser(beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword());
+        ModelUser modelUser = new ModelUser(beanUser.getType(), beanUser.getUsername(), beanUser.getEmail(), beanUser.getPassword());
             try {
                 DAOuser.insertUser(modelUser);
                 return true;
@@ -27,7 +27,7 @@ public class RegistrationController {
     }
     public Boolean createSeller(BeanSeller beanSeller) throws DAOException {
 
-        ModelSeller modelSeller = new ModelSeller(beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(),
+        ModelSeller modelSeller = new ModelSeller("SELLER",beanSeller.getUsername(), beanSeller.getEmail(), beanSeller.getPassword(),
                 beanSeller.getIva());
         try {
             DAOseller.insertSeller(modelSeller);

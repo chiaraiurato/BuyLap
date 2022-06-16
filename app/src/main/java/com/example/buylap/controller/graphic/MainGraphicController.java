@@ -18,7 +18,7 @@ public class MainGraphicController {
 
     public void setGuestAccount(){
 
-        sessionManager.createLoginSession("guest","guest", "GUEST");
+        sessionManager.createLoginSession("guest","guest@gmail", "guest", "GUEST");
         Intent intent = new Intent(mainActivity, NavigationActivity.class);
         mainActivity.startActivity(intent);
 

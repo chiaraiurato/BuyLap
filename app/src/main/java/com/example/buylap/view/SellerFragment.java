@@ -12,7 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.buylap.abstract_factory.NavigationFactory;
+import com.example.buylap.exceptions.BeanException;
+import com.example.buylap.factory.NavigationFactory;
 import com.example.buylap.adaptergui.AnalyticsAdapter;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.controller.graphic.HomeGraphicController;
@@ -40,7 +41,11 @@ public class SellerFragment extends Fragment implements NavigationFactory {
                 homeGraphicController.goToTakeQuiz();
             }
         });
-        homeGraphicController.initializeSessionForSeller(view);
+        try {
+            homeGraphicController.initializeSessionForSeller(view);
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
         Button insertComponent = view.findViewById(R.id.insertComp);
         insertComponent.setOnClickListener(new View.OnClickListener() {
             @Override

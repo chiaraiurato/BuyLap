@@ -1,9 +1,9 @@
 package com.example.buylap.cli.graphic_controller;
 
+import com.example.buylap.bean.BeanComponentFromEbay;
 import com.example.buylap.bean.BeanSeller;
+import com.example.buylap.bean.BeanUser;
 import com.example.buylap.cli.utils.SessionManagerCLI;
-import com.example.buylap.bean.BeanBuild;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.controller.applicative.InsertComponentController;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.exceptions.DAOException;
@@ -11,28 +11,28 @@ import com.example.buylap.exceptions.DAOException;
 
 public class AddComponentGraphicController {
     private InsertComponentController insertComponentController;
-    private BeanBuild beanBuild;
-    private BeanSession beanSession;
+    private BeanComponentFromEbay beanComponentFromEbay;
+    private BeanUser beanUser;
 
     public AddComponentGraphicController() throws BeanException {
-        this.beanSession = SessionManagerCLI.getUserDetails();
+        this.beanUser = SessionManagerCLI.getUserDetails();
         this.insertComponentController = new InsertComponentController();
-        this.beanBuild = new BeanBuild();
+        this.beanComponentFromEbay = new BeanComponentFromEbay();
     }
-    public void saveComponent(String input){
+    public void saveComponent(String input) throws BeanException {
 
         String replaceSpace = input.replace(" ", "");
         String[] token = replaceSpace.split("-c|\\-t|\\-s|\\-p|\\-l");
-        beanBuild.setType(token[1]);
-        beanBuild.setTitle(token[2].replace("_", " "));
-        beanBuild.setSubtitles(token[3].replace("_", ""));
-        beanBuild.setPrice(Float.valueOf(token[4]));
-        beanBuild.setUrlEbay(token[5]);
+        beanComponentFromEbay.setType(token[1]);
+        beanComponentFromEbay.setTitle(token[2].replace("_", " "));
+        beanComponentFromEbay.setSubtitles(token[3].replace("_", ""));
+        beanComponentFromEbay.setPrice(Float.valueOf(token[4]));
+        beanComponentFromEbay.setUrlEbay(token[5]);
         BeanSeller beanSeller = new BeanSeller();
-        beanSeller.setUsername(beanSession.getUsername());
+        beanSeller.setUsername(beanUser.getUsername());
         Boolean result= null;
         try {
-            result = insertComponentController.saveComponent(beanBuild, beanSeller);
+            result = insertComponentController.saveComponent(beanComponentFromEbay, beanSeller);
         } catch (DAOException e) {
             System.out.println("Component not saved!");
         }

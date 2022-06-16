@@ -1,4 +1,4 @@
-package com.example.buylap.abstract_factory;
+package com.example.buylap.factory;
 
 import androidx.fragment.app.Fragment;
 

@@ -5,7 +5,6 @@ import android.view.View;
 
 import com.example.buylap.model.Analytics;
 import com.example.buylap.model.MostViewed;
-import com.example.buylap.bean.BeanSession;
 import com.example.buylap.exceptions.BeanException;
 import com.example.buylap.bean.BeanSeller;
 import com.example.buylap.utils.Data;
@@ -20,7 +19,7 @@ import java.util.List;
 public class HomeGraphicController extends SessionGraphicController{
     private HomeFragment homeFragment;
     private SellerFragment sellerFragment;
-    private BeanSession credentials;
+    private BeanUser credentials;
 
     public HomeGraphicController(HomeFragment homeFragment) {
         super(homeFragment.getContext());
@@ -57,7 +56,7 @@ public class HomeGraphicController extends SessionGraphicController{
         }
     }
 
-    public void initializeSessionForSeller(View view){
+    public void initializeSessionForSeller(View view) throws BeanException {
 
         BeanSeller beanSeller = new BeanSeller();
         beanSeller.setUsername(credentials.getUsername());
